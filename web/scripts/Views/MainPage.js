@@ -42,6 +42,9 @@ export function render() {
 function renderNavigationView() {
   return `
     <aside class="sidebar" aria-label="Calculator navigation">
+      <div class="sidebar-header">
+        <button class="icon-button nav-drawer-toggle" data-nav-toggle="true" aria-label="Close navigation">${renderToolbarIcon('menu')}</button>
+      </div>
       <nav class="sidebar-nav">
         ${NAVIGATION_GROUPS.map((group) => `
           <div class="nav-group">

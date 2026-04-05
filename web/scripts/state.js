@@ -10,23 +10,34 @@ function createDefaultGraphViewport() {
   };
 }
 
+const GRAPH_EXPRESSION_COLORS = ['#107c10', '#0063b1', '#e81123', '#8a8886'];
+
+function createGraphingExpression(index = 0) {
+  return {
+    color: GRAPH_EXPRESSION_COLORS[index % GRAPH_EXPRESSION_COLORS.length],
+    value: '',
+    plottedValue: '',
+    error: false,
+    visible: true,
+    lineStyle: 'solid'
+  };
+}
+
 function createGraphingExpressions() {
-  return [
-    { color: '#0063b1', value: '', error: false },
-    { color: '#107c10', value: '', error: false },
-    { color: '#e81123', value: '', error: false },
-    { color: '#8a8886', value: '', error: false }
-  ];
+  return [createGraphingExpression()];
 }
 
 function createGraphingState() {
   return {
     expressions: createGraphingExpressions(),
     activeExpressionIndex: 0,
+    analysisExpressionIndex: null,
+    analysisData: null,
     openMenu: null,
     settingsOpen: false,
     trigShifted: false,
     trigHyperbolic: false,
+    stylePanelExpressionIndex: null,
     angle: 'RAD',
     lineThickness: 2,
     theme: 'light',

@@ -1,5 +1,5 @@
 import { state } from '../../state.js';
-import { escapeHtml } from '../../utils.js';
+import { escapeHtml, formatExpressionForDisplay } from '../../utils.js';
 import { renderToolbarIcon } from '../ViewIcons.js';
 
 const GRAPHING_TOOL_GROUPS = [
@@ -57,6 +57,17 @@ const GRAPHING_FUNCTION_OPTIONS = [
   { label: '⌈x⌉', insert: 'ceil(' }
 ];
 
+const GRAPH_STYLE_COLORS = [
+  '#0063b1', '#00b7c3', '#6600cc', '#107c10', '#00cc6a', '#008055', '#58595b',
+  '#e81123', '#e3008c', '#b31564', '#ffb900', '#f7630c', '#8e562e', '#000000'
+];
+
+const GRAPH_LINE_STYLES = [
+  { value: 'solid', label: 'Solid line style' },
+  { value: 'dash', label: 'Dash line style' },
+  { value: 'dot', label: 'Dot line style' }
+];
+
 const GRAPHING_KEYPAD_ROWS = [
   [
     { label: '2ⁿᵈ', tone: 'function' },
@@ -111,8 +122,10 @@ const GRAPHING_KEYPAD_ROWS = [
 
 export function renderGraphingCalculatorView() {
   const isCompact = window.innerWidth < 768;
-  const activeExpression = state.graphing.expressions[state.graphing.activeExpressionIndex] ?? state.graphing.expressions[0];
   const graphThemeClass = state.graphing.theme === 'match-app' ? 'graph-theme-match-app' : 'graph-theme-light';
+  const analysisOpen = typeof state.graphing.analysisExpressionIndex === 'number'
+    && !!state.graphing.analysisData
+    && !!state.graphing.expressions[state.graphing.analysisExpressionIndex];
 
   return `
     <div class="graphing-layout ${graphThemeClass} ${isCompact ? `mobile-view-${state.graphing.mobileView}` : 'desktop-view'}">
@@ -135,22 +148,88 @@ export function renderGraphingCalculatorView() {
         </div>
       </section>
 
-      <section class="graph-editor-panel">
-        <div class="graph-expression-list" aria-label="Graph expressions">
-          ${renderExpressionRow(activeExpression, state.graphing.activeExpressionIndex)}
-        </div>
-        <div class="graph-editor-stage" aria-hidden="true"></div>
-        <div class="graph-keypad-shell">
-          ${renderGraphingMenu()}
-          <div class="graph-keypad-groups">
-            ${GRAPHING_TOOL_GROUPS.map((group) => renderGraphingGroupButton(group)).join('')}
+      <section class="graph-editor-panel ${analysisOpen ? 'graph-analysis-open' : ''}">
+        ${analysisOpen ? renderFunctionAnalysisPanel() : `
+          <div class="graph-expression-list" aria-label="Graph expressions">
+            ${state.graphing.expressions.map((expression, index) => renderExpressionRow(expression, index)).join('')}
           </div>
-          <div class="graph-keypad-grid">
-            ${GRAPHING_KEYPAD_ROWS.flat().map((button) => renderKeypadButton(button)).join('')}
+          <div class="graph-editor-stage" aria-hidden="true"></div>
+          <div class="graph-keypad-shell">
+            ${renderGraphingMenu()}
+            <div class="graph-keypad-groups">
+              ${GRAPHING_TOOL_GROUPS.map((group) => renderGraphingGroupButton(group)).join('')}
+            </div>
+            <div class="graph-keypad-grid">
+              ${GRAPHING_KEYPAD_ROWS.flat().map((button) => renderKeypadButton(button)).join('')}
+            </div>
           </div>
-        </div>
+        `}
       </section>
     </div>
+  `;
+}
+
+function renderFunctionAnalysisPanel() {
+  const expressionIndex = state.graphing.analysisExpressionIndex;
+  const analysis = state.graphing.analysisData;
+  const expression = state.graphing.expressions[expressionIndex];
+
+  if (!analysis || !expression) {
+    return '';
+  }
+
+  return `
+    <section class="graph-analysis-panel" aria-label="Function analysis">
+      <div class="graph-analysis-header-row">
+        <button
+          class="graph-analysis-back"
+          type="button"
+          data-graph-analysis-close="true"
+          data-tooltip="Back to function list"
+          aria-label="Back to function list"
+          style="--graph-expression-color: ${expression.color};"
+        >
+          <span class="graph-analysis-back-icon">${renderToolbarIcon('back')}</span>
+          <span class="graph-analysis-back-badge">
+            <span class="graph-expression-symbol">ƒ</span>
+            <span class="graph-expression-index">${expressionIndex + 1}</span>
+          </span>
+        </button>
+        <div class="graph-analysis-expression">${formatExpressionForDisplay(expression.plottedValue || expression.value)}</div>
+      </div>
+      <h3 class="graph-analysis-title">Function analysis</h3>
+      ${analysis.error
+        ? `<div class="graph-analysis-error">${escapeHtml(analysis.error)}</div>`
+        : `<div class="graph-analysis-list">${analysis.items.map((item) => renderFunctionAnalysisItem(item)).join('')}</div>`}
+    </section>
+  `;
+}
+
+function renderFunctionAnalysisItem(item) {
+  if (item.kind === 'grid') {
+    return `
+      <section class="graph-analysis-item graph-analysis-item-grid">
+        <h4>${escapeHtml(item.title)}</h4>
+        <div class="graph-analysis-grid">
+          ${item.rows.map((row) => `
+            <div class="graph-analysis-grid-row">
+              <div class="graph-analysis-math">${escapeHtml(row.expression)}</div>
+              <div class="graph-analysis-grid-direction">${escapeHtml(row.direction)}</div>
+            </div>
+          `).join('')}
+        </div>
+      </section>
+    `;
+  }
+
+  const valueClass = item.kind === 'text' ? 'graph-analysis-text' : 'graph-analysis-math';
+  return `
+    <section class="graph-analysis-item">
+      <h4>${escapeHtml(item.title)}</h4>
+      <div class="graph-analysis-values">
+        ${item.values.map((value) => `<div class="${valueClass}">${escapeHtml(value)}</div>`).join('')}
+      </div>
+    </section>
   `;
 }
 
@@ -273,20 +352,69 @@ function renderGraphingTrigMenu() {
 }
 
 function renderExpressionRow(expression, index) {
+  const isAddRow = index === state.graphing.expressions.length - 1 && !expression.plottedValue.trim();
+  const visibilityTooltip = expression.visible === false ? 'Show equation' : 'Hide equation';
+  const visibilityIcon = expression.visible === false ? 'graph-show-equation' : 'graph-hide-equation';
+  const badgeControl = isAddRow
+    ? `data-graph-select="${index}" aria-label="Select expression ${index + 1}"`
+    : `data-graph-expression-visibility="${index}" data-tooltip="${visibilityTooltip}" aria-label="${visibilityTooltip}"`;
+  const stylePanelOpen = state.graphing.stylePanelExpressionIndex === index;
+
   return `
-    <div class="graph-expression-row ${state.graphing.activeExpressionIndex === index ? 'active' : ''} ${expression.error ? 'invalid' : ''}">
-      <button class="graph-expression-badge" data-graph-select="${index}" aria-label="Select expression ${index + 1}">
-        <span>ƒ</span>
+    <div class="graph-expression-row ${state.graphing.activeExpressionIndex === index ? 'active' : ''} ${expression.error ? 'invalid' : ''} ${expression.visible === false ? 'hidden-row' : ''} ${stylePanelOpen ? 'style-open' : ''} ${isAddRow ? 'add-row' : 'filled-row'}">
+      <button class="graph-expression-badge" ${badgeControl} style="--graph-expression-color: ${expression.color};">
+        <span class="graph-expression-label">
+          <span class="graph-expression-symbol">ƒ</span>
+          ${isAddRow ? '' : `<span class="graph-expression-index">${index + 1}</span>`}
+        </span>
+        ${isAddRow ? '' : `<span class="graph-expression-visibility-icon">${renderToolbarIcon(visibilityIcon)}</span>`}
       </button>
-      <input
-        class="graph-expression-input"
-        type="text"
-        name="graph-expression-${index}"
-        value="${escapeHtml(expression.value)}"
-        placeholder="Enter an expression"
-        aria-label="Expression ${index + 1}"
-      />
+      <div class="graph-expression-field">
+        <input
+          class="graph-expression-input"
+          type="text"
+          name="graph-expression-${index}"
+          value="${escapeHtml(expression.value)}"
+          placeholder="Enter an expression"
+          aria-label="Expression ${index + 1}"
+        />
+        ${isAddRow ? '' : `
+          <div class="graph-expression-actions" aria-hidden="true">
+            <button class="graph-expression-action" type="button" data-graph-expression-analyze="${index}" data-tooltip="Analyze function" aria-label="Analyze function">${renderToolbarIcon('graph-analyze-function')}</button>
+            <button class="graph-expression-action ${stylePanelOpen ? 'active' : ''}" type="button" data-graph-expression-style="${index}" data-tooltip="Change equation style" aria-label="Change equation style">${renderToolbarIcon('graph-style-picker')}</button>
+            <button class="graph-expression-action" type="button" data-graph-expression-remove="${index}" data-tooltip="Remove equation" aria-label="Remove equation">${renderToolbarIcon('graph-remove-equation')}</button>
+          </div>
+          ${stylePanelOpen ? renderExpressionStylePanel(expression, index) : ''}
+        `}
+      </div>
     </div>
+  `;
+}
+
+function renderExpressionStylePanel(expression, index) {
+  return `
+    <section class="graph-expression-style-panel" role="dialog" aria-label="Line options">
+      <h3>Line options</h3>
+      <div class="graph-expression-style-section-label">Color</div>
+      <div class="graph-expression-color-grid" role="group" aria-label="Color">
+        ${GRAPH_STYLE_COLORS.map((color) => `
+          <button
+            class="graph-expression-color-swatch ${expression.color === color ? 'selected' : ''}"
+            type="button"
+            data-graph-expression-color="${index}"
+            data-color-value="${color}"
+            aria-pressed="${expression.color === color ? 'true' : 'false'}"
+            style="--graph-swatch-color: ${color};"
+          ></button>
+        `).join('')}
+      </div>
+      <label class="graph-expression-style-select-label">
+        <span>Style</span>
+        <select class="graph-expression-style-select" name="graph-expression-line-style-${index}">
+          ${GRAPH_LINE_STYLES.map((option) => `<option value="${option.value}" ${expression.lineStyle === option.value ? 'selected' : ''}>${option.label}</option>`).join('')}
+        </select>
+      </label>
+    </section>
   `;
 }
 

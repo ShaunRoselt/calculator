@@ -2,16 +2,23 @@ import { CONVERTER_MODE_TO_CATEGORY, isConverterMode } from './config.js';
 import { hydrateState, persistCollections, persistNav, persistTheme, state } from './state.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
 import {
+  backspaceGraphExpression,
+  clearGraphExpression,
   computeDateResults,
   drawGraph,
   handleAction,
   handleMemoryOperation,
+  insertGraphToken,
   isCalculatorMode,
   recallHistory,
   recallMemory,
   resetConverterUnits,
+  selectGraphExpression,
+  setGraphExpression,
+  setGraphMobileView,
   syncConverterValues,
-  updateGraph
+  updateGraph,
+  zoomGraph
 } from './logic.js';
 
 hydrateState();
@@ -23,6 +30,7 @@ render();
 document.addEventListener('click', handleClick);
 document.addEventListener('change', handleChange);
 document.addEventListener('input', handleInput);
+document.addEventListener('focusin', handleFocusIn);
 document.addEventListener('keydown', handleKeydown);
 window.addEventListener('resize', handleResize);
 window.addEventListener('load', () => drawGraph());
@@ -178,6 +186,45 @@ function handleClick(event) {
     return;
   }
 
+  if (target.dataset.graphSelect) {
+    selectGraphExpression(Number(target.dataset.graphSelect));
+    render();
+    return;
+  }
+
+  if (target.dataset.graphView) {
+    setGraphMobileView(target.dataset.graphView);
+    render();
+    return;
+  }
+
+  if (target.dataset.graphZoom) {
+    zoomGraph(target.dataset.graphZoom);
+    drawGraph();
+    return;
+  }
+
+  if (target.dataset.graphEditAction) {
+    if (target.dataset.graphEditAction === 'clear') {
+      clearGraphExpression();
+    }
+    if (target.dataset.graphEditAction === 'backspace') {
+      backspaceGraphExpression();
+    }
+    if (target.dataset.graphEditAction === 'plot') {
+      updateGraph();
+    }
+    render();
+    return;
+  }
+
+  if (target.dataset.graphInsert) {
+    insertGraphToken(target.dataset.graphInsert);
+    updateGraph();
+    render();
+    return;
+  }
+
   if (target.dataset.action && target.dataset.action !== 'noop') {
     handleAction(target.dataset.action, target.dataset.value || '');
     render();
@@ -217,8 +264,9 @@ function handleChange(event) {
     return;
   }
 
-  if (target.name === 'graph-expression') {
-    state.graphing.expression = target.value;
+  if (target.name?.startsWith('graph-expression-')) {
+    const index = Number(target.name.replace('graph-expression-', ''));
+    setGraphExpression(index, target.value);
     updateGraph();
     render();
   }
@@ -230,8 +278,9 @@ function handleInput(event) {
     return;
   }
 
-  if (target.name === 'graph-expression') {
-    state.graphing.expression = target.value;
+  if (target.name?.startsWith('graph-expression-')) {
+    const index = Number(target.name.replace('graph-expression-', ''));
+    setGraphExpression(index, target.value);
     drawGraph();
     return;
   }
@@ -240,6 +289,17 @@ function handleInput(event) {
     state.converter.fromValue = target.value;
     syncConverterValues('from');
     render();
+  }
+}
+
+function handleFocusIn(event) {
+  const target = event.target;
+  if (!(target instanceof HTMLInputElement)) {
+    return;
+  }
+
+  if (target.name?.startsWith('graph-expression-')) {
+    selectGraphExpression(Number(target.name.replace('graph-expression-', '')));
   }
 }
 

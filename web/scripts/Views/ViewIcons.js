@@ -27,6 +27,21 @@ export function renderToolbarIcon(kind) {
   if (kind === 'dismiss') {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 6.75 17.25 17.25M17.25 6.75 6.75 17.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/></svg>';
   }
+  if (kind === 'graph-view') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.5h15M7 6.5v12M7.5 15c2.5-5 4.4-6 5.9-6 1.3 0 2.7 1.1 4.6 4.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg>';
+  }
+  if (kind === 'expressions-view') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7.5h12M6 12h12M6 16.5h12M4.5 7.5h.01M4.5 12h.01M4.5 16.5h.01" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"/></svg>';
+  }
+  if (kind === 'graph-select') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 5 9.5 7L11 13.5 13.5 19 11.75 20 9 14.5 6 17z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>';
+  }
+  if (kind === 'graph-share') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6h5v5M19 5l-8.5 8.5M11 7H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg>';
+  }
+  if (kind === 'graph-options') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7.5h12M6 12h12M6 16.5h12M9 5.5v4M15 10v4M12 14.5v4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/></svg>';
+  }
   return '';
 }
 

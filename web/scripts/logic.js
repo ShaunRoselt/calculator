@@ -1151,13 +1151,104 @@ export function syncConverterValues(source) {
   state.converter.toValue = `${formatNumber(to.fromBase(baseValue))} ${to.symbol}`;
 }
 
-export function updateGraph() {
-  try {
-    evaluateScientificExpression(state.graphing.expression, { x: 1, angle: state.scientific.angle });
-    state.graphing.status = `Plotting y = ${state.graphing.expression}`;
-  } catch (error) {
-    state.graphing.status = error.message || 'Invalid graph expression';
+export function selectGraphExpression(index) {
+  if (state.graphing.expressions[index]) {
+    state.graphing.activeExpressionIndex = index;
   }
+}
+
+export function setGraphExpression(index, value) {
+  const expression = state.graphing.expressions[index];
+  if (!expression) {
+    return;
+  }
+  expression.value = value;
+  expression.error = false;
+  state.graphing.activeExpressionIndex = index;
+}
+
+export function insertGraphToken(token) {
+  const expression = state.graphing.expressions[state.graphing.activeExpressionIndex] || state.graphing.expressions[0];
+  if (!expression) {
+    return;
+  }
+  expression.value = `${expression.value}${token}`;
+  expression.error = false;
+}
+
+export function backspaceGraphExpression() {
+  const expression = state.graphing.expressions[state.graphing.activeExpressionIndex] || state.graphing.expressions[0];
+  if (!expression) {
+    return;
+  }
+  expression.value = expression.value.slice(0, -1);
+  expression.error = false;
+}
+
+export function clearGraphExpression() {
+  const expression = state.graphing.expressions[state.graphing.activeExpressionIndex] || state.graphing.expressions[0];
+  if (!expression) {
+    return;
+  }
+  expression.value = '';
+  expression.error = false;
+}
+
+export function setGraphMobileView(view) {
+  if (view === 'graph' || view === 'editor') {
+    state.graphing.mobileView = view;
+  }
+}
+
+export function zoomGraph(action) {
+  const viewport = state.graphing.viewport;
+  if (action === 'reset') {
+    viewport.xMin = -24;
+    viewport.xMax = 24;
+    viewport.yMin = -15;
+    viewport.yMax = 15;
+    return;
+  }
+
+  const factor = action === 'in' ? 0.8 : 1.25;
+  const centerX = (viewport.xMin + viewport.xMax) / 2;
+  const centerY = (viewport.yMin + viewport.yMax) / 2;
+  const halfWidth = ((viewport.xMax - viewport.xMin) / 2) * factor;
+  const halfHeight = ((viewport.yMax - viewport.yMin) / 2) * factor;
+
+  viewport.xMin = centerX - halfWidth;
+  viewport.xMax = centerX + halfWidth;
+  viewport.yMin = centerY - halfHeight;
+  viewport.yMax = centerY + halfHeight;
+}
+
+export function updateGraph() {
+  const activeExpressions = state.graphing.expressions.filter((expression) => expression.value.trim());
+  let hasError = false;
+
+  for (const expression of state.graphing.expressions) {
+    if (!expression.value.trim()) {
+      expression.error = false;
+      continue;
+    }
+
+    try {
+      evaluateScientificExpression(normalizeGraphExpression(expression.value), { x: 1, angle: state.scientific.angle });
+      expression.error = false;
+    } catch {
+      expression.error = true;
+      hasError = true;
+    }
+  }
+
+  if (hasError) {
+    state.graphing.status = 'Check the highlighted expression';
+  } else if (activeExpressions.length) {
+    state.graphing.status = `Plotting ${activeExpressions.length} expression${activeExpressions.length === 1 ? '' : 's'}`;
+  } else {
+    state.graphing.status = 'Enter an expression';
+  }
+
   drawGraph();
 }
 
@@ -1170,63 +1261,160 @@ export function drawGraph() {
   if (!ctx) {
     return;
   }
-  const width = canvas.width;
-  const height = canvas.height;
-  ctx.clearRect(0, 0, width, height);
-  ctx.fillStyle = '#12151a';
-  ctx.fillRect(0, 0, width, height);
+  const dpr = window.devicePixelRatio || 1;
+  const cssWidth = Math.max(320, Math.round(canvas.clientWidth || 1200));
+  const cssHeight = Math.max(240, Math.round(canvas.clientHeight || 640));
 
-  ctx.strokeStyle = 'rgba(255,255,255,0.08)';
-  ctx.lineWidth = 1;
-  for (let x = 0; x <= width; x += width / 12) {
-    ctx.beginPath();
-    ctx.moveTo(x, 0);
-    ctx.lineTo(x, height);
-    ctx.stroke();
-  }
-  for (let y = 0; y <= height; y += height / 8) {
-    ctx.beginPath();
-    ctx.moveTo(0, y);
-    ctx.lineTo(width, y);
-    ctx.stroke();
+  if (canvas.width !== Math.round(cssWidth * dpr) || canvas.height !== Math.round(cssHeight * dpr)) {
+    canvas.width = Math.round(cssWidth * dpr);
+    canvas.height = Math.round(cssHeight * dpr);
   }
 
-  ctx.strokeStyle = 'rgba(255,255,255,0.35)';
-  ctx.beginPath();
-  ctx.moveTo(width / 2, 0);
-  ctx.lineTo(width / 2, height);
-  ctx.moveTo(0, height / 2);
-  ctx.lineTo(width, height / 2);
-  ctx.stroke();
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-  ctx.strokeStyle = '#4cc2ff';
-  ctx.lineWidth = 3;
-  ctx.beginPath();
-  let started = false;
-  let hasGraphError = false;
-  for (let px = 0; px <= width; px += 2) {
-    const x = ((px / width) * 20) - 10;
-    let y;
-    try {
-      y = evaluateScientificExpression(state.graphing.expression || '0', { x, angle: state.scientific.angle });
-    } catch {
-      hasGraphError = true;
-      break;
-    }
-    const py = height / 2 - y * (height / 20);
-    if (!Number.isFinite(py)) {
-      started = false;
+  const { xMin, xMax, yMin, yMax } = state.graphing.viewport;
+  const xRange = xMax - xMin;
+  const yRange = yMax - yMin;
+  const toScreenX = (value) => ((value - xMin) / xRange) * cssWidth;
+  const toScreenY = (value) => cssHeight - (((value - yMin) / yRange) * cssHeight);
+  const xAxisY = toScreenY(0);
+  const yAxisX = toScreenX(0);
+
+  ctx.fillStyle = '#f8f7f6';
+  ctx.fillRect(0, 0, cssWidth, cssHeight);
+
+  for (let x = Math.floor(xMin); x <= Math.ceil(xMax); x += 1) {
+    const screenX = toScreenX(x);
+    ctx.beginPath();
+    ctx.strokeStyle = x % 5 === 0 ? 'rgba(124, 124, 124, 0.28)' : 'rgba(124, 124, 124, 0.12)';
+    ctx.lineWidth = x % 5 === 0 ? 1 : 0.8;
+    ctx.moveTo(screenX, 0);
+    ctx.lineTo(screenX, cssHeight);
+    ctx.stroke();
+  }
+
+  for (let y = Math.floor(yMin); y <= Math.ceil(yMax); y += 1) {
+    const screenY = toScreenY(y);
+    ctx.beginPath();
+    ctx.strokeStyle = y % 5 === 0 ? 'rgba(124, 124, 124, 0.28)' : 'rgba(124, 124, 124, 0.12)';
+    ctx.lineWidth = y % 5 === 0 ? 1 : 0.8;
+    ctx.moveTo(0, screenY);
+    ctx.lineTo(cssWidth, screenY);
+    ctx.stroke();
+  }
+
+  ctx.strokeStyle = '#666666';
+  ctx.lineWidth = 1.2;
+  if (yAxisX >= 0 && yAxisX <= cssWidth) {
+    ctx.beginPath();
+    ctx.moveTo(yAxisX, cssHeight);
+    ctx.lineTo(yAxisX, 0);
+    ctx.stroke();
+  }
+  if (xAxisY >= 0 && xAxisY <= cssHeight) {
+    ctx.beginPath();
+    ctx.moveTo(0, xAxisY);
+    ctx.lineTo(cssWidth, xAxisY);
+    ctx.stroke();
+  }
+
+  drawAxisDecorations(ctx, cssWidth, cssHeight, xAxisY, yAxisX, toScreenX, toScreenY, xMin, xMax, yMin, yMax);
+
+  for (const expression of state.graphing.expressions) {
+    if (!expression.value.trim() || expression.error) {
       continue;
     }
-    if (!started) {
-      ctx.moveTo(px, py);
-      started = true;
-    } else {
-      ctx.lineTo(px, py);
+
+    ctx.beginPath();
+    ctx.strokeStyle = expression.color;
+    ctx.lineWidth = 2.2;
+    let started = false;
+    let previousY = null;
+
+    for (let px = 0; px <= cssWidth; px += 1) {
+      const x = xMin + ((px / cssWidth) * xRange);
+      let y;
+      try {
+        y = evaluateScientificExpression(normalizeGraphExpression(expression.value), { x, angle: state.scientific.angle });
+      } catch {
+        expression.error = true;
+        started = false;
+        continue;
+      }
+
+      const py = toScreenY(y);
+      if (!Number.isFinite(py) || py < -cssHeight * 3 || py > cssHeight * 4) {
+        started = false;
+        previousY = null;
+        continue;
+      }
+
+      if (!started || (previousY != null && Math.abs(py - previousY) > cssHeight * 0.5)) {
+        ctx.moveTo(px, py);
+        started = true;
+      } else {
+        ctx.lineTo(px, py);
+      }
+      previousY = py;
     }
+
+    ctx.stroke();
   }
-  ctx.stroke();
-  if (hasGraphError) {
-    state.graphing.status = 'Invalid graph expression';
+}
+
+function normalizeGraphExpression(expression) {
+  return String(expression || '').replace(/,/g, '.').trim() || '0';
+}
+
+function drawAxisDecorations(ctx, width, height, xAxisY, yAxisX, toScreenX, toScreenY, xMin, xMax, yMin, yMax) {
+  ctx.fillStyle = '#5b5b5b';
+  ctx.strokeStyle = '#5b5b5b';
+  ctx.font = 'italic 12px "Segoe UI", sans-serif';
+
+  if (xAxisY >= 0 && xAxisY <= height) {
+    ctx.beginPath();
+    ctx.moveTo(width - 8, xAxisY - 5);
+    ctx.lineTo(width, xAxisY);
+    ctx.lineTo(width - 8, xAxisY + 5);
+    ctx.stroke();
+    ctx.fillText('x', width - 10, Math.min(height - 6, xAxisY + 16));
+  }
+
+  if (yAxisX >= 0 && yAxisX <= width) {
+    ctx.beginPath();
+    ctx.moveTo(yAxisX - 5, 8);
+    ctx.lineTo(yAxisX, 0);
+    ctx.lineTo(yAxisX + 5, 8);
+    ctx.stroke();
+    ctx.fillText('y', Math.max(6, yAxisX - 14), 12);
+  }
+
+  ctx.font = 'italic 11px "Segoe UI", sans-serif';
+  for (let x = Math.ceil(xMin / 5) * 5; x <= xMax; x += 5) {
+    if (x === 0) {
+      continue;
+    }
+    const screenX = toScreenX(x);
+    if (screenX < 18 || screenX > width - 18) {
+      continue;
+    }
+    ctx.fillText(String(x), screenX - 7, Math.min(height - 8, xAxisY + 16));
+  }
+
+  for (let y = Math.ceil(yMin / 5) * 5; y <= yMax; y += 5) {
+    if (y === 0) {
+      continue;
+    }
+    const screenY = toScreenY(y);
+    if (screenY < 14 || screenY > height - 10) {
+      continue;
+    }
+    ctx.fillText(String(y), Math.max(4, yAxisX - 18), screenY + 4);
+  }
+
+  if (xAxisY >= 0 && xAxisY <= height && yAxisX >= 0 && yAxisX <= width) {
+    ctx.fillText('0', yAxisX - 10, xAxisY + 15);
   }
 }

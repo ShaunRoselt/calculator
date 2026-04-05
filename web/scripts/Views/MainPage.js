@@ -70,12 +70,19 @@ function renderNavigationView() {
 
 function renderHeader() {
   const meta = MODE_META[state.mode];
+  const layoutMode = getLayoutMode();
   const showDesktopSidePanel = getLayoutMode() === 'desktop' && isSidePanelVisible();
   const navButton = state.mode === 'settings'
     ? `<button class="icon-button nav-toggle" data-settings-back="true" aria-label="Back">${renderToolbarIcon('back')}</button>`
     : `<button class="icon-button nav-toggle" data-nav-toggle="true" aria-label="Open navigation">${renderToolbarIcon('menu')}</button>`;
   const modeGlyph = state.mode === 'standard'
     ? `<span class="mode-glyph" aria-hidden="true">${renderToolbarIcon('standard')}</span>`
+    : '';
+  const graphingActions = state.mode === 'graphing' && layoutMode !== 'desktop'
+    ? `
+      <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'graph' ? 'active' : ''}" data-graph-view="graph" aria-label="Show graph">${renderToolbarIcon('graph-view')}</button>
+      <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'editor' ? 'active' : ''}" data-graph-view="editor" aria-label="Show expressions">${renderToolbarIcon('expressions-view')}</button>
+    `
     : '';
   return `
     <header class="topbar ${isCalculatorMode(state.mode) ? 'calculator-topbar' : ''}">
@@ -90,6 +97,7 @@ function renderHeader() {
         </div>
       </div>
       <div class="topbar-actions">
+        ${graphingActions}
         ${isCalculatorMode(state.mode) && !showDesktopSidePanel ? `<button class="icon-button history-toggle ${state.historyOpen ? 'active' : ''}" data-toggle-panel="history" aria-label="Toggle history">${renderToolbarIcon('history')}</button>` : ''}
       </div>
     </header>

@@ -1,6 +1,30 @@
 import { STORAGE_KEYS } from './config.js';
 import { toDateInputValue } from './utils.js';
 
+function createGraphingExpressions() {
+  return [
+    { color: '#0063b1', value: '5', error: false },
+    { color: '#107c10', value: 'log(8)', error: false },
+    { color: '#e81123', value: 'cos(5)', error: false },
+    { color: '#8a8886', value: '', error: false }
+  ];
+}
+
+function createGraphingState() {
+  return {
+    expressions: createGraphingExpressions(),
+    activeExpressionIndex: 3,
+    mobileView: 'graph',
+    viewport: {
+      xMin: -24,
+      xMax: 24,
+      yMin: -15,
+      yMax: 15
+    },
+    status: 'Plotting graph'
+  };
+}
+
 function createInitialState() {
   const todayString = toDateInputValue(new Date());
   return {
@@ -36,10 +60,7 @@ function createInitialState() {
       toValue: '',
       lastEdited: 'from'
     },
-    graphing: {
-      expression: 'sin(x)',
-      status: 'Plotting y = sin(x)'
-    }
+    graphing: createGraphingState()
   };
 }
 

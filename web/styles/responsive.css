@@ -23,6 +23,91 @@
   }
 }
 
+@media (min-width: 420px) and (max-width: 500px) and (min-height: 880px) {
+  body {
+    padding: 8px 6px 10px;
+    background:
+      radial-gradient(circle at 88% 76%, rgba(48, 112, 255, 0.95) 0 10%, transparent 10.5%),
+      radial-gradient(circle at 94% 62%, rgba(31, 86, 223, 0.92) 0 16%, transparent 16.5%),
+      radial-gradient(circle at 9% 93%, rgba(45, 111, 255, 0.9) 0 15%, transparent 15.5%),
+      linear-gradient(135deg, #0e1c38 0%, #09142a 46%, #050a16 100%);
+  }
+
+  #app {
+    height: calc(100vh - 18px);
+    min-height: calc(100vh - 18px);
+  }
+
+  .desktop-shell {
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .app-shell {
+    width: min(100%, 423px);
+    min-height: calc(100vh - 18px);
+    height: calc(100vh - 18px);
+    margin: 0 auto;
+    border: 1px solid rgba(79, 90, 129, 0.82);
+    border-radius: 8px;
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.42);
+  }
+
+  .topbar {
+    padding: 10px 14px 2px;
+  }
+
+  .topbar-title h2 {
+    font-size: 1.15rem;
+  }
+
+  .mode-title-row {
+    gap: 8px;
+  }
+
+  .mode-glyph {
+    width: 16px;
+    height: 16px;
+  }
+
+  .icon-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .display-panel {
+    min-height: 206px;
+    padding: 0 14px 8px;
+  }
+
+  .display-expression {
+    min-height: 1.25rem;
+    font-size: 0.96rem;
+  }
+
+  .display-value {
+    min-height: 4.8rem;
+    font-size: clamp(4.7rem, 17vw, 5.35rem);
+  }
+
+  .memory-toolbar {
+    padding: 0 6px 8px;
+  }
+
+  .memory-toolbar button {
+    min-height: 28px;
+    font-size: 0.88rem;
+  }
+
+  .button-grid {
+    padding: 0 4px 4px;
+  }
+
+  .calc-button {
+    border-radius: 4px;
+  }
+}
+
 @media (max-width: 767px) {
   .topbar {
     padding-left: 8px;
@@ -190,5 +275,90 @@
     min-height: 0;
     font-size: 0.98rem;
     border-radius: 3px;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 500px) and (min-height: 880px) {
+  body {
+    padding: 8px 6px 10px;
+    background:
+      radial-gradient(circle at 88% 76%, rgba(48, 112, 255, 0.95) 0 10%, transparent 10.5%),
+      radial-gradient(circle at 94% 62%, rgba(31, 86, 223, 0.92) 0 16%, transparent 16.5%),
+      radial-gradient(circle at 9% 93%, rgba(45, 111, 255, 0.9) 0 15%, transparent 15.5%),
+      linear-gradient(135deg, #0e1c38 0%, #09142a 46%, #050a16 100%);
+  }
+
+  #app {
+    height: calc(100vh - 18px);
+    min-height: calc(100vh - 18px);
+  }
+
+  .desktop-shell {
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .app-shell {
+    width: min(100%, 423px);
+    min-height: calc(100vh - 18px);
+    height: calc(100vh - 18px);
+    margin: 0 auto;
+    border: 1px solid rgba(79, 90, 129, 0.82);
+    border-radius: 8px;
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.42);
+  }
+
+  .topbar {
+    padding: 10px 14px 2px;
+  }
+
+  .topbar-title h2 {
+    font-size: 1.15rem;
+  }
+
+  .mode-title-row {
+    gap: 8px;
+  }
+
+  .mode-glyph {
+    width: 16px;
+    height: 16px;
+  }
+
+  .icon-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .display-panel {
+    min-height: 206px;
+    padding: 0 14px 8px;
+  }
+
+  .display-expression {
+    min-height: 1.25rem;
+    font-size: 0.96rem;
+  }
+
+  .display-value {
+    min-height: 4.8rem;
+    font-size: clamp(4.7rem, 17vw, 5.35rem);
+  }
+
+  .memory-toolbar {
+    padding: 0 6px 8px;
+  }
+
+  .memory-toolbar button {
+    min-height: 28px;
+    font-size: 0.88rem;
+  }
+
+  .button-grid {
+    padding: 0 4px 4px;
+  }
+
+  .calc-button {
+    border-radius: 4px;
   }
 }

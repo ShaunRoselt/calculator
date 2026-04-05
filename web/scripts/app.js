@@ -112,6 +112,7 @@ const UNIT_CATEGORIES = {
     unit('Canadian Dollar', 'CAD', (v) => v / 1.35, (v) => v * 1.35)
   ]
 };
+const MOCK_CURRENCY_NOTE = 'Mock reference rates for the standalone web demo, matching the repository developer-mode approach.';
 
 const state = createInitialState();
 const appRoot = document.querySelector('#app');
@@ -258,6 +259,10 @@ function render() {
       </main>
     </div>
   `;
+  const graphInput = document.querySelector('[data-graph-expression="true"]');
+  if (graphInput instanceof HTMLInputElement) {
+    graphInput.value = state.graphing.expression;
+  }
   drawGraph();
 }
 
@@ -535,7 +540,7 @@ function renderConverterPanel() {
           <h3>Unit converter</h3>
         </div>
       </div>
-      ${state.converter.category === 'Currency' ? `<div class="currency-banner">Currency rates are mocked for this standalone web build, matching the repo's developer-mode approach.</div>` : ''}
+      ${state.converter.category === 'Currency' ? `<div class="currency-banner">${MOCK_CURRENCY_NOTE}</div>` : ''}
       <div class="converter-grid">
         <label class="label-stack full">
           <span>Category</span>
@@ -582,7 +587,7 @@ function renderGraphingPanel() {
       </div>
       <div class="info-banner">Use x in your expression, for example <strong>sin(x)</strong>, <strong>x^2</strong>, or <strong>sqrt(abs(x))</strong>.</div>
       <div class="graph-form">
-        <input type="text" name="graph-expression" value="${escapeHtml(state.graphing.expression)}" />
+        <input type="text" name="graph-expression" data-graph-expression="true" />
         <button class="graph-button" data-graph-plot="true">Plot</button>
       </div>
       <p class="helper-text">${escapeHtml(state.graphing.status)}</p>
@@ -706,7 +711,7 @@ function handleChange(event) {
     if (key === 'category') {
       resetConverterUnits();
     }
-    syncConverterValues(key === 'fromValue' ? 'from' : 'from');
+    syncConverterValues('from');
     render();
     return;
   }
@@ -1713,10 +1718,11 @@ function parseBigIntFromBase(display, base) {
   const digits = value.replace(/^-/, '') || '0';
   let result = 0n;
   for (const digit of digits) {
-    const numeric = BigInt(parseInt(digit, radix));
-    if (Number.isNaN(Number(numeric))) {
+    const parsed = parseInt(digit, radix);
+    if (Number.isNaN(parsed)) {
       throw new Error('Invalid digit');
     }
+    const numeric = BigInt(parsed);
     result = result * BigInt(radix) + numeric;
   }
   return result * sign;
@@ -1885,13 +1891,14 @@ function drawGraph() {
   ctx.lineWidth = 3;
   ctx.beginPath();
   let started = false;
+  let hasGraphError = false;
   for (let px = 0; px <= width; px += 2) {
     const x = ((px / width) * 20) - 10;
     let y;
     try {
       y = evaluateScientificExpression(state.graphing.expression || '0', { x, angle: state.scientific.angle });
     } catch {
-      state.graphing.status = 'Invalid graph expression';
+      hasGraphError = true;
       break;
     }
     const py = height / 2 - y * (height / 20);
@@ -1907,4 +1914,7 @@ function drawGraph() {
     }
   }
   ctx.stroke();
+  if (hasGraphError) {
+    state.graphing.status = 'Invalid graph expression';
+  }
 }

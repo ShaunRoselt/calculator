@@ -1,18 +1,20 @@
 .desktop-shell {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: inherit;
+  justify-content: stretch;
+  align-items: stretch;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .app-shell {
-  width: min(100%, 740px);
-  height: min(92vh, 920px);
-  min-height: 720px;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
   background: linear-gradient(180deg, #252730 0%, #1f2026 100%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -24,6 +26,7 @@
   display: flex;
   flex: 1;
   min-height: 0;
+  overflow: hidden;
 }
 
 .surface-scrim {
@@ -198,14 +201,14 @@
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  padding: 0 4px 4px;
+  padding: 0;
   flex: 1;
   min-height: 0;
 }
 
 .app-shell.layout-desktop .workspace.with-side-panel {
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 4px;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 0;
 }
 
 .panel {
@@ -216,12 +219,16 @@
 }
 
 .main-panel {
-  padding: 0;
+  padding: 0 4px 4px;
   display: flex;
   flex-direction: column;
   min-width: 0;
   min-height: 0;
-  overflow: auto;
+  overflow: hidden;
+}
+
+.main-panel > * {
+  min-height: 100%;
 }
 
 .side-panel {
@@ -230,7 +237,7 @@
   min-height: 0;
   background: #1f2027;
   border-left: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
+  border-radius: 0;
   overflow: hidden;
 }
 
@@ -284,6 +291,14 @@
 .form-section h3 {
   margin: 0;
   font-size: 1.1rem;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 0.35rem 0.5rem 0.5rem;
+  gap: 1rem;
 }
 
 .label-stack {

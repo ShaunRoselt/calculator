@@ -1,21 +1,8 @@
 @media (max-width: 1080px) {
-  body {
-    padding: 12px;
-  }
-
-  #app {
-    min-height: calc(100vh - 24px);
-  }
-
   .app-shell {
     width: 100%;
-    min-height: calc(100vh - 24px);
-    height: calc(100vh - 24px);
-    border-radius: 10px;
-  }
-
-  .window-body {
-    min-height: calc(100vh - 56px);
+    min-height: 100vh;
+    height: 100vh;
   }
 
   .app-shell.layout-tablet .side-panel,
@@ -61,14 +48,6 @@
 }
 
 @media (max-width: 540px) {
-  body {
-    padding: 0;
-  }
-
-  #app {
-    min-height: 100vh;
-  }
-
   .window-control {
     width: 40px;
   }

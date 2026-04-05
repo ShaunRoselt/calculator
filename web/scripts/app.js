@@ -259,7 +259,30 @@ function handleClick(event) {
   }
 
   if (target.dataset.graphSelect) {
+    state.graphing.openMenu = null;
     selectGraphExpression(Number(target.dataset.graphSelect));
+    render();
+    return;
+  }
+
+  if (target.dataset.graphMenuToggle) {
+    const nextMenu = target.dataset.graphMenuToggle;
+    state.graphing.openMenu = state.graphing.openMenu === nextMenu ? null : nextMenu;
+    if (state.graphing.openMenu !== 'trig') {
+      state.graphing.trigShifted = false;
+      state.graphing.trigHyperbolic = false;
+    }
+    render();
+    return;
+  }
+
+  if (target.dataset.graphMenuAction) {
+    if (target.dataset.graphMenuAction === 'toggle-trig-shift') {
+      state.graphing.trigShifted = !state.graphing.trigShifted;
+    }
+    if (target.dataset.graphMenuAction === 'toggle-trig-hyp') {
+      state.graphing.trigHyperbolic = !state.graphing.trigHyperbolic;
+    }
     render();
     return;
   }
@@ -277,6 +300,7 @@ function handleClick(event) {
   }
 
   if (target.dataset.graphEditAction) {
+    state.graphing.openMenu = null;
     if (target.dataset.graphEditAction === 'clear') {
       clearGraphExpression();
     }
@@ -291,6 +315,7 @@ function handleClick(event) {
   }
 
   if (target.dataset.graphInsert) {
+    state.graphing.openMenu = null;
     insertGraphToken(target.dataset.graphInsert);
     updateGraph();
     render();

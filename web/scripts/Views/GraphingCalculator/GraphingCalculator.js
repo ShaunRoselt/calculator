@@ -3,9 +3,58 @@ import { escapeHtml } from '../../utils.js';
 import { renderToolbarIcon } from '../ViewIcons.js';
 
 const GRAPHING_TOOL_GROUPS = [
-  { label: 'Trigonometry', icon: 'graphing-trig' },
-  { label: 'Inequalities', icon: 'graphing-inequality' },
-  { label: 'Function', icon: 'scientific-function' }
+  { key: 'trig', label: 'Trigonometry', icon: 'graphing-trig' },
+  { key: 'inequality', label: 'Inequalities', icon: 'graphing-inequality' },
+  { key: 'function', label: 'Function', icon: 'scientific-function' }
+];
+
+const GRAPHING_TRIG_LAYOUTS = {
+  base: [
+    { label: 'sin', insert: 'sin(' },
+    { label: 'cos', insert: 'cos(' },
+    { label: 'tan', insert: 'tan(' },
+    { label: 'sec', insert: 'sec(' },
+    { label: 'csc', insert: 'csc(' },
+    { label: 'cot', insert: 'cot(' }
+  ],
+  shifted: [
+    { label: 'sin⁻¹', insert: 'asin(' },
+    { label: 'cos⁻¹', insert: 'acos(' },
+    { label: 'tan⁻¹', insert: 'atan(' },
+    { label: 'sec⁻¹', insert: 'asec(' },
+    { label: 'csc⁻¹', insert: 'acsc(' },
+    { label: 'cot⁻¹', insert: 'acot(' }
+  ],
+  hyp: [
+    { label: 'sinh', insert: 'sinh(' },
+    { label: 'cosh', insert: 'cosh(' },
+    { label: 'tanh', insert: 'tanh(' },
+    { label: 'sech', insert: 'sech(' },
+    { label: 'csch', insert: 'csch(' },
+    { label: 'coth', insert: 'coth(' }
+  ],
+  hypShifted: [
+    { label: 'sinh⁻¹', insert: 'asinh(' },
+    { label: 'cosh⁻¹', insert: 'acosh(' },
+    { label: 'tanh⁻¹', insert: 'atanh(' },
+    { label: 'sech⁻¹', insert: 'asech(' },
+    { label: 'csch⁻¹', insert: 'acsch(' },
+    { label: 'coth⁻¹', insert: 'acoth(' }
+  ]
+};
+
+const GRAPHING_INEQUALITY_OPTIONS = [
+  { label: '<', insert: '<' },
+  { label: '≤', insert: '<=' },
+  { label: '=', insert: '=' },
+  { label: '≥', insert: '>=' },
+  { label: '>', insert: '>' }
+];
+
+const GRAPHING_FUNCTION_OPTIONS = [
+  { label: '|x|', insert: 'abs(' },
+  { label: '⌊x⌋', insert: 'floor(' },
+  { label: '⌈x⌉', insert: 'ceil(' }
 ];
 
 const GRAPHING_KEYPAD_ROWS = [
@@ -90,14 +139,66 @@ export function renderGraphingCalculatorView() {
         </div>
         <div class="graph-editor-stage" aria-hidden="true"></div>
         <div class="graph-keypad-shell">
+          ${renderGraphingMenu()}
           <div class="graph-keypad-groups">
-            ${GRAPHING_TOOL_GROUPS.map((group) => `<button class="graph-keypad-group" type="button"><span class="graph-keypad-group-icon" aria-hidden="true">${renderToolbarIcon(group.icon)}</span><span>${group.label}</span><span class="graph-keypad-caret">⌄</span></button>`).join('')}
+            ${GRAPHING_TOOL_GROUPS.map((group) => renderGraphingGroupButton(group)).join('')}
           </div>
           <div class="graph-keypad-grid">
             ${GRAPHING_KEYPAD_ROWS.flat().map((button) => renderKeypadButton(button)).join('')}
           </div>
         </div>
       </section>
+    </div>
+  `;
+}
+
+function renderGraphingGroupButton(group) {
+  const isActive = state.graphing.openMenu === group.key;
+  return `
+    <button class="graph-keypad-group ${isActive ? 'active' : ''}" type="button" data-graph-menu-toggle="${group.key}" aria-expanded="${isActive ? 'true' : 'false'}">
+      <span class="graph-keypad-group-icon" aria-hidden="true">${renderToolbarIcon(group.icon)}</span>
+      <span>${group.label}</span>
+      <span class="graph-keypad-caret">⌄</span>
+    </button>
+  `;
+}
+
+function renderGraphingMenu() {
+  if (!state.graphing.openMenu) {
+    return '';
+  }
+
+  if (state.graphing.openMenu === 'trig') {
+    return renderGraphingTrigMenu();
+  }
+
+  if (state.graphing.openMenu === 'inequality') {
+    return `
+      <div class="graphing-operator-menu graphing-operator-menu-inequality" role="group" aria-label="Inequalities">
+        ${GRAPHING_INEQUALITY_OPTIONS.map((option) => `<button class="graphing-menu-item" data-graph-insert="${escapeHtml(option.insert)}">${option.label}</button>`).join('')}
+      </div>
+    `;
+  }
+
+  return `
+    <div class="graphing-operator-menu graphing-operator-menu-function" role="group" aria-label="Functions">
+      ${GRAPHING_FUNCTION_OPTIONS.map((option) => `<button class="graphing-menu-item" data-graph-insert="${escapeHtml(option.insert)}">${option.label}</button>`).join('')}
+    </div>
+  `;
+}
+
+function renderGraphingTrigMenu() {
+  const key = state.graphing.trigHyperbolic
+    ? (state.graphing.trigShifted ? 'hypShifted' : 'hyp')
+    : (state.graphing.trigShifted ? 'shifted' : 'base');
+  const options = GRAPHING_TRIG_LAYOUTS[key];
+
+  return `
+    <div class="graphing-operator-menu graphing-operator-menu-trig" role="group" aria-label="Trigonometry">
+      <button class="graphing-menu-toggle ${state.graphing.trigShifted ? 'active' : ''}" data-graph-menu-action="toggle-trig-shift" aria-pressed="${state.graphing.trigShifted ? 'true' : 'false'}">2ⁿᵈ</button>
+      ${options.slice(0, 3).map((option) => `<button class="graphing-menu-item" data-graph-insert="${escapeHtml(option.insert)}">${option.label}</button>`).join('')}
+      <button class="graphing-menu-toggle ${state.graphing.trigHyperbolic ? 'active' : ''}" data-graph-menu-action="toggle-trig-hyp" aria-pressed="${state.graphing.trigHyperbolic ? 'true' : 'false'}">hyp</button>
+      ${options.slice(3).map((option) => `<button class="graphing-menu-item" data-graph-insert="${escapeHtml(option.insert)}">${option.label}</button>`).join('')}
     </div>
   `;
 }

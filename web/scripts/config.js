@@ -91,13 +91,12 @@ export const SCIENTIFIC_BUTTONS = [
 ];
 
 export const PROGRAMMER_BUTTONS = [
-  [btn('A', 'digit', 'A'), btn('B', 'digit', 'B'), btn('C', 'digit', 'C'), btn('D', 'digit', 'D'), btn('E', 'digit', 'E')],
-  [btn('F', 'digit', 'F'), btn('AND', 'operator', 'and', 'operator'), btn('OR', 'operator', 'or', 'operator'), btn('XOR', 'operator', 'xor', 'operator'), btn('NOT', 'programmer-unary', 'not', 'function')],
-  [btn('7', 'digit', '7'), btn('8', 'digit', '8'), btn('9', 'digit', '9'), btn('<<', 'operator', 'lsh', 'operator'), btn('>>', 'operator', 'rsh', 'operator')],
-  [btn('4', 'digit', '4'), btn('5', 'digit', '5'), btn('6', 'digit', '6'), btn('mod', 'operator', 'mod', 'operator'), btn('÷', 'operator', '/', 'operator')],
-  [btn('1', 'digit', '1'), btn('2', 'digit', '2'), btn('3', 'digit', '3'), btn('×', 'operator', '*', 'operator'), btn('−', 'operator', '-', 'operator')],
-  [btn('±', 'negate', ''), btn('0', 'digit', '0'), btn('⌫', 'backspace', '', 'function'), btn('C', 'clear-all', '', 'function'), btn('+', 'operator', '+', 'operator')],
-  [btn('CE', 'clear-entry', '', 'function'), btn('=', 'equals', '', 'equals')]
+  [btn('A', 'digit', 'A'), btn('<<', 'operator', 'lsh', 'operator'), btn('>>', 'operator', 'rsh', 'operator'), btn('C', 'clear-all', '', 'function'), btn('⌫', 'backspace', '', 'function')],
+  [btn('B', 'digit', 'B'), btn('(', 'noop', ''), btn(')', 'noop', ''), btn('%', 'operator', 'mod', 'function'), btn('÷', 'operator', '/', 'operator')],
+  [btn('C', 'digit', 'C'), btn('7', 'digit', '7'), btn('8', 'digit', '8'), btn('9', 'digit', '9'), btn('×', 'operator', '*', 'operator')],
+  [btn('D', 'digit', 'D'), btn('4', 'digit', '4'), btn('5', 'digit', '5'), btn('6', 'digit', '6'), btn('−', 'operator', '-', 'operator')],
+  [btn('E', 'digit', 'E'), btn('1', 'digit', '1'), btn('2', 'digit', '2'), btn('3', 'digit', '3'), btn('+', 'operator', '+', 'operator')],
+  [btn('F', 'digit', 'F'), btn('+/-', 'negate', ''), btn('0', 'digit', '0'), btn(',', 'noop', ''), btn('=', 'equals', '', 'equals')]
 ];
 
 export const UNIT_CATEGORIES = {

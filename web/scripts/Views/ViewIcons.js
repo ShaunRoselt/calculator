@@ -42,6 +42,18 @@ export function renderToolbarIcon(kind) {
   if (kind === 'graph-options') {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7.5h12M6 12h12M6 16.5h12M9 5.5v4M15 10v4M12 14.5v4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/></svg>';
   }
+  if (kind === 'programmer-keypad') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6.5h2v2H8zm3 0h2v2h-2zm3 0h2v2h-2zM8 9.5h2v2H8zm3 0h2v2h-2zm3 0h2v2h-2zM8 12.5h2v2H8zm3 0h2v2h-2zm3 0h2v2h-2zM8 15.5h2v2H8zm3 0h2v2h-2zm3 0h2v2h-2z" fill="currentColor"/></svg>';
+  }
+  if (kind === 'programmer-bitflip') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 7.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm9 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm-9 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm9 5a2 2 0 1 1 0-4 2 2 0 0 1 0 4ZM9.5 9.5h5M9.5 14.5h5M7.5 11.5v1M16.5 11.5v1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>';
+  }
+  if (kind === 'bitwise') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5h4v7h-4zM13.5 6.5h4v11h-4zM10.5 12h3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>';
+  }
+  if (kind === 'bitshift') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 8 4 4-4 4M13 8l4 4-4 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>';
+  }
   return '';
 }
 

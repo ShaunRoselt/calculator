@@ -13,15 +13,26 @@ export function renderCalculatorView(mode) {
   const buttons = mode === 'standard' ? STANDARD_BUTTONS : mode === 'scientific' ? SCIENTIFIC_BUTTONS : PROGRAMMER_BUTTONS;
   const displaySizeClass = getDisplaySizeClass(calc.display, mode);
   const expressionSizeClass = getExpressionSizeClass(calc.expression);
+  if (mode === 'programmer') {
+    return `
+      <div class="calculator-layout programmer">
+        <div class="programmer-shell">
+          ${renderProgrammerDisplayPanel()}
+          ${state.programmer.isBitFlipChecked ? renderProgrammerBitFlipPanel() : ''}
+          <div class="button-grid programmer">
+            ${buttons.flat().map((button) => renderCalcButton(button, mode)).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }
   return `
     <div class="calculator-layout ${mode}">
       ${mode === 'scientific' ? `<div class="calculator-toolbar">${renderScientificAngleButtons()}</div>` : ''}
-      ${mode === 'programmer' ? `<div class="calculator-toolbar">${renderProgrammerDisplayPanel()}</div>` : ''}
       <div class="display-panel">
         <div class="display-expression ${expressionSizeClass}">${formatExpressionForDisplay(calc.expression) || '&nbsp;'}</div>
         <div class="display-value ${displaySizeClass}">${escapeHtml(calc.display)}</div>
       </div>
-      ${mode === 'programmer' ? `${renderProgrammerReadouts()}${state.programmer.isBitFlipChecked ? renderProgrammerBitFlipPanel() : ''}` : ''}
       <div class="memory-toolbar" aria-label="Memory controls">
         ${renderMemoryToolbar()}
       </div>
@@ -49,26 +60,6 @@ function renderCalcButtonLabel(button) {
     return renderToolbarIcon('backspace');
   }
   return button.label;
-}
-
-function renderProgrammerReadouts() {
-  const value = getProgrammerCurrentValue();
-  const reads = {
-    HEX: formatBigInt(value, 'HEX'),
-    DEC: formatBigInt(value, 'DEC'),
-    OCT: formatBigInt(value, 'OCT'),
-    BIN: formatBigInt(value, 'BIN')
-  };
-  return `
-    <div class="programmer-readouts">
-      ${Object.entries(reads).map(([base, output]) => `
-        <div class="readout-card">
-          <div class="meta-label">${base}</div>
-          <strong>${escapeHtml(output)}</strong>
-        </div>
-      `).join('')}
-    </div>
-  `;
 }
 
 function getDisplaySizeClass(display, mode) {

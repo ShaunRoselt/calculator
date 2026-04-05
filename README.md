@@ -44,8 +44,7 @@ Prerequisites:
 
 ## Standalone web version
 
-This repository also contains a standalone browser version at
-`/home/runner/work/calculator/calculator/index.html`.
+This repository also contains a standalone browser version at `index.html`.
 
 The web implementation is intended to match the same top-level user-facing modes exposed by
 `MainPage.xaml` in the Windows app:
@@ -87,20 +86,20 @@ stylesheet.
 
 #### JavaScript
 
-- `/home/runner/work/calculator/calculator/web/scripts/app.js` — startup and event wiring
-- `/home/runner/work/calculator/calculator/web/scripts/config.js` — mode metadata, button maps, unit definitions
-- `/home/runner/work/calculator/calculator/web/scripts/state.js` — app state creation and persistence
-- `/home/runner/work/calculator/calculator/web/scripts/render.js` — UI rendering
-- `/home/runner/work/calculator/calculator/web/scripts/logic.js` — calculator, converter, date, graphing, and shared mode logic
-- `/home/runner/work/calculator/calculator/web/scripts/utils.js` — shared formatting helpers
+- `web/scripts/app.js` — startup and event wiring
+- `web/scripts/config.js` — mode metadata, button maps, unit definitions
+- `web/scripts/state.js` — app state creation and persistence
+- `web/scripts/render.js` — UI rendering
+- `web/scripts/logic.js` — calculator, converter, date, graphing, and shared mode logic
+- `web/scripts/utils.js` — shared formatting helpers
 
 #### CSS
 
-- `/home/runner/work/calculator/calculator/web/styles/theme.css` — tokens and global element styles
-- `/home/runner/work/calculator/calculator/web/styles/layout.css` — shell, navigation, and shared layout
-- `/home/runner/work/calculator/calculator/web/styles/calculator.css` — calculator surfaces, buttons, history, and memory
-- `/home/runner/work/calculator/calculator/web/styles/panels.css` — date, converter, and graphing panels
-- `/home/runner/work/calculator/calculator/web/styles/responsive.css` — adaptive layout rules
+- `web/styles/theme.css` — tokens and global element styles
+- `web/styles/layout.css` — shell, navigation, and shared layout
+- `web/styles/calculator.css` — calculator surfaces, buttons, history, and memory
+- `web/styles/panels.css` — date, converter, and graphing panels
+- `web/styles/responsive.css` — adaptive layout rules
 
 ## Contributing
 Want to contribute? The team encourages community feedback and contributions. Please follow our [contributing guidelines](CONTRIBUTING.md).

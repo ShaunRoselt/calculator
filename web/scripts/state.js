@@ -2,7 +2,7 @@ import { STORAGE_KEYS } from './config.js';
 import { toDateInputValue } from './utils.js';
 
 function createInitialState() {
-  const today = toDateInputValue(new Date());
+  const todayString = toDateInputValue(new Date());
   return {
     mode: 'standard',
     navOpen: window.innerWidth > 900,
@@ -14,9 +14,9 @@ function createInitialState() {
     programmer: createProgrammerState(),
     date: {
       mode: 'difference',
-      from: today,
-      to: today,
-      baseDate: today,
+      from: todayString,
+      to: todayString,
+      baseDate: todayString,
       operation: 'add',
       years: 0,
       months: 0,

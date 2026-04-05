@@ -1,4 +1,5 @@
 
+/* The standalone web version intentionally ships with a Windows-inspired dark-first presentation. */
 :root {
   color-scheme: dark;
   --bg: #111315;

@@ -5,11 +5,15 @@ function createInitialState() {
   const todayString = toDateInputValue(new Date());
   return {
     mode: 'standard',
+    lastNonSettingsMode: 'standard',
     navOpen: false,
     historyOpen: false,
     historyTab: 'history',
     history: [],
     memory: [],
+    settings: {
+      theme: 'system'
+    },
     standard: createStandardState(),
     scientific: createScientificState(),
     programmer: createProgrammerState(),
@@ -83,6 +87,7 @@ export function hydrateState() {
     const history = JSON.parse(localStorage.getItem(STORAGE_KEYS.history) || '[]');
     const memory = JSON.parse(localStorage.getItem(STORAGE_KEYS.memory) || '[]');
     const nav = JSON.parse(localStorage.getItem(STORAGE_KEYS.nav) || 'null');
+    const theme = localStorage.getItem(STORAGE_KEYS.theme);
     if (Array.isArray(history)) {
       state.history = history.slice(0, 60);
     }
@@ -91,6 +96,9 @@ export function hydrateState() {
     }
     if (typeof nav === 'boolean') {
       state.navOpen = nav;
+    }
+    if (['light', 'dark', 'system'].includes(theme)) {
+      state.settings.theme = theme;
     }
   } catch {
     // ignore broken local storage
@@ -104,6 +112,10 @@ export function persistCollections() {
 
 export function persistNav() {
   localStorage.setItem(STORAGE_KEYS.nav, JSON.stringify(state.navOpen));
+}
+
+export function persistTheme() {
+  localStorage.setItem(STORAGE_KEYS.theme, state.settings.theme);
 }
 
 export const state = createInitialState();

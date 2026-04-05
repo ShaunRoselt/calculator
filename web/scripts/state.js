@@ -3,9 +3,9 @@ import { toDateInputValue } from './utils.js';
 
 function createGraphingExpressions() {
   return [
-    { color: '#0063b1', value: '5', error: false },
-    { color: '#107c10', value: 'log(8)', error: false },
-    { color: '#e81123', value: 'cos(5)', error: false },
+    { color: '#0063b1', value: '', error: false },
+    { color: '#107c10', value: '', error: false },
+    { color: '#e81123', value: '', error: false },
     { color: '#8a8886', value: '', error: false }
   ];
 }
@@ -13,7 +13,7 @@ function createGraphingExpressions() {
 function createGraphingState() {
   return {
     expressions: createGraphingExpressions(),
-    activeExpressionIndex: 3,
+    activeExpressionIndex: 0,
     openMenu: null,
     trigShifted: false,
     trigHyperbolic: false,
@@ -24,7 +24,7 @@ function createGraphingState() {
       yMin: -15,
       yMax: 15
     },
-    status: 'Plotting graph'
+    status: 'Enter an expression'
   };
 }
 

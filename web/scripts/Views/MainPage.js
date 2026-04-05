@@ -2,6 +2,7 @@ import { MODE_META, NAVIGATION_GROUPS } from '../config.js';
 import { appRoot } from '../dom.js';
 import { drawGraph, isCalculatorMode, isSidePanelVisible } from '../logic.js';
 import { state } from '../state.js';
+import { prepareTooltipTargets } from '../tooltip.js';
 import { renderCalculatorView } from './Calculator.js';
 import { renderDateCalculatorView } from './DateCalculator.js';
 import { renderGraphingCalculatorView } from './GraphingCalculator/GraphingCalculator.js';
@@ -34,6 +35,7 @@ export function render() {
       </div>
     </div>
   `;
+  prepareTooltipTargets(appRoot);
   drawGraph();
 }
 

@@ -25,8 +25,8 @@ export function renderMemoryList() {
               <div class="memory-value">${escapeHtml(entry.value)}</div>
             </div>
             <div class="inline-toolbar">
-              <button class="memory-action" data-memory-recall="${index}">MR</button>
-              <button class="memory-action" data-memory-delete="${index}">✕</button>
+              <button class="memory-action" data-memory-recall="${index}" data-tooltip="Recall memory">MR</button>
+              <button class="memory-action" data-memory-delete="${index}" data-tooltip="Delete memory">✕</button>
             </div>
           </div>
         </div>

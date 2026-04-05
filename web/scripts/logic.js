@@ -224,6 +224,13 @@ function handleScientificAction(action, value) {
 
   if (action === 'set-angle') {
     calc.angle = value;
+    calc.display = formatScientificDisplay(parseDisplayNumber(calc.display), calc.display);
+    return;
+  }
+
+  if (action === 'toggle-fe') {
+    calc.isExponentialFormat = !calc.isExponentialFormat;
+    calc.display = formatScientificDisplay(parseDisplayNumber(calc.display), calc.display);
     return;
   }
 
@@ -354,7 +361,7 @@ function applyScientificUnary(action) {
   }
   const expression = unaryExpressionLabel(action, current);
   calc.expression = expression;
-  calc.display = formatNumber(result);
+  calc.display = formatScientificDisplay(result);
   calc.justEvaluated = true;
   pushHistory(expression, calc.display, 'scientific');
 }
@@ -382,7 +389,7 @@ function evaluateScientificEquals() {
   const expression = calc.expression.trim() || calc.display;
   try {
     const result = evaluateScientificExpression(expression, { angle: calc.angle });
-    calc.display = formatNumber(result);
+    calc.display = formatScientificDisplay(result);
     calc.expression = expression;
     calc.justEvaluated = true;
     pushHistory(expression, calc.display, 'scientific');
@@ -400,6 +407,18 @@ function handleProgrammerAction(action, value) {
   }
   if (action === 'set-base') {
     setProgrammerBase(value);
+    return;
+  }
+  if (action === 'set-word-size') {
+    setProgrammerWordSize(value);
+    return;
+  }
+  if (action === 'toggle-bit-panel') {
+    calc.isBitFlipChecked = !calc.isBitFlipChecked;
+    return;
+  }
+  if (action === 'flip-bit') {
+    flipProgrammerBit(Number(value));
     return;
   }
   if (calc.error && !['clear-all', 'clear-entry'].includes(action)) {
@@ -439,12 +458,12 @@ function inputProgrammerDigit(digit) {
     return;
   }
   if (calc.waitingForOperand || calc.justEvaluated) {
-    calc.display = digit;
+    calc.display = normalizeProgrammerDisplay(digit);
     calc.waitingForOperand = false;
     calc.justEvaluated = false;
     return;
   }
-  calc.display = calc.display === '0' ? digit : `${calc.display}${digit}`;
+  calc.display = normalizeProgrammerDisplay(calc.display === '0' ? digit : `${calc.display}${digit}`);
 }
 
 function queueProgrammerOperator(operator) {
@@ -454,9 +473,9 @@ function queueProgrammerOperator(operator) {
     const result = computeProgrammerBinary(calc.accumulator ?? 0n, inputValue, calc.operator);
     if (result == null) {
       return;
-    }
-    calc.accumulator = result;
-    calc.display = formatBigInt(result, calc.base);
+   }
+    calc.accumulator = normalizeProgrammerValue(result);
+    calc.display = formatBigInt(calc.accumulator, calc.base);
   } else {
     calc.accumulator = inputValue;
   }
@@ -472,7 +491,7 @@ function applyProgrammerUnary(action) {
   }
   const calc = state.programmer;
   const value = getProgrammerCurrentValue();
-  const result = ~value;
+  const result = normalizeProgrammerValue(~value);
   calc.display = formatBigInt(result, calc.base);
   calc.expression = `NOT ${formatBigInt(value, calc.base)}`;
   calc.justEvaluated = true;
@@ -482,7 +501,7 @@ function applyProgrammerUnary(action) {
 function negateProgrammer() {
   const calc = state.programmer;
   const value = getProgrammerCurrentValue();
-  calc.display = formatBigInt(-value, calc.base);
+  calc.display = formatBigInt(normalizeProgrammerValue(-value), calc.base);
 }
 
 function backspaceProgrammer() {
@@ -507,9 +526,9 @@ function evaluateProgrammerEquals() {
     return;
   }
   pushHistory(`${formatBigInt(calc.accumulator, calc.base)} ${operatorLabel(calc.operator)} ${formatBigInt(right, calc.base)}`, formatBigInt(result, calc.base), 'programmer');
-  calc.display = formatBigInt(result, calc.base);
+  calc.display = formatBigInt(normalizeProgrammerValue(result), calc.base);
   calc.expression = `${formatBigInt(calc.accumulator, calc.base)} ${operatorLabel(calc.operator)} ${formatBigInt(right, calc.base)}`;
-  calc.accumulator = result;
+  calc.accumulator = normalizeProgrammerValue(result);
   calc.operator = null;
   calc.waitingForOperand = true;
   calc.justEvaluated = true;
@@ -550,6 +569,26 @@ function setProgrammerBase(base) {
   const value = getProgrammerCurrentValue();
   state.programmer.base = base;
   state.programmer.display = formatBigInt(value, base);
+}
+
+function setProgrammerWordSize(wordSize) {
+  const value = getProgrammerCurrentValue();
+  state.programmer.wordSize = wordSize;
+  state.programmer.display = formatBigInt(normalizeProgrammerValue(value), state.programmer.base);
+  if (state.programmer.accumulator != null) {
+    state.programmer.accumulator = normalizeProgrammerValue(state.programmer.accumulator);
+  }
+}
+
+function flipProgrammerBit(index) {
+  if (!Number.isInteger(index) || index < 0 || index >= getProgrammerWordSizeBits()) {
+    return;
+  }
+  const unsignedValue = toUnsignedProgrammerValue(getProgrammerCurrentValue());
+  const toggled = unsignedValue ^ (1n << BigInt(index));
+  state.programmer.display = formatBigInt(normalizeProgrammerValue(toggled), state.programmer.base);
+  state.programmer.justEvaluated = false;
+  state.programmer.waitingForOperand = false;
 }
 
 function setProgrammerError(message) {
@@ -727,8 +766,8 @@ function scientificDisplayFromExpression(expression) {
   if (!token) {
     return '0';
   }
-  if (token === 'pi') return formatNumber(Math.PI);
-  if (token === 'e') return formatNumber(Math.E);
+  if (token === 'pi') return formatScientificDisplay(Math.PI);
+  if (token === 'e') return formatScientificDisplay(Math.E);
   return token;
 }
 
@@ -944,7 +983,7 @@ export function isProgrammerDigitAllowed(digit, base) {
 
 export function getProgrammerCurrentValue() {
   try {
-    return parseBigIntFromBase(state.programmer.display, state.programmer.base);
+    return normalizeProgrammerValue(parseBigIntFromBase(state.programmer.display, state.programmer.base));
   } catch {
     return 0n;
   }
@@ -981,6 +1020,55 @@ export function formatBigInt(value, base) {
   const radix = { BIN: 2, OCT: 8, DEC: 10, HEX: 16 }[base];
   const raw = (value < 0n ? -value : value).toString(radix);
   return `${sign}${base === 'HEX' ? raw.toUpperCase() : raw}`;
+}
+
+export function getProgrammerWordSizeBits() {
+  return {
+    QWORD: 64,
+    DWORD: 32,
+    WORD: 16,
+    BYTE: 8
+  }[state.programmer.wordSize] ?? 64;
+}
+
+export function getProgrammerBitColumns() {
+  const bits = getProgrammerWordSizeBits();
+  const columns = [];
+  for (let bit = bits - 1; bit >= 0; bit -= 1) {
+    columns.push(bit);
+  }
+  return columns;
+}
+
+export function getProgrammerBitValue(bit) {
+  return Number((toUnsignedProgrammerValue(getProgrammerCurrentValue()) >> BigInt(bit)) & 1n);
+}
+
+function getProgrammerWordMask() {
+  const bits = BigInt(getProgrammerWordSizeBits());
+  return (1n << bits) - 1n;
+}
+
+function toUnsignedProgrammerValue(value) {
+  return BigInt.asUintN(getProgrammerWordSizeBits(), value) & getProgrammerWordMask();
+}
+
+function normalizeProgrammerValue(value) {
+  return BigInt.asIntN(getProgrammerWordSizeBits(), BigInt(value));
+}
+
+function normalizeProgrammerDisplay(display) {
+  return formatBigInt(normalizeProgrammerValue(parseBigIntFromBase(display, state.programmer.base)), state.programmer.base);
+}
+
+function formatScientificDisplay(value, fallback = '0') {
+  if (!Number.isFinite(value)) {
+    return fallback;
+  }
+  if (!state.scientific.isExponentialFormat) {
+    return formatNumber(value);
+  }
+  return value.toExponential(12).replace(/\.?0+e/, 'e').replace('e+', 'e+').replace('e-', 'e-').toUpperCase();
 }
 
 function getDateParts(value) {

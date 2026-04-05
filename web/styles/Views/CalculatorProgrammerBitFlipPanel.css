@@ -1,0 +1,37 @@
+.programmer-bitflip-panel {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0 2px 2px;
+}
+
+.bitflip-group {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.bitflip-label-row,
+.bitflip-value-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.25rem;
+}
+
+.bitflip-label {
+  color: var(--text-faint);
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+.bitflip-cell {
+  min-height: 28px;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-soft);
+}
+
+.bitflip-cell.active,
+.bitflip-cell:hover,
+.bitflip-cell:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}

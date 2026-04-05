@@ -8,7 +8,7 @@ export function renderScientificAngleButtons() {
       ${SCIENTIFIC_ANGLE_OPTIONS.map((angle) => `
         <button class="angle-toggle ${state.scientific.angle === angle ? 'active' : ''}" data-action="set-angle" data-value="${angle}">${angle}</button>
       `).join('')}
-      <button class="fe-toggle ${state.scientific.isExponentialFormat ? 'active' : ''}" data-action="toggle-fe" aria-pressed="${state.scientific.isExponentialFormat ? 'true' : 'false'}">F-E</button>
+      <button class="format-toggle ${state.scientific.isExponentialFormat ? 'active' : ''}" data-action="toggle-fe" aria-pressed="${state.scientific.isExponentialFormat ? 'true' : 'false'}">F-E</button>
     </div>
   `;
 }

@@ -2,6 +2,7 @@
 .stats-grid {
   display: grid;
   gap: 0.85rem;
+  align-content: start;
 }
 
 .date-grid {

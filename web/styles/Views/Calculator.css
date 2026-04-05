@@ -1,8 +1,9 @@
 .calculator-layout {
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  grid-template-rows: auto minmax(180px, 0.85fr) auto minmax(0, 1.15fr);
   gap: 3px;
   height: 100%;
+  min-height: 0;
 }
 
 .calculator-toolbar {
@@ -17,7 +18,8 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  min-height: 248px;
+  min-height: clamp(180px, 28vh, 320px);
+  overflow: hidden;
 }
 
 .memory-toolbar,
@@ -68,6 +70,7 @@
   color: var(--text-faint);
   font-size: 0.88rem;
   word-break: break-word;
+  line-height: 1.15;
 }
 
 .display-value {
@@ -79,6 +82,27 @@
   letter-spacing: -0.045em;
   line-height: 0.95;
   word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.display-expression.compact {
+  font-size: 0.78rem;
+}
+
+.display-expression.dense {
+  font-size: 0.72rem;
+}
+
+.display-value.compact {
+  font-size: clamp(3rem, 6.5vw, 4.8rem);
+}
+
+.display-value.dense {
+  font-size: clamp(2.35rem, 5.2vw, 3.8rem);
+}
+
+.display-value.ultra-dense {
+  font-size: clamp(1.8rem, 4.2vw, 3rem);
 }
 
 .mode-banner,
@@ -96,10 +120,12 @@
   gap: 2px;
   flex: 1;
   padding: 0 2px 2px;
+  min-height: 0;
 }
 
 .button-grid.standard {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(6, minmax(0, 1fr));
 }
 
 .button-grid.scientific,
@@ -107,8 +133,17 @@
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.button-grid.scientific {
+  grid-template-rows: repeat(8, minmax(0, 1fr));
+}
+
+.button-grid.programmer {
+  grid-template-rows: repeat(7, minmax(0, 1fr));
+}
+
 .calc-button {
-  min-height: 60px;
+  min-height: 0;
+  height: 100%;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.04);
   background: #3a3c44;

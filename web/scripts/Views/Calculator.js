@@ -11,13 +11,15 @@ import { renderToolbarIcon } from './ViewIcons.js';
 export function renderCalculatorView(mode) {
   const calc = state[mode];
   const buttons = mode === 'standard' ? STANDARD_BUTTONS : mode === 'scientific' ? SCIENTIFIC_BUTTONS : PROGRAMMER_BUTTONS;
+  const displaySizeClass = getDisplaySizeClass(calc.display, mode);
+  const expressionSizeClass = getExpressionSizeClass(calc.expression);
   return `
     <div class="calculator-layout">
       ${mode === 'scientific' ? `<div class="calculator-toolbar">${renderScientificAngleButtons()}</div>` : ''}
       ${mode === 'programmer' ? `<div class="calculator-toolbar">${renderProgrammerDisplayPanel()}</div>` : ''}
       <div class="display-panel">
-        <div class="display-expression">${formatExpressionForDisplay(calc.expression) || '&nbsp;'}</div>
-        <div class="display-value">${escapeHtml(calc.display)}</div>
+        <div class="display-expression ${expressionSizeClass}">${formatExpressionForDisplay(calc.expression) || '&nbsp;'}</div>
+        <div class="display-value ${displaySizeClass}">${escapeHtml(calc.display)}</div>
       </div>
       ${mode === 'programmer' ? `${renderProgrammerReadouts()}${state.programmer.isBitFlipChecked ? renderProgrammerBitFlipPanel() : ''}` : ''}
       <div class="memory-toolbar" aria-label="Memory controls">
@@ -67,4 +69,33 @@ function renderProgrammerReadouts() {
       `).join('')}
     </div>
   `;
+}
+
+function getDisplaySizeClass(display, mode) {
+  const normalizedLength = String(display).replace(/\s+/g, '').length;
+  const compactThreshold = mode === 'programmer' ? 12 : 14;
+  const denseThreshold = mode === 'programmer' ? 20 : 18;
+  const ultraDenseThreshold = mode === 'programmer' ? 36 : 28;
+
+  if (normalizedLength >= ultraDenseThreshold) {
+    return 'ultra-dense';
+  }
+  if (normalizedLength >= denseThreshold) {
+    return 'dense';
+  }
+  if (normalizedLength >= compactThreshold) {
+    return 'compact';
+  }
+  return '';
+}
+
+function getExpressionSizeClass(expression) {
+  const length = String(expression || '').length;
+  if (length >= 48) {
+    return 'dense';
+  }
+  if (length >= 28) {
+    return 'compact';
+  }
+  return '';
 }

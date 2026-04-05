@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "check": "node --check web/scripts/app.js",
+    "check": "sh -c 'find web/scripts -name \"*.js\" -print | sort | while read file; do node --check \"$file\"; done'",
     "start": "python3 -m http.server 4173"
   },
   "repository": {

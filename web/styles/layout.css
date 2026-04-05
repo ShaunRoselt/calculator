@@ -1,0 +1,164 @@
+.app-shell {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  padding: 1.5rem;
+  background: rgba(12, 14, 17, 0.76);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(76, 194, 255, 0.9), rgba(31, 162, 255, 0.55));
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  box-shadow: 0 12px 28px rgba(31, 162, 255, 0.25);
+}
+
+.brand-copy h1 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.brand-copy p,
+.sidebar-section-title,
+.subtitle,
+.meta-label,
+.tab-button,
+.side-empty,
+.helper-text,
+.form-hint,
+.legend-pill {
+  color: var(--text-soft);
+}
+
+.brand-copy p {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+}
+
+.nav-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+.sidebar-nav {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.nav-button {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.95rem 1rem;
+  border-radius: 16px;
+  background: transparent;
+  color: var(--text-soft);
+  text-align: left;
+  transition: 120ms ease;
+}
+
+.nav-button:hover,
+.nav-button:focus-visible,
+.tab-button:hover,
+.tab-button:focus-visible,
+.chip-button:hover,
+.chip-button:focus-visible,
+.memory-action:hover,
+.memory-action:focus-visible,
+.aux-button:hover,
+.aux-button:focus-visible,
+.graph-button:hover,
+.graph-button:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.nav-button.active,
+.tab-button.active,
+.chip-button.active,
+.base-button.active,
+.angle-toggle.active {
+  background: rgba(76, 194, 255, 0.15);
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px rgba(76, 194, 255, 0.3);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem 0;
+}
+
+.topbar-title h2 {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.chip-button,
+.base-button,
+.angle-toggle,
+.aux-button,
+.graph-button {
+  padding: 0.6rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-soft);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem 1.5rem;
+  flex: 1;
+}
+
+.workspace.single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(20px);
+}
+
+.main-panel {

@@ -105,6 +105,9 @@ stylesheet.
 - `web/scripts/Views/MainPage.js` — shell composition matching the native `MainPage.xaml` role
 - `web/scripts/Views/TitleBar.js` — caption bar rendering matching `TitleBar.xaml`
 - `web/scripts/Views/Calculator.js` — standard/scientific/programmer surface rendering matching `Calculator.xaml`
+- `web/scripts/Views/CalculatorScientificAngleButtons.js` — scientific header controls matching `CalculatorScientificAngleButtons.xaml`
+- `web/scripts/Views/CalculatorProgrammerDisplayPanel.js` — programmer header controls matching `CalculatorProgrammerDisplayPanel.xaml`
+- `web/scripts/Views/CalculatorProgrammerBitFlipPanel.js` — programmer bit-flip surface matching `CalculatorProgrammerBitFlipPanel.xaml`
 - `web/scripts/Views/HistoryList.js` — history panel rendering matching `HistoryList.xaml`
 - `web/scripts/Views/Memory.js` — memory panel and toolbar rendering matching `Memory.xaml`
 - `web/scripts/Views/DateCalculator.js` — date mode rendering matching `DateCalculator.xaml`
@@ -117,6 +120,9 @@ stylesheet.
 - `web/styles/Views/TitleBar.css` — caption bar styling aligned to `TitleBar.xaml`
 - `web/styles/Views/MainPage.css` — shell, navigation, and shared layout aligned to `MainPage.xaml`
 - `web/styles/Views/Calculator.css` — calculator surfaces and shared calculator cards aligned to `Calculator.xaml`
+- `web/styles/Views/CalculatorScientificAngleButtons.css` — scientific header control styling aligned to `CalculatorScientificAngleButtons.xaml`
+- `web/styles/Views/CalculatorProgrammerDisplayPanel.css` — programmer display control styling aligned to `CalculatorProgrammerDisplayPanel.xaml`
+- `web/styles/Views/CalculatorProgrammerBitFlipPanel.css` — programmer bit-flip grid styling aligned to `CalculatorProgrammerBitFlipPanel.xaml`
 - `web/styles/Views/HistoryList.css` — history list styling aligned to `HistoryList.xaml`
 - `web/styles/Views/Memory.css` — memory list styling aligned to `Memory.xaml`
 - `web/styles/Views/DateCalculator.css` — date mode layout aligned to `DateCalculator.xaml`

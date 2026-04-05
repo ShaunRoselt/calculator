@@ -1,0 +1,37 @@
+.programmer-display-panel {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.programmer-mode-toggle,
+.programmer-toolbar-row,
+.word-size-toolbar {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.programmer-toolbar-row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.programmer-surface-toggle,
+.word-size-button {
+  min-height: 30px;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-soft);
+}
+
+.programmer-surface-toggle.active,
+.word-size-button.active,
+.programmer-surface-toggle:hover,
+.programmer-surface-toggle:focus-visible,
+.word-size-button:hover,
+.word-size-button:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}

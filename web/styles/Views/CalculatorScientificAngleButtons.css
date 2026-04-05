@@ -1,0 +1,22 @@
+.scientific-angle-operators {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, max-content));
+  gap: 0.35rem;
+  justify-content: end;
+  width: 100%;
+}
+
+.scientific-angle-operators button {
+  min-height: 30px;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-soft);
+}
+
+.scientific-angle-operators button:hover,
+.scientific-angle-operators button:focus-visible,
+.scientific-angle-operators button.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}

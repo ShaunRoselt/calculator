@@ -57,6 +57,7 @@ export function createScientificState() {
     display: '0',
     expression: '',
     angle: 'DEG',
+    isExponentialFormat: false,
     error: false,
     justEvaluated: false
   };
@@ -71,6 +72,8 @@ export function createProgrammerState() {
     waitingForOperand: false,
     error: false,
     base: 'DEC',
+    wordSize: 'QWORD',
+    isBitFlipChecked: false,
     justEvaluated: false
   };
 }

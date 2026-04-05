@@ -203,9 +203,6 @@ function getCalcButtonTooltip(button) {
   if (button.action === 'backspace') {
     return 'Backspace';
   }
-  if (button.action === 'equals') {
-    return 'Equals';
-  }
   return '';
 }
 

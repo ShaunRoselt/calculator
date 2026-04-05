@@ -15,7 +15,7 @@ export function renderHistoryList() {
       `).join('')}
     </div>
     <div class="side-footer">
-      <button class="history-clear" data-history-clear="true">Clear history</button>
+      <button class="history-clear" data-history-clear="true" data-tooltip="Clear all history">Clear history</button>
     </div>
   `;
 }

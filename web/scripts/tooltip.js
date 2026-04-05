@@ -99,7 +99,7 @@ function findTooltipTarget(target) {
 }
 
 function getTooltipText(element) {
-  return element?.dataset.tooltip || element?.getAttribute('aria-label') || '';
+  return element?.dataset.tooltip || '';
 }
 
 function showTooltip(target) {

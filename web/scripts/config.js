@@ -77,18 +77,17 @@ export const STANDARD_BUTTONS = [
   [btn('7', 'digit', '7'), btn('8', 'digit', '8'), btn('9', 'digit', '9'), btn('×', 'operator', '*', 'operator')],
   [btn('4', 'digit', '4'), btn('5', 'digit', '5'), btn('6', 'digit', '6'), btn('−', 'operator', '-', 'operator')],
   [btn('1', 'digit', '1'), btn('2', 'digit', '2'), btn('3', 'digit', '3'), btn('+', 'operator', '+', 'operator')],
-  [btn('+/-', 'negate', ''), btn('0', 'digit', '0'), btn('.', 'decimal', '.'), btn('=', 'equals', '', 'equals')]
+  [btn('+/-', 'negate', ''), btn('0', 'digit', '0'), btn(',', 'decimal', '.'), btn('=', 'equals', '', 'equals')]
 ];
 
 export const SCIENTIFIC_BUTTONS = [
-  [btn('2ⁿᵈ', 'noop', '', 'function'), btn('π', 'constant', 'pi', 'function'), btn('e', 'constant', 'e', 'function'), btn('(', 'paren', '(' , 'function'), btn(')', 'paren', ')', 'function')],
-  [btn('x²', 'scientific-unary', 'square', 'function'), btn('x³', 'scientific-unary', 'cube', 'function'), btn('xʸ', 'operator', '^', 'operator'), btn('10ˣ', 'scientific-unary', 'pow10', 'function'), btn('÷', 'operator', '/', 'operator')],
-  [btn('√x', 'scientific-unary', 'sqrt', 'function'), btn('∛x', 'scientific-unary', 'cbrt', 'function'), btn('x!', 'scientific-unary', 'factorial', 'function'), btn('mod', 'operator', 'mod', 'operator'), btn('×', 'operator', '*', 'operator')],
-  [btn('sin', 'scientific-unary', 'sin', 'function'), btn('cos', 'scientific-unary', 'cos', 'function'), btn('tan', 'scientific-unary', 'tan', 'function'), btn('ln', 'scientific-unary', 'ln', 'function'), btn('−', 'operator', '-', 'operator')],
-  [btn('log', 'scientific-unary', 'log', 'function'), btn('exp', 'scientific-unary', 'exp', 'function'), btn('1/x', 'scientific-unary', 'reciprocal', 'function'), btn('C', 'clear-all', '', 'function'), btn('+', 'operator', '+', 'operator')],
-  [btn('7', 'digit', '7'), btn('8', 'digit', '8'), btn('9', 'digit', '9'), btn('CE', 'clear-entry', '', 'function'), btn('⌫', 'backspace', '', 'function')],
-  [btn('4', 'digit', '4'), btn('5', 'digit', '5'), btn('6', 'digit', '6'), btn('±', 'negate', ''), btn('=', 'equals', '', 'equals')],
-  [btn('1', 'digit', '1'), btn('2', 'digit', '2'), btn('3', 'digit', '3'), btn('.', 'decimal', '.'), btn('0', 'digit', '0')]
+  [btn('2ⁿᵈ', 'noop', '', 'function'), btn('π', 'constant', 'pi', 'function'), btn('e', 'constant', 'e', 'function'), btn('C', 'clear-all', '', 'function'), btn('⌫', 'backspace', '', 'function')],
+  [btn('x²', 'scientific-unary', 'square', 'function'), btn('⅟x', 'scientific-unary', 'reciprocal', 'function'), btn('|x|', 'scientific-unary', 'abs', 'function'), btn('exp', 'scientific-unary', 'exp', 'function'), btn('mod', 'operator', 'mod', 'operator')],
+  [btn('²√x', 'scientific-unary', 'sqrt', 'function'), btn('(', 'paren', '(', 'function'), btn(')', 'paren', ')', 'function'), btn('n!', 'scientific-unary', 'factorial', 'function'), btn('÷', 'operator', '/', 'operator')],
+  [btn('xʸ', 'operator', '^', 'operator'), btn('7', 'digit', '7'), btn('8', 'digit', '8'), btn('9', 'digit', '9'), btn('×', 'operator', '*', 'operator')],
+  [btn('10ˣ', 'scientific-unary', 'pow10', 'function'), btn('4', 'digit', '4'), btn('5', 'digit', '5'), btn('6', 'digit', '6'), btn('−', 'operator', '-', 'operator')],
+  [btn('log', 'scientific-unary', 'log', 'function'), btn('1', 'digit', '1'), btn('2', 'digit', '2'), btn('3', 'digit', '3'), btn('+', 'operator', '+', 'operator')],
+  [btn('ln', 'scientific-unary', 'ln', 'function'), btn('+/-', 'negate', ''), btn('0', 'digit', '0'), btn(',', 'decimal', '.'), btn('=', 'equals', '', 'equals')]
 ];
 
 export const PROGRAMMER_BUTTONS = [

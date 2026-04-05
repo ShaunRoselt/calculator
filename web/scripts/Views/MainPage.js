@@ -70,6 +70,7 @@ function renderNavigationView() {
 
 function renderHeader() {
   const meta = MODE_META[state.mode];
+  const showDesktopSidePanel = getLayoutMode() === 'desktop' && isSidePanelVisible();
   const navButton = state.mode === 'settings'
     ? `<button class="icon-button nav-toggle" data-settings-back="true" aria-label="Back">${renderToolbarIcon('back')}</button>`
     : `<button class="icon-button nav-toggle" data-nav-toggle="true" aria-label="Open navigation">${renderToolbarIcon('menu')}</button>`;
@@ -89,7 +90,7 @@ function renderHeader() {
         </div>
       </div>
       <div class="topbar-actions">
-        ${isCalculatorMode(state.mode) ? `<button class="icon-button history-toggle ${state.historyOpen ? 'active' : ''}" data-toggle-panel="history" aria-label="Toggle history">${renderToolbarIcon('history')}</button>` : ''}
+        ${isCalculatorMode(state.mode) && !showDesktopSidePanel ? `<button class="icon-button history-toggle ${state.historyOpen ? 'active' : ''}" data-toggle-panel="history" aria-label="Toggle history">${renderToolbarIcon('history')}</button>` : ''}
       </div>
     </header>
   `;

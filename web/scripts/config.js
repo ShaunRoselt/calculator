@@ -71,6 +71,16 @@ export const APP_INFO = {
   version: '1.0.0'
 };
 
+export const CURRENCY_DETAILS = {
+  'US Dollar': { label: 'United States - Dollar', symbol: '$', code: 'USD' },
+  Euro: { label: 'Europe - Euro', symbol: '€', code: 'EUR' },
+  'British Pound': { label: 'United Kingdom - Pound', symbol: '£', code: 'GBP' },
+  'Japanese Yen': { label: 'Japan - Yen', symbol: '¥', code: 'JPY' },
+  'Canadian Dollar': { label: 'Canada - Dollar', symbol: 'C$', code: 'CAD' }
+};
+
+export const MOCK_CURRENCY_UPDATED_AT = '2026/04/05 15:13';
+
 export const STANDARD_BUTTONS = [
   [btn('%', 'percent', '', 'function'), btn('CE', 'clear-entry', '', 'function'), btn('C', 'clear-all', '', 'function'), btn('⌫', 'backspace', '', 'function')],
   [btn('¹∕x', 'standard-unary', 'reciprocal', 'function'), btn('x²', 'standard-unary', 'square', 'function'), btn('²√x', 'standard-unary', 'sqrt', 'function'), btn('÷', 'operator', '/', 'operator')],
@@ -179,7 +189,7 @@ export const UNIT_CATEGORIES = {
   ],
   Currency: [
     unit('US Dollar', 'USD', (v) => v, (v) => v),
-    unit('Euro', 'EUR', (v) => v / 0.92, (v) => v * 0.92),
+    unit('Euro', 'EUR', (v) => v / 0.8681, (v) => v * 0.8681),
     unit('British Pound', 'GBP', (v) => v / 0.78, (v) => v * 0.78),
     unit('Japanese Yen', 'JPY', (v) => v / 151.24, (v) => v * 151.24),
     unit('Canadian Dollar', 'CAD', (v) => v / 1.35, (v) => v * 1.35)

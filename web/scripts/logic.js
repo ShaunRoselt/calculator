@@ -743,7 +743,13 @@ export function isCalculatorMode(mode) {
 }
 
 export function isSidePanelVisible() {
-  return isCalculatorMode(state.mode) && state.historyOpen;
+  return isCalculatorMode(state.mode) && (shouldAutoShowSidePanel() || state.historyOpen);
+}
+
+function shouldAutoShowSidePanel() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  return width >= 980 || (width >= 900 && height <= 560);
 }
 
 function operatorLabel(operator) {

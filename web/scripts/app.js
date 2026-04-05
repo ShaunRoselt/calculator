@@ -42,6 +42,18 @@ function handleClick(event) {
     return;
   }
 
+  if (target.dataset.closeSurface) {
+    if (target.dataset.closeSurface === 'nav') {
+      state.navOpen = false;
+      persistNav();
+    }
+    if (target.dataset.closeSurface === 'panel') {
+      state.historyOpen = false;
+    }
+    render();
+    return;
+  }
+
   if (target.dataset.togglePanel) {
     const nextTab = target.dataset.togglePanel;
     if (state.historyOpen && state.historyTab === nextTab) {
@@ -65,6 +77,7 @@ function handleClick(event) {
 
   if (target.dataset.historyTab) {
     state.historyTab = target.dataset.historyTab;
+    state.historyOpen = true;
     render();
     return;
   }
@@ -187,6 +200,15 @@ function handleInput(event) {
 }
 
 function handleKeydown(event) {
+  if (event.key === 'Escape' && (state.navOpen || state.historyOpen)) {
+    state.navOpen = false;
+    state.historyOpen = false;
+    persistNav();
+    render();
+    event.preventDefault();
+    return;
+  }
+
   if (!isCalculatorMode(state.mode)) {
     if (state.mode === 'graphing' && event.key === 'Enter') {
       updateGraph();

@@ -5,12 +5,15 @@ import { escapeHtml, formatExpressionForDisplay } from './utils.js';
 import { drawGraph, getProgrammerCurrentValue, formatBigInt, getUnitsForCategory, isCalculatorMode, isProgrammerDigitAllowed, isSidePanelVisible } from './logic.js';
 
 export function render() {
+  const layoutMode = getLayoutMode();
   const sidePanelVisible = isSidePanelVisible();
   appRoot.innerHTML = `
     <div class="desktop-shell">
-      <div class="app-shell ${state.navOpen ? 'nav-open' : ''}">
+      <div class="app-shell layout-${layoutMode} ${state.navOpen ? 'nav-open' : ''} ${sidePanelVisible ? 'history-open' : ''}">
         ${renderWindowChrome()}
         <div class="window-body">
+          ${state.navOpen ? `<button class="surface-scrim" data-close-surface="nav" aria-label="Close navigation"></button>` : ''}
+          ${sidePanelVisible && layoutMode !== 'desktop' ? `<button class="surface-scrim panel-scrim" data-close-surface="panel" aria-label="Close side panel"></button>` : ''}
           ${renderSidebar()}
           <main class="main">
             ${renderTopbar()}
@@ -46,11 +49,11 @@ function renderWindowChrome() {
 
 function renderSidebar() {
   return `
-    <aside class="sidebar">
+    <aside class="sidebar" aria-label="Calculator navigation">
       <div class="brand">
         <div class="brand-copy">
           <h1>Calculator</h1>
-          <p>Navigation</p>
+          <p>Mode picker</p>
         </div>
       </div>
       <nav class="sidebar-nav">
@@ -72,8 +75,8 @@ function renderTopbar() {
       <div class="topbar-title">
         <button class="icon-button nav-toggle" data-nav-toggle="true" aria-label="Open navigation">${renderToolbarIcon('menu')}</button>
         <div class="mode-title-group">
+          <div class="mode-caption">Calculator</div>
           <h2>${meta.label}</h2>
-          ${state.mode === 'standard' ? `<span class="mode-glyph" aria-hidden="true">${renderToolbarIcon('standard')}</span>` : ''}
         </div>
       </div>
       <div class="topbar-actions">
@@ -132,7 +135,7 @@ function renderCalculatorPanel(mode) {
         <div class="display-value">${escapeHtml(calc.display)}</div>
       </div>
       ${mode === 'programmer' ? renderProgrammerReadouts() : ''}
-      <div class="memory-toolbar">
+      <div class="memory-toolbar" aria-label="Memory controls">
         ${renderMemoryToolbar()}
       </div>
       <div class="button-grid ${mode}">
@@ -146,7 +149,7 @@ function renderCalcButton(button, mode) {
   const disabled = mode === 'programmer' && button.action === 'digit' && !isProgrammerDigitAllowed(button.value, state.programmer.base);
   return `
     <button
-      class="calc-button ${button.tone || ''} ${disabled ? 'disabled' : ''}"
+      class="calc-button ${button.tone || ''} ${(button.tone || 'digit') === 'default' ? 'digit' : ''} ${disabled ? 'disabled' : ''}"
       data-action="${button.action}"
       data-value="${button.value ?? ''}"
       ${disabled ? 'disabled' : ''}
@@ -198,11 +201,16 @@ function renderProgrammerReadouts() {
 }
 
 function renderSidePanel() {
+  const overlay = getLayoutMode() !== 'desktop';
   return `
-    <aside class="panel side-panel">
+    <aside class="panel side-panel ${overlay ? 'overlay' : ''}" aria-label="History and memory panel">
+      <div class="side-panel-header">
+        <div class="side-panel-title">History &amp; Memory</div>
+        ${overlay ? `<button class="icon-button side-panel-close" data-close-surface="panel" aria-label="Close side panel">${renderToolbarIcon('dismiss')}</button>` : ''}
+      </div>
       <div class="side-tabs">
-        <button class="tab-button ${state.historyTab === 'history' ? 'active' : ''}" data-toggle-panel="history">History</button>
-        <button class="tab-button ${state.historyTab === 'memory' ? 'active' : ''}" data-toggle-panel="memory">Memory</button>
+        <button class="tab-button ${state.historyTab === 'history' ? 'active' : ''}" data-history-tab="history">History</button>
+        <button class="tab-button ${state.historyTab === 'memory' ? 'active' : ''}" data-history-tab="memory">Memory</button>
       </div>
       <div class="side-body">
         ${state.historyTab === 'history' ? renderHistoryList() : renderMemoryList()}
@@ -418,5 +426,18 @@ function renderToolbarIcon(kind) {
   if (kind === 'backspace') {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 7h8a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-8L4 12l6-5Zm2.5 3 5 5m0-5-5 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55"/></svg>';
   }
+  if (kind === 'dismiss') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 6.75 17.25 17.25M17.25 6.75 6.75 17.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/></svg>';
+  }
   return '';
+}
+
+function getLayoutMode() {
+  if (window.innerWidth <= 640) {
+    return 'mobile';
+  }
+  if (window.innerWidth <= 1080) {
+    return 'tablet';
+  }
+  return 'desktop';
 }

@@ -27,3 +27,18 @@
 .scientific-angle-operators button.active {
   color: var(--text);
 }
+
+.scientific-angle-operators .exponential-format-toggle.active {
+  position: relative;
+}
+
+.scientific-angle-operators .exponential-format-toggle.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--accent);
+}

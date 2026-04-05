@@ -8,8 +8,7 @@ export function renderMemoryToolbar() {
     renderMemoryButton('mr', 'MR', memoryEmpty),
     renderMemoryButton('m+', 'M+'),
     renderMemoryButton('m-', 'M−'),
-    renderMemoryButton('ms', 'MS'),
-    `<button class="${memoryEmpty ? 'disabled' : ''}" data-toggle-panel="memory" ${memoryEmpty ? 'disabled' : ''}>M<span class="memory-caret">⌄</span></button>`
+    renderMemoryButton('ms', 'MS')
   ].join('');
 }
 

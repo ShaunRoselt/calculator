@@ -167,11 +167,26 @@
   gap: 2px;
 }
 
+.mode-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .topbar-title h2 {
   margin: 0;
   font-size: 1.55rem;
   font-weight: 600;
   line-height: 1;
+}
+
+.mode-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: var(--text-soft);
 }
 
 .mode-caption {

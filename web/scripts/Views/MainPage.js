@@ -61,13 +61,19 @@ function renderNavigationView() {
 
 function renderHeader() {
   const meta = MODE_META[state.mode];
+  const modeGlyph = state.mode === 'standard'
+    ? `<span class="mode-glyph" aria-hidden="true">${renderToolbarIcon('standard')}</span>`
+    : '';
   return `
     <header class="topbar ${isCalculatorMode(state.mode) ? 'calculator-topbar' : ''}">
       <div class="topbar-title">
         <button class="icon-button nav-toggle" data-nav-toggle="true" aria-label="Open navigation">${renderToolbarIcon('menu')}</button>
         <div class="mode-title-group">
           <div class="mode-caption">Calculator</div>
-          <h2>${meta.label}</h2>
+          <div class="mode-title-row">
+            <h2>${meta.label}</h2>
+            ${modeGlyph}
+          </div>
         </div>
       </div>
       <div class="topbar-actions">

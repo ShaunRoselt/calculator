@@ -153,8 +153,8 @@
   min-height: 0;
   height: 100%;
   border-radius: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.035);
-  background: #373b4d;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  background: #35373f;
   color: var(--text);
   font-size: 1rem;
   font-weight: 400;
@@ -164,7 +164,7 @@
 
 .calc-button:hover,
 .calc-button:focus-visible {
-  background: #42475b;
+  background: #40424a;
 }
 
 .calc-button:active {
@@ -172,15 +172,15 @@
 }
 
 .calc-button.function {
-  background: #323647;
+  background: #31333a;
 }
 
 .calc-button.digit {
-  background: #2c3041;
+  background: #3b3d45;
 }
 
 .calc-button.operator {
-  background: #34384a;
+  background: #33353d;
 }
 
 .calc-button.equals {

@@ -1,4 +1,4 @@
-import { CONVERTER_MODE_TO_CATEGORY, isConverterMode } from './config.js';
+import { CONVERTER_MODE_TO_CATEGORY, DEFAULT_MODE, isConverterMode, isMode } from './config.js';
 import { hydrateState, persistCollections, persistNav, persistTheme, state } from './state.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
 import {
@@ -24,7 +24,11 @@ import {
   zoomGraph
 } from './logic.js';
 
+const PAGE_QUERY_PARAM = 'page';
+const CALCULATOR_HISTORY_MODES = new Set(['standard', 'scientific', 'programmer']);
+
 hydrateState();
+applyUrlMode({ replaceHistory: true, renderView: false });
 applyTheme();
 computeDateResults();
 syncConverterValues('from');
@@ -37,11 +41,67 @@ document.addEventListener('focusin', handleFocusIn);
 document.addEventListener('keydown', handleKeydown);
 window.addEventListener('resize', handleResize);
 window.addEventListener('load', () => drawGraph());
+window.addEventListener('popstate', handlePopState);
 window.matchMedia('(prefers-color-scheme: light)').addEventListener?.('change', () => {
   if (state.settings.theme === 'system') {
     applyTheme();
   }
 });
+
+function normalizeMode(mode) {
+  if (typeof mode !== 'string') {
+    return null;
+  }
+
+  const normalizedMode = mode.trim().toLowerCase();
+  return isMode(normalizedMode) ? normalizedMode : null;
+}
+
+function getModeFromUrl(url = window.location.href) {
+  const parsedUrl = new URL(url, window.location.origin);
+  return normalizeMode(parsedUrl.searchParams.get(PAGE_QUERY_PARAM));
+}
+
+function syncUrlWithMode(mode, { replaceHistory = false } = {}) {
+  const nextMode = normalizeMode(mode) ?? DEFAULT_MODE;
+  const nextUrl = new URL(window.location.href);
+  nextUrl.searchParams.set(PAGE_QUERY_PARAM, nextMode);
+
+  if (nextUrl.href === window.location.href) {
+    return;
+  }
+
+  const historyMethod = replaceHistory ? 'replaceState' : 'pushState';
+  window.history[historyMethod]({ page: nextMode }, '', nextUrl);
+}
+
+function setMode(nextMode, { replaceHistory = false, renderView = true } = {}) {
+  const resolvedMode = normalizeMode(nextMode) ?? DEFAULT_MODE;
+
+  if (resolvedMode !== 'settings') {
+    state.lastNonSettingsMode = resolvedMode;
+  }
+
+  if (isConverterMode(resolvedMode)) {
+    state.converter.category = CONVERTER_MODE_TO_CATEGORY[resolvedMode];
+    resetConverterUnits();
+    syncConverterValues('from');
+  }
+
+  state.mode = resolvedMode;
+  state.navOpen = false;
+  state.historyOpen = CALCULATOR_HISTORY_MODES.has(state.mode) ? state.historyOpen : false;
+  persistNav();
+  syncUrlWithMode(state.mode, { replaceHistory });
+
+  if (renderView) {
+    render();
+  }
+}
+
+function applyUrlMode({ replaceHistory = false, renderView = true } = {}) {
+  setMode(getModeFromUrl() ?? DEFAULT_MODE, { replaceHistory, renderView });
+}
 
 function applyTheme() {
   const effectiveTheme = state.settings.theme === 'system'
@@ -52,6 +112,10 @@ function applyTheme() {
 
 function handleResize() {
   render();
+}
+
+function handlePopState() {
+  applyUrlMode({ replaceHistory: true });
 }
 
 function handleClick(event) {
@@ -68,9 +132,7 @@ function handleClick(event) {
   }
 
   if (target.dataset.settingsBack) {
-    state.mode = state.lastNonSettingsMode;
-    state.navOpen = false;
-    render();
+    setMode(state.lastNonSettingsMode);
     return;
   }
 
@@ -99,20 +161,7 @@ function handleClick(event) {
   }
 
   if (target.dataset.setMode) {
-    const nextMode = target.dataset.setMode;
-    if (nextMode !== 'settings') {
-      state.lastNonSettingsMode = nextMode;
-    }
-    if (isConverterMode(nextMode)) {
-      state.converter.category = CONVERTER_MODE_TO_CATEGORY[nextMode];
-      resetConverterUnits();
-      syncConverterValues('from');
-    }
-    state.mode = nextMode;
-    state.navOpen = false;
-    state.historyOpen = ['standard', 'scientific', 'programmer'].includes(state.mode) ? state.historyOpen : false;
-    persistNav();
-    render();
+    setMode(target.dataset.setMode);
     return;
   }
 

@@ -13,6 +13,8 @@ export const STORAGE_KEYS = {
   theme: 'windows-calculator-web-theme'
 };
 
+export const DEFAULT_MODE = 'standard';
+
 export const MODE_META = {
   standard: { label: 'Standard', icon: 'standard', subtitle: 'Classic immediate evaluation' },
   scientific: { label: 'Scientific', icon: 'scientific', subtitle: 'Operators, functions, and expression support' },
@@ -64,6 +66,10 @@ export const CONVERTER_MODE_TO_CATEGORY = {
 
 export function isConverterMode(mode) {
   return Object.hasOwn(CONVERTER_MODE_TO_CATEGORY, mode);
+}
+
+export function isMode(mode) {
+  return Object.hasOwn(MODE_META, mode);
 }
 
 export const APP_INFO = {

@@ -80,9 +80,6 @@ function renderHeader() {
   const navButton = state.mode === 'settings'
     ? `<button class="icon-button nav-toggle" data-settings-back="true" data-tooltip="Back" aria-label="Back">${renderToolbarIcon('back')}</button>`
     : `<button class="icon-button nav-toggle" data-nav-toggle="true" aria-label="Open navigation">${renderToolbarIcon('menu')}</button>`;
-  const modeGlyph = state.mode === 'standard'
-    ? `<span class="mode-glyph" aria-hidden="true">${renderToolbarIcon('standard')}</span>`
-    : '';
   const graphingActions = state.mode === 'graphing' && layoutMode !== 'desktop'
     ? `
       <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'graph' ? 'active' : ''}" data-graph-view="graph" aria-label="Show graph">${renderToolbarIcon('graph-view')}</button>
@@ -98,7 +95,6 @@ function renderHeader() {
           <div class="mode-caption">Calculator</div>
           <div class="mode-title-row">
             <h2>${meta.label}</h2>
-            ${modeGlyph}
           </div>
         </div>
       </div>

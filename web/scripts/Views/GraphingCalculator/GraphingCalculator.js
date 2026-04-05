@@ -155,9 +155,11 @@ export function renderGraphingCalculatorView() {
           </div>
           <div class="graph-editor-stage" aria-hidden="true"></div>
           <div class="graph-keypad-shell">
-            ${renderGraphingMenu()}
-            <div class="graph-keypad-groups">
-              ${GRAPHING_TOOL_GROUPS.map((group) => renderGraphingGroupButton(group)).join('')}
+            <div class="graph-keypad-menu-area">
+              ${renderGraphingMenu()}
+              <div class="graph-keypad-groups">
+                ${GRAPHING_TOOL_GROUPS.map((group) => renderGraphingGroupButton(group)).join('')}
+              </div>
             </div>
             <div class="graph-keypad-grid">
               ${GRAPHING_KEYPAD_ROWS.flat().map((button) => renderKeypadButton(button)).join('')}

@@ -23,7 +23,6 @@ export function renderMemoryList() {
         <div class="memory-entry">
           <div class="memory-entry-row">
             <div>
-              <div class="memory-label">Stored value</div>
               <div class="memory-value">${escapeHtml(entry.value)}</div>
             </div>
             <div class="inline-toolbar">

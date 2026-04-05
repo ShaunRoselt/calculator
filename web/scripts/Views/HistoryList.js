@@ -9,7 +9,7 @@ export function renderHistoryList() {
     <div class="history-list">
       ${state.history.map((entry, index) => `
         <button class="history-entry" data-history-index="${index}">
-          <div class="history-expression">${escapeHtml(entry.modeLabel)} · ${escapeHtml(entry.expression)}</div>
+          <div class="history-expression">${escapeHtml(entry.expression)}</div>
           <div class="history-result">${escapeHtml(entry.result)}</div>
         </button>
       `).join('')}

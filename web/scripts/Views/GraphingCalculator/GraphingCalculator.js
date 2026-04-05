@@ -83,7 +83,7 @@ export function renderGraphingCalculatorView() {
         <div class="graph-expression-list" aria-label="Graph expressions">
           ${state.graphing.expressions.map((expression, index) => renderExpressionRow(expression, index)).join('')}
         </div>
-        <div class="graph-status">${escapeHtml(state.graphing.status)}</div>
+        <div class="graph-status ${state.graphing.status.startsWith('Check') ? 'visible' : ''}">${escapeHtml(state.graphing.status)}</div>
         <div class="graph-keypad-shell">
           <div class="graph-keypad-groups">
             ${GRAPHING_TOOL_GROUPS.map((group) => `<button class="graph-keypad-group" type="button">${group}<span class="graph-keypad-caret">⌄</span></button>`).join('')}

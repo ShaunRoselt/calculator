@@ -15,7 +15,7 @@ is behavioral and visual parity.
 
 ### Shared shell
 
-- [ ] Window frame and caption bar
+- [x] Interior-only parity target (do not render outer window frame or caption bar in the standalone web shell)
 - [ ] App title, hamburger, and history affordances
 - [ ] Navigation drawer spacing, ordering, and active-state treatment
 - [ ] Side panel open/close behavior, sizing, and empty states

@@ -49,7 +49,7 @@ export function renderSettingsView() {
         <div class="settings-group-heading about-heading">About</div>
         <details class="settings-expander" open>
           <summary class="settings-expander-summary settings-expander-summary-about">
-            <img class="settings-app-icon" src="/src/Calculator/Assets/CalculatorAppList.targetsize-32_altform-unplated.png" alt="" />
+            <img class="settings-app-icon" src="src/Calculator/Assets/CalculatorAppList.targetsize-32_altform-unplated.png" alt="" />
             <span class="settings-expander-copy">
               <span class="settings-expander-title">${escapeHtml(APP_INFO.name)}</span>
               <span class="settings-expander-description">${escapeHtml(APP_INFO.version)}</span>

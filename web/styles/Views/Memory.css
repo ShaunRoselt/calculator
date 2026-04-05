@@ -1,0 +1,36 @@
+.memory-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.memory-entry {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: var(--radius-sm);
+  background: var(--panel-alt);
+  color: var(--text);
+  text-align: left;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.memory-entry:hover,
+.memory-entry:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.memory-label {
+  font-size: 0.86rem;
+  color: var(--text-faint);
+  margin-bottom: 0.3rem;
+}
+
+.memory-value {
+  font-size: 1.15rem;
+}
+
+.memory-entry-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}

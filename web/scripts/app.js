@@ -1,5 +1,5 @@
 import { hydrateState, persistCollections, persistNav, state } from './state.js';
-import { render } from './render.js';
+import { render } from './Views/MainPage.js';
 import {
   computeDateResults,
   drawGraph,

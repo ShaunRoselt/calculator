@@ -428,6 +428,14 @@ function handleProgrammerAction(action, value) {
     calc.isBitFlipChecked = !calc.isBitFlipChecked;
     return;
   }
+  if (action === 'set-programmer-view') {
+    calc.isBitFlipChecked = value === 'bitflip';
+    return;
+  }
+  if (action === 'cycle-word-size') {
+    cycleProgrammerWordSize();
+    return;
+  }
   if (action === 'flip-bit') {
     flipProgrammerBit(Number(value));
     return;
@@ -589,6 +597,13 @@ function setProgrammerWordSize(wordSize) {
   if (state.programmer.accumulator != null) {
     state.programmer.accumulator = normalizeProgrammerValue(state.programmer.accumulator);
   }
+}
+
+function cycleProgrammerWordSize() {
+  const order = ['QWORD', 'DWORD', 'WORD', 'BYTE'];
+  const currentIndex = order.indexOf(state.programmer.wordSize);
+  const nextWordSize = order[(currentIndex + 1) % order.length];
+  setProgrammerWordSize(nextWordSize);
 }
 
 function flipProgrammerBit(index) {

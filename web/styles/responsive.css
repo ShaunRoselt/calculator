@@ -38,8 +38,7 @@
   .form-grid,
   .converter-grid,
   .date-grid,
-  .stats-grid,
-  .programmer-readouts {
+  .stats-grid {
     grid-template-columns: 1fr;
   }
 
@@ -56,9 +55,12 @@
     justify-content: start;
   }
 
-  .programmer-toolbar-row {
-    align-items: stretch;
-    flex-direction: column;
+  .programmer-control-row {
+    gap: 0.5rem;
+  }
+
+  .programmer-memory-actions {
+    margin-left: auto;
   }
 }
 
@@ -91,6 +93,19 @@
   .button-grid.scientific,
   .button-grid.programmer {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .calculator-layout.programmer .button-grid.programmer {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .programmer-operator-groups {
+    flex-wrap: wrap;
+    gap: 0.9rem;
+  }
+
+  .programmer-group-button {
+    font-size: 0.88rem;
   }
 
   .calc-button {

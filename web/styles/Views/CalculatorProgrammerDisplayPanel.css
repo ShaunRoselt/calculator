@@ -1,37 +1,159 @@
 .programmer-display-panel {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.4rem;
   width: 100%;
 }
 
-.programmer-mode-toggle,
-.programmer-toolbar-row,
-.word-size-toolbar {
-  display: flex;
-  gap: 0.35rem;
-  flex-wrap: wrap;
+.programmer-hero {
+  display: grid;
+  grid-template-columns: minmax(170px, 240px) minmax(0, 1fr);
+  align-items: end;
+  gap: 1rem;
 }
 
-.programmer-toolbar-row {
-  justify-content: space-between;
+.programmer-readouts {
+  display: grid;
+  gap: 0.3rem;
+  align-content: end;
+}
+
+.programmer-readout {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 1.55rem;
+  padding: 0;
+  background: transparent;
+  color: var(--text-soft);
+  text-align: left;
+}
+
+.programmer-readout.active {
+  color: var(--text);
+}
+
+.programmer-readout.active .programmer-readout-base {
+  position: relative;
+}
+
+.programmer-readout.active .programmer-readout-base::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0.1rem;
+  bottom: 0.1rem;
+  width: 2px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.programmer-readout-base {
+  font-size: 0.88rem;
+}
+
+.programmer-readout-value {
+  color: var(--text-soft);
+  font-size: 0.82rem;
+}
+
+.programmer-display-value {
+  justify-self: end;
+  align-self: center;
+  font-size: clamp(3.8rem, 8vw, 5rem);
+  font-weight: 300;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.programmer-control-row,
+.programmer-view-toggles,
+.programmer-memory-actions,
+.programmer-operator-groups {
+  display: flex;
+  gap: 0.35rem;
   align-items: center;
 }
 
-.programmer-surface-toggle,
-.word-size-button {
-  min-height: 30px;
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
+.programmer-control-row {
+  justify-content: space-between;
+  padding-top: 0.25rem;
+}
+
+.programmer-icon-toggle,
+.programmer-memory-button,
+.programmer-group-button,
+.programmer-word-size {
+  min-height: 28px;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0;
   background: transparent;
   color: var(--text-soft);
 }
 
-.programmer-surface-toggle.active,
-.word-size-button.active,
-.programmer-surface-toggle:hover,
-.programmer-surface-toggle:focus-visible,
-.word-size-button:hover,
-.word-size-button:focus-visible {
-  background: rgba(255, 255, 255, 0.08);
+.programmer-icon-toggle {
+  width: 26px;
+  padding: 0;
+  justify-content: center;
+}
+
+.programmer-icon-toggle.active,
+.programmer-memory-button:hover,
+.programmer-memory-button:focus-visible,
+.programmer-icon-toggle:hover,
+.programmer-icon-toggle:focus-visible,
+.programmer-group-button:hover,
+.programmer-group-button:focus-visible,
+.programmer-word-size:hover,
+.programmer-word-size:focus-visible {
+  background: transparent;
   color: var(--text);
+}
+
+.programmer-icon-toggle.active {
+  box-shadow: inset 0 -3px 0 var(--accent);
+}
+
+.programmer-word-size,
+.programmer-memory-button {
+  font-size: 0.86rem;
+}
+
+.programmer-operator-groups {
+  padding: 0.2rem 0 0.35rem;
+  border-bottom: 1px solid var(--border-faint);
+}
+
+.programmer-group-button {
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.programmer-group-button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.programmer-group-caret {
+  color: var(--text-soft);
+  font-size: 0.72rem;
+}
+
+@media (max-width: 767px) {
+  .programmer-hero {
+    grid-template-columns: 1fr auto;
+    gap: 0.7rem;
+  }
+
+  .programmer-display-value {
+    font-size: clamp(3.2rem, 16vw, 4.8rem);
+  }
+
+  .programmer-control-row {
+    padding-top: 0.15rem;
+  }
 }

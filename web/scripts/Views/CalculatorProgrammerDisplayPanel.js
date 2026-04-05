@@ -1,26 +1,45 @@
 import { state } from '../state.js';
+import { formatBigInt, getProgrammerCurrentValue } from '../logic.js';
+import { renderToolbarIcon } from './ViewIcons.js';
 
 const PROGRAMMER_BASE_OPTIONS = ['HEX', 'DEC', 'OCT', 'BIN'];
-const PROGRAMMER_WORD_SIZES = ['QWORD', 'DWORD', 'WORD', 'BYTE'];
 
 export function renderProgrammerDisplayPanel() {
+  const value = getProgrammerCurrentValue();
+  const reads = {
+    HEX: formatBigInt(value, 'HEX'),
+    DEC: formatBigInt(value, 'DEC'),
+    OCT: formatBigInt(value, 'OCT'),
+    BIN: formatBigInt(value, 'BIN')
+  };
+
   return `
     <div class="programmer-display-panel">
-      <div class="programmer-mode-toggle" role="group" aria-label="Programmer input mode">
-        <button class="programmer-surface-toggle ${state.programmer.isBitFlipChecked ? '' : 'active'}" data-action="toggle-bit-panel" aria-pressed="${state.programmer.isBitFlipChecked ? 'false' : 'true'}">Full keypad</button>
-        <button class="programmer-surface-toggle ${state.programmer.isBitFlipChecked ? 'active' : ''}" data-action="toggle-bit-panel" aria-pressed="${state.programmer.isBitFlipChecked ? 'true' : 'false'}">Bit flip</button>
-      </div>
-      <div class="programmer-toolbar-row">
-        <div class="base-toolbar">
+      <div class="programmer-hero">
+        <div class="programmer-readouts" aria-label="Programmer base readouts">
           ${PROGRAMMER_BASE_OPTIONS.map((base) => `
-            <button class="base-button ${state.programmer.base === base ? 'active' : ''}" data-action="set-base" data-value="${base}">${base}</button>
+            <button class="programmer-readout ${state.programmer.base === base ? 'active' : ''}" data-action="set-base" data-value="${base}">
+              <span class="programmer-readout-base">${base}</span>
+              <span class="programmer-readout-value">${reads[base]}</span>
+            </button>
           `).join('')}
         </div>
-        <div class="word-size-toolbar">
-          ${PROGRAMMER_WORD_SIZES.map((wordSize) => `
-            <button class="word-size-button ${state.programmer.wordSize === wordSize ? 'active' : ''}" data-action="set-word-size" data-value="${wordSize}">${wordSize}</button>
-          `).join('')}
+        <div class="programmer-display-value">${state.programmer.display}</div>
+      </div>
+      <div class="programmer-control-row">
+        <div class="programmer-view-toggles" role="group" aria-label="Programmer surface mode">
+          <button class="programmer-icon-toggle ${state.programmer.isBitFlipChecked ? '' : 'active'}" data-action="set-programmer-view" data-value="keypad" aria-label="Show keypad">${renderToolbarIcon('programmer-keypad')}</button>
+          <button class="programmer-icon-toggle ${state.programmer.isBitFlipChecked ? 'active' : ''}" data-action="set-programmer-view" data-value="bitflip" aria-label="Show bit view">${renderToolbarIcon('programmer-bitflip')}</button>
         </div>
+        <div class="programmer-word-size" data-action="cycle-word-size" aria-label="Word size">${state.programmer.wordSize}</div>
+        <div class="programmer-memory-actions">
+          <button class="programmer-memory-button" data-memory-op="store">MS</button>
+          <button class="programmer-memory-button" data-toggle-panel="memory">M⌄</button>
+        </div>
+      </div>
+      <div class="programmer-operator-groups">
+        <button class="programmer-group-button" type="button">${renderToolbarIcon('bitwise')}<span>Bitwise</span><span class="programmer-group-caret">⌄</span></button>
+        <button class="programmer-group-button" type="button">${renderToolbarIcon('bitshift')}<span>Bit shift</span><span class="programmer-group-caret">⌄</span></button>
       </div>
     </div>
   `;

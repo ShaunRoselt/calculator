@@ -968,7 +968,8 @@ function parseBigIntFlexible(value) {
 
 export function formatBigInt(value, base) {
   const sign = value < 0n ? '-' : '';
-  const raw = (value < 0n ? -value : value).toString({ BIN: 2, OCT: 8, DEC: 10, HEX: 16 }[base]);
+  const radix = { BIN: 2, OCT: 8, DEC: 10, HEX: 16 }[base];
+  const raw = (value < 0n ? -value : value).toString(radix);
   return `${sign}${base === 'HEX' ? raw.toUpperCase() : raw}`;
 }
 

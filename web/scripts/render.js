@@ -19,10 +19,6 @@ export function render() {
       </main>
     </div>
   `;
-  const graphInput = document.querySelector('[data-graph-expression="true"]');
-  if (graphInput instanceof HTMLInputElement) {
-    graphInput.value = state.graphing.expression;
-  }
   drawGraph();
 }
 
@@ -347,7 +343,7 @@ function renderGraphingPanel() {
       </div>
       <div class="info-banner">Use x in your expression, for example <strong>sin(x)</strong>, <strong>x^2</strong>, or <strong>sqrt(abs(x))</strong>.</div>
       <div class="graph-form">
-        <input type="text" name="graph-expression" data-graph-expression="true" />
+        <input type="text" name="graph-expression" value="${escapeHtml(state.graphing.expression)}" />
         <button class="graph-button" data-graph-plot="true">Plot</button>
       </div>
       <p class="helper-text">${escapeHtml(state.graphing.status)}</p>

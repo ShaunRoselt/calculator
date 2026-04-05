@@ -30,3 +30,200 @@
 .converter-output {
   justify-content: flex-start;
 }
+
+.converter-native-layout,
+.currency-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 450px;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.converter-native-panel,
+.currency-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 0 14px 10px;
+}
+
+.converter-native-values,
+.currency-values {
+  display: grid;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.converter-native-values {
+  gap: clamp(2.6rem, 8vh, 5rem);
+}
+
+.currency-values {
+  gap: 2rem;
+}
+
+.converter-native-field,
+.currency-field {
+  display: grid;
+  justify-items: start;
+  text-align: left;
+  color: var(--text);
+}
+
+.converter-native-field {
+  gap: 0.7rem;
+}
+
+.currency-field {
+  gap: 0.55rem;
+}
+
+.converter-native-field-activate,
+.currency-field-activate {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+
+.converter-native-value-row,
+.currency-value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.converter-native-amount {
+  font-size: clamp(2.8rem, 6vw, 3.95rem);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+}
+
+.currency-symbol {
+  color: var(--text-soft);
+  font-size: 1.1rem;
+}
+
+.currency-amount {
+  font-size: clamp(2.7rem, 5vw, 3.8rem);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+}
+
+.converter-native-select-wrap,
+.currency-select-wrap {
+  position: relative;
+}
+
+.converter-native-select-wrap select,
+.currency-select-wrap select {
+  width: auto;
+  min-width: 220px;
+  padding: 0 1.35rem 0 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  box-shadow: none;
+}
+
+.converter-native-meta {
+  margin-top: auto;
+  padding-top: 1rem;
+  color: var(--text-faint);
+  font-size: 0.82rem;
+}
+
+.converter-native-meta.empty {
+  visibility: hidden;
+}
+
+.converter-native-meta-label {
+  margin-bottom: 0.2rem;
+}
+
+.converter-native-meta-value {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.currency-meta {
+  margin-top: auto;
+  padding-top: 1rem;
+  color: var(--text-faint);
+  font-size: 0.78rem;
+}
+
+.currency-meta-line {
+  margin-top: 0.12rem;
+}
+
+.currency-update-button {
+  margin-top: 0.35rem;
+  padding: 0;
+  background: transparent;
+  color: var(--accent);
+}
+
+.converter-native-keypad,
+.currency-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  gap: 2px;
+  align-self: stretch;
+  padding: 0 0 4px 0;
+}
+
+.currency-keypad-spacer {
+  background: transparent;
+}
+
+.converter-native-key,
+.currency-key {
+  min-height: 0;
+  height: 100%;
+  border-radius: 0;
+  border: 1px solid var(--border-faint);
+}
+
+.converter-native-key svg,
+.currency-key svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .converter-native-layout,
+  .currency-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(420px, 1fr);
+  }
+
+  .converter-native-panel,
+  .currency-panel {
+    padding: 0 8px 8px;
+  }
+
+  .converter-native-values,
+  .currency-values {
+    gap: 1.4rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .converter-native-amount,
+  .currency-amount {
+    font-size: clamp(2.5rem, 12vw, 3.4rem);
+  }
+
+  .converter-native-keypad,
+  .currency-keypad {
+    min-height: 455px;
+  }
+}

@@ -7,12 +7,15 @@ import {
   computeDateResults,
   drawGraph,
   handleAction,
+  handleConverterKeypad,
+  handleCurrencyKeypad,
   handleMemoryOperation,
   insertGraphToken,
   isCalculatorMode,
   recallHistory,
   recallMemory,
   resetConverterUnits,
+  setConverterActiveField,
   selectGraphExpression,
   setGraphExpression,
   setGraphMobileView,
@@ -175,7 +178,25 @@ function handleClick(event) {
   if (target.dataset.converterSwap) {
     [state.converter.fromUnit, state.converter.toUnit] = [state.converter.toUnit, state.converter.fromUnit];
     [state.converter.fromValue, state.converter.toValue] = [state.converter.toValue || state.converter.fromValue, state.converter.fromValue];
-    syncConverterValues('from');
+    syncConverterValues(state.converter.lastEdited || 'from');
+    render();
+    return;
+  }
+
+  if (target.dataset.converterActiveField) {
+    setConverterActiveField(target.dataset.converterActiveField);
+    render();
+    return;
+  }
+
+  if (target.dataset.converterAction) {
+    handleConverterKeypad(target.dataset.converterAction, target.dataset.value || '');
+    render();
+    return;
+  }
+
+  if (target.dataset.currencyAction) {
+    handleCurrencyKeypad(target.dataset.currencyAction, target.dataset.value || '');
     render();
     return;
   }
@@ -256,10 +277,16 @@ function handleChange(event) {
   if (target.name?.startsWith('converter-')) {
     const key = target.name.replace('converter-', '');
     state.converter[key] = target.value;
+    if (key === 'fromUnit' || key === 'fromValue') {
+      setConverterActiveField('from');
+    }
+    if (key === 'toUnit' || key === 'toValue') {
+      setConverterActiveField('to');
+    }
     if (key === 'category') {
       resetConverterUnits();
     }
-    syncConverterValues('from');
+    syncConverterValues(key === 'toValue' || key === 'toUnit' ? 'to' : 'from');
     render();
     return;
   }
@@ -289,6 +316,13 @@ function handleInput(event) {
     state.converter.fromValue = target.value;
     syncConverterValues('from');
     render();
+    return;
+  }
+
+  if (target.name === 'converter-toValue') {
+    state.converter.toValue = target.value;
+    syncConverterValues('to');
+    render();
   }
 }
 
@@ -300,6 +334,11 @@ function handleFocusIn(event) {
 
   if (target.name?.startsWith('graph-expression-')) {
     selectGraphExpression(Number(target.name.replace('graph-expression-', '')));
+    return;
+  }
+
+  if (target.dataset.converterField) {
+    setConverterActiveField(target.dataset.converterField);
   }
 }
 
@@ -316,6 +355,23 @@ function handleKeydown(event) {
   if (!isCalculatorMode(state.mode)) {
     if (state.mode === 'graphing' && event.key === 'Enter') {
       updateGraph();
+      render();
+    }
+    if (isConverterMode(state.mode) || state.mode === 'converter') {
+      if (/^[0-9]$/.test(event.key)) {
+        handleConverterKeypad('digit', event.key);
+      } else if (event.key === 'Backspace') {
+        handleConverterKeypad('backspace');
+      } else if (event.key === 'Escape') {
+        handleConverterKeypad('clear');
+      } else if (event.key === ',' || event.key === '.') {
+        handleConverterKeypad('decimal');
+      } else if (event.key === '-' && state.converter.category !== 'Currency') {
+        handleConverterKeypad('toggle-sign');
+      } else {
+        return;
+      }
+      event.preventDefault();
       render();
     }
     return;

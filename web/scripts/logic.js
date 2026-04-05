@@ -1150,20 +1150,131 @@ export function resetConverterUnits() {
   const units = getUnitsForCategory(state.converter.category);
   state.converter.fromUnit = units[0].name;
   state.converter.toUnit = units[Math.min(1, units.length - 1)].name;
-  state.converter.fromValue = '1';
+  state.converter.fromValue = state.converter.category === 'Currency' ? '0' : '1';
+  state.converter.toValue = '';
+  state.converter.lastEdited = 'from';
 }
 
 export function syncConverterValues(source) {
   const units = getUnitsForCategory(state.converter.category);
   const from = units.find((item) => item.name === state.converter.fromUnit) || units[0];
   const to = units.find((item) => item.name === state.converter.toUnit) || units[1] || units[0];
-  const numeric = Number(state.converter.fromValue || 0);
+  const normalizedSource = source === 'to' ? 'to' : 'from';
+  const numeric = Number(normalizeConverterValue(normalizedSource === 'from' ? state.converter.fromValue : state.converter.toValue));
   if (!Number.isFinite(numeric)) {
-    state.converter.toValue = 'Invalid input';
+    if (normalizedSource === 'from') {
+      state.converter.toValue = 'Invalid input';
+    } else {
+      state.converter.fromValue = 'Invalid input';
+    }
     return;
   }
-  const baseValue = from.toBase(numeric);
-  state.converter.toValue = `${formatNumber(to.fromBase(baseValue))} ${to.symbol}`;
+  if (normalizedSource === 'from') {
+    const baseValue = from.toBase(numeric);
+    state.converter.toValue = formatNumber(to.fromBase(baseValue));
+    return;
+  }
+
+  const baseValue = to.toBase(numeric);
+  state.converter.fromValue = formatNumber(from.fromBase(baseValue));
+}
+
+export function setConverterActiveField(field) {
+  if (field === 'from' || field === 'to') {
+    state.converter.lastEdited = field;
+  }
+}
+
+export function handleConverterKeypad(action, value = '') {
+  const activeField = state.converter.lastEdited === 'to' ? 'to' : 'from';
+  const key = activeField === 'from' ? 'fromValue' : 'toValue';
+  const currentRaw = String(state.converter[key] || '0');
+  const allowNegative = state.converter.category !== 'Currency';
+  const current = currentRaw === 'Invalid input' ? '0' : normalizeConverterValue(currentRaw, allowNegative);
+
+  if (action === 'clear') {
+    state.converter[key] = '0';
+    syncConverterValues(activeField);
+    return;
+  }
+
+  if (action === 'backspace') {
+    const next = current.length > 1 ? current.slice(0, -1) : '0';
+    state.converter[key] = normalizeConverterEntry(next, allowNegative);
+    syncConverterValues(activeField);
+    return;
+  }
+
+  if (action === 'digit') {
+    const next = current === '0' ? value : `${current}${value}`;
+    state.converter[key] = normalizeConverterEntry(next, allowNegative);
+    syncConverterValues(activeField);
+    return;
+  }
+
+  if (action === 'decimal') {
+    if (current.includes('.')) {
+      return;
+    }
+    state.converter[key] = normalizeConverterEntry(`${current}.`, allowNegative);
+    syncConverterValues(activeField);
+    return;
+  }
+
+  if (action === 'toggle-sign' && allowNegative) {
+    if (Number(current) === 0) {
+      state.converter[key] = '0';
+    } else {
+      state.converter[key] = current.startsWith('-') ? current.slice(1) : `-${current}`;
+    }
+    syncConverterValues(activeField);
+  }
+}
+
+export function handleCurrencyKeypad(action, value = '') {
+  handleConverterKeypad(action, value);
+}
+
+export function getConverterDisplayValue(field) {
+  const raw = field === 'to' ? state.converter.toValue : state.converter.fromValue;
+  if (raw === 'Invalid input') {
+    return raw;
+  }
+  if (state.converter.category === 'Currency') {
+    return String(raw || '0').replace(/\./g, ',');
+  }
+
+  const numeric = Number(raw);
+  if (!Number.isFinite(numeric)) {
+    return String(raw || '0').replace(/\./g, ',');
+  }
+
+  let formatted;
+  if (Number.isInteger(numeric)) {
+    formatted = numeric.toString();
+  } else if (Math.abs(numeric) >= 1) {
+    formatted = String(Number(numeric.toPrecision(6)));
+  } else {
+    formatted = String(Number(numeric.toFixed(6)));
+  }
+
+  return formatted.replace(/\./g, ',');
+}
+
+function normalizeConverterEntry(value, allowNegative = state.converter.category !== 'Currency') {
+  const normalized = normalizeConverterValue(value, allowNegative);
+  if (normalized === '' || normalized === '-') {
+    return '0';
+  }
+  return normalized;
+}
+
+function normalizeConverterValue(value, allowNegative = state.converter.category !== 'Currency') {
+  return String(value || '')
+    .replace(/,/g, '.')
+    .replace(allowNegative ? /[^0-9.-]/g : /[^0-9.]/g, '')
+    .replace(allowNegative ? /(?!^)-/g : /-/g, '')
+    .replace(/(\..*)\./g, '$1');
 }
 
 export function selectGraphExpression(index) {

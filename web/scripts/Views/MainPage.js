@@ -153,7 +153,7 @@ export function getLayoutMode() {
   if (width < 768) {
     return 'mobile';
   }
-  if (width >= 1100 || (width >= 1000 && height <= 560)) {
+  if (width >= 980 || (width >= 900 && height <= 560)) {
     return 'desktop';
   }
   if (width < 1280) {

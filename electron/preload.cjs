@@ -1,0 +1,1 @@
+globalThis.nerdamer = require('nerdamer/all.min');

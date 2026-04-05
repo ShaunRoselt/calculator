@@ -68,7 +68,7 @@ function normalizeMode(mode) {
 }
 
 function getModeFromUrl(url = window.location.href) {
-  const parsedUrl = new URL(url, window.location.origin);
+  const parsedUrl = new URL(url, window.location.href);
   return normalizeMode(parsedUrl.searchParams.get(PAGE_QUERY_PARAM));
 }
 

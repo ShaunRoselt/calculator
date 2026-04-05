@@ -217,8 +217,30 @@ function computeStandardBinary(left, right, operator) {
 
 function handleScientificAction(action, value) {
   const calc = state.scientific;
+  if (!['toggle-scientific-menu', 'toggle-scientific-hyp', 'toggle-shift'].includes(action)) {
+    calc.openMenu = null;
+  }
+
   if (action === 'clear-all') {
     state.scientific = createScientificState();
+    return;
+  }
+
+  if (action === 'toggle-scientific-menu') {
+    calc.openMenu = calc.openMenu === value ? null : value;
+    if (calc.openMenu !== 'trig') {
+      calc.isHyperbolic = false;
+    }
+    return;
+  }
+
+  if (action === 'toggle-shift') {
+    calc.isShifted = !calc.isShifted;
+    return;
+  }
+
+  if (action === 'toggle-scientific-hyp') {
+    calc.isHyperbolic = !calc.isHyperbolic;
     return;
   }
 
@@ -275,7 +297,7 @@ function handleScientificAction(action, value) {
       scientificBackspace();
       break;
     case 'clear-entry':
-      state.scientific = createScientificState();
+      clearEntryScientific();
       break;
     case 'equals':
       evaluateScientificEquals();
@@ -296,6 +318,14 @@ function appendScientificDigit(digit) {
   }
   calc.expression += digit;
   calc.display = scientificDisplayFromExpression(calc.expression);
+}
+
+function clearEntryScientific() {
+  const calc = state.scientific;
+  calc.display = '0';
+  calc.expression = '';
+  calc.error = false;
+  calc.justEvaluated = false;
 }
 
 function appendScientificDecimal() {
@@ -741,8 +771,14 @@ function scientificUnary(action, value, angle) {
   switch (action) {
     case 'square': return value ** 2;
     case 'cube': return value ** 3;
+    case 'pow2': return 2 ** value;
+    case 'powe': return Math.exp(value);
     case 'pow10': return 10 ** value;
     case 'abs': return Math.abs(value);
+    case 'floor': return Math.floor(value);
+    case 'ceil': return Math.ceil(value);
+    case 'degrees': return dmsToDegrees(value);
+    case 'dms': return degreesToDms(value);
     case 'sqrt':
       if (value < 0) throw new Error('Invalid input');
       return Math.sqrt(value);
@@ -753,6 +789,42 @@ function scientificUnary(action, value, angle) {
     case 'sin': return Math.sin(radians);
     case 'cos': return Math.cos(radians);
     case 'tan': return Math.tan(radians);
+    case 'sec': return reciprocalOf(Math.cos(radians));
+    case 'csc': return reciprocalOf(Math.sin(radians));
+    case 'cot': return reciprocalOf(Math.tan(radians));
+    case 'asin': return radiansToAngle(Math.asin(clampUnitInterval(value)), angle);
+    case 'acos': return radiansToAngle(Math.acos(clampUnitInterval(value)), angle);
+    case 'atan': return radiansToAngle(Math.atan(value), angle);
+    case 'asec':
+      if (Math.abs(value) < 1) throw new Error('Invalid input');
+      return radiansToAngle(Math.acos(1 / value), angle);
+    case 'acsc':
+      if (Math.abs(value) < 1) throw new Error('Invalid input');
+      return radiansToAngle(Math.asin(1 / value), angle);
+    case 'acot':
+      return radiansToAngle(value === 0 ? Math.PI / 2 : Math.atan(1 / value), angle);
+    case 'sinh': return Math.sinh(value);
+    case 'cosh': return Math.cosh(value);
+    case 'tanh': return Math.tanh(value);
+    case 'sech': return reciprocalOf(Math.cosh(value));
+    case 'csch': return reciprocalOf(Math.sinh(value));
+    case 'coth': return reciprocalOf(Math.tanh(value));
+    case 'asinh': return Math.asinh(value);
+    case 'acosh':
+      if (value < 1) throw new Error('Invalid input');
+      return Math.acosh(value);
+    case 'atanh':
+      if (value <= -1 || value >= 1) throw new Error('Invalid input');
+      return Math.atanh(value);
+    case 'asech':
+      if (value <= 0 || value > 1) throw new Error('Invalid input');
+      return Math.acosh(1 / value);
+    case 'acsch':
+      if (value === 0) throw new Error('Invalid input');
+      return Math.asinh(1 / value);
+    case 'acoth':
+      if (Math.abs(value) <= 1) throw new Error('Invalid input');
+      return Math.atanh(1 / value);
     case 'ln':
       if (value <= 0) throw new Error('Invalid input');
       return Math.log(value);
@@ -760,6 +832,7 @@ function scientificUnary(action, value, angle) {
       if (value <= 0) throw new Error('Invalid input');
       return Math.log10(value);
     case 'exp': return Math.exp(value);
+    case 'rand': return Math.random();
     case 'reciprocal':
       if (value === 0) throw new Error('Cannot divide by zero');
       return 1 / value;
@@ -773,17 +846,45 @@ function unaryExpressionLabel(action, value) {
   return {
     square: `sqr(${formatted})`,
     cube: `cube(${formatted})`,
+    pow2: `2^(${formatted})`,
+    powe: `e^(${formatted})`,
     pow10: `10^(${formatted})`,
     abs: `abs(${formatted})`,
+    floor: `floor(${formatted})`,
+    ceil: `ceil(${formatted})`,
+    degrees: `deg(${formatted})`,
+    dms: `dms(${formatted})`,
     sqrt: `√(${formatted})`,
     cbrt: `∛(${formatted})`,
     factorial: `fact(${formatted})`,
     sin: `sin(${formatted})`,
     cos: `cos(${formatted})`,
     tan: `tan(${formatted})`,
+    sec: `sec(${formatted})`,
+    csc: `csc(${formatted})`,
+    cot: `cot(${formatted})`,
+    asin: `sin⁻¹(${formatted})`,
+    acos: `cos⁻¹(${formatted})`,
+    atan: `tan⁻¹(${formatted})`,
+    asec: `sec⁻¹(${formatted})`,
+    acsc: `csc⁻¹(${formatted})`,
+    acot: `cot⁻¹(${formatted})`,
+    sinh: `sinh(${formatted})`,
+    cosh: `cosh(${formatted})`,
+    tanh: `tanh(${formatted})`,
+    sech: `sech(${formatted})`,
+    csch: `csch(${formatted})`,
+    coth: `coth(${formatted})`,
+    asinh: `sinh⁻¹(${formatted})`,
+    acosh: `cosh⁻¹(${formatted})`,
+    atanh: `tanh⁻¹(${formatted})`,
+    asech: `sech⁻¹(${formatted})`,
+    acsch: `csch⁻¹(${formatted})`,
+    acoth: `coth⁻¹(${formatted})`,
     ln: `ln(${formatted})`,
     log: `log(${formatted})`,
     exp: `exp(${formatted})`,
+    rand: 'rand()',
     reciprocal: `1/(${formatted})`,
     negate: `negate(${formatted})`
   }[action] ?? formatted;
@@ -859,10 +960,21 @@ function evaluateScientificExpression(expression, context = {}) {
 
   function parsePower() {
     let value = parseUnary();
-    while (peek() && peek().value === '^') {
-      consume('^');
+    while (peek() && ['^', 'root', 'logbase'].includes(peek().value)) {
+      const operator = consume().value;
       const exponent = parseUnary();
-      value = value ** exponent;
+      if (operator === '^') {
+        value = value ** exponent;
+      }
+      if (operator === 'root') {
+        if (value === 0) {
+          throw new Error('Invalid input');
+        }
+        value = nthRoot(exponent, value);
+      }
+      if (operator === 'logbase') {
+        value = logBase(value, exponent);
+      }
     }
     return value;
   }
@@ -961,15 +1073,41 @@ function tokenize(expression) {
 }
 
 function scientificFunction(name, value, angle) {
-  const radians = angleToRadians(value, angle);
   switch (name) {
-    case 'sin': return Math.sin(radians);
-    case 'cos': return Math.cos(radians);
-    case 'tan': return Math.tan(radians);
+    case 'sin':
+    case 'cos':
+    case 'tan':
+    case 'sec':
+    case 'csc':
+    case 'cot':
+    case 'asin':
+    case 'acos':
+    case 'atan':
+    case 'asec':
+    case 'acsc':
+    case 'acot':
+    case 'sinh':
+    case 'cosh':
+    case 'tanh':
+    case 'sech':
+    case 'csch':
+    case 'coth':
+    case 'asinh':
+    case 'acosh':
+    case 'atanh':
+    case 'asech':
+    case 'acsch':
+    case 'acoth':
+    case 'dms':
+    case 'degrees':
+    case 'rand':
+      return scientificUnary(name, value, angle);
     case 'sqrt':
       if (value < 0) throw new Error('Invalid input');
       return Math.sqrt(value);
     case 'abs': return Math.abs(value);
+    case 'floor': return Math.floor(value);
+    case 'ceil': return Math.ceil(value);
     case 'log':
       if (value <= 0) throw new Error('Invalid input');
       return Math.log10(value);
@@ -989,6 +1127,70 @@ function angleToRadians(value, angle) {
     return (value * Math.PI) / 200;
   }
   return value;
+}
+
+function radiansToAngle(value, angle) {
+  if (angle === 'DEG') {
+    return (value * 180) / Math.PI;
+  }
+  if (angle === 'GRAD') {
+    return (value * 200) / Math.PI;
+  }
+  return value;
+}
+
+function reciprocalOf(value) {
+  if (value === 0) {
+    throw new Error('Cannot divide by zero');
+  }
+  return 1 / value;
+}
+
+function clampUnitInterval(value) {
+  if (value < -1 || value > 1) {
+    throw new Error('Invalid input');
+  }
+  return value;
+}
+
+function nthRoot(value, degree) {
+  if (degree === 0) {
+    throw new Error('Invalid input');
+  }
+  if (value < 0 && Math.abs(degree % 2) !== 1) {
+    throw new Error('Invalid input');
+  }
+  return value < 0 ? -((-value) ** (1 / degree)) : value ** (1 / degree);
+}
+
+function logBase(base, value) {
+  if (base <= 0 || base === 1 || value <= 0) {
+    throw new Error('Invalid input');
+  }
+  return Math.log(value) / Math.log(base);
+}
+
+function degreesToDms(value) {
+  const sign = Math.sign(value) || 1;
+  const absolute = Math.abs(value);
+  const degrees = Math.trunc(absolute);
+  const totalMinutes = (absolute - degrees) * 60;
+  const minutes = Math.trunc(totalMinutes);
+  const seconds = (totalMinutes - minutes) * 60;
+  return sign * (degrees + minutes / 100 + seconds / 10000);
+}
+
+function dmsToDegrees(value) {
+  const sign = Math.sign(value) || 1;
+  const absolute = Math.abs(value);
+  const degrees = Math.trunc(absolute);
+  const minuteBlock = (absolute - degrees) * 100;
+  const minutes = Math.trunc(minuteBlock);
+  const seconds = (minuteBlock - minutes) * 100;
+  if (minutes >= 60 || seconds >= 60) {
+    throw new Error('Invalid input');
+  }
+  return sign * (degrees + minutes / 60 + seconds / 3600);
 }
 
 function factorial(value) {

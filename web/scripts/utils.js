@@ -13,7 +13,21 @@ export function formatNumber(value) {
 export function formatExpressionForDisplay(expression) {
   return escapeHtml(String(expression || '')
     .replace(/\*/g, '×')
-    .replace(/\//g, '÷'));
+    .replace(/\//g, '÷')
+    .replace(/\blogbase\b/g, 'logᵧ')
+    .replace(/\broot\b/g, 'ʸ√')
+    .replace(/\basinh\(/g, 'sinh⁻¹(')
+    .replace(/\bacosh\(/g, 'cosh⁻¹(')
+    .replace(/\batanh\(/g, 'tanh⁻¹(')
+    .replace(/\basech\(/g, 'sech⁻¹(')
+    .replace(/\bacsch\(/g, 'csch⁻¹(')
+    .replace(/\bacoth\(/g, 'coth⁻¹(')
+    .replace(/\basin\(/g, 'sin⁻¹(')
+    .replace(/\bacos\(/g, 'cos⁻¹(')
+    .replace(/\batan\(/g, 'tan⁻¹(')
+    .replace(/\basec\(/g, 'sec⁻¹(')
+    .replace(/\bacsc\(/g, 'csc⁻¹(')
+    .replace(/\bacot\(/g, 'cot⁻¹('));
 }
 
 

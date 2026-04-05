@@ -95,6 +95,12 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .scientific-operator-buttons,
+  .scientific-operator-menu-trig,
+  .scientific-operator-menu-function {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .calculator-layout.programmer .button-grid.programmer {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }

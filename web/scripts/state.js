@@ -83,6 +83,9 @@ export function createScientificState() {
     expression: '',
     angle: 'DEG',
     isExponentialFormat: false,
+    isShifted: false,
+    isHyperbolic: false,
+    openMenu: null,
     error: false,
     justEvaluated: false
   };

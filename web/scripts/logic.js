@@ -1068,7 +1068,7 @@ function formatScientificDisplay(value, fallback = '0') {
   if (!state.scientific.isExponentialFormat) {
     return formatNumber(value);
   }
-  return value.toExponential(12).replace(/\.?0+e/, 'e').replace('e+', 'e+').replace('e-', 'e-').toUpperCase();
+  return value.toExponential(12).replace(/\.?0+e/, 'e').toUpperCase();
 }
 
 function getDateParts(value) {

@@ -30,3 +30,140 @@
 .converter-output {
   justify-content: flex-start;
 }
+
+.currency-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 450px;
+  gap: 0;
+  height: 100%;
+  min-height: 0;
+}
+
+.currency-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 0 14px 10px;
+}
+
+.currency-values {
+  display: grid;
+  gap: 2rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.currency-field {
+  display: grid;
+  gap: 0.55rem;
+  justify-items: start;
+  text-align: left;
+  color: var(--text);
+}
+
+.currency-field-activate {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.currency-value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.currency-symbol {
+  color: var(--text-soft);
+  font-size: 1.1rem;
+}
+
+.currency-amount {
+  font-size: clamp(2.7rem, 5vw, 3.8rem);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+}
+
+.currency-select-wrap {
+  position: relative;
+}
+
+.currency-select-wrap select {
+  width: auto;
+  min-width: 220px;
+  padding: 0 1.35rem 0 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  box-shadow: none;
+}
+
+.currency-meta {
+  margin-top: auto;
+  padding-top: 1rem;
+  color: var(--text-faint);
+  font-size: 0.78rem;
+}
+
+.currency-meta-line {
+  margin-top: 0.12rem;
+}
+
+.currency-update-button {
+  margin-top: 0.35rem;
+  padding: 0;
+  background: transparent;
+  color: var(--accent);
+}
+
+.currency-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  gap: 2px;
+  align-self: stretch;
+  padding: 0 0 4px 0;
+}
+
+.currency-keypad-spacer {
+  background: transparent;
+}
+
+.currency-key {
+  min-height: 0;
+  height: 100%;
+  border-radius: 0;
+  border: 1px solid var(--border-faint);
+}
+
+.currency-key svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .currency-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(420px, 1fr);
+  }
+
+  .currency-panel {
+    padding: 0 8px 8px;
+  }
+
+  .currency-values {
+    gap: 1.4rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .currency-amount {
+    font-size: clamp(2.5rem, 12vw, 3.4rem);
+  }
+
+  .currency-keypad {
+    min-height: 455px;
+  }
+}

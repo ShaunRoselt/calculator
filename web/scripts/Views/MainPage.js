@@ -1,4 +1,4 @@
-import { MODE_META } from '../config.js';
+import { MODE_META, NAVIGATION_GROUPS } from '../config.js';
 import { appRoot } from '../dom.js';
 import { drawGraph, isCalculatorMode, isSidePanelVisible } from '../logic.js';
 import { state } from '../state.js';
@@ -8,7 +8,7 @@ import { renderGraphingCalculatorView } from './GraphingCalculator/GraphingCalcu
 import { renderHistoryList } from './HistoryList.js';
 import { renderMemoryList } from './Memory.js';
 import { renderSettingsView } from './Settings.js';
-import { renderToolbarIcon } from './ViewIcons.js';
+import { renderNavIcon, renderToolbarIcon } from './ViewIcons.js';
 import { renderUnitConverterView } from './UnitConverter.js';
 
 export function render() {
@@ -40,20 +40,30 @@ export function render() {
 function renderNavigationView() {
   return `
     <aside class="sidebar" aria-label="Calculator navigation">
-      <div class="brand">
-        <div class="brand-copy">
-          <h1>Calculator</h1>
-          <p>Mode picker</p>
-        </div>
-      </div>
       <nav class="sidebar-nav">
-        ${Object.entries(MODE_META).map(([mode, meta]) => `
-          <button class="nav-button ${state.mode === mode ? 'active' : ''}" data-set-mode="${mode}">
-            <span>${meta.icon}</span>
-            <span>${meta.label}</span>
-          </button>
+        ${NAVIGATION_GROUPS.map((group) => `
+          <div class="nav-group">
+            <div class="nav-group-label">${group.label}</div>
+            <div class="nav-group-items">
+              ${group.modes.map((mode) => {
+                const meta = MODE_META[mode];
+                return `
+                  <button class="nav-button ${state.mode === mode ? 'active' : ''}" data-set-mode="${mode}">
+                    <span class="nav-icon">${renderNavIcon(meta.icon)}</span>
+                    <span class="nav-label">${meta.label}</span>
+                  </button>
+                `;
+              }).join('')}
+            </div>
+          </div>
         `).join('')}
       </nav>
+      <div class="nav-footer">
+        <button class="nav-button ${state.mode === 'settings' ? 'active' : ''}" data-set-mode="settings">
+          <span class="nav-icon">${renderNavIcon(MODE_META.settings.icon)}</span>
+          <span class="nav-label">${MODE_META.settings.label}</span>
+        </button>
+      </div>
     </aside>
   `;
 }
@@ -93,6 +103,19 @@ function renderMainContent() {
       return renderCalculatorView(state.mode);
     case 'date':
       return renderDateCalculatorView();
+    case 'currency':
+    case 'volume':
+    case 'length':
+    case 'weight':
+    case 'temperature':
+    case 'energy':
+    case 'area':
+    case 'speed':
+    case 'time':
+    case 'power':
+    case 'data':
+    case 'pressure':
+    case 'angle':
     case 'converter':
       return renderUnitConverterView();
     case 'graphing':

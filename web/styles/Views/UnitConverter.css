@@ -9,6 +9,10 @@
   grid-column: 1 / -1;
 }
 
+.converter-category-hidden {
+  display: none;
+}
+
 .value-output {
   padding: 1rem;
   min-height: 64px;

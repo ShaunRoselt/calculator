@@ -54,6 +54,12 @@ export function renderToolbarIcon(kind) {
   if (kind === 'bitshift') {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 8 4 4-4 4M13 8l4 4-4 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>';
   }
+  if (kind === 'scientific-trig') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.5h14M6.5 18.5V8.25l8 10.25M9 13.5h6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55"/></svg>';
+  }
+  if (kind === 'scientific-function') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 5.5c-2.7 0-4.5 1.9-4.5 4.9v8.1M8 9.5h8M8 18.5h8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55"/></svg>';
+  }
   return '';
 }
 

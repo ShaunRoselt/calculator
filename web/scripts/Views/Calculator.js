@@ -81,11 +81,11 @@ export function renderCalculatorView(mode) {
   }
   return `
     <div class="calculator-layout ${mode}">
-      ${mode === 'scientific' ? `<div class="calculator-toolbar">${renderScientificAngleButtons()}</div>` : ''}
       <div class="display-panel">
         <div class="display-expression ${expressionSizeClass}">${formatExpressionForDisplay(calc.expression) || '&nbsp;'}</div>
         <div class="display-value ${displaySizeClass}">${escapeHtml(calc.display)}</div>
       </div>
+      ${mode === 'scientific' ? `<div class="calculator-toolbar scientific-toolbar">${renderScientificAngleButtons()}</div>` : ''}
       <div class="memory-toolbar" aria-label="Memory controls">
         ${renderMemoryToolbar()}
       </div>
@@ -131,15 +131,15 @@ function renderScientificOperatorPickers() {
   return `
     <div class="scientific-operator-strip">
       <div class="scientific-operator-buttons">
-        ${renderScientificOperatorButton('trig', 'Trigonometry', openMenu === 'trig')}
-        ${renderScientificOperatorButton('function', 'Function', openMenu === 'function')}
+        ${renderScientificOperatorButton('trig', 'scientific-trig', 'Trigonometry', openMenu === 'trig')}
+        ${renderScientificOperatorButton('function', 'scientific-function', 'Function', openMenu === 'function')}
       </div>
       ${openMenu ? renderScientificOperatorMenu(openMenu) : ''}
     </div>
   `;
 }
 
-function renderScientificOperatorButton(value, label, active) {
+function renderScientificOperatorButton(value, icon, label, active) {
   return `
     <button
       class="scientific-operator-button ${active ? 'active' : ''}"
@@ -147,6 +147,7 @@ function renderScientificOperatorButton(value, label, active) {
       data-value="${value}"
       aria-expanded="${active ? 'true' : 'false'}"
     >
+      <span class="scientific-operator-icon" aria-hidden="true">${renderToolbarIcon(icon)}</span>
       <span>${label}</span>
       <span class="scientific-operator-caret" aria-hidden="true">⌄</span>
     </button>

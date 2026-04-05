@@ -15,6 +15,7 @@ import {
   isCalculatorMode,
   recallHistory,
   recallMemory,
+  resetGraphViewport,
   resetConverterUnits,
   setConverterActiveField,
   selectGraphExpression,
@@ -121,8 +122,27 @@ function handlePopState() {
 }
 
 function handleClick(event) {
-  const target = event.target.closest('button');
+  const source = event.target instanceof Element ? event.target : null;
+  let shouldRender = false;
+
+  if (source && state.mode === 'graphing') {
+    if (state.graphing.settingsOpen && !source.closest('.graph-settings-panel, [data-graph-settings-toggle]')) {
+      state.graphing.settingsOpen = false;
+      shouldRender = true;
+    }
+    if (state.graphing.openMenu && !source.closest('.graph-keypad-shell')) {
+      state.graphing.openMenu = null;
+      state.graphing.trigShifted = false;
+      state.graphing.trigHyperbolic = false;
+      shouldRender = true;
+    }
+  }
+
+  const target = source?.closest('button');
   if (!target) {
+    if (shouldRender) {
+      render();
+    }
     return;
   }
 
@@ -260,7 +280,53 @@ function handleClick(event) {
 
   if (target.dataset.graphSelect) {
     state.graphing.openMenu = null;
+    state.graphing.settingsOpen = false;
     selectGraphExpression(Number(target.dataset.graphSelect));
+    render();
+    return;
+  }
+
+  if (target.dataset.graphSurfaceAction) {
+    if (target.dataset.graphSurfaceAction === 'trace') {
+      state.graphing.tracingEnabled = !state.graphing.tracingEnabled;
+      render();
+      return;
+    }
+
+    if (target.dataset.graphSurfaceAction === 'share') {
+      const shareUrl = window.location.href;
+      navigator.clipboard?.writeText?.(shareUrl).catch(() => undefined);
+      return;
+    }
+  }
+
+  if (target.dataset.graphSettingsToggle) {
+    state.graphing.settingsOpen = !state.graphing.settingsOpen;
+    state.graphing.openMenu = null;
+    render();
+    return;
+  }
+
+  if (target.dataset.graphSettingsReset) {
+    resetGraphViewport();
+    drawGraph();
+    render();
+    return;
+  }
+
+  if (target.dataset.graphViewToggle) {
+    state.graphing.isManualAdjustment = !state.graphing.isManualAdjustment;
+    if (!state.graphing.isManualAdjustment) {
+      resetGraphViewport();
+      drawGraph();
+    }
+    render();
+    return;
+  }
+
+  if (target.dataset.graphSettingAngle) {
+    state.graphing.angle = target.dataset.graphSettingAngle;
+    updateGraph();
     render();
     return;
   }
@@ -268,6 +334,7 @@ function handleClick(event) {
   if (target.dataset.graphMenuToggle) {
     const nextMenu = target.dataset.graphMenuToggle;
     state.graphing.openMenu = state.graphing.openMenu === nextMenu ? null : nextMenu;
+    state.graphing.settingsOpen = false;
     if (state.graphing.openMenu !== 'trig') {
       state.graphing.trigShifted = false;
       state.graphing.trigHyperbolic = false;
@@ -295,12 +362,13 @@ function handleClick(event) {
 
   if (target.dataset.graphZoom) {
     zoomGraph(target.dataset.graphZoom);
-    drawGraph();
+    render();
     return;
   }
 
   if (target.dataset.graphEditAction) {
     state.graphing.openMenu = null;
+    state.graphing.settingsOpen = false;
     if (target.dataset.graphEditAction === 'clear') {
       clearGraphExpression();
     }
@@ -316,6 +384,7 @@ function handleClick(event) {
 
   if (target.dataset.graphInsert) {
     state.graphing.openMenu = null;
+    state.graphing.settingsOpen = false;
     insertGraphToken(target.dataset.graphInsert);
     updateGraph();
     render();
@@ -372,6 +441,41 @@ function handleChange(event) {
     setGraphExpression(index, target.value);
     updateGraph();
     render();
+    return;
+  }
+
+  if (target.name?.startsWith('graph-viewport-')) {
+    const viewportKey = target.name.replace('graph-viewport-', '');
+    const parsedValue = Number(target.value);
+    if (!Number.isFinite(parsedValue)) {
+      render();
+      return;
+    }
+
+    const nextViewport = { ...state.graphing.viewport, [viewportKey]: parsedValue };
+    if (nextViewport.xMin >= nextViewport.xMax || nextViewport.yMin >= nextViewport.yMax) {
+      render();
+      return;
+    }
+
+    state.graphing.viewport[viewportKey] = parsedValue;
+    state.graphing.isManualAdjustment = true;
+    drawGraph();
+    render();
+    return;
+  }
+
+  if (target.name === 'graph-line-thickness') {
+    state.graphing.lineThickness = Number(target.value) || 2;
+    drawGraph();
+    render();
+    return;
+  }
+
+  if (target.name === 'graph-theme') {
+    state.graphing.theme = target.value === 'match-app' ? 'match-app' : 'light';
+    drawGraph();
+    render();
   }
 }
 
@@ -419,6 +523,16 @@ function handleFocusIn(event) {
 }
 
 function handleKeydown(event) {
+  if (state.mode === 'graphing' && event.key === 'Escape' && (state.graphing.settingsOpen || state.graphing.openMenu)) {
+    state.graphing.settingsOpen = false;
+    state.graphing.openMenu = null;
+    state.graphing.trigShifted = false;
+    state.graphing.trigHyperbolic = false;
+    render();
+    event.preventDefault();
+    return;
+  }
+
   if (event.key === 'Escape' && (state.navOpen || state.historyOpen)) {
     state.navOpen = false;
     state.historyOpen = false;

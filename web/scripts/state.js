@@ -1,6 +1,15 @@
 import { STORAGE_KEYS } from './config.js';
 import { toDateInputValue } from './utils.js';
 
+function createDefaultGraphViewport() {
+  return {
+    xMin: -10,
+    xMax: 10,
+    yMin: -10,
+    yMax: 10
+  };
+}
+
 function createGraphingExpressions() {
   return [
     { color: '#0063b1', value: '', error: false },
@@ -15,15 +24,16 @@ function createGraphingState() {
     expressions: createGraphingExpressions(),
     activeExpressionIndex: 0,
     openMenu: null,
+    settingsOpen: false,
     trigShifted: false,
     trigHyperbolic: false,
+    angle: 'RAD',
+    lineThickness: 2,
+    theme: 'light',
+    isManualAdjustment: false,
+    tracingEnabled: false,
     mobileView: 'graph',
-    viewport: {
-      xMin: -24,
-      xMax: 24,
-      yMin: -15,
-      yMax: 15
-    },
+    viewport: createDefaultGraphViewport(),
     status: 'Enter an expression'
   };
 }

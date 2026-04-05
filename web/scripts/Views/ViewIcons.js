@@ -42,6 +42,12 @@ export function renderToolbarIcon(kind) {
   if (kind === 'graph-options') {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7.5h12M6 12h12M6 16.5h12M9 5.5v4M15 10v4M12 14.5v4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/></svg>';
   }
+  if (kind === 'graph-auto-view') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.75H5.75V8M16 5.75h2.25V8M8 18.25H5.75V16M16 18.25h2.25V16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55"/><circle cx="12" cy="12" r="2.15" fill="none" stroke="currentColor" stroke-width="1.55"/><path d="M12 7.35v-1.1M12 17.75v-1.1M7.35 12h-1.1M17.75 12h-1.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.35"/></svg>';
+  }
+  if (kind === 'graph-manual-view') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.75H5.75V8M16 5.75h2.25V8M8 18.25H5.75V16M16 18.25h2.25V16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55"/><circle cx="12" cy="12" r="4.2" fill="currentColor" opacity="0.22"/><circle cx="12" cy="12" r="2.8" fill="currentColor"/></svg>';
+  }
   if (kind === 'programmer-keypad') {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6.5h2v2H8zm3 0h2v2h-2zm3 0h2v2h-2zM8 9.5h2v2H8zm3 0h2v2h-2zm3 0h2v2h-2zM8 12.5h2v2H8zm3 0h2v2h-2zm3 0h2v2h-2zM8 15.5h2v2H8zm3 0h2v2h-2zm3 0h2v2h-2z" fill="currentColor"/></svg>';
   }

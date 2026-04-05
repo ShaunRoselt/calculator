@@ -112,23 +112,25 @@ const GRAPHING_KEYPAD_ROWS = [
 export function renderGraphingCalculatorView() {
   const isCompact = window.innerWidth < 768;
   const activeExpression = state.graphing.expressions[state.graphing.activeExpressionIndex] ?? state.graphing.expressions[0];
+  const graphThemeClass = state.graphing.theme === 'match-app' ? 'graph-theme-match-app' : 'graph-theme-light';
 
   return `
-    <div class="graphing-layout ${isCompact ? `mobile-view-${state.graphing.mobileView}` : 'desktop-view'}">
+    <div class="graphing-layout ${graphThemeClass} ${isCompact ? `mobile-view-${state.graphing.mobileView}` : 'desktop-view'}">
       <section class="graph-workspace">
         <div class="graph-surface">
           <canvas id="graph-canvas" class="graph-canvas" width="1200" height="720" aria-label="Graph canvas"></canvas>
+          ${state.graphing.settingsOpen ? renderGraphSettingsPanel() : ''}
           <div class="graph-overlay graph-surface-tools">
             <div class="graph-tool-cluster">
-              <button class="graph-surface-button" data-tooltip="Start tracing" aria-label="Start tracing">${renderToolbarIcon('graph-select')}</button>
-              <button class="graph-surface-button" data-tooltip="Share" aria-label="Share">${renderToolbarIcon('graph-share')}</button>
-              <button class="graph-surface-button" data-tooltip="Graph options" aria-label="Graph options">${renderToolbarIcon('graph-options')}</button>
+              <button class="graph-surface-button ${state.graphing.tracingEnabled ? 'active' : ''}" data-graph-surface-action="trace" data-tooltip="${state.graphing.tracingEnabled ? 'Stop tracing' : 'Start tracing'}" aria-label="${state.graphing.tracingEnabled ? 'Stop tracing' : 'Start tracing'}">${renderToolbarIcon('graph-select')}</button>
+              <button class="graph-surface-button" data-graph-surface-action="share" data-tooltip="Share" aria-label="Share">${renderToolbarIcon('graph-share')}</button>
+              <button class="graph-surface-button ${state.graphing.settingsOpen ? 'active' : ''}" data-graph-settings-toggle="true" data-tooltip="Graph options" aria-label="Graph options">${renderToolbarIcon('graph-options')}</button>
             </div>
           </div>
           <div class="graph-overlay graph-zoom-controls">
             <button class="graph-surface-button" data-graph-zoom="in" data-tooltip="Zoom in (Ctrl + plus)" aria-label="Zoom in">+</button>
             <button class="graph-surface-button" data-graph-zoom="out" data-tooltip="Zoom out (Ctrl + minus)" aria-label="Zoom out">−</button>
-            <button class="graph-surface-button" data-graph-zoom="reset" data-tooltip="Refresh view automatically (Ctrl + 0)" aria-label="Graph view">⟳</button>
+            <button class="graph-surface-button ${state.graphing.isManualAdjustment ? 'active' : ''}" data-graph-view-toggle="true" data-tooltip="Refresh view automatically (Ctrl + 0)" aria-label="Graph view" aria-pressed="${state.graphing.isManualAdjustment ? 'true' : 'false'}">${renderToolbarIcon(state.graphing.isManualAdjustment ? 'graph-manual-view' : 'graph-auto-view')}</button>
           </div>
         </div>
       </section>
@@ -150,6 +152,73 @@ export function renderGraphingCalculatorView() {
       </section>
     </div>
   `;
+}
+
+function renderGraphSettingsPanel() {
+  const viewport = state.graphing.viewport;
+  return `
+    <section class="graph-settings-panel" role="dialog" aria-label="Graph options">
+      <div class="graph-settings-header">
+        <h3>Graph options</h3>
+      </div>
+      <div class="graph-settings-section-heading">
+        <span>Window</span>
+        <button class="graph-settings-link" type="button" data-graph-settings-reset="true">Reset view</button>
+      </div>
+      <div class="graph-settings-grid">
+        ${renderGraphSettingsField('X-Min', 'graph-viewport-xMin', viewport.xMin)}
+        ${renderGraphSettingsField('X-Max', 'graph-viewport-xMax', viewport.xMax)}
+        ${renderGraphSettingsField('Y-Min', 'graph-viewport-yMin', viewport.yMin)}
+        ${renderGraphSettingsField('Y-Max', 'graph-viewport-yMax', viewport.yMax)}
+      </div>
+      <div class="graph-settings-section-heading standalone">
+        <span>Units</span>
+      </div>
+      <div class="graph-settings-choice-row" role="group" aria-label="Units">
+        ${renderGraphSettingsChoice('Radians', 'RAD', state.graphing.angle === 'RAD')}
+        ${renderGraphSettingsChoice('Degrees', 'DEG', state.graphing.angle === 'DEG')}
+        ${renderGraphSettingsChoice('Gradians', 'GRAD', state.graphing.angle === 'GRAD')}
+      </div>
+      <label class="graph-settings-select-label">
+        <span>Line thickness</span>
+        <select class="graph-settings-select" name="graph-line-thickness">
+          ${[1, 2, 3, 4].map((value) => `<option value="${value}" ${Number(state.graphing.lineThickness) === value ? 'selected' : ''}>${value.toFixed(1)}</option>`).join('')}
+        </select>
+      </label>
+      <fieldset class="graph-settings-theme-group">
+        <legend>Graph theme</legend>
+        <label class="graph-settings-radio-option">
+          <input type="radio" name="graph-theme" value="light" ${state.graphing.theme === 'light' ? 'checked' : ''} />
+          <span>Always light</span>
+        </label>
+        <label class="graph-settings-radio-option">
+          <input type="radio" name="graph-theme" value="match-app" ${state.graphing.theme === 'match-app' ? 'checked' : ''} />
+          <span>Match app theme</span>
+        </label>
+      </fieldset>
+    </section>
+  `;
+}
+
+function renderGraphSettingsField(label, name, value) {
+  return `
+    <label class="graph-settings-field">
+      <span>${label}</span>
+      <input type="number" step="any" name="${name}" value="${escapeHtml(formatGraphSettingValue(value))}" />
+    </label>
+  `;
+}
+
+function renderGraphSettingsChoice(label, value, active) {
+  return `<button class="graph-settings-choice ${active ? 'active' : ''}" type="button" data-graph-setting-angle="${value}" aria-pressed="${active ? 'true' : 'false'}">${label}</button>`;
+}
+
+function formatGraphSettingValue(value) {
+  if (!Number.isFinite(value)) {
+    return '';
+  }
+
+  return Number(value.toFixed(4)).toString();
 }
 
 function renderGraphingGroupButton(group) {

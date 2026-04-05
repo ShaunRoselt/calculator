@@ -1534,15 +1534,22 @@ export function setGraphMobileView(view) {
   }
 }
 
+export function resetGraphViewport() {
+  state.graphing.viewport.xMin = -10;
+  state.graphing.viewport.xMax = 10;
+  state.graphing.viewport.yMin = -10;
+  state.graphing.viewport.yMax = 10;
+  state.graphing.isManualAdjustment = false;
+}
+
 export function zoomGraph(action) {
   const viewport = state.graphing.viewport;
   if (action === 'reset') {
-    viewport.xMin = -24;
-    viewport.xMax = 24;
-    viewport.yMin = -15;
-    viewport.yMax = 15;
+    resetGraphViewport();
     return;
   }
+
+  state.graphing.isManualAdjustment = true;
 
   const factor = action === 'in' ? 0.8 : 1.25;
   const centerX = (viewport.xMin + viewport.xMax) / 2;
@@ -1567,7 +1574,7 @@ export function updateGraph() {
     }
 
     try {
-      evaluateScientificExpression(normalizeGraphExpression(expression.value), { x: 1, angle: state.scientific.angle });
+      evaluateScientificExpression(normalizeGraphExpression(expression.value), { x: 1, angle: state.graphing.angle });
       expression.error = false;
     } catch {
       expression.error = true;
@@ -1615,14 +1622,15 @@ export function drawGraph() {
   const toScreenY = (value) => cssHeight - (((value - yMin) / yRange) * cssHeight);
   const xAxisY = toScreenY(0);
   const yAxisX = toScreenX(0);
+  const palette = getGraphPalette();
 
-  ctx.fillStyle = '#f8f7f6';
+  ctx.fillStyle = palette.background;
   ctx.fillRect(0, 0, cssWidth, cssHeight);
 
   for (let x = Math.floor(xMin); x <= Math.ceil(xMax); x += 1) {
     const screenX = toScreenX(x);
     ctx.beginPath();
-    ctx.strokeStyle = x % 5 === 0 ? 'rgba(124, 124, 124, 0.28)' : 'rgba(124, 124, 124, 0.12)';
+    ctx.strokeStyle = x % 5 === 0 ? palette.gridMajor : palette.gridMinor;
     ctx.lineWidth = x % 5 === 0 ? 1 : 0.8;
     ctx.moveTo(screenX, 0);
     ctx.lineTo(screenX, cssHeight);
@@ -1632,14 +1640,14 @@ export function drawGraph() {
   for (let y = Math.floor(yMin); y <= Math.ceil(yMax); y += 1) {
     const screenY = toScreenY(y);
     ctx.beginPath();
-    ctx.strokeStyle = y % 5 === 0 ? 'rgba(124, 124, 124, 0.28)' : 'rgba(124, 124, 124, 0.12)';
+    ctx.strokeStyle = y % 5 === 0 ? palette.gridMajor : palette.gridMinor;
     ctx.lineWidth = y % 5 === 0 ? 1 : 0.8;
     ctx.moveTo(0, screenY);
     ctx.lineTo(cssWidth, screenY);
     ctx.stroke();
   }
 
-  ctx.strokeStyle = '#666666';
+  ctx.strokeStyle = palette.axis;
   ctx.lineWidth = 1.2;
   if (yAxisX >= 0 && yAxisX <= cssWidth) {
     ctx.beginPath();
@@ -1654,7 +1662,7 @@ export function drawGraph() {
     ctx.stroke();
   }
 
-  drawAxisDecorations(ctx, cssWidth, cssHeight, xAxisY, yAxisX, toScreenX, toScreenY, xMin, xMax, yMin, yMax);
+  drawAxisDecorations(ctx, cssWidth, cssHeight, xAxisY, yAxisX, toScreenX, toScreenY, xMin, xMax, yMin, yMax, palette.label);
 
   for (const expression of state.graphing.expressions) {
     if (!expression.value.trim() || expression.error) {
@@ -1663,7 +1671,7 @@ export function drawGraph() {
 
     ctx.beginPath();
     ctx.strokeStyle = expression.color;
-    ctx.lineWidth = 2.2;
+    ctx.lineWidth = Number(state.graphing.lineThickness) || 2;
     let started = false;
     let previousY = null;
 
@@ -1671,7 +1679,7 @@ export function drawGraph() {
       const x = xMin + ((px / cssWidth) * xRange);
       let y;
       try {
-        y = evaluateScientificExpression(normalizeGraphExpression(expression.value), { x, angle: state.scientific.angle });
+        y = evaluateScientificExpression(normalizeGraphExpression(expression.value), { x, angle: state.graphing.angle });
       } catch {
         expression.error = true;
         started = false;
@@ -1702,9 +1710,30 @@ function normalizeGraphExpression(expression) {
   return String(expression || '').replace(/,/g, '.').trim() || '0';
 }
 
-function drawAxisDecorations(ctx, width, height, xAxisY, yAxisX, toScreenX, toScreenY, xMin, xMax, yMin, yMax) {
-  ctx.fillStyle = '#5b5b5b';
-  ctx.strokeStyle = '#5b5b5b';
+function getGraphPalette() {
+  const useDarkTheme = state.graphing.theme === 'match-app' && document.documentElement.dataset.theme === 'dark';
+  if (useDarkTheme) {
+    return {
+      background: '#1b1c20',
+      gridMajor: 'rgba(255, 255, 255, 0.14)',
+      gridMinor: 'rgba(255, 255, 255, 0.07)',
+      axis: '#c6cad2',
+      label: '#eef0f3'
+    };
+  }
+
+  return {
+    background: '#f8f7f6',
+    gridMajor: 'rgba(124, 124, 124, 0.28)',
+    gridMinor: 'rgba(124, 124, 124, 0.12)',
+    axis: '#666666',
+    label: '#5b5b5b'
+  };
+}
+
+function drawAxisDecorations(ctx, width, height, xAxisY, yAxisX, toScreenX, toScreenY, xMin, xMax, yMin, yMax, labelColor) {
+  ctx.fillStyle = labelColor;
+  ctx.strokeStyle = labelColor;
   ctx.font = 'italic 12px "Segoe UI", sans-serif';
 
   if (xAxisY >= 0 && xAxisY <= height) {

@@ -22,6 +22,144 @@
   min-height: 0;
 }
 
+.graph-settings-panel {
+  position: absolute;
+  top: 54px;
+  right: 12px;
+  z-index: 5;
+  width: min(280px, calc(100% - 24px));
+  padding: 16px;
+  border-radius: 10px;
+  background: #2f3034;
+  color: #f5f5f5;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.graph-theme-match-app .graph-settings-panel {
+  background: color-mix(in srgb, var(--window-bg) 96%, #17181c);
+  color: var(--text);
+}
+
+.graph-settings-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.graph-settings-section-heading {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.86rem;
+}
+
+.graph-theme-match-app .graph-settings-section-heading {
+  color: color-mix(in srgb, var(--text) 88%, transparent);
+}
+
+.graph-settings-section-heading.standalone {
+  margin-bottom: 6px;
+}
+
+.graph-settings-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #78d7ff;
+  font-size: 0.82rem;
+}
+
+.graph-settings-grid {
+  margin-top: 6px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 10px;
+}
+
+.graph-settings-field,
+.graph-settings-select-label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.83rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.graph-theme-match-app .graph-settings-field,
+.graph-theme-match-app .graph-settings-select-label {
+  color: color-mix(in srgb, var(--text) 82%, transparent);
+}
+
+.graph-settings-field input,
+.graph-settings-select {
+  width: 100%;
+  min-height: 36px;
+  padding: 0 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+}
+
+.graph-theme-match-app .graph-settings-field input,
+.graph-theme-match-app .graph-settings-select {
+  border-color: var(--border-subtle);
+  background: color-mix(in srgb, var(--window-bg) 82%, white 4%);
+}
+
+.graph-settings-choice-row {
+  display: flex;
+  gap: 4px;
+}
+
+.graph-settings-choice {
+  flex: 1;
+  min-height: 36px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+}
+
+.graph-settings-choice.active {
+  background: #3aa9ec;
+  border-color: #3aa9ec;
+  color: #ffffff;
+}
+
+.graph-settings-select-label {
+  margin-top: 16px;
+}
+
+.graph-settings-theme-group {
+  margin: 16px 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.graph-settings-theme-group legend {
+  margin-bottom: 8px;
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.graph-theme-match-app .graph-settings-theme-group legend {
+  color: color-mix(in srgb, var(--text) 88%, transparent);
+}
+
+.graph-settings-radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.graph-settings-radio-option input {
+  accent-color: #3aa9ec;
+}
+
 .graph-canvas {
   width: 100%;
   height: 100%;
@@ -69,11 +207,28 @@
   color: #ffffff;
   border: 0;
   font-size: 1.35rem;
+  transition: background-color 120ms ease, color 120ms ease, box-shadow 120ms ease;
 }
 
 .graph-surface-button:hover,
-.graph-surface-button:focus-visible {
+.graph-surface-button:focus-visible,
+.graph-surface-button.active {
   background: #3a3c40;
+}
+
+.graph-surface-button.active {
+  background: #4a4d54;
+  color: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.16);
+}
+
+.graph-surface-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+.graph-surface-button[aria-pressed='true'] svg {
+  filter: drop-shadow(0 0 0.2px currentColor);
 }
 
 .graph-editor-panel {
@@ -291,6 +446,12 @@
   .graph-surface-tools {
     top: 8px;
     right: 8px;
+  }
+
+  .graph-settings-panel {
+    top: 46px;
+    right: 8px;
+    width: min(280px, calc(100% - 16px));
   }
 
   .graph-zoom-controls {

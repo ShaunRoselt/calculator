@@ -228,6 +228,17 @@ function handleScientificAction(action, value) {
     return;
   }
 
+  if (action === 'cycle-angle') {
+    const nextAngle = {
+      DEG: 'RAD',
+      RAD: 'GRAD',
+      GRAD: 'DEG'
+    }[calc.angle] ?? 'DEG';
+    calc.angle = nextAngle;
+    calc.display = formatScientificDisplay(parseDisplayNumber(calc.display), calc.display);
+    return;
+  }
+
   if (action === 'toggle-fe') {
     calc.isExponentialFormat = !calc.isExponentialFormat;
     calc.display = formatScientificDisplay(parseDisplayNumber(calc.display), calc.display);
@@ -716,6 +727,7 @@ function scientificUnary(action, value, angle) {
     case 'square': return value ** 2;
     case 'cube': return value ** 3;
     case 'pow10': return 10 ** value;
+    case 'abs': return Math.abs(value);
     case 'sqrt':
       if (value < 0) throw new Error('Invalid input');
       return Math.sqrt(value);
@@ -747,6 +759,7 @@ function unaryExpressionLabel(action, value) {
     square: `sqr(${formatted})`,
     cube: `cube(${formatted})`,
     pow10: `10^(${formatted})`,
+    abs: `abs(${formatted})`,
     sqrt: `√(${formatted})`,
     cbrt: `∛(${formatted})`,
     factorial: `fact(${formatted})`,

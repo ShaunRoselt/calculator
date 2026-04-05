@@ -1,7 +1,7 @@
 :root {
   color-scheme: dark;
-  --bg: #000000;
-  --window-bg: #22232c;
+  --bg: #111318;
+  --window-bg: #202127;
   --panel: #23242d;
   --panel-alt: #2f313a;
   --panel-soft: #383b43;
@@ -34,7 +34,10 @@ body {
 
 body {
   min-height: 100vh;
-  padding: 38px 24px;
+  padding: 28px 20px;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 36%),
+    linear-gradient(180deg, #16181e 0%, #0f1014 100%);
 }
 
 button,

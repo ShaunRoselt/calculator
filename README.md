@@ -46,8 +46,9 @@ Prerequisites:
 
 This repository also contains a standalone browser version at `index.html`.
 
-The web implementation is intended to match the same top-level user-facing modes exposed by
-`MainPage.xaml` in the Windows app:
+The web implementation is intended to replace the native Windows front end over time, so the web
+shell is now being driven toward visual and behavioral parity with the Windows Calculator layouts
+exposed by `MainPage.xaml`:
 
 | Windows mode | Standalone web version |
 | --- | --- |
@@ -60,8 +61,14 @@ The web implementation is intended to match the same top-level user-facing modes
 | History and Memory | ✅ |
 
 The native Windows app remains the source of truth for the original UWP architecture, infinite
-precision engine, Windows-specific shell behavior, and platform integrations. The standalone web
-version focuses on feature parity at the mode and workflow level.
+precision engine, and existing Windows behavior. The standalone web version now targets parity in:
+
+- shell chrome, navigation, display proportions, memory row, keypad sizing, and side panels
+- adaptive behavior across phone-width, tablet-width, and desktop-width layouts
+- keyboard handling, history/memory affordances, and other user-facing calculator interactions
+
+See [docs/StandaloneWebParity.md](docs/StandaloneWebParity.md) for the replacement checklist,
+golden viewport sizes, rollout phases, and Windows packaging guidance.
 
 ### Run the standalone web version
 
@@ -77,6 +84,10 @@ Then open `http://127.0.0.1:4173/index.html`.
 ```bash
 npm run check
 ```
+
+When validating UI parity changes, compare the standalone web app against the Windows reference
+captures for the same mode and viewport size. The first parity pass uses this reference shell
+image: `https://github.com/user-attachments/assets/c2b6f86f-fa8f-4b05-995c-3e629f9744bd`
 
 ### Standalone web structure
 
@@ -100,6 +111,14 @@ stylesheet.
 - `web/styles/calculator.css` — calculator surfaces, buttons, history, and memory
 - `web/styles/panels.css` — date, converter, and graphing panels
 - `web/styles/responsive.css` — adaptive layout rules
+
+### Windows packaging direction
+
+If the goal is to replace the native Windows experience as closely as possible, package the web
+front end in a Windows-native host first (for example WebView2/WinUI) so window chrome, scaling,
+startup feel, and platform integration stay aligned with the in-box Calculator experience. Electron
+remains an option for faster desktop packaging, but it is not the default recommendation for
+pixel- and behavior-level Windows parity.
 
 ## Contributing
 Want to contribute? The team encourages community feedback and contributions. Please follow our [contributing guidelines](CONTRIBUTING.md).

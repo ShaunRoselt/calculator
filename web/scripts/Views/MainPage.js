@@ -120,10 +120,15 @@ function renderSidePanel() {
 }
 
 export function getLayoutMode() {
-  if (window.innerWidth < 768) {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  if (width < 768) {
     return 'mobile';
   }
-  if (window.innerWidth < 1280) {
+  if (width >= 1100 || (width >= 1000 && height <= 560)) {
+    return 'desktop';
+  }
+  if (width < 1280) {
     return 'tablet';
   }
   return 'desktop';

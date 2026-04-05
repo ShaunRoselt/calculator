@@ -28,6 +28,40 @@
   font-size: 1.15rem;
 }
 
+.app-shell.layout-desktop .history-list {
+  gap: 0.35rem;
+}
+
+.app-shell.layout-desktop .history-entry {
+  padding: 0.5rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  text-align: right;
+}
+
+.app-shell.layout-desktop .history-entry:hover,
+.app-shell.layout-desktop .history-entry:focus-visible {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.app-shell.layout-desktop .history-expression {
+  margin-bottom: 0.2rem;
+}
+
+.app-shell.layout-desktop .history-result {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.app-shell.layout-desktop .side-footer {
+  justify-content: flex-end;
+}
+
+.app-shell.layout-desktop .side-footer button {
+  flex: 0 0 auto;
+}
+
 .side-footer {
   margin-top: 1rem;
   display: flex;

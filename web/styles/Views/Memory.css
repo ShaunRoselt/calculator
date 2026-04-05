@@ -34,3 +34,37 @@
   justify-content: space-between;
   gap: 0.75rem;
 }
+
+.app-shell.layout-desktop .memory-list {
+  gap: 0.35rem;
+}
+
+.app-shell.layout-desktop .memory-entry {
+  padding: 0.5rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.app-shell.layout-desktop .memory-entry:hover,
+.app-shell.layout-desktop .memory-entry:focus-visible {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.app-shell.layout-desktop .memory-entry-row {
+  align-items: flex-start;
+}
+
+.app-shell.layout-desktop .memory-value {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.app-shell.layout-desktop .memory-entry .inline-toolbar {
+  gap: 0.2rem;
+}
+
+.app-shell.layout-desktop .memory-entry .memory-action {
+  min-height: 24px;
+  padding: 0.15rem 0.35rem;
+}

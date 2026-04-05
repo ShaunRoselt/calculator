@@ -74,7 +74,7 @@
   }
 
   .display-panel {
-    min-height: 188px;
+    min-height: 120px;
     padding-left: 12px;
     padding-right: 12px;
   }
@@ -90,11 +90,96 @@
   }
 
   .calc-button {
-    min-height: 58px;
+    min-height: 50px;
     font-size: 1rem;
   }
 
   .display-value {
-    font-size: clamp(3.4rem, 16vw, 4.8rem);
+    font-size: clamp(2.8rem, 15vw, 4.4rem);
+  }
+}
+
+@media (max-width: 320px) and (max-height: 520px) {
+  .app-shell {
+    border: 1px solid rgba(86, 98, 139, 0.75);
+    border-radius: 10px;
+  }
+
+  .window-chrome {
+    height: 30px;
+  }
+
+  .window-brand {
+    gap: 8px;
+    padding-left: 9px;
+    font-size: 0.75rem;
+  }
+
+  .window-brand-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .window-control {
+    width: 34px;
+    height: 30px;
+  }
+
+  .topbar {
+    padding: 4px 10px 0;
+  }
+
+  .topbar-title {
+    gap: 8px;
+  }
+
+  .topbar-title h2 {
+    font-size: 0.98rem;
+  }
+
+  .icon-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+  }
+
+  .main-panel {
+    padding: 0 3px 3px;
+  }
+
+  .display-panel {
+    min-height: 82px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .display-expression {
+    min-height: 0.9rem;
+    font-size: 0.78rem;
+  }
+
+  .display-value {
+    min-height: 3.1rem;
+    font-size: clamp(3.05rem, 16.5vw, 4.2rem);
+  }
+
+  .memory-toolbar {
+    padding: 0 4px 2px;
+    font-size: 0.75rem;
+  }
+
+  .memory-toolbar button {
+    min-height: 24px;
+    padding: 0.1rem 0.2rem;
+  }
+
+  .button-grid {
+    padding: 0 4px 4px;
+  }
+
+  .calc-button {
+    min-height: 0;
+    font-size: 0.95rem;
+    border-radius: 4px;
   }
 }

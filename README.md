@@ -102,8 +102,7 @@ stylesheet.
 - `web/scripts/state.js` — app state creation and persistence
 - `web/scripts/logic.js` — calculator, converter, date, graphing, and shared mode logic
 - `web/scripts/utils.js` — shared formatting helpers
-- `web/scripts/Views/MainPage.js` — shell composition matching the native `MainPage.xaml` role
-- `web/scripts/Views/TitleBar.js` — caption bar rendering matching `TitleBar.xaml`
+- `web/scripts/Views/MainPage.js` — interior shell composition matching the native `MainPage.xaml` role
 - `web/scripts/Views/Calculator.js` — standard/scientific/programmer surface rendering matching `Calculator.xaml`
 - `web/scripts/Views/CalculatorScientificAngleButtons.js` — scientific header controls matching `CalculatorScientificAngleButtons.xaml`
 - `web/scripts/Views/CalculatorProgrammerDisplayPanel.js` — programmer header controls matching `CalculatorProgrammerDisplayPanel.xaml`
@@ -117,7 +116,6 @@ stylesheet.
 #### CSS
 
 - `web/styles/theme.css` — tokens and global element styles
-- `web/styles/Views/TitleBar.css` — caption bar styling aligned to `TitleBar.xaml`
 - `web/styles/Views/MainPage.css` — shell, navigation, and shared layout aligned to `MainPage.xaml`
 - `web/styles/Views/Calculator.css` — calculator surfaces and shared calculator cards aligned to `Calculator.xaml`
 - `web/styles/Views/CalculatorScientificAngleButtons.css` — scientific header control styling aligned to `CalculatorScientificAngleButtons.xaml`

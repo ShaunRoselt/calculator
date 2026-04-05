@@ -14,14 +14,57 @@ export const STORAGE_KEYS = {
 };
 
 export const MODE_META = {
-  standard: { label: 'Standard', icon: '🧮', subtitle: 'Classic immediate evaluation' },
-  scientific: { label: 'Scientific', icon: 'ƒ', subtitle: 'Operators, functions, and expression support' },
-  programmer: { label: 'Programmer', icon: '⌨', subtitle: 'Integer math with base conversion' },
-  date: { label: 'Date Calculation', icon: '📅', subtitle: 'Find durations and shift dates' },
-  converter: { label: 'Unit Converter', icon: '⇄', subtitle: 'Convert units and mock currencies' },
-  graphing: { label: 'Graphing', icon: '📈', subtitle: 'Plot a simple expression on a cartesian plane' },
-  settings: { label: 'Settings', icon: '⚙', subtitle: 'Appearance and app information' }
+  standard: { label: 'Standard', icon: 'standard', subtitle: 'Classic immediate evaluation' },
+  scientific: { label: 'Scientific', icon: 'scientific', subtitle: 'Operators, functions, and expression support' },
+  graphing: { label: 'Graphing', icon: 'graphing', subtitle: 'Plot a simple expression on a cartesian plane' },
+  programmer: { label: 'Programmer', icon: 'programmer', subtitle: 'Integer math with base conversion' },
+  date: { label: 'Date', icon: 'date', subtitle: 'Find durations and shift dates' },
+  currency: { label: 'Currency', icon: 'currency', subtitle: 'Convert mock exchange rates' },
+  volume: { label: 'Volume', icon: 'volume', subtitle: 'Convert volume measurements' },
+  length: { label: 'Length', icon: 'length', subtitle: 'Convert distance and length units' },
+  weight: { label: 'Weight and Mass', icon: 'weight', subtitle: 'Convert weight and mass units' },
+  temperature: { label: 'Temperature', icon: 'temperature', subtitle: 'Convert temperature scales' },
+  energy: { label: 'Energy', icon: 'energy', subtitle: 'Convert energy measurements' },
+  area: { label: 'Area', icon: 'area', subtitle: 'Convert area measurements' },
+  speed: { label: 'Speed', icon: 'speed', subtitle: 'Convert speed measurements' },
+  time: { label: 'Time', icon: 'time', subtitle: 'Convert time measurements' },
+  power: { label: 'Power', icon: 'power', subtitle: 'Convert power measurements' },
+  data: { label: 'Data', icon: 'data', subtitle: 'Convert digital storage units' },
+  pressure: { label: 'Pressure', icon: 'pressure', subtitle: 'Convert pressure units' },
+  angle: { label: 'Angle', icon: 'angle', subtitle: 'Convert angle measurements' },
+  settings: { label: 'Settings', icon: 'settings', subtitle: 'Appearance and app information' }
 };
+
+export const NAVIGATION_GROUPS = [
+  {
+    label: 'Calculator',
+    modes: ['standard', 'scientific', 'graphing', 'programmer', 'date']
+  },
+  {
+    label: 'Converter',
+    modes: ['currency', 'volume', 'length', 'weight', 'temperature', 'energy', 'area', 'speed', 'time', 'power', 'data', 'pressure', 'angle']
+  }
+];
+
+export const CONVERTER_MODE_TO_CATEGORY = {
+  currency: 'Currency',
+  volume: 'Volume',
+  length: 'Length',
+  weight: 'Mass',
+  temperature: 'Temperature',
+  energy: 'Energy',
+  area: 'Area',
+  speed: 'Speed',
+  time: 'Time',
+  power: 'Power',
+  data: 'Data',
+  pressure: 'Pressure',
+  angle: 'Angle'
+};
+
+export function isConverterMode(mode) {
+  return Object.hasOwn(CONVERTER_MODE_TO_CATEGORY, mode);
+}
 
 export const APP_INFO = {
   name: 'Calculator',
@@ -98,6 +141,12 @@ export const UNIT_CATEGORIES = {
     unit('Miles per hour', 'mph', (v) => v * 0.44704, (v) => v / 0.44704),
     unit('Knot', 'kn', (v) => v * 0.514444, (v) => v / 0.514444)
   ],
+  Power: [
+    unit('Watt', 'W', (v) => v, (v) => v),
+    unit('Kilowatt', 'kW', (v) => v * 1000, (v) => v / 1000),
+    unit('Horsepower', 'hp', (v) => v * 745.699872, (v) => v / 745.699872),
+    unit('BTU per hour', 'BTU/h', (v) => v * 0.29307107, (v) => v / 0.29307107)
+  ],
   Energy: [
     unit('Joule', 'J', (v) => v, (v) => v),
     unit('Kilojoule', 'kJ', (v) => v * 1000, (v) => v / 1000),
@@ -110,6 +159,18 @@ export const UNIT_CATEGORIES = {
     unit('Megabyte', 'MB', (v) => v * 1024 ** 2, (v) => v / 1024 ** 2),
     unit('Gigabyte', 'GB', (v) => v * 1024 ** 3, (v) => v / 1024 ** 3),
     unit('Bit', 'bit', (v) => v / 8, (v) => v * 8)
+  ],
+  Pressure: [
+    unit('Pascal', 'Pa', (v) => v, (v) => v),
+    unit('Kilopascal', 'kPa', (v) => v * 1000, (v) => v / 1000),
+    unit('Bar', 'bar', (v) => v * 100000, (v) => v / 100000),
+    unit('PSI', 'psi', (v) => v * 6894.757293, (v) => v / 6894.757293)
+  ],
+  Angle: [
+    unit('Degree', '°', (v) => v, (v) => v),
+    unit('Radian', 'rad', (v) => v * 180 / Math.PI, (v) => v * Math.PI / 180),
+    unit('Gradian', 'gon', (v) => v * 0.9, (v) => v / 0.9),
+    unit('Minute of arc', 'arcmin', (v) => v / 60, (v) => v * 60)
   ],
   Time: [
     unit('Second', 's', (v) => v, (v) => v),

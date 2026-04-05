@@ -1,3 +1,4 @@
+import { CONVERTER_MODE_TO_CATEGORY, isConverterMode } from './config.js';
 import { hydrateState, persistCollections, persistNav, persistTheme, state } from './state.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
 import {
@@ -90,6 +91,11 @@ function handleClick(event) {
     const nextMode = target.dataset.setMode;
     if (nextMode !== 'settings') {
       state.lastNonSettingsMode = nextMode;
+    }
+    if (isConverterMode(nextMode)) {
+      state.converter.category = CONVERTER_MODE_TO_CATEGORY[nextMode];
+      resetConverterUnits();
+      syncConverterValues('from');
     }
     state.mode = nextMode;
     state.navOpen = false;

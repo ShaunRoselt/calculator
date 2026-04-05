@@ -112,7 +112,7 @@ function renderCurrencyView(units, title) {
         <div class="currency-meta">
           <div class="currency-meta-line">${rateLine}</div>
           <div class="currency-meta-line">Updated ${MOCK_CURRENCY_UPDATED_AT}</div>
-          <button class="currency-update-button" type="button" title="${escapeHtml(MOCK_CURRENCY_NOTE)}">Update rates</button>
+          <button class="currency-update-button" type="button">Update rates</button>
         </div>
       </section>
       <section class="currency-keypad" aria-label="Currency keypad">

@@ -120,15 +120,15 @@ export function renderGraphingCalculatorView() {
           <canvas id="graph-canvas" class="graph-canvas" width="1200" height="720" aria-label="Graph canvas"></canvas>
           <div class="graph-overlay graph-surface-tools">
             <div class="graph-tool-cluster">
-              <button class="graph-surface-button" aria-label="Start tracing">${renderToolbarIcon('graph-select')}</button>
-              <button class="graph-surface-button" aria-label="Share graph">${renderToolbarIcon('graph-share')}</button>
-              <button class="graph-surface-button" aria-label="Graph options">${renderToolbarIcon('graph-options')}</button>
+              <button class="graph-surface-button" data-tooltip="Start tracing" aria-label="Start tracing">${renderToolbarIcon('graph-select')}</button>
+              <button class="graph-surface-button" data-tooltip="Share" aria-label="Share">${renderToolbarIcon('graph-share')}</button>
+              <button class="graph-surface-button" data-tooltip="Graph options" aria-label="Graph options">${renderToolbarIcon('graph-options')}</button>
             </div>
           </div>
           <div class="graph-overlay graph-zoom-controls">
-            <button class="graph-surface-button" data-graph-zoom="in" aria-label="Zoom in">+</button>
-            <button class="graph-surface-button" data-graph-zoom="out" aria-label="Zoom out">−</button>
-            <button class="graph-surface-button" data-graph-zoom="reset" aria-label="Reset graph view">⟳</button>
+            <button class="graph-surface-button" data-graph-zoom="in" data-tooltip="Zoom in (Ctrl + plus)" aria-label="Zoom in">+</button>
+            <button class="graph-surface-button" data-graph-zoom="out" data-tooltip="Zoom out (Ctrl + minus)" aria-label="Zoom out">−</button>
+            <button class="graph-surface-button" data-graph-zoom="reset" data-tooltip="Refresh view automatically (Ctrl + 0)" aria-label="Graph view">⟳</button>
           </div>
         </div>
       </section>

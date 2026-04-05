@@ -75,7 +75,7 @@ function renderHeader() {
   const layoutMode = getLayoutMode();
   const showDesktopSidePanel = getLayoutMode() === 'desktop' && isSidePanelVisible();
   const navButton = state.mode === 'settings'
-    ? `<button class="icon-button nav-toggle" data-settings-back="true" aria-label="Back">${renderToolbarIcon('back')}</button>`
+    ? `<button class="icon-button nav-toggle" data-settings-back="true" data-tooltip="Back" aria-label="Back">${renderToolbarIcon('back')}</button>`
     : `<button class="icon-button nav-toggle" data-nav-toggle="true" aria-label="Open navigation">${renderToolbarIcon('menu')}</button>`;
   const modeGlyph = state.mode === 'standard'
     ? `<span class="mode-glyph" aria-hidden="true">${renderToolbarIcon('standard')}</span>`
@@ -86,6 +86,7 @@ function renderHeader() {
       <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'editor' ? 'active' : ''}" data-graph-view="editor" aria-label="Show expressions">${renderToolbarIcon('expressions-view')}</button>
     `
     : '';
+  const historyAutomationName = state.historyOpen ? 'Close history flyout' : 'Open history flyout';
   return `
     <header class="topbar ${isCalculatorMode(state.mode) ? 'calculator-topbar' : ''}">
       <div class="topbar-title">
@@ -100,7 +101,7 @@ function renderHeader() {
       </div>
       <div class="topbar-actions">
         ${graphingActions}
-        ${isCalculatorMode(state.mode) && !showDesktopSidePanel ? `<button class="icon-button history-toggle ${state.historyOpen ? 'active' : ''}" data-toggle-panel="history" aria-label="Toggle history">${renderToolbarIcon('history')}</button>` : ''}
+        ${isCalculatorMode(state.mode) && !showDesktopSidePanel ? `<button class="icon-button history-toggle ${state.historyOpen ? 'active' : ''}" data-toggle-panel="history" data-tooltip="History (Ctrl+H)" aria-label="${historyAutomationName}">${renderToolbarIcon('history')}</button>` : ''}
       </div>
     </header>
   `;

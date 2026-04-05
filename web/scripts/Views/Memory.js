@@ -25,19 +25,37 @@ export function renderMemoryList() {
               <div class="memory-value">${escapeHtml(entry.value)}</div>
             </div>
             <div class="inline-toolbar">
-              <button class="memory-action" data-memory-recall="${index}" data-tooltip="Recall memory">MR</button>
-              <button class="memory-action" data-memory-delete="${index}" data-tooltip="Delete memory">✕</button>
+              <button class="memory-action" data-memory-recall="${index}">MR</button>
+              <button class="memory-action" data-memory-delete="${index}" data-tooltip="Clear memory item">✕</button>
             </div>
           </div>
         </div>
       `).join('')}
     </div>
     <div class="side-footer">
-      <button class="memory-clear" data-memory-clear="true">Clear memory</button>
+      <button class="memory-clear" data-memory-clear="true" data-tooltip="Clear all memory">Clear memory</button>
     </div>
   `;
 }
 
 function renderMemoryButton(op, label, disabled = false) {
-  return `<button class="${disabled ? 'disabled' : ''}" data-memory-op="${op}" ${disabled ? 'disabled' : ''}>${label}</button>`;
+  const tooltip = getMemoryTooltip(op);
+  return `<button class="${disabled ? 'disabled' : ''}" data-memory-op="${op}" ${tooltip ? `data-tooltip="${tooltip}"` : ''} ${disabled ? 'disabled' : ''}>${label}</button>`;
+}
+
+function getMemoryTooltip(op) {
+  switch (op) {
+    case 'mc':
+      return 'Clear all memory (Ctrl+L)';
+    case 'mr':
+      return 'Memory recall (Ctrl+R)';
+    case 'm+':
+      return 'Memory add (Ctrl+P)';
+    case 'm-':
+      return 'Memory subtract (Ctrl+Q)';
+    case 'ms':
+      return 'Memory store (Ctrl+M)';
+    default:
+      return '';
+  }
 }

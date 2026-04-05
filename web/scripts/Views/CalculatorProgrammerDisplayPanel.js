@@ -28,13 +28,13 @@ export function renderProgrammerDisplayPanel() {
       </div>
       <div class="programmer-control-row">
         <div class="programmer-view-toggles" role="group" aria-label="Programmer surface mode">
-          <button class="programmer-icon-toggle ${state.programmer.isBitFlipChecked ? '' : 'active'}" data-action="set-programmer-view" data-value="keypad" aria-label="Show keypad">${renderToolbarIcon('programmer-keypad')}</button>
-          <button class="programmer-icon-toggle ${state.programmer.isBitFlipChecked ? 'active' : ''}" data-action="set-programmer-view" data-value="bitflip" aria-label="Show bit view">${renderToolbarIcon('programmer-bitflip')}</button>
+          <button class="programmer-icon-toggle ${state.programmer.isBitFlipChecked ? '' : 'active'}" data-action="set-programmer-view" data-value="keypad" data-tooltip="Full keypad" aria-label="Show keypad">${renderToolbarIcon('programmer-keypad')}</button>
+          <button class="programmer-icon-toggle ${state.programmer.isBitFlipChecked ? 'active' : ''}" data-action="set-programmer-view" data-value="bitflip" data-tooltip="Bit toggling keypad" aria-label="Show bit view">${renderToolbarIcon('programmer-bitflip')}</button>
         </div>
         <div class="programmer-word-size" data-action="cycle-word-size" aria-label="Word size">${state.programmer.wordSize}</div>
         <div class="programmer-memory-actions">
-          <button class="programmer-memory-button" data-memory-op="store">MS</button>
-          <button class="programmer-memory-button" data-toggle-panel="memory">M⌄</button>
+          <button class="programmer-memory-button" data-memory-op="store" data-tooltip="Memory store (Ctrl+M)">MS</button>
+          <button class="programmer-memory-button" data-toggle-panel="memory" data-tooltip="Memory">M⌄</button>
         </div>
       </div>
       <div class="programmer-operator-groups">

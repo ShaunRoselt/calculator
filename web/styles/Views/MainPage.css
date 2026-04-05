@@ -19,62 +19,6 @@
   position: relative;
 }
 
-.window-chrome {
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  background: rgba(255, 255, 255, 0.015);
-}
-
-.window-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-left: 12px;
-  color: var(--text);
-  font-size: 0.82rem;
-}
-
-.window-brand-icon {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-}
-
-.window-controls {
-  display: flex;
-  margin-left: auto;
-}
-
-.window-control {
-  width: 46px;
-  height: 32px;
-  display: grid;
-  place-items: center;
-  color: rgba(255, 255, 255, 0.88);
-  background: transparent;
-}
-
-.window-control:hover,
-.window-control:focus-visible {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.window-control.close:hover,
-.window-control.close:focus-visible {
-  background: #c42b1c;
-}
-
-.window-control svg,
-.icon-button svg,
-.mode-glyph svg,
-.calc-button svg {
-  width: 20px;
-  height: 20px;
-}
-
 .window-body {
   position: relative;
   display: flex;
@@ -275,5 +219,74 @@
   padding: 0;
   display: flex;
   flex-direction: column;
+  min-width: 0;
   min-height: 0;
+  overflow: auto;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #1f2027;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.side-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem 0;
+}
+
+.side-panel-title {
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+}
+
+.side-panel-close {
+  width: 30px;
+  height: 30px;
+}
+
+.side-tabs {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem 1rem;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.05);
+}
+
+.side-body {
+  padding: 0 1rem 1rem;
+  min-height: 0;
+  overflow: auto;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-header h3,
+.form-section h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.label-stack {
+  display: grid;
+  gap: 0.45rem;
 }

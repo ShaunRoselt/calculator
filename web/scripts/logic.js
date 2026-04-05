@@ -672,7 +672,7 @@ function parseDisplayNumber(value) {
 }
 
 function scientificUnary(action, value, angle) {
-  const radians = angle === 'DEG' ? (value * Math.PI) / 180 : value;
+  const radians = angleToRadians(value, angle);
   switch (action) {
     case 'square': return value ** 2;
     case 'cube': return value ** 3;
@@ -894,7 +894,7 @@ function tokenize(expression) {
 }
 
 function scientificFunction(name, value, angle) {
-  const radians = angle === 'DEG' ? (value * Math.PI) / 180 : value;
+  const radians = angleToRadians(value, angle);
   switch (name) {
     case 'sin': return Math.sin(radians);
     case 'cos': return Math.cos(radians);
@@ -912,6 +912,16 @@ function scientificFunction(name, value, angle) {
     case 'exp': return Math.exp(value);
     default: throw new Error('Invalid input');
   }
+}
+
+function angleToRadians(value, angle) {
+  if (angle === 'DEG') {
+    return (value * Math.PI) / 180;
+  }
+  if (angle === 'GRAD') {
+    return (value * Math.PI) / 200;
+  }
+  return value;
 }
 
 function factorial(value) {

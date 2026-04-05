@@ -1,0 +1,18 @@
+.date-grid,
+.stats-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.date-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.date-grid .full,
+.stats-grid .full {
+  grid-column: 1 / -1;
+}
+
+.stats-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}

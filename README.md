@@ -100,16 +100,28 @@ stylesheet.
 - `web/scripts/app.js` — startup and event wiring
 - `web/scripts/config.js` — mode metadata, button maps, unit definitions
 - `web/scripts/state.js` — app state creation and persistence
-- `web/scripts/render.js` — UI rendering
 - `web/scripts/logic.js` — calculator, converter, date, graphing, and shared mode logic
 - `web/scripts/utils.js` — shared formatting helpers
+- `web/scripts/Views/MainPage.js` — shell composition matching the native `MainPage.xaml` role
+- `web/scripts/Views/TitleBar.js` — caption bar rendering matching `TitleBar.xaml`
+- `web/scripts/Views/Calculator.js` — standard/scientific/programmer surface rendering matching `Calculator.xaml`
+- `web/scripts/Views/HistoryList.js` — history panel rendering matching `HistoryList.xaml`
+- `web/scripts/Views/Memory.js` — memory panel and toolbar rendering matching `Memory.xaml`
+- `web/scripts/Views/DateCalculator.js` — date mode rendering matching `DateCalculator.xaml`
+- `web/scripts/Views/UnitConverter.js` — converter rendering matching `UnitConverter.xaml`
+- `web/scripts/Views/GraphingCalculator/GraphingCalculator.js` — graphing surface rendering matching `GraphingCalculator.xaml`
 
 #### CSS
 
 - `web/styles/theme.css` — tokens and global element styles
-- `web/styles/layout.css` — shell, navigation, and shared layout
-- `web/styles/calculator.css` — calculator surfaces, buttons, history, and memory
-- `web/styles/panels.css` — date, converter, and graphing panels
+- `web/styles/Views/TitleBar.css` — caption bar styling aligned to `TitleBar.xaml`
+- `web/styles/Views/MainPage.css` — shell, navigation, and shared layout aligned to `MainPage.xaml`
+- `web/styles/Views/Calculator.css` — calculator surfaces and shared calculator cards aligned to `Calculator.xaml`
+- `web/styles/Views/HistoryList.css` — history list styling aligned to `HistoryList.xaml`
+- `web/styles/Views/Memory.css` — memory list styling aligned to `Memory.xaml`
+- `web/styles/Views/DateCalculator.css` — date mode layout aligned to `DateCalculator.xaml`
+- `web/styles/Views/UnitConverter.css` — converter layout aligned to `UnitConverter.xaml`
+- `web/styles/Views/GraphingCalculator/GraphingCalculator.css` — graphing canvas styling aligned to `GraphingCalculator.xaml`
 - `web/styles/responsive.css` — adaptive layout rules
 
 ### Windows packaging direction

@@ -52,6 +52,7 @@
   border-radius: 4px;
   background: transparent;
   color: var(--text);
+  font-size: 0.82rem;
 }
 
 .memory-toolbar button.disabled,
@@ -79,7 +80,7 @@
   min-height: 4rem;
   width: 100%;
   text-align: right;
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(3.25rem, 8vw, 5.2rem);
   font-weight: 300;
   letter-spacing: -0.045em;
   line-height: 0.95;
@@ -151,7 +152,7 @@
 .calc-button {
   min-height: 0;
   height: 100%;
-  border-radius: 4px;
+  border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0.035);
   background: #373b4d;
   color: var(--text);
@@ -183,7 +184,7 @@
 }
 
 .calc-button.equals {
-  background: linear-gradient(180deg, #63c4fb, #4db3f0);
+  background: linear-gradient(180deg, #63c6fb, #56bdf6);
   color: #0b1a2c;
   font-weight: 500;
 }

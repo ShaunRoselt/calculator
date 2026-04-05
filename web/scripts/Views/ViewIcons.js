@@ -60,6 +60,12 @@ export function renderToolbarIcon(kind) {
   if (kind === 'scientific-function') {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 5.5c-2.7 0-4.5 1.9-4.5 4.9v8.1M8 9.5h8M8 18.5h8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55"/></svg>';
   }
+  if (kind === 'graphing-trig') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.5h14M6.5 18.5V8.25l8 10.25M9 13.5h6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55"/></svg>';
+  }
+  if (kind === 'graphing-inequality') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8.5 4.5 12 8 15.5M16 8.5h3.5M16 15.5h3.5M14 10.25h5.5M14 13.75h5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>';
+  }
   return '';
 }
 

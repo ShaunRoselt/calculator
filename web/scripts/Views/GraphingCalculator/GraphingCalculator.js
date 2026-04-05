@@ -2,7 +2,11 @@ import { state } from '../../state.js';
 import { escapeHtml } from '../../utils.js';
 import { renderToolbarIcon } from '../ViewIcons.js';
 
-const GRAPHING_TOOL_GROUPS = ['Trigonometry', 'Inequalities', 'Function'];
+const GRAPHING_TOOL_GROUPS = [
+  { label: 'Trigonometry', icon: 'graphing-trig' },
+  { label: 'Inequalities', icon: 'graphing-inequality' },
+  { label: 'Function', icon: 'scientific-function' }
+];
 
 const GRAPHING_KEYPAD_ROWS = [
   [
@@ -58,6 +62,7 @@ const GRAPHING_KEYPAD_ROWS = [
 
 export function renderGraphingCalculatorView() {
   const isCompact = window.innerWidth < 768;
+  const activeExpression = state.graphing.expressions[state.graphing.activeExpressionIndex] ?? state.graphing.expressions[0];
 
   return `
     <div class="graphing-layout ${isCompact ? `mobile-view-${state.graphing.mobileView}` : 'desktop-view'}">
@@ -81,12 +86,12 @@ export function renderGraphingCalculatorView() {
 
       <section class="graph-editor-panel">
         <div class="graph-expression-list" aria-label="Graph expressions">
-          ${state.graphing.expressions.map((expression, index) => renderExpressionRow(expression, index)).join('')}
+          ${renderExpressionRow(activeExpression, state.graphing.activeExpressionIndex)}
         </div>
-        <div class="graph-status ${state.graphing.status.startsWith('Check') ? 'visible' : ''}">${escapeHtml(state.graphing.status)}</div>
+        <div class="graph-editor-stage" aria-hidden="true"></div>
         <div class="graph-keypad-shell">
           <div class="graph-keypad-groups">
-            ${GRAPHING_TOOL_GROUPS.map((group) => `<button class="graph-keypad-group" type="button">${group}<span class="graph-keypad-caret">⌄</span></button>`).join('')}
+            ${GRAPHING_TOOL_GROUPS.map((group) => `<button class="graph-keypad-group" type="button"><span class="graph-keypad-group-icon" aria-hidden="true">${renderToolbarIcon(group.icon)}</span><span>${group.label}</span><span class="graph-keypad-caret">⌄</span></button>`).join('')}
           </div>
           <div class="graph-keypad-grid">
             ${GRAPHING_KEYPAD_ROWS.flat().map((button) => renderKeypadButton(button)).join('')}
@@ -100,8 +105,8 @@ export function renderGraphingCalculatorView() {
 function renderExpressionRow(expression, index) {
   return `
     <div class="graph-expression-row ${state.graphing.activeExpressionIndex === index ? 'active' : ''} ${expression.error ? 'invalid' : ''}">
-      <button class="graph-expression-badge" data-graph-select="${index}" style="--graph-expression-color: ${expression.color}" aria-label="Select expression ${index + 1}">
-        <span>ƒ</span><sub>${index + 1}</sub>
+      <button class="graph-expression-badge" data-graph-select="${index}" aria-label="Select expression ${index + 1}">
+        <span>ƒ</span>
       </button>
       <input
         class="graph-expression-input"

@@ -1,0 +1,84 @@
+@media (max-width: 1200px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .side-panel {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding-bottom: 1rem;
+  }
+
+  .sidebar-nav {
+    display: none;
+    margin-top: 1rem;
+  }
+
+  .app-shell.nav-open .sidebar-nav {
+    display: grid;
+  }
+
+  .nav-toggle {
+    display: inline-grid;
+    place-items: center;
+  }
+
+  .brand {
+    justify-content: space-between;
+  }
+
+  .brand-main {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .topbar,
+  .workspace {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .form-grid,
+  .converter-grid,
+  .date-grid,
+  .stats-grid,
+  .programmer-readouts {
+    grid-template-columns: 1fr;
+  }
+
+  .button-grid.scientific,
+  .button-grid.programmer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .button-grid.standard,
+  .button-grid.scientific,
+  .button-grid.programmer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .calc-button {
+    min-height: 62px;
+    font-size: 1rem;
+  }
+
+  .display-value {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+}

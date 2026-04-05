@@ -1,0 +1,82 @@
+
+:root {
+  color-scheme: dark;
+  --bg: #111315;
+  --panel: rgba(36, 39, 43, 0.92);
+  --panel-alt: rgba(28, 31, 35, 0.88);
+  --panel-soft: rgba(255, 255, 255, 0.06);
+  --panel-strong: rgba(255, 255, 255, 0.12);
+  --text: #f5f7fa;
+  --text-soft: #bac2cf;
+  --text-faint: #8a93a3;
+  --accent: #4cc2ff;
+  --accent-strong: #1fa2ff;
+  --operator: #31353d;
+  --danger: #ff6d7a;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(76, 194, 255, 0.18), transparent 38%),
+    linear-gradient(180deg, #191b1f 0%, #0e1012 100%);
+  color: var(--text);
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+select,
+input[type="date"],
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  outline: none;
+}
+
+select:focus,
+input:focus {
+  border-color: rgba(76, 194, 255, 0.7);
+  box-shadow: 0 0 0 3px rgba(76, 194, 255, 0.18);
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.noscript-card {
+  max-width: 460px;
+  margin: 10vh auto;
+  padding: 2rem;
+  background: rgba(28, 31, 35, 0.95);
+  border-radius: 24px;
+  color: white;
+}

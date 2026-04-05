@@ -42,6 +42,66 @@ Prerequisites:
   [Windows Application Driver (WinAppDriver)](https://github.com/microsoft/WinAppDriver/releases/latest)
   is installed.
 
+## Standalone web version
+
+This repository also contains a standalone browser version at
+`/home/runner/work/calculator/calculator/index.html`.
+
+The web implementation is intended to match the same top-level user-facing modes exposed by
+`MainPage.xaml` in the Windows app:
+
+| Windows mode | Standalone web version |
+| --- | --- |
+| Standard | ✅ |
+| Scientific | ✅ |
+| Programmer | ✅ |
+| Date Calculation | ✅ |
+| Unit Converter | ✅ |
+| Graphing | ✅ |
+| History and Memory | ✅ |
+
+The native Windows app remains the source of truth for the original UWP architecture, infinite
+precision engine, Windows-specific shell behavior, and platform integrations. The standalone web
+version focuses on feature parity at the mode and workflow level.
+
+### Run the standalone web version
+
+```bash
+npm install
+npm start
+```
+
+Then open `http://127.0.0.1:4173/index.html`.
+
+### Validate the standalone web version
+
+```bash
+npm run check
+```
+
+### Standalone web structure
+
+The standalone web app is now split into multiple focused files so it more closely mirrors the
+Windows project organization by feature area instead of keeping everything in a single script and
+stylesheet.
+
+#### JavaScript
+
+- `/home/runner/work/calculator/calculator/web/scripts/app.js` — startup and event wiring
+- `/home/runner/work/calculator/calculator/web/scripts/config.js` — mode metadata, button maps, unit definitions
+- `/home/runner/work/calculator/calculator/web/scripts/state.js` — app state creation and persistence
+- `/home/runner/work/calculator/calculator/web/scripts/render.js` — UI rendering
+- `/home/runner/work/calculator/calculator/web/scripts/logic.js` — calculator, converter, date, graphing, and shared mode logic
+- `/home/runner/work/calculator/calculator/web/scripts/utils.js` — shared formatting helpers
+
+#### CSS
+
+- `/home/runner/work/calculator/calculator/web/styles/theme.css` — tokens and global element styles
+- `/home/runner/work/calculator/calculator/web/styles/layout.css` — shell, navigation, and shared layout
+- `/home/runner/work/calculator/calculator/web/styles/calculator.css` — calculator surfaces, buttons, history, and memory
+- `/home/runner/work/calculator/calculator/web/styles/panels.css` — date, converter, and graphing panels
+- `/home/runner/work/calculator/calculator/web/styles/responsive.css` — adaptive layout rules
+
 ## Contributing
 Want to contribute? The team encourages community feedback and contributions. Please follow our [contributing guidelines](CONTRIBUTING.md).
 

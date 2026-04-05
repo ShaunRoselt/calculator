@@ -38,7 +38,7 @@
 
 .graph-surface-tools {
   top: 12px;
-  left: 20px;
+  right: 12px;
 }
 
 .graph-tool-cluster,
@@ -54,7 +54,7 @@
 }
 
 .graph-zoom-controls {
-  left: 20px;
+  right: 12px;
   bottom: 12px;
   flex-direction: column;
 }
@@ -138,6 +138,7 @@
   margin-top: auto;
   display: flex;
   flex-direction: column;
+  position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -163,6 +164,12 @@
   font-size: 0.85rem;
 }
 
+.graph-keypad-group.active,
+.graph-keypad-group:hover,
+.graph-keypad-group:focus-visible {
+  color: #ffffff;
+}
+
 .graph-keypad-group-icon {
   display: inline-flex;
   width: 15px;
@@ -177,6 +184,53 @@
 .graph-keypad-caret {
   color: #a1a3aa;
   font-size: 0.7rem;
+}
+
+.graphing-operator-menu {
+  position: absolute;
+  left: 8px;
+  bottom: calc(100% - 2px);
+  z-index: 4;
+  display: grid;
+  gap: 2px;
+  padding: 2px;
+  background: color-mix(in srgb, var(--window-bg) 94%, #111);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+}
+
+.graphing-operator-menu-trig {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: min(320px, calc(100% - 16px));
+}
+
+.graphing-operator-menu-inequality {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  width: min(320px, calc(100% - 16px));
+}
+
+.graphing-operator-menu-function {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(194px, calc(100% - 16px));
+}
+
+.graphing-menu-toggle,
+.graphing-menu-item {
+  min-height: 44px;
+  border-radius: 4px;
+  border: 1px solid var(--border-faint);
+  background: var(--button-default-bg);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.graphing-menu-toggle:hover,
+.graphing-menu-toggle:focus-visible,
+.graphing-menu-toggle.active,
+.graphing-menu-item:hover,
+.graphing-menu-item:focus-visible {
+  background: var(--button-default-hover-bg);
 }
 
 .graph-keypad-grid {
@@ -242,5 +296,11 @@
   .graph-zoom-controls {
     right: 8px;
     bottom: 8px;
+  }
+
+  .graphing-operator-menu-trig,
+  .graphing-operator-menu-inequality,
+  .graphing-operator-menu-function {
+    width: min(100%, calc(100% - 16px));
   }
 }

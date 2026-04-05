@@ -14,6 +14,9 @@ function createGraphingState() {
   return {
     expressions: createGraphingExpressions(),
     activeExpressionIndex: 3,
+    openMenu: null,
+    trigShifted: false,
+    trigHyperbolic: false,
     mobileView: 'graph',
     viewport: {
       xMin: -24,

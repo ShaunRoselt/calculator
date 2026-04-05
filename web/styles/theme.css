@@ -1,23 +1,22 @@
-
-/* The standalone web version intentionally ships with a Windows-inspired dark-first presentation. */
 :root {
   color-scheme: dark;
-  --bg: #111315;
-  --panel: rgba(36, 39, 43, 0.92);
-  --panel-alt: rgba(28, 31, 35, 0.88);
-  --panel-soft: rgba(255, 255, 255, 0.06);
-  --panel-strong: rgba(255, 255, 255, 0.12);
-  --text: #f5f7fa;
-  --text-soft: #bac2cf;
-  --text-faint: #8a93a3;
-  --accent: #4cc2ff;
-  --accent-strong: #1fa2ff;
-  --operator: #31353d;
+  --bg: #000000;
+  --window-bg: #22232c;
+  --panel: #23242d;
+  --panel-alt: #2f313a;
+  --panel-soft: #383b43;
+  --panel-strong: #474a52;
+  --text: #f4f4f5;
+  --text-soft: #9c9ea8;
+  --text-faint: #6f727c;
+  --accent: #58b7ed;
+  --accent-strong: #47abe4;
+  --operator: #343640;
   --danger: #ff6d7a;
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
-  --radius-lg: 24px;
-  --radius-md: 18px;
-  --radius-sm: 12px;
+  --shadow: 0 40px 100px rgba(0, 0, 0, 0.55);
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 8px;
 }
 
 * {
@@ -29,14 +28,13 @@ body {
   margin: 0;
   min-height: 100%;
   font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background:
-    radial-gradient(circle at top, rgba(76, 194, 255, 0.18), transparent 38%),
-    linear-gradient(180deg, #191b1f 0%, #0e1012 100%);
+  background: var(--bg);
   color: var(--text);
 }
 
 body {
   min-height: 100vh;
+  padding: 38px 24px;
 }
 
 button,
@@ -65,19 +63,20 @@ input[type="text"] {
 
 select:focus,
 input:focus {
-  border-color: rgba(76, 194, 255, 0.7);
-  box-shadow: 0 0 0 3px rgba(76, 194, 255, 0.18);
+  border-color: rgba(88, 183, 237, 0.7);
+  box-shadow: 0 0 0 3px rgba(88, 183, 237, 0.18);
 }
 
 #app {
-  min-height: 100vh;
+  min-height: calc(100vh - 76px);
+  width: 100%;
 }
 
 .noscript-card {
   max-width: 460px;
   margin: 10vh auto;
   padding: 2rem;
-  background: rgba(28, 31, 35, 0.95);
+  background: rgba(35, 36, 45, 0.98);
   border-radius: 24px;
   color: white;
 }

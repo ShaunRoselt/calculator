@@ -2,40 +2,57 @@ import { MODE_META, MOCK_CURRENCY_NOTE, PROGRAMMER_BUTTONS, SCIENTIFIC_BUTTONS, 
 import { state } from './state.js';
 import { appRoot } from './dom.js';
 import { escapeHtml, formatExpressionForDisplay } from './utils.js';
-import { drawGraph, getProgrammerCurrentValue, formatBigInt, getUnitsForCategory, isProgrammerDigitAllowed, isSidePanelVisible } from './logic.js';
+import { drawGraph, getProgrammerCurrentValue, formatBigInt, getUnitsForCategory, isCalculatorMode, isProgrammerDigitAllowed, isSidePanelVisible } from './logic.js';
 
 export function render() {
+  const sidePanelVisible = isSidePanelVisible();
   appRoot.innerHTML = `
-    <div class="app-shell ${state.navOpen ? 'nav-open' : ''}">
-      ${renderSidebar()}
-      <main class="main">
-        ${renderTopbar()}
-        <div class="workspace ${isSidePanelVisible() ? '' : 'single'}">
-          <section class="panel main-panel">
-            ${renderMainPanel()}
-          </section>
-          ${isSidePanelVisible() ? renderSidePanel() : ''}
+    <div class="desktop-shell">
+      <div class="app-shell ${state.navOpen ? 'nav-open' : ''}">
+        ${renderWindowChrome()}
+        <div class="window-body">
+          ${renderSidebar()}
+          <main class="main">
+            ${renderTopbar()}
+            <div class="workspace ${sidePanelVisible ? 'with-side-panel' : 'single'}">
+              <section class="panel main-panel">
+                ${renderMainPanel()}
+              </section>
+              ${sidePanelVisible ? renderSidePanel() : ''}
+            </div>
+          </main>
         </div>
-      </main>
+      </div>
     </div>
   `;
   drawGraph();
+}
+
+function renderWindowChrome() {
+  return `
+    <header class="window-chrome">
+      <div class="window-brand">
+        <img class="window-brand-icon" src="/src/Calculator/Assets/CalculatorAppList.targetsize-32_altform-unplated.png" alt="" />
+        <span>Calculator</span>
+      </div>
+      <div class="window-controls" aria-hidden="true">
+        <button class="window-control" tabindex="-1">${renderWindowControlIcon('minimize')}</button>
+        <button class="window-control" tabindex="-1">${renderWindowControlIcon('maximize')}</button>
+        <button class="window-control close" tabindex="-1">${renderWindowControlIcon('close')}</button>
+      </div>
+    </header>
+  `;
 }
 
 function renderSidebar() {
   return `
     <aside class="sidebar">
       <div class="brand">
-        <div class="brand-main">
-          <div class="brand-icon">＋</div>
-          <div class="brand-copy">
-            <h1>Windows Calculator</h1>
-            <p>Standalone web edition</p>
-          </div>
+        <div class="brand-copy">
+          <h1>Calculator</h1>
+          <p>Navigation</p>
         </div>
-        <button class="nav-toggle" data-nav-toggle="true" aria-label="Toggle navigation">☰</button>
       </div>
-      <div class="sidebar-section-title">Modes</div>
       <nav class="sidebar-nav">
         ${Object.entries(MODE_META).map(([mode, meta]) => `
           <button class="nav-button ${state.mode === mode ? 'active' : ''}" data-set-mode="${mode}">
@@ -51,14 +68,16 @@ function renderSidebar() {
 function renderTopbar() {
   const meta = MODE_META[state.mode];
   return `
-    <header class="topbar">
+    <header class="topbar ${isCalculatorMode(state.mode) ? 'calculator-topbar' : ''}">
       <div class="topbar-title">
-        <div class="subtitle">${meta.subtitle}</div>
-        <h2>${meta.label}</h2>
+        <button class="icon-button nav-toggle" data-nav-toggle="true" aria-label="Open navigation">${renderToolbarIcon('menu')}</button>
+        <div class="mode-title-group">
+          <h2>${meta.label}</h2>
+          ${state.mode === 'standard' ? `<span class="mode-glyph" aria-hidden="true">${renderToolbarIcon('standard')}</span>` : ''}
+        </div>
       </div>
       <div class="topbar-actions">
-        ${state.mode === 'scientific' ? renderAngleToggle() : ''}
-        ${state.mode === 'programmer' ? renderBaseToolbar() : ''}
+        ${isCalculatorMode(state.mode) ? `<button class="icon-button history-toggle ${state.historyOpen ? 'active' : ''}" data-toggle-panel="history" aria-label="Toggle history">${renderToolbarIcon('history')}</button>` : ''}
       </div>
     </header>
   `;
@@ -106,15 +125,16 @@ function renderCalculatorPanel(mode) {
   const buttons = mode === 'standard' ? STANDARD_BUTTONS : mode === 'scientific' ? SCIENTIFIC_BUTTONS : PROGRAMMER_BUTTONS;
   return `
     <div class="calculator-layout">
-      <div class="mode-banner">Faithful Windows-inspired layout with keyboard shortcuts, history, memory, and responsive states.</div>
+      ${mode === 'scientific' ? `<div class="calculator-toolbar">${renderAngleToggle()}</div>` : ''}
+      ${mode === 'programmer' ? `<div class="calculator-toolbar">${renderBaseToolbar()}</div>` : ''}
       <div class="display-panel">
-        <div class="memory-toolbar">
-          ${['mc', 'mr', 'm+', 'm-', 'ms'].map((op) => `<button data-memory-op="${op}">${op.toUpperCase()}</button>`).join('')}
-        </div>
         <div class="display-expression">${formatExpressionForDisplay(calc.expression) || '&nbsp;'}</div>
         <div class="display-value">${escapeHtml(calc.display)}</div>
       </div>
       ${mode === 'programmer' ? renderProgrammerReadouts() : ''}
+      <div class="memory-toolbar">
+        ${renderMemoryToolbar()}
+      </div>
       <div class="button-grid ${mode}">
         ${buttons.flat().map((button) => renderCalcButton(button, mode)).join('')}
       </div>
@@ -130,8 +150,31 @@ function renderCalcButton(button, mode) {
       data-action="${button.action}"
       data-value="${button.value ?? ''}"
       ${disabled ? 'disabled' : ''}
-    >${button.label}</button>
+    >${renderCalcButtonLabel(button)}</button>
   `;
+}
+
+function renderMemoryToolbar() {
+  const memoryEmpty = state.memory.length === 0;
+  return [
+    renderMemoryButton('mc', 'MC', memoryEmpty),
+    renderMemoryButton('mr', 'MR', memoryEmpty),
+    renderMemoryButton('m+', 'M+'),
+    renderMemoryButton('m-', 'M−'),
+    renderMemoryButton('ms', 'MS'),
+    `<button class="${memoryEmpty ? 'disabled' : ''}" data-toggle-panel="memory" ${memoryEmpty ? 'disabled' : ''}>M<span class="memory-caret">⌄</span></button>`
+  ].join('');
+}
+
+function renderMemoryButton(op, label, disabled = false) {
+  return `<button class="${disabled ? 'disabled' : ''}" data-memory-op="${op}" ${disabled ? 'disabled' : ''}>${label}</button>`;
+}
+
+function renderCalcButtonLabel(button) {
+  if (button.action === 'backspace') {
+    return renderToolbarIcon('backspace');
+  }
+  return button.label;
 }
 
 function renderProgrammerReadouts() {
@@ -158,8 +201,8 @@ function renderSidePanel() {
   return `
     <aside class="panel side-panel">
       <div class="side-tabs">
-        <button class="tab-button ${state.historyTab === 'history' ? 'active' : ''}" data-history-tab="history">History</button>
-        <button class="tab-button ${state.historyTab === 'memory' ? 'active' : ''}" data-history-tab="memory">Memory</button>
+        <button class="tab-button ${state.historyTab === 'history' ? 'active' : ''}" data-toggle-panel="history">History</button>
+        <button class="tab-button ${state.historyTab === 'memory' ? 'active' : ''}" data-toggle-panel="memory">Memory</button>
       </div>
       <div class="side-body">
         ${state.historyTab === 'history' ? renderHistoryList() : renderMemoryList()}
@@ -350,4 +393,30 @@ function renderGraphingPanel() {
       <canvas id="graph-canvas" class="graph-canvas" width="1200" height="640" aria-label="Graph canvas"></canvas>
     </div>
   `;
+}
+
+function renderWindowControlIcon(kind) {
+  if (kind === 'minimize') {
+    return '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5h8" fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="1.1"/></svg>';
+  }
+  if (kind === 'maximize') {
+    return '<svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2.25" y="2.25" width="7.5" height="7.5" rx="0.8" fill="none" stroke="currentColor" stroke-width="1.1"/></svg>';
+  }
+  return '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 2.2l7.6 7.6M9.8 2.2l-7.6 7.6" fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="1.1"/></svg>';
+}
+
+function renderToolbarIcon(kind) {
+  if (kind === 'menu') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.75h16M4 12h16M4 17.25h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/></svg>';
+  }
+  if (kind === 'history') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.75 8.5A8.5 8.5 0 1 1 12 20.5a8.47 8.47 0 0 1-6.01-2.49M4.75 4.75V9.5h4.75M12 7v5l3 1.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg>';
+  }
+  if (kind === 'standard') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 6.5A2 2 0 0 1 6.5 4.5h7a2 2 0 0 1 2 2v7m-11 6 6.5-6.5M11 19.5H4.5V13m7.5-8.5h7.5v7.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg>';
+  }
+  if (kind === 'backspace') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 7h8a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-8L4 12l6-5Zm2.5 3 5 5m0-5-5 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55"/></svg>';
+  }
+  return '';
 }

@@ -648,7 +648,7 @@ export function isCalculatorMode(mode) {
 }
 
 export function isSidePanelVisible() {
-  return isCalculatorMode(state.mode);
+  return isCalculatorMode(state.mode) && state.historyOpen;
 }
 
 function operatorLabel(operator) {

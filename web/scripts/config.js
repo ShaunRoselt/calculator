@@ -23,11 +23,11 @@ export const MODE_META = {
 
 export const STANDARD_BUTTONS = [
   [btn('%', 'percent', '', 'function'), btn('CE', 'clear-entry', '', 'function'), btn('C', 'clear-all', '', 'function'), btn('⌫', 'backspace', '', 'function')],
-  [btn('1/x', 'standard-unary', 'reciprocal', 'function'), btn('x²', 'standard-unary', 'square', 'function'), btn('√x', 'standard-unary', 'sqrt', 'function'), btn('÷', 'operator', '/', 'operator')],
+  [btn('¹∕x', 'standard-unary', 'reciprocal', 'function'), btn('x²', 'standard-unary', 'square', 'function'), btn('²√x', 'standard-unary', 'sqrt', 'function'), btn('÷', 'operator', '/', 'operator')],
   [btn('7', 'digit', '7'), btn('8', 'digit', '8'), btn('9', 'digit', '9'), btn('×', 'operator', '*', 'operator')],
   [btn('4', 'digit', '4'), btn('5', 'digit', '5'), btn('6', 'digit', '6'), btn('−', 'operator', '-', 'operator')],
   [btn('1', 'digit', '1'), btn('2', 'digit', '2'), btn('3', 'digit', '3'), btn('+', 'operator', '+', 'operator')],
-  [btn('±', 'negate', ''), btn('0', 'digit', '0'), btn('.', 'decimal', '.'), btn('=', 'equals', '', 'equals')]
+  [btn('+/-', 'negate', ''), btn('0', 'digit', '0'), btn('.', 'decimal', '.'), btn('=', 'equals', '', 'equals')]
 ];
 
 export const SCIENTIFIC_BUTTONS = [

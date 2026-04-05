@@ -5,7 +5,8 @@ function createInitialState() {
   const todayString = toDateInputValue(new Date());
   return {
     mode: 'standard',
-    navOpen: window.innerWidth > 900,
+    navOpen: false,
+    historyOpen: false,
     historyTab: 'history',
     history: [],
     memory: [],
@@ -85,7 +86,7 @@ export function hydrateState() {
     if (Array.isArray(memory)) {
       state.memory = memory.slice(0, 20);
     }
-    if (typeof nav === 'boolean' && window.innerWidth <= 900) {
+    if (typeof nav === 'boolean') {
       state.navOpen = nav;
     }
   } catch {

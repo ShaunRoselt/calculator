@@ -26,10 +26,6 @@ window.addEventListener('resize', handleResize);
 window.addEventListener('load', () => drawGraph());
 
 function handleResize() {
-  if (window.innerWidth > 900) {
-    state.navOpen = true;
-    persistNav();
-  }
   render();
 }
 
@@ -46,12 +42,23 @@ function handleClick(event) {
     return;
   }
 
+  if (target.dataset.togglePanel) {
+    const nextTab = target.dataset.togglePanel;
+    if (state.historyOpen && state.historyTab === nextTab) {
+      state.historyOpen = false;
+    } else {
+      state.historyTab = nextTab;
+      state.historyOpen = true;
+    }
+    render();
+    return;
+  }
+
   if (target.dataset.setMode) {
     state.mode = target.dataset.setMode;
-    if (window.innerWidth <= 900) {
-      state.navOpen = false;
-      persistNav();
-    }
+    state.navOpen = false;
+    state.historyOpen = ['standard', 'scientific', 'programmer'].includes(state.mode) ? state.historyOpen : false;
+    persistNav();
     render();
     return;
   }

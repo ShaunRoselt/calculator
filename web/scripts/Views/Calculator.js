@@ -14,7 +14,7 @@ export function renderCalculatorView(mode) {
   const displaySizeClass = getDisplaySizeClass(calc.display, mode);
   const expressionSizeClass = getExpressionSizeClass(calc.expression);
   return `
-    <div class="calculator-layout">
+    <div class="calculator-layout ${mode}">
       ${mode === 'scientific' ? `<div class="calculator-toolbar">${renderScientificAngleButtons()}</div>` : ''}
       ${mode === 'programmer' ? `<div class="calculator-toolbar">${renderProgrammerDisplayPanel()}</div>` : ''}
       <div class="display-panel">
@@ -73,9 +73,9 @@ function renderProgrammerReadouts() {
 
 function getDisplaySizeClass(display, mode) {
   const normalizedLength = String(display).replace(/\s+/g, '').length;
-  const compactThreshold = mode === 'programmer' ? 12 : 14;
-  const denseThreshold = mode === 'programmer' ? 20 : 18;
-  const ultraDenseThreshold = mode === 'programmer' ? 36 : 28;
+  const compactThreshold = mode === 'programmer' ? 10 : 12;
+  const denseThreshold = mode === 'programmer' ? 16 : 15;
+  const ultraDenseThreshold = mode === 'programmer' ? 28 : 22;
 
   if (normalizedLength >= ultraDenseThreshold) {
     return 'ultra-dense';

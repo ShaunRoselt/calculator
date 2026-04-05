@@ -53,6 +53,11 @@ button {
   cursor: pointer;
 }
 
+button:focus-visible {
+  outline: 2px solid rgba(88, 183, 237, 0.75);
+  outline-offset: -2px;
+}
+
 select,
 input[type="date"],
 input[type="number"],

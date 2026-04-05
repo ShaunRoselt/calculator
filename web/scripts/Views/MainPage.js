@@ -113,11 +113,11 @@ function renderSidePanel() {
   `;
 }
 
-function getLayoutMode() {
-  if (window.innerWidth <= 640) {
+export function getLayoutMode() {
+  if (window.innerWidth < 768) {
     return 'mobile';
   }
-  if (window.innerWidth <= 1080) {
+  if (window.innerWidth < 1280) {
     return 'tablet';
   }
   return 'desktop';

@@ -1,5 +1,5 @@
 import { hydrateState, persistCollections, persistNav, state } from './state.js';
-import { render } from './Views/MainPage.js';
+import { getLayoutMode, render } from './Views/MainPage.js';
 import {
   computeDateResults,
   drawGraph,
@@ -98,12 +98,18 @@ function handleClick(event) {
 
   if (target.dataset.historyIndex) {
     recallHistory(Number(target.dataset.historyIndex));
+    if (getLayoutMode() !== 'desktop') {
+      state.historyOpen = false;
+    }
     render();
     return;
   }
 
   if (target.dataset.memoryRecall) {
     recallMemory(Number(target.dataset.memoryRecall));
+    if (getLayoutMode() !== 'desktop') {
+      state.historyOpen = false;
+    }
     render();
     return;
   }

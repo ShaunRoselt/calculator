@@ -187,14 +187,26 @@ function renderScientificTrigMenu() {
 
 function renderCalcButton(button, mode) {
   const disabled = mode === 'programmer' && button.action === 'digit' && !isProgrammerDigitAllowed(button.value, state.programmer.base);
+  const tooltip = getCalcButtonTooltip(button);
   return `
     <button
       class="calc-button ${button.tone || ''} ${(button.tone || 'digit') === 'default' ? 'digit' : ''} ${button.active ? 'active' : ''} ${disabled ? 'disabled' : ''}"
       data-action="${button.action}"
       data-value="${button.value ?? ''}"
+      ${tooltip ? `data-tooltip="${escapeHtml(tooltip)}"` : ''}
       ${disabled ? 'disabled' : ''}
     >${renderCalcButtonLabel(button)}</button>
   `;
+}
+
+function getCalcButtonTooltip(button) {
+  if (button.action === 'backspace') {
+    return 'Backspace';
+  }
+  if (button.action === 'equals') {
+    return 'Equals';
+  }
+  return '';
 }
 
 function renderCalcButtonLabel(button) {

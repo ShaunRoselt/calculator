@@ -1,5 +1,6 @@
 import { CONVERTER_MODE_TO_CATEGORY, DEFAULT_MODE, isConverterMode, isMode } from './config.js';
 import { hydrateState, persistCollections, persistNav, persistTheme, state } from './state.js';
+import { installTooltipHandling } from './tooltip.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
 import {
   backspaceGraphExpression,
@@ -33,6 +34,7 @@ applyTheme();
 computeDateResults();
 syncConverterValues('from');
 render();
+installTooltipHandling();
 
 document.addEventListener('click', handleClick);
 document.addEventListener('change', handleChange);

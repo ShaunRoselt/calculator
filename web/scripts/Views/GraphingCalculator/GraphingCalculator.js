@@ -71,7 +71,7 @@ export function renderGraphingCalculatorView() {
           <canvas id="graph-canvas" class="graph-canvas" width="1200" height="720" aria-label="Graph canvas"></canvas>
           <div class="graph-overlay graph-surface-tools">
             <div class="graph-tool-cluster">
-              <button class="graph-surface-button" aria-label="Select graph item">${renderToolbarIcon('graph-select')}</button>
+              <button class="graph-surface-button" aria-label="Start tracing">${renderToolbarIcon('graph-select')}</button>
               <button class="graph-surface-button" aria-label="Share graph">${renderToolbarIcon('graph-share')}</button>
               <button class="graph-surface-button" aria-label="Graph options">${renderToolbarIcon('graph-options')}</button>
             </div>
@@ -124,8 +124,9 @@ function renderKeypadButton(button) {
   const content = button.icon ? renderToolbarIcon(button.icon) : escapeHtml(button.label);
   const actionAttribute = button.insert ? `data-graph-insert="${escapeHtml(button.insert)}"` : '';
   const editAttribute = button.editAction ? `data-graph-edit-action="${button.editAction}"` : '';
+  const tooltip = button.icon === 'backspace' ? 'Backspace' : '';
 
   return `
-    <button class="calc-button ${button.tone || ''}" ${actionAttribute} ${editAttribute}>${content}</button>
+    <button class="calc-button ${button.tone || ''}" ${actionAttribute} ${editAttribute} ${tooltip ? `data-tooltip="${tooltip}"` : ''}>${content}</button>
   `;
 }

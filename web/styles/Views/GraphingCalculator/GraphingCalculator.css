@@ -135,10 +135,18 @@
 }
 
 .graph-status {
-  padding: 10px 12px 8px;
+  padding: 0 12px;
   color: #9ea1ab;
   font-size: 0.82rem;
+  min-height: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.graph-status.visible {
+  padding: 10px 12px 8px;
   min-height: 2.3rem;
+  max-height: 4rem;
 }
 
 .graph-keypad-shell {

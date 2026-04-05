@@ -36,9 +36,7 @@ body {
 body {
   min-height: 100vh;
   padding: 0;
-  background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 36%),
-    linear-gradient(180deg, #16181e 0%, #0f1014 100%);
+  background: #1f2024;
   overflow: hidden;
 }
 

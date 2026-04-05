@@ -7,7 +7,6 @@ import { renderDateCalculatorView } from './DateCalculator.js';
 import { renderGraphingCalculatorView } from './GraphingCalculator/GraphingCalculator.js';
 import { renderHistoryList } from './HistoryList.js';
 import { renderMemoryList } from './Memory.js';
-import { renderTitleBar } from './TitleBar.js';
 import { renderToolbarIcon } from './ViewIcons.js';
 import { renderUnitConverterView } from './UnitConverter.js';
 
@@ -17,7 +16,6 @@ export function render() {
   appRoot.innerHTML = `
     <div class="desktop-shell">
       <div class="app-shell layout-${layoutMode} ${state.navOpen ? 'nav-open' : ''} ${sidePanelVisible ? 'history-open' : ''}">
-        ${renderTitleBar()}
         <div class="window-body">
           ${state.navOpen ? `<button class="surface-scrim" data-close-surface="nav" aria-label="Close navigation"></button>` : ''}
           ${sidePanelVisible && layoutMode !== 'desktop' ? `<button class="surface-scrim panel-scrim" data-close-surface="panel" aria-label="Close side panel"></button>` : ''}

@@ -9,7 +9,8 @@ function unit(name, symbol, toBase, fromBase) {
 export const STORAGE_KEYS = {
   history: 'windows-calculator-web-history',
   memory: 'windows-calculator-web-memory',
-  nav: 'windows-calculator-web-nav'
+  nav: 'windows-calculator-web-nav',
+  theme: 'windows-calculator-web-theme'
 };
 
 export const MODE_META = {
@@ -18,7 +19,13 @@ export const MODE_META = {
   programmer: { label: 'Programmer', icon: '⌨', subtitle: 'Integer math with base conversion' },
   date: { label: 'Date Calculation', icon: '📅', subtitle: 'Find durations and shift dates' },
   converter: { label: 'Unit Converter', icon: '⇄', subtitle: 'Convert units and mock currencies' },
-  graphing: { label: 'Graphing', icon: '📈', subtitle: 'Plot a simple expression on a cartesian plane' }
+  graphing: { label: 'Graphing', icon: '📈', subtitle: 'Plot a simple expression on a cartesian plane' },
+  settings: { label: 'Settings', icon: '⚙', subtitle: 'Appearance and app information' }
+};
+
+export const APP_INFO = {
+  name: 'Calculator',
+  version: '1.0.0'
 };
 
 export const STANDARD_BUTTONS = [

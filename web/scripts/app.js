@@ -1,4 +1,4 @@
-import { hydrateState, persistCollections, persistNav, state } from './state.js';
+import { hydrateState, persistCollections, persistNav, persistTheme, state } from './state.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
 import {
   computeDateResults,
@@ -14,6 +14,7 @@ import {
 } from './logic.js';
 
 hydrateState();
+applyTheme();
 computeDateResults();
 syncConverterValues('from');
 render();
@@ -24,6 +25,18 @@ document.addEventListener('input', handleInput);
 document.addEventListener('keydown', handleKeydown);
 window.addEventListener('resize', handleResize);
 window.addEventListener('load', () => drawGraph());
+window.matchMedia('(prefers-color-scheme: light)').addEventListener?.('change', () => {
+  if (state.settings.theme === 'system') {
+    applyTheme();
+  }
+});
+
+function applyTheme() {
+  const effectiveTheme = state.settings.theme === 'system'
+    ? (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+    : state.settings.theme;
+  document.documentElement.dataset.theme = effectiveTheme;
+}
 
 function handleResize() {
   render();
@@ -38,6 +51,13 @@ function handleClick(event) {
   if (target.dataset.navToggle) {
     state.navOpen = !state.navOpen;
     persistNav();
+    render();
+    return;
+  }
+
+  if (target.dataset.settingsBack) {
+    state.mode = state.lastNonSettingsMode;
+    state.navOpen = false;
     render();
     return;
   }
@@ -67,7 +87,11 @@ function handleClick(event) {
   }
 
   if (target.dataset.setMode) {
-    state.mode = target.dataset.setMode;
+    const nextMode = target.dataset.setMode;
+    if (nextMode !== 'settings') {
+      state.lastNonSettingsMode = nextMode;
+    }
+    state.mode = nextMode;
     state.navOpen = false;
     state.historyOpen = ['standard', 'scientific', 'programmer'].includes(state.mode) ? state.historyOpen : false;
     persistNav();
@@ -164,6 +188,14 @@ function handleChange(event) {
     const key = target.name.replace('date-', '');
     state.date[key] = target.type === 'number' ? Number(target.value || 0) : target.value;
     computeDateResults();
+    render();
+    return;
+  }
+
+  if (target.name === 'settings-theme') {
+    state.settings.theme = target.value;
+    persistTheme();
+    applyTheme();
     render();
     return;
   }

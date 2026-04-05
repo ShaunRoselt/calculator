@@ -9,6 +9,9 @@ export function renderWindowControlIcon(kind) {
 }
 
 export function renderToolbarIcon(kind) {
+  if (kind === 'back') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6.5 4.5 12l5.5 5.5M5.25 12h14.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>';
+  }
   if (kind === 'menu') {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.75h16M4 12h16M4 17.25h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/></svg>';
   }

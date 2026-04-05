@@ -2,7 +2,9 @@
   .app-shell {
     width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
     height: 100vh;
+    height: 100dvh;
   }
 
   .app-shell.layout-tablet .side-panel,
@@ -67,7 +69,9 @@
 
   .app-shell {
     min-height: 100vh;
+    min-height: 100dvh;
     height: 100vh;
+    height: 100dvh;
     border-radius: 0;
     border-left: 0;
     border-right: 0;
@@ -177,7 +181,9 @@
   .app-shell {
     width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
     height: 100vh;
+    height: 100dvh;
     margin: 0;
     border: 0;
     border-radius: 0;

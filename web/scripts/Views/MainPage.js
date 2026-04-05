@@ -7,6 +7,7 @@ import { renderDateCalculatorView } from './DateCalculator.js';
 import { renderGraphingCalculatorView } from './GraphingCalculator/GraphingCalculator.js';
 import { renderHistoryList } from './HistoryList.js';
 import { renderMemoryList } from './Memory.js';
+import { renderSettingsView } from './Settings.js';
 import { renderToolbarIcon } from './ViewIcons.js';
 import { renderUnitConverterView } from './UnitConverter.js';
 
@@ -59,13 +60,16 @@ function renderNavigationView() {
 
 function renderHeader() {
   const meta = MODE_META[state.mode];
+  const navButton = state.mode === 'settings'
+    ? `<button class="icon-button nav-toggle" data-settings-back="true" aria-label="Back">${renderToolbarIcon('back')}</button>`
+    : `<button class="icon-button nav-toggle" data-nav-toggle="true" aria-label="Open navigation">${renderToolbarIcon('menu')}</button>`;
   const modeGlyph = state.mode === 'standard'
     ? `<span class="mode-glyph" aria-hidden="true">${renderToolbarIcon('standard')}</span>`
     : '';
   return `
     <header class="topbar ${isCalculatorMode(state.mode) ? 'calculator-topbar' : ''}">
       <div class="topbar-title">
-        <button class="icon-button nav-toggle" data-nav-toggle="true" aria-label="Open navigation">${renderToolbarIcon('menu')}</button>
+        ${navButton}
         <div class="mode-title-group">
           <div class="mode-caption">Calculator</div>
           <div class="mode-title-row">
@@ -93,6 +97,8 @@ function renderMainContent() {
       return renderUnitConverterView();
     case 'graphing':
       return renderGraphingCalculatorView();
+    case 'settings':
+      return renderSettingsView();
     default:
       return '';
   }

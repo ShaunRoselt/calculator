@@ -1,7 +1,9 @@
 :root {
   color-scheme: dark;
   --bg: #111318;
+  --shell-bg: #1f2024;
   --window-bg: #202127;
+  --window-bg-alt: #1c1d23;
   --panel: #23242d;
   --panel-alt: #2f313a;
   --panel-soft: #383b43;
@@ -14,9 +16,52 @@
   --operator: #343640;
   --danger: #ff6d7a;
   --shadow: 0 40px 100px rgba(0, 0, 0, 0.55);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+  --surface-active: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-faint: rgba(255, 255, 255, 0.04);
+  --button-default-bg: #35373f;
+  --button-default-hover-bg: #40424a;
+  --button-function-bg: #31333a;
+  --button-digit-bg: #3b3d45;
+  --button-operator-bg: #33353d;
+  --button-equals-bg-start: #63c6fb;
+  --button-equals-bg-end: #56bdf6;
+  --button-equals-text: #0b1a2c;
   --radius-lg: 16px;
   --radius-md: 10px;
   --radius-sm: 8px;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f3f3f3;
+  --shell-bg: #ececec;
+  --window-bg: #f7f7f7;
+  --window-bg-alt: #efefef;
+  --panel: #ffffff;
+  --panel-alt: #f3f3f3;
+  --panel-soft: #ececec;
+  --panel-strong: #dedede;
+  --text: #1e1e1e;
+  --text-soft: #5f5f5f;
+  --text-faint: #777777;
+  --accent: #0f6cbd;
+  --accent-strong: #115ea3;
+  --operator: #e8e8e8;
+  --danger: #c42b1c;
+  --surface-hover: rgba(0, 0, 0, 0.06);
+  --surface-active: rgba(0, 0, 0, 0.08);
+  --border-subtle: rgba(0, 0, 0, 0.1);
+  --border-faint: rgba(0, 0, 0, 0.07);
+  --button-default-bg: #f3f3f3;
+  --button-default-hover-bg: #e6e6e6;
+  --button-function-bg: #ececec;
+  --button-digit-bg: #ffffff;
+  --button-operator-bg: #efefef;
+  --button-equals-bg-start: #9cd6ff;
+  --button-equals-bg-end: #84c9fb;
+  --button-equals-text: #0f1d2d;
 }
 
 * {
@@ -35,8 +80,9 @@ body {
 
 body {
   min-height: 100vh;
+  min-height: 100dvh;
   padding: 0;
-  background: #1f2024;
+  background: var(--shell-bg);
   overflow: hidden;
 }
 
@@ -77,7 +123,9 @@ input:focus {
 
 #app {
   min-height: 100vh;
+  min-height: 100dvh;
   height: 100vh;
+  height: 100dvh;
   width: 100%;
 }
 

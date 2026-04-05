@@ -42,6 +42,21 @@ export function renderToolbarIcon(kind) {
   if (kind === 'graph-options') {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7.5h12M6 12h12M6 16.5h12M9 5.5v4M15 10v4M12 14.5v4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/></svg>';
   }
+  if (kind === 'graph-hide-equation') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.75 12s2.85-5 8.25-5 8.25 5 8.25 5-2.85 5-8.25 5-8.25-5-8.25-5Zm8.25 2.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm-7-9.25 14 14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>';
+  }
+  if (kind === 'graph-show-equation') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.75 12s2.85-5 8.25-5 8.25 5 8.25 5-2.85 5-8.25 5-8.25-5-8.25-5Zm8.25 2.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>';
+  }
+  if (kind === 'graph-analyze-function') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4.75 6.5 12H11l-1 7 7.5-10H13l1-4.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.45"/></svg>';
+  }
+  if (kind === 'graph-style-picker') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 15.75h9M7.5 12h9M7.5 8.25h9M5.5 15.75h.01M5.5 12h.01M5.5 8.25h.01" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/></svg>';
+  }
+  if (kind === 'graph-remove-equation') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7.5h8M9 7.5V6.25h6V7.5M8.5 9.5v7m3-7v7m3-7v7M7 7.5l.75 10.25c.06.81.73 1.45 1.54 1.45h5.42c.81 0 1.48-.64 1.54-1.45L17 7.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>';
+  }
   if (kind === 'graph-auto-view') {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.75H5.75V8M16 5.75h2.25V8M8 18.25H5.75V16M16 18.25h2.25V16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55"/><circle cx="12" cy="12" r="2.15" fill="none" stroke="currentColor" stroke-width="1.55"/><path d="M12 7.35v-1.1M12 17.75v-1.1M7.35 12h-1.1M17.75 12h-1.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.35"/></svg>';
   }

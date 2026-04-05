@@ -4,7 +4,9 @@ import { installTooltipHandling } from './tooltip.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
 import {
   backspaceGraphExpression,
+  closeGraphExpressionAnalysis,
   clearGraphExpression,
+  commitGraphExpression,
   computeDateResults,
   drawGraph,
   handleAction,
@@ -13,15 +15,20 @@ import {
   handleMemoryOperation,
   insertGraphToken,
   isCalculatorMode,
+  openGraphExpressionAnalysis,
   recallHistory,
   recallMemory,
+  removeGraphExpression,
   resetGraphViewport,
   resetConverterUnits,
   setConverterActiveField,
+  setGraphExpressionColor,
+  setGraphExpressionLineStyle,
   selectGraphExpression,
   setGraphExpression,
   setGraphMobileView,
   syncConverterValues,
+  toggleGraphExpressionVisibility,
   updateGraph,
   zoomGraph
 } from './logic.js';
@@ -128,6 +135,10 @@ function handleClick(event) {
   if (source && state.mode === 'graphing') {
     if (state.graphing.settingsOpen && !source.closest('.graph-settings-panel, [data-graph-settings-toggle]')) {
       state.graphing.settingsOpen = false;
+      shouldRender = true;
+    }
+    if (state.graphing.stylePanelExpressionIndex != null && !source.closest('.graph-expression-style-panel, [data-graph-expression-style]')) {
+      state.graphing.stylePanelExpressionIndex = null;
       shouldRender = true;
     }
     if (state.graphing.openMenu && !source.closest('.graph-keypad-shell')) {
@@ -286,6 +297,49 @@ function handleClick(event) {
     return;
   }
 
+  if (target.dataset.graphExpressionVisibility) {
+    toggleGraphExpressionVisibility(Number(target.dataset.graphExpressionVisibility));
+    drawGraph();
+    render();
+    return;
+  }
+
+  if (target.dataset.graphExpressionRemove) {
+    removeGraphExpression(Number(target.dataset.graphExpressionRemove));
+    updateGraph();
+    render();
+    return;
+  }
+
+  if (target.dataset.graphExpressionStyle) {
+    const index = Number(target.dataset.graphExpressionStyle);
+    state.graphing.stylePanelExpressionIndex = state.graphing.stylePanelExpressionIndex === index ? null : index;
+    render();
+    return;
+  }
+
+  if (target.dataset.graphExpressionColor) {
+    setGraphExpressionColor(Number(target.dataset.graphExpressionColor), target.dataset.colorValue || '');
+    drawGraph();
+    render();
+    return;
+  }
+
+  if (target.dataset.graphExpressionAnalyze) {
+    const index = Number(target.dataset.graphExpressionAnalyze);
+    commitGraphExpression(index);
+    updateGraph();
+    openGraphExpressionAnalysis(index);
+    render();
+    return;
+  }
+
+  if (target.dataset.graphAnalysisClose) {
+    closeGraphExpressionAnalysis();
+    render();
+    return;
+  }
+
   if (target.dataset.graphSurfaceAction) {
     if (target.dataset.graphSurfaceAction === 'trace') {
       state.graphing.tracingEnabled = !state.graphing.tracingEnabled;
@@ -376,6 +430,7 @@ function handleClick(event) {
       backspaceGraphExpression();
     }
     if (target.dataset.graphEditAction === 'plot') {
+      commitGraphExpression(state.graphing.activeExpressionIndex);
       updateGraph();
     }
     render();
@@ -436,14 +491,6 @@ function handleChange(event) {
     return;
   }
 
-  if (target.name?.startsWith('graph-expression-')) {
-    const index = Number(target.name.replace('graph-expression-', ''));
-    setGraphExpression(index, target.value);
-    updateGraph();
-    render();
-    return;
-  }
-
   if (target.name?.startsWith('graph-viewport-')) {
     const viewportKey = target.name.replace('graph-viewport-', '');
     const parsedValue = Number(target.value);
@@ -475,6 +522,23 @@ function handleChange(event) {
   if (target.name === 'graph-theme') {
     state.graphing.theme = target.value === 'match-app' ? 'match-app' : 'light';
     drawGraph();
+    render();
+    return;
+  }
+
+  if (target.name?.startsWith('graph-expression-line-style-')) {
+    const index = Number(target.name.replace('graph-expression-line-style-', ''));
+    setGraphExpressionLineStyle(index, target.value);
+    drawGraph();
+    render();
+    return;
+  }
+
+  if (target.name?.startsWith('graph-expression-')) {
+    const index = Number(target.name.replace('graph-expression-', ''));
+    setGraphExpression(index, target.value);
+    commitGraphExpression(index);
+    updateGraph();
     render();
   }
 }
@@ -523,6 +587,13 @@ function handleFocusIn(event) {
 }
 
 function handleKeydown(event) {
+  if (state.mode === 'graphing' && event.key === 'Escape' && state.graphing.analysisExpressionIndex != null) {
+    closeGraphExpressionAnalysis();
+    render();
+    event.preventDefault();
+    return;
+  }
+
   if (state.mode === 'graphing' && event.key === 'Escape' && (state.graphing.settingsOpen || state.graphing.openMenu)) {
     state.graphing.settingsOpen = false;
     state.graphing.openMenu = null;
@@ -544,6 +615,11 @@ function handleKeydown(event) {
 
   if (!isCalculatorMode(state.mode)) {
     if (state.mode === 'graphing' && event.key === 'Enter') {
+      if (event.target instanceof HTMLInputElement && event.target.name?.startsWith('graph-expression-')) {
+        const index = Number(event.target.name.replace('graph-expression-', ''));
+        setGraphExpression(index, event.target.value);
+        commitGraphExpression(index);
+      }
       updateGraph();
       render();
     }

@@ -22,5 +22,8 @@
     "url": "https://github.com/ShaunRoselt/calculator/issues"
   },
   "homepage": "https://github.com/ShaunRoselt/calculator#readme",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "nerdamer": "^1.1.13"
+  }
 }

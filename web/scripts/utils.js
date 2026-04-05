@@ -9,13 +9,11 @@ export function formatNumber(value) {
   return normalized.includes('e') ? value.toString() : normalized;
 }
 
-
-export function formatExpressionForDisplay(expression) {
-  return escapeHtml(String(expression || '')
-    .replace(/\*/g, '×')
-    .replace(/\//g, '÷')
+export function formatExpressionText(expression) {
+  let formatted = String(expression || '')
     .replace(/\blogbase\b/g, 'logᵧ')
     .replace(/\broot\b/g, 'ʸ√')
+    .replace(/\bpi\b/g, 'π')
     .replace(/\basinh\(/g, 'sinh⁻¹(')
     .replace(/\bacosh\(/g, 'cosh⁻¹(')
     .replace(/\batanh\(/g, 'tanh⁻¹(')
@@ -27,7 +25,21 @@ export function formatExpressionForDisplay(expression) {
     .replace(/\batan\(/g, 'tan⁻¹(')
     .replace(/\basec\(/g, 'sec⁻¹(')
     .replace(/\bacsc\(/g, 'csc⁻¹(')
-    .replace(/\bacot\(/g, 'cot⁻¹('));
+    .replace(/\bacot\(/g, 'cot⁻¹(')
+    .replace(/\*/g, '×')
+    .replace(/\//g, '÷');
+
+  formatted = formatted.replace(/\bsqrt\(([^()]+)\)/g, (_, inner) => {
+    const trimmedInner = inner.trim();
+    return /^(?:-?[\dA-Za-zπ]+)$/.test(trimmedInner) ? `√${trimmedInner}` : `√(${trimmedInner})`;
+  });
+
+  return formatted;
+}
+
+
+export function formatExpressionForDisplay(expression) {
+  return escapeHtml(formatExpressionText(expression));
 }
 
 

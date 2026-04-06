@@ -74,7 +74,7 @@ export function isMode(mode) {
 
 export const APP_INFO = {
   name: 'Calculator',
-  version: '1.0.0'
+  version: '12.0.0'
 };
 
 export const CURRENCY_DETAILS = {

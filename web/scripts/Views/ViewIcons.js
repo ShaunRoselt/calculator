@@ -34,10 +34,10 @@ export function renderToolbarIcon(kind) {
     return '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 3.75v2.1M14.5 3.75v2.1M4.75 5.2h10.5a1.55 1.55 0 0 1 1.55 1.55v8a1.55 1.55 0 0 1-1.55 1.55H4.75A1.55 1.55 0 0 1 3.2 14.75v-8A1.55 1.55 0 0 1 4.75 5.2Zm-1.55 3.1h13.6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35"/><rect x="6.15" y="10.1" width="1.7" height="1.7" rx="0.35" fill="currentColor" opacity="0.92"/><rect x="9.15" y="10.1" width="1.7" height="1.7" rx="0.35" fill="currentColor" opacity="0.92"/><rect x="12.15" y="10.1" width="1.7" height="1.7" rx="0.35" fill="currentColor" opacity="0.92"/></svg>';
   }
   if (kind === 'graph-view') {
-    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.5h15M7 6.5v12M7.5 15c2.5-5 4.4-6 5.9-6 1.3 0 2.7 1.1 4.6 4.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg>';
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.25 5.75v12.5h13" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55"/><path d="M8 14.25 11.1 11l2.25 2.1 4.4-5.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55"/></svg>';
   }
   if (kind === 'expressions-view') {
-    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7.5h12M6 12h12M6 16.5h12M4.5 7.5h.01M4.5 12h.01M4.5 16.5h.01" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"/></svg>';
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 6.1c-1.45 0-2.5.96-2.5 2.76v1.16H6.6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/><path d="M8.1 11.1v6.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"/><path d="M6.4 14.05h3.4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"/><path d="m13.8 12.35 3.7 5.2M17.5 12.35l-3.7 5.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>';
   }
   if (kind === 'graph-select') {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 5 9.5 7L11 13.5 13.5 19 11.75 20 9 14.5 6 17z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>';

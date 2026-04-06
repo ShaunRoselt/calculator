@@ -240,6 +240,45 @@
   align-items: center;
 }
 
+.graph-view-toggle-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 8px;
+  background: rgba(22, 24, 32, 0.92);
+  box-shadow: inset 0 0 0 1px rgba(128, 216, 255, 0.18);
+}
+
+.graph-view-toggle-group .graph-view-toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: rgba(232, 239, 247, 0.92);
+  background: transparent;
+}
+
+.graph-view-toggle-group .graph-view-toggle:hover,
+.graph-view-toggle-group .graph-view-toggle:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.graph-view-toggle-group .graph-view-toggle.active {
+  background: #56c7ff;
+  color: #07213a;
+}
+
+.graph-view-toggle-group .graph-view-toggle.active:hover,
+.graph-view-toggle-group .graph-view-toggle.active:focus-visible {
+  background: #69d0ff;
+  color: #07213a;
+}
+
+.graph-view-toggle-group .graph-view-toggle svg {
+  width: 16px;
+  height: 16px;
+}
+
 .chip-button,
 .base-button,
 .angle-toggle,

@@ -76,14 +76,17 @@ function renderNavigationView() {
 function renderHeader() {
   const meta = MODE_META[state.mode];
   const layoutMode = getLayoutMode();
+  const isGraphingCompact = state.mode === 'graphing' && window.innerWidth < 768;
   const showDesktopSidePanel = getLayoutMode() === 'desktop' && isSidePanelVisible();
   const navButton = state.mode === 'settings'
     ? `<button class="icon-button nav-toggle" data-settings-back="true" data-tooltip="Back" aria-label="Back">${renderToolbarIcon('back')}</button>`
     : `<button class="icon-button nav-toggle" data-nav-toggle="true" aria-label="Open navigation">${renderToolbarIcon('menu')}</button>`;
-  const graphingActions = state.mode === 'graphing' && layoutMode !== 'desktop'
+  const graphingActions = isGraphingCompact
     ? `
-      <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'graph' ? 'active' : ''}" data-graph-view="graph" aria-label="Show graph">${renderToolbarIcon('graph-view')}</button>
-      <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'editor' ? 'active' : ''}" data-graph-view="editor" aria-label="Show expressions">${renderToolbarIcon('expressions-view')}</button>
+      <div class="graph-view-toggle-group" role="group" aria-label="Graphing mobile view">
+        <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'graph' ? 'active' : ''}" data-graph-view="graph" aria-label="Show graph">${renderToolbarIcon('graph-view')}</button>
+        <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'editor' ? 'active' : ''}" data-graph-view="editor" aria-label="Show expressions">${renderToolbarIcon('expressions-view')}</button>
+      </div>
     `
     : '';
   const historyAutomationName = state.historyOpen ? 'Close history flyout' : 'Open history flyout';

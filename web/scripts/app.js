@@ -132,6 +132,16 @@ function handleClick(event) {
   const source = event.target instanceof Element ? event.target : null;
   let shouldRender = false;
 
+  if (source && state.mode === 'date' && state.date.openModeMenu && !source.closest('.date-native-select-wrap')) {
+    state.date.openModeMenu = false;
+    shouldRender = true;
+  }
+
+  if (source && state.mode === 'date' && state.date.openPicker && !source.closest('.date-native-picker-shell')) {
+    state.date.openPicker = null;
+    shouldRender = true;
+  }
+
   if (source && state.mode === 'graphing') {
     if (state.graphing.settingsOpen && !source.closest('.graph-settings-panel, [data-graph-settings-toggle]')) {
       state.graphing.settingsOpen = false;
@@ -252,6 +262,55 @@ function handleClick(event) {
 
   if (target.dataset.dateMode) {
     state.date.mode = target.dataset.dateMode;
+    computeDateResults();
+    render();
+    return;
+  }
+
+  if (target.dataset.dateModeToggle) {
+    state.date.openModeMenu = !state.date.openModeMenu;
+    if (state.date.openModeMenu) {
+      state.date.openPicker = null;
+    }
+    render();
+    return;
+  }
+
+  if (target.dataset.dateModeSelect) {
+    state.date.mode = target.dataset.dateModeSelect;
+    state.date.openModeMenu = false;
+    state.date.openPicker = null;
+    computeDateResults();
+    render();
+    return;
+  }
+
+  if (target.dataset.datePickerToggle) {
+    const nextKey = target.dataset.datePickerToggle;
+    if (state.date.openPicker === nextKey) {
+      state.date.openPicker = null;
+    } else {
+      state.date.openPicker = nextKey;
+      state.date.openModeMenu = false;
+      const selectedValue = state.date[nextKey];
+      state.date.pickerMonth = String(selectedValue).slice(0, 7);
+    }
+    render();
+    return;
+  }
+
+  if (target.dataset.datePickerNav) {
+    const [year, month] = state.date.pickerMonth.split('-').map(Number);
+    const nextVisible = new Date(Date.UTC(year, month - 1 + Number(target.dataset.datePickerNav), 1));
+    state.date.pickerMonth = `${nextVisible.getUTCFullYear()}-${String(nextVisible.getUTCMonth() + 1).padStart(2, '0')}`;
+    render();
+    return;
+  }
+
+  if (target.dataset.datePick && target.dataset.datePickTarget) {
+    state.date[target.dataset.datePickTarget] = target.dataset.datePick;
+    state.date.pickerMonth = target.dataset.datePick.slice(0, 7);
+    state.date.openPicker = null;
     computeDateResults();
     render();
     return;
@@ -461,6 +520,10 @@ function handleChange(event) {
   if (target.name?.startsWith('date-')) {
     const key = target.name.replace('date-', '');
     state.date[key] = target.type === 'number' ? Number(target.value || 0) : target.value;
+    if (key === 'mode') {
+      state.date.openModeMenu = false;
+      state.date.openPicker = null;
+    }
     computeDateResults();
     render();
     return;
@@ -587,6 +650,20 @@ function handleFocusIn(event) {
 }
 
 function handleKeydown(event) {
+  if (state.mode === 'date' && event.key === 'Escape' && state.date.openModeMenu) {
+    state.date.openModeMenu = false;
+    render();
+    event.preventDefault();
+    return;
+  }
+
+  if (state.mode === 'date' && event.key === 'Escape' && state.date.openPicker) {
+    state.date.openPicker = null;
+    render();
+    event.preventDefault();
+    return;
+  }
+
   if (state.mode === 'graphing' && event.key === 'Escape' && state.graphing.analysisExpressionIndex != null) {
     closeGraphExpressionAnalysis();
     render();

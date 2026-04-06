@@ -20,7 +20,7 @@ export const MODE_META = {
   scientific: { label: 'Scientific', icon: 'scientific', subtitle: 'Operators, functions, and expression support' },
   graphing: { label: 'Graphing', icon: 'graphing', subtitle: 'Plot a simple expression on a cartesian plane' },
   programmer: { label: 'Programmer', icon: 'programmer', subtitle: 'Integer math with base conversion' },
-  date: { label: 'Date', icon: 'date', subtitle: 'Find durations and shift dates' },
+  date: { label: 'Date calculation', icon: 'date', subtitle: 'Find durations and shift dates' },
   currency: { label: 'Currency', icon: 'currency', subtitle: 'Convert mock exchange rates' },
   volume: { label: 'Volume', icon: 'volume', subtitle: 'Convert volume measurements' },
   length: { label: 'Length', icon: 'length', subtitle: 'Convert distance and length units' },

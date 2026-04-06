@@ -1340,38 +1340,114 @@ export function computeDateResults() {
   if (state.date.mode === 'difference') {
     const from = getDateParts(state.date.from);
     const to = getDateParts(state.date.to);
-    const forward = to >= from;
-    const start = forward ? from : to;
-    const end = forward ? to : from;
-    let years = end.getUTCFullYear() - start.getUTCFullYear();
-    let months = end.getUTCMonth() - start.getUTCMonth();
-    let days = end.getUTCDate() - start.getUTCDate();
-    if (days < 0) {
-      const prevMonth = new Date(Date.UTC(end.getUTCFullYear(), end.getUTCMonth(), 0));
-      days += prevMonth.getUTCDate();
-      months -= 1;
-    }
-    if (months < 0) {
-      months += 12;
-      years -= 1;
-    }
+    const start = from <= to ? from : to;
+    const end = from <= to ? to : from;
     const totalDays = Math.round((end - start) / 86400000);
+    const years = getDateDifferenceYears(start, end);
+    const afterYears = addDateDuration(start, { years });
+    const months = getDateDifferenceMonths(afterYears, end);
+    const afterMonths = addDateDuration(afterYears, { months });
+    const remainingDays = Math.round((end - afterMonths) / 86400000);
+    const weeks = Math.floor(remainingDays / 7);
+    const days = remainingDays % 7;
+    const parts = [];
+    if (years > 0) {
+      parts.push(formatDateUnit(years, 'year'));
+    }
+    if (months > 0) {
+      parts.push(formatDateUnit(months, 'month'));
+    }
+    if (weeks > 0) {
+      parts.push(formatDateUnit(weeks, 'week'));
+    }
+    if (days > 0) {
+      parts.push(formatDateUnit(days, 'day'));
+    }
     state.date.result = {
       totalDays,
-      summary: `${years} years, ${months} months, ${days} days`,
-      direction: totalDays === 0 ? 'Same day' : forward ? 'Forward' : 'Backward'
+      summary: totalDays === 0 ? 'Same dates' : (parts.length ? parts.join(', ') : formatDateUnit(totalDays, 'day')),
+      detail: totalDays === 0 || (years === 0 && months === 0 && weeks === 0) ? '' : formatDateUnit(totalDays, 'day')
     };
   } else {
     const base = getDateParts(state.date.baseDate);
-    const factor = state.date.operation === 'add' ? 1 : -1;
-    const result = new Date(base);
-    result.setUTCFullYear(result.getUTCFullYear() + Number(state.date.years || 0) * factor);
-    result.setUTCMonth(result.getUTCMonth() + Number(state.date.months || 0) * factor);
-    result.setUTCDate(result.getUTCDate() + Number(state.date.days || 0) * factor);
+    const offset = {
+      years: Number(state.date.years || 0),
+      months: Number(state.date.months || 0),
+      days: Number(state.date.days || 0)
+    };
+    const result = state.date.operation === 'add'
+      ? addDateDuration(base, offset)
+      : subtractDateDuration(base, offset);
     state.date.result = {
-      summary: result.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })
+      summary: formatLongDate(result)
     };
   }
+}
+
+function getDateDifferenceYears(start, end) {
+  let years = end.getUTCFullYear() - start.getUTCFullYear();
+  while (years > 0 && addDateDuration(start, { years }) > end) {
+    years -= 1;
+  }
+  return years;
+}
+
+function getDateDifferenceMonths(start, end) {
+  let months = (end.getUTCFullYear() - start.getUTCFullYear()) * 12 + (end.getUTCMonth() - start.getUTCMonth());
+  while (months > 0 && addDateDuration(start, { months }) > end) {
+    months -= 1;
+  }
+  return months;
+}
+
+function addDateDuration(baseDate, { years = 0, months = 0, days = 0 }) {
+  const result = new Date(baseDate);
+  if (years) {
+    result.setUTCFullYear(result.getUTCFullYear() + years);
+  }
+  if (months) {
+    result.setUTCMonth(result.getUTCMonth() + months);
+  }
+  if (days) {
+    result.setUTCDate(result.getUTCDate() + days);
+  }
+  return result;
+}
+
+function subtractDateDuration(baseDate, { years = 0, months = 0, days = 0 }) {
+  const result = new Date(baseDate);
+  if (days) {
+    result.setUTCDate(result.getUTCDate() - days);
+  }
+  if (months) {
+    result.setUTCMonth(result.getUTCMonth() - months);
+  }
+  if (years) {
+    result.setUTCFullYear(result.getUTCFullYear() - years);
+  }
+  return result;
+}
+
+function formatDateUnit(value, unit) {
+  return `${value} ${unit}${value === 1 ? '' : 's'}`;
+}
+
+function formatLongDate(value) {
+  const formatter = new Intl.DateTimeFormat(undefined, {
+    weekday: 'long',
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC'
+  });
+  const parts = formatter.formatToParts(value);
+  const weekday = parts.find((part) => part.type === 'weekday')?.value ?? '';
+  const remainder = parts
+    .filter((part) => part.type !== 'weekday' && part.type !== 'literal')
+    .map((part) => part.value)
+    .join(' ')
+    .trim();
+  return remainder ? `${weekday}, ${remainder}` : formatter.format(value);
 }
 
 export function getUnitsForCategory(category) {

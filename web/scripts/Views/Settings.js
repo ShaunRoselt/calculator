@@ -17,6 +17,23 @@ const SETTINGS_LINKS = [
   }
 ];
 
+const SETTINGS_APP_ICONS = {
+  light: 'src/Calculator/Assets/CalculatorAppList.targetsize-32_altform-lightunplated.png',
+  dark: 'src/Calculator/Assets/CalculatorAppList.targetsize-32_altform-unplated.png'
+};
+
+function getEffectiveTheme() {
+  if (state.settings.theme === 'system') {
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+
+  return state.settings.theme;
+}
+
+function getSettingsAppIconPath() {
+  return SETTINGS_APP_ICONS[getEffectiveTheme()] ?? SETTINGS_APP_ICONS.dark;
+}
+
 export function renderSettingsView() {
   return `
     <section class="settings-page">
@@ -49,7 +66,7 @@ export function renderSettingsView() {
         <div class="settings-group-heading about-heading">About</div>
         <details class="settings-expander" open>
           <summary class="settings-expander-summary settings-expander-summary-about">
-            <img class="settings-app-icon" src="src/Calculator/Assets/CalculatorAppList.targetsize-32_altform-unplated.png" alt="" />
+            <img class="settings-app-icon" src="${getSettingsAppIconPath()}" alt="" />
             <span class="settings-expander-copy">
               <span class="settings-expander-title">${escapeHtml(APP_INFO.name)}</span>
               <span class="settings-expander-description">${escapeHtml(APP_INFO.version)}</span>

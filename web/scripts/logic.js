@@ -3,7 +3,11 @@ import {
   createProgrammerState,
   createScientificState,
   createStandardState,
+  getHistoryCollection,
+  getMemoryCollection,
   persistCollections,
+  replaceHistoryCollection,
+  replaceMemoryCollection,
   state
 } from './state.js';
 import {
@@ -671,33 +675,34 @@ function setProgrammerError(message) {
 
 export function handleMemoryOperation(operation) {
   const current = getCurrentDisplayNumericValue();
+  const memory = [...getMemoryCollection()];
   if (current == null) {
     return;
   }
   if (operation === 'mc') {
-    state.memory = [];
+    replaceMemoryCollection([]);
   } else if (operation === 'mr') {
     recallMemory(0);
     return;
   } else if (operation === 'ms') {
-    state.memory.unshift({ value: formatStoredMemoryValue(current) });
+    memory.unshift({ value: formatStoredMemoryValue(current) });
   } else if (operation === 'm+' || operation === 'm-') {
     if (state.mode === 'programmer') {
-      const existing = parseBigIntFlexible(state.memory[0]?.value || '0');
+      const existing = parseBigIntFlexible(memory[0]?.value || '0');
       const next = operation === 'm+' ? existing + current : existing - current;
-      state.memory[0] = { value: formatStoredMemoryValue(next) };
+      memory[0] = { value: formatStoredMemoryValue(next) };
     } else {
-      const existing = Number(state.memory[0]?.value || 0);
+      const existing = Number(memory[0]?.value || 0);
       const next = operation === 'm+' ? existing + Number(current) : existing - Number(current);
-      state.memory[0] = { value: formatNumber(next) };
+      memory[0] = { value: formatNumber(next) };
     }
   }
-  state.memory = state.memory.slice(0, 20);
+  replaceMemoryCollection(memory);
   persistCollections();
 }
 
 export function recallMemory(index) {
-  const item = state.memory[index];
+  const item = getMemoryCollection()[index];
   if (!item) {
     return;
   }
@@ -715,8 +720,42 @@ export function recallMemory(index) {
   }
 }
 
+export function updateMemoryItem(index, operation) {
+  const current = getCurrentDisplayNumericValue();
+  const memory = [...getMemoryCollection()];
+  const item = memory[index];
+
+  if (!item) {
+    return;
+  }
+
+  if (operation === 'clear') {
+    memory.splice(index, 1);
+    replaceMemoryCollection(memory);
+    persistCollections();
+    return;
+  }
+
+  if (current == null) {
+    return;
+  }
+
+  if (state.mode === 'programmer') {
+    const existing = parseBigIntFlexible(item.value || '0');
+    const next = operation === 'add' ? existing + current : existing - current;
+    memory[index] = { value: formatStoredMemoryValue(next) };
+  } else {
+    const existing = Number(item.value || 0);
+    const next = operation === 'add' ? existing + Number(current) : existing - Number(current);
+    memory[index] = { value: formatNumber(next) };
+  }
+
+  replaceMemoryCollection(memory);
+  persistCollections();
+}
+
 export function recallHistory(index) {
-  const entry = state.history[index];
+  const entry = getHistoryCollection()[index];
   if (!entry) {
     return;
   }
@@ -735,8 +774,11 @@ export function recallHistory(index) {
 }
 
 function pushHistory(expression, result, mode) {
-  state.history.unshift({ expression, result, mode, modeLabel: MODE_META[mode].label });
-  state.history = state.history.slice(0, 60);
+  const history = getHistoryCollection(mode);
+  replaceHistoryCollection([
+    { expression, result, mode, modeLabel: MODE_META[mode].label },
+    ...history
+  ], mode);
   persistCollections();
 }
 

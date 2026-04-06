@@ -1,6 +1,81 @@
 import { STORAGE_KEYS } from './config.js';
 import { toDateInputValue } from './utils.js';
 
+const CALCULATOR_COLLECTION_MODES = ['standard', 'scientific', 'programmer'];
+
+function createEmptyCollections() {
+  return CALCULATOR_COLLECTION_MODES.reduce((collections, mode) => {
+    collections[mode] = {
+      history: [],
+      memory: []
+    };
+    return collections;
+  }, {});
+}
+
+function normalizeHistoryEntries(value) {
+  return Array.isArray(value) ? value.slice(0, 60) : [];
+}
+
+function normalizeMemoryEntries(value) {
+  return Array.isArray(value) ? value.slice(0, 20) : [];
+}
+
+function normalizeCollectionsByMode(value, collectionName) {
+  const collections = createEmptyCollections();
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return collections;
+  }
+
+  for (const mode of CALCULATOR_COLLECTION_MODES) {
+    const collection = value[mode];
+    if (!collection || typeof collection !== 'object' || Array.isArray(collection)) {
+      continue;
+    }
+
+    collections[mode][collectionName] = collectionName === 'history'
+      ? normalizeHistoryEntries(collection.history)
+      : normalizeMemoryEntries(collection.memory);
+  }
+
+  return collections;
+}
+
+function serializeCollections(collectionName) {
+  return CALCULATOR_COLLECTION_MODES.reduce((collections, mode) => {
+    collections[mode] = collectionName === 'history'
+      ? { history: normalizeHistoryEntries(state.collections[mode]?.history) }
+      : { memory: normalizeMemoryEntries(state.collections[mode]?.memory) };
+    return collections;
+  }, {});
+}
+
+function migrateLegacyHistory(value) {
+  const collections = createEmptyCollections();
+  if (!Array.isArray(value)) {
+    return collections;
+  }
+
+  for (const entry of value) {
+    const mode = CALCULATOR_COLLECTION_MODES.includes(entry?.mode) ? entry.mode : 'standard';
+    collections[mode].history.push(entry);
+  }
+
+  for (const mode of CALCULATOR_COLLECTION_MODES) {
+    collections[mode].history = collections[mode].history.slice(0, 60);
+  }
+
+  return collections;
+}
+
+function migrateLegacyMemory(value) {
+  const collections = createEmptyCollections();
+  if (Array.isArray(value)) {
+    collections.standard.memory = normalizeMemoryEntries(value);
+  }
+  return collections;
+}
+
 function createDefaultGraphViewport() {
   return {
     xMin: -10,
@@ -57,8 +132,7 @@ function createInitialState() {
     navOpen: false,
     historyOpen: false,
     historyTab: 'history',
-    history: [],
-    memory: [],
+    collections: createEmptyCollections(),
     settings: {
       theme: 'system'
     },
@@ -139,12 +213,18 @@ export function hydrateState() {
     const memory = JSON.parse(localStorage.getItem(STORAGE_KEYS.memory) || '[]');
     const nav = JSON.parse(localStorage.getItem(STORAGE_KEYS.nav) || 'null');
     const theme = localStorage.getItem(STORAGE_KEYS.theme);
-    if (Array.isArray(history)) {
-      state.history = history.slice(0, 60);
+    state.collections = Array.isArray(history)
+      ? migrateLegacyHistory(history)
+      : normalizeCollectionsByMode(history, 'history');
+
+    const memoryCollections = Array.isArray(memory)
+      ? migrateLegacyMemory(memory)
+      : normalizeCollectionsByMode(memory, 'memory');
+
+    for (const mode of CALCULATOR_COLLECTION_MODES) {
+      state.collections[mode].memory = memoryCollections[mode].memory;
     }
-    if (Array.isArray(memory)) {
-      state.memory = memory.slice(0, 20);
-    }
+
     if (typeof nav === 'boolean') {
       state.navOpen = nav;
     }
@@ -157,8 +237,30 @@ export function hydrateState() {
 }
 
 export function persistCollections() {
-  localStorage.setItem(STORAGE_KEYS.history, JSON.stringify(state.history.slice(0, 60)));
-  localStorage.setItem(STORAGE_KEYS.memory, JSON.stringify(state.memory.slice(0, 20)));
+  localStorage.setItem(STORAGE_KEYS.history, JSON.stringify(serializeCollections('history')));
+  localStorage.setItem(STORAGE_KEYS.memory, JSON.stringify(serializeCollections('memory')));
+}
+
+export function getHistoryCollection(mode = state.mode) {
+  return state.collections[mode]?.history ?? [];
+}
+
+export function getMemoryCollection(mode = state.mode) {
+  return state.collections[mode]?.memory ?? [];
+}
+
+export function replaceHistoryCollection(nextHistory, mode = state.mode) {
+  if (!state.collections[mode]) {
+    return;
+  }
+  state.collections[mode].history = normalizeHistoryEntries(nextHistory);
+}
+
+export function replaceMemoryCollection(nextMemory, mode = state.mode) {
+  if (!state.collections[mode]) {
+    return;
+  }
+  state.collections[mode].memory = normalizeMemoryEntries(nextMemory);
 }
 
 export function persistNav() {

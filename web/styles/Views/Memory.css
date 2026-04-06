@@ -1,6 +1,8 @@
 .memory-list {
   display: grid;
+  flex: 1 1 auto;
   gap: 0.85rem;
+  align-content: start;
 }
 
 .memory-entry {
@@ -26,13 +28,39 @@
 
 .memory-value {
   font-size: 1.15rem;
+  overflow-wrap: anywhere;
 }
 
 .memory-entry-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
   gap: 0.75rem;
+}
+
+.memory-surface {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: right;
+}
+
+.memory-entry .inline-toolbar {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  gap: 0.3rem;
+}
+
+.memory-entry .memory-action {
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-soft);
 }
 
 .app-shell.layout-desktop .memory-list {
@@ -40,31 +68,56 @@
 }
 
 .app-shell.layout-desktop .memory-entry {
-  padding: 0.5rem 0;
+  padding: 0.55rem 0.5rem 0.45rem;
   border: 0;
-  border-radius: 0;
+  border-radius: 6px;
   background: transparent;
 }
 
 .app-shell.layout-desktop .memory-entry:hover,
-.app-shell.layout-desktop .memory-entry:focus-visible {
-  background: rgba(255, 255, 255, 0.04);
+.app-shell.layout-desktop .memory-entry:focus-within {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .app-shell.layout-desktop .memory-entry-row {
-  align-items: flex-start;
+  align-items: stretch;
+  gap: 0.45rem;
 }
 
 .app-shell.layout-desktop .memory-value {
   font-size: 1.05rem;
   font-weight: 600;
+  line-height: 1.15;
 }
 
 .app-shell.layout-desktop .memory-entry .inline-toolbar {
-  gap: 0.2rem;
+  align-self: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(2px);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.app-shell.layout-desktop .memory-entry:hover .inline-toolbar,
+.app-shell.layout-desktop .memory-entry:focus-within .inline-toolbar {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .app-shell.layout-desktop .memory-entry .memory-action {
-  min-height: 24px;
-  padding: 0.15rem 0.35rem;
+  min-height: 26px;
+  padding: 0.2rem 0.45rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+.app-shell.layout-desktop .memory-entry .memory-action:hover,
+.app-shell.layout-desktop .memory-entry .memory-action:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.app-shell.layout-desktop .memory-entry .memory-surface {
+  align-self: stretch;
+  width: 100%;
 }

@@ -27,6 +27,9 @@ export function renderToolbarIcon(kind) {
   if (kind === 'dismiss') {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 6.75 17.25 17.25M17.25 6.75 6.75 17.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/></svg>';
   }
+  if (kind === 'delete') {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7.5h8M9 7.5V6.25h6V7.5M8.5 9.5v7m3-7v7m3-7v7M7 7.5l.75 10.25c.06.81.73 1.45 1.54 1.45h5.42c.81 0 1.48-.64 1.54-1.45L17 7.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>';
+  }
   if (kind === 'date-picker') {
     return '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 3.75v2.1M14.5 3.75v2.1M4.75 5.2h10.5a1.55 1.55 0 0 1 1.55 1.55v8a1.55 1.55 0 0 1-1.55 1.55H4.75A1.55 1.55 0 0 1 3.2 14.75v-8A1.55 1.55 0 0 1 4.75 5.2Zm-1.55 3.1h13.6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35"/><rect x="6.15" y="10.1" width="1.7" height="1.7" rx="0.35" fill="currentColor" opacity="0.92"/><rect x="9.15" y="10.1" width="1.7" height="1.7" rx="0.35" fill="currentColor" opacity="0.92"/><rect x="12.15" y="10.1" width="1.7" height="1.7" rx="0.35" fill="currentColor" opacity="0.92"/></svg>';
   }

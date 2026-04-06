@@ -1,5 +1,14 @@
 import { CONVERTER_MODE_TO_CATEGORY, DEFAULT_MODE, isConverterMode, isMode } from './config.js';
-import { hydrateState, persistCollections, persistNav, persistTheme, state } from './state.js';
+import {
+  getMemoryCollection,
+  hydrateState,
+  persistCollections,
+  persistNav,
+  persistTheme,
+  replaceHistoryCollection,
+  replaceMemoryCollection,
+  state
+} from './state.js';
 import { installTooltipHandling } from './tooltip.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
 import {
@@ -29,6 +38,7 @@ import {
   setGraphMobileView,
   syncConverterValues,
   toggleGraphExpressionVisibility,
+  updateMemoryItem,
   updateGraph,
   zoomGraph
 } from './logic.js';
@@ -216,14 +226,14 @@ function handleClick(event) {
   }
 
   if (target.dataset.historyClear) {
-    state.history = [];
+    replaceHistoryCollection([]);
     persistCollections();
     render();
     return;
   }
 
   if (target.dataset.memoryClear) {
-    state.memory = [];
+    replaceMemoryCollection([]);
     persistCollections();
     render();
     return;
@@ -247,9 +257,20 @@ function handleClick(event) {
     return;
   }
 
-  if (target.dataset.memoryDelete) {
-    state.memory.splice(Number(target.dataset.memoryDelete), 1);
-    persistCollections();
+  if (target.dataset.memoryClearItem) {
+    updateMemoryItem(Number(target.dataset.memoryClearItem), 'clear');
+    render();
+    return;
+  }
+
+  if (target.dataset.memoryAdd) {
+    updateMemoryItem(Number(target.dataset.memoryAdd), 'add');
+    render();
+    return;
+  }
+
+  if (target.dataset.memorySubtract) {
+    updateMemoryItem(Number(target.dataset.memorySubtract), 'subtract');
     render();
     return;
   }

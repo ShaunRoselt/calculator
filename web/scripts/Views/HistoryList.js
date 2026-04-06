@@ -1,13 +1,15 @@
-import { state } from '../state.js';
+import { getHistoryCollection } from '../state.js';
 import { escapeHtml } from '../utils.js';
+import { renderToolbarIcon } from './ViewIcons.js';
 
 export function renderHistoryList() {
-  if (!state.history.length) {
+  const history = getHistoryCollection();
+  if (!history.length) {
     return `<div class="side-empty">There's no history yet.</div>`;
   }
   return `
     <div class="history-list">
-      ${state.history.map((entry, index) => `
+      ${history.map((entry, index) => `
         <button class="history-entry" data-history-index="${index}">
           <div class="history-expression">${escapeHtml(entry.expression)}</div>
           <div class="history-result">${escapeHtml(entry.result)}</div>
@@ -15,7 +17,7 @@ export function renderHistoryList() {
       `).join('')}
     </div>
     <div class="side-footer">
-      <button class="history-clear" data-history-clear="true" data-tooltip="Clear all history">Clear history</button>
+      <button class="icon-button side-clear-button" data-history-clear="true" data-tooltip="Clear all history" aria-label="Clear history">${renderToolbarIcon('delete')}</button>
     </div>
   `;
 }

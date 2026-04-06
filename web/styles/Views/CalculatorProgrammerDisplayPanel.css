@@ -1,36 +1,50 @@
 .programmer-display-panel {
   display: grid;
-  gap: 0.4rem;
+  gap: 0;
   width: 100%;
+  padding: 0 4px;
+}
+
+.programmer-expression {
+  padding: 0 10px 0 0;
 }
 
 .programmer-hero {
   display: grid;
-  grid-template-columns: minmax(170px, 240px) minmax(0, 1fr);
+  grid-template-columns: minmax(170px, 290px) minmax(0, 1fr);
   align-items: end;
-  gap: 1rem;
+  gap: 1.1rem;
+  min-height: clamp(126px, 22vh, 236px);
 }
 
 .programmer-readouts {
   display: grid;
-  gap: 0.3rem;
+  gap: 1px;
   align-content: end;
+  padding-bottom: 0.25rem;
 }
 
 .programmer-readout {
   display: grid;
-  grid-template-columns: 32px minmax(0, 1fr);
+  grid-template-columns: 38px minmax(0, 1fr);
   align-items: center;
-  gap: 0.45rem;
-  min-height: 1.55rem;
-  padding: 0;
+  gap: 0.5rem;
+  min-height: 1.8rem;
+  padding: 0 0.45rem 0 0;
+  border: 0;
   background: transparent;
   color: var(--text-soft);
   text-align: left;
+  font: inherit;
 }
 
 .programmer-readout.active {
   color: var(--text);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+.programmer-readout:disabled {
+  color: var(--text-faint);
 }
 
 .programmer-readout.active .programmer-readout-base {
@@ -40,33 +54,40 @@
 .programmer-readout.active .programmer-readout-base::before {
   content: '';
   position: absolute;
-  left: -10px;
+  left: -8px;
   top: 0.1rem;
   bottom: 0.1rem;
-  width: 2px;
+  width: 3px;
   border-radius: 999px;
   background: var(--accent);
 }
 
 .programmer-readout-base {
-  font-size: 0.88rem;
+  font-size: 0.8rem;
+  color: inherit;
 }
 
 .programmer-readout-value {
-  color: var(--text-soft);
+  color: inherit;
   font-size: 0.82rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.programmer-display-column {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  min-width: 0;
+  min-height: 100%;
 }
 
 .programmer-display-value {
-  justify-self: end;
-  align-self: center;
-  font-size: clamp(3.8rem, 8vw, 5rem);
-  font-weight: 300;
-  letter-spacing: -0.045em;
-  line-height: 0.95;
+  min-height: 4rem;
 }
 
-.programmer-control-row,
+.programmer-meta-row,
 .programmer-view-toggles,
 .programmer-memory-actions,
 .programmer-operator-groups {
@@ -75,20 +96,24 @@
   align-items: center;
 }
 
-.programmer-control-row {
-  justify-content: space-between;
-  padding-top: 0.25rem;
+.programmer-meta-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  padding: 0 6px 0.15rem;
 }
 
 .programmer-icon-toggle,
 .programmer-memory-button,
 .programmer-group-button,
-.programmer-word-size {
+.programmer-word-size-button {
   min-height: 28px;
   padding: 0.2rem 0.5rem;
   border-radius: 0;
+  border: 0;
   background: transparent;
   color: var(--text-soft);
+  font: inherit;
 }
 
 .programmer-icon-toggle {
@@ -104,8 +129,8 @@
 .programmer-icon-toggle:focus-visible,
 .programmer-group-button:hover,
 .programmer-group-button:focus-visible,
-.programmer-word-size:hover,
-.programmer-word-size:focus-visible {
+.programmer-word-size-button:hover,
+.programmer-word-size-button:focus-visible {
   background: transparent;
   color: var(--text);
 }
@@ -114,14 +139,23 @@
   box-shadow: inset 0 -3px 0 var(--accent);
 }
 
-.programmer-word-size,
+.programmer-word-size-button,
 .programmer-memory-button {
   font-size: 0.86rem;
 }
 
+.programmer-word-size-button {
+  justify-self: center;
+}
+
+.programmer-memory-actions {
+  justify-self: end;
+}
+
 .programmer-operator-groups {
-  padding: 0.2rem 0 0.35rem;
-  border-bottom: 1px solid var(--border-faint);
+  padding: 0.25rem 6px 0.35rem;
+  border-bottom: 1px solid var(--border-subtle);
+  gap: 1.2rem;
 }
 
 .programmer-group-button {
@@ -144,16 +178,32 @@
 }
 
 @media (max-width: 767px) {
+  .programmer-expression {
+    padding-right: 6px;
+  }
+
   .programmer-hero {
-    grid-template-columns: 1fr auto;
-    gap: 0.7rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.45rem;
+    min-height: auto;
   }
 
-  .programmer-display-value {
-    font-size: clamp(3.2rem, 16vw, 4.8rem);
+  .programmer-display-column {
+    min-height: 0;
   }
 
-  .programmer-control-row {
-    padding-top: 0.15rem;
+  .programmer-meta-row {
+    grid-template-columns: auto auto;
+    gap: 0.3rem 0.6rem;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .programmer-word-size-button {
+    justify-self: end;
+  }
+
+  .programmer-memory-actions {
+    grid-column: 1 / -1;
   }
 }

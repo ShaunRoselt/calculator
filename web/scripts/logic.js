@@ -494,14 +494,24 @@ function handleProgrammerAction(action, value) {
       backspaceProgrammer();
       break;
     case 'clear-entry':
-      state.programmer.display = '0';
-      state.programmer.waitingForOperand = false;
+      clearEntryProgrammer();
       break;
     case 'equals':
       evaluateProgrammerEquals();
       break;
     default:
       break;
+  }
+}
+
+function clearEntryProgrammer() {
+  const calc = state.programmer;
+  calc.display = '0';
+  calc.error = false;
+  calc.waitingForOperand = false;
+  calc.justEvaluated = false;
+  if (!calc.operator) {
+    calc.expression = '';
   }
 }
 
@@ -578,9 +588,10 @@ function evaluateProgrammerEquals() {
   if (result == null) {
     return;
   }
-  pushHistory(`${formatBigInt(calc.accumulator, calc.base)} ${operatorLabel(calc.operator)} ${formatBigInt(right, calc.base)}`, formatBigInt(result, calc.base), 'programmer');
+  const expression = `${formatBigInt(calc.accumulator, calc.base)} ${operatorLabel(calc.operator)} ${formatBigInt(right, calc.base)} =`;
+  pushHistory(expression, formatBigInt(result, calc.base), 'programmer');
   calc.display = formatBigInt(normalizeProgrammerValue(result), calc.base);
-  calc.expression = `${formatBigInt(calc.accumulator, calc.base)} ${operatorLabel(calc.operator)} ${formatBigInt(right, calc.base)}`;
+  calc.expression = expression;
   calc.accumulator = normalizeProgrammerValue(result);
   calc.operator = null;
   calc.waitingForOperand = true;
@@ -671,9 +682,15 @@ export function handleMemoryOperation(operation) {
   } else if (operation === 'ms') {
     state.memory.unshift({ value: formatStoredMemoryValue(current) });
   } else if (operation === 'm+' || operation === 'm-') {
-    const existing = Number(state.memory[0]?.value || 0);
-    const next = operation === 'm+' ? existing + Number(current) : existing - Number(current);
-    state.memory[0] = { value: formatNumber(next) };
+    if (state.mode === 'programmer') {
+      const existing = parseBigIntFlexible(state.memory[0]?.value || '0');
+      const next = operation === 'm+' ? existing + current : existing - current;
+      state.memory[0] = { value: formatStoredMemoryValue(next) };
+    } else {
+      const existing = Number(state.memory[0]?.value || 0);
+      const next = operation === 'm+' ? existing + Number(current) : existing - Number(current);
+      state.memory[0] = { value: formatNumber(next) };
+    }
   }
   state.memory = state.memory.slice(0, 20);
   persistCollections();
@@ -685,7 +702,7 @@ export function recallMemory(index) {
     return;
   }
   if (state.mode === 'programmer') {
-    const value = BigInt(Math.trunc(Number(item.value)));
+    const value = parseBigIntFlexible(item.value);
     state.programmer.display = formatBigInt(value, state.programmer.base);
     state.programmer.waitingForOperand = false;
   } else if (state.mode === 'scientific') {
@@ -725,7 +742,7 @@ function pushHistory(expression, result, mode) {
 
 function getCurrentDisplayNumericValue() {
   if (state.mode === 'programmer') {
-    return Number(getProgrammerCurrentValue());
+    return getProgrammerCurrentValue();
   }
   if (state.mode === 'scientific') {
     const parsed = Number(state.scientific.display);
@@ -1232,7 +1249,7 @@ export function getProgrammerCurrentValue() {
 function parseBigIntFromBase(display, base) {
   const bases = { BIN: 2, OCT: 8, DEC: 10, HEX: 16 };
   const radix = bases[base];
-  const value = display.trim().toUpperCase();
+  const value = display.replace(/\s+/g, '').trim().toUpperCase();
   const sign = value.startsWith('-') ? -1n : 1n;
   const digits = value.replace(/^-/, '') || '0';
   let result = 0n;
@@ -1248,7 +1265,7 @@ function parseBigIntFromBase(display, base) {
 }
 
 function parseBigIntFlexible(value) {
-  const trimmed = String(value).trim();
+  const trimmed = String(value).replace(/\s+/g, '').trim();
   if (/^-?\d+$/.test(trimmed)) {
     return BigInt(trimmed);
   }
@@ -1259,7 +1276,10 @@ export function formatBigInt(value, base) {
   const sign = value < 0n ? '-' : '';
   const radix = { BIN: 2, OCT: 8, DEC: 10, HEX: 16 }[base];
   const raw = (value < 0n ? -value : value).toString(radix);
-  return `${sign}${base === 'HEX' ? raw.toUpperCase() : raw}`;
+  const normalized = base === 'HEX' ? raw.toUpperCase() : raw;
+  const groupSize = { BIN: 4, OCT: 3, DEC: 3, HEX: 4 }[base] ?? 3;
+  const grouped = normalized.replace(new RegExp(`\\B(?=(?:.{${groupSize}})+(?!.))`, 'g'), ' ');
+  return `${sign}${grouped}`;
 }
 
 export function getProgrammerWordSizeBits() {

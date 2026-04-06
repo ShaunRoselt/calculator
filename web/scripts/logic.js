@@ -1,4 +1,4 @@
-import { MODE_META, UNIT_CATEGORIES } from './config.js';
+import { CURRENCY_OPTIONS, DEFAULT_CURRENCY_RATES, MODE_META, UNIT_CATEGORIES } from './config.js';
 import {
   createProgrammerState,
   createScientificState,
@@ -1591,7 +1591,29 @@ function formatLongDate(value) {
 }
 
 export function getUnitsForCategory(category) {
+  if (category === 'Currency') {
+    return CURRENCY_OPTIONS.map((currency) => {
+      const unitsPerUsd = getCurrencyRate(currency.name);
+      return {
+        name: currency.name,
+        symbol: currency.code,
+        toBase: (value) => value / unitsPerUsd,
+        fromBase: (value) => value * unitsPerUsd
+      };
+    });
+  }
+
   return UNIT_CATEGORIES[category] || UNIT_CATEGORIES.Length;
+}
+
+function getCurrencyRate(name) {
+  const activeRate = Number(state.converter.currencyRates?.[name]);
+  if (Number.isFinite(activeRate) && activeRate > 0) {
+    return activeRate;
+  }
+
+  const fallbackRate = Number(DEFAULT_CURRENCY_RATES[name]);
+  return Number.isFinite(fallbackRate) && fallbackRate > 0 ? fallbackRate : 1;
 }
 
 export function resetConverterUnits() {

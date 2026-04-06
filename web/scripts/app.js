@@ -1,4 +1,4 @@
-import { CONVERTER_MODE_TO_CATEGORY, DEFAULT_MODE, isConverterMode, isMode } from './config.js';
+import { CONVERTER_MODE_TO_CATEGORY, CURRENCY_CODE_TO_NAME, CURRENCY_DETAILS, CURRENCY_OPTIONS, DEFAULT_CURRENCY_RATES, DEFAULT_MODE, isConverterMode, isMode } from './config.js';
 import {
   getMemoryCollection,
   hydrateState,
@@ -47,6 +47,10 @@ import {
 } from './logic.js';
 
 const PAGE_QUERY_PARAM = 'page';
+const CURRENCY_TYPEAHEAD_RESET_MS = 900;
+
+let currencyTypeaheadBuffer = '';
+let currencyTypeaheadTimestamp = 0;
 
 hydrateState();
 applyUrlMode({ replaceHistory: true, renderView: false });
@@ -108,6 +112,7 @@ function setMode(nextMode, { replaceHistory = false, renderView = true } = {}) {
     state.converter.category = CONVERTER_MODE_TO_CATEGORY[resolvedMode];
     resetConverterUnits();
     syncConverterValues('from');
+    state.converter.currencyKeyboardField = 'from';
   }
 
   state.mode = resolvedMode;
@@ -121,6 +126,10 @@ function setMode(nextMode, { replaceHistory = false, renderView = true } = {}) {
 
   if (renderView) {
     render();
+  }
+
+  if (resolvedMode === 'currency') {
+    void updateCurrencyRates();
   }
 }
 
@@ -366,6 +375,9 @@ function handleClick(event) {
 
   if (target.dataset.converterActiveField) {
     setConverterActiveField(target.dataset.converterActiveField);
+    if (state.mode === 'currency') {
+      state.converter.currencyKeyboardField = target.dataset.converterActiveField;
+    }
     render();
     return;
   }
@@ -373,6 +385,7 @@ function handleClick(event) {
   if (target.dataset.currencyMenuToggle) {
     const field = target.dataset.currencyMenuToggle;
     state.converter.openCurrencyMenu = state.converter.openCurrencyMenu === field ? null : field;
+    state.converter.currencyKeyboardField = field;
     setConverterActiveField(field);
     render();
     return;
@@ -386,9 +399,15 @@ function handleClick(event) {
     }
     state.converter[field === 'from' ? 'fromUnit' : 'toUnit'] = value;
     state.converter.openCurrencyMenu = null;
+    state.converter.currencyKeyboardField = field;
     setConverterActiveField(field);
     syncConverterValues(field);
     render();
+    return;
+  }
+
+  if (target.dataset.currencyUpdateRates) {
+    void updateCurrencyRates();
     return;
   }
 
@@ -573,6 +592,92 @@ function handleClick(event) {
   }
 }
 
+async function updateCurrencyRates() {
+  if (state.converter.isUpdatingRates) {
+    return;
+  }
+
+  state.converter.isUpdatingRates = true;
+  state.converter.currencyUpdateMessage = 'Fetching the latest USD reference rates...';
+  render();
+
+  try {
+    const response = await fetch('https://open.er-api.com/v6/latest/USD', {
+      cache: 'no-store'
+    });
+
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
+    }
+
+    const payload = await response.json();
+    if (payload?.result !== 'success' || !payload?.rates || typeof payload.rates !== 'object') {
+      throw new Error('Currency service returned an unexpected payload.');
+    }
+
+    state.converter.currencyRates = normalizeCurrencyRates(payload.rates);
+    state.converter.currencyUpdatedAt = formatCurrencyTimestamp(payload.time_last_update_utc);
+    state.converter.currencyUpdateMessage = 'Live rates loaded from ExchangeRate-API.';
+  } catch {
+    state.converter.currencyRates = buildFallbackCurrencyRates();
+    state.converter.currencyUpdatedAt = formatCurrencyTimestamp(new Date().toISOString());
+    state.converter.currencyUpdateMessage = 'Live update unavailable. Refreshed demo rates locally.';
+  } finally {
+    state.converter.isUpdatingRates = false;
+    syncConverterValues(state.converter.lastEdited || 'from');
+    render();
+  }
+}
+
+function normalizeCurrencyRates(rates) {
+  const normalizedRates = { ...DEFAULT_CURRENCY_RATES };
+
+  for (const [code, rawRate] of Object.entries(rates)) {
+    const name = CURRENCY_CODE_TO_NAME[code];
+    const numericRate = Number(rawRate);
+    if (!name || !Number.isFinite(numericRate) || numericRate <= 0) {
+      continue;
+    }
+    normalizedRates[name] = numericRate;
+  }
+
+  return normalizedRates;
+}
+
+function buildFallbackCurrencyRates() {
+  const fallbackRates = { ...DEFAULT_CURRENCY_RATES };
+  const minuteSeed = Math.floor(Date.now() / 60000);
+  let index = 0;
+
+  for (const [name, rate] of Object.entries(fallbackRates)) {
+    if (name === 'US Dollar') {
+      continue;
+    }
+
+    const offset = ((minuteSeed + index * 17) % 23) - 11;
+    const driftMultiplier = 1 + (offset / 5000);
+    fallbackRates[name] = Number((rate * driftMultiplier).toPrecision(10));
+    index += 1;
+  }
+
+  return fallbackRates;
+}
+
+function formatCurrencyTimestamp(value) {
+  const parsedDate = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(parsedDate.getTime())) {
+    return state.converter.currencyUpdatedAt;
+  }
+
+  const year = parsedDate.getFullYear();
+  const month = String(parsedDate.getMonth() + 1).padStart(2, '0');
+  const day = String(parsedDate.getDate()).padStart(2, '0');
+  const hours = String(parsedDate.getHours()).padStart(2, '0');
+  const minutes = String(parsedDate.getMinutes()).padStart(2, '0');
+  const seconds = String(parsedDate.getSeconds()).padStart(2, '0');
+  return `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`;
+}
+
 function handleChange(event) {
   const target = event.target;
   if (!(target instanceof HTMLInputElement || target instanceof HTMLSelectElement)) {
@@ -698,21 +803,45 @@ function handleInput(event) {
 
 function handleFocusIn(event) {
   const target = event.target;
-  if (!(target instanceof HTMLInputElement)) {
+  if (target instanceof HTMLInputElement) {
+    if (target.name?.startsWith('graph-expression-')) {
+      selectGraphExpression(Number(target.name.replace('graph-expression-', '')));
+      return;
+    }
+
+    if (target.dataset.converterField) {
+      setConverterActiveField(target.dataset.converterField);
+    }
     return;
   }
 
-  if (target.name?.startsWith('graph-expression-')) {
-    selectGraphExpression(Number(target.name.replace('graph-expression-', '')));
+  if (!(target instanceof HTMLElement)) {
     return;
   }
 
-  if (target.dataset.converterField) {
-    setConverterActiveField(target.dataset.converterField);
+  const currencyToggle = target.closest('[data-currency-menu-toggle]');
+  if (currencyToggle instanceof HTMLElement) {
+    const field = currencyToggle.dataset.currencyMenuToggle;
+    if (field === 'from' || field === 'to') {
+      state.converter.currencyKeyboardField = field;
+    }
+    return;
+  }
+
+  const currencyOption = target.closest('[data-currency-unit-select]');
+  if (currencyOption instanceof HTMLElement) {
+    const field = currencyOption.dataset.currencyUnitSelect;
+    if (field === 'from' || field === 'to') {
+      state.converter.currencyKeyboardField = field;
+    }
   }
 }
 
 function handleKeydown(event) {
+  if (handleCurrencyDropdownKeydown(event)) {
+    return;
+  }
+
   if (state.mode === 'currency' && event.key === 'Escape' && state.converter.openCurrencyMenu) {
     state.converter.openCurrencyMenu = null;
     render();
@@ -815,4 +944,133 @@ function handleKeydown(event) {
 
   event.preventDefault();
   render();
+}
+
+function handleCurrencyDropdownKeydown(event) {
+  if (state.mode !== 'currency' || event.altKey || event.ctrlKey || event.metaKey) {
+    return false;
+  }
+
+  const isDropdownTarget = isCurrencyDropdownTarget(event.target);
+  if (!isDropdownTarget && !state.converter.openCurrencyMenu) {
+    return false;
+  }
+
+  const field = getCurrencyKeyboardField(event.target);
+  if (!field) {
+    return false;
+  }
+
+  if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+    moveCurrencySelection(field, event.key === 'ArrowDown' ? 1 : -1);
+    event.preventDefault();
+    render();
+    return true;
+  }
+
+  if (event.key === 'Home' || event.key === 'End') {
+    const targetIndex = event.key === 'Home' ? 0 : CURRENCY_OPTIONS.length - 1;
+    selectCurrencyByIndex(field, targetIndex, true);
+    event.preventDefault();
+    render();
+    return true;
+  }
+
+  if (event.key === 'Enter' || event.key === ' ') {
+    state.converter.openCurrencyMenu = state.converter.openCurrencyMenu === field ? null : field;
+    state.converter.currencyKeyboardField = field;
+    event.preventDefault();
+    render();
+    return true;
+  }
+
+  if (event.key.length === 1 && /[\p{L}\p{N}]/u.test(event.key)) {
+    const match = findCurrencyTypeaheadMatch(field, event.key);
+    if (!match) {
+      return false;
+    }
+
+    applyCurrencySelection(field, match.name, true);
+    event.preventDefault();
+    render();
+    return true;
+  }
+
+  return false;
+}
+
+function getCurrencyKeyboardField(target) {
+  const element = target instanceof HTMLElement ? target : null;
+  const toggle = element?.closest('[data-currency-menu-toggle]');
+  if (toggle instanceof HTMLElement) {
+    const field = toggle.dataset.currencyMenuToggle;
+    if (field === 'from' || field === 'to') {
+      return field;
+    }
+  }
+
+  const option = element?.closest('[data-currency-unit-select]');
+  if (option instanceof HTMLElement) {
+    const field = option.dataset.currencyUnitSelect;
+    if (field === 'from' || field === 'to') {
+      return field;
+    }
+  }
+
+  if (state.converter.openCurrencyMenu === 'from' || state.converter.openCurrencyMenu === 'to') {
+    return state.converter.openCurrencyMenu;
+  }
+
+  return state.converter.currencyKeyboardField === 'to' ? 'to' : 'from';
+}
+
+function isCurrencyDropdownTarget(target) {
+  const element = target instanceof HTMLElement ? target : null;
+  return Boolean(element?.closest('.currency-select-wrap'));
+}
+
+function moveCurrencySelection(field, direction) {
+  const values = CURRENCY_OPTIONS.map((currency) => currency.name);
+  const currentValue = field === 'from' ? state.converter.fromUnit : state.converter.toUnit;
+  const currentIndex = Math.max(0, values.indexOf(currentValue));
+  const nextIndex = (currentIndex + direction + values.length) % values.length;
+  selectCurrencyByIndex(field, nextIndex, true);
+}
+
+function selectCurrencyByIndex(field, index, keepMenuOpen) {
+  const values = CURRENCY_OPTIONS.map((currency) => currency.name);
+  const clampedIndex = Math.max(0, Math.min(index, values.length - 1));
+  applyCurrencySelection(field, values[clampedIndex], keepMenuOpen);
+}
+
+function applyCurrencySelection(field, value, keepMenuOpen = false) {
+  state.converter[field === 'from' ? 'fromUnit' : 'toUnit'] = value;
+  state.converter.openCurrencyMenu = keepMenuOpen ? field : null;
+  state.converter.currencyKeyboardField = field;
+  setConverterActiveField(field);
+  syncConverterValues(field);
+}
+
+function findCurrencyTypeaheadMatch(field, key) {
+  const now = Date.now();
+  if (now - currencyTypeaheadTimestamp > CURRENCY_TYPEAHEAD_RESET_MS) {
+    currencyTypeaheadBuffer = '';
+  }
+
+  currencyTypeaheadTimestamp = now;
+  currencyTypeaheadBuffer += key.toLowerCase();
+
+  const currentValue = field === 'from' ? state.converter.fromUnit : state.converter.toUnit;
+  const currentIndex = Math.max(0, CURRENCY_OPTIONS.findIndex((currency) => currency.name === currentValue));
+  const orderedOptions = [...CURRENCY_OPTIONS.slice(currentIndex + 1), ...CURRENCY_OPTIONS.slice(0, currentIndex + 1)];
+
+  return orderedOptions.find((currency) => {
+    const details = CURRENCY_DETAILS[currency.name] || { label: currency.name, code: '' };
+    const searchTerms = [currency.name, details.label, details.code]
+      .filter(Boolean)
+      .map((term) => term.toLowerCase());
+
+    return searchTerms.some((term) => term.startsWith(currencyTypeaheadBuffer))
+      || searchTerms.some((term) => term.includes(currencyTypeaheadBuffer));
+  }) ?? null;
 }

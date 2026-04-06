@@ -1,4 +1,4 @@
-import { STORAGE_KEYS } from './config.js';
+import { DEFAULT_CURRENCY_RATES, MOCK_CURRENCY_NOTE, MOCK_CURRENCY_UPDATED_AT, STORAGE_KEYS } from './config.js';
 import { toDateInputValue } from './utils.js';
 
 const CALCULATOR_COLLECTION_MODES = ['standard', 'scientific', 'programmer', 'date'];
@@ -160,7 +160,12 @@ function createInitialState() {
       fromValue: '1',
       toValue: '',
       lastEdited: 'from',
-      openCurrencyMenu: null
+      openCurrencyMenu: null,
+      currencyRates: { ...DEFAULT_CURRENCY_RATES },
+      currencyUpdatedAt: MOCK_CURRENCY_UPDATED_AT,
+      currencyUpdateMessage: MOCK_CURRENCY_NOTE,
+      isUpdatingRates: false,
+      currencyKeyboardField: 'from'
     },
     graphing: createGraphingState()
   };

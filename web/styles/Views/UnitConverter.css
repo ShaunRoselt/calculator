@@ -119,16 +119,143 @@
   position: relative;
 }
 
+.converter-native-select-wrap::after {
+  content: '⌄';
+  position: absolute;
+  right: 0;
+  bottom: 0.1rem;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
 .converter-native-select-wrap select,
 .currency-select-wrap select {
   width: auto;
   min-width: 220px;
-  padding: 0 1.35rem 0 0;
+  max-width: min(320px, 72vw);
+  padding: 0 1.7rem 0 0;
   border: 0;
   border-radius: 0;
   background: transparent;
   color: var(--text);
   box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+}
+
+.currency-select-wrap select {
+  min-width: 240px;
+}
+
+.currency-select-wrap select:focus,
+.converter-native-select-wrap select:focus {
+  box-shadow: none;
+}
+
+.currency-select-wrap {
+  min-width: 246px;
+}
+
+.currency-select-button {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 100%;
+  padding: 0 0.15rem 0 0;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+}
+
+.currency-select-button:focus-visible {
+  outline-offset: 3px;
+}
+
+.currency-select-label {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.currency-select-caret {
+  color: var(--text);
+  font-size: 0.94rem;
+  line-height: 1;
+  opacity: 0.95;
+}
+
+.currency-select-menu {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  left: 0;
+  z-index: 20;
+  width: min(244px, 72vw);
+  max-height: 352px;
+  overflow-y: auto;
+  padding: 7px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #2f3440 0%, #292d38 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 22px 42px rgba(0, 0, 0, 0.44);
+  scrollbar-color: rgba(255, 255, 255, 0.32) transparent;
+  scrollbar-width: thin;
+}
+
+.currency-select-menu::-webkit-scrollbar {
+  width: 10px;
+}
+
+.currency-select-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.currency-select-menu::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.24);
+  background-clip: padding-box;
+}
+
+.currency-select-option {
+  position: relative;
+  width: 100%;
+  min-height: 30px;
+  padding: 0 12px 0 16px;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.96);
+  text-align: left;
+  font-size: 0.93rem;
+  line-height: 1.35;
+}
+
+.currency-select-option:hover,
+.currency-select-option:focus-visible {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.currency-select-option.selected {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.currency-select-option.selected::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  border-radius: 999px;
+  background: #63b4ff;
 }
 
 .converter-native-meta {

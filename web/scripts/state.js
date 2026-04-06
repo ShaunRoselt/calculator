@@ -159,7 +159,8 @@ function createInitialState() {
       toUnit: 'Foot',
       fromValue: '1',
       toValue: '',
-      lastEdited: 'from'
+      lastEdited: 'from',
+      openCurrencyMenu: null
     },
     graphing: createGraphingState()
   };

@@ -147,6 +147,11 @@ function handleClick(event) {
   const source = event.target instanceof Element ? event.target : null;
   let shouldRender = false;
 
+  if (source && state.mode === 'currency' && state.converter.openCurrencyMenu && !source.closest('.currency-select-wrap')) {
+    state.converter.openCurrencyMenu = null;
+    shouldRender = true;
+  }
+
   if (source && state.mode === 'date' && state.date.openModeMenu && !source.closest('.date-native-select-wrap')) {
     state.date.openModeMenu = false;
     shouldRender = true;
@@ -361,6 +366,28 @@ function handleClick(event) {
 
   if (target.dataset.converterActiveField) {
     setConverterActiveField(target.dataset.converterActiveField);
+    render();
+    return;
+  }
+
+  if (target.dataset.currencyMenuToggle) {
+    const field = target.dataset.currencyMenuToggle;
+    state.converter.openCurrencyMenu = state.converter.openCurrencyMenu === field ? null : field;
+    setConverterActiveField(field);
+    render();
+    return;
+  }
+
+  if (target.dataset.currencyUnitSelect) {
+    const field = target.dataset.currencyUnitSelect;
+    const value = target.dataset.currencyValue;
+    if (!field || !value) {
+      return;
+    }
+    state.converter[field === 'from' ? 'fromUnit' : 'toUnit'] = value;
+    state.converter.openCurrencyMenu = null;
+    setConverterActiveField(field);
+    syncConverterValues(field);
     render();
     return;
   }
@@ -686,6 +713,13 @@ function handleFocusIn(event) {
 }
 
 function handleKeydown(event) {
+  if (state.mode === 'currency' && event.key === 'Escape' && state.converter.openCurrencyMenu) {
+    state.converter.openCurrencyMenu = null;
+    render();
+    event.preventDefault();
+    return;
+  }
+
   if (state.mode === 'date' && event.key === 'Escape' && state.date.openModeMenu) {
     state.date.openModeMenu = false;
     render();

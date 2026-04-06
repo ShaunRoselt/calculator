@@ -36,7 +36,21 @@ export function render() {
     </div>
   `;
   prepareTooltipTargets(appRoot);
+  syncCurrencyMenuScroll();
   drawGraph();
+}
+
+function syncCurrencyMenuScroll() {
+  requestAnimationFrame(() => {
+    const selectedOption = appRoot.querySelector('.currency-select-option.selected');
+    const menu = selectedOption?.closest('.currency-select-menu');
+    if (!(selectedOption instanceof HTMLElement) || !(menu instanceof HTMLElement)) {
+      return;
+    }
+
+    const centeredTop = selectedOption.offsetTop - ((menu.clientHeight - selectedOption.offsetHeight) / 2);
+    menu.scrollTop = Math.max(0, centeredTop);
+  });
 }
 
 function renderNavigationView() {

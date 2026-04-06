@@ -48,6 +48,8 @@ namespace CalculatorUITestFramework
             {
                 MemoryPanel.NumberpadMCButton.Click();
             }
+
+            HistoryPanel.ClearHistory();
         }
     }
 }

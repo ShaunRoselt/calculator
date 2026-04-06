@@ -1,6 +1,6 @@
 .graphing-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 362px;
+  grid-template-columns: minmax(0, 1fr) 392px;
   gap: 0;
   height: 100%;
   min-height: 0;
@@ -8,6 +8,7 @@
 
 .graph-workspace,
 .graph-editor-panel {
+  min-width: 0;
   min-height: 0;
 }
 
@@ -698,16 +699,24 @@
 
 .graphing-operator-menu-trig {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  left: 8px;
+  right: auto;
   width: min(320px, calc(100% - 16px));
 }
 
 .graphing-operator-menu-inequality {
   grid-template-columns: repeat(5, minmax(0, 1fr));
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
   width: min(320px, calc(100% - 16px));
 }
 
 .graphing-operator-menu-function {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  left: auto;
+  right: 8px;
+  transform: none;
   width: min(194px, calc(100% - 16px));
 }
 
@@ -749,7 +758,7 @@
 
 @media (max-width: 1023px) {
   .graphing-layout {
-    grid-template-columns: minmax(0, 1fr) 320px;
+    grid-template-columns: minmax(0, 1fr) 376px;
   }
 }
 

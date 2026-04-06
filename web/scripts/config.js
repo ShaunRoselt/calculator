@@ -126,7 +126,15 @@ export const CURRENCY_DETAILS = Object.fromEntries(
   CURRENCY_OPTIONS.map((currency) => [currency.name, { label: currency.label, symbol: currency.symbol, code: currency.code }])
 );
 
-export const MOCK_CURRENCY_UPDATED_AT = '2026/04/05 15:13';
+export const CURRENCY_CODE_TO_NAME = Object.fromEntries(
+  CURRENCY_OPTIONS.map((currency) => [currency.code, currency.name])
+);
+
+export const DEFAULT_CURRENCY_RATES = Object.fromEntries(
+  CURRENCY_OPTIONS.map((currency) => [currency.name, currency.unitsPerUsd])
+);
+
+export const MOCK_CURRENCY_UPDATED_AT = '2026/04/05 15:13:00';
 
 export const STANDARD_BUTTONS = [
   [btn('%', 'percent', '', 'function'), btn('CE', 'clear-entry', '', 'function'), btn('C', 'clear-all', '', 'function'), btn('⌫', 'backspace', '', 'function')],

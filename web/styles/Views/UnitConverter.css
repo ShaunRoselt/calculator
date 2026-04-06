@@ -296,6 +296,18 @@
   color: var(--accent);
 }
 
+.currency-update-button[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.currency-meta-status {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .converter-native-keypad,
 .currency-keypad {
   display: grid;

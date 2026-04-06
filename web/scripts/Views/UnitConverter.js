@@ -1,4 +1,4 @@
-import { CURRENCY_DETAILS, CURRENCY_OPTIONS, MOCK_CURRENCY_NOTE, MOCK_CURRENCY_UPDATED_AT, MODE_META, UNIT_CATEGORIES, isConverterMode } from '../config.js';
+import { CURRENCY_DETAILS, CURRENCY_OPTIONS, MODE_META, UNIT_CATEGORIES, isConverterMode } from '../config.js';
 import { state } from '../state.js';
 import { escapeHtml } from '../utils.js';
 import { getConverterDisplayValue, getUnitsForCategory } from '../logic.js';
@@ -101,6 +101,7 @@ function renderCurrencyView(units, title) {
   const fromDisplay = getConverterDisplayValue('from');
   const toDisplay = getConverterDisplayValue('to');
   const rateLine = renderCurrencyRateLine(units, fromMeta, toMeta);
+  const updateButtonLabel = state.converter.isUpdatingRates ? 'Updating rates...' : 'Update rates';
 
   return `
     <div class="currency-layout">
@@ -111,8 +112,9 @@ function renderCurrencyView(units, title) {
         </div>
         <div class="currency-meta">
           <div class="currency-meta-line">${rateLine}</div>
-          <div class="currency-meta-line">Updated ${MOCK_CURRENCY_UPDATED_AT}</div>
-          <button class="currency-update-button" type="button">Update rates</button>
+          <div class="currency-meta-line">Updated ${state.converter.currencyUpdatedAt}</div>
+          <div class="currency-meta-line currency-meta-status">${state.converter.currencyUpdateMessage}</div>
+          <button class="currency-update-button" type="button" data-currency-update-rates="true" ${state.converter.isUpdatingRates ? 'disabled' : ''}>${updateButtonLabel}</button>
         </div>
       </section>
       <section class="currency-keypad" aria-label="Currency keypad">

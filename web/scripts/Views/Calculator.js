@@ -1,7 +1,7 @@
 import { PROGRAMMER_BUTTONS, SCIENTIFIC_BUTTONS, STANDARD_BUTTONS } from '../config.js';
 import { state } from '../state.js';
 import { escapeHtml, formatExpressionForDisplay } from '../utils.js';
-import { formatBigInt, getProgrammerCurrentValue, isProgrammerDigitAllowed } from '../logic.js';
+import { formatBigInt, getProgrammerCurrentValue, isProgrammerDigitAllowed, isSidePanelVisible } from '../logic.js';
 import { renderProgrammerBitFlipPanel } from './CalculatorProgrammerBitFlipPanel.js';
 import { renderProgrammerDisplayPanel } from './CalculatorProgrammerDisplayPanel.js';
 import { renderScientificAngleButtons } from './CalculatorScientificAngleButtons.js';
@@ -63,14 +63,22 @@ const SCIENTIFIC_EXTRA_FUNCTIONS = [
 
 export function renderCalculatorView(mode) {
   const calc = state[mode];
-  const buttons = mode === 'standard' ? STANDARD_BUTTONS : mode === 'scientific' ? getScientificButtons(calc) : PROGRAMMER_BUTTONS;
+  const buttons = mode === 'standard'
+    ? STANDARD_BUTTONS
+    : mode === 'scientific'
+      ? getScientificButtons(calc)
+      : getProgrammerButtons(calc);
   const displaySizeClass = getDisplaySizeClass(calc.display, mode);
   const expressionSizeClass = getExpressionSizeClass(calc.expression);
   if (mode === 'programmer') {
     return `
       <div class="calculator-layout programmer">
         <div class="programmer-shell">
-          ${renderProgrammerDisplayPanel()}
+          ${renderProgrammerDisplayPanel({
+            displaySizeClass,
+            expressionSizeClass,
+            showMemoryToggle: !isSidePanelVisible()
+          })}
           ${state.programmer.isBitFlipChecked ? renderProgrammerBitFlipPanel() : ''}
           <div class="button-grid programmer">
             ${buttons.flat().map((button) => renderCalcButton(button, mode)).join('')}
@@ -95,6 +103,18 @@ export function renderCalculatorView(mode) {
       </div>
     </div>
   `;
+}
+
+function getProgrammerButtons(calc) {
+  const hasEntry = calc.error || calc.expression.trim() || calc.display !== '0';
+  return PROGRAMMER_BUTTONS.map((row, rowIndex) => row.map((button, columnIndex) => {
+    if (rowIndex === 0 && columnIndex === 3) {
+      return hasEntry
+        ? { ...button, label: 'CE', action: 'clear-entry' }
+        : { ...button, label: 'C', action: 'clear-all' };
+    }
+    return button;
+  }));
 }
 
 function getScientificButtons(calc) {

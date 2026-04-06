@@ -14,7 +14,7 @@ export function renderMemoryToolbar() {
 
 export function renderMemoryList() {
   if (!state.memory.length) {
-    return `<div class="side-empty">Memory is empty.</div>`;
+    return `<div class="side-empty">There's nothing saved in memory.</div>`;
   }
   return `
     <div class="memory-list">

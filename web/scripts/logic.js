@@ -1,4 +1,4 @@
-import { CURRENCY_OPTIONS, DEFAULT_CURRENCY_RATES, MODE_META, UNIT_CATEGORIES } from './config.js';
+import { CURRENCY_DETAILS, CURRENCY_OPTIONS, DEFAULT_CURRENCY_RATES, MODE_META, UNIT_CATEGORIES, isConverterMode } from './config.js';
 import {
   createProgrammerState,
   createScientificState,
@@ -759,7 +759,18 @@ export function recallHistory(index) {
   if (!entry) {
     return;
   }
-  if (state.mode === 'date') {
+  if (isConverterMode(state.mode)) {
+    if (!entry.converterState) {
+      return;
+    }
+
+    state.converter = {
+      ...state.converter,
+      ...entry.converterState,
+      openCurrencyMenu: null
+    };
+    syncConverterValues(entry.converterState.lastEdited || 'from');
+  } else if (state.mode === 'date') {
     if (!entry.dateState) {
       return;
     }
@@ -802,6 +813,28 @@ export function commitDateHistory() {
       years: state.date.years,
       months: state.date.months,
       days: state.date.days
+    }
+  });
+}
+
+export function commitConverterHistory() {
+  if (!isConverterMode(state.mode)) {
+    return;
+  }
+
+  const entry = getConverterHistoryEntry();
+  if (!entry) {
+    return;
+  }
+
+  pushHistory(entry.expression, entry.result, state.mode, {
+    converterState: {
+      category: state.converter.category,
+      fromUnit: state.converter.fromUnit,
+      toUnit: state.converter.toUnit,
+      fromValue: state.converter.fromValue,
+      toValue: state.converter.toValue,
+      lastEdited: state.converter.lastEdited
     }
   });
 }
@@ -851,7 +884,7 @@ export function isCalculatorMode(mode) {
 }
 
 export function supportsHistoryPanelMode(mode) {
-  return ['standard', 'scientific', 'programmer', 'date'].includes(mode);
+  return ['standard', 'scientific', 'programmer', 'date'].includes(mode) || isConverterMode(mode);
 }
 
 export function supportsMemoryPanelMode(mode) {
@@ -866,6 +899,44 @@ function shouldAutoShowSidePanel() {
   const width = window.innerWidth;
   const height = window.innerHeight;
   return width >= 980 || (width >= 900 && height <= 560);
+}
+
+function getConverterHistoryEntry() {
+  const { fromValue, toValue, fromUnit, toUnit, category } = state.converter;
+  if (!fromUnit || !toUnit) {
+    return null;
+  }
+
+  const normalizedFromValue = String(fromValue ?? '').trim();
+  const normalizedToValue = String(toValue ?? '').trim();
+  if (!normalizedFromValue || !normalizedToValue || normalizedFromValue === 'Invalid input' || normalizedToValue === 'Invalid input') {
+    return null;
+  }
+
+  const fromLabel = getConverterHistoryUnitLabel(category, fromUnit);
+  const toLabel = getConverterHistoryUnitLabel(category, toUnit);
+
+  return {
+    expression: `${formatConverterHistoryValue(normalizedFromValue)} ${fromLabel}`,
+    result: `${formatConverterHistoryValue(normalizedToValue)} ${toLabel}`
+  };
+}
+
+function getConverterHistoryUnitLabel(category, unitName) {
+  if (category === 'Currency') {
+    return CURRENCY_DETAILS[unitName]?.code ?? unitName;
+  }
+
+  return unitName;
+}
+
+function formatConverterHistoryValue(value) {
+  const numeric = Number(String(value).replace(/,/g, '.'));
+  if (!Number.isFinite(numeric)) {
+    return String(value);
+  }
+
+  return formatNumber(numeric).replace(/\./g, ',');
 }
 
 function operatorLabel(operator) {

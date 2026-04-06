@@ -1,7 +1,7 @@
-import { DEFAULT_CURRENCY_RATES, MOCK_CURRENCY_NOTE, MOCK_CURRENCY_UPDATED_AT, STORAGE_KEYS } from './config.js';
+import { CONVERTER_MODE_TO_CATEGORY, DEFAULT_CURRENCY_RATES, MOCK_CURRENCY_NOTE, MOCK_CURRENCY_UPDATED_AT, STORAGE_KEYS } from './config.js';
 import { toDateInputValue } from './utils.js';
 
-const CALCULATOR_COLLECTION_MODES = ['standard', 'scientific', 'programmer', 'date'];
+const CALCULATOR_COLLECTION_MODES = ['standard', 'scientific', 'programmer', 'date', ...Object.keys(CONVERTER_MODE_TO_CATEGORY)];
 
 function createEmptyCollections() {
   return CALCULATOR_COLLECTION_MODES.reduce((collections, mode) => {

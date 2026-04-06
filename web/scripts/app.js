@@ -13,6 +13,7 @@ import { installTooltipHandling } from './tooltip.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
 import {
   backspaceGraphExpression,
+  commitConverterHistory,
   commitDateHistory,
   closeGraphExpressionAnalysis,
   clearGraphExpression,
@@ -369,6 +370,7 @@ function handleClick(event) {
     [state.converter.fromUnit, state.converter.toUnit] = [state.converter.toUnit, state.converter.fromUnit];
     [state.converter.fromValue, state.converter.toValue] = [state.converter.toValue || state.converter.fromValue, state.converter.fromValue];
     syncConverterValues(state.converter.lastEdited || 'from');
+    commitConverterHistory();
     render();
     return;
   }
@@ -402,6 +404,7 @@ function handleClick(event) {
     state.converter.currencyKeyboardField = field;
     setConverterActiveField(field);
     syncConverterValues(field);
+    commitConverterHistory();
     render();
     return;
   }
@@ -413,12 +416,14 @@ function handleClick(event) {
 
   if (target.dataset.converterAction) {
     handleConverterKeypad(target.dataset.converterAction, target.dataset.value || '');
+    commitConverterHistory();
     render();
     return;
   }
 
   if (target.dataset.currencyAction) {
     handleCurrencyKeypad(target.dataset.currencyAction, target.dataset.value || '');
+    commitConverterHistory();
     render();
     return;
   }
@@ -718,6 +723,7 @@ function handleChange(event) {
       resetConverterUnits();
     }
     syncConverterValues(key === 'toValue' || key === 'toUnit' ? 'to' : 'from');
+    commitConverterHistory();
     render();
     return;
   }
@@ -790,6 +796,7 @@ function handleInput(event) {
   if (target.name === 'converter-fromValue') {
     state.converter.fromValue = target.value;
     syncConverterValues('from');
+    commitConverterHistory();
     render();
     return;
   }
@@ -797,6 +804,7 @@ function handleInput(event) {
   if (target.name === 'converter-toValue') {
     state.converter.toValue = target.value;
     syncConverterValues('to');
+    commitConverterHistory();
     render();
   }
 }
@@ -913,6 +921,7 @@ function handleKeydown(event) {
       } else {
         return;
       }
+      commitConverterHistory();
       event.preventDefault();
       render();
     }
@@ -1049,6 +1058,7 @@ function applyCurrencySelection(field, value, keepMenuOpen = false) {
   state.converter.currencyKeyboardField = field;
   setConverterActiveField(field);
   syncConverterValues(field);
+  commitConverterHistory();
 }
 
 function findCurrencyTypeaheadMatch(field, key) {

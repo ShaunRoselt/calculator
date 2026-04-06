@@ -13,6 +13,7 @@ import { installTooltipHandling } from './tooltip.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
 import {
   backspaceGraphExpression,
+  commitDateHistory,
   closeGraphExpressionAnalysis,
   clearGraphExpression,
   commitGraphExpression,
@@ -36,6 +37,8 @@ import {
   selectGraphExpression,
   setGraphExpression,
   setGraphMobileView,
+  supportsHistoryPanelMode,
+  supportsMemoryPanelMode,
   syncConverterValues,
   toggleGraphExpressionVisibility,
   updateMemoryItem,
@@ -44,7 +47,6 @@ import {
 } from './logic.js';
 
 const PAGE_QUERY_PARAM = 'page';
-const CALCULATOR_HISTORY_MODES = new Set(['standard', 'scientific', 'programmer']);
 
 hydrateState();
 applyUrlMode({ replaceHistory: true, renderView: false });
@@ -110,7 +112,10 @@ function setMode(nextMode, { replaceHistory = false, renderView = true } = {}) {
 
   state.mode = resolvedMode;
   state.navOpen = false;
-  state.historyOpen = CALCULATOR_HISTORY_MODES.has(state.mode) ? state.historyOpen : false;
+  state.historyOpen = supportsHistoryPanelMode(state.mode) ? state.historyOpen : false;
+  if (!supportsMemoryPanelMode(state.mode) && state.historyTab === 'memory') {
+    state.historyTab = 'history';
+  }
   persistNav();
   syncUrlWithMode(state.mode, { replaceHistory });
 
@@ -203,6 +208,9 @@ function handleClick(event) {
 
   if (target.dataset.togglePanel) {
     const nextTab = target.dataset.togglePanel;
+    if (nextTab === 'memory' && !supportsMemoryPanelMode(state.mode)) {
+      return;
+    }
     if (state.historyOpen && state.historyTab === nextTab) {
       state.historyOpen = false;
     } else {
@@ -219,6 +227,9 @@ function handleClick(event) {
   }
 
   if (target.dataset.historyTab) {
+    if (target.dataset.historyTab === 'memory' && !supportsMemoryPanelMode(state.mode)) {
+      return;
+    }
     state.historyTab = target.dataset.historyTab;
     state.historyOpen = true;
     render();
@@ -284,6 +295,7 @@ function handleClick(event) {
   if (target.dataset.dateMode) {
     state.date.mode = target.dataset.dateMode;
     computeDateResults();
+    commitDateHistory();
     render();
     return;
   }
@@ -302,6 +314,7 @@ function handleClick(event) {
     state.date.openModeMenu = false;
     state.date.openPicker = null;
     computeDateResults();
+    commitDateHistory();
     render();
     return;
   }
@@ -333,6 +346,7 @@ function handleClick(event) {
     state.date.pickerMonth = target.dataset.datePick.slice(0, 7);
     state.date.openPicker = null;
     computeDateResults();
+    commitDateHistory();
     render();
     return;
   }
@@ -546,6 +560,7 @@ function handleChange(event) {
       state.date.openPicker = null;
     }
     computeDateResults();
+    commitDateHistory();
     render();
     return;
   }

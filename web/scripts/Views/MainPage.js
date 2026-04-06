@@ -1,6 +1,6 @@
 import { MODE_META, NAVIGATION_GROUPS } from '../config.js';
 import { appRoot } from '../dom.js';
-import { drawGraph, isCalculatorMode, isSidePanelVisible } from '../logic.js';
+import { drawGraph, isCalculatorMode, isSidePanelVisible, supportsHistoryPanelMode, supportsMemoryPanelMode } from '../logic.js';
 import { state } from '../state.js';
 import { prepareTooltipTargets } from '../tooltip.js';
 import { renderCalculatorView } from './Calculator.js';
@@ -75,9 +75,9 @@ function renderNavigationView() {
 
 function renderHeader() {
   const meta = MODE_META[state.mode];
-  const layoutMode = getLayoutMode();
   const isGraphingCompact = state.mode === 'graphing' && window.innerWidth < 768;
   const showDesktopSidePanel = getLayoutMode() === 'desktop' && isSidePanelVisible();
+  const canOpenHistoryPanel = supportsHistoryPanelMode(state.mode);
   const navButton = state.mode === 'settings'
     ? `<button class="icon-button nav-toggle" data-settings-back="true" data-tooltip="Back" aria-label="Back">${renderToolbarIcon('back')}</button>`
     : `<button class="icon-button nav-toggle" data-nav-toggle="true" aria-label="Open navigation">${renderToolbarIcon('menu')}</button>`;
@@ -103,7 +103,7 @@ function renderHeader() {
       </div>
       <div class="topbar-actions">
         ${graphingActions}
-        ${isCalculatorMode(state.mode) && !showDesktopSidePanel ? `<button class="icon-button history-toggle ${state.historyOpen ? 'active' : ''}" data-toggle-panel="history" data-tooltip="History (Ctrl+H)" aria-label="${historyAutomationName}">${renderToolbarIcon('history')}</button>` : ''}
+        ${canOpenHistoryPanel && !showDesktopSidePanel ? `<button class="icon-button history-toggle ${state.historyOpen ? 'active' : ''}" data-toggle-panel="history" data-tooltip="History" aria-label="${historyAutomationName}">${renderToolbarIcon('history')}</button>` : ''}
       </div>
     </header>
   `;
@@ -143,18 +143,20 @@ function renderMainContent() {
 
 function renderSidePanel() {
   const overlay = getLayoutMode() !== 'desktop';
+  const hasMemoryPanel = supportsMemoryPanelMode(state.mode);
+  const title = hasMemoryPanel ? 'History &amp; Memory' : 'History';
   return `
-    <aside class="panel side-panel ${overlay ? 'overlay' : ''}" aria-label="History and memory panel">
+    <aside class="panel side-panel ${overlay ? 'overlay' : ''}" aria-label="${hasMemoryPanel ? 'History and memory panel' : 'History panel'}">
       <div class="side-panel-header">
-        <div class="side-panel-title">History &amp; Memory</div>
+        <div class="side-panel-title">${title}</div>
         ${overlay ? `<button class="icon-button side-panel-close" data-close-surface="panel" aria-label="Close side panel">${renderToolbarIcon('dismiss')}</button>` : ''}
       </div>
-      <div class="side-tabs">
+      ${hasMemoryPanel ? `<div class="side-tabs">
         <button class="tab-button ${state.historyTab === 'history' ? 'active' : ''}" data-history-tab="history">History</button>
         <button class="tab-button ${state.historyTab === 'memory' ? 'active' : ''}" data-history-tab="memory">Memory</button>
-      </div>
+      </div>` : ''}
       <div class="side-body">
-        ${state.historyTab === 'history' ? renderHistoryList() : renderMemoryList()}
+        ${!hasMemoryPanel || state.historyTab === 'history' ? renderHistoryList() : renderMemoryList()}
       </div>
     </aside>
   `;

@@ -759,7 +759,20 @@ export function recallHistory(index) {
   if (!entry) {
     return;
   }
-  if (state.mode === 'programmer') {
+  if (state.mode === 'date') {
+    if (!entry.dateState) {
+      return;
+    }
+
+    state.date = {
+      ...state.date,
+      ...entry.dateState,
+      openModeMenu: false,
+      openPicker: null,
+      pickerMonth: getDateHistoryAnchorMonth(entry.dateState)
+    };
+    computeDateResults();
+  } else if (state.mode === 'programmer') {
     const parsed = parseBigIntFlexible(entry.result);
     state.programmer.display = formatBigInt(parsed, state.programmer.base);
   } else if (state.mode === 'scientific') {
@@ -773,10 +786,42 @@ export function recallHistory(index) {
   }
 }
 
-function pushHistory(expression, result, mode) {
+export function commitDateHistory() {
+  const { expression, result } = getDateHistoryEntry();
+  if (!result) {
+    return;
+  }
+
+  pushHistory(expression, result, 'date', {
+    dateState: {
+      mode: state.date.mode,
+      from: state.date.from,
+      to: state.date.to,
+      baseDate: state.date.baseDate,
+      operation: state.date.operation,
+      years: state.date.years,
+      months: state.date.months,
+      days: state.date.days
+    }
+  });
+}
+
+function pushHistory(expression, result, mode, extra = {}) {
   const history = getHistoryCollection(mode);
+  const nextEntry = {
+    expression,
+    result,
+    mode,
+    modeLabel: MODE_META[mode].label,
+    ...extra
+  };
+
+  if (history[0]?.expression === nextEntry.expression && history[0]?.result === nextEntry.result) {
+    return;
+  }
+
   replaceHistoryCollection([
-    { expression, result, mode, modeLabel: MODE_META[mode].label },
+    nextEntry,
     ...history
   ], mode);
   persistCollections();
@@ -805,8 +850,16 @@ export function isCalculatorMode(mode) {
   return ['standard', 'scientific', 'programmer'].includes(mode);
 }
 
+export function supportsHistoryPanelMode(mode) {
+  return ['standard', 'scientific', 'programmer', 'date'].includes(mode);
+}
+
+export function supportsMemoryPanelMode(mode) {
+  return ['standard', 'scientific', 'programmer'].includes(mode);
+}
+
 export function isSidePanelVisible() {
-  return isCalculatorMode(state.mode) && (shouldAutoShowSidePanel() || state.historyOpen);
+  return supportsHistoryPanelMode(state.mode) && (shouldAutoShowSidePanel() || state.historyOpen);
 }
 
 function shouldAutoShowSidePanel() {
@@ -1472,6 +1525,51 @@ function subtractDateDuration(baseDate, { years = 0, months = 0, days = 0 }) {
 
 function formatDateUnit(value, unit) {
   return `${value} ${unit}${value === 1 ? '' : 's'}`;
+}
+
+function getDateHistoryEntry() {
+  if (state.date.mode === 'difference') {
+    return {
+      expression: `Difference between ${formatHistoryDate(state.date.from)} and ${formatHistoryDate(state.date.to)}`,
+      result: state.date.result?.detail
+        ? `${state.date.result.summary} (${state.date.result.detail})`
+        : (state.date.result?.summary ?? '')
+    };
+  }
+
+  const offsets = [
+    formatDateDurationPart(state.date.years, 'year'),
+    formatDateDurationPart(state.date.months, 'month'),
+    formatDateDurationPart(state.date.days, 'day')
+  ].filter(Boolean);
+
+  return {
+    expression: `${state.date.operation === 'subtract' ? 'Subtract' : 'Add'} ${offsets.length ? offsets.join(', ') : '0 days'} ${state.date.operation === 'subtract' ? 'from' : 'to'} ${formatHistoryDate(state.date.baseDate)}`,
+    result: state.date.result?.summary ?? ''
+  };
+}
+
+function formatHistoryDate(value) {
+  return new Intl.DateTimeFormat(undefined, {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+    timeZone: 'UTC'
+  }).format(new Date(`${value}T00:00:00Z`));
+}
+
+function formatDateDurationPart(value, unit) {
+  const numericValue = Number(value || 0);
+  if (!numericValue) {
+    return '';
+  }
+
+  return formatDateUnit(numericValue, unit);
+}
+
+function getDateHistoryAnchorMonth(dateState) {
+  const anchor = dateState.mode === 'difference' ? dateState.from : dateState.baseDate;
+  return anchor?.slice(0, 7) ?? state.date.pickerMonth;
 }
 
 function formatLongDate(value) {

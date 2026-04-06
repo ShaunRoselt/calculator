@@ -1,7 +1,7 @@
 import { STORAGE_KEYS } from './config.js';
 import { toDateInputValue } from './utils.js';
 
-const CALCULATOR_COLLECTION_MODES = ['standard', 'scientific', 'programmer'];
+const CALCULATOR_COLLECTION_MODES = ['standard', 'scientific', 'programmer', 'date'];
 
 function createEmptyCollections() {
   return CALCULATOR_COLLECTION_MODES.reduce((collections, mode) => {

@@ -165,10 +165,10 @@ function renderSidePanel() {
         <div class="side-panel-title">${title}</div>
         ${overlay ? `<button class="icon-button side-panel-close" data-close-surface="panel" aria-label="Close side panel">${renderToolbarIcon('dismiss')}</button>` : ''}
       </div>
-      ${hasMemoryPanel ? `<div class="side-tabs">
+      <div class="side-tabs">
         <button class="tab-button ${state.historyTab === 'history' ? 'active' : ''}" data-history-tab="history">History</button>
-        <button class="tab-button ${state.historyTab === 'memory' ? 'active' : ''}" data-history-tab="memory">Memory</button>
-      </div>` : ''}
+        ${hasMemoryPanel ? `<button class="tab-button ${state.historyTab === 'memory' ? 'active' : ''}" data-history-tab="memory">Memory</button>` : ''}
+      </div>
       <div class="side-body">
         ${!hasMemoryPanel || state.historyTab === 'history' ? renderHistoryList() : renderMemoryList()}
       </div>

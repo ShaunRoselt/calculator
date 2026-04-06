@@ -115,6 +115,12 @@ input[type="text"] {
   outline: none;
 }
 
+select option,
+select optgroup {
+  background: var(--panel);
+  color: var(--text);
+}
+
 select:focus,
 input:focus {
   border-color: rgba(88, 183, 237, 0.7);

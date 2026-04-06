@@ -1,4 +1,4 @@
-import { CURRENCY_DETAILS, MOCK_CURRENCY_NOTE, MOCK_CURRENCY_UPDATED_AT, MODE_META, UNIT_CATEGORIES, isConverterMode } from '../config.js';
+import { CURRENCY_DETAILS, CURRENCY_OPTIONS, MOCK_CURRENCY_NOTE, MOCK_CURRENCY_UPDATED_AT, MODE_META, UNIT_CATEGORIES, isConverterMode } from '../config.js';
 import { state } from '../state.js';
 import { escapeHtml } from '../utils.js';
 import { getConverterDisplayValue, getUnitsForCategory } from '../logic.js';
@@ -168,20 +168,45 @@ function getFormattedConverterMetaValue(value) {
 }
 
 function renderCurrencyField(field, meta, value) {
+  const menuOpen = state.converter.openCurrencyMenu === field;
   return `
     <div class="currency-field ${state.converter.lastEdited === field ? 'active' : ''}">
       <button class="currency-field-activate" data-converter-active-field="${field}">
-      <div class="currency-value-row">
-        <span class="currency-symbol">${escapeHtml(meta.symbol)}</span>
-        <span class="currency-amount">${escapeHtml(value || '0')}</span>
-      </div>
+        <div class="currency-value-row">
+          <span class="currency-symbol">${escapeHtml(meta.symbol)}</span>
+          <span class="currency-amount">${escapeHtml(value || '0')}</span>
+        </div>
       </button>
       <label class="currency-select-wrap">
-        <select name="converter-${field === 'from' ? 'fromUnit' : 'toUnit'}" data-converter-field="${field}">
-          ${Object.entries(CURRENCY_DETAILS).map(([unitName, detail]) => `<option value="${unitName}" ${unitName === (field === 'from' ? state.converter.fromUnit : state.converter.toUnit) ? 'selected' : ''}>${detail.label}</option>`).join('')}
-        </select>
+        <button type="button" class="currency-select-button ${menuOpen ? 'active' : ''}" data-currency-menu-toggle="${field}" aria-haspopup="listbox" aria-expanded="${menuOpen ? 'true' : 'false'}" aria-label="${field === 'from' ? 'From currency' : 'To currency'}">
+          <span class="currency-select-label">${escapeHtml(meta.label)}</span>
+          <span class="currency-select-caret" aria-hidden="true">⌄</span>
+        </button>
+        ${menuOpen ? renderCurrencyMenu(field) : ''}
       </label>
     </div>
+  `;
+}
+
+function renderCurrencyMenu(field) {
+  const currentValue = field === 'from' ? state.converter.fromUnit : state.converter.toUnit;
+  return `
+    <div class="currency-select-menu" role="listbox" aria-label="${field === 'from' ? 'From currency options' : 'To currency options'}">
+      ${CURRENCY_OPTIONS.map((currency) => renderCurrencyMenuOption(field, currency, currency.name === currentValue)).join('')}
+    </div>
+  `;
+}
+
+function renderCurrencyMenuOption(field, currency, selected) {
+  return `
+    <button
+      type="button"
+      class="currency-select-option ${selected ? 'selected' : ''}"
+      data-currency-unit-select="${field}"
+      data-currency-value="${currency.name}"
+      role="option"
+      aria-selected="${selected ? 'true' : 'false'}"
+    >${escapeHtml(currency.label)}</button>
   `;
 }
 

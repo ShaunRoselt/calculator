@@ -77,13 +77,54 @@ export const APP_INFO = {
   version: '12.0.0'
 };
 
-export const CURRENCY_DETAILS = {
-  'US Dollar': { label: 'United States - Dollar', symbol: '$', code: 'USD' },
-  Euro: { label: 'Europe - Euro', symbol: '€', code: 'EUR' },
-  'British Pound': { label: 'United Kingdom - Pound', symbol: '£', code: 'GBP' },
-  'Japanese Yen': { label: 'Japan - Yen', symbol: '¥', code: 'JPY' },
-  'Canadian Dollar': { label: 'Canada - Dollar', symbol: 'C$', code: 'CAD' }
-};
+const MOCK_CURRENCIES = [
+  { name: 'US Dollar', label: 'United States - Dollar', symbol: '$', code: 'USD', unitsPerUsd: 1 },
+  { name: 'Euro', label: 'Europe - Euro', symbol: '€', code: 'EUR', unitsPerUsd: 0.8681 },
+  { name: 'British Pound', label: 'United Kingdom - Pound', symbol: '£', code: 'GBP', unitsPerUsd: 0.78 },
+  { name: 'Japanese Yen', label: 'Japan - Yen', symbol: '¥', code: 'JPY', unitsPerUsd: 151.24 },
+  { name: 'Canadian Dollar', label: 'Canada - Dollar', symbol: 'C$', code: 'CAD', unitsPerUsd: 1.35 },
+  { name: 'Australian Dollar', label: 'Australia - Dollar', symbol: 'A$', code: 'AUD', unitsPerUsd: 1.52 },
+  { name: 'Brazilian Real', label: 'Brazil - Real', symbol: 'R$', code: 'BRL', unitsPerUsd: 5.06 },
+  { name: 'Chilean Peso', label: 'Chile - Peso', symbol: 'CLP$', code: 'CLP', unitsPerUsd: 973.2 },
+  { name: 'Chinese Yuan', label: 'China - Yuan Renminbi', symbol: 'CN¥', code: 'CNY', unitsPerUsd: 7.24 },
+  { name: 'Colombian Peso', label: 'Colombia - Peso', symbol: 'COP$', code: 'COP', unitsPerUsd: 3921.4 },
+  { name: 'Danish Krone', label: 'Denmark - Krone', symbol: 'kr', code: 'DKK', unitsPerUsd: 6.47 },
+  { name: 'Egyptian Pound', label: 'Egypt - Pound', symbol: 'E£', code: 'EGP', unitsPerUsd: 48.5 },
+  { name: 'Hong Kong Dollar', label: 'Hong Kong SAR - Dollar', symbol: 'HK$', code: 'HKD', unitsPerUsd: 7.82 },
+  { name: 'Indian Rupee', label: 'India - Rupee', symbol: '₹', code: 'INR', unitsPerUsd: 83.45 },
+  { name: 'Kenyan Shilling', label: 'Kenya - Shilling', symbol: 'KSh', code: 'KES', unitsPerUsd: 129.3 },
+  { name: 'Mexican Peso', label: 'Mexico - Peso', symbol: 'MX$', code: 'MXN', unitsPerUsd: 16.72 },
+  { name: 'Nigerian Naira', label: 'Nigeria - Naira', symbol: '₦', code: 'NGN', unitsPerUsd: 1542.0 },
+  { name: 'New Zealand Dollar', label: 'New Zealand - Dollar', symbol: 'NZ$', code: 'NZD', unitsPerUsd: 1.66 },
+  { name: 'Norwegian Krone', label: 'Norway - Krone', symbol: 'kr', code: 'NOK', unitsPerUsd: 10.78 },
+  { name: 'Philippine Piso', label: 'Philippines - Piso', symbol: '₱', code: 'PHP', unitsPerUsd: 57.1 },
+  { name: 'Polish Zloty', label: 'Poland - Zloty', symbol: 'zł', code: 'PLN', unitsPerUsd: 3.96 },
+  { name: 'Qatari Riyal', label: 'Qatar - Riyal', symbol: 'QR', code: 'QAR', unitsPerUsd: 3.64 },
+  { name: 'Saudi Riyal', label: 'Saudi Arabia - Riyal', symbol: 'SAR', code: 'SAR', unitsPerUsd: 3.75 },
+  { name: 'Singapore Dollar', label: 'Singapore - Dollar', symbol: 'S$', code: 'SGD', unitsPerUsd: 1.34 },
+  { name: 'South African Rand', label: 'South Africa - Rand', symbol: 'R', code: 'ZAR', unitsPerUsd: 18.52 },
+  { name: 'South Korean Won', label: 'South Korea - Won', symbol: '₩', code: 'KRW', unitsPerUsd: 1344.0 },
+  { name: 'Swedish Krona', label: 'Sweden - Krona', symbol: 'kr', code: 'SEK', unitsPerUsd: 10.42 },
+  { name: 'Swiss Franc', label: 'Switzerland - Franc', symbol: 'CHF', code: 'CHF', unitsPerUsd: 0.91 },
+  { name: 'Thai Baht', label: 'Thailand - Baht', symbol: '฿', code: 'THB', unitsPerUsd: 36.54 },
+  { name: 'Turkish Lira', label: 'Turkey - Lira', symbol: '₺', code: 'TRY', unitsPerUsd: 32.21 },
+  { name: 'Turkmenistani Manat', label: 'Turkmenistan - Manat', symbol: 'm', code: 'TMT', unitsPerUsd: 3.5 },
+  { name: 'Ugandan Shilling', label: 'Uganda - Shilling', symbol: 'USh', code: 'UGX', unitsPerUsd: 3810.0 },
+  { name: 'Ukrainian Hryvnia', label: 'Ukraine - Hryvnia', symbol: '₴', code: 'UAH', unitsPerUsd: 39.21 },
+  { name: 'UAE Dirham', label: 'United Arab Emirates - Dirham', symbol: 'AED', code: 'AED', unitsPerUsd: 3.6725 },
+  { name: 'Uruguayan Peso', label: 'Uruguay - Peso', symbol: '$U', code: 'UYU', unitsPerUsd: 39.11 },
+  { name: 'Uzbekistani Som', label: 'Uzbekistan - Som', symbol: 'soʻm', code: 'UZS', unitsPerUsd: 12650.0 },
+  { name: 'Vanuatu Vatu', label: 'Vanuatu - Vatu', symbol: 'VT', code: 'VUV', unitsPerUsd: 118.72 },
+  { name: 'Venezuelan Bolivar Soberano', label: 'Venezuela - Bolívar Soberano', symbol: 'Bs.S', code: 'VES', unitsPerUsd: 36.45 },
+  { name: 'Vietnamese Dong', label: 'Vietnam - Dong', symbol: '₫', code: 'VND', unitsPerUsd: 24675.0 },
+  { name: 'Yemeni Rial', label: 'Yemen - Rial', symbol: 'YER', code: 'YER', unitsPerUsd: 250.35 }
+];
+
+export const CURRENCY_OPTIONS = [...MOCK_CURRENCIES].sort((left, right) => left.label.localeCompare(right.label));
+
+export const CURRENCY_DETAILS = Object.fromEntries(
+  CURRENCY_OPTIONS.map((currency) => [currency.name, { label: currency.label, symbol: currency.symbol, code: currency.code }])
+);
 
 export const MOCK_CURRENCY_UPDATED_AT = '2026/04/05 15:13';
 
@@ -193,12 +234,11 @@ export const UNIT_CATEGORIES = {
     unit('Day', 'd', (v) => v * 86400, (v) => v / 86400),
     unit('Week', 'wk', (v) => v * 604800, (v) => v / 604800)
   ],
-  Currency: [
-    unit('US Dollar', 'USD', (v) => v, (v) => v),
-    unit('Euro', 'EUR', (v) => v / 0.8681, (v) => v * 0.8681),
-    unit('British Pound', 'GBP', (v) => v / 0.78, (v) => v * 0.78),
-    unit('Japanese Yen', 'JPY', (v) => v / 151.24, (v) => v * 151.24),
-    unit('Canadian Dollar', 'CAD', (v) => v / 1.35, (v) => v * 1.35)
-  ]
+  Currency: MOCK_CURRENCIES.map((currency) => unit(
+    currency.name,
+    currency.code,
+    (v) => v / currency.unitsPerUsd,
+    (v) => v * currency.unitsPerUsd
+  ))
 };
 export const MOCK_CURRENCY_NOTE = 'Mock reference rates for the standalone web demo, matching the repository developer-mode approach.';

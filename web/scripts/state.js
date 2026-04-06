@@ -74,7 +74,10 @@ function createInitialState() {
       years: 0,
       months: 0,
       days: 0,
-      result: null
+      result: null,
+      openModeMenu: false,
+      openPicker: null,
+      pickerMonth: todayString.slice(0, 7)
     },
     converter: {
       category: 'Length',

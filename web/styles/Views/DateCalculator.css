@@ -1,19 +1,395 @@
-.date-grid,
-.stats-grid {
+.date-native-view {
+  width: min(456px, 100%);
+  min-height: 100%;
+  padding: 0.15rem 0.75rem 0.75rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.date-native-select-field,
+.date-native-field,
+.date-native-offset-field {
   display: grid;
-  gap: 0.85rem;
+  gap: 0.55rem;
+}
+
+.date-native-body {
+  display: grid;
+  gap: 1.5rem;
   align-content: start;
 }
 
-.date-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.date-native-field-label {
+  color: var(--text-soft);
+  font-size: 0.92rem;
 }
 
-.date-grid .full,
-.stats-grid .full {
-  grid-column: 1 / -1;
+.date-native-select-wrap {
+  position: relative;
+  display: block;
+  width: fit-content;
+  min-width: 252px;
+  max-width: 100%;
 }
 
-.stats-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.date-native-select {
+  min-width: 100%;
+  padding: 0.55rem 2rem 0.55rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.05rem;
+  box-shadow: none;
+  appearance: none;
+}
+
+.date-native-select-button {
+  min-width: 100%;
+  min-height: 32px;
+  padding: 0 2rem 0 0.7rem;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.05rem;
+  text-align: left;
+}
+
+.date-native-select-button:hover,
+.date-native-select-button:focus-visible {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.date-native-select-button.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.date-native-select:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.date-native-select-caret {
+  position: absolute;
+  right: 0.7rem;
+  top: 50%;
+  transform: translateY(-52%);
+  color: var(--text-soft);
+  pointer-events: none;
+  font-size: 0.9rem;
+}
+
+.date-native-mode-menu {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  z-index: 9;
+  min-width: 242px;
+  padding: 4px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #313540 0%, #2a2e39 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.34);
+}
+
+.date-native-mode-option {
+  position: relative;
+  width: 100%;
+  min-height: 32px;
+  padding: 0 0.8rem 0 1rem;
+  border-radius: 4px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.94);
+  text-align: left;
+  font-size: 0.96rem;
+}
+
+.date-native-mode-option:hover,
+.date-native-mode-option:focus-visible {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.date-native-mode-option.selected {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.date-native-mode-option.selected::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.date-native-picker-shell {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  min-width: 152px;
+  max-width: 100%;
+}
+
+.date-native-picker-trigger {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 152px;
+  min-height: 32px;
+  padding: 0 0.55rem 0 0.7rem;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text);
+}
+
+.date-native-picker-trigger:hover,
+.date-native-picker-trigger:focus-visible {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.date-native-picker-value {
+  color: var(--text);
+  font-size: 1.02rem;
+  white-space: nowrap;
+}
+
+.date-native-picker-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--text-soft);
+}
+
+.date-native-picker-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.date-native-picker-trigger.active .date-native-picker-value {
+  color: #ffffff;
+}
+
+.date-native-picker-trigger.active {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.date-native-calendar {
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  left: 0;
+  z-index: 8;
+  width: min(294px, calc(100vw - 40px));
+  padding: 0.9rem 0.9rem 0.8rem;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #343844 0%, #2d313d 100%);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.date-native-calendar-header,
+.date-native-calendar-nav,
+.date-native-calendar-weekdays,
+.date-native-calendar-grid {
+  display: grid;
+}
+
+.date-native-calendar-header {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.date-native-calendar-month {
+  color: #ffffff;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.date-native-calendar-nav {
+  grid-auto-flow: column;
+  gap: 0.25rem;
+}
+
+.date-native-calendar-nav-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.date-native-calendar-nav-button:hover,
+.date-native-calendar-nav-button:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.date-native-calendar-weekdays,
+.date-native-calendar-grid {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.date-native-calendar-weekdays {
+  margin-bottom: 0.4rem;
+}
+
+.date-native-calendar-weekdays span {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.89rem;
+  font-weight: 600;
+  line-height: 2;
+}
+
+.date-native-calendar-day {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto;
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.98rem;
+}
+
+.date-native-calendar-day.outside {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.date-native-calendar-day:hover,
+.date-native-calendar-day:focus-visible,
+.date-native-calendar-day.today {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.date-native-calendar-day.selected {
+  background: #57b8f7;
+  color: #102131;
+}
+
+.date-native-radio-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.date-native-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.date-native-radio input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.date-native-radio-indicator {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--text) 55%, transparent);
+  box-shadow: inset 0 0 0 4px transparent;
+}
+
+.date-native-radio.active .date-native-radio-indicator {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 4px var(--accent);
+}
+
+.date-native-offset-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 84px));
+  gap: 0.75rem 0.7rem;
+}
+
+.date-native-offset-select-wrap {
+  min-width: 0;
+  width: 84px;
+}
+
+.date-native-offset-select-wrap .date-native-select {
+  width: 84px;
+  padding: 0.55rem 1.8rem 0.55rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-faint);
+  background: var(--button-default-bg);
+  font-size: 0.98rem;
+}
+
+.date-native-offset-select-wrap .date-native-select:focus {
+  border-color: rgba(88, 183, 237, 0.7);
+  box-shadow: 0 0 0 3px rgba(88, 183, 237, 0.18);
+}
+
+.date-native-offset-select-wrap .date-native-select-caret {
+  right: 0.7rem;
+}
+
+.date-native-result-block {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.date-native-result-label {
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+
+.date-native-result-primary {
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.date-native-result-date {
+  font-size: 1.1rem;
+}
+
+.date-native-result-secondary {
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 767px) {
+  .date-native-view {
+    width: 100%;
+    padding-left: 0.35rem;
+    padding-right: 0.35rem;
+  }
+
+  .date-native-offset-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .date-native-offset-select-wrap,
+  .date-native-offset-select-wrap .date-native-select {
+    width: 100%;
+  }
+
+  .date-native-calendar {
+    width: min(294px, calc(100vw - 24px));
+  }
 }

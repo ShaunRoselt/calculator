@@ -232,7 +232,7 @@ namespace CalculatorApp
         // Methods used by native bindings
         public static Visibility ShouldDisplayHistoryButton(bool isAlwaysOnTop, bool isProgrammer, Visibility dockPanelVisibility)
         {
-            return !isAlwaysOnTop && !isProgrammer && dockPanelVisibility == Visibility.Collapsed ? Visibility.Visible : Visibility.Collapsed;
+            return !isAlwaysOnTop && dockPanelVisibility == Visibility.Collapsed ? Visibility.Visible : Visibility.Collapsed;
         }
 
         private void OnLoaded(object sender, RoutedEventArgs e)
@@ -270,7 +270,6 @@ namespace CalculatorApp
             m_openHistoryFlyoutAutomationName = resProvider.GetResourceString("HistoryButton_Open");
             m_closeHistoryFlyoutAutomationName = resProvider.GetResourceString("HistoryButton_Close");
             m_dockPanelHistoryMemoryLists = resProvider.GetResourceString("DockPanel_HistoryMemoryLists");
-            m_dockPanelMemoryList = resProvider.GetResourceString("DockPanel_MemoryList");
             AutomationProperties.SetName(MemoryButton, m_openMemoryFlyoutAutomationName);
             AutomationProperties.SetName(HistoryButton, m_openHistoryFlyoutAutomationName);
             AutomationProperties.SetName(DockPanel, m_dockPanelHistoryMemoryLists);
@@ -326,7 +325,7 @@ namespace CalculatorApp
                     SetChildAsMemory();
                     MemoryButton.Visibility = Visibility.Collapsed;
 
-                    if (m_IsLastFlyoutMemory && !IsProgrammer)
+                    if (m_IsLastFlyoutMemory)
                     {
                         DockPivot.SelectedIndex = 1;
                     }
@@ -347,7 +346,7 @@ namespace CalculatorApp
                 CloseHistoryFlyout();
                 SetChildAsHistory();
 
-                if (!IsProgrammer && m_IsLastFlyoutHistory)
+                if (m_IsLastFlyoutHistory)
                 {
                     DockPivot.SelectedIndex = 0;
                 }
@@ -400,15 +399,6 @@ namespace CalculatorApp
             if (newValue)
             {
                 EnsureProgrammer();
-                m_pivotItem = (PivotItem)DockPivot.Items[0];
-                DockPivot.Items.RemoveAt(0);
-            }
-            else
-            {
-                if (m_pivotItem != null && DockPivot.Items.Count == 1)
-                {
-                    DockPivot.Items.Insert(0, m_pivotItem);
-                }
             }
 
             DockPivot.SelectedIndex = 0;
@@ -503,14 +493,7 @@ namespace CalculatorApp
                     AnimateWithoutResult.Begin();
                 }
             }
-            if (IsProgrammer)
-            {
-                AutomationProperties.SetName(DockPanel, m_dockPanelMemoryList);
-            }
-            else
-            {
-                AutomationProperties.SetName(DockPanel, m_dockPanelHistoryMemoryLists);
-            }
+            AutomationProperties.SetName(DockPanel, m_dockPanelHistoryMemoryLists);
         }
 
         private void OnErrorVisualStateCompleted(object sender, object e)
@@ -646,9 +629,6 @@ namespace CalculatorApp
         private string m_openHistoryFlyoutAutomationName;
         private string m_closeHistoryFlyoutAutomationName;
         private string m_dockPanelHistoryMemoryLists;
-        private string m_dockPanelMemoryList;
-
-        private Windows.UI.Xaml.Controls.PivotItem m_pivotItem;
         private Memory m_memory;
 
         private void HistoryFlyout_Opened(object sender, object args)
@@ -703,7 +683,7 @@ namespace CalculatorApp
 
         private void ToggleHistoryFlyout(object parameter)
         {
-            if (Model.IsProgrammer || DockPanel.Visibility == Visibility.Visible)
+            if (DockPanel.Visibility == Visibility.Visible)
             {
                 return;
             }

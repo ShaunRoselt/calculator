@@ -163,6 +163,19 @@ namespace CalculatorUITests
             Assert.AreEqual("30", page.CalculatorResults.GetCalculatorResultText());
         }
 
+        [TestMethod]
+        [Priority(0)]
+        public void SmokeTest_HistoryPanel()
+        {
+            page.StandardOperators.NumberPad.Input(5);
+            page.StandardOperators.PlusButton.Click();
+            page.StandardOperators.NumberPad.Input(3);
+            page.StandardOperators.EqualButton.Click();
+
+            var historyItems = page.HistoryPanel.GetAllHistoryListViewItems();
+            Assert.AreEqual("8", historyItems[0].GetValue());
+        }
+
         /// <summary>
         /// Checks for the highest value bit that should be enabled according to the Word size setting
         /// </summary>

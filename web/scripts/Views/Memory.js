@@ -1,8 +1,9 @@
-import { state } from '../state.js';
+import { getMemoryCollection } from '../state.js';
 import { escapeHtml } from '../utils.js';
+import { renderToolbarIcon } from './ViewIcons.js';
 
 export function renderMemoryToolbar() {
-  const memoryEmpty = state.memory.length === 0;
+  const memoryEmpty = getMemoryCollection().length === 0;
   return [
     renderMemoryButton('mc', 'MC', memoryEmpty),
     renderMemoryButton('mr', 'MR', memoryEmpty),
@@ -13,27 +14,29 @@ export function renderMemoryToolbar() {
 }
 
 export function renderMemoryList() {
-  if (!state.memory.length) {
+  const memory = getMemoryCollection();
+  if (!memory.length) {
     return `<div class="side-empty">There's nothing saved in memory.</div>`;
   }
   return `
     <div class="memory-list">
-      ${state.memory.map((entry, index) => `
+      ${memory.map((entry, index) => `
         <div class="memory-entry">
           <div class="memory-entry-row">
-            <div>
+            <button class="memory-surface" data-memory-recall="${index}" aria-label="Recall memory ${escapeHtml(entry.value)}">
               <div class="memory-value">${escapeHtml(entry.value)}</div>
-            </div>
+            </button>
             <div class="inline-toolbar">
-              <button class="memory-action" data-memory-recall="${index}">MR</button>
-              <button class="memory-action" data-memory-delete="${index}" data-tooltip="Clear memory item">✕</button>
+              <button class="memory-action" data-memory-clear-item="${index}" data-tooltip="Clear memory item">MC</button>
+              <button class="memory-action" data-memory-add="${index}" data-tooltip="Add current value to memory item">M+</button>
+              <button class="memory-action" data-memory-subtract="${index}" data-tooltip="Subtract current value from memory item">M-</button>
             </div>
           </div>
         </div>
       `).join('')}
     </div>
     <div class="side-footer">
-      <button class="memory-clear" data-memory-clear="true" data-tooltip="Clear all memory">Clear memory</button>
+      <button class="icon-button side-clear-button" data-memory-clear="true" data-tooltip="Clear all memory" aria-label="Clear memory">${renderToolbarIcon('delete')}</button>
     </div>
   `;
 }

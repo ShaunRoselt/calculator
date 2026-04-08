@@ -767,7 +767,8 @@ export function recallHistory(index) {
     state.converter = {
       ...state.converter,
       ...entry.converterState,
-      openCurrencyMenu: null
+      openConverterMenu: null,
+      converterKeyboardField: entry.converterState.lastEdited || 'from'
     };
     syncConverterValues(entry.converterState.lastEdited || 'from');
   } else if (state.mode === 'date') {

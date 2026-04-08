@@ -125,6 +125,10 @@ function renderCurrencyView(units, title) {
 }
 
 function renderConverterField(field, unit, value) {
+  const options = getUnitsForCategory(state.converter.category).map((unitOption) => ({
+    value: unitOption.name,
+    label: unitOption.name
+  }));
   return `
     <div class="converter-native-field ${state.converter.lastEdited === field ? 'active' : ''}">
       <button class="converter-native-field-activate" data-converter-active-field="${field}">
@@ -132,11 +136,7 @@ function renderConverterField(field, unit, value) {
           <span class="converter-native-amount">${escapeHtml(value || '0')}</span>
         </div>
       </button>
-      <label class="converter-native-select-wrap">
-        <select name="converter-${field === 'from' ? 'fromUnit' : 'toUnit'}" data-converter-field="${field}">
-          ${getUnitsForCategory(state.converter.category).map((unitOption) => `<option value="${unitOption.name}" ${unitOption.name === unit.name ? 'selected' : ''}>${unitOption.name}</option>`).join('')}
-        </select>
-      </label>
+      ${renderConverterSelect(field, unit.name, options, `${field === 'from' ? 'From' : 'To'} unit`, `${field === 'from' ? 'From' : 'To'} unit options`)}
     </div>
   `;
 }
@@ -170,7 +170,10 @@ function getFormattedConverterMetaValue(value) {
 }
 
 function renderCurrencyField(field, meta, value) {
-  const menuOpen = state.converter.openCurrencyMenu === field;
+  const options = CURRENCY_OPTIONS.map((currency) => ({
+    value: currency.name,
+    label: currency.label
+  }));
   return `
     <div class="currency-field ${state.converter.lastEdited === field ? 'active' : ''}">
       <button class="currency-field-activate" data-converter-active-field="${field}">
@@ -179,36 +182,43 @@ function renderCurrencyField(field, meta, value) {
           <span class="currency-amount">${escapeHtml(value || '0')}</span>
         </div>
       </button>
-      <label class="currency-select-wrap">
-        <button type="button" class="currency-select-button ${menuOpen ? 'active' : ''}" data-currency-menu-toggle="${field}" aria-haspopup="listbox" aria-expanded="${menuOpen ? 'true' : 'false'}" aria-label="${field === 'from' ? 'From currency' : 'To currency'}">
-          <span class="currency-select-label">${escapeHtml(meta.label)}</span>
-          <span class="currency-select-caret" aria-hidden="true">⌄</span>
-        </button>
-        ${menuOpen ? renderCurrencyMenu(field) : ''}
-      </label>
+      ${renderConverterSelect(field, meta.label, options, `${field === 'from' ? 'From' : 'To'} currency`, `${field === 'from' ? 'From' : 'To'} currency options`)}
     </div>
   `;
 }
 
-function renderCurrencyMenu(field) {
+function renderConverterSelect(field, selectedLabel, options, buttonLabel, menuLabel) {
+  const menuOpen = state.converter.openConverterMenu === field;
+  return `
+    <label class="converter-select-wrap">
+      <button type="button" class="converter-select-button ${menuOpen ? 'active' : ''}" data-converter-menu-toggle="${field}" aria-haspopup="listbox" aria-expanded="${menuOpen ? 'true' : 'false'}" aria-label="${buttonLabel}">
+        <span class="converter-select-label">${escapeHtml(selectedLabel)}</span>
+        <span class="converter-select-caret" aria-hidden="true">⌄</span>
+      </button>
+      ${menuOpen ? renderConverterMenu(field, options, menuLabel) : ''}
+    </label>
+  `;
+}
+
+function renderConverterMenu(field, options, menuLabel) {
   const currentValue = field === 'from' ? state.converter.fromUnit : state.converter.toUnit;
   return `
-    <div class="currency-select-menu" role="listbox" aria-label="${field === 'from' ? 'From currency options' : 'To currency options'}">
-      ${CURRENCY_OPTIONS.map((currency) => renderCurrencyMenuOption(field, currency, currency.name === currentValue)).join('')}
+    <div class="converter-select-menu" role="listbox" aria-label="${menuLabel}">
+      ${options.map((option) => renderConverterMenuOption(field, option, option.value === currentValue)).join('')}
     </div>
   `;
 }
 
-function renderCurrencyMenuOption(field, currency, selected) {
+function renderConverterMenuOption(field, option, selected) {
   return `
     <button
       type="button"
-      class="currency-select-option ${selected ? 'selected' : ''}"
-      data-currency-unit-select="${field}"
-      data-currency-value="${currency.name}"
+      class="converter-select-option ${selected ? 'selected' : ''}"
+      data-converter-option-select="${field}"
+      data-converter-option-value="${option.value}"
       role="option"
       aria-selected="${selected ? 'true' : 'false'}"
-    >${escapeHtml(currency.label)}</button>
+    >${escapeHtml(option.label)}</button>
   `;
 }
 

@@ -36,14 +36,14 @@ export function render() {
     </div>
   `;
   prepareTooltipTargets(appRoot);
-  syncCurrencyMenuScroll();
+  syncConverterMenuScroll();
   drawGraph();
 }
 
-function syncCurrencyMenuScroll() {
+function syncConverterMenuScroll() {
   requestAnimationFrame(() => {
-    const selectedOption = appRoot.querySelector('.currency-select-option.selected');
-    const menu = selectedOption?.closest('.currency-select-menu');
+    const selectedOption = appRoot.querySelector('.converter-select-option.selected');
+    const menu = selectedOption?.closest('.converter-select-menu');
     if (!(selectedOption instanceof HTMLElement) || !(menu instanceof HTMLElement)) {
       return;
     }

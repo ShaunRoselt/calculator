@@ -160,12 +160,12 @@ function createInitialState() {
       fromValue: '1',
       toValue: '',
       lastEdited: 'from',
-      openCurrencyMenu: null,
+      openConverterMenu: null,
       currencyRates: { ...DEFAULT_CURRENCY_RATES },
       currencyUpdatedAt: MOCK_CURRENCY_UPDATED_AT,
       currencyUpdateMessage: MOCK_CURRENCY_NOTE,
       isUpdatingRates: false,
-      currencyKeyboardField: 'from'
+      converterKeyboardField: 'from'
     },
     graphing: createGraphingState()
   };

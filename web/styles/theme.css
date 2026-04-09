@@ -20,6 +20,50 @@
   --surface-active: rgba(255, 255, 255, 0.08);
   --border-subtle: rgba(255, 255, 255, 0.05);
   --border-faint: rgba(255, 255, 255, 0.025);
+  --focus-ring: rgba(88, 183, 237, 0.75);
+  --focus-border: rgba(88, 183, 237, 0.7);
+  --focus-glow: rgba(88, 183, 237, 0.18);
+  --scrim: rgba(0, 0, 0, 0.42);
+  --shadow-menu: 0 18px 36px rgba(0, 0, 0, 0.35);
+  --tooltip-bg: rgba(47, 48, 52, 0.98);
+  --tooltip-text: #ffffff;
+  --tooltip-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+  --noscript-bg: rgba(35, 36, 45, 0.98);
+  --accent-surface: rgba(88, 183, 237, 0.09);
+  --accent-border: rgba(88, 183, 237, 0.14);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.24);
+  --scrollbar-color: rgba(255, 255, 255, 0.32) transparent;
+  --toggle-group-bg: rgba(22, 24, 32, 0.92);
+  --toggle-group-ring: rgba(128, 216, 255, 0.18);
+  --toggle-group-text: rgba(232, 239, 247, 0.92);
+  --toggle-active-bg: #56c7ff;
+  --toggle-active-hover-bg: #69d0ff;
+  --toggle-active-text: #07213a;
+  --graph-canvas-bg: #f8f7f6;
+  --graph-panel-bg: #2f3034;
+  --graph-panel-text: #f5f5f5;
+  --graph-panel-hover-bg: #3a3c40;
+  --graph-panel-active-bg: #4a4d54;
+  --graph-editor-bg: #202126;
+  --graph-input-bg: #2d2e33;
+  --graph-input-focus-bg: #1f2024;
+  --graph-input-add-bg: rgba(0, 0, 0, 0.16);
+  --graph-input-add-border: rgba(255, 255, 255, 0.24);
+  --graph-input-focus-border: rgba(255, 255, 255, 0.44);
+  --graph-hidden-input-bg: #23252a;
+  --graph-hidden-input-border: rgba(255, 255, 255, 0.18);
+  --graph-hidden-badge-bg: rgba(255, 255, 255, 0.2);
+  --graph-hidden-badge-hover-bg: rgba(255, 255, 255, 0.24);
+  --graph-hidden-badge-text: rgba(244, 244, 245, 0.7);
+  --graph-add-badge-bg: rgba(255, 255, 255, 0.28);
+  --graph-add-badge-text: rgba(244, 244, 245, 0.78);
+  --graph-style-panel-bg: #2a2c31;
+  --graph-style-select-bg: #3b3d43;
+  --graph-swatch-ring: rgba(255, 255, 255, 0.04);
+  --graph-swatch-selected-ring: 0 0 0 2px #ffffff, 0 0 0 4px rgba(255, 255, 255, 0.22);
+  --graph-active-ring: inset 0 0 0 1px rgba(255, 255, 255, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.16);
+  --graph-success: #16c35b;
+  --converter-menu-bg: linear-gradient(180deg, #2f3440 0%, #292d38 100%);
   --button-default-bg: #353841;
   --button-default-hover-bg: #3b3e47;
   --button-function-bg: #353841;
@@ -54,6 +98,50 @@
   --surface-active: rgba(0, 0, 0, 0.08);
   --border-subtle: rgba(0, 0, 0, 0.1);
   --border-faint: rgba(0, 0, 0, 0.07);
+  --focus-ring: rgba(15, 108, 189, 0.65);
+  --focus-border: rgba(15, 108, 189, 0.6);
+  --focus-glow: rgba(15, 108, 189, 0.14);
+  --scrim: rgba(0, 0, 0, 0.32);
+  --shadow-menu: 0 18px 36px rgba(0, 0, 0, 0.14);
+  --tooltip-bg: rgba(44, 44, 44, 0.96);
+  --tooltip-text: #ffffff;
+  --tooltip-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  --noscript-bg: rgba(255, 255, 255, 0.96);
+  --accent-surface: rgba(15, 108, 189, 0.06);
+  --accent-border: rgba(15, 108, 189, 0.1);
+  --scrollbar-thumb: rgba(0, 0, 0, 0.2);
+  --scrollbar-color: rgba(0, 0, 0, 0.24) transparent;
+  --toggle-group-bg: rgba(255, 255, 255, 0.94);
+  --toggle-group-ring: rgba(0, 0, 0, 0.1);
+  --toggle-group-text: #444444;
+  --toggle-active-bg: var(--accent);
+  --toggle-active-hover-bg: var(--accent-strong);
+  --toggle-active-text: #ffffff;
+  --graph-canvas-bg: #f8f7f6;
+  --graph-panel-bg: var(--panel);
+  --graph-panel-text: var(--text);
+  --graph-panel-hover-bg: var(--panel-soft);
+  --graph-panel-active-bg: var(--panel-strong);
+  --graph-editor-bg: var(--window-bg-alt);
+  --graph-input-bg: var(--panel);
+  --graph-input-focus-bg: var(--panel);
+  --graph-input-add-bg: var(--panel);
+  --graph-input-add-border: var(--border-faint);
+  --graph-input-focus-border: var(--accent);
+  --graph-hidden-input-bg: var(--panel-alt);
+  --graph-hidden-input-border: var(--border-faint);
+  --graph-hidden-badge-bg: var(--surface-active);
+  --graph-hidden-badge-hover-bg: var(--surface-hover);
+  --graph-hidden-badge-text: var(--text-soft);
+  --graph-add-badge-bg: var(--surface-active);
+  --graph-add-badge-text: var(--text-soft);
+  --graph-style-panel-bg: var(--panel);
+  --graph-style-select-bg: var(--panel-alt);
+  --graph-swatch-ring: rgba(0, 0, 0, 0.06);
+  --graph-swatch-selected-ring: 0 0 0 2px var(--accent), 0 0 0 4px rgba(15, 108, 189, 0.18);
+  --graph-active-ring: inset 0 0 0 1px var(--border-subtle), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  --graph-success: #107c41;
+  --converter-menu-bg: var(--panel);
   --button-default-bg: #f3f3f3;
   --button-default-hover-bg: #e6e6e6;
   --button-function-bg: #ececec;
@@ -98,7 +186,7 @@ button {
 }
 
 button:focus-visible {
-  outline: 2px solid rgba(88, 183, 237, 0.75);
+  outline: 2px solid var(--focus-ring);
   outline-offset: -2px;
 }
 
@@ -109,8 +197,8 @@ input[type="text"] {
   width: 100%;
   padding: 0.9rem 1rem;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-hover);
   color: var(--text);
   outline: none;
 }
@@ -123,8 +211,8 @@ select optgroup {
 
 select:focus,
 input:focus {
-  border-color: rgba(88, 183, 237, 0.7);
-  box-shadow: 0 0 0 3px rgba(88, 183, 237, 0.18);
+  border-color: var(--focus-border);
+  box-shadow: 0 0 0 3px var(--focus-glow);
 }
 
 #app {
@@ -139,9 +227,9 @@ input:focus {
   max-width: 460px;
   margin: 10vh auto;
   padding: 2rem;
-  background: rgba(35, 36, 45, 0.98);
+  background: var(--noscript-bg);
   border-radius: 24px;
-  color: white;
+  color: var(--text);
 }
 
 .app-tooltip {
@@ -150,11 +238,11 @@ input:focus {
   max-width: 240px;
   padding: 0.35rem 0.55rem;
   border-radius: 4px;
-  background: rgba(47, 48, 52, 0.98);
-  color: #ffffff;
+  background: var(--tooltip-bg);
+  color: var(--tooltip-text);
   font-size: 0.8rem;
   line-height: 1.2;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+  box-shadow: var(--tooltip-shadow);
   pointer-events: none;
   opacity: 0;
   transform: translateY(2px);

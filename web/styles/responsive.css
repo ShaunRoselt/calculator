@@ -12,7 +12,7 @@
     position: absolute;
     inset: 0 0 0 auto;
     width: min(100%, 360px);
-    border-left: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 1px solid var(--border-subtle);
     border-radius: 0;
     z-index: 4;
     transform: translateX(100%);

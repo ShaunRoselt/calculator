@@ -6,6 +6,10 @@ function unit(name, symbol, toBase, fromBase) {
   return { name, symbol, toBase, fromBase };
 }
 
+function factorUnit(name, symbol, factor) {
+  return unit(name, symbol, (v) => v * factor, (v) => v / factor);
+}
+
 export const STORAGE_KEYS = {
   history: 'windows-calculator-web-history',
   memory: 'windows-calculator-web-memory',
@@ -166,19 +170,41 @@ export const PROGRAMMER_BUTTONS = [
 
 export const UNIT_CATEGORIES = {
   Length: [
-    unit('Meter', 'm', (v) => v, (v) => v),
-    unit('Kilometer', 'km', (v) => v * 1000, (v) => v / 1000),
-    unit('Centimeter', 'cm', (v) => v / 100, (v) => v * 100),
-    unit('Mile', 'mi', (v) => v * 1609.344, (v) => v / 1609.344),
-    unit('Foot', 'ft', (v) => v * 0.3048, (v) => v / 0.3048),
-    unit('Inch', 'in', (v) => v * 0.0254, (v) => v / 0.0254)
+    factorUnit('Angstroms', 'A', 0.0000000001),
+    factorUnit('Nanometers', 'nm', 0.000000001),
+    factorUnit('Microns', 'µm', 0.000001),
+    factorUnit('Millimeters', 'mm', 0.001),
+    factorUnit('Centimeters', 'cm', 0.01),
+    factorUnit('Meters', 'm', 1),
+    factorUnit('Kilometers', 'km', 1000),
+    factorUnit('Inches', 'in', 0.0254),
+    factorUnit('Feet', 'ft', 0.3048),
+    factorUnit('Yards', 'yd', 0.9144),
+    factorUnit('Miles', 'mi', 1609.344),
+    factorUnit('Nautical miles', 'nmi', 1852),
+    factorUnit('paperclips', 'paperclips', 0.035052),
+    factorUnit('hands', 'hands', 0.18669),
+    factorUnit('jumbo jets', 'jumbo jets', 76)
   ],
   Mass: [
-    unit('Kilogram', 'kg', (v) => v, (v) => v),
-    unit('Gram', 'g', (v) => v / 1000, (v) => v * 1000),
-    unit('Pound', 'lb', (v) => v * 0.45359237, (v) => v / 0.45359237),
-    unit('Ounce', 'oz', (v) => v * 0.028349523125, (v) => v / 0.028349523125),
-    unit('Metric Ton', 't', (v) => v * 1000, (v) => v / 1000)
+    factorUnit('Carats', 'ct', 0.0002),
+    factorUnit('Milligrams', 'mg', 0.000001),
+    factorUnit('Centigrams', 'cg', 0.00001),
+    factorUnit('Decigrams', 'dg', 0.0001),
+    factorUnit('Grams', 'g', 0.001),
+    factorUnit('Dekagrams', 'dag', 0.01),
+    factorUnit('Hectograms', 'hg', 0.1),
+    factorUnit('Kilograms', 'kg', 1),
+    factorUnit('Metric tonnes', 't', 1000),
+    factorUnit('Ounces', 'oz', 0.028349523125),
+    factorUnit('Pounds', 'lb', 0.45359237),
+    factorUnit('Stone', 'st', 6.35029318),
+    factorUnit('Short tons (US)', 'ton (US)', 907.18474),
+    factorUnit('Long tons (UK)', 'ton (UK)', 1016.0469088),
+    factorUnit('snowflakes', 'snowflakes', 0.000002),
+    factorUnit('soccer balls', 'soccer balls', 0.4325),
+    factorUnit('elephants', 'elephants', 4000),
+    factorUnit('whales', 'whales', 90000)
   ],
   Temperature: [
     unit('Celsius', '°C', (v) => v, (v) => v),
@@ -211,54 +237,119 @@ export const UNIT_CATEGORIES = {
     unit('swimming pools', 'swimming pools', (v) => v * 3_750_000, (v) => v / 3_750_000)
   ],
   Area: [
-    unit('Square Meter', 'm²', (v) => v, (v) => v),
-    unit('Square Kilometer', 'km²', (v) => v * 1_000_000, (v) => v / 1_000_000),
-    unit('Square Foot', 'ft²', (v) => v * 0.09290304, (v) => v / 0.09290304),
-    unit('Acre', 'ac', (v) => v * 4046.8564224, (v) => v / 4046.8564224)
+    factorUnit('Square millimeters', 'mm²', 0.000001),
+    factorUnit('Square centimeters', 'cm²', 0.0001),
+    factorUnit('Square meters', 'm²', 1),
+    factorUnit('Hectares', 'ha', 10000),
+    factorUnit('Square kilometers', 'km²', 1000000),
+    factorUnit('Square inches', 'in²', 0.00064516),
+    factorUnit('Square feet', 'ft²', 0.09290304),
+    factorUnit('Square yards', 'yd²', 0.83612736),
+    factorUnit('Acres', 'ac', 4046.8564224),
+    factorUnit('Square miles', 'mi²', 2589988.110336),
+    factorUnit('hands', 'hands', 0.012516104),
+    factorUnit('sheets of paper', 'sheets of paper', 0.06032246),
+    factorUnit('soccer fields', 'soccer fields', 10869.66),
+    factorUnit('castles', 'castles', 100000),
+    factorUnit('Pyeong', 'Pyeong', 400 / 121)
   ],
   Speed: [
-    unit('Meters per second', 'm/s', (v) => v, (v) => v),
-    unit('Kilometers per hour', 'km/h', (v) => v / 3.6, (v) => v * 3.6),
-    unit('Miles per hour', 'mph', (v) => v * 0.44704, (v) => v / 0.44704),
-    unit('Knot', 'kn', (v) => v * 0.514444, (v) => v / 0.514444)
+    factorUnit('Centimeters per second', 'cm/s', 0.01),
+    factorUnit('Meters per second', 'm/s', 1),
+    factorUnit('Kilometers per hour', 'km/h', 0.2777777777777778),
+    factorUnit('Feet per second', 'ft/s', 0.3048),
+    factorUnit('Miles per hour', 'mph', 0.447),
+    factorUnit('Knots', 'kn', 0.5144),
+    factorUnit('Mach', 'M', 340.3),
+    factorUnit('turtles', 'turtles', 0.0894),
+    factorUnit('horses', 'horses', 20.115),
+    factorUnit('jets', 'jets', 245.85)
   ],
   Power: [
-    unit('Watt', 'W', (v) => v, (v) => v),
-    unit('Kilowatt', 'kW', (v) => v * 1000, (v) => v / 1000),
-    unit('Horsepower', 'hp', (v) => v * 745.699872, (v) => v / 745.699872),
-    unit('BTU per hour', 'BTU/h', (v) => v * 0.29307107, (v) => v / 0.29307107)
+    factorUnit('Watts', 'W', 1),
+    factorUnit('Kilowatts', 'kW', 1000),
+    factorUnit('Horsepower (US)', 'hp (US)', 745.6998715822702),
+    factorUnit('Foot-pounds/minute', 'ft•lb/min', 0.0225969658055233),
+    factorUnit('BTUs/minute', 'BTU/min', 17.58426666666667),
+    factorUnit('light bulbs', 'light bulbs', 60),
+    factorUnit('horses', 'horses', 745.7),
+    factorUnit('train engines', 'train engines', 2982799.486329081)
   ],
   Energy: [
-    unit('Joule', 'J', (v) => v, (v) => v),
-    unit('Kilojoule', 'kJ', (v) => v * 1000, (v) => v / 1000),
-    unit('Calorie', 'cal', (v) => v * 4.184, (v) => v / 4.184),
-    unit('Kilowatt hour', 'kWh', (v) => v * 3_600_000, (v) => v / 3_600_000)
+    factorUnit('Thermal calories', 'cal', 4.184),
+    factorUnit('Food calories', 'kcal', 4184),
+    factorUnit('British thermal units', 'BTU', 1055.056),
+    factorUnit('Kilojoules', 'kJ', 1000),
+    factorUnit('Kilowatt-hours', 'kWh', 3600000),
+    factorUnit('Electron volts', 'eV', 0.0000000000000000001602176565),
+    factorUnit('Joules', 'J', 1),
+    factorUnit('Foot-pounds', 'ft•lb', 1.3558179483314),
+    factorUnit('batteries', 'batteries', 9000),
+    factorUnit('bananas', 'bananas', 439614),
+    factorUnit('slices of cake', 'slices of cake', 1046700)
   ],
   Data: [
-    unit('Byte', 'B', (v) => v, (v) => v),
-    unit('Kilobyte', 'KB', (v) => v * 1024, (v) => v / 1024),
-    unit('Megabyte', 'MB', (v) => v * 1024 ** 2, (v) => v / 1024 ** 2),
-    unit('Gigabyte', 'GB', (v) => v * 1024 ** 3, (v) => v / 1024 ** 3),
-    unit('Bit', 'bit', (v) => v / 8, (v) => v * 8)
+    factorUnit('Bits', 'b', 0.125),
+    factorUnit('Nibble', 'nybl', 0.5),
+    factorUnit('Bytes', 'B', 1),
+    factorUnit('Kilobits', 'Kb', 125),
+    factorUnit('Kibibits', 'Ki', 128),
+    factorUnit('Kilobytes', 'KB', 1000),
+    factorUnit('Kibibytes', 'KiB', 1024),
+    factorUnit('Megabits', 'Mb', 125000),
+    factorUnit('Mebibits', 'Mi', 131072),
+    factorUnit('Megabytes', 'MB', 1000000),
+    factorUnit('Mebibytes', 'MiB', 1048576),
+    factorUnit('Gigabits', 'Gb', 125000000),
+    factorUnit('Gibibits', 'Gi', 134217728),
+    factorUnit('Gigabytes', 'GB', 1000000000),
+    factorUnit('Gibibytes', 'GiB', 1073741824),
+    factorUnit('Terabits', 'Tb', 125000000000),
+    factorUnit('Tebibits', 'Ti', 137438953472),
+    factorUnit('Terabytes', 'TB', 1000000000000),
+    factorUnit('Tebibytes', 'TiB', 1099511627776),
+    factorUnit('Petabits', 'Pb', 125000000000000),
+    factorUnit('Pebibits', 'Pi', 140737488355328),
+    factorUnit('Petabytes', 'PB', 1000000000000000),
+    factorUnit('Pebibytes', 'PiB', 1125899906842624),
+    factorUnit('Exabits', 'E', 125000000000000000),
+    factorUnit('Exbibits', 'Ei', 144115188075855870),
+    factorUnit('Exabytes', 'EB', 1000000000000000000),
+    factorUnit('Exbibytes', 'EiB', 1152921504606847000),
+    factorUnit('Zetabits', 'Z', 1.25e+20),
+    factorUnit('Zebibits', 'Zi', 1.4757395258967641e+20),
+    factorUnit('Zetabytes', 'ZB', 1e+21),
+    factorUnit('Zebibytes', 'ZiB', 1.1805916207174113e+21),
+    factorUnit('Yottabits', 'Y', 1.25e+23),
+    factorUnit('Yobibits', 'Yi', 1.5111572745182865e+23),
+    factorUnit('Yottabytes', 'YB', 1e+24),
+    factorUnit('Yobibytes', 'YiB', 1.2089258196146292e+24),
+    factorUnit('floppy disks', 'floppy disks', 1474560),
+    factorUnit('CDs', 'CDs', 700000000),
+    factorUnit('DVDs', 'DVDs', 4700000000)
   ],
   Pressure: [
-    unit('Pascal', 'Pa', (v) => v, (v) => v),
-    unit('Kilopascal', 'kPa', (v) => v * 1000, (v) => v / 1000),
-    unit('Bar', 'bar', (v) => v * 100000, (v) => v / 100000),
-    unit('PSI', 'psi', (v) => v * 6894.757293, (v) => v / 6894.757293)
+    factorUnit('Atmospheres', 'atm', 101325),
+    factorUnit('Bars', 'ba', 100000),
+    factorUnit('Kilopascals', 'kPa', 1000),
+    factorUnit('Millimeters of mercury ', 'mmHg', 133.322387415),
+    factorUnit('Pascals', 'Pa', 1),
+    factorUnit('Pounds per square inch', 'psi', 6894.757293168)
   ],
   Angle: [
-    unit('Degree', '°', (v) => v, (v) => v),
-    unit('Radian', 'rad', (v) => v * 180 / Math.PI, (v) => v * Math.PI / 180),
-    unit('Gradian', 'grad', (v) => v * 0.9, (v) => v / 0.9),
-    unit('Minute of arc', 'arcmin', (v) => v / 60, (v) => v * 60)
+    unit('Degrees', 'deg', (v) => v, (v) => v),
+    unit('Radians', 'rad', (v) => v * 180 / Math.PI, (v) => v * Math.PI / 180),
+    unit('Gradians', 'grad', (v) => v * 0.9, (v) => v / 0.9)
   ],
   Time: [
-    unit('Second', 's', (v) => v, (v) => v),
-    unit('Minute', 'min', (v) => v * 60, (v) => v / 60),
-    unit('Hour', 'h', (v) => v * 3600, (v) => v / 3600),
-    unit('Day', 'd', (v) => v * 86400, (v) => v / 86400),
-    unit('Week', 'wk', (v) => v * 604800, (v) => v / 604800)
+    factorUnit('Microseconds', 'µs', 0.000001),
+    factorUnit('Milliseconds', 'ms', 0.001),
+    factorUnit('Seconds', 's', 1),
+    factorUnit('Minutes', 'min', 60),
+    factorUnit('Hours', 'hr', 3600),
+    factorUnit('Days', 'd', 86400),
+    factorUnit('Weeks', 'wk', 604800),
+    factorUnit('Years', 'yr', 31557600)
   ],
   Currency: MOCK_CURRENCIES.map((currency) => unit(
     currency.name,

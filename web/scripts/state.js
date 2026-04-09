@@ -155,8 +155,8 @@ function createInitialState() {
     },
     converter: {
       category: 'Length',
-      fromUnit: 'Meter',
-      toUnit: 'Foot',
+      fromUnit: 'Meters',
+      toUnit: 'Feet',
       fromValue: '1',
       toValue: '',
       lastEdited: 'from',

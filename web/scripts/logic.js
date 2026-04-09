@@ -321,7 +321,7 @@ function appendScientificDigit(digit) {
     calc.expression = '';
     calc.justEvaluated = false;
   }
-  if (needsImplicitMultiply(calc.expression)) {
+  if (needsImplicitMultiplyBeforeScientificNumericToken(calc.expression)) {
     calc.expression += ' * ';
   }
   calc.expression += digit;
@@ -346,7 +346,7 @@ function appendScientificDecimal() {
   if (token.includes('.')) {
     return;
   }
-  if (needsImplicitMultiply(calc.expression)) {
+  if (needsImplicitMultiplyBeforeScientificNumericToken(calc.expression)) {
     calc.expression += ' * ';
   }
   calc.expression += /\d$/.test(calc.expression) ? '.' : '0.';
@@ -623,8 +623,8 @@ function computeProgrammerBinary(left, right, operator) {
       case 'and': return left & right;
       case 'or': return left | right;
       case 'xor': return left ^ right;
-      case 'lsh': return left << Number(right);
-      case 'rsh': return left >> Number(right);
+      case 'lsh': return left << right;
+      case 'rsh': return left >> right;
       default: return right;
     }
   } catch {
@@ -1097,6 +1097,11 @@ function scientificDisplayFromExpression(expression) {
 function lastScientificToken(expression) {
   const matches = expression.match(/(pi|e|-?\d*\.?\d+)$/);
   return matches?.[0] ?? '';
+}
+
+function needsImplicitMultiplyBeforeScientificNumericToken(expression) {
+  const trimmed = expression.trim();
+  return !!trimmed && /(?:\)|pi|e)$/.test(trimmed);
 }
 
 function needsImplicitMultiply(expression) {

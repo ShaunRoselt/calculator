@@ -59,12 +59,12 @@
 
 .date-native-select-button:hover,
 .date-native-select-button:focus-visible {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--surface-hover);
 }
 
 .date-native-select-button.active {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  background: var(--surface-active);
 }
 
 .date-native-select:focus {
@@ -90,9 +90,9 @@
   min-width: 242px;
   padding: 4px;
   border-radius: 8px;
-  background: linear-gradient(180deg, #313540 0%, #2a2e39 100%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.34);
+  background: var(--panel);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-menu);
 }
 
 .date-native-mode-option {
@@ -102,19 +102,19 @@
   padding: 0 0.8rem 0 1rem;
   border-radius: 4px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.94);
+  color: var(--text);
   text-align: left;
   font-size: 0.96rem;
 }
 
 .date-native-mode-option:hover,
 .date-native-mode-option:focus-visible {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--surface-hover);
 }
 
 .date-native-mode-option.selected {
-  background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
+  background: var(--surface-active);
+  color: var(--text);
 }
 
 .date-native-mode-option.selected::before {
@@ -151,7 +151,7 @@
 
 .date-native-picker-trigger:hover,
 .date-native-picker-trigger:focus-visible {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--surface-hover);
 }
 
 .date-native-picker-value {
@@ -172,11 +172,11 @@
 }
 
 .date-native-picker-trigger.active .date-native-picker-value {
-  color: #ffffff;
+  color: var(--text);
 }
 
 .date-native-picker-trigger.active {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--surface-active);
 }
 
 .date-native-calendar {
@@ -187,9 +187,9 @@
   width: min(294px, calc(100vw - 40px));
   padding: 0.9rem 0.9rem 0.8rem;
   border-radius: 8px;
-  background: linear-gradient(180deg, #343844 0%, #2d313d 100%);
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.42);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--panel);
+  box-shadow: var(--shadow-menu);
+  border: 1px solid var(--border-subtle);
 }
 
 .date-native-calendar-header,
@@ -207,7 +207,7 @@
 }
 
 .date-native-calendar-month {
-  color: #ffffff;
+  color: var(--text);
   font-size: 1.02rem;
   font-weight: 600;
 }
@@ -222,14 +222,14 @@
   height: 24px;
   border-radius: 999px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--text-soft);
   font-size: 1rem;
   line-height: 1;
 }
 
 .date-native-calendar-nav-button:hover,
 .date-native-calendar-nav-button:focus-visible {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--surface-hover);
 }
 
 .date-native-calendar-weekdays,
@@ -243,7 +243,7 @@
 
 .date-native-calendar-weekdays span {
   text-align: center;
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--text);
   font-size: 0.89rem;
   font-weight: 600;
   line-height: 2;
@@ -255,23 +255,23 @@
   margin: 0 auto;
   border-radius: 999px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--text);
   font-size: 0.98rem;
 }
 
 .date-native-calendar-day.outside {
-  color: rgba(255, 255, 255, 0.48);
+  color: var(--text-faint);
 }
 
 .date-native-calendar-day:hover,
 .date-native-calendar-day:focus-visible,
 .date-native-calendar-day.today {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--surface-hover);
 }
 
 .date-native-calendar-day.selected {
-  background: #57b8f7;
-  color: #102131;
+  background: var(--accent);
+  color: var(--button-equals-text);
 }
 
 .date-native-radio-row {
@@ -328,8 +328,8 @@
 }
 
 .date-native-offset-select-wrap .date-native-select:focus {
-  border-color: rgba(88, 183, 237, 0.7);
-  box-shadow: 0 0 0 3px rgba(88, 183, 237, 0.18);
+  border-color: var(--focus-border);
+  box-shadow: 0 0 0 3px var(--focus-glow);
 }
 
 .date-native-offset-select-wrap .date-native-select-caret {

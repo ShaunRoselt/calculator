@@ -17,8 +17,8 @@
   padding: 1rem;
   min-height: 64px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--surface-hover);
+  border: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -163,10 +163,10 @@
   overflow-y: auto;
   padding: 7px;
   border-radius: 14px;
-  background: linear-gradient(180deg, #2f3440 0%, #292d38 100%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 22px 42px rgba(0, 0, 0, 0.44);
-  scrollbar-color: rgba(255, 255, 255, 0.32) transparent;
+  background: var(--converter-menu-bg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-menu);
+  scrollbar-color: var(--scrollbar-color);
   scrollbar-width: thin;
 }
 
@@ -181,7 +181,7 @@
 .converter-select-menu::-webkit-scrollbar-thumb {
   border: 2px solid transparent;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.24);
+  background: var(--scrollbar-thumb);
   background-clip: padding-box;
 }
 
@@ -192,7 +192,7 @@
   padding: 0 12px 0 16px;
   border-radius: 8px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.96);
+  color: var(--text);
   text-align: left;
   font-size: 0.93rem;
   line-height: 1.35;
@@ -200,11 +200,11 @@
 
 .converter-select-option:hover,
 .converter-select-option:focus-visible {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--surface-hover);
 }
 
 .converter-select-option.selected {
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--surface-active);
 }
 
 .converter-select-option.selected::before {
@@ -215,7 +215,7 @@
   bottom: 6px;
   width: 3px;
   border-radius: 999px;
-  background: #63b4ff;
+  background: var(--accent);
 }
 
 .converter-native-meta {

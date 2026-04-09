@@ -50,6 +50,10 @@ import {
 
 const PAGE_QUERY_PARAM = 'page';
 const CURRENCY_TYPEAHEAD_RESET_MS = 900;
+const THEME_META_COLORS = {
+  dark: '#1f2025',
+  light: '#ececec'
+};
 
 let converterTypeaheadBuffer = '';
 let converterTypeaheadTimestamp = 0;
@@ -145,6 +149,7 @@ function applyTheme() {
     ? (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
     : state.settings.theme;
   document.documentElement.dataset.theme = effectiveTheme;
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', THEME_META_COLORS[effectiveTheme] ?? THEME_META_COLORS.dark);
 }
 
 function handleResize() {

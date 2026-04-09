@@ -79,6 +79,12 @@ npm start
 
 Then open `http://127.0.0.1:4173/index.html`.
 
+### Install as a PWA
+
+Run the standalone web version over `http://127.0.0.1:4173` or another secure-origin deployment and use the browser install prompt to add it as an app.
+
+The web app now ships with a manifest, install icons, and a service worker that caches the standalone shell for repeat launches and offline use.
+
 ### Validate the standalone web version
 
 ```bash

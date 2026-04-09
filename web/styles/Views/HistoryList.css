@@ -12,12 +12,12 @@
   background: var(--panel-alt);
   color: var(--text);
   text-align: left;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid var(--border-subtle);
 }
 
 .history-entry:hover,
 .history-entry:focus-visible {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--surface-hover);
 }
 
 .history-expression {
@@ -44,7 +44,7 @@
 
 .app-shell.layout-desktop .history-entry:hover,
 .app-shell.layout-desktop .history-entry:focus-visible {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--surface-hover);
 }
 
 .app-shell.layout-desktop .history-expression {

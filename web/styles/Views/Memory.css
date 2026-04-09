@@ -12,12 +12,12 @@
   background: var(--panel-alt);
   color: var(--text);
   text-align: left;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid var(--border-subtle);
 }
 
 .memory-entry:hover,
 .memory-entry:focus-visible {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--surface-hover);
 }
 
 .memory-label {
@@ -59,7 +59,7 @@
 
 .memory-entry .memory-action {
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--surface-active);
   color: var(--text-soft);
 }
 
@@ -76,7 +76,7 @@
 
 .app-shell.layout-desktop .memory-entry:hover,
 .app-shell.layout-desktop .memory-entry:focus-within {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--surface-hover);
 }
 
 .app-shell.layout-desktop .memory-entry-row {
@@ -108,13 +108,13 @@
 .app-shell.layout-desktop .memory-entry .memory-action {
   min-height: 26px;
   padding: 0.2rem 0.45rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--surface-active);
   color: var(--text);
 }
 
 .app-shell.layout-desktop .memory-entry .memory-action:hover,
 .app-shell.layout-desktop .memory-entry .memory-action:focus-visible {
-  background: rgba(255, 255, 255, 0.16);
+  background: var(--surface-hover);
 }
 
 .app-shell.layout-desktop .memory-entry .memory-surface {

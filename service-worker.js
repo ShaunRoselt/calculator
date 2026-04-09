@@ -1,5 +1,5 @@
-const STATIC_CACHE = 'calculator-static-v1';
-const RUNTIME_CACHE = 'calculator-runtime-v1';
+const STATIC_CACHE = 'calculator-static-v2';
+const RUNTIME_CACHE = 'calculator-runtime-v2';
 
 const CORE_ASSETS = [
   './',

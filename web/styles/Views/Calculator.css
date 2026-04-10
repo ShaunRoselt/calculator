@@ -314,18 +314,38 @@
   background: var(--button-function-bg);
 }
 
+.calc-button.function:hover,
+.calc-button.function:focus-visible {
+  background: var(--button-function-hover-bg);
+}
+
 .calc-button.digit {
   background: var(--button-digit-bg);
+}
+
+.calc-button.digit:hover,
+.calc-button.digit:focus-visible {
+  background: var(--button-digit-hover-bg);
 }
 
 .calc-button.operator {
   background: var(--button-operator-bg);
 }
 
+.calc-button.operator:hover,
+.calc-button.operator:focus-visible {
+  background: var(--button-operator-hover-bg);
+}
+
 .calc-button.equals {
   background: linear-gradient(180deg, var(--button-equals-bg-start), var(--button-equals-bg-end));
   color: var(--button-equals-text);
   font-weight: 500;
+}
+
+.calc-button.equals:hover,
+.calc-button.equals:focus-visible {
+  background: linear-gradient(180deg, var(--button-equals-hover-bg-start), var(--button-equals-hover-bg-end));
 }
 
 .calc-button.disabled,

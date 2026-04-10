@@ -1,21 +1,17 @@
 {
   "name": "calculator",
   "version": "1.0.0",
-  "description": "The Windows Calculator app is a modern Windows app written in C++ and C# that ships pre-installed with Windows. The app provides standard, scientific, and programmer calculator functionality, as well as a set of converters between various units of measurement and currencies.",
-  "main": "electron/main.cjs",
+  "description": "A standalone web calculator with standard, scientific, programmer, graphing, date, and unit conversion modes.",
   "scripts": {
     "check": "node web/scripts/check.js",
-    "start": "python3 -m http.server 4173",
-    "electron:dev": "electron .",
-    "electron:dist": "electron-builder --win portable",
-    "electron:flatpak": "electron-builder --linux flatpak"
+    "start": "python3 -m http.server 4173"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ShaunRoselt/calculator.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Shaun Roselt",
   "license": "MIT",
   "type": "module",
   "bugs": {
@@ -25,45 +21,5 @@
   "private": true,
   "dependencies": {
     "nerdamer": "^1.1.13"
-  },
-  "devDependencies": {
-    "electron": "^35.2.1",
-    "electron-builder": "^25.1.8"
-  },
-  "build": {
-    "appId": "com.microsoft.calculator.web",
-    "productName": "Windows Calculator",
-    "asar": true,
-    "files": [
-      "electron/**/*",
-      "index.html",
-      "web/**/*",
-      "src/Calculator/Assets/**/*",
-      "package.json"
-    ],
-    "portable": {
-      "artifactName": "Windows-Calculator-${version}-portable.exe"
-    },
-    "linux": {
-      "target": [
-        {
-          "target": "flatpak",
-          "arch": [
-            "x64"
-          ]
-        }
-      ],
-      "category": "Utility"
-    },
-    "win": {
-      "target": [
-        {
-          "target": "portable",
-          "arch": [
-            "x64"
-          ]
-        }
-      ]
-    }
   }
 }

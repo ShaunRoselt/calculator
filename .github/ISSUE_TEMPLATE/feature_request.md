@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Propose a new feature in the app
+about: Propose a new feature for the web app
 title: ''
 labels: 'Enhancement'
 assignees: ''
@@ -8,47 +8,30 @@ assignees: ''
 ---
 
 <!--
-See https://github.com/Microsoft/calculator/blob/main/docs/NewFeatureProcess.md for suggestions on how to write a good feature pitch. Just want to submit an idea quickly? Try Feedback Hub instead: https://insider.windows.com/en-us/fb/?contextid=130
+See docs/NewFeatureProcess.md for guidance on feature proposals.
 -->
 
-**Problem Statement**
-<!--
-What problem are we trying to solve? Who’s the target audience? Is there a customer need or pain point we need to remedy? Is there a business goal or metric we are trying to improve? Do we have a hypothesis we want to prove or disprove?
--->
+**Problem statement**
+<!-- What problem are we solving, and who is affected? -->
 
-**Evidence or User Insights**
-<!--
-Why should we do this? Potential sources of data: Feedback Hub, other GitHub issues, other anecdotes from listening to customers in person or online, request from another team, telemetry data, user research, market or competitive research
--->
+**Evidence or user insight**
+<!-- Why is this worth doing? Reference issues, user feedback, usability findings, or competitive research if available. -->
 
 **Proposal**
-<!--
-How will the solution/feature help us solve the problem? How will it meet the target audience’s needs? If there are business goals or metrics, how does this improve them?
--->
+<!-- Describe the proposed change and how it improves the current browser experience. -->
 
 **Goals**
-<!--
-What you want to accomplish with this feature. Typical examples include
-"User Can *perform some task*"
--->
+<!-- What should users be able to do after this change? -->
 
-**Non-Goals**
-<!--
-Things we are explicitly not doing or supporting or that are out of scope, including reasons why.
--->
+**Non-goals**
+<!-- What is explicitly out of scope? -->
 
-**Low-Fidelity Concept**
-<!--
-Show as much of the experience as needed to explain the idea. This can be as simple as a napkin drawing but can also be a code prototype, or a design comp. Keep it simple at this stage, as it can be refined later during the pre-production stage.
--->
+**Responsive, keyboard, or offline considerations**
+<!-- Note any expected impact on layout, input methods, persistence, or installability. -->
 
-**Requested Assignment**
-<!--
-Some people just want to suggest a feature and let someone else implement it.
-Other people want to not only suggest a feature, but implement it as well.
-Both scenarios are completely ok. We just want to know which one it is.
-We are likely to prioritize the review of feature requests if they already have someone who can implement them.
-Please indicate which bucket you fall into by keeping one and removing the other.
--->
+**Low-fidelity concept**
+<!-- Mockup, sketch, screenshot markup, or prototype link if helpful. -->
+
+**Requested assignment**
 If possible, I would like to implement this.
-I'm just suggesting this idea.  I don't want to implement it.
+I'm just suggesting this idea. I don't want to implement it.

@@ -17,10 +17,6 @@ async function loadNerdamer() {
     return;
   }
 
-  if (globalThis.process?.versions?.electron) {
-    return;
-  }
-
   try {
     await loadScript(NERDAMER_LOCAL_URL, 'Unable to load nerdamer from the local package.');
   } catch {
@@ -31,8 +27,7 @@ async function loadNerdamer() {
 async function registerServiceWorker() {
   const canRegisterServiceWorker = 'serviceWorker' in navigator
     && window.isSecureContext
-    && window.location.protocol !== 'file:'
-    && !globalThis.process?.versions?.electron;
+    && window.location.protocol !== 'file:';
 
   if (!canRegisterServiceWorker) {
     return;

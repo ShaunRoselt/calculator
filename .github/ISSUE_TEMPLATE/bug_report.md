@@ -1,60 +1,45 @@
 ---
 name: Bug report
-about: Report a problem with Calculator
+about: Report a problem with the web app
 title: ''
 labels: ''
 assignees: ''
 
 ---
+
 <!--
-Before filing a bug
-- Ensure the bug reproduces on the latest version of the app.
-- Search existing issues and make sure this issue is not already filed.
+Before filing a bug:
+- Ensure the bug reproduces on the current version of the repository.
+- Search existing issues and confirm it has not already been reported.
 -->
 
 **Describe the bug**
-<!-- A clear and concise description of what the bug is. -->
+<!-- A clear and concise description of what is wrong. -->
 
-**Steps To Reproduce**
+**Steps to reproduce**
 <!--
-Steps to reproduce the behavior:
 1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+2. Click on '...'
+3. Enter '...'
+4. Observe '...'
 -->
 
 **Expected behavior**
 <!-- A clear and concise description of what you expected to happen. -->
 
-**Screenshots**
-<!-- If applicable, add screenshots to help explain your problem. -->
+**Screenshots or recording**
+<!-- If applicable, add screenshots or a short recording. -->
 
-**Device and Application Information**
- - OS Build:
- - Architecture:
- - Application Version:
- - Region:
- - Dev Version Installed:
-
-<!--
-Run the following commands in Powershell and copy/paste the output.
-" - OS Build: $([Environment]::OSVersion.Version)"
-" - Architecture: $((Get-AppxPackage -Name Microsoft.WindowsCalculator).Architecture)"
-" - Application Version: $((Get-AppxPackage -Name Microsoft.WindowsCalculator).Version)"
-" - Region: $((Get-Culture).Name)"
-" - Dev Version Installed: $($null -ne (Get-AppxPackage -Name Microsoft.WindowsCalculator.Dev))"
--->
+**Environment**
+- Browser:
+- Browser version:
+- OS:
+- Viewport size:
+- Installed as PWA: yes/no
 
 **Additional context**
-<!-- Add any other context about the problem here. -->
+<!-- Include console errors, reproduction frequency, or related notes here. -->
 
-**Requested Assignment**
-<!--
-Some people just want to report a bug and let someone else fix it.
-Other people want to not only submit the bug report, but fix it as well.
-Both scenarios are completely ok. We just want to know which one it is.
-Please indicate which bucket you fall into by keeping one and removing the other.
--->
+**Requested assignment**
 If possible, I would like to fix this.
-I'm just reporting this problem.  I don't want to fix it.
+I'm just reporting this problem. I don't want to fix it.

@@ -1,6 +1,12 @@
 # Code of Conduct
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
-or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or
-comments.
+Treat everyone participating in this project with respect.
+
+Expected behavior:
+
+- be constructive and specific in feedback
+- assume good intent and discuss disagreements in good faith
+- avoid harassment, personal attacks, and discriminatory behavior
+- keep discussions focused on improving Calculator and the community around it
+
+If a conversation becomes unproductive or inappropriate, step back and move the discussion to a calmer, issue-focused resolution path.

@@ -1,5 +1,5 @@
-const STATIC_CACHE = 'calculator-static-v2';
-const RUNTIME_CACHE = 'calculator-runtime-v2';
+const STATIC_CACHE = 'calculator-static-v3';
+const RUNTIME_CACHE = 'calculator-runtime-v3';
 
 const CORE_ASSETS = [
   './',
@@ -39,10 +39,10 @@ const CORE_ASSETS = [
   './web/scripts/Views/Settings.js',
   './web/scripts/Views/ViewIcons.js',
   './web/scripts/Views/GraphingCalculator/GraphingCalculator.js',
+  './web/assets/icons/app-icon-dark.png',
+  './web/assets/icons/app-icon-light.png',
   './web/assets/pwa/icon-192.png',
   './web/assets/pwa/icon-512.png',
-  './src/Calculator/Assets/CalculatorAppList.targetsize-32_altform-unplated.png',
-  './src/Calculator/Assets/CalculatorAppList.targetsize-32_altform-lightunplated.png',
   './node_modules/nerdamer/all.min.js'
 ];
 

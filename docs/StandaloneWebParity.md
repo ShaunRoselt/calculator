@@ -1,86 +1,78 @@
-# Standalone Web Parity
+# Standalone Web Quality Checklist
 
-The standalone web calculator is intended to become the replacement front end for the native
-Windows Calculator experience. Because of that, the target is no longer feature parity alone — it
-is behavioral and visual parity.
+Use this document as a release-quality checklist for the browser app. The goal is consistent,
+predictable behavior across modes, themes, and viewport sizes.
 
-## Source of truth
+## Core expectations
 
-- Use the Windows Calculator UI as the source of truth for layout, spacing, typography, motion,
-  display scaling, and responsive transitions.
-- Use Windows screenshots for parity reviews. The initial shell reference for this rewrite is:
-  `https://github.com/user-attachments/assets/c2b6f86f-fa8f-4b05-995c-3e629f9744bd`
+- the shell should load without console errors
+- mode changes should feel immediate and stable
+- history, memory, and settings should behave consistently across reloads
+- layout changes should be intentional rather than incidental at each target width
 
-## Parity checklist
+## Shared shell
 
-### Shared shell
+- [ ] Navigation ordering and active states are correct
+- [ ] History and memory surfaces open, close, and dock cleanly
+- [ ] Focus, hover, pressed, and disabled states are visible
+- [ ] Theme switching updates all shared shell surfaces
+- [ ] Settings links and metadata are current
 
-- [x] Interior-only parity target (do not render outer window frame or caption bar in the standalone web shell)
-- [ ] App title, hamburger, and history affordances
-- [ ] Navigation drawer spacing, ordering, and active-state treatment
-- [ ] Side panel open/close behavior, sizing, and empty states
-- [ ] Keyboard focus, hover, pressed, and disabled states
-- [ ] Motion timing and panel transitions
+## Calculator modes
 
-### Standard mode
+### Standard
 
-- [ ] Display alignment, expression row, and overflow scaling
-- [ ] Memory row layout and enable/disable behavior
-- [ ] Keypad sizing, corner radii, emphasis, and label parity
-- [ ] History recall and memory workflows
+- [ ] Display alignment and scaling are stable
+- [ ] Memory row behavior is correct
+- [ ] Button emphasis and spacing remain consistent
+- [ ] History recall flows still work
 
-### Scientific mode
+### Scientific
 
-- [ ] Toolbar arrangement and function density
-- [ ] Expression layout and keypad parity
-- [ ] Angle toggle behavior
+- [ ] Function rows remain usable at narrow widths
+- [ ] Expression entry and result rendering stay readable
+- [ ] Angle and advanced function behavior remain correct
 
-### Programmer mode
+### Programmer
 
-- [ ] Base selector layout
-- [ ] Readout layout
-- [ ] Disabled digit behavior by base
+- [ ] Base selection is clear and reliable
+- [ ] Disabled digits reflect the active base
+- [ ] Bitwise and shift operations behave correctly
 
 ### Date, converter, and graphing
 
-- [ ] Mode-specific headers and controls
-- [ ] Layout parity at narrow and wide widths
-- [ ] Shared shell and side-panel consistency
+- [ ] Mode-specific controls are complete and aligned
+- [ ] Layout remains usable at narrow and wide widths
+- [ ] Graphing updates render without overlap or clipping
 
-## Adaptive layout states
+## Review sizes
 
-Use fixed review sizes instead of ad-hoc resizing so parity can be measured consistently.
+Test at these fixed sizes instead of arbitrary resizing:
 
-- **Phone-width:** 390 × 844
-- **Tablet-width:** 768 × 1024
-- **Desktop-width:** 1280 × 900
+- phone: 390 x 844
+- tablet: 768 x 1024
+- desktop: 1280 x 900
 
-Each parity pass should verify:
+At each size, verify:
 
-- when navigation remains an overlay vs. inline
-- when the history/memory surface becomes a side sheet vs. docked panel
-- how display text scales before truncation or wrapping
-- how keypad proportions change without breaking the Windows feel
+- when navigation is overlay versus inline
+- when history or memory shifts from overlay to docked behavior
+- how display text scales before clipping or truncation
+- whether keypad and control proportions remain balanced
 
-## Rollout
+## Validation flow
 
-1. Standard mode visual parity at desktop width
-2. Standard mode adaptive parity at phone and tablet widths
-3. Standard mode interaction parity
-4. Repeat the same sequence for scientific, programmer, and remaining modes
-5. Package the web app in a Windows desktop host
+1. Run `npm run check`
+2. Complete the relevant cases from `docs/ManualTests.md`
+3. Reload the app to confirm persisted state still hydrates correctly
+4. If shell assets changed, test offline relaunch and installed-PWA behavior
 
-## Validation
+## Release bar
 
-- Run `npm run check` from `/home/runner/work/calculator/calculator`
-- Compare the current web output against Windows reference captures for the same mode and viewport
-- Review shell, display, memory, keypad, and side-panel behavior before merging
+The app is ready for release when changed modes have:
 
-## Windows packaging guidance
-
-Use a Windows-native host around the web UI when replacement-level fidelity is the goal. A
-WebView2/WinUI wrapper is preferred because it preserves tighter control over native window chrome,
-scaling behavior, startup feel, and Windows integrations.
-
-Electron can still produce a Windows `.exe`, but it is better suited to fast packaging than to
-matching the in-box Windows Calculator experience exactly.
+- correct calculations
+- reliable keyboard support
+- stable responsive behavior
+- acceptable theme coverage
+- no known shell regressions in installation or offline behavior

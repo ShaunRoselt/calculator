@@ -1,19 +1,27 @@
-# Windows Calculator Roadmap
+# Calculator Roadmap
 
-Windows Calculator is under active development by Microsoft.
+Calculator is now a web-only project. The roadmap is centered on browser quality, maintainability,
+and shipping a reliable installable experience.
 
-## Focus
+## Current focus
 
-In 2021, the Windows Calculator team is focused on:
-* Iterating upon the existing app design based on the latest guidelines for [Fluent Design](https://developer.microsoft.com/en-us/windows/apps/design) and [WinUI](https://github.com/microsoft/microsoft-ui-xaml).
-* Unblocking community contributions by identifying and addressing bottlenecks affecting developers, including:
-  * Migrating the codebase to C# ([#893](https://github.com/microsoft/calculator/issues/893))
-  * Releasing infinite-precision engine as standalone package ([#1545](https://github.com/microsoft/calculator/issues/1545)) and adding support for arbitrary expression parsing ([#526](https://github.com/microsoft/calculator/issues/526))
-  * Adding a settings page ([#596](https://github.com/microsoft/calculator/issues/596))
-* [Your feature idea here] - please review our [new feature development process](https://github.com/Microsoft/calculator/blob/main/docs/NewFeatureProcess.md) to get started!
+- Tighten interaction quality across standard, scientific, programmer, graphing, date, and
+  converter modes
+- Improve responsive behavior so the app feels intentional at phone, tablet, and desktop widths
+- Continue reducing UI inconsistencies between views and shared shell surfaces
+- Strengthen browser-side persistence, offline support, and startup reliability
+- Expand lightweight validation so regressions are caught earlier
 
-We welcome contributions of all kinds from the community, but especially those that support the efforts above. Please see our [contributing guidelines](https://github.com/Microsoft/calculator/blob/main/CONTRIBUTING.md) for more information on how to get involved.
+## Near-term priorities
 
-## Releases
+- Better automated coverage for calculation logic and critical UI flows
+- More consistent keyboard behavior across all modes
+- Improved graphing interactions and validation of graph edge cases
+- More robust PWA install and relaunch testing
+- Continued cleanup of view modules and shared style tokens
 
-Windows Calculator is included in every Windows 10 release as a [provisioned Windows app](https://docs.microsoft.com/en-us/windows/application-management/apps-in-windows-10#provisioned-windows-apps). We also deliver updates through the [Microsoft Store](https://www.microsoft.com/store/productId/9WZDNCRFHVN5) approximately monthly.
+## Contribution direction
+
+Feature proposals are welcome when they improve the browser experience, solve a user-facing problem,
+or simplify the implementation without reducing capability. Start with the process described in
+[NewFeatureProcess.md](NewFeatureProcess.md).

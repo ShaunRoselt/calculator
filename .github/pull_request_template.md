@@ -1,16 +1,15 @@
 ## Fixes #.
 
-
 ### Description of the changes:
 -
 -
 -
 
 ### How changes were validated:
-<!--Review https://github.com/Microsoft/calculator/blob/main/CONTRIBUTING.md and ensure all contributing requirements are met.
-
-Specify how you tested your changes (i.e. manual/ad-hoc testing, automated testing, new automated tests added)-->
+<!--
+Review CONTRIBUTING.md and list the checks you ran.
+Include relevant manual testing, responsive checks, keyboard checks, and any automated validation.
+-->
 -
 -
 -
-

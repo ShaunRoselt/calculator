@@ -74,7 +74,7 @@ function renderDateShift(result) {
 function renderDateField(label, key, value) {
   const pickerOpen = state.date.openPicker === key;
   return `
-    <label class="date-native-field">
+    <div class="date-native-field">
       <span class="date-native-field-label">${label}</span>
       <span class="date-native-picker-shell">
         <button type="button" class="date-native-picker-trigger ${pickerOpen ? 'active' : ''}" data-date-picker-toggle="${key}" aria-expanded="${pickerOpen ? 'true' : 'false'}" aria-label="${label}">
@@ -83,7 +83,7 @@ function renderDateField(label, key, value) {
         </button>
         ${pickerOpen ? renderDatePicker(key, value) : ''}
       </span>
-    </label>
+    </div>
   `;
 }
 

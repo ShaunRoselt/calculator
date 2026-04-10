@@ -1,6 +1,6 @@
 {
   "name": "calculator",
-  "version": "1.0.0",
+  "version": "12.0.0",
   "description": "A standalone web calculator with standard, scientific, programmer, graphing, date, and unit conversion modes.",
   "scripts": {
     "check": "node web/scripts/check.js",

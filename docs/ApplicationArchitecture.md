@@ -2,7 +2,7 @@
 
 Calculator is a browser-first application built from static assets and vanilla JavaScript modules.
 The app renders a single shell from `index.html`, persists user state in the browser, and keeps
-mode-specific UI code isolated under `web/scripts/Views` and `web/styles/Views`.
+mode-specific UI code isolated under `scripts/Views` and `styles/Views`.
 
 ## Runtime overview
 
@@ -10,18 +10,18 @@ The web app has three top-level entry points:
 
 - `index.html` loads the CSS and JavaScript bundles used by the browser shell
 - `manifest.json` defines install metadata for the PWA
-- `service-worker.js` caches the app shell for repeat launches and offline use
+- `service-worker.js` keeps the app installable as a PWA without caching network responses
 
 The page boot sequence is:
 
-1. `index.html` loads the shared styles and `web/scripts/bootstrap.js`
-2. `bootstrap.js` registers the service worker and starts the app
-3. `web/scripts/app.js` reads URL state, hydrates persisted data, wires events, and triggers the
+1. `index.html` loads the shared styles and `scripts/startup.js`
+2. `startup.js` loads startup dependencies, registers the service worker, and starts the app
+3. `scripts/app.js` reads URL state, hydrates persisted data, wires events, and triggers the
    first render
 
 ## State and persistence
 
-Application state is centralized in `web/scripts/state.js`.
+Application state is centralized in `scripts/state.js`.
 
 That module is responsible for:
 
@@ -29,12 +29,12 @@ That module is responsible for:
 - exposing the mutable state object used by render and event flows
 - persisting state updates after user actions
 
-The storage keys are defined in `web/scripts/config.js` so the rest of the app can stay consistent
+The storage keys are defined in `scripts/config.js` so the rest of the app can stay consistent
 about how browser persistence is handled.
 
 ## Mode logic
 
-Business logic lives primarily in `web/scripts/logic.js`.
+Business logic lives primarily in `scripts/logic.js`.
 
 That module handles:
 
@@ -45,7 +45,7 @@ That module handles:
 - graphing-related calculations shared with the graphing view
 
 Static configuration for modes, buttons, converter categories, and metadata lives in
-`web/scripts/config.js`.
+`scripts/config.js`.
 
 ## View composition
 
@@ -53,24 +53,24 @@ The UI is assembled from small rendering modules rather than a framework runtime
 
 Key view files include:
 
-- `web/scripts/Views/MainPage.js` for the shared shell and navigation layout
-- `web/scripts/Views/Calculator.js` for standard, scientific, and programmer surfaces
-- `web/scripts/Views/DateCalculator.js` for date workflows
-- `web/scripts/Views/UnitConverter.js` for converter layouts
-- `web/scripts/Views/GraphingCalculator/GraphingCalculator.js` for graphing mode
-- `web/scripts/Views/HistoryList.js`, `Memory.js`, and `Settings.js` for side panels and support
+- `scripts/Views/MainPage.js` for the shared shell and navigation layout
+- `scripts/Views/Calculator.js` for standard, scientific, and programmer surfaces
+- `scripts/Views/DateCalculator.js` for date workflows
+- `scripts/Views/UnitConverter.js` for converter layouts
+- `scripts/Views/GraphingCalculator/GraphingCalculator.js` for graphing mode
+- `scripts/Views/HistoryList.js`, `Memory.js`, and `Settings.js` for side panels and support
   surfaces
 
 Each view returns HTML strings that are inserted into the main shell and then bound to the relevant
-event handlers from `web/scripts/app.js`.
+event handlers from `scripts/app.js`.
 
 ## Styling and responsive behavior
 
 The visual system is split between shared tokens and view-specific styles:
 
-- `web/styles/theme.css` defines tokens, color roles, and base element styling
-- `web/styles/Views/` contains one stylesheet per feature area
-- `web/styles/responsive.css` handles viewport-specific layout changes
+- `styles/theme.css` defines tokens, color roles, and base element styling
+- `styles/Views/` contains one stylesheet per feature area
+- `styles/responsive.css` handles viewport-specific layout changes
 
 The app is expected to work across phone, tablet, and desktop widths without changing the runtime
 architecture. Responsive behavior is implemented with CSS layout rules and view-aware rendering
@@ -78,9 +78,8 @@ decisions, not separate builds.
 
 ## Offline model
 
-`service-worker.js` pre-caches the app shell, core styles, view modules, and PWA icons. That keeps
-repeat visits fast and allows the installed experience to reopen without a fresh network round-trip
-for the main shell.
+`service-worker.js` exists to satisfy the PWA install requirement, but it does not pre-cache app
+assets or intercept fetches. Network requests still go directly to the server for the latest files.
 
 ## Development model
 

@@ -3,7 +3,7 @@
   "version": "12.0.0",
   "description": "A standalone web calculator with standard, scientific, programmer, graphing, date, and unit conversion modes.",
   "scripts": {
-    "check": "node web/scripts/check.js",
+    "check": "node scripts/check.js",
     "start": "python3 -m http.server 4173"
   },
   "repository": {

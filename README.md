@@ -12,7 +12,7 @@ single installable interface.
 - Graphing, date calculation, and unit conversion workflows
 - History and memory panes with local persistence
 - Keyboard input support across calculator modes
-- Installable PWA with offline shell caching
+- Installable PWA without offline asset caching
 - Responsive layouts for phone, tablet, and desktop widths
 
 ## Getting started
@@ -51,8 +51,8 @@ For manual regression coverage, use [docs/ManualTests.md](docs/ManualTests.md).
 The app includes:
 
 - `manifest.json` for installation metadata
-- `service-worker.js` for offline shell caching
-- icons under `web/assets/`
+- `service-worker.js` for installability without cached assets
+- icons under `assets/`
 
 To test installation behavior, serve the app over `http://127.0.0.1:4173` during development or a
 secure origin in production.
@@ -63,22 +63,22 @@ secure origin in production.
 
 - `index.html` boots the browser shell
 - `manifest.json` defines install metadata
-- `service-worker.js` caches the standalone experience
+- `service-worker.js` keeps the PWA installable without caching app assets
 
 ### JavaScript
 
-- `web/scripts/bootstrap.js` registers the app and service worker
-- `web/scripts/app.js` wires startup, events, and top-level rendering
-- `web/scripts/config.js` defines modes, buttons, units, and app metadata
-- `web/scripts/state.js` manages persisted UI state
-- `web/scripts/logic.js` contains calculator, converter, date, and graphing logic
-- `web/scripts/Views/` contains mode-specific rendering modules
+- `scripts/startup.js` loads startup dependencies, registers the service worker, and imports the app
+- `scripts/app.js` wires startup, events, and top-level rendering
+- `scripts/config.js` defines modes, buttons, units, and app metadata
+- `scripts/state.js` manages persisted UI state
+- `scripts/logic.js` contains calculator, converter, date, and graphing logic
+- `scripts/Views/` contains mode-specific rendering modules
 
 ### CSS
 
-- `web/styles/theme.css` defines tokens and global styles
-- `web/styles/Views/` contains view-specific styling
-- `web/styles/responsive.css` handles layout changes by viewport size
+- `styles/theme.css` defines tokens and global styles
+- `styles/Views/` contains view-specific styling
+- `styles/responsive.css` handles layout changes by viewport size
 
 ## Documentation
 

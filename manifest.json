@@ -1,9 +1,9 @@
 {
-  "id": "./index.html",
+  "id": "./app.html",
   "name": "Calculator",
   "short_name": "Calculator",
   "description": "Installable web calculator with standard, scientific, programmer, date, graphing, and conversion modes.",
-  "start_url": "./index.html?page=standard",
+  "start_url": "./app.html?page=standard",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",

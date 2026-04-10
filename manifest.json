@@ -1,8 +1,8 @@
 {
   "id": "./index.html",
-  "name": "Windows Calculator",
+  "name": "Calculator",
   "short_name": "Calculator",
-  "description": "Installable standalone web version of Windows Calculator with standard, scientific, programmer, converter, date, and graphing modes.",
+  "description": "Installable web calculator with standard, scientific, programmer, date, graphing, and conversion modes.",
   "start_url": "./index.html?page=standard",
   "scope": "./",
   "display": "standalone",

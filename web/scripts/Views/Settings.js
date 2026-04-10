@@ -8,18 +8,18 @@ const SETTINGS_LINKS = [
     href: 'https://github.com/ShaunRoselt/calculator'
   },
   {
-    label: 'MIT license',
-    href: 'https://github.com/ShaunRoselt/calculator/blob/main/LICENSE'
+    label: 'README',
+    href: 'https://github.com/ShaunRoselt/calculator/blob/main/README.md'
   },
   {
-    label: 'Microsoft privacy statement',
-    href: 'https://go.microsoft.com/fwlink/?LinkID=521839'
+    label: 'MIT license',
+    href: 'https://github.com/ShaunRoselt/calculator/blob/main/LICENSE'
   }
 ];
 
 const SETTINGS_APP_ICONS = {
-  light: 'src/Calculator/Assets/CalculatorAppList.targetsize-32_altform-lightunplated.png',
-  dark: 'src/Calculator/Assets/CalculatorAppList.targetsize-32_altform-unplated.png'
+  light: 'web/assets/icons/app-icon-light.png',
+  dark: 'web/assets/icons/app-icon-dark.png'
 };
 
 function getEffectiveTheme() {

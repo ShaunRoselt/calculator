@@ -25,7 +25,7 @@ configuration:
       - addLabel:
           label: no recent activity
       - addReply:
-          reply: This pull request has been automatically marked as stale because it has been marked as requiring author feedback but has not had any activity for **7 days**. Thank you for your contributions to Windows Calculator!
+          reply: This pull request has been automatically marked as stale because it has been marked as requiring author feedback but has not had any activity for **7 days**. Thank you for your contributions to Calculator!
     eventResponderTasks:
     - if:
       - payloadType: Issue_Comment

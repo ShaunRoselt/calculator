@@ -11,10 +11,10 @@ function factorUnit(name, symbol, factor) {
 }
 
 export const STORAGE_KEYS = {
-  history: 'windows-calculator-web-history',
-  memory: 'windows-calculator-web-memory',
-  nav: 'windows-calculator-web-nav',
-  theme: 'windows-calculator-web-theme'
+  history: 'calculator-history',
+  memory: 'calculator-memory',
+  nav: 'calculator-nav',
+  theme: 'calculator-theme'
 };
 
 export const DEFAULT_MODE = 'standard';

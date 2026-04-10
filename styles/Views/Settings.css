@@ -59,9 +59,29 @@
 }
 
 .settings-expander-copy {
+  flex: 1;
   display: grid;
   gap: 4px;
   min-width: 0;
+}
+
+.settings-expander-arrow {
+  width: 10px;
+  height: 10px;
+  margin-left: auto;
+  border-right: 2px solid var(--text-soft);
+  border-bottom: 2px solid var(--text-soft);
+  transform: rotate(45deg);
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.settings-expander[open] .settings-expander-arrow {
+  transform: rotate(225deg);
+}
+
+.settings-expander-summary:hover .settings-expander-arrow,
+.settings-expander-summary:focus-visible .settings-expander-arrow {
+  border-color: var(--text);
 }
 
 .settings-expander-title {

@@ -34,7 +34,7 @@ Start a local server from the repository root:
 npm start
 ```
 
-Then open `http://127.0.0.1:4173/index.html`.
+Then open `http://127.0.0.1:4173/` for the public landing page, or go directly to `http://127.0.0.1:4173/app.html?page=standard` for the calculator app.
 
 ## Validation
 
@@ -61,13 +61,15 @@ secure origin in production.
 
 ### Runtime entry points
 
-- `index.html` boots the browser shell
+- `index.html` serves the public landing page, links the manifest, and registers the service worker so install prompts can begin there
+- `app.html` boots the browser shell for the installed and in-browser calculator experience
 - `manifest.json` defines install metadata
 - `service-worker.js` keeps the PWA installable without caching app assets
 
 ### JavaScript
 
 - `scripts/startup.js` loads startup dependencies, registers the service worker, and imports the app
+- `scripts/landing.js` registers the service worker used to expose PWA installation from the public landing page
 - `scripts/app.js` wires startup, events, and top-level rendering
 - `scripts/config.js` defines modes, buttons, units, and app metadata
 - `scripts/state.js` manages persisted UI state

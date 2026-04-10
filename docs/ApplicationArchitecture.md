@@ -1,23 +1,30 @@
 # Application Architecture
 
 Calculator is a browser-first application built from static assets and vanilla JavaScript modules.
-The app renders a single shell from `index.html`, persists user state in the browser, and keeps
+The app renders a single shell from `app.html`, persists user state in the browser, and keeps
 mode-specific UI code isolated under `scripts/Views` and `styles/Views`.
 
 ## Runtime overview
 
-The web app has three top-level entry points:
+The web app has four top-level entry points:
 
-- `index.html` loads the CSS and JavaScript bundles used by the browser shell
+- `index.html` serves the public landing page, links the manifest, and registers the service worker so PWA install flows can begin there
+- `app.html` loads the CSS and JavaScript bundles used by the browser shell and remains the installed app start surface
 - `manifest.json` defines install metadata for the PWA
 - `service-worker.js` keeps the app installable as a PWA without caching network responses
 
 The page boot sequence is:
 
-1. `index.html` loads the shared styles and `scripts/startup.js`
+1. `app.html` loads the shared styles and `scripts/startup.js`
 2. `startup.js` loads startup dependencies, registers the service worker, and starts the app
 3. `scripts/app.js` reads URL state, hydrates persisted data, wires events, and triggers the
    first render
+
+The landing page boot sequence is:
+
+1. `index.html` loads the marketing layout and links the web app manifest
+2. `scripts/landing.js` registers `service-worker.js` so supported browsers can offer installation
+3. The manifest start URL launches `app.html?page=standard`, so installed launches open the calculator app rather than the public page
 
 ## State and persistence
 

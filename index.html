@@ -3,36 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#1f2025" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <title>Calculator</title>
+    <meta name="description" content="A one-page introduction to Calculator, a web app for scientific, programmer, graphing, date, and unit conversion workflows." />
+    <meta name="theme-color" content="#10192b" />
+    <title>Calculator | Inspired by Windows Calculator, built for the web</title>
     <link rel="icon" type="image/png" href="assets/icons/app-icon-dark.png" />
-    <link rel="apple-touch-icon" href="assets/pwa/icon-192.png" />
     <link rel="manifest" href="manifest.json" />
-    <link rel="stylesheet" href="styles/theme.css" />
-    <link rel="stylesheet" href="styles/Views/MainPage.css" />
-    <link rel="stylesheet" href="styles/Views/Calculator.css" />
-    <link rel="stylesheet" href="styles/Views/CalculatorScientificAngleButtons.css" />
-    <link rel="stylesheet" href="styles/Views/CalculatorProgrammerDisplayPanel.css" />
-    <link rel="stylesheet" href="styles/Views/CalculatorProgrammerBitFlipPanel.css" />
-    <link rel="stylesheet" href="styles/Views/HistoryList.css" />
-    <link rel="stylesheet" href="styles/Views/Memory.css" />
-    <link rel="stylesheet" href="styles/Views/DateCalculator.css" />
-    <link rel="stylesheet" href="styles/Views/UnitConverter.css" />
-    <link rel="stylesheet" href="styles/Views/GraphingCalculator/GraphingCalculator.css" />
-    <link rel="stylesheet" href="styles/Views/Settings.css" />
-    <link rel="stylesheet" href="styles/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/landing.css" />
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="landing-body">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="landing-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Calculator home">
+          <img src="assets/icons/app-icon-dark.png" alt="Calculator icon" width="48" height="48" />
+          <span>
+            <strong>Calculator</strong>
+            <span>Web edition</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#features">Features</a>
+          <a href="#modes">Modes</a>
+          <a href="#install">Install</a>
+          <a href="app.html?page=standard" class="nav-cta">Launch app</a>
+        </nav>
+      </header>
+
+      <main id="main-content">
+        <section class="hero" id="top">
+          <div class="hero-copy">
+            <p class="eyebrow">Windows Calculator inspired. Browser native.</p>
+            <h1>The familiar calculator workflow, rebuilt as a polished web app.</h1>
+            <p class="hero-text">
+              Calculator brings standard, scientific, programmer, graphing, date, history, memory,
+              and unit conversion tools into a fast installable experience that runs entirely in the browser.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="app.html?page=standard">Open calculator</a>
+              <a class="button button-secondary" href="#features">See what it includes</a>
+            </div>
+            <dl class="hero-metrics" aria-label="Calculator highlights">
+              <div>
+                <dt>13+</dt>
+                <dd>conversion categories and workflows</dd>
+              </div>
+              <div>
+                <dt>PWA</dt>
+                <dd>installable on desktop and mobile</dd>
+              </div>
+              <div>
+                <dt>Local</dt>
+                <dd>history and memory stay in your browser</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-visual" aria-label="Calculator preview">
+            <div class="preview-card preview-card-orbit"></div>
+            <div class="preview-frame">
+              <div class="preview-chips" aria-hidden="true">
+                <span>Scientific</span>
+                <span>Graphing</span>
+                <span>Programmer</span>
+              </div>
+              <img src="docs/Images/CalculatorScreenshot.png" alt="Calculator app screenshot" />
+            </div>
+            <div class="floating-note note-top">Responsive layouts for phone, tablet, and desktop.</div>
+            <div class="floating-note note-bottom">Built for quick daily math and deeper technical workflows.</div>
+          </div>
+        </section>
+
+        <section class="feature-grid" id="features" aria-labelledby="features-title">
+          <div class="section-heading">
+            <p class="eyebrow">Why this app</p>
+            <h2 id="features-title">A single calculator surface for everyday math and specialized tasks.</h2>
+          </div>
+          <div class="cards three-up">
+            <article class="feature-card accent-panel">
+              <h3>Multiple modes, one interface</h3>
+              <p>Switch between standard, scientific, programmer, graphing, date, and converter tools without leaving the same shell.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Made to feel fast</h3>
+              <p>Keyboard support, persistent state, and focused layouts keep the app usable for repeat work, not just quick demos.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Install when you want</h3>
+              <p>Use it in the browser first, then pin it as an installable PWA when you want a dedicated desktop or mobile experience.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="mode-section" id="modes" aria-labelledby="modes-title">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Modes</p>
+              <h2 id="modes-title">Purpose-built tools behind the same familiar chrome.</h2>
+            </div>
+            <p class="section-copy">The design takes cues from Windows Calculator while adapting the experience for the web, touch input, and installable workflows.</p>
+          </div>
+          <div class="cards mode-cards">
+            <article class="mode-card"><strong>Standard</strong><span>Core arithmetic with history and memory support.</span></article>
+            <article class="mode-card"><strong>Scientific</strong><span>Functions, constants, and advanced operations in a compact layout.</span></article>
+            <article class="mode-card"><strong>Programmer</strong><span>Bitwise tools, alternate bases, and binary inspection for technical work.</span></article>
+            <article class="mode-card"><strong>Graphing</strong><span>Plot expressions and adjust the viewport without leaving the browser.</span></article>
+            <article class="mode-card"><strong>Date</strong><span>Calculate ranges and offsets for practical scheduling and planning.</span></article>
+            <article class="mode-card"><strong>Converter</strong><span>Convert currency, time, area, speed, pressure, data, and more.</span></article>
+          </div>
+        </section>
+
+        <section class="install-section" id="install" aria-labelledby="install-title">
+          <div class="install-panel">
+            <div>
+              <p class="eyebrow">Install and go</p>
+              <h2 id="install-title">Keep the web convenience. Add app-like presence.</h2>
+              <p>
+                Calculator runs entirely client side, supports installation as a progressive web app,
+                and keeps your working state close at hand whether you open it in a tab or as a standalone window.
+              </p>
+            </div>
+            <div class="install-points" aria-label="Install highlights">
+              <div>
+                <strong>Desktop ready</strong>
+                <span>Install from Chromium-based browsers for a dedicated windowed experience.</span>
+              </div>
+              <div>
+                <strong>Mobile friendly</strong>
+                <span>Responsive layouts adapt to touch screens without reducing the feature set.</span>
+              </div>
+              <div>
+                <strong>Private by default</strong>
+                <span>History, memory, and preferences stay in local browser storage.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-title">
+          <p class="eyebrow">Ready to try it</p>
+          <h2 id="cta-title">Start with the standard calculator and explore from there.</h2>
+          <p>
+            Open the app directly, or install it later once it earns a place in your daily toolkit.
+          </p>
+          <div class="hero-actions centered-actions">
+            <a class="button button-primary" href="app.html?page=standard">Launch Calculator</a>
+            <a class="button button-secondary" href="app.html?page=graphing">Jump to graphing mode</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Independent web app inspired by Windows Calculator.</p>
+        <a href="https://github.com/ShaunRoselt/calculator">View source on GitHub</a>
+      </footer>
+    </div>
     <noscript>
       <div class="noscript-card">
         <h1>Calculator</h1>
-        <p>This standalone web version requires JavaScript.</p>
+        <p>This public landing page works without JavaScript, but the calculator app itself requires JavaScript.</p>
       </div>
     </noscript>
-    <script type="module" src="scripts/startup.js"></script>
+    <script type="module" src="scripts/landing.js"></script>
   </body>
 </html>

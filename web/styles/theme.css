@@ -67,10 +67,15 @@
   --button-default-bg: #353841;
   --button-default-hover-bg: #3b3e47;
   --button-function-bg: #353841;
+  --button-function-hover-bg: #3b3e47;
   --button-digit-bg: #393c45;
+  --button-digit-hover-bg: #42464f;
   --button-operator-bg: #31343c;
+  --button-operator-hover-bg: #3a3d45;
   --button-equals-bg-start: #57b9ed;
   --button-equals-bg-end: #4fb2e7;
+  --button-equals-hover-bg-start: #68c4f2;
+  --button-equals-hover-bg-end: #5dbdf0;
   --button-equals-text: #0b1a2c;
   --radius-lg: 16px;
   --radius-md: 10px;
@@ -145,10 +150,15 @@
   --button-default-bg: #f3f3f3;
   --button-default-hover-bg: #e6e6e6;
   --button-function-bg: #ececec;
+  --button-function-hover-bg: #e2e2e2;
   --button-digit-bg: #ffffff;
+  --button-digit-hover-bg: #f5f5f5;
   --button-operator-bg: #efefef;
+  --button-operator-hover-bg: #e3e3e3;
   --button-equals-bg-start: #9cd6ff;
   --button-equals-bg-end: #84c9fb;
+  --button-equals-hover-bg-start: #89cef9;
+  --button-equals-hover-bg-end: #75c2f4;
   --button-equals-text: #0f1d2d;
 }
 

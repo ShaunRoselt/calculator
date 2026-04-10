@@ -46,6 +46,7 @@ export function renderSettingsView() {
               <span class="settings-expander-title">App theme</span>
               <span class="settings-expander-description">Choose light, dark, or use the system setting.</span>
             </span>
+            <span class="settings-expander-arrow" aria-hidden="true"></span>
           </summary>
           <div class="settings-expander-body">
             <label class="settings-radio-option">
@@ -71,6 +72,7 @@ export function renderSettingsView() {
               <span class="settings-expander-title">${escapeHtml(APP_INFO.name)}</span>
               <span class="settings-expander-description">${escapeHtml(APP_INFO.version)}</span>
             </span>
+            <span class="settings-expander-arrow" aria-hidden="true"></span>
           </summary>
           <div class="settings-expander-body settings-links">
             ${SETTINGS_LINKS.map((link) => `

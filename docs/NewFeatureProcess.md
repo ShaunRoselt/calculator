@@ -31,11 +31,11 @@ For larger changes, add a short design note directly to the issue or in a linked
 Prefer incremental pull requests when the change is broad. In most cases, work should fall into one
 or more of these areas:
 
-- `web/scripts/config.js` for metadata and static definitions
-- `web/scripts/state.js` for persistence and state shape
-- `web/scripts/logic.js` for calculations and workflows
-- `web/scripts/Views/` for rendering
-- `web/styles/Views/` and `web/styles/responsive.css` for layout and presentation
+- `scripts/config.js` for metadata and static definitions
+- `scripts/state.js` for persistence and state shape
+- `scripts/logic.js` for calculations and workflows
+- `scripts/Views/` for rendering
+- `styles/Views/` and `styles/responsive.css` for layout and presentation
 
 Keep feature work focused. Avoid mixing large visual rewrites, logic changes, and cleanup in the
 same pull request unless they are tightly coupled.

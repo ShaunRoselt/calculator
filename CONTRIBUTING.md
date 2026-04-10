@@ -39,9 +39,9 @@ Use the setup steps in [README.md](README.md) to install dependencies and run th
 Match the style of the surrounding code. Most new changes in this repository fall into one or more
 of these areas:
 
-- browser logic in `web/scripts/`
-- rendering modules in `web/scripts/Views/`
-- styling in `web/styles/`
+- browser logic in `scripts/`
+- rendering modules in `scripts/Views/`
+- styling in `styles/`
 - static metadata in `index.html`, `manifest.json`, and `service-worker.js`
 
 Prefer small, readable functions over large cross-cutting rewrites.

@@ -12,6 +12,6 @@ function walk(directory) {
   });
 }
 
-for (const file of walk('web/scripts').sort()) {
+for (const file of walk('scripts').sort()) {
   execFileSync(process.execPath, ['--check', file], { stdio: 'inherit' });
 }

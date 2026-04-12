@@ -2,9 +2,12 @@
   "name": "calculator",
   "version": "12.0.0",
   "description": "A standalone web calculator with standard, scientific, programmer, graphing, date, and unit conversion modes.",
+  "main": "electron/main.cjs",
   "scripts": {
     "check": "node scripts/check.js",
-    "start": "python3 -m http.server 4173"
+    "package:win": "electron-packager . Calculator --platform=win32 --arch=x64 --out=dist --overwrite --asar --prune=true",
+    "start": "python3 -m http.server 4173",
+    "start:desktop": "electron ."
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,9 @@
   "private": true,
   "dependencies": {
     "nerdamer": "^1.1.13"
+  },
+  "devDependencies": {
+    "@electron/packager": "^18.4.4",
+    "electron": "^35.7.5"
   }
 }

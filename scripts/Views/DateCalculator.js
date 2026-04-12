@@ -13,7 +13,7 @@ export function renderDateCalculatorView() {
           <button type="button" class="date-native-select-button ${state.date.openModeMenu ? 'active' : ''}" data-date-mode-toggle="true" aria-haspopup="listbox" aria-expanded="${state.date.openModeMenu ? 'true' : 'false'}" aria-label="Calculation mode">
             <span>${escapeHtml(getDateModeLabel(state.date.mode))}</span>
           </button>
-          <span class="date-native-select-caret" aria-hidden="true">⌄</span>
+          <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
           ${state.date.openModeMenu ? renderDateModeMenu() : ''}
         </span>
       </div>
@@ -106,7 +106,7 @@ function renderOffsetField(label, key, selectedValue) {
         <select name="date-${key}" class="date-native-select" aria-label="${label}">
           ${Array.from({ length: 1000 }, (_, index) => `<option value="${index}" ${Number(selectedValue) === index ? 'selected' : ''}>${index}</option>`).join('')}
         </select>
-        <span class="date-native-select-caret" aria-hidden="true">⌄</span>
+        <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
       </span>
     </label>
   `;

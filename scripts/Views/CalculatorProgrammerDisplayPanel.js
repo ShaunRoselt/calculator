@@ -38,12 +38,12 @@ export function renderProgrammerDisplayPanel({ displaySizeClass = '', expression
         <button class="programmer-word-size-button" data-action="cycle-word-size" aria-label="Word size" ${state.programmer.error ? 'disabled' : ''}>${state.programmer.wordSize}</button>
         <div class="programmer-memory-actions">
           <button class="programmer-memory-button" data-memory-op="ms" data-tooltip="Memory store (Ctrl+M)">MS</button>
-          ${showMemoryToggle ? '<button class="programmer-memory-button" data-toggle-panel="memory" data-tooltip="Memory">M⌄</button>' : ''}
+          ${showMemoryToggle ? '<button class="programmer-memory-button programmer-memory-toggle" data-toggle-panel="memory" data-tooltip="Memory">M<span class="memory-caret ui-caret" aria-hidden="true"></span></button>' : ''}
         </div>
       </div>
       <div class="programmer-operator-groups">
-        <button class="programmer-group-button" type="button">${renderToolbarIcon('bitwise')}<span>Bitwise</span><span class="programmer-group-caret">⌄</span></button>
-        <button class="programmer-group-button" type="button">${renderToolbarIcon('bitshift')}<span>Bit shift</span><span class="programmer-group-caret">⌄</span></button>
+        <button class="programmer-group-button" type="button">${renderToolbarIcon('bitwise')}<span>Bitwise</span><span class="programmer-group-caret ui-caret" aria-hidden="true"></span></button>
+        <button class="programmer-group-button" type="button">${renderToolbarIcon('bitshift')}<span>Bit shift</span><span class="programmer-group-caret ui-caret" aria-hidden="true"></span></button>
       </div>
     </div>
   `;

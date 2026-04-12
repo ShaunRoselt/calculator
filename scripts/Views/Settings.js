@@ -22,9 +22,17 @@ const SETTINGS_APP_ICONS = {
   dark: 'assets/icons/app-icon-dark.png'
 };
 
+function getSystemTheme() {
+  if (typeof window.matchMedia !== 'function') {
+    return 'dark';
+  }
+
+  return window.matchMedia('(prefers-color-scheme: light)').matches === true ? 'light' : 'dark';
+}
+
 function getEffectiveTheme() {
   if (state.settings.theme === 'system') {
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    return getSystemTheme();
   }
 
   return state.settings.theme;

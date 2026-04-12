@@ -5,7 +5,9 @@
   "main": "electron/main.cjs",
   "scripts": {
     "check": "node scripts/check.js",
-    "package:win": "electron-packager . Calculator --platform=win32 --arch=x64 --out=dist --overwrite --asar --prune=true",
+    "package:flatpak": "npm run package:linux && sh scripts/package-flatpak.sh",
+    "package:linux": "electron-packager . Calculator --platform=linux --arch=x64 --out=dist --overwrite --asar --prune=true --ignore='^/(dist|flatpak/build|flatpak/repo|\\.flatpak-builder)(/|$)'",
+    "package:win": "electron-packager . Calculator --platform=win32 --arch=x64 --icon=assets/icons/app-icon-dark.ico --out=dist --overwrite --asar --prune=true --ignore='^/(dist|flatpak/build|flatpak/repo|\\.flatpak-builder)(/|$)'",
     "start": "python3 -m http.server 4173",
     "start:desktop": "electron ."
   },

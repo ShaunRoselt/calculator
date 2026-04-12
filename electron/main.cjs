@@ -1,6 +1,10 @@
 const path = require('node:path');
 const { app, BrowserWindow, shell } = require('electron');
 
+const appIconPath = process.platform === 'win32'
+  ? path.join(__dirname, '..', 'assets', 'icons', 'app-icon-dark.ico')
+  : path.join(__dirname, '..', 'assets', 'pwa', 'icon-512.png');
+
 function createMainWindow() {
   const mainWindow = new BrowserWindow({
     width: 1280,
@@ -9,7 +13,7 @@ function createMainWindow() {
     minHeight: 700,
     autoHideMenuBar: true,
     backgroundColor: '#1f2025',
-    icon: path.join(__dirname, '..', 'assets', 'pwa', 'icon-512.png'),
+    icon: appIconPath,
     webPreferences: {
       preload: path.join(__dirname, 'preload.cjs'),
       contextIsolation: true,

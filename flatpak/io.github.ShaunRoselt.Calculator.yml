@@ -1,0 +1,44 @@
+app-id: io.github.ShaunRoselt.Calculator
+branch: stable
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+command: io.github.ShaunRoselt.Calculator
+finish-args:
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --device=dri
+modules:
+  - name: calculator
+    buildsystem: simple
+    build-commands:
+      - install -d /app/bin
+      - install -d /app/lib/io.github.ShaunRoselt.Calculator
+      - install -d /app/share/applications
+      - install -d /app/share/icons/hicolor/64x64/apps
+      - install -d /app/share/icons/hicolor/128x128/apps
+      - install -d /app/share/icons/hicolor/256x256/apps
+      - install -d /app/share/icons/hicolor/512x512/apps
+      - install -d /app/share/metainfo
+      - cp -a Calculator-linux-x64 /app/lib/io.github.ShaunRoselt.Calculator/Calculator
+      - install -Dm755 io.github.ShaunRoselt.Calculator.sh /app/bin/io.github.ShaunRoselt.Calculator
+      - install -Dm644 io.github.ShaunRoselt.Calculator.desktop /app/share/applications/io.github.ShaunRoselt.Calculator.desktop
+      - install -Dm644 io.github.ShaunRoselt.Calculator.metainfo.xml /app/share/metainfo/io.github.ShaunRoselt.Calculator.metainfo.xml
+      - install -Dm644 io.github.ShaunRoselt.Calculator.png /app/share/icons/hicolor/64x64/apps/io.github.ShaunRoselt.Calculator.png
+      - install -Dm644 io.github.ShaunRoselt.Calculator.png /app/share/icons/hicolor/128x128/apps/io.github.ShaunRoselt.Calculator.png
+      - install -Dm644 io.github.ShaunRoselt.Calculator.png /app/share/icons/hicolor/256x256/apps/io.github.ShaunRoselt.Calculator.png
+      - install -Dm644 io.github.ShaunRoselt.Calculator.png /app/share/icons/hicolor/512x512/apps/io.github.ShaunRoselt.Calculator.png
+    sources:
+      - type: dir
+        path: ../dist/Calculator-linux-x64
+        dest: Calculator-linux-x64
+      - type: file
+        path: io.github.ShaunRoselt.Calculator.sh
+      - type: file
+        path: io.github.ShaunRoselt.Calculator.desktop
+      - type: file
+        path: io.github.ShaunRoselt.Calculator.metainfo.xml
+      - type: file
+        path: ../assets/pwa/icon-512.png
+        dest-filename: io.github.ShaunRoselt.Calculator.png

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Calculator
+Comment=Standalone calculator with standard, scientific, programmer, graphing, date, and conversion modes
+Exec=io.github.ShaunRoselt.Calculator
+Icon=io.github.ShaunRoselt.Calculator
+Categories=Utility;Education;
+Keywords=calculator;math;scientific;programmer;graphing;conversion;
+StartupWMClass=Calculator
+Terminal=false

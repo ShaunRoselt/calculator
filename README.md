@@ -46,6 +46,46 @@ npm run check
 
 For manual regression coverage, use [docs/ManualTests.md](docs/ManualTests.md).
 
+## Desktop packaging
+
+Build the Windows x64 desktop bundle:
+
+```bash
+npm run package:win
+```
+
+This writes the unpacked Windows app to `dist/Calculator-win32-x64/`, with the executable at
+`dist/Calculator-win32-x64/Calculator.exe`.
+
+Build the Linux x64 Electron bundle:
+
+```bash
+npm run package:linux
+```
+
+This writes the unpacked Linux app to `dist/Calculator-linux-x64/`.
+
+Build the Flatpak bundle:
+
+```bash
+npm run package:flatpak
+```
+
+This writes the Flatpak bundle to `dist/Calculator-linux-x64.flatpak` and the export repo to
+`flatpak/repo/`.
+
+Launch the installed Flatpak:
+
+```bash
+flatpak run io.github.ShaunRoselt.Calculator
+```
+
+If you only have the local bundle, install it first with:
+
+```bash
+flatpak install --user --or-update dist/Calculator-linux-x64.flatpak
+```
+
 ## PWA support
 
 The app includes:

@@ -8,6 +8,7 @@
     "package:flatpak": "npm run package:linux && sh scripts/package-flatpak.sh",
     "package:linux": "electron-packager . Calculator --platform=linux --arch=x64 --out=dist --overwrite --asar --prune=true --ignore='^/(dist|flatpak/build|flatpak/repo|\\.flatpak-builder)(/|$)'",
     "package:win": "electron-packager . Calculator --platform=win32 --arch=x64 --icon=assets/icons/app-icon-dark.ico --out=dist --overwrite --asar --prune=true --ignore='^/(dist|flatpak/build|flatpak/repo|\\.flatpak-builder)(/|$)'",
+    "package:win:portable": "electron-builder --win portable",
     "start": "python3 -m http.server 4173",
     "start:desktop": "electron ."
   },
@@ -24,11 +25,38 @@
   },
   "homepage": "https://github.com/ShaunRoselt/calculator#readme",
   "private": true,
+  "build": {
+    "appId": "io.github.ShaunRoselt.Calculator",
+    "productName": "Calculator",
+    "directories": {
+      "output": "dist/Calculator-win32-x64-portable"
+    },
+    "files": [
+      "**/*",
+      "!dist{,/**/*}",
+      "!.venv{,/**/*}",
+      "!flatpak/build{,/**/*}",
+      "!flatpak/repo{,/**/*}",
+      "!.flatpak-builder{,/**/*}"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "signAndEditExecutable": false,
+      "icon": "assets/icons/app-icon-dark.ico"
+    },
+    "portable": {
+      "artifactName": "Calculator-Portable-${version}.exe"
+    }
+  },
   "dependencies": {
     "nerdamer": "^1.1.13"
   },
   "devDependencies": {
     "@electron/packager": "^19.1.0",
+    "electron-builder": "^26.8.1",
     "electron": "^41.2.0"
   }
 }

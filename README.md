@@ -57,6 +57,14 @@ npm run package:win
 This writes the unpacked Windows app to `dist/Calculator-win32-x64/`, with the executable at
 `dist/Calculator-win32-x64/Calculator.exe`.
 
+Build a single-file portable Windows x64 executable:
+
+```bash
+npm run package:win:portable
+```
+
+This writes the portable executable to `dist/Calculator-win32-x64-portable/Calculator-Portable-<version>.exe`.
+
 Build the Linux x64 Electron bundle:
 
 ```bash

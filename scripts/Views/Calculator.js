@@ -169,7 +169,7 @@ function renderScientificOperatorButton(value, icon, label, active) {
     >
       <span class="scientific-operator-icon" aria-hidden="true">${renderToolbarIcon(icon)}</span>
       <span>${label}</span>
-      <span class="scientific-operator-caret" aria-hidden="true">⌄</span>
+      <span class="scientific-operator-caret ui-caret" aria-hidden="true"></span>
     </button>
   `;
 }

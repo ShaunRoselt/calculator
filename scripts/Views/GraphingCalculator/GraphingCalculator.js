@@ -308,7 +308,7 @@ function renderGraphingGroupButton(group) {
     <button class="graph-keypad-group ${isActive ? 'active' : ''}" type="button" data-graph-menu-toggle="${group.key}" aria-expanded="${isActive ? 'true' : 'false'}">
       <span class="graph-keypad-group-icon" aria-hidden="true">${renderToolbarIcon(group.icon)}</span>
       <span>${group.label}</span>
-      <span class="graph-keypad-caret">⌄</span>
+      <span class="graph-keypad-caret ui-caret" aria-hidden="true"></span>
     </button>
   `;
 }

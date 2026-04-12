@@ -4290,7 +4290,7 @@ function getGraphPalette() {
 function drawAxisDecorations(ctx, width, height, xAxisY, yAxisX, toScreenX, toScreenY, xMin, xMax, yMin, yMax, labelColor) {
   ctx.fillStyle = labelColor;
   ctx.strokeStyle = labelColor;
-  ctx.font = 'italic 12px "Segoe UI", sans-serif';
+  ctx.font = 'italic 12px "Calculator UI", "Segoe UI", sans-serif';
 
   if (xAxisY >= 0 && xAxisY <= height) {
     ctx.beginPath();
@@ -4310,7 +4310,7 @@ function drawAxisDecorations(ctx, width, height, xAxisY, yAxisX, toScreenX, toSc
     ctx.fillText('y', Math.max(6, yAxisX - 14), 12);
   }
 
-  ctx.font = 'italic 11px "Segoe UI", sans-serif';
+  ctx.font = 'italic 11px "Calculator UI", "Segoe UI", sans-serif';
   for (let x = Math.ceil(xMin / 5) * 5; x <= xMax; x += 5) {
     if (x === 0) {
       continue;

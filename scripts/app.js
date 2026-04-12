@@ -55,6 +55,10 @@ const THEME_META_COLORS = {
   light: '#ececec'
 };
 
+const systemThemeMedia = typeof window.matchMedia === 'function'
+  ? window.matchMedia('(prefers-color-scheme: light)')
+  : null;
+
 let converterTypeaheadBuffer = '';
 let converterTypeaheadTimestamp = 0;
 
@@ -74,11 +78,15 @@ document.addEventListener('keydown', handleKeydown);
 window.addEventListener('resize', handleResize);
 window.addEventListener('load', () => drawGraph());
 window.addEventListener('popstate', handlePopState);
-window.matchMedia('(prefers-color-scheme: light)').addEventListener?.('change', () => {
+systemThemeMedia?.addEventListener?.('change', () => {
   if (state.settings.theme === 'system') {
     applyTheme();
   }
 });
+
+function getSystemTheme() {
+  return systemThemeMedia?.matches === true ? 'light' : 'dark';
+}
 
 function normalizeMode(mode) {
   if (typeof mode !== 'string') {
@@ -146,7 +154,7 @@ function applyUrlMode({ replaceHistory = false, renderView = true } = {}) {
 
 function applyTheme() {
   const effectiveTheme = state.settings.theme === 'system'
-    ? (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+    ? getSystemTheme()
     : state.settings.theme;
   document.documentElement.dataset.theme = effectiveTheme;
   document.querySelector('meta[name="theme-color"]')?.setAttribute('content', THEME_META_COLORS[effectiveTheme] ?? THEME_META_COLORS.dark);

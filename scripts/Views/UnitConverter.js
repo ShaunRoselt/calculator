@@ -193,7 +193,7 @@ function renderConverterSelect(field, selectedLabel, options, buttonLabel, menuL
     <label class="converter-select-wrap">
       <button type="button" class="converter-select-button ${menuOpen ? 'active' : ''}" data-converter-menu-toggle="${field}" aria-haspopup="listbox" aria-expanded="${menuOpen ? 'true' : 'false'}" aria-label="${buttonLabel}">
         <span class="converter-select-label">${escapeHtml(selectedLabel)}</span>
-        <span class="converter-select-caret" aria-hidden="true">⌄</span>
+        <span class="converter-select-caret ui-caret" aria-hidden="true"></span>
       </button>
       ${menuOpen ? renderConverterMenu(field, options, menuLabel) : ''}
     </label>

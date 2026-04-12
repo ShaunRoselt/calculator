@@ -26,9 +26,13 @@
 }
 
 @media (max-width: 767px) {
+  .app-shell {
+    --chrome-inline-padding: 8px;
+  }
+
   .topbar {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: var(--chrome-inline-padding);
+    padding-right: var(--chrome-inline-padding);
   }
 
   .topbar-title h2 {
@@ -125,8 +129,13 @@
 }
 
 @media (max-width: 320px) and (max-height: 520px) {
+  .app-shell {
+    --chrome-inline-padding: 12px;
+    --chrome-top-padding: 6px;
+  }
+
   .topbar {
-    padding: 6px 12px 0;
+    padding: var(--chrome-top-padding) var(--chrome-inline-padding) 0;
   }
 
   .topbar-title {
@@ -212,7 +221,7 @@
   }
 
   .topbar {
-    padding: 10px 14px 2px;
+    padding: var(--chrome-top-padding) var(--chrome-inline-padding) 2px;
   }
 
   .topbar-title h2 {

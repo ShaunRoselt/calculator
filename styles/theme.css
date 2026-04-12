@@ -1,5 +1,33 @@
+@font-face {
+  font-family: "Calculator UI";
+  src: url("../assets/fonts/Selawik/selawk.woff2") format("woff2"),
+       url("../assets/fonts/Selawik/selawk.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calculator UI";
+  src: url("../assets/fonts/Selawik/selawksb.woff2") format("woff2"),
+       url("../assets/fonts/Selawik/selawksb.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calculator UI";
+  src: url("../assets/fonts/Selawik/selawkb.woff2") format("woff2"),
+       url("../assets/fonts/Selawik/selawkb.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   color-scheme: dark;
+  --ui-font-family: "Calculator UI", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --bg: #1c1d22;
   --shell-bg: #1f2025;
   --window-bg: #202126;
@@ -171,7 +199,7 @@ body {
   margin: 0;
   min-height: 100%;
   height: 100%;
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--ui-font-family);
   background: var(--bg);
   color: var(--text);
 }
@@ -188,6 +216,25 @@ button,
 input,
 select {
   font: inherit;
+}
+
+.ui-caret {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.7em;
+  height: 0.45em;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.ui-caret::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 0.28em solid transparent;
+  border-right: 0.28em solid transparent;
+  border-top: 0.36em solid currentColor;
 }
 
 button {

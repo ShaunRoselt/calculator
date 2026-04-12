@@ -152,6 +152,12 @@
   justify-self: end;
 }
 
+.programmer-memory-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
 .programmer-operator-groups {
   padding: 0.25rem 6px 0.35rem;
   border-bottom: 1px solid var(--border-subtle);

@@ -1,16 +1,24 @@
 const path = require('node:path');
-const { app, BrowserWindow, shell } = require('electron');
+const { app, BrowserWindow, screen, shell } = require('electron');
 
 const appIconPath = process.platform === 'win32'
   ? path.join(__dirname, '..', 'assets', 'icons', 'app-icon-dark.ico')
   : path.join(__dirname, '..', 'assets', 'pwa', 'icon-512.png');
 
 function createMainWindow() {
+  const windowWidth = 420;
+  const windowHeight = 900;
+  const primaryWorkArea = screen.getPrimaryDisplay().workArea;
+  const x = primaryWorkArea.x + Math.max(0, Math.round((primaryWorkArea.width - windowWidth) / 2));
+  const y = primaryWorkArea.y + Math.max(0, Math.round((primaryWorkArea.height - windowHeight) / 2));
+
   const mainWindow = new BrowserWindow({
-    width: 1280,
-    height: 900,
+    width: windowWidth,
+    height: windowHeight,
     minWidth: 420,
     minHeight: 700,
+    x,
+    y,
     autoHideMenuBar: true,
     backgroundColor: '#1f2025',
     icon: appIconPath,

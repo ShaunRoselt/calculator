@@ -1,4 +1,5 @@
 import { getProgrammerBitColumns, getProgrammerBitValue } from '../logic.js';
+import { t } from '../i18n.js';
 
 export function renderProgrammerBitFlipPanel() {
   const bits = getProgrammerBitColumns();
@@ -7,7 +8,7 @@ export function renderProgrammerBitFlipPanel() {
     groups.push(bits.slice(index, index + 4));
   }
   return `
-    <div class="programmer-bitflip-panel" aria-label="Bit flip panel">
+    <div class="programmer-bitflip-panel" aria-label="${t('programmer.bitFlipPanel')}">
       ${groups.map((group) => `
         <div class="bitflip-group">
           <div class="bitflip-label-row">

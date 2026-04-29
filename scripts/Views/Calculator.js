@@ -1,4 +1,5 @@
 import { PROGRAMMER_BUTTONS, SCIENTIFIC_BUTTONS, STANDARD_BUTTONS } from '../config.js';
+import { t } from '../i18n.js';
 import { state } from '../state.js';
 import { escapeHtml, formatExpressionForDisplay } from '../utils.js';
 import { formatBigInt, getProgrammerCurrentValue, isProgrammerDigitAllowed, isSidePanelVisible } from '../logic.js';
@@ -94,7 +95,7 @@ export function renderCalculatorView(mode) {
         <div class="display-value ${displaySizeClass}">${escapeHtml(calc.display)}</div>
       </div>
       ${mode === 'scientific' ? `<div class="calculator-toolbar scientific-toolbar">${renderScientificAngleButtons()}</div>` : ''}
-      <div class="memory-toolbar" aria-label="Memory controls">
+      <div class="memory-toolbar" aria-label="${t('memory.controls')}">
         ${renderMemoryToolbar()}
       </div>
       ${mode === 'scientific' ? renderScientificOperatorPickers() : ''}
@@ -151,8 +152,8 @@ function renderScientificOperatorPickers() {
   return `
     <div class="scientific-operator-strip">
       <div class="scientific-operator-buttons">
-        ${renderScientificOperatorButton('trig', 'scientific-trig', 'Trigonometry', openMenu === 'trig')}
-        ${renderScientificOperatorButton('function', 'scientific-function', 'Function', openMenu === 'function')}
+        ${renderScientificOperatorButton('trig', 'scientific-trig', t('calculator.scientific.trigonometry'), openMenu === 'trig')}
+        ${renderScientificOperatorButton('function', 'scientific-function', t('calculator.scientific.function'), openMenu === 'function')}
       </div>
       ${openMenu ? renderScientificOperatorMenu(openMenu) : ''}
     </div>
@@ -179,7 +180,7 @@ function renderScientificOperatorMenu(menu) {
     return renderScientificTrigMenu();
   }
   return `
-    <div class="scientific-operator-menu scientific-operator-menu-function" role="group" aria-label="Scientific functions">
+    <div class="scientific-operator-menu scientific-operator-menu-function" role="group" aria-label="${t('calculator.scientific.functionsAria')}">
       ${SCIENTIFIC_EXTRA_FUNCTIONS.map((option) => `
         <button class="scientific-menu-item" data-action="scientific-unary" data-value="${option.value}">${option.label}</button>
       `).join('')}
@@ -192,7 +193,7 @@ function renderScientificTrigMenu() {
   const trigKey = calc.isHyperbolic ? (calc.isShifted ? 'hypShifted' : 'hyp') : (calc.isShifted ? 'shifted' : 'base');
   const options = SCIENTIFIC_TRIG_LAYOUTS[trigKey];
   return `
-    <div class="scientific-operator-menu scientific-operator-menu-trig" role="group" aria-label="Trigonometric functions">
+    <div class="scientific-operator-menu scientific-operator-menu-trig" role="group" aria-label="${t('calculator.scientific.trigonometricFunctionsAria')}">
       <button class="scientific-menu-toggle ${calc.isShifted ? 'active' : ''}" data-action="toggle-shift" aria-pressed="${calc.isShifted ? 'true' : 'false'}">2ⁿᵈ</button>
       ${options.slice(0, 3).map((option) => `
         <button class="scientific-menu-item" data-action="scientific-unary" data-value="${option.value}">${option.label}</button>
@@ -221,7 +222,7 @@ function renderCalcButton(button, mode) {
 
 function getCalcButtonTooltip(button) {
   if (button.action === 'backspace') {
-    return 'Backspace';
+    return t('common.backspace');
   }
   return '';
 }

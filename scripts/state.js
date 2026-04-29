@@ -1,4 +1,4 @@
-import { CONVERTER_MODE_TO_CATEGORY, DEFAULT_CURRENCY_RATES, MOCK_CURRENCY_NOTE, MOCK_CURRENCY_UPDATED_AT, STORAGE_KEYS } from './config.js';
+import { CONVERTER_MODE_TO_CATEGORY, DEFAULT_CURRENCY_RATES, MOCK_CURRENCY_UPDATED_AT, STORAGE_KEYS } from './config.js';
 import { toDateInputValue } from './utils.js';
 
 const CALCULATOR_COLLECTION_MODES = ['standard', 'scientific', 'programmer', 'date', ...Object.keys(CONVERTER_MODE_TO_CATEGORY)];
@@ -134,7 +134,8 @@ function createInitialState() {
     historyTab: 'history',
     collections: createEmptyCollections(),
     settings: {
-      theme: 'system'
+      theme: 'system',
+      language: 'en'
     },
     standard: createStandardState(),
     scientific: createScientificState(),
@@ -163,7 +164,7 @@ function createInitialState() {
       openConverterMenu: null,
       currencyRates: { ...DEFAULT_CURRENCY_RATES },
       currencyUpdatedAt: MOCK_CURRENCY_UPDATED_AT,
-      currencyUpdateMessage: MOCK_CURRENCY_NOTE,
+      currencyUpdateMessageKey: 'converter.currency.status.mockNote',
       isUpdatingRates: false,
       converterKeyboardField: 'from'
     },
@@ -219,6 +220,7 @@ export function hydrateState() {
     const memory = JSON.parse(localStorage.getItem(STORAGE_KEYS.memory) || '[]');
     const nav = JSON.parse(localStorage.getItem(STORAGE_KEYS.nav) || 'null');
     const theme = localStorage.getItem(STORAGE_KEYS.theme);
+    const language = localStorage.getItem(STORAGE_KEYS.language);
     state.collections = Array.isArray(history)
       ? migrateLegacyHistory(history)
       : normalizeCollectionsByMode(history, 'history');
@@ -236,6 +238,9 @@ export function hydrateState() {
     }
     if (['light', 'dark', 'system'].includes(theme)) {
       state.settings.theme = theme;
+    }
+    if (['en', 'af', 'de', 'nl'].includes(language)) {
+      state.settings.language = language;
     }
   } catch {
     // ignore broken local storage
@@ -275,6 +280,10 @@ export function persistNav() {
 
 export function persistTheme() {
   localStorage.setItem(STORAGE_KEYS.theme, state.settings.theme);
+}
+
+export function persistLanguage() {
+  localStorage.setItem(STORAGE_KEYS.language, state.settings.language);
 }
 
 export const state = createInitialState();

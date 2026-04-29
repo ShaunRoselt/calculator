@@ -1,4 +1,5 @@
-import { CURRENCY_DETAILS, CURRENCY_OPTIONS, MODE_META, UNIT_CATEGORIES, isConverterMode } from '../config.js';
+import { CURRENCY_OPTIONS, UNIT_CATEGORIES, getCategoryLabel, getCurrencyDetails, getCurrencyOptions, getModeMeta, getUnitLabel, isConverterMode } from '../config.js';
+import { t } from '../i18n.js';
 import { state } from '../state.js';
 import { escapeHtml } from '../utils.js';
 import { getConverterDisplayValue, getUnitsForCategory } from '../logic.js';
@@ -22,7 +23,7 @@ const GENERIC_CONVERTER_KEYPAD = [
 export function renderUnitConverterView() {
   const units = getUnitsForCategory(state.converter.category);
   const dedicatedCategoryMode = isConverterMode(state.mode);
-  const title = dedicatedCategoryMode ? MODE_META[state.mode]?.label ?? state.converter.category : 'Unit converter';
+  const title = dedicatedCategoryMode ? (getModeMeta(state.mode)?.label ?? state.converter.category) : t('converter.unitConverter');
   if (state.converter.category === 'Currency') {
     return renderCurrencyView(units, title);
   }
@@ -33,39 +34,39 @@ export function renderUnitConverterView() {
     <div class="form-section">
       <div class="section-header">
         <div>
-          <div class="subtitle">${dedicatedCategoryMode ? 'Converter' : 'Built-in converter collections'}</div>
+          <div class="subtitle">${dedicatedCategoryMode ? t('converter.title') : t('converter.builtInCollections')}</div>
           <h3>${escapeHtml(title)}</h3>
         </div>
       </div>
       <div class="converter-grid">
         <label class="label-stack full ${dedicatedCategoryMode ? 'converter-category-hidden' : ''}">
-          <span>Category</span>
+          <span>${t('converter.category')}</span>
           <select name="converter-category">
-            ${Object.keys(UNIT_CATEGORIES).map((category) => `<option value="${category}" ${state.converter.category === category ? 'selected' : ''}>${category}</option>`).join('')}
+            ${Object.keys(UNIT_CATEGORIES).map((category) => `<option value="${category}" ${state.converter.category === category ? 'selected' : ''}>${escapeHtml(getCategoryLabel(category))}</option>`).join('')}
           </select>
         </label>
         <label class="label-stack">
-          <span>From</span>
+          <span>${t('converter.from')}</span>
           <select name="converter-fromUnit">
-            ${units.map((unitOption) => `<option value="${unitOption.name}" ${state.converter.fromUnit === unitOption.name ? 'selected' : ''}>${unitOption.name}</option>`).join('')}
+            ${units.map((unitOption) => `<option value="${unitOption.name}" ${state.converter.fromUnit === unitOption.name ? 'selected' : ''}>${escapeHtml(getUnitLabel(unitOption.name))}</option>`).join('')}
           </select>
         </label>
         <label class="label-stack">
-          <span>To</span>
+          <span>${t('converter.to')}</span>
           <select name="converter-toUnit">
-            ${units.map((unitOption) => `<option value="${unitOption.name}" ${state.converter.toUnit === unitOption.name ? 'selected' : ''}>${unitOption.name}</option>`).join('')}
+            ${units.map((unitOption) => `<option value="${unitOption.name}" ${state.converter.toUnit === unitOption.name ? 'selected' : ''}>${escapeHtml(getUnitLabel(unitOption.name))}</option>`).join('')}
           </select>
         </label>
         <label class="label-stack">
-          <span>Input value</span>
+          <span>${t('converter.inputValue')}</span>
           <input type="number" name="converter-fromValue" value="${state.converter.fromValue}" step="any" />
         </label>
         <div class="label-stack">
-          <span>Converted value</span>
+          <span>${t('converter.convertedValue')}</span>
           <div class="value-output converter-output">${escapeHtml(state.converter.toValue || '0')} ${escapeHtml(units.find((unitOption) => unitOption.name === state.converter.toUnit)?.symbol || '')}</div>
         </div>
         <div class="full converter-swap">
-          <button class="aux-button" data-converter-swap="true">Swap units</button>
+          <button class="aux-button" data-converter-swap="true">${t('converter.swapUnits')}</button>
         </div>
       </div>
     </div>
@@ -85,10 +86,10 @@ function renderNativeConverterView(units, title) {
           ${renderConverterField('to', toUnit, getConverterDisplayValue('to'))}
         </div>
         <div class="converter-native-meta ${aboutEqual ? '' : 'empty'}">
-          ${aboutEqual ? `<div class="converter-native-meta-label">About equal to</div><div class="converter-native-meta-value">${escapeHtml(aboutEqual)}</div>` : ''}
+          ${aboutEqual ? `<div class="converter-native-meta-label">${t('converter.aboutEqualTo')}</div><div class="converter-native-meta-value">${escapeHtml(aboutEqual)}</div>` : ''}
         </div>
       </section>
-      <section class="converter-native-keypad" aria-label="Converter keypad">
+      <section class="converter-native-keypad" aria-label="${t('converter.keypad')}">
         ${GENERIC_CONVERTER_KEYPAD.flat().map((button) => renderConverterKey(button)).join('')}
       </section>
     </div>
@@ -96,12 +97,12 @@ function renderNativeConverterView(units, title) {
 }
 
 function renderCurrencyView(units, title) {
-  const fromMeta = CURRENCY_DETAILS[state.converter.fromUnit] || { label: state.converter.fromUnit, symbol: '$', code: 'USD' };
-  const toMeta = CURRENCY_DETAILS[state.converter.toUnit] || { label: state.converter.toUnit, symbol: '¤', code: 'CUR' };
+  const fromMeta = getCurrencyDetails(state.converter.fromUnit);
+  const toMeta = getCurrencyDetails(state.converter.toUnit);
   const fromDisplay = getConverterDisplayValue('from');
   const toDisplay = getConverterDisplayValue('to');
   const rateLine = renderCurrencyRateLine(units, fromMeta, toMeta);
-  const updateButtonLabel = state.converter.isUpdatingRates ? 'Updating rates...' : 'Update rates';
+  const updateButtonLabel = state.converter.isUpdatingRates ? t('converter.currency.updatingRates') : t('converter.currency.updateRates');
 
   return `
     <div class="currency-layout">
@@ -112,12 +113,12 @@ function renderCurrencyView(units, title) {
         </div>
         <div class="currency-meta">
           <div class="currency-meta-line">${rateLine}</div>
-          <div class="currency-meta-line">Updated ${state.converter.currencyUpdatedAt}</div>
-          <div class="currency-meta-line currency-meta-status">${state.converter.currencyUpdateMessage}</div>
+          <div class="currency-meta-line">${t('converter.currency.updated', { timestamp: state.converter.currencyUpdatedAt })}</div>
+          <div class="currency-meta-line currency-meta-status">${t(state.converter.currencyUpdateMessageKey)}</div>
           <button class="currency-update-button" type="button" data-currency-update-rates="true" ${state.converter.isUpdatingRates ? 'disabled' : ''}>${updateButtonLabel}</button>
         </div>
       </section>
-      <section class="currency-keypad" aria-label="Currency keypad">
+      <section class="currency-keypad" aria-label="${t('converter.currency.keypad')}">
         ${CURRENCY_KEYPAD.flat().map((button) => renderCurrencyKey(button)).join('')}
       </section>
     </div>
@@ -127,7 +128,7 @@ function renderCurrencyView(units, title) {
 function renderConverterField(field, unit, value) {
   const options = getUnitsForCategory(state.converter.category).map((unitOption) => ({
     value: unitOption.name,
-    label: unitOption.name
+    label: getUnitLabel(unitOption.name)
   }));
   return `
     <div class="converter-native-field ${state.converter.lastEdited === field ? 'active' : ''}">
@@ -136,7 +137,7 @@ function renderConverterField(field, unit, value) {
           <span class="converter-native-amount">${escapeHtml(value || '0')}</span>
         </div>
       </button>
-      ${renderConverterSelect(field, unit.name, options, `${field === 'from' ? 'From' : 'To'} unit`, `${field === 'from' ? 'From' : 'To'} unit options`)}
+      ${renderConverterSelect(field, getUnitLabel(unit.name), options, `${field === 'from' ? t('converter.from') : t('converter.to')} ${t('converter.unit').toLowerCase()}`, `${field === 'from' ? t('converter.from') : t('converter.to')} ${t('converter.unitOptions').toLowerCase()}`)}
     </div>
   `;
 }
@@ -170,7 +171,7 @@ function getFormattedConverterMetaValue(value) {
 }
 
 function renderCurrencyField(field, meta, value) {
-  const options = CURRENCY_OPTIONS.map((currency) => ({
+  const options = getCurrencyOptions().map((currency) => ({
     value: currency.name,
     label: currency.label
   }));
@@ -182,7 +183,7 @@ function renderCurrencyField(field, meta, value) {
           <span class="currency-amount">${escapeHtml(value || '0')}</span>
         </div>
       </button>
-      ${renderConverterSelect(field, meta.label, options, `${field === 'from' ? 'From' : 'To'} currency`, `${field === 'from' ? 'From' : 'To'} currency options`)}
+      ${renderConverterSelect(field, meta.label, options, `${field === 'from' ? t('converter.from') : t('converter.to')} ${t('converter.currency.currency').toLowerCase()}`, `${field === 'from' ? t('converter.from') : t('converter.to')} ${t('converter.currency.options').toLowerCase()}`)}
     </div>
   `;
 }

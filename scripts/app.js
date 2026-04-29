@@ -1,14 +1,16 @@
-import { CONVERTER_MODE_TO_CATEGORY, CURRENCY_CODE_TO_NAME, CURRENCY_DETAILS, CURRENCY_OPTIONS, DEFAULT_CURRENCY_RATES, DEFAULT_MODE, isConverterMode, isMode } from './config.js';
+import { CONVERTER_MODE_TO_CATEGORY, CURRENCY_CODE_TO_NAME, DEFAULT_CURRENCY_RATES, DEFAULT_MODE, getCurrencyDetails, getCurrencyOptions, getUnitLabel, isConverterMode, isMode } from './config.js';
 import {
   getMemoryCollection,
   hydrateState,
   persistCollections,
+  persistLanguage,
   persistNav,
   persistTheme,
   replaceHistoryCollection,
   replaceMemoryCollection,
   state
 } from './state.js';
+import { setLanguage } from './i18n.js';
 import { installTooltipHandling } from './tooltip.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
 import {
@@ -158,6 +160,14 @@ function applyTheme() {
     : state.settings.theme;
   document.documentElement.dataset.theme = effectiveTheme;
   document.querySelector('meta[name="theme-color"]')?.setAttribute('content', THEME_META_COLORS[effectiveTheme] ?? THEME_META_COLORS.dark);
+}
+
+async function applyLanguageChange(language) {
+  state.settings.language = language;
+  persistLanguage();
+  await setLanguage(language);
+  computeDateResults();
+  render();
 }
 
 function handleResize() {
@@ -613,7 +623,7 @@ async function updateCurrencyRates() {
   }
 
   state.converter.isUpdatingRates = true;
-  state.converter.currencyUpdateMessage = 'Fetching the latest USD reference rates...';
+  state.converter.currencyUpdateMessageKey = 'converter.currency.status.fetching';
   render();
 
   try {
@@ -632,11 +642,11 @@ async function updateCurrencyRates() {
 
     state.converter.currencyRates = normalizeCurrencyRates(payload.rates);
     state.converter.currencyUpdatedAt = formatCurrencyTimestamp(payload.time_last_update_utc);
-    state.converter.currencyUpdateMessage = 'Live rates loaded from ExchangeRate-API.';
+    state.converter.currencyUpdateMessageKey = 'converter.currency.status.liveRatesLoaded';
   } catch {
     state.converter.currencyRates = buildFallbackCurrencyRates();
     state.converter.currencyUpdatedAt = formatCurrencyTimestamp(new Date().toISOString());
-    state.converter.currencyUpdateMessage = 'Live update unavailable. Refreshed demo rates locally.';
+    state.converter.currencyUpdateMessageKey = 'converter.currency.status.liveUpdateUnavailable';
   } finally {
     state.converter.isUpdatingRates = false;
     syncConverterValues(state.converter.lastEdited || 'from');
@@ -717,6 +727,11 @@ function handleChange(event) {
     persistTheme();
     applyTheme();
     render();
+    return;
+  }
+
+  if (target.name === 'settings-language') {
+    void applyLanguageChange(target.value);
     return;
   }
 
@@ -1109,8 +1124,8 @@ function findConverterTypeaheadMatch(field, key) {
 
 function getConverterDropdownOptions() {
   if (state.converter.category === 'Currency') {
-    return CURRENCY_OPTIONS.map((currency) => {
-      const details = CURRENCY_DETAILS[currency.name] || { label: currency.label, code: currency.code };
+    return getCurrencyOptions().map((currency) => {
+      const details = getCurrencyDetails(currency.name);
       return {
         value: currency.name,
         label: details.label,
@@ -1121,7 +1136,7 @@ function getConverterDropdownOptions() {
 
   return getUnitsForCategory(state.converter.category).map((unit) => ({
     value: unit.name,
-    label: unit.name,
+    label: getUnitLabel(unit.name),
     code: unit.symbol
   }));
 }

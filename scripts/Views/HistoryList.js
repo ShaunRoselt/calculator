@@ -1,11 +1,12 @@
 import { getHistoryCollection } from '../state.js';
+import { t } from '../i18n.js';
 import { escapeHtml } from '../utils.js';
 import { renderToolbarIcon } from './ViewIcons.js';
 
 export function renderHistoryList() {
   const history = getHistoryCollection();
   if (!history.length) {
-    return `<div class="side-empty">There's no history yet.</div>`;
+    return `<div class="side-empty">${t('history.empty')}</div>`;
   }
   return `
     <div class="history-list">
@@ -17,7 +18,7 @@ export function renderHistoryList() {
       `).join('')}
     </div>
     <div class="side-footer">
-      <button class="icon-button side-clear-button" data-history-clear="true" data-tooltip="Clear all history" aria-label="Clear history">${renderToolbarIcon('delete')}</button>
+      <button class="icon-button side-clear-button" data-history-clear="true" data-tooltip="${t('history.clearAll')}" aria-label="${t('history.clear')} ">${renderToolbarIcon('delete')}</button>
     </div>
   `;
 }

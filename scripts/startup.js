@@ -1,6 +1,9 @@
 const NERDAMER_CDN_URL = 'https://cdn.jsdelivr.net/npm/nerdamer@1.1.13/all.min.js';
 const NERDAMER_LOCAL_URL = new URL('../node_modules/nerdamer/all.min.js', import.meta.url).href;
 const SERVICE_WORKER_URL = new URL('../service-worker.js', import.meta.url).href;
+const LANGUAGE_STORAGE_KEY = 'calculator-language';
+
+import { initI18n } from './i18n.js';
 
 async function loadScript(sourceUrl, errorMessage) {
   await new Promise((resolve, reject) => {
@@ -41,5 +44,6 @@ async function registerServiceWorker() {
 }
 
 await loadNerdamer();
+await initI18n(localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'en');
 void registerServiceWorker();
 await import('./app.js');

@@ -1,11 +1,12 @@
 import { state } from '../../state.js';
+import { t } from '../../i18n.js';
 import { escapeHtml, formatExpressionForDisplay } from '../../utils.js';
 import { renderToolbarIcon } from '../ViewIcons.js';
 
 const GRAPHING_TOOL_GROUPS = [
-  { key: 'trig', label: 'Trigonometry', icon: 'graphing-trig' },
-  { key: 'inequality', label: 'Inequalities', icon: 'graphing-inequality' },
-  { key: 'function', label: 'Function', icon: 'scientific-function' }
+  { key: 'trig', labelKey: 'graph.groups.trigonometry', label: 'Trigonometry', icon: 'graphing-trig' },
+  { key: 'inequality', labelKey: 'graph.groups.inequalities', label: 'Inequalities', icon: 'graphing-inequality' },
+  { key: 'function', labelKey: 'graph.groups.function', label: 'Function', icon: 'scientific-function' }
 ];
 
 const GRAPHING_TRIG_LAYOUTS = {
@@ -63,9 +64,9 @@ const GRAPH_STYLE_COLORS = [
 ];
 
 const GRAPH_LINE_STYLES = [
-  { value: 'solid', label: 'Solid line style' },
-  { value: 'dash', label: 'Dash line style' },
-  { value: 'dot', label: 'Dot line style' }
+  { value: 'solid', labelKey: 'graph.lineStyle.solid', label: 'Solid line style' },
+  { value: 'dash', labelKey: 'graph.lineStyle.dash', label: 'Dash line style' },
+  { value: 'dot', labelKey: 'graph.lineStyle.dot', label: 'Dot line style' }
 ];
 
 const GRAPHING_KEYPAD_ROWS = [
@@ -131,26 +132,26 @@ export function renderGraphingCalculatorView() {
     <div class="graphing-layout ${graphThemeClass} ${isCompact ? `mobile-view-${state.graphing.mobileView}` : 'desktop-view'}">
       <section class="graph-workspace">
         <div class="graph-surface">
-          <canvas id="graph-canvas" class="graph-canvas" width="1200" height="720" aria-label="Graph canvas"></canvas>
+          <canvas id="graph-canvas" class="graph-canvas" width="1200" height="720" aria-label="${t('graph.canvas')}"></canvas>
           ${state.graphing.settingsOpen ? renderGraphSettingsPanel() : ''}
           <div class="graph-overlay graph-surface-tools">
             <div class="graph-tool-cluster">
-              <button class="graph-surface-button ${state.graphing.tracingEnabled ? 'active' : ''}" data-graph-surface-action="trace" data-tooltip="${state.graphing.tracingEnabled ? 'Stop tracing' : 'Start tracing'}" aria-label="${state.graphing.tracingEnabled ? 'Stop tracing' : 'Start tracing'}">${renderToolbarIcon('graph-select')}</button>
-              <button class="graph-surface-button" data-graph-surface-action="share" data-tooltip="Share" aria-label="Share">${renderToolbarIcon('graph-share')}</button>
-              <button class="graph-surface-button ${state.graphing.settingsOpen ? 'active' : ''}" data-graph-settings-toggle="true" data-tooltip="Graph options" aria-label="Graph options">${renderToolbarIcon('graph-options')}</button>
+              <button class="graph-surface-button ${state.graphing.tracingEnabled ? 'active' : ''}" data-graph-surface-action="trace" data-tooltip="${state.graphing.tracingEnabled ? t('graph.stopTracing') : t('graph.startTracing')}" aria-label="${state.graphing.tracingEnabled ? t('graph.stopTracing') : t('graph.startTracing')}">${renderToolbarIcon('graph-select')}</button>
+              <button class="graph-surface-button" data-graph-surface-action="share" data-tooltip="${t('graph.share')}" aria-label="${t('graph.share')}">${renderToolbarIcon('graph-share')}</button>
+              <button class="graph-surface-button ${state.graphing.settingsOpen ? 'active' : ''}" data-graph-settings-toggle="true" data-tooltip="${t('graph.options')}" aria-label="${t('graph.options')}">${renderToolbarIcon('graph-options')}</button>
             </div>
           </div>
           <div class="graph-overlay graph-zoom-controls">
-            <button class="graph-surface-button" data-graph-zoom="in" data-tooltip="Zoom in (Ctrl + plus)" aria-label="Zoom in">+</button>
-            <button class="graph-surface-button" data-graph-zoom="out" data-tooltip="Zoom out (Ctrl + minus)" aria-label="Zoom out">−</button>
-            <button class="graph-surface-button ${state.graphing.isManualAdjustment ? 'active' : ''}" data-graph-view-toggle="true" data-tooltip="Refresh view automatically (Ctrl + 0)" aria-label="Graph view" aria-pressed="${state.graphing.isManualAdjustment ? 'true' : 'false'}">${renderToolbarIcon(state.graphing.isManualAdjustment ? 'graph-manual-view' : 'graph-auto-view')}</button>
+            <button class="graph-surface-button" data-graph-zoom="in" data-tooltip="${t('graph.zoomIn')}" aria-label="${t('graph.zoomInLabel')}">+</button>
+            <button class="graph-surface-button" data-graph-zoom="out" data-tooltip="${t('graph.zoomOut')}" aria-label="${t('graph.zoomOutLabel')}">−</button>
+            <button class="graph-surface-button ${state.graphing.isManualAdjustment ? 'active' : ''}" data-graph-view-toggle="true" data-tooltip="${t('graph.refreshViewAutomatically')}" aria-label="${t('graph.view')}" aria-pressed="${state.graphing.isManualAdjustment ? 'true' : 'false'}">${renderToolbarIcon(state.graphing.isManualAdjustment ? 'graph-manual-view' : 'graph-auto-view')}</button>
           </div>
         </div>
       </section>
 
       <section class="graph-editor-panel ${analysisOpen ? 'graph-analysis-open' : ''}">
         ${analysisOpen ? renderFunctionAnalysisPanel() : `
-          <div class="graph-expression-list" aria-label="Graph expressions">
+          <div class="graph-expression-list" aria-label="${t('graph.expressions')}">
             ${state.graphing.expressions.map((expression, index) => renderExpressionRow(expression, index)).join('')}
           </div>
           <div class="graph-editor-stage" aria-hidden="true"></div>
@@ -181,14 +182,14 @@ function renderFunctionAnalysisPanel() {
   }
 
   return `
-    <section class="graph-analysis-panel" aria-label="Function analysis">
+    <section class="graph-analysis-panel" aria-label="${t('graph.analysis.title')}">
       <div class="graph-analysis-header-row">
         <button
           class="graph-analysis-back"
           type="button"
           data-graph-analysis-close="true"
-          data-tooltip="Back to function list"
-          aria-label="Back to function list"
+          data-tooltip="${t('graph.backToFunctionList')}"
+          aria-label="${t('graph.backToFunctionList')}"
           style="--graph-expression-color: ${expression.color};"
         >
           <span class="graph-analysis-back-icon">${renderToolbarIcon('back')}</span>
@@ -199,7 +200,7 @@ function renderFunctionAnalysisPanel() {
         </button>
         <div class="graph-analysis-expression">${formatExpressionForDisplay(expression.plottedValue || expression.value)}</div>
       </div>
-      <h3 class="graph-analysis-title">Function analysis</h3>
+      <h3 class="graph-analysis-title">${t('graph.analysis.title')}</h3>
       ${analysis.error
         ? `<div class="graph-analysis-error">${escapeHtml(analysis.error)}</div>`
         : `<div class="graph-analysis-list">${analysis.items.map((item) => renderFunctionAnalysisItem(item)).join('')}</div>`}
@@ -238,43 +239,43 @@ function renderFunctionAnalysisItem(item) {
 function renderGraphSettingsPanel() {
   const viewport = state.graphing.viewport;
   return `
-    <section class="graph-settings-panel" role="dialog" aria-label="Graph options">
+    <section class="graph-settings-panel" role="dialog" aria-label="${t('graph.options')}">
       <div class="graph-settings-header">
-        <h3>Graph options</h3>
+        <h3>${t('graph.options')}</h3>
       </div>
       <div class="graph-settings-section-heading">
-        <span>Window</span>
-        <button class="graph-settings-link" type="button" data-graph-settings-reset="true">Reset view</button>
+        <span>${t('graph.window')}</span>
+        <button class="graph-settings-link" type="button" data-graph-settings-reset="true">${t('graph.resetView')}</button>
       </div>
       <div class="graph-settings-grid">
-        ${renderGraphSettingsField('X-Min', 'graph-viewport-xMin', viewport.xMin)}
-        ${renderGraphSettingsField('X-Max', 'graph-viewport-xMax', viewport.xMax)}
-        ${renderGraphSettingsField('Y-Min', 'graph-viewport-yMin', viewport.yMin)}
-        ${renderGraphSettingsField('Y-Max', 'graph-viewport-yMax', viewport.yMax)}
+        ${renderGraphSettingsField(t('graph.xMin'), 'graph-viewport-xMin', viewport.xMin)}
+        ${renderGraphSettingsField(t('graph.xMax'), 'graph-viewport-xMax', viewport.xMax)}
+        ${renderGraphSettingsField(t('graph.yMin'), 'graph-viewport-yMin', viewport.yMin)}
+        ${renderGraphSettingsField(t('graph.yMax'), 'graph-viewport-yMax', viewport.yMax)}
       </div>
       <div class="graph-settings-section-heading standalone">
-        <span>Units</span>
+        <span>${t('graph.units')}</span>
       </div>
-      <div class="graph-settings-choice-row" role="group" aria-label="Units">
-        ${renderGraphSettingsChoice('Radians', 'RAD', state.graphing.angle === 'RAD')}
-        ${renderGraphSettingsChoice('Degrees', 'DEG', state.graphing.angle === 'DEG')}
-        ${renderGraphSettingsChoice('Gradians', 'GRAD', state.graphing.angle === 'GRAD')}
+      <div class="graph-settings-choice-row" role="group" aria-label="${t('graph.units')}">
+        ${renderGraphSettingsChoice(t('graph.radians'), 'RAD', state.graphing.angle === 'RAD')}
+        ${renderGraphSettingsChoice(t('graph.degrees'), 'DEG', state.graphing.angle === 'DEG')}
+        ${renderGraphSettingsChoice(t('graph.gradians'), 'GRAD', state.graphing.angle === 'GRAD')}
       </div>
       <label class="graph-settings-select-label">
-        <span>Line thickness</span>
+        <span>${t('graph.lineThickness')}</span>
         <select class="graph-settings-select" name="graph-line-thickness">
           ${[1, 2, 3, 4].map((value) => `<option value="${value}" ${Number(state.graphing.lineThickness) === value ? 'selected' : ''}>${value.toFixed(1)}</option>`).join('')}
         </select>
       </label>
       <fieldset class="graph-settings-theme-group">
-        <legend>Graph theme</legend>
+        <legend>${t('graph.theme')}</legend>
         <label class="graph-settings-radio-option">
           <input type="radio" name="graph-theme" value="light" ${state.graphing.theme === 'light' ? 'checked' : ''} />
-          <span>Always light</span>
+          <span>${t('graph.alwaysLight')}</span>
         </label>
         <label class="graph-settings-radio-option">
           <input type="radio" name="graph-theme" value="match-app" ${state.graphing.theme === 'match-app' ? 'checked' : ''} />
-          <span>Match app theme</span>
+          <span>${t('graph.matchAppTheme')}</span>
         </label>
       </fieldset>
     </section>
@@ -307,7 +308,7 @@ function renderGraphingGroupButton(group) {
   return `
     <button class="graph-keypad-group ${isActive ? 'active' : ''}" type="button" data-graph-menu-toggle="${group.key}" aria-expanded="${isActive ? 'true' : 'false'}">
       <span class="graph-keypad-group-icon" aria-hidden="true">${renderToolbarIcon(group.icon)}</span>
-      <span>${group.label}</span>
+      <span>${t(group.labelKey) === group.labelKey ? group.label : t(group.labelKey)}</span>
       <span class="graph-keypad-caret ui-caret" aria-hidden="true"></span>
     </button>
   `;
@@ -324,14 +325,14 @@ function renderGraphingMenu() {
 
   if (state.graphing.openMenu === 'inequality') {
     return `
-      <div class="graphing-operator-menu graphing-operator-menu-inequality" role="group" aria-label="Inequalities">
+      <div class="graphing-operator-menu graphing-operator-menu-inequality" role="group" aria-label="${t('graph.groups.inequalities')}">
         ${GRAPHING_INEQUALITY_OPTIONS.map((option) => `<button class="graphing-menu-item" data-graph-insert="${escapeHtml(option.insert)}">${option.label}</button>`).join('')}
       </div>
     `;
   }
 
   return `
-    <div class="graphing-operator-menu graphing-operator-menu-function" role="group" aria-label="Functions">
+    <div class="graphing-operator-menu graphing-operator-menu-function" role="group" aria-label="${t('graph.functions')}">
       ${GRAPHING_FUNCTION_OPTIONS.map((option) => `<button class="graphing-menu-item" data-graph-insert="${escapeHtml(option.insert)}">${option.label}</button>`).join('')}
     </div>
   `;
@@ -344,7 +345,7 @@ function renderGraphingTrigMenu() {
   const options = GRAPHING_TRIG_LAYOUTS[key];
 
   return `
-    <div class="graphing-operator-menu graphing-operator-menu-trig" role="group" aria-label="Trigonometry">
+    <div class="graphing-operator-menu graphing-operator-menu-trig" role="group" aria-label="${t('graph.groups.trigonometry')}">
       <button class="graphing-menu-toggle ${state.graphing.trigShifted ? 'active' : ''}" data-graph-menu-action="toggle-trig-shift" aria-pressed="${state.graphing.trigShifted ? 'true' : 'false'}">2ⁿᵈ</button>
       ${options.slice(0, 3).map((option) => `<button class="graphing-menu-item" data-graph-insert="${escapeHtml(option.insert)}">${option.label}</button>`).join('')}
       <button class="graphing-menu-toggle ${state.graphing.trigHyperbolic ? 'active' : ''}" data-graph-menu-action="toggle-trig-hyp" aria-pressed="${state.graphing.trigHyperbolic ? 'true' : 'false'}">hyp</button>
@@ -355,10 +356,10 @@ function renderGraphingTrigMenu() {
 
 function renderExpressionRow(expression, index) {
   const isAddRow = index === state.graphing.expressions.length - 1 && !expression.plottedValue.trim();
-  const visibilityTooltip = expression.visible === false ? 'Show equation' : 'Hide equation';
+  const visibilityTooltip = expression.visible === false ? t('graph.showEquation') : t('graph.hideEquation');
   const visibilityIcon = expression.visible === false ? 'graph-show-equation' : 'graph-hide-equation';
   const badgeControl = isAddRow
-    ? `data-graph-select="${index}" aria-label="Select expression ${index + 1}"`
+    ? `data-graph-select="${index}" aria-label="${t('graph.selectExpression', { index: index + 1 })}"`
     : `data-graph-expression-visibility="${index}" data-tooltip="${visibilityTooltip}" aria-label="${visibilityTooltip}"`;
   const stylePanelOpen = state.graphing.stylePanelExpressionIndex === index;
 
@@ -377,14 +378,14 @@ function renderExpressionRow(expression, index) {
           type="text"
           name="graph-expression-${index}"
           value="${escapeHtml(expression.value)}"
-          placeholder="Enter an expression"
-          aria-label="Expression ${index + 1}"
+          placeholder="${t('graph.enterExpression')}"
+          aria-label="${t('graph.expressionIndex', { index: index + 1 })}"
         />
         ${isAddRow ? '' : `
           <div class="graph-expression-actions" aria-hidden="true">
-            <button class="graph-expression-action" type="button" data-graph-expression-analyze="${index}" data-tooltip="Analyze function" aria-label="Analyze function">${renderToolbarIcon('graph-analyze-function')}</button>
-            <button class="graph-expression-action ${stylePanelOpen ? 'active' : ''}" type="button" data-graph-expression-style="${index}" data-tooltip="Change equation style" aria-label="Change equation style">${renderToolbarIcon('graph-style-picker')}</button>
-            <button class="graph-expression-action" type="button" data-graph-expression-remove="${index}" data-tooltip="Remove equation" aria-label="Remove equation">${renderToolbarIcon('graph-remove-equation')}</button>
+            <button class="graph-expression-action" type="button" data-graph-expression-analyze="${index}" data-tooltip="${t('graph.analyzeFunction')}" aria-label="${t('graph.analyzeFunction')}">${renderToolbarIcon('graph-analyze-function')}</button>
+            <button class="graph-expression-action ${stylePanelOpen ? 'active' : ''}" type="button" data-graph-expression-style="${index}" data-tooltip="${t('graph.changeEquationStyle')}" aria-label="${t('graph.changeEquationStyle')}">${renderToolbarIcon('graph-style-picker')}</button>
+            <button class="graph-expression-action" type="button" data-graph-expression-remove="${index}" data-tooltip="${t('graph.removeEquation')}" aria-label="${t('graph.removeEquation')}">${renderToolbarIcon('graph-remove-equation')}</button>
           </div>
           ${stylePanelOpen ? renderExpressionStylePanel(expression, index) : ''}
         `}
@@ -395,10 +396,10 @@ function renderExpressionRow(expression, index) {
 
 function renderExpressionStylePanel(expression, index) {
   return `
-    <section class="graph-expression-style-panel" role="dialog" aria-label="Line options">
-      <h3>Line options</h3>
-      <div class="graph-expression-style-section-label">Color</div>
-      <div class="graph-expression-color-grid" role="group" aria-label="Color">
+    <section class="graph-expression-style-panel" role="dialog" aria-label="${t('graph.lineOptions')}">
+      <h3>${t('graph.lineOptions')}</h3>
+      <div class="graph-expression-style-section-label">${t('graph.color')}</div>
+      <div class="graph-expression-color-grid" role="group" aria-label="${t('graph.color')}">
         ${GRAPH_STYLE_COLORS.map((color) => `
           <button
             class="graph-expression-color-swatch ${expression.color === color ? 'selected' : ''}"
@@ -411,9 +412,9 @@ function renderExpressionStylePanel(expression, index) {
         `).join('')}
       </div>
       <label class="graph-expression-style-select-label">
-        <span>Style</span>
+        <span>${t('graph.style')}</span>
         <select class="graph-expression-style-select" name="graph-expression-line-style-${index}">
-          ${GRAPH_LINE_STYLES.map((option) => `<option value="${option.value}" ${expression.lineStyle === option.value ? 'selected' : ''}>${option.label}</option>`).join('')}
+          ${GRAPH_LINE_STYLES.map((option) => `<option value="${option.value}" ${expression.lineStyle === option.value ? 'selected' : ''}>${t(option.labelKey) === option.labelKey ? option.label : t(option.labelKey)}</option>`).join('')}
         </select>
       </label>
     </section>

@@ -1,3 +1,4 @@
+import { getCurrentLocale, t } from '../i18n.js';
 import { state } from '../state.js';
 import { escapeHtml, toDateInputValue } from '../utils.js';
 import { renderToolbarIcon } from './ViewIcons.js';
@@ -10,7 +11,7 @@ export function renderDateCalculatorView() {
     <div class="date-native-view">
       <div class="date-native-select-field">
         <span class="date-native-select-wrap">
-          <button type="button" class="date-native-select-button ${state.date.openModeMenu ? 'active' : ''}" data-date-mode-toggle="true" aria-haspopup="listbox" aria-expanded="${state.date.openModeMenu ? 'true' : 'false'}" aria-label="Calculation mode">
+          <button type="button" class="date-native-select-button ${state.date.openModeMenu ? 'active' : ''}" data-date-mode-toggle="true" aria-haspopup="listbox" aria-expanded="${state.date.openModeMenu ? 'true' : 'false'}" aria-label="${t('date.calculationMode')}">
             <span>${escapeHtml(getDateModeLabel(state.date.mode))}</span>
           </button>
           <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
@@ -26,11 +27,11 @@ export function renderDateCalculatorView() {
 
 function renderDateDifference(result) {
   return `
-    ${renderDateField('From', 'from', state.date.from)}
-    ${renderDateField('To', 'to', state.date.to)}
+    ${renderDateField(t('date.from'), 'from', state.date.from)}
+    ${renderDateField(t('date.to'), 'to', state.date.to)}
     <div class="date-native-result-block">
-      <div class="date-native-result-label">Difference</div>
-      <div class="date-native-result-primary">${escapeHtml(result?.summary ?? 'Same dates')}</div>
+      <div class="date-native-result-label">${t('date.results.difference')}</div>
+      <div class="date-native-result-primary">${escapeHtml(result?.summary ?? t('date.results.sameDates'))}</div>
       ${result?.detail ? `<div class="date-native-result-secondary">${escapeHtml(result.detail)}</div>` : ''}
     </div>
   `;
@@ -38,9 +39,9 @@ function renderDateDifference(result) {
 
 function renderDateModeMenu() {
   return `
-    <div class="date-native-mode-menu" role="listbox" aria-label="Calculation mode options">
-      ${renderDateModeOption('difference', 'Difference between dates')}
-      ${renderDateModeOption('shift', 'Add or subtract days')}
+    <div class="date-native-mode-menu" role="listbox" aria-label="${t('date.calculationModeOptions')}">
+      ${renderDateModeOption('difference', t('date.mode.difference'))}
+      ${renderDateModeOption('shift', t('date.mode.shift'))}
     </div>
   `;
 }
@@ -54,18 +55,18 @@ function renderDateModeOption(value, label) {
 
 function renderDateShift(result) {
   return `
-    ${renderDateField('From', 'baseDate', state.date.baseDate)}
-    <div class="date-native-radio-row" role="radiogroup" aria-label="Date operation">
-      ${renderDateOperation('add', 'Add')}
-      ${renderDateOperation('subtract', 'Subtract')}
+    ${renderDateField(t('date.from'), 'baseDate', state.date.baseDate)}
+    <div class="date-native-radio-row" role="radiogroup" aria-label="${t('date.operation')}">
+      ${renderDateOperation('add', t('date.add'))}
+      ${renderDateOperation('subtract', t('date.subtract'))}
     </div>
     <div class="date-native-offset-grid">
-      ${renderOffsetField('Years', 'years', state.date.years)}
-      ${renderOffsetField('Months', 'months', state.date.months)}
-      ${renderOffsetField('Days', 'days', state.date.days)}
+      ${renderOffsetField(t('date.years'), 'years', state.date.years)}
+      ${renderOffsetField(t('date.months'), 'months', state.date.months)}
+      ${renderOffsetField(t('date.days'), 'days', state.date.days)}
     </div>
     <div class="date-native-result-block">
-      <div class="date-native-result-label">Date</div>
+      <div class="date-native-result-label">${t('date.results.date')}</div>
       <div class="date-native-result-primary date-native-result-date">${escapeHtml(result?.summary ?? '')}</div>
     </div>
   `;
@@ -113,7 +114,7 @@ function renderOffsetField(label, key, selectedValue) {
 }
 
 function formatShortDate(value) {
-  return new Intl.DateTimeFormat(undefined, {
+  return new Intl.DateTimeFormat(getCurrentLocale(), {
     day: '2-digit',
     month: 'long',
     year: 'numeric',
@@ -122,19 +123,19 @@ function formatShortDate(value) {
 }
 
 function getDateModeLabel(mode) {
-  return mode === 'shift' ? 'Add or subtract days' : 'Difference between dates';
+  return mode === 'shift' ? t('date.mode.shift') : t('date.mode.difference');
 }
 
 function renderDatePicker(key, selectedValue) {
   const visibleMonth = getVisibleMonthDate(selectedValue);
   const cells = getDatePickerCells(visibleMonth, selectedValue);
   return `
-    <div class="date-native-calendar" role="dialog" aria-label="Choose date">
+    <div class="date-native-calendar" role="dialog" aria-label="${t('date.chooseDate')}">
       <div class="date-native-calendar-header">
         <div class="date-native-calendar-month">${escapeHtml(formatCalendarMonth(visibleMonth))}</div>
         <div class="date-native-calendar-nav">
-          <button type="button" class="date-native-calendar-nav-button" data-date-picker-nav="-1" data-date-picker-target="${key}" aria-label="Previous month">‹</button>
-          <button type="button" class="date-native-calendar-nav-button" data-date-picker-nav="1" data-date-picker-target="${key}" aria-label="Next month">›</button>
+          <button type="button" class="date-native-calendar-nav-button" data-date-picker-nav="-1" data-date-picker-target="${key}" aria-label="${t('date.previousMonth')}">‹</button>
+          <button type="button" class="date-native-calendar-nav-button" data-date-picker-nav="1" data-date-picker-target="${key}" aria-label="${t('date.nextMonth')}">›</button>
         </div>
       </div>
       <div class="date-native-calendar-weekdays">
@@ -162,7 +163,7 @@ function getVisibleMonthDate(selectedValue) {
 }
 
 function formatCalendarMonth(value) {
-  return new Intl.DateTimeFormat(undefined, {
+  return new Intl.DateTimeFormat(getCurrentLocale(), {
     month: 'long',
     year: 'numeric',
     timeZone: 'UTC'

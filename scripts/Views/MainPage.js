@@ -1,6 +1,7 @@
-import { MODE_META, NAVIGATION_GROUPS } from '../config.js';
+import { MODE_META, getAppName, getModeMeta, getNavigationGroups } from '../config.js';
 import { appRoot } from '../dom.js';
 import { drawGraph, isCalculatorMode, isSidePanelVisible, supportsHistoryPanelMode, supportsMemoryPanelMode } from '../logic.js';
+import { t } from '../i18n.js';
 import { state } from '../state.js';
 import { prepareTooltipTargets } from '../tooltip.js';
 import { renderCalculatorView } from './Calculator.js';
@@ -54,18 +55,20 @@ function syncConverterMenuScroll() {
 }
 
 function renderNavigationView() {
+  const navigationGroups = getNavigationGroups();
+  const settingsMeta = getModeMeta('settings') ?? MODE_META.settings;
   return `
-    <aside class="sidebar" aria-label="Calculator navigation">
+    <aside class="sidebar" aria-label="${t('navigation.aria.navigation')}">
       <div class="sidebar-header">
-        <button class="icon-button nav-drawer-toggle" data-nav-toggle="true" aria-label="Close navigation">${renderToolbarIcon('menu')}</button>
+        <button class="icon-button nav-drawer-toggle" data-nav-toggle="true" aria-label="${t('navigation.aria.closeNavigation')}">${renderToolbarIcon('menu')}</button>
       </div>
       <nav class="sidebar-nav">
-        ${NAVIGATION_GROUPS.map((group) => `
+        ${navigationGroups.map((group) => `
           <div class="nav-group">
             <div class="nav-group-label">${group.label}</div>
             <div class="nav-group-items">
               ${group.modes.map((mode) => {
-                const meta = MODE_META[mode];
+                const meta = getModeMeta(mode) ?? MODE_META[mode];
                 return `
                   <button class="nav-button ${state.mode === mode ? 'active' : ''}" data-set-mode="${mode}">
                     <span class="nav-icon">${renderNavIcon(meta.icon)}</span>
@@ -80,7 +83,7 @@ function renderNavigationView() {
       <div class="nav-footer">
         <button class="nav-button ${state.mode === 'settings' ? 'active' : ''}" data-set-mode="settings">
           <span class="nav-icon">${renderNavIcon(MODE_META.settings.icon)}</span>
-          <span class="nav-label">${MODE_META.settings.label}</span>
+          <span class="nav-label">${settingsMeta.label}</span>
         </button>
       </div>
     </aside>
@@ -88,28 +91,28 @@ function renderNavigationView() {
 }
 
 function renderHeader() {
-  const meta = MODE_META[state.mode];
+  const meta = getModeMeta(state.mode) ?? MODE_META[state.mode];
   const isGraphingCompact = state.mode === 'graphing' && window.innerWidth < 768;
   const showDesktopSidePanel = getLayoutMode() === 'desktop' && isSidePanelVisible();
   const canOpenHistoryPanel = supportsHistoryPanelMode(state.mode);
   const navButton = state.mode === 'settings'
-    ? `<button class="icon-button nav-toggle" data-settings-back="true" data-tooltip="Back" aria-label="Back">${renderToolbarIcon('back')}</button>`
-    : `<button class="icon-button nav-toggle" data-nav-toggle="true" aria-label="Open navigation">${renderToolbarIcon('menu')}</button>`;
+    ? `<button class="icon-button nav-toggle" data-settings-back="true" data-tooltip="${t('common.back')}" aria-label="${t('common.back')}">${renderToolbarIcon('back')}</button>`
+    : `<button class="icon-button nav-toggle" data-nav-toggle="true" aria-label="${t('navigation.aria.openNavigation')}">${renderToolbarIcon('menu')}</button>`;
   const graphingActions = isGraphingCompact
     ? `
-      <div class="graph-view-toggle-group" role="group" aria-label="Graphing mobile view">
-        <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'graph' ? 'active' : ''}" data-graph-view="graph" aria-label="Show graph">${renderToolbarIcon('graph-view')}</button>
-        <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'editor' ? 'active' : ''}" data-graph-view="editor" aria-label="Show expressions">${renderToolbarIcon('expressions-view')}</button>
+      <div class="graph-view-toggle-group" role="group" aria-label="${t('graph.mobileView')}">
+        <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'graph' ? 'active' : ''}" data-graph-view="graph" aria-label="${t('graph.showGraph')}">${renderToolbarIcon('graph-view')}</button>
+        <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'editor' ? 'active' : ''}" data-graph-view="editor" aria-label="${t('graph.showExpressions')}">${renderToolbarIcon('expressions-view')}</button>
       </div>
     `
     : '';
-  const historyAutomationName = state.historyOpen ? 'Close history flyout' : 'Open history flyout';
+  const historyAutomationName = state.historyOpen ? t('history.closeFlyout') : t('history.openFlyout');
   return `
     <header class="topbar ${isCalculatorMode(state.mode) ? 'calculator-topbar' : ''}">
       <div class="topbar-title">
         ${navButton}
         <div class="mode-title-group">
-          <div class="mode-caption">Calculator</div>
+          <div class="mode-caption">${getAppName()}</div>
           <div class="mode-title-row">
             <h2>${meta.label}</h2>
           </div>
@@ -117,7 +120,7 @@ function renderHeader() {
       </div>
       <div class="topbar-actions">
         ${graphingActions}
-        ${canOpenHistoryPanel && !showDesktopSidePanel ? `<button class="icon-button history-toggle ${state.historyOpen ? 'active' : ''}" data-toggle-panel="history" data-tooltip="History" aria-label="${historyAutomationName}">${renderToolbarIcon('history')}</button>` : ''}
+        ${canOpenHistoryPanel && !showDesktopSidePanel ? `<button class="icon-button history-toggle ${state.historyOpen ? 'active' : ''}" data-toggle-panel="history" data-tooltip="${t('history.title')}" aria-label="${historyAutomationName}">${renderToolbarIcon('history')}</button>` : ''}
       </div>
     </header>
   `;
@@ -158,16 +161,16 @@ function renderMainContent() {
 function renderSidePanel() {
   const overlay = getLayoutMode() !== 'desktop';
   const hasMemoryPanel = supportsMemoryPanelMode(state.mode);
-  const title = hasMemoryPanel ? 'History &amp; Memory' : 'History';
+  const title = hasMemoryPanel ? t('history.andMemory') : t('history.title');
   return `
-    <aside class="panel side-panel ${overlay ? 'overlay' : ''}" aria-label="${hasMemoryPanel ? 'History and memory panel' : 'History panel'}">
+    <aside class="panel side-panel ${overlay ? 'overlay' : ''}" aria-label="${hasMemoryPanel ? t('history.aria.historyAndMemoryPanel') : t('history.aria.historyPanel')}">
       <div class="side-panel-header">
         <div class="side-panel-title">${title}</div>
-        ${overlay ? `<button class="icon-button side-panel-close" data-close-surface="panel" aria-label="Close side panel">${renderToolbarIcon('dismiss')}</button>` : ''}
+        ${overlay ? `<button class="icon-button side-panel-close" data-close-surface="panel" aria-label="${t('common.closeSidePanel')}">${renderToolbarIcon('dismiss')}</button>` : ''}
       </div>
       <div class="side-tabs">
-        <button class="tab-button ${state.historyTab === 'history' ? 'active' : ''}" data-history-tab="history">History</button>
-        ${hasMemoryPanel ? `<button class="tab-button ${state.historyTab === 'memory' ? 'active' : ''}" data-history-tab="memory">Memory</button>` : ''}
+        <button class="tab-button ${state.historyTab === 'history' ? 'active' : ''}" data-history-tab="history">${t('history.title')}</button>
+        ${hasMemoryPanel ? `<button class="tab-button ${state.historyTab === 'memory' ? 'active' : ''}" data-history-tab="memory">${t('memory.title')}</button>` : ''}
       </div>
       <div class="side-body">
         ${!hasMemoryPanel || state.historyTab === 'history' ? renderHistoryList() : renderMemoryList()}

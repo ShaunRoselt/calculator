@@ -1,4 +1,5 @@
-import { CURRENCY_DETAILS, CURRENCY_OPTIONS, DEFAULT_CURRENCY_RATES, MODE_META, UNIT_CATEGORIES, isConverterMode } from './config.js';
+import { CURRENCY_DETAILS, CURRENCY_OPTIONS, DEFAULT_CURRENCY_RATES, UNIT_CATEGORIES, getModeMeta, getUnitLabel, isConverterMode } from './config.js';
+import { getCurrentLocale, t } from './i18n.js';
 import {
   createProgrammerState,
   createScientificState,
@@ -15,6 +16,35 @@ import {
   solveGraphExpressionWithCas
 } from './graphAnalysisCas.js';
 import { formatExpressionText, formatNumber } from './utils.js';
+
+function invalidInputMessage() {
+  return t('errors.invalidInput');
+}
+
+function cannotDivideByZeroMessage() {
+  return t('errors.cannotDivideByZero');
+}
+
+function cannotModuloByZeroMessage() {
+  return t('errors.cannotModuloByZero');
+}
+
+function invalidProgrammerOperationMessage() {
+  return t('errors.invalidProgrammerOperation');
+}
+
+function localizeRuntimeErrorMessage(message) {
+  if (message === 'Invalid input') {
+    return invalidInputMessage();
+  }
+  if (message === 'Cannot divide by zero') {
+    return cannotDivideByZeroMessage();
+  }
+  if (message === 'Overflow') {
+    return t('errors.overflow');
+  }
+  return message || invalidInputMessage();
+}
 
 export function handleAction(action, value) {
   switch (state.mode) {
@@ -163,7 +193,7 @@ function applyStandardUnary(action) {
   let expression;
   if (action === 'reciprocal') {
     if (current === 0) {
-      setStandardError('Cannot divide by zero');
+      setStandardError(cannotDivideByZeroMessage());
       return;
     }
     result = 1 / current;
@@ -173,7 +203,7 @@ function applyStandardUnary(action) {
     expression = `sqr(${formatNumber(current)})`;
   } else if (action === 'sqrt') {
     if (current < 0) {
-      setStandardError('Invalid input');
+      setStandardError(invalidInputMessage());
       return;
     }
     result = Math.sqrt(current);
@@ -211,7 +241,7 @@ function setStandardError(message) {
 
 function computeStandardBinary(left, right, operator) {
   if (operator === '/' && right === 0) {
-    setStandardError('Cannot divide by zero');
+    setStandardError(cannotDivideByZeroMessage());
     return null;
   }
   switch (operator) {
@@ -404,7 +434,7 @@ function applyScientificUnary(action) {
   try {
     result = scientificUnary(action, current, calc.angle);
   } catch (error) {
-    calc.display = error.message || 'Invalid input';
+    calc.display = localizeRuntimeErrorMessage(error.message);
     calc.error = true;
     return;
   }
@@ -443,7 +473,7 @@ function evaluateScientificEquals() {
     calc.justEvaluated = true;
     pushHistory(expression, calc.display, 'scientific');
   } catch (error) {
-    calc.display = error.message || 'Invalid input';
+    calc.display = localizeRuntimeErrorMessage(error.message);
     calc.error = true;
   }
 }
@@ -610,13 +640,13 @@ function computeProgrammerBinary(left, right, operator) {
       case '*': return left * right;
       case '/':
         if (right === 0n) {
-          setProgrammerError('Cannot divide by zero');
+          setProgrammerError(cannotDivideByZeroMessage());
           return null;
         }
         return left / right;
       case 'mod':
         if (right === 0n) {
-          setProgrammerError('Cannot modulo by zero');
+          setProgrammerError(cannotModuloByZeroMessage());
           return null;
         }
         return left % right;
@@ -628,7 +658,7 @@ function computeProgrammerBinary(left, right, operator) {
       default: return right;
     }
   } catch {
-    setProgrammerError('Invalid programmer operation');
+    setProgrammerError(invalidProgrammerOperationMessage());
     return null;
   }
 }
@@ -846,7 +876,7 @@ function pushHistory(expression, result, mode, extra = {}) {
     expression,
     result,
     mode,
-    modeLabel: MODE_META[mode].label,
+    modeLabel: getModeMeta(mode)?.label ?? mode,
     ...extra
   };
 
@@ -910,7 +940,7 @@ function getConverterHistoryEntry() {
 
   const normalizedFromValue = String(fromValue ?? '').trim();
   const normalizedToValue = String(toValue ?? '').trim();
-  if (!normalizedFromValue || !normalizedToValue || normalizedFromValue === 'Invalid input' || normalizedToValue === 'Invalid input') {
+  if (!normalizedFromValue || !normalizedToValue || normalizedFromValue === invalidInputMessage() || normalizedToValue === invalidInputMessage()) {
     return null;
   }
 
@@ -928,7 +958,7 @@ function getConverterHistoryUnitLabel(category, unitName) {
     return CURRENCY_DETAILS[unitName]?.code ?? unitName;
   }
 
-  return unitName;
+  return getUnitLabel(unitName);
 }
 
 function formatConverterHistoryValue(value) {
@@ -1537,7 +1567,7 @@ export function computeDateResults() {
     }
     state.date.result = {
       totalDays,
-      summary: totalDays === 0 ? 'Same dates' : (parts.length ? parts.join(', ') : formatDateUnit(totalDays, 'day')),
+      summary: totalDays === 0 ? t('date.results.sameDates') : (parts.length ? parts.join(', ') : formatDateUnit(totalDays, 'day')),
       detail: totalDays === 0 || (years === 0 && months === 0 && weeks === 0) ? '' : formatDateUnit(totalDays, 'day')
     };
   } else {
@@ -1601,13 +1631,17 @@ function subtractDateDuration(baseDate, { years = 0, months = 0, days = 0 }) {
 }
 
 function formatDateUnit(value, unit) {
-  return `${value} ${unit}${value === 1 ? '' : 's'}`;
+  const pluralKey = value === 1 ? 'one' : 'other';
+  return t(`date.duration.${unit}.${pluralKey}`, { count: value });
 }
 
 function getDateHistoryEntry() {
   if (state.date.mode === 'difference') {
     return {
-      expression: `Difference between ${formatHistoryDate(state.date.from)} and ${formatHistoryDate(state.date.to)}`,
+      expression: t('date.history.differenceBetween', {
+        from: formatHistoryDate(state.date.from),
+        to: formatHistoryDate(state.date.to)
+      }),
       result: state.date.result?.detail
         ? `${state.date.result.summary} (${state.date.result.detail})`
         : (state.date.result?.summary ?? '')
@@ -1621,13 +1655,19 @@ function getDateHistoryEntry() {
   ].filter(Boolean);
 
   return {
-    expression: `${state.date.operation === 'subtract' ? 'Subtract' : 'Add'} ${offsets.length ? offsets.join(', ') : '0 days'} ${state.date.operation === 'subtract' ? 'from' : 'to'} ${formatHistoryDate(state.date.baseDate)}`,
+    expression: t(
+      state.date.operation === 'subtract' ? 'date.history.subtractFrom' : 'date.history.addTo',
+      {
+        duration: offsets.length ? offsets.join(', ') : formatDateUnit(0, 'day'),
+        date: formatHistoryDate(state.date.baseDate)
+      }
+    ),
     result: state.date.result?.summary ?? ''
   };
 }
 
 function formatHistoryDate(value) {
-  return new Intl.DateTimeFormat(undefined, {
+  return new Intl.DateTimeFormat(getCurrentLocale(), {
     day: '2-digit',
     month: 'short',
     year: 'numeric',
@@ -1650,7 +1690,7 @@ function getDateHistoryAnchorMonth(dateState) {
 }
 
 function formatLongDate(value) {
-  const formatter = new Intl.DateTimeFormat(undefined, {
+  const formatter = new Intl.DateTimeFormat(getCurrentLocale(), {
     weekday: 'long',
     day: '2-digit',
     month: 'long',
@@ -1710,9 +1750,9 @@ export function syncConverterValues(source) {
   const numeric = Number(normalizeConverterValue(normalizedSource === 'from' ? state.converter.fromValue : state.converter.toValue));
   if (!Number.isFinite(numeric)) {
     if (normalizedSource === 'from') {
-      state.converter.toValue = 'Invalid input';
+      state.converter.toValue = invalidInputMessage();
     } else {
-      state.converter.fromValue = 'Invalid input';
+      state.converter.fromValue = invalidInputMessage();
     }
     return;
   }
@@ -1737,7 +1777,7 @@ export function handleConverterKeypad(action, value = '') {
   const key = activeField === 'from' ? 'fromValue' : 'toValue';
   const currentRaw = String(state.converter[key] || '0');
   const allowNegative = state.converter.category !== 'Currency';
-  const current = currentRaw === 'Invalid input' ? '0' : normalizeConverterValue(currentRaw, allowNegative);
+  const current = currentRaw === invalidInputMessage() ? '0' : normalizeConverterValue(currentRaw, allowNegative);
 
   if (action === 'clear') {
     state.converter[key] = '0';
@@ -1784,7 +1824,7 @@ export function handleCurrencyKeypad(action, value = '') {
 
 export function getConverterDisplayValue(field) {
   const raw = field === 'to' ? state.converter.toValue : state.converter.fromValue;
-  if (raw === 'Invalid input') {
+  if (raw === invalidInputMessage()) {
     return raw;
   }
   if (state.converter.category === 'Currency') {
@@ -2055,11 +2095,11 @@ export function updateGraph() {
   }
 
   if (hasError) {
-    state.graphing.status = 'Check the highlighted expression';
+    state.graphing.status = t('graph.checkHighlightedExpression');
   } else if (activeExpressions.length) {
-    state.graphing.status = `Plotting ${activeExpressions.length} expression${activeExpressions.length === 1 ? '' : 's'}`;
+    state.graphing.status = t('graph.plottingExpressions', { count: activeExpressions.length });
   } else {
-    state.graphing.status = 'Enter an expression';
+    state.graphing.status = t('graph.enterExpression');
   }
 
   drawGraph();
@@ -2212,45 +2252,45 @@ function normalizeGraphExpression(expression) {
 }
 
 const GRAPH_ANALYSIS_STRINGS = {
-  title: 'Function analysis',
-  domain: 'Domain',
-  range: 'Range',
-  xIntercept: 'X-Intercept',
-  yIntercept: 'Y-Intercept',
-  minima: 'Minima',
-  maxima: 'Maxima',
-  inflectionPoints: 'Inflection points',
-  verticalAsymptotes: 'Vertical asymptotes',
-  horizontalAsymptotes: 'Horizontal asymptotes',
-  obliqueAsymptotes: 'Oblique asymptotes',
-  parity: 'Parity',
-  period: 'Period',
-  monotonicity: 'Monotonicity',
-  domainNone: 'Unable to calculate the domain for this function.',
-  rangeNone: 'Unable to calculate the range for this function.',
-  xInterceptNone: 'The function does not have any x-intercepts.',
-  yInterceptNone: 'The function does not have any y-intercepts.',
-  minimaNone: 'The function does not have any minima points.',
-  maximaNone: 'The function does not have any maxima points.',
-  inflectionNone: 'The function does not have any inflection points.',
-  verticalAsymptotesNone: 'The function does not have any vertical asymptotes.',
-  horizontalAsymptotesNone: 'The function does not have any horizontal asymptotes.',
-  obliqueAsymptotesNone: 'The function does not have any oblique asymptotes.',
-  parityUnknown: 'The function parity is unknown.',
-  parityOdd: 'The function is odd.',
-  parityEven: 'The function is even.',
-  parityNeither: 'The function is neither even nor odd.',
-  periodicityUnknown: 'The function periodicity is unknown.',
-  periodicityNotPeriodic: 'The function is not periodic.',
-  monotonicityConstant: 'Constant',
-  monotonicityIncreasing: 'Increasing',
-  monotonicityDecreasing: 'Decreasing',
-  monotonicityUnknown: 'The monotonicity of the function is unknown.',
-  monotonicityError: 'Unable to determine the monotonicity of the function.',
-  featureTooComplexPlural: 'These features are too complex for Calculator to calculate.',
-  analysisCouldNotBePerformed: 'Analysis could not be performed for the function.',
-  analysisNotSupported: 'Analysis is not supported for this function.',
-  variableIsNotX: 'Analysis is only supported for functions in the f(x) format. Example: y=x'
+  get title() { return t('graph.analysis.title'); },
+  get domain() { return t('graph.analysis.domain'); },
+  get range() { return t('graph.analysis.range'); },
+  get xIntercept() { return t('graph.analysis.xIntercept'); },
+  get yIntercept() { return t('graph.analysis.yIntercept'); },
+  get minima() { return t('graph.analysis.minima'); },
+  get maxima() { return t('graph.analysis.maxima'); },
+  get inflectionPoints() { return t('graph.analysis.inflectionPoints'); },
+  get verticalAsymptotes() { return t('graph.analysis.verticalAsymptotes'); },
+  get horizontalAsymptotes() { return t('graph.analysis.horizontalAsymptotes'); },
+  get obliqueAsymptotes() { return t('graph.analysis.obliqueAsymptotes'); },
+  get parity() { return t('graph.analysis.parity'); },
+  get period() { return t('graph.analysis.period'); },
+  get monotonicity() { return t('graph.analysis.monotonicity'); },
+  get domainNone() { return t('graph.analysis.domainNone'); },
+  get rangeNone() { return t('graph.analysis.rangeNone'); },
+  get xInterceptNone() { return t('graph.analysis.xInterceptNone'); },
+  get yInterceptNone() { return t('graph.analysis.yInterceptNone'); },
+  get minimaNone() { return t('graph.analysis.minimaNone'); },
+  get maximaNone() { return t('graph.analysis.maximaNone'); },
+  get inflectionNone() { return t('graph.analysis.inflectionNone'); },
+  get verticalAsymptotesNone() { return t('graph.analysis.verticalAsymptotesNone'); },
+  get horizontalAsymptotesNone() { return t('graph.analysis.horizontalAsymptotesNone'); },
+  get obliqueAsymptotesNone() { return t('graph.analysis.obliqueAsymptotesNone'); },
+  get parityUnknown() { return t('graph.analysis.parityUnknown'); },
+  get parityOdd() { return t('graph.analysis.parityOdd'); },
+  get parityEven() { return t('graph.analysis.parityEven'); },
+  get parityNeither() { return t('graph.analysis.parityNeither'); },
+  get periodicityUnknown() { return t('graph.analysis.periodicityUnknown'); },
+  get periodicityNotPeriodic() { return t('graph.analysis.periodicityNotPeriodic'); },
+  get monotonicityConstant() { return t('graph.analysis.monotonicityConstant'); },
+  get monotonicityIncreasing() { return t('graph.analysis.monotonicityIncreasing'); },
+  get monotonicityDecreasing() { return t('graph.analysis.monotonicityDecreasing'); },
+  get monotonicityUnknown() { return t('graph.analysis.monotonicityUnknown'); },
+  get monotonicityError() { return t('graph.analysis.monotonicityError'); },
+  get featureTooComplexPlural() { return t('graph.analysis.featureTooComplexPlural'); },
+  get analysisCouldNotBePerformed() { return t('graph.analysis.analysisCouldNotBePerformed'); },
+  get analysisNotSupported() { return t('graph.analysis.analysisNotSupported'); },
+  get variableIsNotX() { return t('graph.analysis.variableIsNotX'); }
 };
 
 function buildGraphAnalysisPayload(expressionText, angle) {

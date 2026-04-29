@@ -1,3 +1,5 @@
+import { t } from './i18n.js';
+
 function btn(label, action, value = '', tone = 'default') {
   return { label, action, value, tone };
 }
@@ -14,7 +16,8 @@ export const STORAGE_KEYS = {
   history: 'calculator-history',
   memory: 'calculator-memory',
   nav: 'calculator-nav',
-  theme: 'calculator-theme'
+  theme: 'calculator-theme',
+  language: 'calculator-language'
 };
 
 export const DEFAULT_MODE = 'standard';
@@ -43,10 +46,12 @@ export const MODE_META = {
 
 export const NAVIGATION_GROUPS = [
   {
+    key: 'calculator',
     label: 'Calculator',
     modes: ['standard', 'scientific', 'graphing', 'programmer', 'date']
   },
   {
+    key: 'converter',
     label: 'Converter',
     modes: ['currency', 'volume', 'length', 'weight', 'temperature', 'energy', 'area', 'speed', 'time', 'power', 'data', 'pressure', 'angle']
   }
@@ -76,10 +81,55 @@ export function isMode(mode) {
   return Object.hasOwn(MODE_META, mode);
 }
 
+function translatedValue(path, fallback) {
+  const translated = t(path);
+  return translated === path ? fallback : translated;
+}
+
+export function getModeMeta(mode) {
+  const meta = MODE_META[mode];
+  if (!meta) {
+    return null;
+  }
+
+  return {
+    ...meta,
+    label: translatedValue(`modes.${mode}.label`, meta.label),
+    subtitle: translatedValue(`modes.${mode}.subtitle`, meta.subtitle)
+  };
+}
+
+export function getNavigationGroups() {
+  return NAVIGATION_GROUPS.map((group) => ({
+    ...group,
+    label: translatedValue(`navigation.groups.${group.key}`, group.label)
+  }));
+}
+
+export function getCategoryLabel(category) {
+  return translatedValue(`categories.${category}`, category);
+}
+
+export function getUnitLabel(unitName) {
+  return translatedValue(`units.labels.${unitName}`, unitName);
+}
+
+export function getCurrencyName(currencyName) {
+  return translatedValue(`currencies.names.${currencyName}`, currencyName);
+}
+
+export function getCurrencyLabel(label) {
+  return translatedValue(`currencies.labels.${label}`, label);
+}
+
 export const APP_INFO = {
   name: 'Calculator',
   version: '12.0.0'
 };
+
+export function getAppName() {
+  return translatedValue('app.name', APP_INFO.name);
+}
 
 const MOCK_CURRENCIES = [
   { name: 'US Dollar', label: 'United States - Dollar', symbol: '$', code: 'USD', unitsPerUsd: 1 },
@@ -139,6 +189,34 @@ export const DEFAULT_CURRENCY_RATES = Object.fromEntries(
 );
 
 export const MOCK_CURRENCY_UPDATED_AT = '2026/04/05 15:13:00';
+
+export function getCurrencyOptions() {
+  return MOCK_CURRENCIES
+    .map((currency) => ({
+      ...currency,
+      nameLabel: getCurrencyName(currency.name),
+      label: getCurrencyLabel(currency.label)
+    }))
+    .sort((left, right) => left.label.localeCompare(right.label));
+}
+
+export function getCurrencyDetails(name) {
+  const currency = MOCK_CURRENCIES.find((item) => item.name === name);
+  if (!currency) {
+    return {
+      label: getCurrencyName(name),
+      symbol: '¤',
+      code: 'CUR'
+    };
+  }
+
+  return {
+    label: getCurrencyLabel(currency.label),
+    symbol: currency.symbol,
+    code: currency.code,
+    name: getCurrencyName(currency.name)
+  };
+}
 
 export const STANDARD_BUTTONS = [
   [btn('%', 'percent', '', 'function'), btn('CE', 'clear-entry', '', 'function'), btn('C', 'clear-all', '', 'function'), btn('⌫', 'backspace', '', 'function')],

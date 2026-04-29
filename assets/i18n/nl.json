@@ -1,0 +1,622 @@
+{
+  "app": {
+    "title": "Rekenmachine",
+    "name": "Rekenmachine"
+  },
+  "common": {
+    "back": "Terug",
+    "backspace": "Backspace",
+    "closeSidePanel": "Paneel sluiten"
+  },
+  "converter": {
+    "unitConverter": "Eenheidconvertor",
+    "title": "Eenheidconversie",
+    "builtInCollections": "Ingebouwde collecties",
+    "category": "Categorie",
+    "from": "Van",
+    "to": "Naar",
+    "inputValue": "Waarde om te converteren",
+    "convertedValue": "Geconverteerde waarde",
+    "swapUnits": "Eenheden omwisselen",
+    "keypad": "Convertor toetsenbord",
+    "unit": "eenheid",
+    "unitOptions": "eenheid opties",
+    "currency": {
+      "updatingRates": "Koersen bijwerken…",
+      "updateRates": "Koersen bijwerken",
+      "keypad": "Valuta toetsenbord",
+      "currency": "valuta",
+      "options": "valuta opties",
+      "updated": "Bijgewerkt {timestamp}",
+      "status": {
+        "mockNote": "Voorbeeldreferentiekoersen voor de zelfstandige app-demo.",
+        "fetching": "Bezig met ophalen van de nieuwste USD-referentiekoersen...",
+        "liveRatesLoaded": "Live-koersen geladen van ExchangeRate-API.",
+        "liveUpdateUnavailable": "Live-update niet beschikbaar. Demo-koersen lokaal vernieuwd."
+      }
+    },
+    "aboutEqualTo": "Ongeveer gelijk aan"
+  },
+  "errors": {
+    "invalidInput": "Ongeldige invoer",
+    "cannotDivideByZero": "Kan niet door nul delen",
+    "cannotModuloByZero": "Kan niet modulo nul gebruiken",
+    "invalidProgrammerOperation": "Ongeldige bewerking",
+    "overflow": "Resultaat te groot"
+  },
+  "date": {
+    "calculationMode": "Berekeningsmodus",
+    "from": "Van",
+    "to": "Naar",
+    "results": {
+      "difference": "Verschil",
+      "sameDates": "Dezelfde datums",
+      "date": "Datum"
+    },
+    "calculationModeOptions": "Berekeningsmodus opties",
+    "mode": {
+      "difference": "Verschil",
+      "shift": "Verschuiving"
+    },
+    "operation": "Bewerking",
+    "add": "Toevoegen",
+    "subtract": "Aftrekken",
+    "years": "Jaren",
+    "months": "Maanden",
+    "days": "Dagen",
+    "chooseDate": "Datum kiezen",
+    "previousMonth": "Vorige maand",
+    "nextMonth": "Volgende maand",
+    "duration": {
+      "year": {
+        "one": "{count} jaar",
+        "other": "{count} jaar"
+      },
+      "month": {
+        "one": "{count} maand",
+        "other": "{count} maanden"
+      },
+      "week": {
+        "one": "{count} week",
+        "other": "{count} weken"
+      },
+      "day": {
+        "one": "{count} dag",
+        "other": "{count} dagen"
+      }
+    },
+    "history": {
+      "differenceBetween": "Verschil tussen {from} en {to}",
+      "addTo": "Voeg {duration} toe aan {date}",
+      "subtractFrom": "Trek {duration} af van {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Controleer de gemarkeerde uitdrukking",
+    "enterExpression": "Voer een uitdrukking in",
+    "canvas": "Grafiek canvas",
+    "stopTracing": "Tracering stoppen",
+    "startTracing": "Tracering starten",
+    "share": "Delen",
+    "options": "Opties",
+    "zoomIn": "Inzoomen",
+    "zoomInLabel": "Inzoomen",
+    "zoomOut": "Uitzoomen",
+    "zoomOutLabel": "Uitzoomen",
+    "refreshViewAutomatically": "Weergave automatisch vernieuwen",
+    "view": "Weergave",
+    "expressions": "Uitdrukkingen",
+    "mobileView": "Mobiele weergave",
+    "showGraph": "Grafiek weergeven",
+    "showExpressions": "Uitdrukkingen weergeven",
+    "backToFunctionList": "Terug naar functielijst",
+    "window": "Venster",
+    "resetView": "Weergave opnieuw instellen",
+    "units": "Eenheden",
+    "radians": "Radialen",
+    "degrees": "Graden",
+    "gradians": "Gradianen",
+    "lineThickness": "Lijndikte",
+    "theme": "Thema",
+    "alwaysLight": "Altijd licht",
+    "matchAppTheme": "App-thema aanpassen",
+    "groups": {
+      "inequalities": "Ongelijkheden",
+      "trigonometry": "Trigonometrie",
+      "function": "Functie"
+    },
+    "functions": "Functies",
+    "showEquation": "Vergelijking weergeven",
+    "hideEquation": "Vergelijking verbergen",
+    "lineOptions": "Lijnopties",
+    "color": "Kleur",
+    "style": "Stijl",
+    "analysis": {
+      "title": "Analyse",
+      "domain": "Domein",
+      "range": "Bereik",
+      "xIntercept": "x-intercept",
+      "yIntercept": "y-intercept",
+      "minima": "Minima",
+      "maxima": "Maxima",
+      "inflectionPoints": "Buigpunten",
+      "verticalAsymptotes": "Verticale asymptoten",
+      "horizontalAsymptotes": "Horizontale asymptoten",
+      "obliqueAsymptotes": "Schuine asymptoten",
+      "parity": "Pariteit",
+      "period": "Periode",
+      "monotonicity": "Monotoniciteit",
+      "domainNone": "Geen domeinbeperkingen",
+      "rangeNone": "Geen bereikbeperkingen",
+      "xInterceptNone": "Geen x-intercepten",
+      "yInterceptNone": "Geen y-intercepten",
+      "minimaNone": "Geen minima",
+      "maximaNone": "Geen maxima",
+      "inflectionNone": "Geen buigpunten",
+      "verticalAsymptotesNone": "Geen verticale asymptoten",
+      "horizontalAsymptotesNone": "Geen horizontale asymptoten",
+      "obliqueAsymptotesNone": "Geen schuine asymptoten",
+      "parityUnknown": "Onbekend",
+      "parityOdd": "Oneven",
+      "parityEven": "Even",
+      "parityNeither": "Geen van beide",
+      "periodicityUnknown": "Onbekend",
+      "periodicityNotPeriodic": "Niet periodiek",
+      "monotonicityConstant": "Constant",
+      "monotonicityIncreasing": "Stijgend",
+      "monotonicityDecreasing": "Dalend",
+      "monotonicityUnknown": "Onbekend",
+      "monotonicityError": "Kan niet bepaald worden",
+      "featureTooComplexPlural": "Te complex om te analyseren",
+      "analysisCouldNotBePerformed": "Analyse kon niet worden uitgevoerd",
+      "analysisNotSupported": "Analyse niet ondersteund",
+      "variableIsNotX": "Variabele is niet x"
+    },
+    "plottingExpressions": "{count} uitdrukkingen worden getekend",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Expressie {index} selecteren",
+    "expressionIndex": "Expressie {index}",
+    "analyzeFunction": "Functie analyseren",
+    "changeEquationStyle": "Vergelijkingsstijl wijzigen",
+    "removeEquation": "Vergelijking verwijderen",
+    "lineStyle": {
+      "solid": "Doorgetrokken lijn",
+      "dash": "Gestreepte lijn",
+      "dot": "Gestippelde lijn"
+    }
+  },
+  "history": {
+    "empty": "Geschiedenis is leeg",
+    "clearAll": "Alles wissen",
+    "clear": "Geschiedenis wissen",
+    "title": "Geschiedenis",
+    "andMemory": "Geschiedenis en Geheugen",
+    "aria": {
+      "historyPanel": "Geschiedenispaneel",
+      "historyAndMemoryPanel": "Geschiedenis- en geheugenpaneel"
+    },
+    "closeFlyout": "Geschiedenis sluiten",
+    "openFlyout": "Geschiedenis openen"
+  },
+  "memory": {
+    "empty": "Geheugen is leeg",
+    "clearItem": "Item wissen",
+    "addCurrentValue": "Huidige waarde toevoegen",
+    "subtractCurrentValue": "Huidige waarde aftrekken",
+    "clearAll": "Alles wissen",
+    "clear": "Geheugen wissen",
+    "title": "Geheugen",
+    "controls": "Geheugenbediening",
+    "tooltips": {
+      "clearAll": "Alles geheugen wissen",
+      "recall": "Terugroepen uit geheugen",
+      "add": "Toevoegen aan geheugen",
+      "subtract": "Aftrekken van geheugen",
+      "store": "Opslaan in geheugen"
+    },
+    "recallValue": "Geheugenwaarde {value} oproepen"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigatie",
+      "closeNavigation": "Navigatie sluiten",
+      "openNavigation": "Navigatie openen"
+    },
+    "groups": {
+      "calculator": "Rekenmachine",
+      "converter": "Convertor"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit-flippaneel",
+    "baseReadouts": "Basisweergaves",
+    "surfaceMode": "Oppervlaktemodus",
+    "fullKeypad": "Volledig toetsenbord",
+    "showKeypad": "Toetsenbord weergeven",
+    "bitTogglingKeypad": "Bit-toggeling toetsenbord",
+    "showBitView": "Bitweergave weergeven",
+    "wordSize": "Woordgrootte",
+    "bitwise": "Bitgewijs",
+    "bitShift": "Bitverschuiving"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometrie",
+      "function": "Functie",
+      "functionsAria": "Functies",
+      "trigonometricFunctionsAria": "Trigonometrische functies",
+      "angleUnit": "Hoekeenheid {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Uiterlijk",
+      "themeTitle": "Thema",
+      "themeDescription": "Kies een kleurenschema",
+      "light": "Licht",
+      "dark": "Donker",
+      "system": "Systeem"
+    },
+    "language": {
+      "group": "Taal",
+      "title": "Taal",
+      "description": "Kies uw voorkeurstaal"
+    },
+    "about": {
+      "group": "Over"
+    },
+    "feedback": "Feedback geven",
+    "contribute": {
+      "prefix": "Draag bij op",
+      "link": "GitHub",
+      "suffix": "om deze rekenmachine te helpen verbeteren"
+    },
+    "links": {
+      "repository": "Projectrepository",
+      "readme": "README",
+      "license": "MIT-licentie"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standaard",
+      "subtitle": "Klassieke onmiddellijke evaluatie"
+    },
+    "scientific": {
+      "label": "Wetenschappelijk",
+      "subtitle": "Operatoren, functies en expressieondersteuning"
+    },
+    "graphing": {
+      "label": "Grafieken",
+      "subtitle": "Teken een eenvoudige uitdrukking op een Cartesiaans vlak"
+    },
+    "programmer": {
+      "label": "Programmeur",
+      "subtitle": "Geheel getal wiskunde met basisconversie"
+    },
+    "date": {
+      "label": "Datumberekening",
+      "subtitle": "Vind duraties en verschuif datums"
+    },
+    "currency": {
+      "label": "Valuta",
+      "subtitle": "Converteer mock-wisselkoersen"
+    },
+    "volume": {
+      "label": "Volume",
+      "subtitle": "Converteer volumemetingen"
+    },
+    "length": {
+      "label": "Lengte",
+      "subtitle": "Converteer afstands- en lengteëenheden"
+    },
+    "weight": {
+      "label": "Gewicht en Massa",
+      "subtitle": "Converteer gewichts- en massa-eenheden"
+    },
+    "temperature": {
+      "label": "Temperatuur",
+      "subtitle": "Converteer temperatuurschalen"
+    },
+    "energy": {
+      "label": "Energie",
+      "subtitle": "Converteer energiemetingen"
+    },
+    "area": {
+      "label": "Oppervlakte",
+      "subtitle": "Converteer oppervlaktemetingen"
+    },
+    "speed": {
+      "label": "Snelheid",
+      "subtitle": "Converteer snelheidsmetingen"
+    },
+    "time": {
+      "label": "Tijd",
+      "subtitle": "Converteer tijdmetingen"
+    },
+    "power": {
+      "label": "Vermogen",
+      "subtitle": "Converteer vermogensmetingen"
+    },
+    "data": {
+      "label": "Gegevens",
+      "subtitle": "Converteer digitale opslagseenheden"
+    },
+    "pressure": {
+      "label": "Druk",
+      "subtitle": "Converteer drukeenheden"
+    },
+    "angle": {
+      "label": "Hoek",
+      "subtitle": "Converteer hoekmetingen"
+    },
+    "settings": {
+      "label": "Instellingen",
+      "subtitle": "Uiterlijk en app-informatie"
+    }
+  },
+  "categories": {
+    "Currency": "Valuta",
+    "Volume": "Volume",
+    "Length": "Lengte",
+    "Mass": "Massa",
+    "Temperature": "Temperatuur",
+    "Energy": "Energie",
+    "Area": "Oppervlakte",
+    "Speed": "Snelheid",
+    "Time": "Tijd",
+    "Power": "Vermogen",
+    "Data": "Gegevens",
+    "Pressure": "Druk",
+    "Angle": "Hoek"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstrom",
+      "Nanometers": "Nanometer",
+      "Microns": "Micrometer",
+      "Millimeters": "Millimeter",
+      "Centimeters": "Centimeter",
+      "Meters": "Meter",
+      "Kilometers": "Kilometer",
+      "Inches": "Inch",
+      "Feet": "Voet",
+      "Yards": "Yard",
+      "Miles": "Mijl",
+      "Nautical miles": "Zeemijl",
+      "paperclips": "paperclips",
+      "hands": "handen",
+      "jumbo jets": "jumbo-vliegtuigen",
+      "Carats": "Karaat",
+      "Milligrams": "Milligram",
+      "Centigrams": "Centigram",
+      "Decigrams": "Decigram",
+      "Grams": "Gram",
+      "Dekagrams": "Dekagram",
+      "Hectograms": "Hectogram",
+      "Kilograms": "Kilogram",
+      "Metric tonnes": "Metrieke ton",
+      "Ounces": "Ounce",
+      "Pounds": "Pond",
+      "Stone": "Stone",
+      "Short tons (US)": "Korte tonnen (VS)",
+      "Long tons (UK)": "Lange tonnen (VK)",
+      "snowflakes": "sneeuwvlokken",
+      "soccer balls": "voetballen",
+      "elephants": "olifanten",
+      "whales": "walvissen",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Milliliter",
+      "Cubic centimeters": "Kubieke centimeter",
+      "Liters": "Liter",
+      "Cubic meters": "Kubieke meter",
+      "Teaspoons (US)": "Theelepels (VS)",
+      "Tablespoons (US)": "Eetlepels (VS)",
+      "Fluid ounces (US)": "Vloeistof ounces (VS)",
+      "Cups (US)": "Kopjes (VS)",
+      "Pints (US)": "Pints (VS)",
+      "Quarts (US)": "Kwarts (VS)",
+      "Gallons (US)": "Gallons (VS)",
+      "Cubic inches": "Kubieke inch",
+      "Cubic feet": "Kubieke voet",
+      "Cubic yards": "Kubieke yard",
+      "Teaspoons (UK)": "Theelepels (VK)",
+      "Tablespoons (UK)": "Eetlepels (VK)",
+      "Fluid ounces (UK)": "Vloeistof ounces (VK)",
+      "Pints (UK)": "Pints (VK)",
+      "Quarts (UK)": "Kwarts (VK)",
+      "Gallons (UK)": "Gallons (VK)",
+      "coffee cups": "koffiekopjes",
+      "bathtubs": "badkuipen",
+      "swimming pools": "zwembaden",
+      "Square millimeters": "Vierkante millimeter",
+      "Square centimeters": "Vierkante centimeter",
+      "Square meters": "Vierkante meter",
+      "Hectares": "Hectare",
+      "Square kilometers": "Vierkante kilometer",
+      "Square inches": "Vierkante inch",
+      "Square feet": "Vierkante voet",
+      "Square yards": "Vierkante yard",
+      "Acres": "Acre",
+      "Square miles": "Vierkante mijl",
+      "sheets of paper": "velletjes papier",
+      "soccer fields": "voetbalvelden",
+      "castles": "kastelen",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Centimeter per seconde",
+      "Meters per second": "Meter per seconde",
+      "Kilometers per hour": "Kilometer per uur",
+      "Feet per second": "Voet per seconde",
+      "Miles per hour": "Mijl per uur",
+      "Knots": "Knopen",
+      "Mach": "Mach",
+      "turtles": "schildpadden",
+      "horses": "paarden",
+      "jets": "jets",
+      "Watts": "Watt",
+      "Kilowatts": "Kilowatt",
+      "Horsepower (US)": "Paardenkracht (VS)",
+      "Foot-pounds/minute": "Voet-pond/minuut",
+      "BTUs/minute": "BTU/minuut",
+      "light bulbs": "gloeilampen",
+      "train engines": "treinen",
+      "Thermal calories": "Thermische calorieën",
+      "Food calories": "Voedselcalorieën",
+      "British thermal units": "Britse thermische eenheden",
+      "Kilojoules": "Kilojoule",
+      "Kilowatt-hours": "Kilowattuur",
+      "Electron volts": "Elektronvolt",
+      "Joules": "Joule",
+      "Foot-pounds": "Voet-pond",
+      "batteries": "batterijen",
+      "bananas": "bananen",
+      "slices of cake": "stukken taart",
+      "Bits": "Bit",
+      "Nibble": "Nibble",
+      "Bytes": "Byte",
+      "Kilobits": "Kilobit",
+      "Kibibits": "Kibibit",
+      "Kilobytes": "Kilobyte",
+      "Kibibytes": "Kibibyte",
+      "Megabits": "Megabit",
+      "Mebibits": "Mebibit",
+      "Megabytes": "Megabyte",
+      "Mebibytes": "Mebibyte",
+      "Gigabits": "Gigabit",
+      "Gibibits": "Gibibit",
+      "Gigabytes": "Gigabyte",
+      "Gibibytes": "Gibibyte",
+      "Terabits": "Terabit",
+      "Tebibits": "Tebibit",
+      "Terabytes": "Terabyte",
+      "Tebibytes": "Tebibyte",
+      "Petabits": "Petabit",
+      "Pebibits": "Pebibit",
+      "Petabytes": "Petabyte",
+      "Pebibytes": "Pebibyte",
+      "Exabits": "Exabit",
+      "Exbibits": "Exbibit",
+      "Exabytes": "Exabyte",
+      "Exbibytes": "Exbibyte",
+      "Zetabits": "Zetabit",
+      "Zebibits": "Zebibit",
+      "Zetabytes": "Zetabyte",
+      "Zebibytes": "Zebibyte",
+      "Yottabits": "Yottabit",
+      "Yobibits": "Yobibit",
+      "Yottabytes": "Yottabyte",
+      "Yobibytes": "Yobibyte",
+      "floppy disks": "diskettes",
+      "CDs": "cd's",
+      "DVDs": "dvd's",
+      "Atmospheres": "Atmosfeer",
+      "Bars": "Bar",
+      "Kilopascals": "Kilopascal",
+      "Millimeters of mercury ": "Millimeter kwik",
+      "Pascals": "Pascal",
+      "Pounds per square inch": "Pond per vierkante inch",
+      "Degrees": "Graden",
+      "Radians": "Radialen",
+      "Gradians": "Gradianen",
+      "Microseconds": "Microseconde",
+      "Milliseconds": "Milliseconde",
+      "Seconds": "Seconde",
+      "Minutes": "Minuut",
+      "Hours": "Uur",
+      "Days": "Dag",
+      "Weeks": "Week",
+      "Years": "Jaar"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Amerikaanse dollar",
+      "Euro": "Euro",
+      "British Pound": "Brits pond",
+      "Japanese Yen": "Japanse yen",
+      "Canadian Dollar": "Canadese dollar",
+      "Australian Dollar": "Australische dollar",
+      "Brazilian Real": "Braziliaanse real",
+      "Chilean Peso": "Chileense peso",
+      "Chinese Yuan": "Chinese yuan",
+      "Colombian Peso": "Colombiaanse peso",
+      "Danish Krone": "Deense kroon",
+      "Egyptian Pound": "Egyptisch pond",
+      "Hong Kong Dollar": "Hong Kong dollar",
+      "Indian Rupee": "Indiase roepie",
+      "Kenyan Shilling": "Kenyaanse shilling",
+      "Mexican Peso": "Mexicaanse peso",
+      "Nigerian Naira": "Nigeriaanse naira",
+      "New Zealand Dollar": "Nieuw-Zeelandse dollar",
+      "Norwegian Krone": "Noorse kroon",
+      "Philippine Piso": "Filipijnse peso",
+      "Polish Zloty": "Poolse zloty",
+      "Qatari Riyal": "Qatarese rial",
+      "Saudi Riyal": "Saoedische rial",
+      "Singapore Dollar": "Singaporese dollar",
+      "South African Rand": "Zuid-Afrikaanse rand",
+      "South Korean Won": "Zuid-Koreaanse won",
+      "Swedish Krona": "Zweedse kroon",
+      "Swiss Franc": "Zwitserse frank",
+      "Thai Baht": "Thaise baht",
+      "Turkish Lira": "Turkse lira",
+      "Turkmenistani Manat": "Turkmeense manat",
+      "Ugandan Shilling": "Oegandese shilling",
+      "Ukrainian Hryvnia": "Oekraïense hryvnia",
+      "UAE Dirham": "VAE-dirham",
+      "Uruguayan Peso": "Uruguayaanse peso",
+      "Uzbekistani Som": "Oezbeekse som",
+      "Vanuatu Vatu": "Vanuatese vatu",
+      "Venezuelan Bolivar Soberano": "Venezolaanse bolívar soberano",
+      "Vietnamese Dong": "Vietnamees dong",
+      "Yemeni Rial": "Jemenitische rial"
+    },
+    "labels": {
+      "United States - Dollar": "Verenigde Staten - Dollar",
+      "Europe - Euro": "Europa - Euro",
+      "United Kingdom - Pound": "Verenigd Koninkrijk - Pond",
+      "Japan - Yen": "Japan - Yen",
+      "Canada - Dollar": "Canada - Dollar",
+      "Australia - Dollar": "Australië - Dollar",
+      "Brazil - Real": "Brazilië - Real",
+      "Chile - Peso": "Chili - Peso",
+      "China - Yuan Renminbi": "China - Yuan Renminbi",
+      "Colombia - Peso": "Colombia - Peso",
+      "Denmark - Krone": "Denemarken - Kroon",
+      "Egypt - Pound": "Egypte - Pond",
+      "Hong Kong SAR - Dollar": "Hongkong SAR - Dollar",
+      "India - Rupee": "India - Roepie",
+      "Kenya - Shilling": "Kenia - Shilling",
+      "Mexico - Peso": "Mexico - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "Nieuw-Zeeland - Dollar",
+      "Norway - Krone": "Noorwegen - Kroon",
+      "Philippines - Piso": "Filippijnen - Peso",
+      "Poland - Zloty": "Polen - Zloty",
+      "Qatar - Riyal": "Qatar - Rial",
+      "Saudi Arabia - Riyal": "Saoedi-Arabië - Rial",
+      "Singapore - Dollar": "Singapore - Dollar",
+      "South Africa - Rand": "Zuid-Afrika - Rand",
+      "South Korea - Won": "Zuid-Korea - Won",
+      "Sweden - Krona": "Zweden - Kroon",
+      "Switzerland - Franc": "Zwitserland - Frank",
+      "Thailand - Baht": "Thailand - Baht",
+      "Turkey - Lira": "Turkije - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Oeganda - Shilling",
+      "Ukraine - Hryvnia": "Oekraïne - Hryvnia",
+      "United Arab Emirates - Dirham": "Verenigde Arabische Emiraten - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Oezbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Jemen - Rial"
+    }
+  }
+}

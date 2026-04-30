@@ -3,11 +3,17 @@ const { app, BrowserWindow, screen, shell } = require('electron');
 
 const appIconPath = process.platform === 'win32'
   ? path.join(__dirname, '..', 'assets', 'icons', 'app-icon-dark.ico')
-  : path.join(__dirname, '..', 'assets', 'pwa', 'icon-512.png');
+  : path.join(__dirname, '..', 'assets', 'icons', 'app-icon-4096.png');
+
+const isFlatpak = Boolean(process.env.FLATPAK_ID);
+
+if (process.platform === 'linux') {
+  app.setDesktopName('io.github.ShaunRoselt.Calculator.desktop');
+}
 
 function createMainWindow() {
   const windowWidth = 420;
-  const windowHeight = 900;
+  const windowHeight = isFlatpak ? 780 : 900;
   const primaryWorkArea = screen.getPrimaryDisplay().workArea;
   const x = primaryWorkArea.x + Math.max(0, Math.round((primaryWorkArea.width - windowWidth) / 2));
   const y = primaryWorkArea.y + Math.max(0, Math.round((primaryWorkArea.height - windowHeight) / 2));

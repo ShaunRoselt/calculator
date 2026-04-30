@@ -22,8 +22,8 @@ const SETTINGS_LINKS = [
 ];
 
 const SETTINGS_APP_ICONS = {
-  light: 'assets/icons/app-icon-light.png',
-  dark: 'assets/icons/app-icon-dark.png'
+  light: 'assets/logo-light.svg',
+  dark: 'assets/logo-dark.svg'
 };
 
 function getSystemTheme() {

@@ -57,6 +57,11 @@ const THEME_META_COLORS = {
   light: '#ececec'
 };
 
+const THEME_LOGO_PATHS = {
+  dark: 'assets/logo-dark.svg',
+  light: 'assets/logo-light.svg'
+};
+
 const systemThemeMedia = typeof window.matchMedia === 'function'
   ? window.matchMedia('(prefers-color-scheme: light)')
   : null;
@@ -160,6 +165,7 @@ function applyTheme() {
     : state.settings.theme;
   document.documentElement.dataset.theme = effectiveTheme;
   document.querySelector('meta[name="theme-color"]')?.setAttribute('content', THEME_META_COLORS[effectiveTheme] ?? THEME_META_COLORS.dark);
+  document.querySelector('#app-favicon')?.setAttribute('href', THEME_LOGO_PATHS[effectiveTheme] ?? THEME_LOGO_PATHS.dark);
 }
 
 async function applyLanguageChange(language) {

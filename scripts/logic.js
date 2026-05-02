@@ -4307,7 +4307,8 @@ function pushUniqueApproximatePoint(points, nextPoint, tolerance) {
 }
 
 function getGraphPalette() {
-  const useDarkTheme = state.graphing.theme === 'match-app' && document.documentElement.dataset.theme === 'dark';
+  const activeTheme = document.documentElement.dataset.theme;
+  const useDarkTheme = state.graphing.theme === 'match-app' && ['dark', 'blue', 'green'].includes(activeTheme);
   if (useDarkTheme) {
     return {
       background: '#1b1c20',

@@ -258,6 +258,8 @@
       "themeDescription": "Choose a color scheme",
       "light": "Light",
       "dark": "Dark",
+      "blue": "Blue",
+      "green": "Green",
       "system": "System"
     },
     "language": {

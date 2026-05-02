@@ -54,12 +54,16 @@ const PAGE_QUERY_PARAM = 'page';
 const CURRENCY_TYPEAHEAD_RESET_MS = 900;
 const THEME_META_COLORS = {
   dark: '#1f2025',
-  light: '#ececec'
+  light: '#ececec',
+  blue: '#15212d',
+  green: '#15231c'
 };
 
 const THEME_LOGO_PATHS = {
   dark: 'assets/logo-dark.svg',
-  light: 'assets/logo-light.svg'
+  light: 'assets/logo-light.svg',
+  blue: 'assets/logo-blue.svg',
+  green: 'assets/logo-green.svg'
 };
 
 const systemThemeMedia = typeof window.matchMedia === 'function'

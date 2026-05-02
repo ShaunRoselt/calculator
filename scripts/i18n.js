@@ -4,14 +4,18 @@ const SUPPORTED_LANGUAGES = {
   en: 'English',
   af: 'Afrikaans',
   de: 'Deutsch',
-  nl: 'Nederlands'
+  nl: 'Nederlands',
+  zu: 'isiZulu',
+  xh: 'isiXhosa'
 };
 
 const LANGUAGE_LOCALES = {
   en: 'en',
   af: 'af',
   de: 'de',
-  nl: 'nl-NL'
+  nl: 'nl-NL',
+  zu: 'zu-ZA',
+  xh: 'xh-ZA'
 };
 
 const translationCache = new Map();

@@ -51,6 +51,14 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .button-grid.scientific {
+    grid-template-rows: repeat(9, minmax(0, 1fr));
+  }
+
+  .button-grid.programmer {
+    grid-template-rows: repeat(8, minmax(0, 1fr));
+  }
+
   .memory-toolbar {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -107,6 +115,7 @@
 
   .calculator-layout.programmer .button-grid.programmer {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(6, minmax(0, 1fr));
   }
 
   .programmer-operator-groups {

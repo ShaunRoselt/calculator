@@ -236,10 +236,10 @@ export function hydrateState() {
     if (typeof nav === 'boolean') {
       state.navOpen = nav;
     }
-    if (['light', 'dark', 'system'].includes(theme)) {
+    if (['light', 'dark', 'blue', 'green', 'system'].includes(theme)) {
       state.settings.theme = theme;
     }
-    if (['en', 'af', 'de', 'nl'].includes(language)) {
+    if (['en', 'af', 'de', 'nl', 'zu', 'xh'].includes(language)) {
       state.settings.language = language;
     }
   } catch {

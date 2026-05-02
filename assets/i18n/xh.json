@@ -1,0 +1,337 @@
+{
+  "app": {
+    "title": "Isibali-manani",
+    "name": "Isibali-manani"
+  },
+  "common": {
+    "back": "Emva",
+    "backspace": "Cima unobumba",
+    "closeSidePanel": "Vala iphaneli"
+  },
+  "converter": {
+    "unitConverter": "Isiguquli seemayunithi",
+    "title": "Iziguquli seemayunithi",
+    "builtInCollections": "Iingqokelela ezakhelwe ngaphakathi",
+    "category": "Udidi",
+    "from": "Ukusuka",
+    "to": "Ukuya",
+    "inputValue": "Ixabiso lokuguqula",
+    "convertedValue": "Ixabiso eliguquliweyo",
+    "swapUnits": "Tshintsha iiyunithi",
+    "keypad": "Ikhiphedi yokuguqula",
+    "unit": "iyunithi",
+    "unitOptions": "iinketho zeyunithi",
+    "currency": {
+      "updatingRates": "Amaxabiso ayahlaziywa...",
+      "updateRates": "Hlaziya amaxabiso",
+      "keypad": "Ikhiphedi yemali",
+      "currency": "imali",
+      "options": "iinketho zemali",
+      "updated": "Ihlaziywe ngo-{timestamp}",
+      "status": {
+        "mockNote": "Amaxabiso esalathiso okulinganisa ademo yenkqubo ezimeleyo.",
+        "fetching": "Kufunyanwa amaxabiso ereferensi e-USD akutshanje...",
+        "liveRatesLoaded": "Amaxabiso aphilayo alayishwe ukusuka ku-ExchangeRate-API.",
+        "liveUpdateUnavailable": "Uhlaziyo oluphilayo alufumaneki. Amaxabiso edemo avuselelwe apha ekhaya."
+      }
+    },
+    "aboutEqualTo": "Phantse kulingana no"
+  },
+  "errors": {
+    "invalidInput": "Ungeniso alusebenzi",
+    "cannotDivideByZero": "Awunako ukwahlula ngoziro",
+    "cannotModuloByZero": "Awunako ukwenza imodulo ngoziro",
+    "invalidProgrammerOperation": "Umsebenzi awusebenzi",
+    "overflow": "Isiphumo sikhulu kakhulu"
+  },
+  "date": {
+    "calculationMode": "Imowudi yokubala",
+    "from": "Ukusuka",
+    "to": "Ukuya",
+    "results": {
+      "difference": "Umahluko",
+      "sameDates": "Imihla iyafana",
+      "date": "Umhla"
+    },
+    "calculationModeOptions": "Iinketho zemowudi yokubala",
+    "mode": {
+      "difference": "Umahluko",
+      "shift": "Shift"
+    },
+    "operation": "Umsebenzi",
+    "add": "Dibanisa",
+    "subtract": "Susa",
+    "years": "Iminyaka",
+    "months": "Iinyanga",
+    "days": "Iintsuku",
+    "chooseDate": "Khetha umhla",
+    "previousMonth": "Inyanga egqithileyo",
+    "nextMonth": "Inyanga elandelayo",
+    "duration": {
+      "year": {
+        "one": "unyaka omnye",
+        "other": "iminyaka eyi-{count}"
+      },
+      "month": {
+        "one": "inyanga enye",
+        "other": "iinyanga ezi-{count}"
+      },
+      "week": {
+        "one": "iveki enye",
+        "other": "iiveki ezi-{count}"
+      },
+      "day": {
+        "one": "usuku olunye",
+        "other": "iintsuku ezi-{count}"
+      }
+    },
+    "history": {
+      "differenceBetween": "Umahluko phakathi kuka-{from} no-{to}",
+      "addTo": "Dibanisa u-{duration} ku-{date}",
+      "subtractFrom": "Susa u-{duration} ku-{date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Jonga intetho eqaqambisiweyo",
+    "enterExpression": "Faka intetho",
+    "canvas": "Ikhanvasi yegrafu",
+    "stopTracing": "Misa ukulandela",
+    "startTracing": "Qalisa ukulandela",
+    "share": "Yabelana",
+    "options": "Iinketho",
+    "zoomIn": "Sondeza ngaphakathi",
+    "zoomInLabel": "Sondeza ngaphakathi",
+    "zoomOut": "Sondeza ngaphandle",
+    "zoomOutLabel": "Sondeza ngaphandle",
+    "refreshViewAutomatically": "Hlaziya ukubonwa ngokuzenzekela",
+    "view": "Imbono",
+    "expressions": "Iintetho",
+    "mobileView": "Imbono yeselula",
+    "showGraph": "Bonisa igrafu",
+    "showExpressions": "Bonisa iintetho",
+    "backToFunctionList": "Buyela kuluhlu lwemisebenzi",
+    "window": "Ifestile",
+    "resetView": "Seta kwakhona imbono",
+    "units": "Iiyunithi",
+    "radians": "Ii-radian",
+    "degrees": "Iidigri",
+    "gradians": "Ii-gradian",
+    "lineThickness": "Ubukhulu bomgca",
+    "theme": "Umxholo",
+    "alwaysLight": "Hlala kukhanya",
+    "matchAppTheme": "Tshatisa nomxholo we-app",
+    "groups": {
+      "inequalities": "Ukungalingani",
+      "trigonometry": "I-trigonometry",
+      "function": "Umsebenzi"
+    },
+    "functions": "Imisebenzi",
+    "showEquation": "Bonisa iequation",
+    "hideEquation": "Fihla iequation",
+    "lineOptions": "Iinketho zomgca",
+    "color": "Umbala",
+    "style": "Isitayile",
+    "plottingExpressions": "Kuzotywa iintetho ezi-{count}",
+    "xMin": "X-Encinci",
+    "xMax": "X-Enkulu",
+    "yMin": "Y-Encinci",
+    "yMax": "Y-Enkulu",
+    "selectExpression": "Khetha intetho {index}",
+    "expressionIndex": "Intetho {index}",
+    "analyzeFunction": "Hlalutya umsebenzi",
+    "changeEquationStyle": "Tshintsha isitayile seequation",
+    "removeEquation": "Susa iequation",
+    "lineStyle": {
+      "solid": "Isitayile somgca oqinileyo",
+      "dash": "Isitayile somgca oqhawukileyo",
+      "dot": "Isitayile samachaphaza"
+    }
+  },
+  "history": {
+    "empty": "Imbali ayinanto",
+    "clearAll": "Cima konke",
+    "clear": "Cima imbali",
+    "title": "Imbali",
+    "andMemory": "Imbali neMemori",
+    "aria": {
+      "historyPanel": "Iphaneli yembali",
+      "historyAndMemoryPanel": "Iphaneli yembali nememori"
+    },
+    "closeFlyout": "Vala imbali",
+    "openFlyout": "Vula imbali"
+  },
+  "memory": {
+    "empty": "Imemori ayinanto",
+    "clearItem": "Cima into",
+    "addCurrentValue": "Yongeza ixabiso langoku",
+    "subtractCurrentValue": "Susa ixabiso langoku",
+    "clearAll": "Cima konke",
+    "clear": "Cima imemori",
+    "title": "Imemori",
+    "controls": "Izilawuli zememori",
+    "tooltips": {
+      "clearAll": "Cima yonke imemori",
+      "recall": "Khumbula kwimemori",
+      "add": "Yongeza kwimemori",
+      "subtract": "Susa kwimemori",
+      "store": "Gcina kwimemori"
+    },
+    "recallValue": "Khumbula imemori {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Ukuzulazula",
+      "closeNavigation": "Vala ukuzulazula",
+      "openNavigation": "Vula ukuzulazula"
+    },
+    "groups": {
+      "calculator": "Isibali-manani",
+      "converter": "Isiguquli"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Iphaneli yokujika ibhiti",
+    "baseReadouts": "Ufundo lweziseko",
+    "surfaceMode": "Imowudi yomphezulu",
+    "fullKeypad": "Ikhiphedi epheleleyo",
+    "showKeypad": "Bonisa ikhiphedi",
+    "bitTogglingKeypad": "Ikhiphedi yokutshintsha amabhithi",
+    "showBitView": "Bonisa imbono yamabhithi",
+    "wordSize": "Ubungakanani begama",
+    "bitwise": "I-Bitwise",
+    "bitShift": "Ukushenxisa amabhithi"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "I-trigonometry",
+      "function": "Umsebenzi",
+      "functionsAria": "Imisebenzi",
+      "trigonometricFunctionsAria": "Imisebenzi ye-trigonometry",
+      "angleUnit": "Iyunithi ye-engile {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Inkangeleko",
+      "themeTitle": "Umxholo",
+      "themeDescription": "Khetha isikimu semibala",
+      "light": "Khanyayo",
+      "dark": "Mnyama",
+      "blue": "Luhlaza okwesibhakabhaka",
+      "green": "Luhlaza",
+      "system": "Inkqubo"
+    },
+    "language": {
+      "group": "Ulwimi",
+      "title": "Ulwimi",
+      "description": "Khetha ulwimi olukhethayo"
+    },
+    "about": {
+      "group": "Malunga"
+    },
+    "feedback": "Thumela impendulo",
+    "contribute": {
+      "prefix": "Nika igalelo ku",
+      "link": "GitHub",
+      "suffix": "ukuze uncede ukuphucula esi sibali-manani"
+    },
+    "links": {
+      "repository": "Indawo yeprojekthi",
+      "readme": "README",
+      "license": "Ilayisensi ye-MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Oluqhelekileyo",
+      "subtitle": "Uhlolo olukhawulezileyo lwesiqhelo"
+    },
+    "scientific": {
+      "label": "Ezobunzululwazi",
+      "subtitle": "Abaqhubi, imisebenzi, nenkxaso yeentetho"
+    },
+    "graphing": {
+      "label": "Igrafu",
+      "subtitle": "Zoba intetho elula kwi-Cartesian plane"
+    },
+    "programmer": {
+      "label": "Umcwangcisi",
+      "subtitle": "Izibalo zeenombolo ezipheleleyo kunye noguqulo lwe-base"
+    },
+    "date": {
+      "label": "Ubalo lomhla",
+      "subtitle": "Fumana amaxesha uze ushukumise imihla"
+    },
+    "currency": {
+      "label": "Imali",
+      "subtitle": "Guqula amaxabiso otshintshiselwano okulinganisa"
+    },
+    "volume": {
+      "label": "Umthamo",
+      "subtitle": "Guqula imilinganiselo yomthamo"
+    },
+    "length": {
+      "label": "Ubude",
+      "subtitle": "Guqula umgama neeyunithi zobude"
+    },
+    "weight": {
+      "label": "Ubunzima neMasa",
+      "subtitle": "Guqula iiyunithi zobunzima nemasa"
+    },
+    "temperature": {
+      "label": "Iqondo lobushushu",
+      "subtitle": "Guqula izikali zamaqondo obushushu"
+    },
+    "energy": {
+      "label": "Amandla",
+      "subtitle": "Guqula imilinganiselo yamandla"
+    },
+    "area": {
+      "label": "Ummandla",
+      "subtitle": "Guqula imilinganiselo yommandla"
+    },
+    "speed": {
+      "label": "Isantya",
+      "subtitle": "Guqula imilinganiselo yesantya"
+    },
+    "time": {
+      "label": "Ixesha",
+      "subtitle": "Guqula iiyunithi zexesha"
+    },
+    "power": {
+      "label": "Amandla",
+      "subtitle": "Guqula imilinganiselo yamandla"
+    },
+    "data": {
+      "label": "Idatha",
+      "subtitle": "Guqula iiyunithi zokugcina zedijithali"
+    },
+    "pressure": {
+      "label": "Uxinzelelo",
+      "subtitle": "Guqula iiyunithi zoxinzelelo"
+    },
+    "angle": {
+      "label": "I-engile",
+      "subtitle": "Guqula imilinganiselo yee-engile"
+    },
+    "settings": {
+      "label": "Iisetingi",
+      "subtitle": "Inkangeleko nolwazi lwe-app"
+    }
+  },
+  "categories": {
+    "Currency": "Imali",
+    "Volume": "Umthamo",
+    "Length": "Ubude",
+    "Mass": "iMasa",
+    "Temperature": "Iqondo lobushushu",
+    "Energy": "Amandla",
+    "Area": "Ummandla",
+    "Speed": "Isantya",
+    "Time": "Ixesha",
+    "Power": "Amandla",
+    "Data": "Idatha",
+    "Pressure": "Uxinzelelo",
+    "Angle": "I-engile"
+  }
+}

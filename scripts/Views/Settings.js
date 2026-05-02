@@ -23,7 +23,9 @@ const SETTINGS_LINKS = [
 
 const SETTINGS_APP_ICONS = {
   light: 'assets/logo-light.svg',
-  dark: 'assets/logo-dark.svg'
+  dark: 'assets/logo-dark.svg',
+  blue: 'assets/logo-blue.svg',
+  green: 'assets/logo-green.svg'
 };
 
 function getSystemTheme() {
@@ -70,6 +72,14 @@ export function renderSettingsView() {
             <label class="settings-radio-option">
               <input type="radio" name="settings-theme" value="dark" ${state.settings.theme === 'dark' ? 'checked' : ''} />
               <span>${t('settings.appearance.dark')}</span>
+            </label>
+            <label class="settings-radio-option">
+              <input type="radio" name="settings-theme" value="blue" ${state.settings.theme === 'blue' ? 'checked' : ''} />
+              <span>${t('settings.appearance.blue')}</span>
+            </label>
+            <label class="settings-radio-option">
+              <input type="radio" name="settings-theme" value="green" ${state.settings.theme === 'green' ? 'checked' : ''} />
+              <span>${t('settings.appearance.green')}</span>
             </label>
             <label class="settings-radio-option">
               <input type="radio" name="settings-theme" value="system" ${state.settings.theme === 'system' ? 'checked' : ''} />

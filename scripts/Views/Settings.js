@@ -1,6 +1,7 @@
 import { APP_INFO, getAppName } from '../config.js';
 import { getCurrentLanguage, getSupportedLanguages, t } from '../i18n.js';
 import { getResolvedAppThemeId, getThemeLogoPath, getThemeOptions } from '../themes.js';
+import { buildAppUrl } from '../urlParams.js';
 import { escapeHtml } from '../utils.js';
 import { state } from '../state.js';
 
@@ -42,45 +43,58 @@ function getLanguageOptionLabel(language) {
   return `${language.label}${language.isFallbackOnly ? ' (English fallback)' : ''}`;
 }
 
-function renderThemePreviewSwatches(colors = []) {
-  if (!Array.isArray(colors) || colors.length === 0) {
-    return '<span class="settings-theme-option-swatches-spacer" aria-hidden="true"></span>';
+function renderSettingsMenuOption(menu, option, selected) {
+  if (menu === 'theme') {
+    return renderThemeMenuOption(option, selected);
   }
 
-  return `
-    <span class="settings-theme-option-swatches" aria-hidden="true">
-      ${colors.slice(0, 5).map((color) => `<span class="settings-theme-option-swatch" style="background:${escapeHtml(color)}"></span>`).join('')}
-    </span>
-  `;
-}
-
-function renderSettingsMenuOption(menu, option, selected) {
   const searchText = typeof option.searchText === 'string'
     ? option.searchText
     : [option.label, option.value].filter(Boolean).join(' ');
   return `
     <button type="button" class="date-native-mode-option ${selected ? 'selected' : ''}" data-settings-menu-select="${menu}" data-settings-menu-value="${escapeHtml(option.value)}" data-settings-menu-option="${menu}" data-settings-menu-text="${escapeHtml(searchText.toLowerCase())}" role="option" aria-selected="${selected ? 'true' : 'false'}">
-      ${menu === 'theme' ? renderThemePreviewSwatches(option.previewColors) : ''}
       <span class="settings-menu-option-label">${escapeHtml(option.label)}</span>
     </button>
   `;
 }
 
+function renderThemeMenuOption(option, selected) {
+  const searchText = typeof option.searchText === 'string'
+    ? option.searchText
+    : [option.label, option.value].filter(Boolean).join(' ');
+
+  return `
+    <div class="settings-theme-card ${selected ? 'selected' : ''}" data-settings-menu-option="theme" data-settings-menu-text="${escapeHtml(searchText.toLowerCase())}" role="option" aria-selected="${selected ? 'true' : 'false'}">
+      <iframe class="settings-theme-card-frame" src="${escapeHtml(option.previewUrl)}" title="${escapeHtml(option.label)}" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+      <button type="button" class="settings-theme-card-button" data-settings-menu-select="theme" data-settings-menu-value="${escapeHtml(option.value)}" aria-label="${escapeHtml(option.label)}" aria-pressed="${selected ? 'true' : 'false'}">
+        <span class="settings-theme-card-header">
+          <span class="settings-theme-card-title-wrap">
+            <span class="settings-theme-card-title">${escapeHtml(option.label)}</span>
+            ${option.description ? `<span class="settings-theme-card-caption">${escapeHtml(option.description)}</span>` : ''}
+          </span>
+          ${selected ? '<span class="settings-theme-card-selected" aria-hidden="true">✓</span>' : ''}
+        </span>
+      </button>
+    </div>
+  `;
+}
+
 function renderSettingsMenu(menu, label, selectedLabel, options) {
   const isOpen = state.settings.openMenu === menu;
+  const isThemeMenu = menu === 'theme';
   const searchPlaceholder = `Search ${label.toLowerCase()}`;
   return `
-    <span class="date-native-select-wrap settings-select-wrap settings-select-menu-wrap">
+    <span class="date-native-select-wrap settings-select-wrap settings-select-menu-wrap ${isThemeMenu ? 'settings-select-wrap-theme' : ''}">
       <button type="button" class="date-native-select-button settings-select-button ${isOpen ? 'active' : ''}" data-settings-menu-toggle="${menu}" aria-haspopup="listbox" aria-expanded="${isOpen ? 'true' : 'false'}" aria-label="${escapeHtml(label)}">
         <span class="settings-select-button-label">${escapeHtml(selectedLabel)}</span>
       </button>
       <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
       ${isOpen ? `
-        <div class="date-native-mode-menu settings-select-menu">
+        <div class="date-native-mode-menu settings-select-menu ${isThemeMenu ? 'settings-select-menu-theme' : ''}">
           <div class="settings-select-search-row">
             <input type="search" class="settings-select-search-input" data-settings-menu-search="${menu}" placeholder="${escapeHtml(searchPlaceholder)}" aria-label="${escapeHtml(searchPlaceholder)}" autocomplete="off" spellcheck="false" autofocus />
           </div>
-          <div class="settings-select-menu-options" role="listbox" aria-label="${escapeHtml(label)}">
+          <div class="settings-select-menu-options ${isThemeMenu ? 'settings-select-menu-options-theme' : ''}" role="listbox" aria-label="${escapeHtml(label)}">
             ${options.map((option) => renderSettingsMenuOption(menu, option, option.value === (menu === 'theme' ? state.settings.theme : getCurrentLanguage()))).join('')}
             <div class="settings-select-menu-empty" data-settings-menu-empty hidden>No matches</div>
           </div>
@@ -94,19 +108,33 @@ export function renderSettingsView() {
   const languages = getSupportedLanguages();
   const themes = getThemeOptions();
   const currentLanguage = getCurrentLanguage();
+  const currentLanguageOption = languages.find((language) => language.value === currentLanguage) ?? languages[0];
   const systemThemeId = getResolvedAppThemeId('system', getSystemTheme());
-  const systemThemePreviewColors = themes.find((theme) => theme.value === systemThemeId)?.previewColors ?? [];
+  const systemThemeLabel = themes.find((theme) => theme.value === systemThemeId)?.label ?? systemThemeId;
   const themeOptions = [
     {
       value: 'system',
       label: t('settings.appearance.system'),
-      previewColors: systemThemePreviewColors,
-      searchText: `${t('settings.appearance.system')} system auto`
+      description: systemThemeLabel,
+      searchText: `${t('settings.appearance.system')} system auto ${systemThemeLabel}`,
+      previewUrl: buildAppUrl({
+        page: 'standard',
+        theme: systemThemeId,
+        language: currentLanguage,
+        readOnly: true
+      })
     },
-    ...themes
+    ...themes.map((theme) => ({
+      ...theme,
+      previewUrl: buildAppUrl({
+        page: 'standard',
+        theme: theme.value,
+        language: currentLanguage,
+        readOnly: true
+      })
+    }))
   ];
   const currentTheme = themeOptions.find((theme) => theme.value === state.settings.theme) ?? themeOptions[0];
-  const currentLanguageOption = languages.find((language) => language.value === currentLanguage) ?? languages[0];
   return `
     <section class="settings-page">
       <div class="settings-scroll">

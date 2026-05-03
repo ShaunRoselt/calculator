@@ -331,6 +331,84 @@
   min-height: 100%;
 }
 
+body[data-readonly='true'] .app-shell {
+  user-select: none;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] {
+  background: transparent;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] #app {
+  min-width: 0;
+  min-height: 100%;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] .desktop-shell,
+body[data-readonly='true'][data-readonly-frame='true'] .app-shell,
+body[data-readonly='true'][data-readonly-frame='true'] .window-body,
+body[data-readonly='true'][data-readonly-frame='true'] .main,
+body[data-readonly='true'][data-readonly-frame='true'] .workspace,
+body[data-readonly='true'][data-readonly-frame='true'] .main-panel {
+  height: 100%;
+  min-height: 100%;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] .desktop-shell {
+  background: transparent;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] .app-shell {
+  --chrome-inline-padding: 10px;
+  --chrome-top-padding: 0;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] .sidebar,
+body[data-readonly='true'][data-readonly-frame='true'] .topbar,
+body[data-readonly='true'][data-readonly-frame='true'] .side-panel,
+body[data-readonly='true'][data-readonly-frame='true'] .surface-scrim {
+  display: none !important;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] .workspace {
+  display: block;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] .main-panel {
+  padding: 0;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] .display-panel {
+  min-height: clamp(96px, 28vh, 144px);
+  padding: 0 10px 0;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] .memory-toolbar {
+  gap: 0.7rem;
+  padding: 0 10px 6px;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] .memory-toolbar button {
+  min-height: 24px;
+  padding: 0.15rem 0.2rem;
+  font-size: 0.72rem;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] .button-grid {
+  gap: 1px;
+  padding: 0 4px 4px;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] .display-expression {
+  min-height: 0.95rem;
+  font-size: 0.72rem;
+}
+
+body[data-readonly='true'][data-readonly-frame='true'] .display-value {
+  min-height: 3.1rem;
+  font-size: clamp(2.3rem, 11vw, 3.8rem);
+}
+
 .side-panel {
   display: flex;
   flex-direction: column;

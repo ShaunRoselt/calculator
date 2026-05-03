@@ -5,6 +5,7 @@ const LANGUAGE_STORAGE_KEY = 'calculator-language';
 
 import { initI18n } from './i18n.js';
 import { initThemes } from './themes.js';
+import { getUrlPreferenceOverrides } from './urlParams.js';
 
 async function loadScript(sourceUrl, errorMessage) {
   await new Promise((resolve, reject) => {
@@ -46,6 +47,6 @@ async function registerServiceWorker() {
 
 await loadNerdamer();
 await initThemes();
-await initI18n(localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'en');
+await initI18n(getUrlPreferenceOverrides().language || localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'en');
 void registerServiceWorker();
 await import('./app.js');

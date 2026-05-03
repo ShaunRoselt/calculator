@@ -1,4 +1,5 @@
 import { CONVERTER_MODE_TO_CATEGORY, CURRENCY_CODE_TO_NAME, DEFAULT_CURRENCY_RATES, DEFAULT_MODE, getCurrencyDetails, getCurrencyOptions, getUnitLabel, isConverterMode, isMode } from './config.js';
+import { appRoot } from './dom.js';
 import {
   getMemoryCollection,
   hydrateState,
@@ -10,7 +11,7 @@ import {
   replaceMemoryCollection,
   state
 } from './state.js';
-import { setLanguage } from './i18n.js';
+import { getCurrentLanguage, setLanguage } from './i18n.js';
 import { installTooltipHandling } from './tooltip.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
 import {
@@ -55,6 +56,7 @@ import {
   isSupportedTheme,
   normalizeGraphThemeSetting
 } from './themes.js';
+import { getUrlPreferenceOverrides } from './urlParams.js';
 
 const PAGE_QUERY_PARAM = 'page';
 const CURRENCY_TYPEAHEAD_RESET_MS = 900;
@@ -62,11 +64,14 @@ const CURRENCY_TYPEAHEAD_RESET_MS = 900;
 const systemThemeMedia = typeof window.matchMedia === 'function'
   ? window.matchMedia('(prefers-color-scheme: light)')
   : null;
+const urlPreferences = getUrlPreferenceOverrides();
 
 let converterTypeaheadBuffer = '';
 let converterTypeaheadTimestamp = 0;
 
 hydrateState();
+applyUrlPreferences();
+applyRuntimeAttributes();
 applyUrlMode({ replaceHistory: true, renderView: false });
 applyTheme();
 computeDateResults();
@@ -91,6 +96,21 @@ systemThemeMedia?.addEventListener?.('change', () => {
 
 function getSystemTheme() {
   return systemThemeMedia?.matches === true ? 'light' : 'dark';
+}
+
+function applyUrlPreferences() {
+  if (urlPreferences.theme === 'system' || isSupportedTheme(urlPreferences.theme)) {
+    state.settings.theme = urlPreferences.theme;
+  }
+
+  state.settings.language = getCurrentLanguage();
+}
+
+function applyRuntimeAttributes() {
+  document.body.dataset.readonly = urlPreferences.readOnly ? 'true' : 'false';
+  document.body.dataset.readonlyFrame = urlPreferences.readOnly && window.self !== window.top ? 'true' : 'false';
+
+  appRoot.inert = urlPreferences.readOnly;
 }
 
 function normalizeMode(mode) {
@@ -194,6 +214,10 @@ function handlePopState() {
 }
 
 function handleClick(event) {
+  if (urlPreferences.readOnly) {
+    return;
+  }
+
   const source = event.target instanceof Element ? event.target : null;
   let shouldRender = false;
 
@@ -761,6 +785,10 @@ function formatCurrencyTimestamp(value) {
 }
 
 function handleChange(event) {
+  if (urlPreferences.readOnly) {
+    return;
+  }
+
   const target = event.target;
   if (!(target instanceof HTMLInputElement || target instanceof HTMLSelectElement)) {
     return;
@@ -864,6 +892,10 @@ function handleChange(event) {
 }
 
 function handleInput(event) {
+  if (urlPreferences.readOnly) {
+    return;
+  }
+
   const target = event.target;
   if (!(target instanceof HTMLInputElement)) {
     return;
@@ -923,6 +955,10 @@ function handleInput(event) {
 }
 
 function handleFocusIn(event) {
+  if (urlPreferences.readOnly) {
+    return;
+  }
+
   const target = event.target;
   if (target instanceof HTMLInputElement) {
     if (target.name?.startsWith('graph-expression-')) {
@@ -959,6 +995,10 @@ function handleFocusIn(event) {
 }
 
 function handleKeydown(event) {
+  if (urlPreferences.readOnly) {
+    return;
+  }
+
   if (handleConverterDropdownKeydown(event)) {
     return;
   }

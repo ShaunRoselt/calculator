@@ -4,7 +4,7 @@ set -eu
 repo_dir="flatpak/repo"
 build_dir="flatpak/build"
 manifest="flatpak/io.github.ShaunRoselt.Calculator.yml"
-bundle="dist/Calculator-linux-x64.flatpak"
+bundle="dist/Roselt-Calculator-linux-x64.flatpak"
 app_id="io.github.ShaunRoselt.Calculator"
 branch="stable"
 

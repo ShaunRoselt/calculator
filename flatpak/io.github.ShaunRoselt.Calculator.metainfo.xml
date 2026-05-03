@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>io.github.ShaunRoselt.Calculator</id>
-  <name>Calculator</name>
-  <summary>Standalone calculator with standard, scientific, programmer, graphing, date, and conversion modes</summary>
+  <name>Roselt Calculator</name>
+  <summary>Installable calculator with standard, scientific, programmer, graphing, date, and conversion modes</summary>
   <metadata_license>MIT</metadata_license>
   <project_license>MIT</project_license>
   <developer id="io.github.ShaunRoselt">
@@ -12,7 +12,7 @@
   <launchable type="desktop-id">io.github.ShaunRoselt.Calculator.desktop</launchable>
   <description>
     <p>
-      Calculator is a standalone desktop calculator with standard, scientific, programmer,
+      Roselt Calculator is an installable desktop calculator with standard, scientific, programmer,
       graphing, date calculation, history, memory, and unit conversion workflows.
     </p>
   </description>

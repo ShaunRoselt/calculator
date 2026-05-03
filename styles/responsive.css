@@ -46,13 +46,13 @@
     grid-template-columns: 1fr;
   }
 
-  .button-grid.scientific,
   .button-grid.programmer {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .button-grid.scientific {
-    grid-template-rows: repeat(9, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
   .button-grid.programmer {
@@ -102,9 +102,13 @@
   }
 
   .button-grid.standard,
-  .button-grid.scientific,
   .button-grid.programmer {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .button-grid.scientific {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(7, minmax(0, 1fr));
   }
 
   .scientific-operator-buttons,

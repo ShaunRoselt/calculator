@@ -11,6 +11,8 @@ if (process.platform === 'linux') {
   app.setDesktopName('io.github.ShaunRoselt.Calculator.desktop');
 }
 
+app.setName('Roselt Calculator');
+
 function createMainWindow() {
   const windowWidth = 420;
   const windowHeight = isFlatpak ? 780 : 900;

@@ -1,13 +1,13 @@
 {
   "name": "calculator",
   "version": "12.0.0",
-  "description": "A standalone web calculator with standard, scientific, programmer, graphing, date, and unit conversion modes.",
+  "description": "Roselt Calculator is an installable calculator app with standard, scientific, programmer, graphing, date, and conversion modes.",
   "main": "electron/main.cjs",
   "scripts": {
     "check": "node scripts/check.js",
     "package:flatpak": "npm run package:linux && sh scripts/package-flatpak.sh",
-    "package:linux": "electron-packager . Calculator --platform=linux --arch=x64 --icon=assets/icons/app-icon-4096.png --out=dist --overwrite --asar --prune=true --ignore='^/(dist|flatpak/build|flatpak/repo|\\.flatpak-builder)(/|$)'",
-    "package:win": "electron-packager . Calculator --platform=win32 --arch=x64 --icon=assets/icons/app-icon-dark.ico --out=dist --overwrite --asar --prune=true --ignore='^/(dist|flatpak/build|flatpak/repo|\\.flatpak-builder)(/|$)'",
+    "package:linux": "electron-packager . \"Roselt Calculator\" --platform=linux --arch=x64 --icon=assets/icons/app-icon-4096.png --out=dist --overwrite --asar --prune=true --ignore='^/(dist|flatpak/build|flatpak/repo|\\.flatpak-builder)(/|$)'",
+    "package:win": "electron-packager . \"Roselt Calculator\" --platform=win32 --arch=x64 --icon=assets/icons/app-icon-dark.ico --out=dist --overwrite --asar --prune=true --ignore='^/(dist|flatpak/build|flatpak/repo|\\.flatpak-builder)(/|$)'",
     "package:win:portable": "electron-builder --win portable",
     "start": "python3 -m http.server 4173",
     "start:desktop": "electron ."
@@ -27,9 +27,9 @@
   "private": true,
   "build": {
     "appId": "io.github.ShaunRoselt.Calculator",
-    "productName": "Calculator",
+    "productName": "Roselt Calculator",
     "directories": {
-      "output": "dist/Calculator-win32-x64-portable"
+      "output": "dist/Roselt-Calculator-win32-x64-portable"
     },
     "files": [
       "**/*",
@@ -48,7 +48,7 @@
       "icon": "assets/icons/app-icon-dark.ico"
     },
     "portable": {
-      "artifactName": "Calculator-Portable-${version}.exe"
+      "artifactName": "Roselt-Calculator-Portable-${version}.exe"
     }
   },
   "dependencies": {

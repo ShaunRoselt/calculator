@@ -1,7 +1,7 @@
 {
   "app": {
-    "title": "Calculadora",
-    "name": "Calculadora"
+    "title": "Roselt Calculadora",
+    "name": "Roselt Calculadora"
   },
   "common": {
     "back": "Enrere",
@@ -519,7 +519,6 @@
       "Atmospheres": "Atmosferes",
       "Bars": "Barres",
       "Kilopascals": "kilopascals",
-      
       "Pascals": "Pascals",
       "Pounds per square inch": "Lliures per polzada quadrada",
       "Degrees": "Graus",

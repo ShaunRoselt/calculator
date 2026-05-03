@@ -1,8 +1,8 @@
 {
   "id": "./app.html",
-  "name": "Calculator",
-  "short_name": "Calculator",
-  "description": "Installable web calculator with standard, scientific, programmer, date, graphing, and conversion modes.",
+  "name": "Roselt Calculator",
+  "short_name": "Roselt",
+  "description": "Installable calculator app with standard, scientific, programmer, graphing, date, history, memory, and conversion modes.",
   "start_url": "./app.html?page=standard",
   "scope": "./",
   "display": "standalone",

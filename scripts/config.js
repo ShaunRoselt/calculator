@@ -123,12 +123,12 @@ export function getCurrencyLabel(label) {
 }
 
 export const APP_INFO = {
-  name: 'Calculator',
+  name: 'Roselt Calculator',
   version: '12.0.0'
 };
 
 export function getAppName() {
-  return translatedValue('app.name', APP_INFO.name);
+  return APP_INFO.name;
 }
 
 const MOCK_CURRENCIES = [

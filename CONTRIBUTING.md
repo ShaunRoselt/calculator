@@ -1,6 +1,6 @@
-# Contributing to Calculator
+# Contributing to Roselt Calculator
 
-Calculator is now a web-only project. Contributions should improve the browser experience, the
+Roselt Calculator is a browser-first project. Contributions should improve the user experience, the
 maintainability of the codebase, or the reliability of the installable app shell.
 
 ## Reporting issues and suggesting features
@@ -32,7 +32,30 @@ For user-visible features and major UX changes, follow [docs/NewFeatureProcess.m
 
 ## Preparing your development environment
 
-Use the setup steps in [README.md](README.md) to install dependencies and run the app locally.
+Prerequisites:
+
+- Node.js and npm
+- Python 3, or another simple way to serve the repository over HTTP
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start a local server from the repository root:
+
+```bash
+npm start
+```
+
+Then open `http://127.0.0.1:4173/` for the public landing page, or go directly to `http://127.0.0.1:4173/app.html?page=standard` for the app shell.
+
+To launch the desktop shell during development:
+
+```bash
+npm run start:desktop
+```
 
 ## Style guidelines
 
@@ -46,6 +69,31 @@ of these areas:
 
 Prefer small, readable functions over large cross-cutting rewrites.
 
+## Project structure
+
+### Runtime entry points
+
+- `index.html` serves the public landing page, links the manifest, and registers the service worker so install prompts can begin there
+- `app.html` boots the browser shell for the installed and in-browser calculator experience
+- `manifest.json` defines install metadata
+- `service-worker.js` keeps the PWA installable without caching app assets
+
+### JavaScript
+
+- `scripts/startup.js` loads startup dependencies, registers the service worker, and imports the app
+- `scripts/landing.js` registers the service worker used to expose PWA installation from the public landing page
+- `scripts/app.js` wires startup, events, and top-level rendering
+- `scripts/config.js` defines modes, buttons, units, and app metadata
+- `scripts/state.js` manages persisted UI state
+- `scripts/logic.js` contains calculator, converter, date, and graphing logic
+- `scripts/Views/` contains mode-specific rendering modules
+
+### CSS
+
+- `styles/theme.css` defines tokens and global styles
+- `styles/Views/` contains view-specific styling
+- `styles/responsive.css` handles layout changes by viewport size
+
 ## Testing
 
 At a minimum, validate your change with:
@@ -56,6 +104,44 @@ At a minimum, validate your change with:
 - theme and keyboard checks when interactive UI changes are involved
 
 Use [docs/ManualTests.md](docs/ManualTests.md) as the baseline manual test plan.
+
+## Packaging
+
+Build the Windows x64 desktop bundle:
+
+```bash
+npm run package:win
+```
+
+Build a single-file portable Windows executable:
+
+```bash
+npm run package:win:portable
+```
+
+Build the Linux x64 Electron bundle:
+
+```bash
+npm run package:linux
+```
+
+Build the Flatpak bundle:
+
+```bash
+npm run package:flatpak
+```
+
+Launch the installed Flatpak:
+
+```bash
+flatpak run io.github.ShaunRoselt.Calculator
+```
+
+If you only have the local bundle, install it first with:
+
+```bash
+flatpak install --user --or-update dist/Roselt-Calculator-linux-x64.flatpak
+```
 
 ## Git workflow
 

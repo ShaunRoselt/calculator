@@ -1,3 +1,5 @@
+import { APP_INFO } from './config.js';
+
 const DEFAULT_LANGUAGE = 'en';
 const LANGUAGE_SORTER = new Intl.Collator(undefined, { sensitivity: 'base', numeric: true });
 
@@ -283,7 +285,7 @@ async function fetchTranslations(language) {
 
 function applyDocumentLanguage(language) {
   document.documentElement.lang = language;
-  document.title = t('app.title');
+  document.title = APP_INFO.name;
 }
 
 export function getDefaultLanguage() {

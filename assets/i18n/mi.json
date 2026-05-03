@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Tataitai",
+    "name": "Tataitai"
+  },
+  "common": {
+    "back": "Hoki",
+    "backspace": "Mokowāmuri",
+    "closeSidePanel": "Katia te panui"
+  },
+  "converter": {
+    "unitConverter": "Kaitahuri Wae",
+    "title": "Kaitahuri wae",
+    "builtInCollections": "Ko nga kohinga i roto",
+    "category": "Kawai",
+    "from": "Mai",
+    "to": "Ki",
+    "inputValue": "Uara hei huri",
+    "convertedValue": "Uara kua hurihia",
+    "swapUnits": "Whakawhiti wae",
+    "keypad": "Katahuri papapātuhi",
+    "unit": "wae",
+    "unitOptions": "kōwhiringa wae",
+    "currency": {
+      "updatingRates": "Kei te whakahou reiti…",
+      "updateRates": "Whakahou reiti",
+      "keypad": "Papatuhi moni",
+      "currency": "moni",
+      "options": "kōwhiringa moni",
+      "updated": "Whakahoutia {timestamp}",
+      "status": {
+        "mockNote": "Reeti tohutoro tawai mo te demo taupānga motuhake.",
+        "fetching": "Tii ana i nga reiti tohutoro USD hou...",
+        "liveRatesLoaded": "Ka utaina nga reiti mai i ExchangeRate-API.",
+        "liveUpdateUnavailable": "Karekau i te waatea te whakahou. Kua whakahoutia nga reiti demo i te rohe."
+      }
+    },
+    "aboutEqualTo": "Mo te rite ki"
+  },
+  "errors": {
+    "invalidInput": "Tauru muhu",
+    "cannotDivideByZero": "Kare e taea te wehewehe ki te kore",
+    "cannotModuloByZero": "Kare e taea te whakarereke ma te kore",
+    "invalidProgrammerOperation": "Muhu te mahi",
+    "overflow": "He nui rawa te hua"
+  },
+  "date": {
+    "calculationMode": "Aratau tatau",
+    "from": "Mai",
+    "to": "Ki",
+    "results": {
+      "difference": "Rerekētanga",
+      "sameDates": "Ko nga ra ano",
+      "date": "Ra"
+    },
+    "calculationModeOptions": "Kōwhiringa aratau tatau",
+    "mode": {
+      "difference": "Rerekētanga",
+      "shift": "Neke"
+    },
+    "operation": "Mahi",
+    "add": "Tāpiri",
+    "subtract": "Tangohia",
+    "years": "Tau",
+    "months": "Marama",
+    "days": "Ra",
+    "chooseDate": "Kōwhiri rā",
+    "previousMonth": "Marama o mua",
+    "nextMonth": "A tera marama",
+    "duration": {
+      "year": {
+        "one": "{count} tau",
+        "other": "{count} tau"
+      },
+      "month": {
+        "one": "{count} marama",
+        "other": "{count} marama"
+      },
+      "week": {
+        "one": "{count} wiki",
+        "other": "{count} wiki"
+      },
+      "day": {
+        "one": "{count} rā",
+        "other": "{count} ra"
+      }
+    },
+    "history": {
+      "differenceBetween": "Te rereketanga i waenga i te {from} me te {to}",
+      "addTo": "Taapirihia {duration} ki {date}",
+      "subtractFrom": "Tangohia te {duration} mai i te {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Tirohia te whakaaturanga kua tohua",
+    "enterExpression": "Tauruhia he korero",
+    "canvas": "Kanawe kauwhata",
+    "stopTracing": "Kati te whai",
+    "startTracing": "Timata te whai",
+    "share": "Tirihia",
+    "options": "Kōwhiringa",
+    "zoomIn": "Topa mai",
+    "zoomInLabel": "Topa mai",
+    "zoomOut": "Topa atu",
+    "zoomOutLabel": "Topa atu",
+    "refreshViewAutomatically": "Whakahou aunoa i te tirohanga",
+    "view": "Tirohia",
+    "expressions": "Kōrero",
+    "mobileView": "Tirohanga pūkoro",
+    "showGraph": "Whakaatu kauwhata",
+    "showExpressions": "Whakaatuhia nga korero",
+    "backToFunctionList": "Hoki ki te rarangi mahi",
+    "window": "Matapihi",
+    "resetView": "Tautuhi ano i te tirohanga",
+    "units": "Waeine",
+    "radians": "Redana",
+    "degrees": "Nga Tohu",
+    "gradians": "Gradians",
+    "lineThickness": "Te matotoru raina",
+    "theme": "Kaupapa",
+    "alwaysLight": "Maama tonu",
+    "matchAppTheme": "Whakaritea te kaupapa kaupapa",
+    "groups": {
+      "inequalities": "Kore orite",
+      "trigonometry": "Trigonometry",
+      "function": "Taumahi"
+    },
+    "functions": "Nga Mahi",
+    "showEquation": "Whakaatuhia te whārite",
+    "hideEquation": "Huna whārite",
+    "lineOptions": "Kwhiringa Raina",
+    "color": "Tae",
+    "style": "Khua",
+    "analysis": {
+      "title": "Tatari",
+      "domain": "Rohe",
+      "range": "Awhe",
+      "xIntercept": "x-haukoti",
+      "yIntercept": "y-haukoti",
+      "minima": "Minima",
+      "maxima": "Maxima",
+      "inflectionPoints": "Ngā tohu",
+      "verticalAsymptotes": "Asymptotes poutū",
+      "horizontalAsymptotes": "Asymptotes whakapae",
+      "obliqueAsymptotes": "Asymptotes titaha",
+      "parity": "Taurite",
+      "period": "Wā",
+      "monotonicity": "Kotahi",
+      "domainNone": "Karekau he here rohe",
+      "rangeNone": "Karekau he here awhe",
+      "xInterceptNone": "Karekau he haukoti-x",
+      "yInterceptNone": "Karekau he haukoti-y",
+      "minimaNone": "Karekau he iti",
+      "maximaNone": "Karekau he teitei",
+      "inflectionNone": "Karekau he tohu kopikopiko",
+      "verticalAsymptotesNone": "Karekau he asymptotes poutū",
+      "horizontalAsymptotesNone": "Karekau he asymptotes whakapae",
+      "obliqueAsymptotesNone": "Karekau he asymptotes titaha",
+      "parityUnknown": "Kare i te mohiotia",
+      "parityOdd": "Tahe",
+      "parityEven": "Ahakoa",
+      "parityNeither": "Kare ano",
+      "periodicityUnknown": "Kare i te mohiotia",
+      "periodicityNotPeriodic": "Ehara i te waa",
+      "monotonicityConstant": "Tonu",
+      "monotonicityIncreasing": "Kei te piki haere",
+      "monotonicityDecreasing": "Kei te heke",
+      "monotonicityUnknown": "Kare i te mohiotia",
+      "monotonicityError": "Kare e taea te whakatau",
+      "featureTooComplexPlural": "He uaua rawa ki te tātari",
+      "analysisCouldNotBePerformed": "Kaore i taea te mahi tātari",
+      "analysisNotSupported": "Kaore i te tautokohia te tātaritanga",
+      "variableIsNotX": "Ko te taurangi ehara i te x"
+    },
+    "plottingExpressions": "Kei te whakatakoto {count} whakaaturanga",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Tīpakohia te kīanga {index}",
+    "expressionIndex": "Kōrero {index}",
+    "analyzeFunction": "Tatarihia te mahi",
+    "changeEquationStyle": "Hurihia te kāhua whārite",
+    "removeEquation": "Tangohia te whārite",
+    "lineStyle": {
+      "solid": "Kahua raina totoka",
+      "dash": "Kahua raina Pīhono",
+      "dot": "Kahua raina ira"
+    }
+  },
+  "history": {
+    "empty": "Kei te putua nga hitori",
+    "clearAll": "Ūkuia katoa",
+    "clear": "Whakamaramahia te hitori",
+    "title": "Hitori",
+    "andMemory": "Ko te Hītori me te Maharahara",
+    "aria": {
+      "historyPanel": "Rowhiri hitori",
+      "historyAndMemoryPanel": "Rohe hitori me te Maharahara"
+    },
+    "closeFlyout": "Katia te hitori",
+    "openFlyout": "Tuwhera te hitori"
+  },
+  "memory": {
+    "empty": "Kei te putua te mahara",
+    "clearItem": "Ūkui tūemi",
+    "addCurrentValue": "Tāpiri uara o nāianei",
+    "subtractCurrentValue": "Tangohia te uara o naianei",
+    "clearAll": "Ūkuia katoa",
+    "clear": "Maama mahara",
+    "title": "Maharahara",
+    "controls": "Mana mahara",
+    "tooltips": {
+      "clearAll": "Muku mahara katoa",
+      "recall": "Maharahara mai i te mahara",
+      "add": "Tāpirihia ki te pūmahara",
+      "subtract": "Tangohia mai i te mahara",
+      "store": "Pokohia ki te mahara"
+    },
+    "recallValue": "Maharahara mahara {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Whakaterenga",
+      "closeNavigation": "Katia te whakaterenga",
+      "openNavigation": "Whakatuwhera te whakaterenga"
+    },
+    "groups": {
+      "calculator": "Tataitai",
+      "converter": "Kaitahuri"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Paewhiri huri moka",
+    "baseReadouts": "Tuhinga panui",
+    "surfaceMode": "Aratau Mata",
+    "fullKeypad": "Papatuhi katoa",
+    "showKeypad": "Whakaatuhia te papapātuhi",
+    "bitTogglingKeypad": "Moka takahuri papapātuhi",
+    "showBitView": "Whakaatuhia te tirohanga moka",
+    "wordSize": "Rahi kupu",
+    "bitwise": "Moka",
+    "bitShift": "Te neke moka"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Tonometry",
+      "function": "Taumahi",
+      "functionsAria": "Nga Mahi",
+      "trigonometricFunctionsAria": "Taumahi tapatoru",
+      "angleUnit": "Waeine koki {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Te ahua",
+      "themeTitle": "Kaupapa",
+      "themeDescription": "Kōwhiria he kaupapa tae",
+      "light": "Marama",
+      "dark": "Pouri",
+      "blue": "Kanarangi",
+      "green": "Kakariki",
+      "system": "Pūnaha"
+    },
+    "language": {
+      "group": "Reo",
+      "title": "Reo",
+      "description": "Kōwhiritia tō reo pai"
+    },
+    "about": {
+      "group": "Mō"
+    },
+    "feedback": "Tuku urupare",
+    "contribute": {
+      "prefix": "Toha i runga",
+      "link": "GitHub",
+      "suffix": "ki te whakapai ake i tenei tatauranga"
+    },
+    "links": {
+      "repository": "Putaka kaupapa",
+      "readme": "PĀNUITIA",
+      "license": "Raihana MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Paerewa",
+      "subtitle": "Aromātai tata tonu"
+    },
+    "scientific": {
+      "label": "Putaiao",
+      "subtitle": "Kaiwhakahaere, mahi, tautoko korero"
+    },
+    "graphing": {
+      "label": "Whakairoiro",
+      "subtitle": "Tuhia he whakaaturanga ngawari ki runga i te waka rererangi cartesian"
+    },
+    "programmer": {
+      "label": "Kaiwhakataka",
+      "subtitle": "Tauoti pāngarau me te hurihanga turanga"
+    },
+    "date": {
+      "label": "Te tatau ra",
+      "subtitle": "Kimihia nga roanga me nga ra nuku"
+    },
+    "currency": {
+      "label": "Moni",
+      "subtitle": "Tahurihia nga reeti whakawhiti tawai"
+    },
+    "volume": {
+      "label": "Rōrahi",
+      "subtitle": "Tahurihia inenga rōrahi"
+    },
+    "length": {
+      "label": "Te roa",
+      "subtitle": "Tahuri wae tawhiti me te roa"
+    },
+    "weight": {
+      "label": "Taimaha me te Papatipu",
+      "subtitle": "Tahurihia te taumaha me te waeine papatipu"
+    },
+    "temperature": {
+      "label": "Pamahana",
+      "subtitle": "Tahurihia nga tauine pāmahana"
+    },
+    "energy": {
+      "label": "Hinga",
+      "subtitle": "Tahurihia nga inenga hiko"
+    },
+    "area": {
+      "label": "Rohe",
+      "subtitle": "Tahurihia inenga horahanga"
+    },
+    "speed": {
+      "label": "Te tere",
+      "subtitle": "Tahuri inenga tere"
+    },
+    "time": {
+      "label": "Wa",
+      "subtitle": "Tahurihia inenga wa"
+    },
+    "power": {
+      "label": "Te mana",
+      "subtitle": "Tahurihia nga inenga hiko"
+    },
+    "data": {
+      "label": "Raraunga",
+      "subtitle": "Tahurihia nga wae rokiroki mamati"
+    },
+    "pressure": {
+      "label": "Pēhanga",
+      "subtitle": "Tahurihia nga waeine pehanga"
+    },
+    "angle": {
+      "label": "Koki",
+      "subtitle": "Tahurihia nga inenga koki"
+    },
+    "settings": {
+      "label": "Tautuhinga",
+      "subtitle": "Te ahua me nga korero tono"
+    }
+  },
+  "categories": {
+    "Currency": "Moni",
+    "Volume": "Rōrahi",
+    "Length": "Te roa",
+    "Mass": "Mahi",
+    "Temperature": "Pamahana",
+    "Energy": "Hinga",
+    "Area": "Rohe",
+    "Speed": "Te tere",
+    "Time": "Wa",
+    "Power": "Te mana",
+    "Data": "Raraunga",
+    "Pressure": "Pēhanga",
+    "Angle": "Koki"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanometers",
+      "Microns": "Microny",
+      "Millimeters": "Mirimita",
+      "Centimeters": "Henemita",
+      "Meters": "Meta",
+      "Kilometers": "Kiromita",
+      "Inches": "Inihi",
+      "Feet": "Waewae",
+      "Yards": "Iari",
+      "Miles": "Maero",
+      "Nautical miles": "Maero moana",
+      "paperclips": "ripene pepa",
+      "hands": "ringa",
+      "jumbo jets": "nga reeti jumbo",
+      "Carats": "Kareti",
+      "Milligrams": "Mirikaramu",
+      "Centigrams": "Henemana",
+      "Decigrams": "Decigrams",
+      "Grams": "Karama",
+      "Dekagrams": "Dekagram",
+      "Hectograms": "Hectograms",
+      "Kilograms": "Kirokaramu",
+      "Metric tonnes": "Tane mita",
+      "Ounces": "Ohi",
+      "Pounds": "Pauna",
+      "Stone": "Kohatu",
+      "Short tons (US)": "Tane poto (US)",
+      "Long tons (UK)": "Tane roa (UK)",
+      "snowflakes": "parakau hukarere",
+      "soccer balls": "poi poikiri",
+      "elephants": "arewhana",
+      "whales": "tohorā",
+      "Celsius": "Celesio",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Miririta",
+      "Cubic centimeters": "Henemita pūtoru",
+      "Liters": "Rita",
+      "Cubic meters": "Meta pūtoru",
+      "Teaspoons (US)": "Te punetēpu (US)",
+      "Tablespoons (US)": "Te punetēpu (US)",
+      "Fluid ounces (US)": "Ohire wai (US)",
+      "Cups (US)": "Kapu (US)",
+      "Pints (US)": "Pints (US)",
+      "Quarts (US)": "Koata (US)",
+      "Gallons (US)": "Karani (US)",
+      "Cubic inches": "inihi pūtoru",
+      "Cubic feet": "Waewae pūtoru",
+      "Cubic yards": "Iari pūtoru",
+      "Teaspoons (UK)": "Te punetēpu (UK)",
+      "Tablespoons (UK)": "Punepu (UK)",
+      "Fluid ounces (UK)": "Uni wai (UK)",
+      "Pints (UK)": "Pints (UK)",
+      "Quarts (UK)": "Tauwha (UK)",
+      "Gallons (UK)": "Karani (UK)",
+      "coffee cups": "kapu kawhe",
+      "bathtubs": "patipati",
+      "swimming pools": "puna kaukau",
+      "Square millimeters": "Tapawha mitamano",
+      "Square centimeters": "Henemita tapawha",
+      "Square meters": "Meta tapawha",
+      "Hectares": "Hectares",
+      "Square kilometers": "Kiromita tapawha",
+      "Square inches": "Tapawha inihi",
+      "Square feet": "Waewae tapawha",
+      "Square yards": "Iari tapawha",
+      "Acres": "Eka",
+      "Square miles": "Maero tapawha",
+      "sheets of paper": "pepa pepa",
+      "soccer fields": "apure whutupaoro",
+      "castles": "whare rangatira",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Henemita mo ia hekona",
+      "Meters per second": "Meta mo ia hekona",
+      "Kilometers per hour": "Kiromita ia haora",
+      "Feet per second": "Waewae ia hekona",
+      "Miles per hour": "Maero ia haora",
+      "Knots": "Knots",
+      "Mach": "Mach",
+      "turtles": "honu",
+      "horses": "hoiho",
+      "jets": "jet",
+      "Watts": "Watts",
+      "Kilowatts": "Kilowatt",
+      "Horsepower (US)": "Hoiho (US)",
+      "Foot-pounds/minute": "Waewae-pauna/meneti",
+      "BTUs/minute": "BTU/meneti",
+      "light bulbs": "nga topuku",
+      "train engines": "nga miihini tereina",
+      "Thermal calories": "Taoo wera",
+      "Food calories": "Kaorangi kai",
+      "British thermal units": "Waariki o Ingarangi",
+      "Kilojoules": "Kilojoules",
+      "Kilowatt-hours": "Kilowatt-haora",
+      "Electron volts": "Nga hiko hiko",
+      "Joules": "Joules",
+      "Foot-pounds": "Pauna-waewae",
+      "batteries": "pākahiko",
+      "bananas": "panana",
+      "slices of cake": "poro keke",
+      "Bits": "Moka",
+      "Nibble": "Papa",
+      "Bytes": "Paita",
+      "Kilobits": "Kirobits",
+      "Kibibits": "Kibibit",
+      "Kilobytes": "Kiropaita",
+      "Kibibytes": "Kipibytes",
+      "Megabits": "Megabits",
+      "Mebibits": "Mebibits",
+      "Megabytes": "Mekapaita",
+      "Mebibytes": "Mebibytes",
+      "Gigabits": "Gigabits",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Kirapaita",
+      "Gibibytes": "Kipaita",
+      "Terabits": "Terabits",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabytes",
+      "Tebibytes": "Tepibytes",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Paitaita",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Whakaahua",
+      "Exbibits": "Whakaahua",
+      "Exabytes": "Exabytes",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabytes",
+      "Zebibytes": "Hepepaita",
+      "Yottabits": "Yotabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabytes",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "kōpae pīngore",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "Ko nga Huringa",
+      "Bars": "Pae",
+      "Kilopascals": "Kilopascal",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Pauna mo ia inihi tapawha",
+      "Degrees": "Nga Tohu",
+      "Radians": "Rirangi",
+      "Gradians": "Gradians",
+      "Microseconds": "Microhekona",
+      "Milliseconds": "Mirihekona",
+      "Seconds": "Hono",
+      "Minutes": "Nga meneti",
+      "Hours": "Hora",
+      "Days": "Ra",
+      "Weeks": "Nga wiki",
+      "Years": "Tau",
+      "Millimeters of mercury": "Millimeters of mercury"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Tara US",
+      "Euro": "Euro",
+      "British Pound": "Pauna Ingarangi",
+      "Japanese Yen": "Ine Hapanihi",
+      "Canadian Dollar": "Tara Kanaana",
+      "Australian Dollar": "Tara Ahitereiria",
+      "Brazilian Real": "Brazilian Real",
+      "Chilean Peso": "Peso Hiri",
+      "Chinese Yuan": "yuan Hainamana",
+      "Colombian Peso": "Peso Kolomia",
+      "Danish Krone": "Krone Daniana",
+      "Egyptian Pound": "Pauna Ihipa",
+      "Hong Kong Dollar": "Tara Hong Kong",
+      "Indian Rupee": "Rupi Inia",
+      "Kenyan Shilling": "Hiniini Keniana",
+      "Mexican Peso": "Peso Mehiko",
+      "Nigerian Naira": "Naira Nigeria",
+      "New Zealand Dollar": "Tara Aotearoa",
+      "Norwegian Krone": "Krone Nowehia",
+      "Philippine Piso": "Philipina Piso",
+      "Polish Zloty": "Zloty Polish",
+      "Qatari Riyal": "Tari Riyal",
+      "Saudi Riyal": "Riyal Saudi",
+      "Singapore Dollar": "Tara Hingapora",
+      "South African Rand": "Rand Awherika ki te Tonga",
+      "South Korean Won": "Woni o Korea ki te Tonga",
+      "Swedish Krona": "Krona Huitene",
+      "Swiss Franc": "Warani Huiti",
+      "Thai Baht": "Thai Baht",
+      "Turkish Lira": "Turiki Lira",
+      "Turkmenistani Manat": "Turkmenistani Manat",
+      "Ugandan Shilling": "Hinirangi Ugandana",
+      "Ukrainian Hryvnia": "Hryvnia Iukereiniana",
+      "UAE Dirham": "UAE Dirham",
+      "Uruguayan Peso": "Peso Uruguay",
+      "Uzbekistani Som": "Uzbekistani Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuela Bolívar Soberano",
+      "Vietnamese Dong": "Vietnami Dong",
+      "Yemeni Rial": "Rial Yemeni"
+    },
+    "labels": {
+      "United States - Dollar": "Te Hononga o Amerika - Tara",
+      "Europe - Euro": "Europa - Euro",
+      "United Kingdom - Pound": "United Kingdom - Pauna",
+      "Japan - Yen": "Hapanihi - Yen",
+      "Canada - Dollar": "Kanata - Tara",
+      "Australia - Dollar": "Ahitereiria - Tara",
+      "Brazil - Real": "Brazil - Tino",
+      "Chile - Peso": "Hiri - Peso",
+      "China - Yuan Renminbi": "Haina - Yuan Renminbi",
+      "Colombia - Peso": "Kolomia - Peso",
+      "Denmark - Krone": "Tenemaka - Krone",
+      "Egypt - Pound": "Ihipi - Pauna",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Tara",
+      "India - Rupee": "Inia - Rupi",
+      "Kenya - Shilling": "Kenya - Herewini",
+      "Mexico - Peso": "Mehiko - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "Aotearoa - Tara",
+      "Norway - Krone": "Norwei - Krone",
+      "Philippines - Piso": "Philipina - Piso",
+      "Poland - Zloty": "Poland - Zloty",
+      "Qatar - Riyal": "Kata - Riyal",
+      "Saudi Arabia - Riyal": "Saudi Arabia - Riyal",
+      "Singapore - Dollar": "Singapore - Tara",
+      "South Africa - Rand": "Awherika ki te Tonga - Rand",
+      "South Korea - Won": "Korea ki te Tonga - Toa",
+      "Sweden - Krona": "Huimana - Krona",
+      "Switzerland - Franc": "Switzerland - Franc",
+      "Thailand - Baht": "Tailani - Baht",
+      "Turkey - Lira": "Turiki - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Herewini",
+      "Ukraine - Hryvnia": "Ukraine - Hryvnia",
+      "United Arab Emirates - Dirham": "United Arab Emirates - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Uzbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Imana - Rial"
+    }
+  }
+}

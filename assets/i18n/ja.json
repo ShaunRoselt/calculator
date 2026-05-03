@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "電卓",
+    "name": "電卓"
+  },
+  "common": {
+    "back": "戻る",
+    "backspace": "バックスペース",
+    "closeSidePanel": "パネルを閉じる"
+  },
+  "converter": {
+    "unitConverter": "単位変換器",
+    "title": "単位コンバータ",
+    "builtInCollections": "組み込みコレクション",
+    "category": "カテゴリ",
+    "from": "から",
+    "to": "宛先",
+    "inputValue": "変換する値",
+    "convertedValue": "変換後の値",
+    "swapUnits": "ユニットを交換する",
+    "keypad": "コンバーター キーパッド",
+    "unit": "ユニット",
+    "unitOptions": "ユニットオプション",
+    "currency": {
+      "updatingRates": "レートを更新中…",
+      "updateRates": "更新レート",
+      "keypad": "通貨キーパッド",
+      "currency": "通貨",
+      "options": "通貨オプション",
+      "updated": "更新しました {timestamp}",
+      "status": {
+        "mockNote": "スタンドアロン アプリのデモ用の模擬参照レート。",
+        "fetching": "最新の米ドル参照レートを取得しています...",
+        "liveRatesLoaded": "ExchangeRate-API からロードされたライブ レート。",
+        "liveUpdateUnavailable": "ライブアップデートは利用できません。デモレートをローカルで更新しました。"
+      }
+    },
+    "aboutEqualTo": "ほぼ等しい"
+  },
+  "errors": {
+    "invalidInput": "無効な入力です",
+    "cannotDivideByZero": "ゼロで割ることはできません",
+    "cannotModuloByZero": "ゼロによる剰余はできません",
+    "invalidProgrammerOperation": "無効な操作です",
+    "overflow": "結果が大きすぎます"
+  },
+  "date": {
+    "calculationMode": "計算モード",
+    "from": "から",
+    "to": "宛先",
+    "results": {
+      "difference": "違い",
+      "sameDates": "同じ日付",
+      "date": "日付"
+    },
+    "calculationModeOptions": "計算モードのオプション",
+    "mode": {
+      "difference": "違い",
+      "shift": "シフト"
+    },
+    "operation": "オペレーション",
+    "add": "追加",
+    "subtract": "減算",
+    "years": "年",
+    "months": "月",
+    "days": "日数",
+    "chooseDate": "日付を選択してください",
+    "previousMonth": "前月",
+    "nextMonth": "来月",
+    "duration": {
+      "year": {
+        "one": "{count} 年",
+        "other": "{count} 年"
+      },
+      "month": {
+        "one": "{count} 月",
+        "other": "{count} か月"
+      },
+      "week": {
+        "one": "{count}週",
+        "other": "{count} 週間"
+      },
+      "day": {
+        "one": "{count} 日",
+        "other": "{count} 日"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from} と {to} の違い",
+      "addTo": "{duration}を{date}に追加します",
+      "subtractFrom": "{date}から{duration}を減算します"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "ハイライト表示された式を確認してください",
+    "enterExpression": "式を入力してください",
+    "canvas": "グラフキャンバス",
+    "stopTracing": "トレースを停止",
+    "startTracing": "トレースの開始",
+    "share": "共有",
+    "options": "オプション",
+    "zoomIn": "ズームイン",
+    "zoomInLabel": "ズームイン",
+    "zoomOut": "ズームアウト",
+    "zoomOutLabel": "ズームアウト",
+    "refreshViewAutomatically": "ビューを自動的に更新",
+    "view": "見る",
+    "expressions": "式",
+    "mobileView": "モバイルビュー",
+    "showGraph": "グラフを表示",
+    "showExpressions": "式を表示",
+    "backToFunctionList": "機能リストに戻る",
+    "window": "ウィンドウ",
+    "resetView": "ビューをリセット",
+    "units": "ユニット",
+    "radians": "ラジアン",
+    "degrees": "学位",
+    "gradians": "グラディアン",
+    "lineThickness": "線の太さ",
+    "theme": "テーマ",
+    "alwaysLight": "常に明るい",
+    "matchAppTheme": "マッチアプリのテーマ",
+    "groups": {
+      "inequalities": "不平等",
+      "trigonometry": "三角法",
+      "function": "関数"
+    },
+    "functions": "関数",
+    "showEquation": "方程式を表示",
+    "hideEquation": "方程式を非表示",
+    "lineOptions": "回線オプション",
+    "color": "色",
+    "style": "スタイル",
+    "analysis": {
+      "title": "分析",
+      "domain": "ドメイン",
+      "range": "範囲",
+      "xIntercept": "x切片",
+      "yIntercept": "y切片",
+      "minima": "ミニマ",
+      "maxima": "マキシマ",
+      "inflectionPoints": "変曲点",
+      "verticalAsymptotes": "垂直漸近線",
+      "horizontalAsymptotes": "水平方向の漸近線",
+      "obliqueAsymptotes": "斜めの漸近線",
+      "parity": "パリティ",
+      "period": "期間",
+      "monotonicity": "単調性",
+      "domainNone": "ドメイン制限なし",
+      "rangeNone": "範囲制限なし",
+      "xInterceptNone": "x 切片はありません",
+      "yInterceptNone": "y 切片はありません",
+      "minimaNone": "最小値なし",
+      "maximaNone": "最大値なし",
+      "inflectionNone": "変曲点なし",
+      "verticalAsymptotesNone": "垂直方向の漸近線はありません",
+      "horizontalAsymptotesNone": "水平方向の漸近線はありません",
+      "obliqueAsymptotesNone": "斜めの漸近線はありません",
+      "parityUnknown": "不明",
+      "parityOdd": "奇数",
+      "parityEven": "偶数",
+      "parityNeither": "どちらでもない",
+      "periodicityUnknown": "不明",
+      "periodicityNotPeriodic": "定期的ではありません",
+      "monotonicityConstant": "定数",
+      "monotonicityIncreasing": "増加中",
+      "monotonicityDecreasing": "減少中",
+      "monotonicityUnknown": "不明",
+      "monotonicityError": "判断できません",
+      "featureTooComplexPlural": "複雑すぎて分析できません",
+      "analysisCouldNotBePerformed": "分析を実行できませんでした",
+      "analysisNotSupported": "分析はサポートされていません",
+      "variableIsNotX": "変数は x ではありません"
+    },
+    "plottingExpressions": "{count} 式をプロットしています",
+    "xMin": "X分",
+    "xMax": "X-マックス",
+    "yMin": "Y分",
+    "yMax": "Yマックス",
+    "selectExpression": "式 {index} を選択してください",
+    "expressionIndex": "式 {index}",
+    "analyzeFunction": "分析機能",
+    "changeEquationStyle": "数式スタイルを変更する",
+    "removeEquation": "方程式を削除",
+    "lineStyle": {
+      "solid": "実線のスタイル",
+      "dash": "破線のスタイル",
+      "dot": "点線のスタイル"
+    }
+  },
+  "history": {
+    "empty": "履歴は空です",
+    "clearAll": "すべてクリア",
+    "clear": "履歴をクリア",
+    "title": "歴史",
+    "andMemory": "歴史と記憶",
+    "aria": {
+      "historyPanel": "履歴パネル",
+      "historyAndMemoryPanel": "履歴と記憶パネル"
+    },
+    "closeFlyout": "履歴を閉じる",
+    "openFlyout": "履歴を開く"
+  },
+  "memory": {
+    "empty": "メモリが空です",
+    "clearItem": "アイテムをクリア",
+    "addCurrentValue": "現在の値を追加します",
+    "subtractCurrentValue": "現在値を減算します",
+    "clearAll": "すべてクリア",
+    "clear": "メモリをクリア",
+    "title": "メモリ",
+    "controls": "メモリ制御",
+    "tooltips": {
+      "clearAll": "すべてのメモリをクリア",
+      "recall": "記憶から呼び出す",
+      "add": "メモリに追加",
+      "subtract": "メモリから減算",
+      "store": "メモリに保存"
+    },
+    "recallValue": "記憶を呼び出す {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "ナビゲーション",
+      "closeNavigation": "ナビゲーションを閉じる",
+      "openNavigation": "ナビゲーションを開く"
+    },
+    "groups": {
+      "calculator": "電卓",
+      "converter": "コンバーター"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "ビットフリップパネル",
+    "baseReadouts": "ベースの読み取り値",
+    "surfaceMode": "サーフェスモード",
+    "fullKeypad": "フルキーパッド",
+    "showKeypad": "キーパッドを表示",
+    "bitTogglingKeypad": "ビットトグルキーパッド",
+    "showBitView": "ビットビューを表示",
+    "wordSize": "ワードサイズ",
+    "bitwise": "ビット単位",
+    "bitShift": "ビットシフト"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "三角法",
+      "function": "関数",
+      "functionsAria": "関数",
+      "trigonometricFunctionsAria": "三角関数",
+      "angleUnit": "角度単位 {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "外観",
+      "themeTitle": "テーマ",
+      "themeDescription": "配色を選択してください",
+      "light": "光",
+      "dark": "ダーク",
+      "blue": "ブルー",
+      "green": "緑",
+      "system": "システム"
+    },
+    "language": {
+      "group": "言語",
+      "title": "言語",
+      "description": "好みの言語を選択してください"
+    },
+    "about": {
+      "group": "概要"
+    },
+    "feedback": "フィードバックを送信",
+    "contribute": {
+      "prefix": "貢献する",
+      "link": "GitHub",
+      "suffix": "この計算機の改善にご協力ください"
+    },
+    "links": {
+      "repository": "プロジェクトリポジトリ",
+      "readme": "README",
+      "license": "MIT ライセンス"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "スタンダード",
+      "subtitle": "従来の即時評価"
+    },
+    "scientific": {
+      "label": "科学的",
+      "subtitle": "演算子、関数、式のサポート"
+    },
+    "graphing": {
+      "label": "グラフ化",
+      "subtitle": "単純な式をデカルト平面上にプロットします"
+    },
+    "programmer": {
+      "label": "プログラマー",
+      "subtitle": "基数変換による整数演算"
+    },
+    "date": {
+      "label": "日付の計算",
+      "subtitle": "期間とシフト日を検索する"
+    },
+    "currency": {
+      "label": "通貨",
+      "subtitle": "模擬為替レートを変換する"
+    },
+    "volume": {
+      "label": "音量",
+      "subtitle": "体積測定値を変換する"
+    },
+    "length": {
+      "label": "長さ",
+      "subtitle": "距離と長さの単位を変換する"
+    },
+    "weight": {
+      "label": "重量と質量",
+      "subtitle": "重量と質量の単位を変換する"
+    },
+    "temperature": {
+      "label": "温度",
+      "subtitle": "温度スケールを変換する"
+    },
+    "energy": {
+      "label": "エネルギー",
+      "subtitle": "エネルギー測定値を変換する"
+    },
+    "area": {
+      "label": "エリア",
+      "subtitle": "面積測定値を変換する"
+    },
+    "speed": {
+      "label": "スピード",
+      "subtitle": "速度測定値の変換"
+    },
+    "time": {
+      "label": "時間",
+      "subtitle": "変換時間の測定値"
+    },
+    "power": {
+      "label": "パワー",
+      "subtitle": "電力測定値の変換"
+    },
+    "data": {
+      "label": "データ",
+      "subtitle": "デジタルストレージユニットを変換する"
+    },
+    "pressure": {
+      "label": "圧力",
+      "subtitle": "圧力単位の変換"
+    },
+    "angle": {
+      "label": "角度",
+      "subtitle": "角度測定値を変換する"
+    },
+    "settings": {
+      "label": "設定",
+      "subtitle": "外観とアプリ情報"
+    }
+  },
+  "categories": {
+    "Currency": "通貨",
+    "Volume": "音量",
+    "Length": "長さ",
+    "Mass": "ミサ",
+    "Temperature": "温度",
+    "Energy": "エネルギー",
+    "Area": "エリア",
+    "Speed": "スピード",
+    "Time": "時間",
+    "Power": "パワー",
+    "Data": "データ",
+    "Pressure": "プレッシャー",
+    "Angle": "角度"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "オングストローム",
+      "Nanometers": "ナノメートル",
+      "Microns": "ミクロン",
+      "Millimeters": "ミリメートル",
+      "Centimeters": "センチメートル",
+      "Meters": "メートル",
+      "Kilometers": "キロメートル",
+      "Inches": "インチ",
+      "Feet": "足",
+      "Yards": "ヤード",
+      "Miles": "マイル",
+      "Nautical miles": "海里",
+      "paperclips": "クリップ",
+      "hands": "手",
+      "jumbo jets": "ジャンボジェット",
+      "Carats": "カラット",
+      "Milligrams": "ミリグラム",
+      "Centigrams": "センチグラム",
+      "Decigrams": "デシグラム",
+      "Grams": "グラム",
+      "Dekagrams": "デカグラム",
+      "Hectograms": "ヘクトグラム",
+      "Kilograms": "キログラム",
+      "Metric tonnes": "トン",
+      "Ounces": "オンス",
+      "Pounds": "ポンド",
+      "Stone": "石",
+      "Short tons (US)": "ショートトン(米国)",
+      "Long tons (UK)": "ロングトン (イギリス)",
+      "snowflakes": "雪の結晶",
+      "soccer balls": "サッカーボール",
+      "elephants": "象",
+      "whales": "クジラ",
+      "Celsius": "摂氏",
+      "Fahrenheit": "華氏",
+      "Kelvin": "ケルビン",
+      "Milliliters": "ミリリットル",
+      "Cubic centimeters": "立方センチメートル",
+      "Liters": "リットル",
+      "Cubic meters": "立方メートル",
+      "Teaspoons (US)": "ティースプーン (米国)",
+      "Tablespoons (US)": "大さじ（米国）",
+      "Fluid ounces (US)": "液量オンス (米国)",
+      "Cups (US)": "カップ (米国)",
+      "Pints (US)": "パイント (米国)",
+      "Quarts (US)": "クォート (米国)",
+      "Gallons (US)": "ガロン (米国)",
+      "Cubic inches": "立方インチ",
+      "Cubic feet": "立方フィート",
+      "Cubic yards": "立方ヤード",
+      "Teaspoons (UK)": "ティースプーン (英国)",
+      "Tablespoons (UK)": "大さじ（イギリス）",
+      "Fluid ounces (UK)": "液量オンス (英国)",
+      "Pints (UK)": "パイント (英国)",
+      "Quarts (UK)": "クオーツ (イギリス)",
+      "Gallons (UK)": "ガロン (英国)",
+      "coffee cups": "コーヒーカップ",
+      "bathtubs": "バスタブ",
+      "swimming pools": "スイミングプール",
+      "Square millimeters": "平方ミリメートル",
+      "Square centimeters": "平方センチメートル",
+      "Square meters": "平方メートル",
+      "Hectares": "ヘクタール",
+      "Square kilometers": "平方キロメートル",
+      "Square inches": "平方インチ",
+      "Square feet": "平方フィート",
+      "Square yards": "平方ヤード",
+      "Acres": "エーカー",
+      "Square miles": "平方マイル",
+      "sheets of paper": "紙枚",
+      "soccer fields": "サッカー場",
+      "castles": "城",
+      "Pyeong": "ピョン",
+      "Centimeters per second": "センチメートル/秒",
+      "Meters per second": "メートル/秒",
+      "Kilometers per hour": "時速キロメートル",
+      "Feet per second": "フィート/秒",
+      "Miles per hour": "時速マイル",
+      "Knots": "ノット",
+      "Mach": "マッハ",
+      "turtles": "カメ",
+      "horses": "馬",
+      "jets": "ジェット",
+      "Watts": "ワット",
+      "Kilowatts": "キロワット",
+      "Horsepower (US)": "馬力 (米国)",
+      "Foot-pounds/minute": "フィートポンド/分",
+      "BTUs/minute": "BTU/分",
+      "light bulbs": "電球",
+      "train engines": "電車のエンジン",
+      "Thermal calories": "熱カロリー",
+      "Food calories": "食事のカロリー",
+      "British thermal units": "英国の熱単位",
+      "Kilojoules": "キロジュール",
+      "Kilowatt-hours": "キロワット時",
+      "Electron volts": "電子ボルト",
+      "Joules": "ジュール",
+      "Foot-pounds": "フィートポンド",
+      "batteries": "バッテリー",
+      "bananas": "バナナ",
+      "slices of cake": "ケーキのスライス",
+      "Bits": "ビット",
+      "Nibble": "ニブル",
+      "Bytes": "バイト",
+      "Kilobits": "キロビット",
+      "Kibibits": "キビビット",
+      "Kilobytes": "キロバイト",
+      "Kibibytes": "キビバイト",
+      "Megabits": "メガビット",
+      "Mebibits": "メビビッツ",
+      "Megabytes": "メガバイト",
+      "Mebibytes": "メビバイト",
+      "Gigabits": "ギガビット",
+      "Gibibits": "ギビビット",
+      "Gigabytes": "ギガバイト",
+      "Gibibytes": "ギビバイト",
+      "Terabits": "テラビット",
+      "Tebibits": "テビビッツ",
+      "Terabytes": "テラバイト",
+      "Tebibytes": "テビバイト",
+      "Petabits": "ペタビット",
+      "Pebibits": "ペビビット",
+      "Petabytes": "ペタバイト",
+      "Pebibytes": "ペビバイト",
+      "Exabits": "Exabits",
+      "Exbibits": "展覧会",
+      "Exabytes": "エクサバイト",
+      "Exbibytes": "エクスビバイト",
+      "Zetabits": "ゼタビット",
+      "Zebibits": "ゼビビット",
+      "Zetabytes": "ゼタバイト",
+      "Zebibytes": "ゼビバイト",
+      "Yottabits": "ヨッタビッツ",
+      "Yobibits": "ヨビビッツ",
+      "Yottabytes": "ヨタバイト",
+      "Yobibytes": "ヨビバイト",
+      "floppy disks": "フロッピー ディスク",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "雰囲気",
+      "Bars": "バー",
+      "Kilopascals": "キロパスカル",
+      "Millimeters of mercury": "水銀柱ミリメートル",
+      "Pascals": "パスカル",
+      "Pounds per square inch": "ポンド/平方インチ",
+      "Degrees": "学位",
+      "Radians": "ラジアン",
+      "Gradians": "グラディアン",
+      "Microseconds": "マイクロ秒",
+      "Milliseconds": "ミリ秒",
+      "Seconds": "秒",
+      "Minutes": "分",
+      "Hours": "営業時間",
+      "Days": "日数",
+      "Weeks": "数週間",
+      "Years": "年"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "米ドル",
+      "Euro": "ユーロ",
+      "British Pound": "英国ポンド",
+      "Japanese Yen": "日本円",
+      "Canadian Dollar": "カナダドル",
+      "Australian Dollar": "オーストラリアドル",
+      "Brazilian Real": "ブラジルレアル",
+      "Chilean Peso": "チリ ペソ",
+      "Chinese Yuan": "中国人民元",
+      "Colombian Peso": "コロンビアペソ",
+      "Danish Krone": "デンマーク クローネ",
+      "Egyptian Pound": "エジプトポンド",
+      "Hong Kong Dollar": "香港ドル",
+      "Indian Rupee": "インドルピー",
+      "Kenyan Shilling": "ケニア シリング",
+      "Mexican Peso": "メキシコ ペソ",
+      "Nigerian Naira": "ナイジェリア ナイラ",
+      "New Zealand Dollar": "ニュージーランドドル",
+      "Norwegian Krone": "ノルウェー クローネ",
+      "Philippine Piso": "フィリピンピソ",
+      "Polish Zloty": "ポーランドズウォティ",
+      "Qatari Riyal": "カタール リヤル",
+      "Saudi Riyal": "サウジアラビアリヤル",
+      "Singapore Dollar": "シンガポールドル",
+      "South African Rand": "南アフリカランド",
+      "South Korean Won": "韓国ウォン",
+      "Swedish Krona": "スウェーデン クローナ",
+      "Swiss Franc": "スイスフラン",
+      "Thai Baht": "タイ バーツ",
+      "Turkish Lira": "トルコ リラ",
+      "Turkmenistani Manat": "トルクメニスタン マナト",
+      "Ugandan Shilling": "ウガンダ シリング",
+      "Ukrainian Hryvnia": "ウクライナ グリブナ",
+      "UAE Dirham": "アラブ首長国連邦ディルハム",
+      "Uruguayan Peso": "ウルグアイ ペソ",
+      "Uzbekistani Som": "ウズベキスタンのソム",
+      "Vanuatu Vatu": "バヌアツ バツ",
+      "Venezuelan Bolivar Soberano": "ベネズエラのボリバル・ソベラノ",
+      "Vietnamese Dong": "ベトナムドン",
+      "Yemeni Rial": "イエメン リアル"
+    },
+    "labels": {
+      "United States - Dollar": "米国 - ドル",
+      "Europe - Euro": "ヨーロッパ - ユーロ",
+      "United Kingdom - Pound": "イギリス - ポンド",
+      "Japan - Yen": "日本 - 円",
+      "Canada - Dollar": "カナダ - ドル",
+      "Australia - Dollar": "オーストラリア - ドル",
+      "Brazil - Real": "ブラジル - レアル",
+      "Chile - Peso": "チリ - ペソ",
+      "China - Yuan Renminbi": "中国 - 人民元",
+      "Colombia - Peso": "コロンビア - ペソ",
+      "Denmark - Krone": "デンマーク - クローネ",
+      "Egypt - Pound": "エジプト - ポンド",
+      "Hong Kong SAR - Dollar": "香港特別行政区 - ドル",
+      "India - Rupee": "インド - ルピー",
+      "Kenya - Shilling": "ケニア - シリング",
+      "Mexico - Peso": "メキシコ - ペソ",
+      "Nigeria - Naira": "ナイジェリア - ナイラ",
+      "New Zealand - Dollar": "ニュージーランド - ドル",
+      "Norway - Krone": "ノルウェー - クローネ",
+      "Philippines - Piso": "フィリピン - ピソ",
+      "Poland - Zloty": "ポーランド - ズロティ",
+      "Qatar - Riyal": "カタール - リヤル",
+      "Saudi Arabia - Riyal": "サウジアラビア - リヤル",
+      "Singapore - Dollar": "シンガポール - ドル",
+      "South Africa - Rand": "南アフリカ - ランド",
+      "South Korea - Won": "韓国 - ウォン",
+      "Sweden - Krona": "スウェーデン - クローナ",
+      "Switzerland - Franc": "スイス - フラン",
+      "Thailand - Baht": "タイ - バーツ",
+      "Turkey - Lira": "トルコ - リラ",
+      "Turkmenistan - Manat": "トルクメニスタン - マナト",
+      "Uganda - Shilling": "ウガンダ - シリング",
+      "Ukraine - Hryvnia": "ウクライナ - グリブナ",
+      "United Arab Emirates - Dirham": "アラブ首長国連邦 - ディルハム",
+      "Uruguay - Peso": "ウルグアイ - ペソ",
+      "Uzbekistan - Som": "ウズベキスタン - ソム",
+      "Vanuatu - Vatu": "バヌアツ - バツ",
+      "Venezuela - Bolívar Soberano": "ベネズエラ - ボリバル・ソベラノ",
+      "Vietnam - Dong": "ベトナム - ドン",
+      "Yemen - Rial": "イエメン - リアル"
+    }
+  }
+}

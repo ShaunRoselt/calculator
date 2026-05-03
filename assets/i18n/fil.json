@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Calculator",
+    "name": "Calculator"
+  },
+  "common": {
+    "back": "Bumalik",
+    "backspace": "Backspace",
+    "closeSidePanel": "Isara ang panel"
+  },
+  "converter": {
+    "unitConverter": "Konverter ng Unit",
+    "title": "Mga nagko-convert ng unit",
+    "builtInCollections": "Mga built-in na koleksyon",
+    "category": "Kategorya",
+    "from": "Mula sa",
+    "to": "Para kay",
+    "inputValue": "Halaga na iko-convert",
+    "convertedValue": "Na-convert na halaga",
+    "swapUnits": "Magpalit ng mga unit",
+    "keypad": "Converter keypad",
+    "unit": "unit",
+    "unitOptions": "mga opsyon sa unit",
+    "currency": {
+      "updatingRates": "Ina-update ang mga rate…",
+      "updateRates": "I-update ang mga rate",
+      "keypad": "Currency keypad",
+      "currency": "pera",
+      "options": "mga pagpipilian sa pera",
+      "updated": "Na-update {timestamp}",
+      "status": {
+        "mockNote": "Mock reference rate para sa standalone na app demo.",
+        "fetching": "Kinukuha ang pinakabagong USD reference rate...",
+        "liveRatesLoaded": "Na-load ang mga live na rate mula sa ExchangeRate-API.",
+        "liveUpdateUnavailable": "Hindi available ang live na update. Lokal na ni-refresh ang mga demo rate."
+      }
+    },
+    "aboutEqualTo": "Tungkol sa katumbas ng"
+  },
+  "errors": {
+    "invalidInput": "Di-wastong input",
+    "cannotDivideByZero": "Hindi mahati sa zero",
+    "cannotModuloByZero": "Hindi ma-modula ng zero",
+    "invalidProgrammerOperation": "Di-wastong pagpapatakbo",
+    "overflow": "Masyadong malaki ang resulta"
+  },
+  "date": {
+    "calculationMode": "Calculation mode",
+    "from": "Mula sa",
+    "to": "Para kay",
+    "results": {
+      "difference": "Pagkakaiba",
+      "sameDates": "Parehong mga petsa",
+      "date": "Petsa"
+    },
+    "calculationModeOptions": "Mga opsyon sa mode ng pagkalkula",
+    "mode": {
+      "difference": "Pagkakaiba",
+      "shift": "Shift"
+    },
+    "operation": "Operasyon",
+    "add": "Idagdag",
+    "subtract": "Bawasan",
+    "years": "Taon",
+    "months": "Mga buwan",
+    "days": "Mga araw",
+    "chooseDate": "Pumili ng petsa",
+    "previousMonth": "Nakaraang buwan",
+    "nextMonth": "Susunod na buwan",
+    "duration": {
+      "year": {
+        "one": "{count} taon",
+        "other": "{count} taon"
+      },
+      "month": {
+        "one": "{count} buwan",
+        "other": "{count} buwan"
+      },
+      "week": {
+        "one": "{count} linggo",
+        "other": "{count} linggo"
+      },
+      "day": {
+        "one": "{count} araw",
+        "other": "{count} araw"
+      }
+    },
+    "history": {
+      "differenceBetween": "Pagkakaiba sa pagitan ng {from} at {to}",
+      "addTo": "Idagdag ang {duration} sa {date}",
+      "subtractFrom": "Ibawas ang {duration} sa {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Tingnan ang naka-highlight na expression",
+    "enterExpression": "Maglagay ng expression",
+    "canvas": "Graph canvas",
+    "stopTracing": "Ihinto ang pagsubaybay",
+    "startTracing": "Simulan ang pagsubaybay",
+    "share": "Ibahagi",
+    "options": "Mga Opsyon",
+    "zoomIn": "Mag-zoom in",
+    "zoomInLabel": "Mag-zoom in",
+    "zoomOut": "Mag-zoom out",
+    "zoomOutLabel": "Mag-zoom out",
+    "refreshViewAutomatically": "Awtomatikong i-refresh ang view",
+    "view": "Tingnan",
+    "expressions": "Mga Expression",
+    "mobileView": "Pagtingin sa mobile",
+    "showGraph": "Ipakita ang graph",
+    "showExpressions": "Ipakita ang mga expression",
+    "backToFunctionList": "Bumalik sa listahan ng function",
+    "window": "Bintana",
+    "resetView": "I-reset ang view",
+    "units": "Mga Yunit",
+    "radians": "Radians",
+    "degrees": "Mga Degree",
+    "gradians": "Mga Gradian",
+    "lineThickness": "Kapal ng linya",
+    "theme": "Tema",
+    "alwaysLight": "Palaging magaan",
+    "matchAppTheme": "Itugma ang tema ng app",
+    "groups": {
+      "inequalities": "Mga hindi pagkakapantay-pantay",
+      "trigonometry": "Trigonometry",
+      "function": "Pag-andar"
+    },
+    "functions": "Mga Pag-andar",
+    "showEquation": "Ipakita ang equation",
+    "hideEquation": "Itago ang equation",
+    "lineOptions": "Mga opsyon sa linya",
+    "color": "Kulay",
+    "style": "Estilo",
+    "analysis": {
+      "title": "Pagsusuri",
+      "domain": "Domain",
+      "range": "Saklaw",
+      "xIntercept": "x-intercept",
+      "yIntercept": "y-intercept",
+      "minima": "Minima",
+      "maxima": "Maxima",
+      "inflectionPoints": "Mga inflection point",
+      "verticalAsymptotes": "Mga patayong asymptote",
+      "horizontalAsymptotes": "Mga pahalang na asymptote",
+      "obliqueAsymptotes": "Oblique asymptotes",
+      "parity": "Pagkakapantay-pantay",
+      "period": "Panahon",
+      "monotonicity": "Monotonicity",
+      "domainNone": "Walang mga paghihigpit sa domain",
+      "rangeNone": "Walang mga paghihigpit sa hanay",
+      "xInterceptNone": "Walang x-intercept",
+      "yInterceptNone": "Walang y-intercept",
+      "minimaNone": "Walang minimum",
+      "maximaNone": "Walang maxima",
+      "inflectionNone": "Walang mga inflection point",
+      "verticalAsymptotesNone": "Walang vertical asymptotes",
+      "horizontalAsymptotesNone": "Walang pahalang na asymptotes",
+      "obliqueAsymptotesNone": "Walang oblique asymptotes",
+      "parityUnknown": "Hindi alam",
+      "parityOdd": "Kakaiba",
+      "parityEven": "Kahit na",
+      "parityNeither": "Hindi rin",
+      "periodicityUnknown": "Hindi alam",
+      "periodicityNotPeriodic": "Hindi pana-panahon",
+      "monotonicityConstant": "Patuloy",
+      "monotonicityIncreasing": "Tumataas",
+      "monotonicityDecreasing": "Bumababa",
+      "monotonicityUnknown": "Hindi alam",
+      "monotonicityError": "Hindi matukoy",
+      "featureTooComplexPlural": "Masyadong kumplikado upang suriin",
+      "analysisCouldNotBePerformed": "Hindi maisagawa ang pagsusuri",
+      "analysisNotSupported": "Hindi suportado ang pagsusuri",
+      "variableIsNotX": "Ang variable ay hindi x"
+    },
+    "plottingExpressions": "Pag-plot ng {count} expression",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Pumili ng expression {index}",
+    "expressionIndex": "Expression {index}",
+    "analyzeFunction": "Pag-aralan ang function",
+    "changeEquationStyle": "Baguhin ang istilo ng equation",
+    "removeEquation": "Alisin ang equation",
+    "lineStyle": {
+      "solid": "Solid na istilo ng linya",
+      "dash": "Estilo ng linya ng gitling",
+      "dot": "Istilo ng tuldok na linya"
+    }
+  },
+  "history": {
+    "empty": "Walang laman ang history",
+    "clearAll": "I-clear lahat",
+    "clear": "I-clear ang history",
+    "title": "Kasaysayan",
+    "andMemory": "Kasaysayan at Memorya",
+    "aria": {
+      "historyPanel": "Panel ng kasaysayan",
+      "historyAndMemoryPanel": "Panel ng History at Memory"
+    },
+    "closeFlyout": "Isara ang kasaysayan",
+    "openFlyout": "Buksan ang kasaysayan"
+  },
+  "memory": {
+    "empty": "Walang laman ang memory",
+    "clearItem": "I-clear ang item",
+    "addCurrentValue": "Magdagdag ng kasalukuyang halaga",
+    "subtractCurrentValue": "Bawasan ang kasalukuyang halaga",
+    "clearAll": "I-clear lahat",
+    "clear": "I-clear ang memory",
+    "title": "Memorya",
+    "controls": "Mga kontrol sa memory",
+    "tooltips": {
+      "clearAll": "I-clear ang lahat ng memorya",
+      "recall": "Pag-alaala mula sa memorya",
+      "add": "Idagdag sa memorya",
+      "subtract": "Magbawas sa memorya",
+      "store": "Imbak sa memorya"
+    },
+    "recallValue": "Recall memory {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Nabigasyon",
+      "closeNavigation": "Isara ang nabigasyon",
+      "openNavigation": "Buksan ang nabigasyon"
+    },
+    "groups": {
+      "calculator": "Calculator",
+      "converter": "Converter"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit flip panel",
+    "baseReadouts": "Base readouts",
+    "surfaceMode": "Surface mode",
+    "fullKeypad": "Buong keypad",
+    "showKeypad": "Ipakita ang keypad",
+    "bitTogglingKeypad": "Bit toggling keypad",
+    "showBitView": "Ipakita ang bit view",
+    "wordSize": "Laki ng salita",
+    "bitwise": "Bitwise",
+    "bitShift": "Bit shift"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometry",
+      "function": "Pag-andar",
+      "functionsAria": "Mga Pag-andar",
+      "trigonometricFunctionsAria": "Mga function na trigonometriko",
+      "angleUnit": "Angle unit {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Hitsura",
+      "themeTitle": "Tema",
+      "themeDescription": "Pumili ng scheme ng kulay",
+      "light": "Ilaw",
+      "dark": "Madilim",
+      "blue": "Asul",
+      "green": "Berde",
+      "system": "System"
+    },
+    "language": {
+      "group": "Wika",
+      "title": "Wika",
+      "description": "Piliin ang iyong gustong wika"
+    },
+    "about": {
+      "group": "Tungkol sa"
+    },
+    "feedback": "Magpadala ng feedback",
+    "contribute": {
+      "prefix": "Mag-ambag sa",
+      "link": "GitHub",
+      "suffix": "upang makatulong na pahusayin ang calculator na ito"
+    },
+    "links": {
+      "repository": "Repository ng proyekto",
+      "readme": "README",
+      "license": "Lisensya ng MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Karaniwan",
+      "subtitle": "Classic na agarang pagsusuri"
+    },
+    "scientific": {
+      "label": "Siyentipiko",
+      "subtitle": "Mga operator, function, at suporta sa expression"
+    },
+    "graphing": {
+      "label": "Pag-graph",
+      "subtitle": "Mag-plot ng simpleng expression sa isang cartesian plane"
+    },
+    "programmer": {
+      "label": "Programmer",
+      "subtitle": "Integer math na may baseng conversion"
+    },
+    "date": {
+      "label": "Pagkalkula ng petsa",
+      "subtitle": "Hanapin ang mga tagal at petsa ng shift"
+    },
+    "currency": {
+      "label": "Pera",
+      "subtitle": "I-convert ang mock exchange rates"
+    },
+    "volume": {
+      "label": "Dami",
+      "subtitle": "I-convert ang mga sukat ng volume"
+    },
+    "length": {
+      "label": "Ang haba",
+      "subtitle": "I-convert ang mga unit ng distansya at haba"
+    },
+    "weight": {
+      "label": "Timbang at Misa",
+      "subtitle": "I-convert ang timbang at mass unit"
+    },
+    "temperature": {
+      "label": "Temperatura",
+      "subtitle": "I-convert ang mga sukat ng temperatura"
+    },
+    "energy": {
+      "label": "Enerhiya",
+      "subtitle": "I-convert ang mga sukat ng enerhiya"
+    },
+    "area": {
+      "label": "Lugar",
+      "subtitle": "I-convert ang mga sukat ng lugar"
+    },
+    "speed": {
+      "label": "Bilis",
+      "subtitle": "I-convert ang mga sukat ng bilis"
+    },
+    "time": {
+      "label": "Oras",
+      "subtitle": "I-convert ang mga sukat ng oras"
+    },
+    "power": {
+      "label": "Lakas",
+      "subtitle": "I-convert ang mga sukat ng kapangyarihan"
+    },
+    "data": {
+      "label": "Data",
+      "subtitle": "I-convert ang mga digital storage unit"
+    },
+    "pressure": {
+      "label": "Presyon",
+      "subtitle": "I-convert ang mga pressure unit"
+    },
+    "angle": {
+      "label": "Anggulo",
+      "subtitle": "I-convert ang mga sukat ng anggulo"
+    },
+    "settings": {
+      "label": "Mga Setting",
+      "subtitle": "Impormasyon ng hitsura at app"
+    }
+  },
+  "categories": {
+    "Currency": "Pera",
+    "Volume": "Dami",
+    "Length": "Ang haba",
+    "Mass": "Misa",
+    "Temperature": "Temperatura",
+    "Energy": "Enerhiya",
+    "Area": "Lugar",
+    "Speed": "Bilis",
+    "Time": "Oras",
+    "Power": "Kapangyarihan",
+    "Data": "Data",
+    "Pressure": "Presyon",
+    "Angle": "Anggulo"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstrom",
+      "Nanometers": "Mga Nanometro",
+      "Microns": "Mga mikron",
+      "Millimeters": "Millimeters",
+      "Centimeters": "Sentimetro",
+      "Meters": "Mga metro",
+      "Kilometers": "Kilometro",
+      "Inches": "Mga pulgada",
+      "Feet": "Paa",
+      "Yards": "Yard",
+      "Miles": "Miles",
+      "Nautical miles": "Nautical miles",
+      "paperclips": "mga paperclip",
+      "hands": "kamay",
+      "jumbo jets": "jumbo jet",
+      "Carats": "Carats",
+      "Milligrams": "Milligrams",
+      "Centigrams": "Centigrams",
+      "Decigrams": "Mga Decigram",
+      "Grams": "Gram",
+      "Dekagrams": "Mga Dekagram",
+      "Hectograms": "Mga Hectogram",
+      "Kilograms": "Mga kilo",
+      "Metric tonnes": "Mga panukat na tonelada",
+      "Ounces": "Onces",
+      "Pounds": "Libra",
+      "Stone": "Bato",
+      "Short tons (US)": "Maikling tonelada (US)",
+      "Long tons (UK)": "Mahahabang tonelada (UK)",
+      "snowflakes": "mga snowflake",
+      "soccer balls": "mga bola ng soccer",
+      "elephants": "mga elepante",
+      "whales": "mga balyena",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mililitro",
+      "Cubic centimeters": "Cubic centimeters",
+      "Liters": "Liter",
+      "Cubic meters": "Mga metro kubiko",
+      "Teaspoons (US)": "Mga Kutsarita (US)",
+      "Tablespoons (US)": "Mga Kutsara (US)",
+      "Fluid ounces (US)": "Fluid ounces (US)",
+      "Cups (US)": "Mga Cup (US)",
+      "Pints (US)": "Pint (US)",
+      "Quarts (US)": "Quarts (US)",
+      "Gallons (US)": "Mga galon (US)",
+      "Cubic inches": "Kubiko pulgada",
+      "Cubic feet": "Kubiko talampakan",
+      "Cubic yards": "Cubic yarda",
+      "Teaspoons (UK)": "Mga Kutsarita (UK)",
+      "Tablespoons (UK)": "Mga Kutsara (UK)",
+      "Fluid ounces (UK)": "Fluid ounces (UK)",
+      "Pints (UK)": "Pint (UK)",
+      "Quarts (UK)": "Quarts (UK)",
+      "Gallons (UK)": "Mga galon (UK)",
+      "coffee cups": "mga tasa ng kape",
+      "bathtubs": "mga bathtub",
+      "swimming pools": "mga swimming pool",
+      "Square millimeters": "Square millimeters",
+      "Square centimeters": "Square centimeters",
+      "Square meters": "Square meters",
+      "Hectares": "Ektarya",
+      "Square kilometers": "Square kilometers",
+      "Square inches": "Square inches",
+      "Square feet": "Square feet",
+      "Square yards": "Square yards",
+      "Acres": "Ektarya",
+      "Square miles": "Square miles",
+      "sheets of paper": "mga sheet ng papel",
+      "soccer fields": "mga field ng soccer",
+      "castles": "mga kastilyo",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Sentimetro bawat segundo",
+      "Meters per second": "Mga metro bawat segundo",
+      "Kilometers per hour": "Kilometro bawat oras",
+      "Feet per second": "Feet bawat segundo",
+      "Miles per hour": "Mile bawat oras",
+      "Knots": "Mga buhol",
+      "Mach": "Mach",
+      "turtles": "mga pagong",
+      "horses": "mga kabayo",
+      "jets": "mga jet",
+      "Watts": "Watts",
+      "Kilowatts": "Kilowatts",
+      "Horsepower (US)": "Horsepower (US)",
+      "Foot-pounds/minute": "Foot-pounds/minuto",
+      "BTUs/minute": "BTUs/minuto",
+      "light bulbs": "mga bumbilya",
+      "train engines": "mga makina ng tren",
+      "Thermal calories": "Thermal calories",
+      "Food calories": "Mga calorie ng pagkain",
+      "British thermal units": "British thermal unit",
+      "Kilojoules": "Kilojoules",
+      "Kilowatt-hours": "Kilowatt-hours",
+      "Electron volts": "Electron volts",
+      "Joules": "Mga Joule",
+      "Foot-pounds": "Foot-pounds",
+      "batteries": "baterya",
+      "bananas": "saging",
+      "slices of cake": "mga hiwa ng cake",
+      "Bits": "Mga bit",
+      "Nibble": "Kumakagat",
+      "Bytes": "Byte",
+      "Kilobits": "Kilobit",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "Kilobytes",
+      "Kibibytes": "Kibibytes",
+      "Megabits": "Megabits",
+      "Mebibits": "Mebibits",
+      "Megabytes": "Megabytes",
+      "Mebibytes": "Mebibytes",
+      "Gigabits": "Gigabits",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Gigabytes",
+      "Gibibytes": "Gibibytes",
+      "Terabits": "Terbits",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabytes",
+      "Tebibytes": "Tebibytes",
+      "Petabits": "Petabis",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabytes",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Mga Exabit",
+      "Exbibits": "Mga Exbibit",
+      "Exabytes": "Exabytes",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Mga Zetabit",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabytes",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabytes",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "mga floppy disk",
+      "CDs": "Mga CD",
+      "DVDs": "Mga DVD",
+      "Atmospheres": "Mga Atmosphere",
+      "Bars": "Mga Bar",
+      "Kilopascals": "Mga Kilopascal",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Libra bawat square inch",
+      "Degrees": "Mga Degree",
+      "Radians": "Radians",
+      "Gradians": "Mga Gradian",
+      "Microseconds": "Microseconds",
+      "Milliseconds": "Millisecond",
+      "Seconds": "Mga segundo",
+      "Minutes": "Mga minuto",
+      "Hours": "Oras",
+      "Days": "Mga araw",
+      "Weeks": "Linggo",
+      "Years": "Taon",
+      "Millimeters of mercury": "Millimeters of mercury"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "US Dollar",
+      "Euro": "Euro",
+      "British Pound": "British Pound",
+      "Japanese Yen": "Japanese Yen",
+      "Canadian Dollar": "Canadian Dollar",
+      "Australian Dollar": "Australian Dollar",
+      "Brazilian Real": "Brazilian Real",
+      "Chilean Peso": "Chilean Peso",
+      "Chinese Yuan": "Chinese Yuan",
+      "Colombian Peso": "Piso ng Colombia",
+      "Danish Krone": "Danish Krone",
+      "Egyptian Pound": "Egyptian Pound",
+      "Hong Kong Dollar": "Hong Kong Dollar",
+      "Indian Rupee": "Indian Rupee",
+      "Kenyan Shilling": "Kenyan Shilling",
+      "Mexican Peso": "Mexican Peso",
+      "Nigerian Naira": "Nigerian Naira",
+      "New Zealand Dollar": "New Zealand Dollar",
+      "Norwegian Krone": "Norwegian Krone",
+      "Philippine Piso": "Philippine Piso",
+      "Polish Zloty": "Polish na Zloty",
+      "Qatari Riyal": "Qatari Riyal",
+      "Saudi Riyal": "Saudi Riyal",
+      "Singapore Dollar": "Singapore Dollar",
+      "South African Rand": "South African Rand",
+      "South Korean Won": "South Korean Won",
+      "Swedish Krona": "Swedish Krona",
+      "Swiss Franc": "Swiss Franc",
+      "Thai Baht": "Thai Baht",
+      "Turkish Lira": "Turkish Lira",
+      "Turkmenistani Manat": "Turkmenistani Manat",
+      "Ugandan Shilling": "Ugandan Shilling",
+      "Ukrainian Hryvnia": "Ukrainian Hryvnia",
+      "UAE Dirham": "UAE Dirham",
+      "Uruguayan Peso": "Uruguayan Peso",
+      "Uzbekistani Som": "Uzbekistani Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuelan Bolívar Soberano",
+      "Vietnamese Dong": "Vietnamese Dong",
+      "Yemeni Rial": "Yemeni Rial"
+    },
+    "labels": {
+      "United States - Dollar": "Estados Unidos - Dolyar",
+      "Europe - Euro": "Europa - Euro",
+      "United Kingdom - Pound": "United Kingdom - Pound",
+      "Japan - Yen": "Japan - Yen",
+      "Canada - Dollar": "Canada - Dolyar",
+      "Australia - Dollar": "Australia - Dollar",
+      "Brazil - Real": "Brazil - Real",
+      "Chile - Peso": "Chile - Peso",
+      "China - Yuan Renminbi": "China - Yuan Renminbi",
+      "Colombia - Peso": "Colombia - Peso",
+      "Denmark - Krone": "Denmark - Krone",
+      "Egypt - Pound": "Egypt - Pound",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Dollar",
+      "India - Rupee": "India - Rupee",
+      "Kenya - Shilling": "Kenya - Shilling",
+      "Mexico - Peso": "Mexico - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "New Zealand - Dollar",
+      "Norway - Krone": "Norway - Krone",
+      "Philippines - Piso": "Pilipinas - Piso",
+      "Poland - Zloty": "Poland - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Saudi Arabia - Riyal",
+      "Singapore - Dollar": "Singapore - Dollar",
+      "South Africa - Rand": "South Africa - Rand",
+      "South Korea - Won": "South Korea - Nanalo",
+      "Sweden - Krona": "Sweden - Krona",
+      "Switzerland - Franc": "Switzerland - Franc",
+      "Thailand - Baht": "Thailand - Baht",
+      "Turkey - Lira": "Turkey - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Shilling",
+      "Ukraine - Hryvnia": "Ukraine - Hryvnia",
+      "United Arab Emirates - Dirham": "United Arab Emirates - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Uzbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemen - Rial"
+    }
+  }
+}

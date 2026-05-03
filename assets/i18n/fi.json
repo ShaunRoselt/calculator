@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Laskin",
+    "name": "Laskin"
+  },
+  "common": {
+    "back": "Takaisin",
+    "backspace": "Askelpalautin",
+    "closeSidePanel": "Sulje paneeli"
+  },
+  "converter": {
+    "unitConverter": "Yksikkömuunnin",
+    "title": "Yksikkömuuntimet",
+    "builtInCollections": "Sisäänrakennetut kokoelmat",
+    "category": "Luokka",
+    "from": "Lähettäjä",
+    "to": "Vastaanottaja",
+    "inputValue": "Muunnettava arvo",
+    "convertedValue": "Konvertoitu arvo",
+    "swapUnits": "Vaihda yksiköitä",
+    "keypad": "Muuntimen näppäimistö",
+    "unit": "yksikkö",
+    "unitOptions": "yksikkövaihtoehdot",
+    "currency": {
+      "updatingRates": "Päivitetään hintoja…",
+      "updateRates": "Päivitä hinnat",
+      "keypad": "Valuuttanäppäimistö",
+      "currency": "valuutta",
+      "options": "valuuttavaihtoehdot",
+      "updated": "Päivitetty {timestamp}",
+      "status": {
+        "mockNote": "Illitetyt viitehinnat erilliselle sovelluksen esittelylle.",
+        "fetching": "Noudetaan viimeisimmät USD-viitekurssit...",
+        "liveRatesLoaded": "ExchangeRate-API:sta ladatut reaaliaikaiset hinnat.",
+        "liveUpdateUnavailable": "Live päivitys ei ole saatavilla. Päivitetyt demohinnat paikallisesti."
+      }
+    },
+    "aboutEqualTo": "Suurin verran"
+  },
+  "errors": {
+    "invalidInput": "Virheellinen syöte",
+    "cannotDivideByZero": "Ei voi jakaa nollalla",
+    "cannotModuloByZero": "Ei voi moduloi nollalla",
+    "invalidProgrammerOperation": "Virheellinen toiminto",
+    "overflow": "Tulos liian suuri"
+  },
+  "date": {
+    "calculationMode": "Laskentatila",
+    "from": "Alkaen",
+    "to": "Vastaanottaja",
+    "results": {
+      "difference": "Ero",
+      "sameDates": "Samat päivämäärät",
+      "date": "Päivämäärä"
+    },
+    "calculationModeOptions": "Laskentatilan asetukset",
+    "mode": {
+      "difference": "Ero",
+      "shift": "Vaihto"
+    },
+    "operation": "Toiminta",
+    "add": "Lisää",
+    "subtract": "Vähennä",
+    "years": "Vuotta",
+    "months": "Kuukaudet",
+    "days": "Päiviä",
+    "chooseDate": "Valitse päivämäärä",
+    "previousMonth": "Edellinen kuukausi",
+    "nextMonth": "Ensi kuussa",
+    "duration": {
+      "year": {
+        "one": "{count} vuosi",
+        "other": "{count} vuotta"
+      },
+      "month": {
+        "one": "{count} kuukausi",
+        "other": "{count} kuukautta"
+      },
+      "week": {
+        "one": "{count} viikko",
+        "other": "{count} viikkoa"
+      },
+      "day": {
+        "one": "{count} päivä",
+        "other": "{count} päivää"
+      }
+    },
+    "history": {
+      "differenceBetween": "Ero kohteiden {from} ja {to} välillä",
+      "addTo": "Lisää {duration} kohteeseen {date}",
+      "subtractFrom": "Vähennä {duration} arvosta {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Tarkista korostettu lauseke",
+    "enterExpression": "Anna lauseke",
+    "canvas": "Kaaviopohja",
+    "stopTracing": "Lopeta jäljitys",
+    "startTracing": "Aloita jäljitys",
+    "share": "Jaa",
+    "options": "Vaihtoehdot",
+    "zoomIn": "Lähennä",
+    "zoomInLabel": "Lähennä",
+    "zoomOut": "Loitonna",
+    "zoomOutLabel": "Loitonna",
+    "refreshViewAutomatically": "Päivitä näkymä automaattisesti",
+    "view": "Näytä",
+    "expressions": "lausekkeet",
+    "mobileView": "Mobiilinäkymä",
+    "showGraph": "Näytä kaavio",
+    "showExpressions": "Näytä lausekkeet",
+    "backToFunctionList": "Takaisin toimintoluetteloon",
+    "window": "Ikkuna",
+    "resetView": "Palauta näkymä",
+    "units": "Yksikkö",
+    "radians": "Radiaanit",
+    "degrees": "Astetta",
+    "gradians": "Gradiaanit",
+    "lineThickness": "Viivan paksuus",
+    "theme": "Teema",
+    "alwaysLight": "Aina kevyt",
+    "matchAppTheme": "Yhdistä sovelluksen teema",
+    "groups": {
+      "inequalities": "Epätasa-arvo",
+      "trigonometry": "Trigonometria",
+      "function": "Toiminto"
+    },
+    "functions": "Toiminnot",
+    "showEquation": "Näytä yhtälö",
+    "hideEquation": "Piilota yhtälö",
+    "lineOptions": "Rivivaihtoehdot",
+    "color": "Väri",
+    "style": "Tyyli",
+    "analysis": {
+      "title": "Analyysi",
+      "domain": "Verkkotunnus",
+      "range": "Ala",
+      "xIntercept": "x-leikkaus",
+      "yIntercept": "y-leikkaus",
+      "minima": "Minimi",
+      "maxima": "Maksimi",
+      "inflectionPoints": "Käännepisteet",
+      "verticalAsymptotes": "Pystysuuntaiset asymptootit",
+      "horizontalAsymptotes": "Vaaka-asymptootit",
+      "obliqueAsymptotes": "Viistot asymptootit",
+      "parity": "Pariteetti",
+      "period": "Kausi",
+      "monotonicity": "Monotonisuus",
+      "domainNone": "Ei verkkotunnuksen rajoituksia",
+      "rangeNone": "Ei aluerajoituksia",
+      "xInterceptNone": "Ei x-sieppauksia",
+      "yInterceptNone": "Ei y-leikkauksia",
+      "minimaNone": "Ei minimiä",
+      "maximaNone": "Ei maksimiarvoja",
+      "inflectionNone": "Ei käännepisteitä",
+      "verticalAsymptotesNone": "Ei pystyasymptootteja",
+      "horizontalAsymptotesNone": "Ei vaakasuuntaisia asymptootteja",
+      "obliqueAsymptotesNone": "Ei vinoja asymptootteja",
+      "parityUnknown": "Tuntematon",
+      "parityOdd": "Outonta",
+      "parityEven": "Vapaa",
+      "parityNeither": "Ei kumpaakaan",
+      "periodicityUnknown": "Tuntematon",
+      "periodicityNotPeriodic": "Ei määräajoin",
+      "monotonicityConstant": "Vakio",
+      "monotonicityIncreasing": "Kasvava",
+      "monotonicityDecreasing": "Päivä",
+      "monotonicityUnknown": "Tuntematon",
+      "monotonicityError": "Ei voi määrittää",
+      "featureTooComplexPlural": "Liian monimutkainen analysoitavaksi",
+      "analysisCouldNotBePerformed": "Analyysiä ei voitu suorittaa",
+      "analysisNotSupported": "Analyysiä ei tueta",
+      "variableIsNotX": "Muuttuja ei ole x"
+    },
+    "plottingExpressions": "Piirrä {count} lausekkeita",
+    "xMin": "X-min",
+    "xMax": "X-Max",
+    "yMin": "Y-min",
+    "yMax": "Y-Max",
+    "selectExpression": "Valitse lauseke {index}",
+    "expressionIndex": "Lauseke {index}",
+    "analyzeFunction": "Analysoi toiminto",
+    "changeEquationStyle": "Muuta yhtälön tyyliä",
+    "removeEquation": "Poista yhtälö",
+    "lineStyle": {
+      "solid": "Yksiviivainen tyyli",
+      "dash": "Katkoviivatyyli",
+      "dot": "Pisteviivatyyli"
+    }
+  },
+  "history": {
+    "empty": "Historia on tyhjä",
+    "clearAll": "Tyhjennä kaikki",
+    "clear": "Tyhjennä historia",
+    "title": "Historia",
+    "andMemory": "Historia ja muisti",
+    "aria": {
+      "historyPanel": "Historia-paneeli",
+      "historyAndMemoryPanel": "Historia ja muisti -paneeli"
+    },
+    "closeFlyout": "Sulje historia",
+    "openFlyout": "Avaa historia"
+  },
+  "memory": {
+    "empty": "Muisti on tyhjä",
+    "clearItem": "Tyhjennä kohde",
+    "addCurrentValue": "Lisää nykyinen arvo",
+    "subtractCurrentValue": "Vähennä nykyinen arvo",
+    "clearAll": "Tyhjennä kaikki",
+    "clear": "Tyhjennä muisti",
+    "title": "Muisti",
+    "controls": "Muistin säätimet",
+    "tooltips": {
+      "clearAll": "Tyhjennä kaikki muisti",
+      "recall": "Muista muistista",
+      "add": "Lisää muistiin",
+      "subtract": "Vähennä muistista",
+      "store": "Tallenna muistiin"
+    },
+    "recallValue": "Poista muisti {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigointi",
+      "closeNavigation": "Sulje navigointi",
+      "openNavigation": "Avaa navigointi"
+    },
+    "groups": {
+      "calculator": "Laskin",
+      "converter": "Muunnin"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bittinen kääntöpaneeli",
+    "baseReadouts": "Peruslukemat",
+    "surfaceMode": "Pintatila",
+    "fullKeypad": "Täysi näppäimistö",
+    "showKeypad": "Näytä näppäimistö",
+    "bitTogglingKeypad": "Bittinen vaihtonäppäimistö",
+    "showBitView": "Näytä bittinäkymä",
+    "wordSize": "Sanan koko",
+    "bitwise": "Bittisesti",
+    "bitShift": "Bittisiirtymä"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometria",
+      "function": "Toiminto",
+      "functionsAria": "Toiminnot",
+      "trigonometricFunctionsAria": "Trigonometriset funktiot",
+      "angleUnit": "Kulman yksikkö {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Ulkonäkö",
+      "themeTitle": "Teema",
+      "themeDescription": "Valitse väriteema",
+      "light": "Kevyt",
+      "dark": "Pimeä",
+      "blue": "Sininen",
+      "green": "Vihreä",
+      "system": "Järjestelmä"
+    },
+    "language": {
+      "group": "Kieli",
+      "title": "Kieli",
+      "description": "Valitse haluamasi kieli"
+    },
+    "about": {
+      "group": "Tietoja"
+    },
+    "feedback": "Lähetä palautetta",
+    "contribute": {
+      "prefix": "Osallistu",
+      "link": "GitHub",
+      "suffix": "auttaaksesi parantamaan tätä laskinta"
+    },
+    "links": {
+      "repository": "Projektin arkisto",
+      "readme": "LUE",
+      "license": "MIT-lisenssi"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Vakio",
+      "subtitle": "Klassinen välitön arviointi"
+    },
+    "scientific": {
+      "label": "Tieteellinen",
+      "subtitle": "Operaattorit, funktiot ja ilmaisutuki"
+    },
+    "graphing": {
+      "label": "Kaavio",
+      "subtitle": "Piirrä yksinkertainen lauseke suorakulmaiselle tasolle"
+    },
+    "programmer": {
+      "label": "Ohjelmoija",
+      "subtitle": "Matematiikan kokonaisluku perusmuunnoksen kanssa"
+    },
+    "date": {
+      "label": "Päivämäärälaskenta",
+      "subtitle": "Etsi kestot ja työpäivät"
+    },
+    "currency": {
+      "label": "Valuutta",
+      "subtitle": "Muunna valevaihtokurssit"
+    },
+    "volume": {
+      "label": "Äänenvoimakkuus",
+      "subtitle": "Muunna äänenvoimakkuuden mittaukset"
+    },
+    "length": {
+      "label": "Pituus",
+      "subtitle": "Muunna etäisyys- ja pituusyksiköt"
+    },
+    "weight": {
+      "label": "Paino ja massa",
+      "subtitle": "Muunna paino- ja massayksiköt"
+    },
+    "temperature": {
+      "label": "Lämpötila",
+      "subtitle": "Muunna lämpötila-asteikot"
+    },
+    "energy": {
+      "label": "Energia",
+      "subtitle": "Muunna energiamittaukset"
+    },
+    "area": {
+      "label": "Alue",
+      "subtitle": "Muunna pinta-alan mitat"
+    },
+    "speed": {
+      "label": "Nopeus",
+      "subtitle": "Muunna nopeusmittaukset"
+    },
+    "time": {
+      "label": "Aika",
+      "subtitle": "Muunna aikamittaukset"
+    },
+    "power": {
+      "label": "Voima",
+      "subtitle": "Muunna tehomittaukset"
+    },
+    "data": {
+      "label": "Data",
+      "subtitle": "Muunna digitaaliset tallennusyksiköt"
+    },
+    "pressure": {
+      "label": "Paine",
+      "subtitle": "Muunna paineyksiköt"
+    },
+    "angle": {
+      "label": "Kulma",
+      "subtitle": "Muunna kulmamittaukset"
+    },
+    "settings": {
+      "label": "Asetukset",
+      "subtitle": "Ulkoasu ja sovellustiedot"
+    }
+  },
+  "categories": {
+    "Currency": "Valuutta",
+    "Volume": "Äänenvoimakkuus",
+    "Length": "Pituus",
+    "Mass": "Messu",
+    "Temperature": "Lämpötila",
+    "Energy": "Energia",
+    "Area": "Alue",
+    "Speed": "Nopeus",
+    "Time": "Aika",
+    "Power": "Voima",
+    "Data": "Data",
+    "Pressure": "Paine",
+    "Angle": "Kulma"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angströmit",
+      "Nanometers": "Nanometrit",
+      "Microns": "Mikronia",
+      "Millimeters": "Millimetriä",
+      "Centimeters": "senttiä",
+      "Meters": "Metriä",
+      "Kilometers": "Kilometrejä",
+      "Inches": "Tuumaa",
+      "Feet": "Jalat",
+      "Yards": "Telakoita",
+      "Miles": "Mailia",
+      "Nautical miles": "Merimailia",
+      "paperclips": "paperiliittimiä",
+      "hands": "kädet",
+      "jumbo jets": "jumbosuihkukoneet",
+      "Carats": "Karaattia",
+      "Milligrams": "Milligrammaa",
+      "Centigrams": "Senttigrammaa",
+      "Decigrams": "Desigrammaa",
+      "Grams": "Grammaa",
+      "Dekagrams": "Dekagrammit",
+      "Hectograms": "Hektogrammit",
+      "Kilograms": "Kiloa",
+      "Metric tonnes": "Tonnia",
+      "Ounces": "Unssia",
+      "Pounds": "Punaa",
+      "Stone": "Kivi",
+      "Short tons (US)": "Lyhyt tonnit (USA)",
+      "Long tons (UK)": "Pitkiä tonneja (Iso-Britannia)",
+      "snowflakes": "lumihiutaleet",
+      "soccer balls": "jalkapallot",
+      "elephants": "norsuja",
+      "whales": "valaat",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Millilitraa",
+      "Cubic centimeters": "Kuusiosenttimetriä",
+      "Liters": "Litraa",
+      "Cubic meters": "Kuutiometriä",
+      "Teaspoons (US)": "Telusikallista (USA)",
+      "Tablespoons (US)": "Ruulikalusikallinen (USA)",
+      "Fluid ounces (US)": "Neste unssia (USA)",
+      "Cups (US)": "Kupit (USA)",
+      "Pints (US)": "Pints (USA)",
+      "Quarts (US)": "Quarts (USA)",
+      "Gallons (US)": "Gallonaa (USA)",
+      "Cubic inches": "Kuutiometriä",
+      "Cubic feet": "Kuuijalkaa",
+      "Cubic yards": "Kuutiojaardia",
+      "Teaspoons (UK)": "Telusikallista (Iso-Britannia)",
+      "Tablespoons (UK)": "Ruulikalusikallinen (Iso-Britannia)",
+      "Fluid ounces (UK)": "Neste unssia (Iso-Britannia)",
+      "Pints (UK)": "Pints (Iso-Britannia)",
+      "Quarts (UK)": "Quarts (Iso-Britannia)",
+      "Gallons (UK)": "Gallonaa (Iso-Britannia)",
+      "coffee cups": "kahvikupit",
+      "bathtubs": "kylpyamme",
+      "swimming pools": "uima-altaat",
+      "Square millimeters": "Neliömillimetriä",
+      "Square centimeters": "Neliösenttimetriä",
+      "Square meters": "Neliömetriä",
+      "Hectares": "Hehtaaria",
+      "Square kilometers": "Neliökilometriä",
+      "Square inches": "Neliötuumaa",
+      "Square feet": "Neliöjalkaa",
+      "Square yards": "Neliöjaardia",
+      "Acres": "Eekkeriä",
+      "Square miles": "Neliömailia",
+      "sheets of paper": "paperiarkkia",
+      "soccer fields": "jalkapallokentät",
+      "castles": "linnat",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Senttimetriä sekunnissa",
+      "Meters per second": "Metriä sekunnissa",
+      "Kilometers per hour": "Kilometriä tunnissa",
+      "Feet per second": "Jalkaa sekunnissa",
+      "Miles per hour": "Mailia tunnissa",
+      "Knots": "Solmua",
+      "Mach": "Mach",
+      "turtles": "kilpikonnat",
+      "horses": "hevosia",
+      "jets": "suihkukoneet",
+      "Watts": "W",
+      "Kilowatts": "Kilowattia",
+      "Horsepower (US)": "Hevosvoimat (USA)",
+      "Foot-pounds/minute": "Paunaa minuutissa",
+      "BTUs/minute": "BTU/min",
+      "light bulbs": "lamput",
+      "train engines": "junan moottorit",
+      "Thermal calories": "Lämpökalorit",
+      "Food calories": "Ruoan kalorit",
+      "British thermal units": "Brittiläiset lämpöyksiköt",
+      "Kilojoules": "Kilojoulea",
+      "Kilowatt-hours": "Kilowattituntia",
+      "Electron volts": "Elektronivoltit",
+      "Joules": "Joulea",
+      "Foot-pounds": "Puntaa",
+      "batteries": "akut",
+      "bananas": "banaanit",
+      "slices of cake": "viipaleet kakkua",
+      "Bits": "Bittejä",
+      "Nibble": "Nibble",
+      "Bytes": "tavua",
+      "Kilobits": "Kilobittiä",
+      "Kibibits": "Kibibitit",
+      "Kilobytes": "Kilotavua",
+      "Kibibytes": "Kibitavua",
+      "Megabits": "Megabittiä",
+      "Mebibits": "Mebibittiä",
+      "Megabytes": "Megatavua",
+      "Mebibytes": "Mebitavua",
+      "Gigabits": "Gigabittiä",
+      "Gibibits": "Gibibittiä",
+      "Gigabytes": "Gigatavua",
+      "Gibibytes": "Gibitavua",
+      "Terabits": "Terabittiä",
+      "Tebibits": "Tebibittiä",
+      "Terabytes": "Teratavua",
+      "Tebibytes": "Tebitavua",
+      "Petabits": "Petabittiä",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petatavua",
+      "Pebibytes": "Pebitavua",
+      "Exabits": "Exabits",
+      "Exbibits": "Näytökset",
+      "Exabytes": "Exabytes",
+      "Exbibytes": "Exbitavua",
+      "Zetabits": "Zetabitit",
+      "Zebibits": "Seebibitit",
+      "Zetabytes": "Zettavua",
+      "Zebibytes": "Seebitavua",
+      "Yottabits": "Yottabitit",
+      "Yobibits": "Yobibitit",
+      "Yottabytes": "Yottatavua",
+      "Yobibytes": "Yobitavuja",
+      "floppy disks": "levykkeitä",
+      "CDs": "CD-levyt",
+      "DVDs": "DVD:t",
+      "Atmospheres": "Tunnelmat",
+      "Bars": "Baarit",
+      "Kilopascals": "Kilopascalia",
+      "Millimeters of mercury": "Millimetrejä elohopeaa",
+      "Pascals": "Pascalia",
+      "Pounds per square inch": "Punaa neliötuumaa kohti",
+      "Degrees": "Astetta",
+      "Radians": "Radiaanit",
+      "Gradians": "Gradiaanit",
+      "Microseconds": "Mikrosekuntia",
+      "Milliseconds": "Millisekuntia",
+      "Seconds": "Sekuntia",
+      "Minutes": "Minuuttia",
+      "Hours": "Aukioloajat",
+      "Days": "Päiviä",
+      "Weeks": "Viikkoja",
+      "Years": "Vuotta"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Yhdysvaltain dollari",
+      "Euro": "euroa",
+      "British Pound": "Ison-Britannian punta",
+      "Japanese Yen": "Japanin jeni",
+      "Canadian Dollar": "Kanadan dollari",
+      "Australian Dollar": "Australian dollari",
+      "Brazilian Real": "Brasilian real",
+      "Chilean Peso": "Chilen peso",
+      "Chinese Yuan": "Kiinan yuania",
+      "Colombian Peso": "Kolumbian peso",
+      "Danish Krone": "Tanskan kruunu",
+      "Egyptian Pound": "Egyptin punta",
+      "Hong Kong Dollar": "Hongkongin dollari",
+      "Indian Rupee": "Intian rupia",
+      "Kenyan Shilling": "Kenian šillinki",
+      "Mexican Peso": "Meksikon peso",
+      "Nigerian Naira": "Nigerialainen Naira",
+      "New Zealand Dollar": "Uuden-Seelannin dollari",
+      "Norwegian Krone": "Norjan kruunu",
+      "Philippine Piso": "Filippiinien Piso",
+      "Polish Zloty": "Puolan zloty",
+      "Qatari Riyal": "Qatarin rialit",
+      "Saudi Riyal": "Saudi Rial",
+      "Singapore Dollar": "Singaporin dollari",
+      "South African Rand": "Etelä-Afrikan rand",
+      "South Korean Won": "Etelä-Korean won",
+      "Swedish Krona": "Ruotsin kruunu",
+      "Swiss Franc": "Sveitsin frangi",
+      "Thai Baht": "Thai-bahti",
+      "Turkish Lira": "Turkin liira",
+      "Turkmenistani Manat": "Turkmenistani Manat",
+      "Ugandan Shilling": "Ugandan šillinki",
+      "Ukrainian Hryvnia": "Ukrainan hryvnia",
+      "UAE Dirham": "UAE dirham",
+      "Uruguayan Peso": "Uruguayn peso",
+      "Uzbekistani Som": "Uzbekistan Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuelalainen Bolívar Soberano",
+      "Vietnamese Dong": "Vietnamilainen Dong",
+      "Yemeni Rial": "Jemenin rial"
+    },
+    "labels": {
+      "United States - Dollar": "Yhdysvallat – dollari",
+      "Europe - Euro": "Eurooppa – euroa",
+      "United Kingdom - Pound": "Iso-Britannia – punta",
+      "Japan - Yen": "Japani – jeni",
+      "Canada - Dollar": "Kanada – dollari",
+      "Australia - Dollar": "Australia - dollari",
+      "Brazil - Real": "Brasilia – Real",
+      "Chile - Peso": "Chile – peso",
+      "China - Yuan Renminbi": "Kiina – Yuan Renminbi",
+      "Colombia - Peso": "Kolumbia – peso",
+      "Denmark - Krone": "Tanska - Krone",
+      "Egypt - Pound": "Egypti – Englannin punta",
+      "Hong Kong SAR - Dollar": "Hongkongin erityishallintoalue - dollari",
+      "India - Rupee": "Intia – rupia",
+      "Kenya - Shilling": "Kenia - šillinki",
+      "Mexico - Peso": "Meksiko – peso",
+      "Nigeria - Naira": "Nigeria – Naira",
+      "New Zealand - Dollar": "Uusi-Seelanti - dollari",
+      "Norway - Krone": "Norja – kruunu",
+      "Philippines - Piso": "Filippiinit - Piso",
+      "Poland - Zloty": "Puola – zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Saudi-Arabia – Rial",
+      "Singapore - Dollar": "Singapore – dollari",
+      "South Africa - Rand": "Etelä-Afrikka – Rand",
+      "South Korea - Won": "Etelä-Korea – voitto",
+      "Sweden - Krona": "Ruotsi - kruunu",
+      "Switzerland - Franc": "Sveitsi - frangi",
+      "Thailand - Baht": "Thaimaa - bahti",
+      "Turkey - Lira": "Turkki – liira",
+      "Turkmenistan - Manat": "Turkmenistan – Manat",
+      "Uganda - Shilling": "Uganda – šillinki",
+      "Ukraine - Hryvnia": "Ukraina – hryvnia",
+      "United Arab Emirates - Dirham": "Yhdistyneet arabiemiirikunnat – dirham",
+      "Uruguay - Peso": "Uruguay – peso",
+      "Uzbekistan - Som": "Uzbekistan – Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela – Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam – Dong",
+      "Yemen - Rial": "Jemen – Rial"
+    }
+  }
+}

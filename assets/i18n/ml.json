@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "കാൽക്കുലേറ്റർ",
+    "name": "കാൽക്കുലേറ്റർ"
+  },
+  "common": {
+    "back": "തിരികെ",
+    "backspace": "ബാക്ക്‌സ്‌പേസ്",
+    "closeSidePanel": "പാനൽ അടയ്ക്കുക"
+  },
+  "converter": {
+    "unitConverter": "യൂണിറ്റ് കൺവെർട്ടർ",
+    "title": "യൂണിറ്റ് കൺവെർട്ടറുകൾ",
+    "builtInCollections": "ബിൽറ്റ്-ഇൻ ശേഖരങ്ങൾ",
+    "category": "വിഭാഗം",
+    "from": "നിന്ന്",
+    "to": "ലേക്ക്",
+    "inputValue": "പരിവർത്തനം ചെയ്യാനുള്ള മൂല്യം",
+    "convertedValue": "പരിവർത്തിച്ച മൂല്യം",
+    "swapUnits": "സ്വാപ്പ് യൂണിറ്റുകൾ",
+    "keypad": "കൺവെർട്ടർ കീപാഡ്",
+    "unit": "യൂണിറ്റ്",
+    "unitOptions": "യൂണിറ്റ് ഓപ്ഷനുകൾ",
+    "currency": {
+      "updatingRates": "നിരക്കുകൾ അപ്‌ഡേറ്റ് ചെയ്യുന്നു…",
+      "updateRates": "നിരക്കുകൾ അപ്‌ഡേറ്റ് ചെയ്യുക",
+      "keypad": "കറൻസി കീപാഡ്",
+      "currency": "കറൻസി",
+      "options": "കറൻസി ഓപ്ഷനുകൾ",
+      "updated": "അപ്‌ഡേറ്റ് ചെയ്‌തു {timestamp}",
+      "status": {
+        "mockNote": "സ്‌റ്റാൻഡ്‌ലോൺ ആപ്പ് ഡെമോയ്‌ക്കുള്ള മോക്ക് റഫറൻസ് നിരക്കുകൾ.",
+        "fetching": "ഏറ്റവും പുതിയ USD റഫറൻസ് നിരക്കുകൾ ലഭ്യമാക്കുന്നു...",
+        "liveRatesLoaded": "എക്സ്ചേഞ്ച് റേറ്റ്-എപിഐയിൽ നിന്ന് തത്സമയ നിരക്കുകൾ ലോഡ് ചെയ്തു.",
+        "liveUpdateUnavailable": "തത്സമയ അപ്‌ഡേറ്റ് ലഭ്യമല്ല. പ്രാദേശികമായി പുതുക്കിയ ഡെമോ നിരക്കുകൾ."
+      }
+    },
+    "aboutEqualTo": "ഏകദേശം തുല്യം"
+  },
+  "errors": {
+    "invalidInput": "അസാധുവായ ഇൻപുട്ട്",
+    "cannotDivideByZero": "പൂജ്യം കൊണ്ട് ഹരിക്കാനാവില്ല",
+    "cannotModuloByZero": "പൂജ്യം കൊണ്ട് മോഡുലോ ചെയ്യാൻ കഴിയില്ല",
+    "invalidProgrammerOperation": "അസാധുവായ പ്രവർത്തനം",
+    "overflow": "ഫലം വളരെ വലുതാണ്"
+  },
+  "date": {
+    "calculationMode": "കണക്കുകൂട്ടൽ മോഡ്",
+    "from": "നിന്ന്",
+    "to": "ലേക്ക്",
+    "results": {
+      "difference": "വ്യത്യാസം",
+      "sameDates": "ഒരേ തീയതികൾ",
+      "date": "തീയതി"
+    },
+    "calculationModeOptions": "കണക്കുകൂട്ടൽ മോഡ് ഓപ്ഷനുകൾ",
+    "mode": {
+      "difference": "വ്യത്യാസം",
+      "shift": "ഷിഫ്റ്റ്"
+    },
+    "operation": "ഓപ്പറേഷൻ",
+    "add": "ചേർക്കുക",
+    "subtract": "കുറയ്ക്കുക",
+    "years": "വർഷങ്ങൾ",
+    "months": "മാസം",
+    "days": "ദിവസങ്ങൾ",
+    "chooseDate": "തീയതി തിരഞ്ഞെടുക്കുക",
+    "previousMonth": "മുമ്പത്തെ മാസം",
+    "nextMonth": "അടുത്ത മാസം",
+    "duration": {
+      "year": {
+        "one": "{count} വർഷം",
+        "other": "{count} വർഷം"
+      },
+      "month": {
+        "one": "{count} മാസം",
+        "other": "{count} മാസം"
+      },
+      "week": {
+        "one": "{count} ആഴ്‌ച",
+        "other": "{count} ആഴ്‌ച"
+      },
+      "day": {
+        "one": "{count} ദിവസം",
+        "other": "{count} ദിവസം"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from}, {to} എന്നിവ തമ്മിലുള്ള വ്യത്യാസം",
+      "addTo": "{duration}-ലേക്ക് {date} ചേർക്കുക",
+      "subtractFrom": "{date} ൽ നിന്ന് {duration} കുറയ്ക്കുക"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "ഹൈലൈറ്റ് ചെയ്‌ത പദപ്രയോഗം പരിശോധിക്കുക",
+    "enterExpression": "ഒരു എക്സ്പ്രഷൻ നൽകുക",
+    "canvas": "ഗ്രാഫ് ക്യാൻവാസ്",
+    "stopTracing": "ട്രേസിംഗ് നിർത്തുക",
+    "startTracing": "ട്രേസിംഗ് ആരംഭിക്കുക",
+    "share": "പങ്കിടുക",
+    "options": "ഓപ്ഷനുകൾ",
+    "zoomIn": "സൂം ഇൻ ചെയ്യുക",
+    "zoomInLabel": "സൂം ഇൻ ചെയ്യുക",
+    "zoomOut": "സൂം ഔട്ട് ചെയ്യുക",
+    "zoomOutLabel": "സൂം ഔട്ട് ചെയ്യുക",
+    "refreshViewAutomatically": "കാഴ്ച യാന്ത്രികമായി പുതുക്കുക",
+    "view": "കാണുക",
+    "expressions": "എക്സ്പ്രഷനുകൾ",
+    "mobileView": "മൊബൈൽ കാഴ്ച",
+    "showGraph": "ഗ്രാഫ് കാണിക്കുക",
+    "showExpressions": "എക്സ്പ്രഷനുകൾ കാണിക്കുക",
+    "backToFunctionList": "ഫംഗ്‌ഷൻ ലിസ്റ്റിലേക്ക് മടങ്ങുക",
+    "window": "ജാലകം",
+    "resetView": "കാഴ്ച പുനഃസജ്ജമാക്കുക",
+    "units": "യൂണിറ്റുകൾ",
+    "radians": "റേഡിയൻസ്",
+    "degrees": "ഡിഗ്രികൾ",
+    "gradians": "ഗ്രേഡിയൻസ്",
+    "lineThickness": "രേഖയുടെ കനം",
+    "theme": "തീം",
+    "alwaysLight": "എപ്പോഴും വെളിച്ചം",
+    "matchAppTheme": "ആപ്പ് തീം പൊരുത്തപ്പെടുത്തുക",
+    "groups": {
+      "inequalities": "അസമത്വങ്ങൾ",
+      "trigonometry": "ത്രികോണമിതി",
+      "function": "പ്രവർത്തനം"
+    },
+    "functions": "പ്രവർത്തനങ്ങൾ",
+    "showEquation": "സമവാക്യം കാണിക്കുക",
+    "hideEquation": "സമവാക്യം മറയ്ക്കുക",
+    "lineOptions": "ലൈൻ ഓപ്ഷനുകൾ",
+    "color": "നിറം",
+    "style": "ശൈലി",
+    "analysis": {
+      "title": "വിശകലനം",
+      "domain": "ഡൊമെയ്ൻ",
+      "range": "പരിധി",
+      "xIntercept": "x-ഇൻ്റർസെപ്റ്റ്",
+      "yIntercept": "y-ഇൻ്റർസെപ്റ്റ്",
+      "minima": "മിനിമ",
+      "maxima": "മാക്സിമ",
+      "inflectionPoints": "ഇൻഫ്ലെക്ഷൻ പോയിൻ്റുകൾ",
+      "verticalAsymptotes": "ലംബമായ അസിംപ്റ്റോട്ടുകൾ",
+      "horizontalAsymptotes": "തിരശ്ചീനമായ അസിംപ്റ്റോട്ടുകൾ",
+      "obliqueAsymptotes": "ചരിഞ്ഞ അസിംപ്റ്റോട്ടുകൾ",
+      "parity": "പാരിറ്റി",
+      "period": "കാലയളവ്",
+      "monotonicity": "ഏകത",
+      "domainNone": "ഡൊമെയ്ൻ നിയന്ത്രണങ്ങളൊന്നുമില്ല",
+      "rangeNone": "പരിധി നിയന്ത്രണങ്ങളൊന്നുമില്ല",
+      "xInterceptNone": "x-ഇൻ്റർസെപ്‌റ്റുകളൊന്നുമില്ല",
+      "yInterceptNone": "y-ഇൻ്റർസെപ്‌റ്റുകളൊന്നുമില്ല",
+      "minimaNone": "മിനിമ ഇല്ല",
+      "maximaNone": "പരമാവധി ഇല്ല",
+      "inflectionNone": "ഇൻഫ്ലെക്ഷൻ പോയിൻ്റുകളൊന്നുമില്ല",
+      "verticalAsymptotesNone": "ലംബമായ അസിംപ്റ്റോട്ടുകളൊന്നുമില്ല",
+      "horizontalAsymptotesNone": "തിരശ്ചീനമായ അസിംപ്റ്റോട്ടുകളൊന്നുമില്ല",
+      "obliqueAsymptotesNone": "ചരിഞ്ഞ അസിംപ്റ്റോട്ടുകളൊന്നുമില്ല",
+      "parityUnknown": "അജ്ഞാതം",
+      "parityOdd": "വിചിത്രം",
+      "parityEven": "പോലും",
+      "parityNeither": "ഒന്നുമില്ല",
+      "periodicityUnknown": "അജ്ഞാതം",
+      "periodicityNotPeriodic": "ആനുകാലികമല്ല",
+      "monotonicityConstant": "സ്ഥിരമായ",
+      "monotonicityIncreasing": "കൂടുന്നു",
+      "monotonicityDecreasing": "കുറയുന്നു",
+      "monotonicityUnknown": "അജ്ഞാതം",
+      "monotonicityError": "നിർണ്ണയിക്കാൻ കഴിയില്ല",
+      "featureTooComplexPlural": "വിശകലനം ചെയ്യാൻ വളരെ സങ്കീർണ്ണമാണ്",
+      "analysisCouldNotBePerformed": "വിശകലനം നടത്താൻ കഴിഞ്ഞില്ല",
+      "analysisNotSupported": "വിശകലനം പിന്തുണയ്ക്കുന്നില്ല",
+      "variableIsNotX": "വേരിയബിൾ x അല്ല"
+    },
+    "plottingExpressions": "പ്ലോട്ടിംഗ് {count} എക്സ്പ്രഷനുകൾ",
+    "xMin": "എക്സ്-മിനിറ്റ്",
+    "xMax": "എക്സ്-മാക്സ്",
+    "yMin": "വൈ-മിനിറ്റ്",
+    "yMax": "Y-Max",
+    "selectExpression": "എക്സ്പ്രഷൻ തിരഞ്ഞെടുക്കുക {index}",
+    "expressionIndex": "എക്സ്പ്രഷൻ {index}",
+    "analyzeFunction": "പ്രവർത്തനം വിശകലനം ചെയ്യുക",
+    "changeEquationStyle": "സമവാക്യ ശൈലി മാറ്റുക",
+    "removeEquation": "സമവാക്യം നീക്കം ചെയ്യുക",
+    "lineStyle": {
+      "solid": "സോളിഡ് ലൈൻ ശൈലി",
+      "dash": "ഡാഷ് ലൈൻ ശൈലി",
+      "dot": "ഡോട്ട് ലൈൻ ശൈലി"
+    }
+  },
+  "history": {
+    "empty": "ചരിത്രം ശൂന്യമാണ്",
+    "clearAll": "എല്ലാം മായ്‌ക്കുക",
+    "clear": "ചരിത്രം മായ്‌ക്കുക",
+    "title": "ചരിത്രം",
+    "andMemory": "ചരിത്രവും ഓർമ്മയും",
+    "aria": {
+      "historyPanel": "ചരിത്ര പാനൽ",
+      "historyAndMemoryPanel": "ചരിത്രവും മെമ്മറി പാനലും"
+    },
+    "closeFlyout": "ചരിത്രം അടയ്‌ക്കുക",
+    "openFlyout": "ചരിത്രം തുറക്കുക"
+  },
+  "memory": {
+    "empty": "മെമ്മറി ശൂന്യമാണ്",
+    "clearItem": "ഇനം മായ്‌ക്കുക",
+    "addCurrentValue": "നിലവിലെ മൂല്യം ചേർക്കുക",
+    "subtractCurrentValue": "നിലവിലെ മൂല്യം കുറയ്ക്കുക",
+    "clearAll": "എല്ലാം മായ്‌ക്കുക",
+    "clear": "മെമ്മറി മായ്‌ക്കുക",
+    "title": "ഓർമ്മ",
+    "controls": "ഓർമ്മ നിയന്ത്രണങ്ങൾ",
+    "tooltips": {
+      "clearAll": "എല്ലാ മെമ്മറിയും മായ്‌ക്കുക",
+      "recall": "ഓർമ്മയിൽ നിന്ന് തിരിച്ചുവിളിക്കുക",
+      "add": "ഓർമ്മയിലേക്ക് ചേർക്കുക",
+      "subtract": "മെമ്മറിയിൽ നിന്ന് കുറയ്ക്കുക",
+      "store": "ഓർമ്മയിൽ സംഭരിക്കുക"
+    },
+    "recallValue": "ഓർക്കുക മെമ്മറി {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "നാവിഗേഷൻ",
+      "closeNavigation": "നാവിഗേഷൻ അടയ്ക്കുക",
+      "openNavigation": "നാവിഗേഷൻ തുറക്കുക"
+    },
+    "groups": {
+      "calculator": "കാൽക്കുലേറ്റർ",
+      "converter": "കൺവെർട്ടർ"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "ബിറ്റ് ഫ്ലിപ്പ് പാനൽ",
+    "baseReadouts": "ബേസ് റീഡൗട്ടുകൾ",
+    "surfaceMode": "ഉപരിതല മോഡ്",
+    "fullKeypad": "പൂർണ്ണ കീപാഡ്",
+    "showKeypad": "കീപാഡ് കാണിക്കുക",
+    "bitTogglingKeypad": "ബിറ്റ് ടോഗിൾ കീപാഡ്",
+    "showBitView": "ബിറ്റ് കാഴ്ച കാണിക്കുക",
+    "wordSize": "വാക്കിൻ്റെ വലിപ്പം",
+    "bitwise": "ബിറ്റ്‌വൈസ്",
+    "bitShift": "ബിറ്റ് ഷിഫ്റ്റ്"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "ത്രികോണമിതി",
+      "function": "പ്രവർത്തനം",
+      "functionsAria": "പ്രവർത്തനങ്ങൾ",
+      "trigonometricFunctionsAria": "ത്രികോണമിതി പ്രവർത്തനങ്ങൾ",
+      "angleUnit": "ആംഗിൾ യൂണിറ്റ് {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "രൂപഭാവം",
+      "themeTitle": "തീം",
+      "themeDescription": "ഒരു വർണ്ണ സ്കീം തിരഞ്ഞെടുക്കുക",
+      "light": "വെളിച്ചം",
+      "dark": "ഇരുട്ട്",
+      "blue": "നീല",
+      "green": "പച്ച",
+      "system": "സിസ്റ്റം"
+    },
+    "language": {
+      "group": "ഭാഷ",
+      "title": "ഭാഷ",
+      "description": "നിങ്ങൾ തിരഞ്ഞെടുത്ത ഭാഷ തിരഞ്ഞെടുക്കുക"
+    },
+    "about": {
+      "group": "ഏകദേശം"
+    },
+    "feedback": "ഫീഡ്‌ബാക്ക് അയയ്‌ക്കുക",
+    "contribute": {
+      "prefix": "സംഭാവന ചെയ്യുക",
+      "link": "GitHub",
+      "suffix": "ഈ കാൽക്കുലേറ്റർ മെച്ചപ്പെടുത്താൻ സഹായിക്കുന്നതിന്"
+    },
+    "links": {
+      "repository": "പദ്ധതി ശേഖരം",
+      "readme": "വായിക്കുക",
+      "license": "എംഐടി ലൈസൻസ്"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "സ്റ്റാൻഡേർഡ്",
+      "subtitle": "ക്ലാസിക് ഉടനടി വിലയിരുത്തൽ"
+    },
+    "scientific": {
+      "label": "ശാസ്ത്രീയം",
+      "subtitle": "ഓപ്പറേറ്റർമാർ, പ്രവർത്തനങ്ങൾ, എക്സ്പ്രഷൻ പിന്തുണ"
+    },
+    "graphing": {
+      "label": "ഗ്രാഫിംഗ്",
+      "subtitle": "ഒരു കാർട്ടീഷ്യൻ വിമാനത്തിൽ ലളിതമായ ഒരു പദപ്രയോഗം നടത്തുക"
+    },
+    "programmer": {
+      "label": "പ്രോഗ്രാമർ",
+      "subtitle": "അടിസ്ഥാന പരിവർത്തനത്തോടുകൂടിയ പൂർണ്ണഗണിതം"
+    },
+    "date": {
+      "label": "തീയതി കണക്കുകൂട്ടൽ",
+      "subtitle": "കാലയളവും ഷിഫ്റ്റ് തീയതികളും കണ്ടെത്തുക"
+    },
+    "currency": {
+      "label": "കറൻസി",
+      "subtitle": "മോക്ക് എക്സ്ചേഞ്ച് നിരക്കുകൾ പരിവർത്തനം ചെയ്യുക"
+    },
+    "volume": {
+      "label": "വോളിയം",
+      "subtitle": "വോളിയം അളവുകൾ പരിവർത്തനം ചെയ്യുക"
+    },
+    "length": {
+      "label": "നീളം",
+      "subtitle": "ദൂരവും നീളവും യൂണിറ്റുകൾ പരിവർത്തനം ചെയ്യുക"
+    },
+    "weight": {
+      "label": "ഭാരവും ഭാരവും",
+      "subtitle": "ഭാരവും മാസ് യൂണിറ്റുകളും പരിവർത്തനം ചെയ്യുക"
+    },
+    "temperature": {
+      "label": "താപനില",
+      "subtitle": "താപനിലകൾ പരിവർത്തനം ചെയ്യുക"
+    },
+    "energy": {
+      "label": "ഊർജ്ജം",
+      "subtitle": "ഊർജ്ജ അളവുകൾ പരിവർത്തനം ചെയ്യുക"
+    },
+    "area": {
+      "label": "ഏരിയ",
+      "subtitle": "ഏരിയ അളവുകൾ പരിവർത്തനം ചെയ്യുക"
+    },
+    "speed": {
+      "label": "വേഗത",
+      "subtitle": "വേഗത അളവുകൾ പരിവർത്തനം ചെയ്യുക"
+    },
+    "time": {
+      "label": "സമയം",
+      "subtitle": "സമയ അളവുകൾ പരിവർത്തനം ചെയ്യുക"
+    },
+    "power": {
+      "label": "പവർ",
+      "subtitle": "പവർ അളവുകൾ പരിവർത്തനം ചെയ്യുക"
+    },
+    "data": {
+      "label": "ഡാറ്റ",
+      "subtitle": "ഡിജിറ്റൽ സ്റ്റോറേജ് യൂണിറ്റുകൾ പരിവർത്തനം ചെയ്യുക"
+    },
+    "pressure": {
+      "label": "മർദ്ദം",
+      "subtitle": "മർദ്ദം യൂണിറ്റുകൾ പരിവർത്തനം ചെയ്യുക"
+    },
+    "angle": {
+      "label": "ആംഗിൾ",
+      "subtitle": "കോണിൻ്റെ അളവുകൾ പരിവർത്തനം ചെയ്യുക"
+    },
+    "settings": {
+      "label": "ക്രമീകരണങ്ങൾ",
+      "subtitle": "രൂപവും ആപ്പ് വിവരങ്ങളും"
+    }
+  },
+  "categories": {
+    "Currency": "കറൻസി",
+    "Volume": "വോളിയം",
+    "Length": "നീളം",
+    "Mass": "പിണ്ഡം",
+    "Temperature": "താപനില",
+    "Energy": "ഊർജ്ജം",
+    "Area": "ഏരിയ",
+    "Speed": "വേഗത",
+    "Time": "സമയം",
+    "Power": "പവർ",
+    "Data": "ഡാറ്റ",
+    "Pressure": "മർദ്ദം",
+    "Angle": "ആംഗിൾ"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "ആങ്സ്ട്രോംസ്",
+      "Nanometers": "നാനോമീറ്ററുകൾ",
+      "Microns": "മൈക്രോണുകൾ",
+      "Millimeters": "മില്ലീമീറ്റർ",
+      "Centimeters": "സെൻ്റീമീറ്റർ",
+      "Meters": "മീറ്റർ",
+      "Kilometers": "കിലോമീറ്റർ",
+      "Inches": "ഇഞ്ച്",
+      "Feet": "അടി",
+      "Yards": "യാർഡുകൾ",
+      "Miles": "മൈലുകൾ",
+      "Nautical miles": "നോട്ടിക്കൽ മൈൽ",
+      "paperclips": "പേപ്പർക്ലിപ്പുകൾ",
+      "hands": "കൈകൾ",
+      "jumbo jets": "ജംബോ ജെറ്റുകൾ",
+      "Carats": "കാരറ്റ്",
+      "Milligrams": "മില്ലിഗ്രാം",
+      "Centigrams": "സെൻ്റിഗ്രാം",
+      "Decigrams": "ഡെസിഗ്രാമുകൾ",
+      "Grams": "ഗ്രാം",
+      "Dekagrams": "ദേകാഗ്രാമുകൾ",
+      "Hectograms": "ഹെക്റ്റോഗ്രാമുകൾ",
+      "Kilograms": "കിലോഗ്രാം",
+      "Metric tonnes": "മെട്രിക് ടൺ",
+      "Ounces": "ഔൺസ്",
+      "Pounds": "പൗണ്ട്",
+      "Stone": "കല്ല്",
+      "Short tons (US)": "ചെറിയ ടൺ (യുഎസ്)",
+      "Long tons (UK)": "ലോംഗ് ടൺ (യുകെ)",
+      "snowflakes": "സ്നോഫ്ലേക്കുകൾ",
+      "soccer balls": "സോക്കർ പന്തുകൾ",
+      "elephants": "ആനകൾ",
+      "whales": "തിമിംഗലങ്ങൾ",
+      "Celsius": "സെൽഷ്യസ്",
+      "Fahrenheit": "ഫാരൻഹീറ്റ്",
+      "Kelvin": "കെൽവിൻ",
+      "Milliliters": "മില്ലീലിറ്റർ",
+      "Cubic centimeters": "ക്യുബിക് സെൻ്റീമീറ്റർ",
+      "Liters": "ലിറ്റർ",
+      "Cubic meters": "ക്യുബിക് മീറ്റർ",
+      "Teaspoons (US)": "ടീസ്പൂൺ (യുഎസ്)",
+      "Tablespoons (US)": "ടേബിൾസ്പൂൺ (യുഎസ്)",
+      "Fluid ounces (US)": "ഫ്ലൂയിഡ് ഔൺസ് (യുഎസ്)",
+      "Cups (US)": "കപ്പുകൾ (യുഎസ്)",
+      "Pints (US)": "പിൻ്റുകൾ (യുഎസ്)",
+      "Quarts (US)": "ക്വാർട്ട്സ് (യുഎസ്)",
+      "Gallons (US)": "ഗാലൻ (യുഎസ്)",
+      "Cubic inches": "ക്യുബിക് ഇഞ്ച്",
+      "Cubic feet": "ക്യൂബിക് അടി",
+      "Cubic yards": "ക്യൂബിക് യാർഡുകൾ",
+      "Teaspoons (UK)": "ടീസ്പൂൺ (യുകെ)",
+      "Tablespoons (UK)": "ടേബിൾസ്പൂൺ (യുകെ)",
+      "Fluid ounces (UK)": "ഫ്ലൂയിഡ് ഔൺസ് (യുകെ)",
+      "Pints (UK)": "പിൻ്റുകൾ (യുകെ)",
+      "Quarts (UK)": "ക്വാർട്ട്സ് (യുകെ)",
+      "Gallons (UK)": "ഗാലൻസ് (യുകെ)",
+      "coffee cups": "കാപ്പി കപ്പുകൾ",
+      "bathtubs": "ബാത്ത് ടബുകൾ",
+      "swimming pools": "നീന്തൽക്കുളങ്ങൾ",
+      "Square millimeters": "സ്ക്വയർ മില്ലിമീറ്റർ",
+      "Square centimeters": "സ്ക്വയർ സെൻ്റീമീറ്റർ",
+      "Square meters": "സ്ക്വയർ മീറ്റർ",
+      "Hectares": "ഹെക്ടർ",
+      "Square kilometers": "ചതുരശ്ര കിലോമീറ്റർ",
+      "Square inches": "ചതുര ഇഞ്ച്",
+      "Square feet": "ചതുരശ്ര അടി",
+      "Square yards": "സ്ക്വയർ യാർഡുകൾ",
+      "Acres": "ഏക്കറുകൾ",
+      "Square miles": "സ്ക്വയർ മൈൽ",
+      "sheets of paper": "പേപ്പറിൻ്റെ ഷീറ്റുകൾ",
+      "soccer fields": "സോക്കർ ഫീൽഡുകൾ",
+      "castles": "കോട്ടകൾ",
+      "Pyeong": "പ്യോങ്",
+      "Centimeters per second": "സെക്കൻഡിൽ സെൻ്റീമീറ്റർ",
+      "Meters per second": "മീറ്റർ / സെക്കൻഡ്",
+      "Kilometers per hour": "കിലോമീറ്റർ / മണിക്കൂർ",
+      "Feet per second": "സെക്കൻഡിൽ അടി",
+      "Miles per hour": "മണിക്കൂറിൽ മൈലുകൾ",
+      "Knots": "കെട്ടുകൾ",
+      "Mach": "മാച്ച്",
+      "turtles": "ആമകൾ",
+      "horses": "കുതിരകൾ",
+      "jets": "ജെറ്റുകൾ",
+      "Watts": "വാട്ട്സ്",
+      "Kilowatts": "കിലോവാട്ട്",
+      "Horsepower (US)": "കുതിരശക്തി (യുഎസ്)",
+      "Foot-pounds/minute": "അടി-പൗണ്ട്/മിനിറ്റ്",
+      "BTUs/minute": "BTU-കൾ/മിനിറ്റ്",
+      "light bulbs": "ലൈറ്റ് ബൾബുകൾ",
+      "train engines": "ട്രെയിൻ എഞ്ചിനുകൾ",
+      "Thermal calories": "താപ കലോറി",
+      "Food calories": "ഭക്ഷണ കലോറികൾ",
+      "British thermal units": "ബ്രിട്ടീഷ് തെർമൽ യൂണിറ്റുകൾ",
+      "Kilojoules": "കിലോജൂളുകൾ",
+      "Kilowatt-hours": "കിലോവാട്ട്-മണിക്കൂർ",
+      "Electron volts": "ഇലക്ട്രോൺ വോൾട്ട്",
+      "Joules": "ജൂൾസ്",
+      "Foot-pounds": "അടി പൗണ്ട്",
+      "batteries": "ബാറ്ററികൾ",
+      "bananas": "വാഴപ്പഴം",
+      "slices of cake": "കേക്ക് കഷ്ണങ്ങൾ",
+      "Bits": "ബിറ്റുകൾ",
+      "Nibble": "നിബിൾ",
+      "Bytes": "ബൈറ്റുകൾ",
+      "Kilobits": "കിലോബിറ്റുകൾ",
+      "Kibibits": "കിബിബിറ്റുകൾ",
+      "Kilobytes": "കിലോബൈറ്റുകൾ",
+      "Kibibytes": "കിബിബൈറ്റുകൾ",
+      "Megabits": "മെഗാബൈറ്റുകൾ",
+      "Mebibits": "മെബിബിറ്റുകൾ",
+      "Megabytes": "മെഗാബൈറ്റുകൾ",
+      "Mebibytes": "മെബിബൈറ്റുകൾ",
+      "Gigabits": "ഗിഗാബൈറ്റുകൾ",
+      "Gibibits": "ഗിബിബിറ്റുകൾ",
+      "Gigabytes": "ജിഗാബൈറ്റുകൾ",
+      "Gibibytes": "ജിബിബൈറ്റുകൾ",
+      "Terabits": "ടെറാബിറ്റുകൾ",
+      "Tebibits": "ടെബിബിറ്റുകൾ",
+      "Terabytes": "ടെറാബൈറ്റുകൾ",
+      "Tebibytes": "ടെബിബൈറ്റുകൾ",
+      "Petabits": "പെറ്റാബിറ്റുകൾ",
+      "Pebibits": "പെബിബിറ്റുകൾ",
+      "Petabytes": "പെറ്റാബൈറ്റുകൾ",
+      "Pebibytes": "പെബിബൈറ്റുകൾ",
+      "Exabits": "എക്‌സാബിറ്റുകൾ",
+      "Exbibits": "എക്സ്ബിബിറ്റുകൾ",
+      "Exabytes": "എക്സാബൈറ്റുകൾ",
+      "Exbibytes": "എക്സ്ബിബൈറ്റുകൾ",
+      "Zetabits": "സെറ്റാബിറ്റുകൾ",
+      "Zebibits": "സെബിബിറ്റുകൾ",
+      "Zetabytes": "സെറ്റാബൈറ്റുകൾ",
+      "Zebibytes": "സെബിബൈറ്റുകൾ",
+      "Yottabits": "Yottabits",
+      "Yobibits": "യോബിബിറ്റുകൾ",
+      "Yottabytes": "യോട്ടാബൈറ്റുകൾ",
+      "Yobibytes": "യോബിബൈറ്റുകൾ",
+      "floppy disks": "ഫ്ലോപ്പി ഡിസ്കുകൾ",
+      "CDs": "സിഡികൾ",
+      "DVDs": "ഡിവിഡികൾ",
+      "Atmospheres": "അന്തരീക്ഷം",
+      "Bars": "ബാറുകൾ",
+      "Kilopascals": "കിലോപാസ്കലുകൾ",
+      "Millimeters of mercury": "മില്ലീമീറ്റർ മെർക്കുറി",
+      "Pascals": "പാസ്കലുകൾ",
+      "Pounds per square inch": "ഒരു ചതുരശ്ര ഇഞ്ചിന് പൗണ്ട്",
+      "Degrees": "ഡിഗ്രികൾ",
+      "Radians": "റേഡിയൻസ്",
+      "Gradians": "ഗ്രേഡിയൻസ്",
+      "Microseconds": "മൈക്രോസെക്കൻഡ്",
+      "Milliseconds": "മില്ലിസെക്കൻഡ്",
+      "Seconds": "സെക്കൻഡ്",
+      "Minutes": "മിനിറ്റുകൾ",
+      "Hours": "മണിക്കൂറുകൾ",
+      "Days": "ദിവസങ്ങൾ",
+      "Weeks": "ആഴ്‌ചകൾ",
+      "Years": "വർഷങ്ങൾ"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "യുഎസ് ഡോളർ",
+      "Euro": "യൂറോ",
+      "British Pound": "ബ്രിട്ടീഷ് പൗണ്ട്",
+      "Japanese Yen": "ജാപ്പനീസ് യെൻ",
+      "Canadian Dollar": "കനേഡിയൻ ഡോളർ",
+      "Australian Dollar": "ഓസ്‌ട്രേലിയൻ ഡോളർ",
+      "Brazilian Real": "ബ്രസീലിയൻ റിയൽ",
+      "Chilean Peso": "ചിലിയൻ പെസോ",
+      "Chinese Yuan": "ചൈനീസ് യുവാൻ",
+      "Colombian Peso": "കൊളംബിയൻ പെസോ",
+      "Danish Krone": "ഡാനിഷ് ക്രോൺ",
+      "Egyptian Pound": "ഈജിപ്ഷ്യൻ പൗണ്ട്",
+      "Hong Kong Dollar": "ഹോങ്കോംഗ് ഡോളർ",
+      "Indian Rupee": "ഇന്ത്യൻ രൂപ",
+      "Kenyan Shilling": "കെനിയൻ ഷില്ലിംഗ്",
+      "Mexican Peso": "മെക്സിക്കൻ പെസോ",
+      "Nigerian Naira": "നൈജീരിയൻ നൈര",
+      "New Zealand Dollar": "ന്യൂസിലാൻഡ് ഡോളർ",
+      "Norwegian Krone": "നോർവീജിയൻ ക്രോൺ",
+      "Philippine Piso": "ഫിലിപ്പീൻ പിസോ",
+      "Polish Zloty": "പോളീഷ് സ്ലോട്ടി",
+      "Qatari Riyal": "ഖത്തരി റിയാൽ",
+      "Saudi Riyal": "സൗദി റിയാൽ",
+      "Singapore Dollar": "സിംഗപ്പൂർ ഡോളർ",
+      "South African Rand": "ദക്ഷിണാഫ്രിക്കൻ റാൻഡ്",
+      "South Korean Won": "ദക്ഷിണ കൊറിയൻ വോൺ",
+      "Swedish Krona": "സ്വീഡിഷ് ക്രോണ",
+      "Swiss Franc": "സ്വിസ് ഫ്രാങ്ക്",
+      "Thai Baht": "തായ് ബട്ട്",
+      "Turkish Lira": "ടർക്കിഷ് ലിറ",
+      "Turkmenistani Manat": "തുർക്ക്മെനിസ്ഥാനി മനാറ്റ്",
+      "Ugandan Shilling": "ഉഗാണ്ടൻ ഷില്ലിംഗ്",
+      "Ukrainian Hryvnia": "ഉക്രേനിയൻ ഹ്രിവ്നിയ",
+      "UAE Dirham": "യുഎഇ ദിർഹം",
+      "Uruguayan Peso": "ഉറുഗ്വായൻ പെസോ",
+      "Uzbekistani Som": "ഉസ്ബെക്കിസ്ഥാനി സോം",
+      "Vanuatu Vatu": "വാനുവാട്ടു വാതു",
+      "Venezuelan Bolivar Soberano": "വെനസ്വേലൻ ബൊളിവർ സോബെറാനോ",
+      "Vietnamese Dong": "വിയറ്റ്നാമീസ് ഡോംഗ്",
+      "Yemeni Rial": "യെമൻ റിയാൽ"
+    },
+    "labels": {
+      "United States - Dollar": "യുണൈറ്റഡ് സ്റ്റേറ്റ്സ് - ഡോളർ",
+      "Europe - Euro": "യൂറോപ്പ് - യൂറോ",
+      "United Kingdom - Pound": "യുണൈറ്റഡ് കിംഗ്ഡം - പൗണ്ട്",
+      "Japan - Yen": "ജപ്പാൻ - യെൻ",
+      "Canada - Dollar": "കാനഡ - ഡോളർ",
+      "Australia - Dollar": "ഓസ്‌ട്രേലിയ - ഡോളർ",
+      "Brazil - Real": "ബ്രസീൽ - റിയൽ",
+      "Chile - Peso": "ചിലി - പെസോ",
+      "China - Yuan Renminbi": "ചൈന - യുവാൻ റെൻമിൻബി",
+      "Colombia - Peso": "കൊളംബിയ - പെസോ",
+      "Denmark - Krone": "ഡെൻമാർക്ക് - ക്രോൺ",
+      "Egypt - Pound": "ഈജിപ്ത് - പൗണ്ട്",
+      "Hong Kong SAR - Dollar": "ഹോങ്കോംഗ് SAR - ഡോളർ",
+      "India - Rupee": "ഇന്ത്യ - രൂപ",
+      "Kenya - Shilling": "കെനിയ - ഷില്ലിംഗ്",
+      "Mexico - Peso": "മെക്സിക്കോ - പെസോ",
+      "Nigeria - Naira": "നൈജീരിയ - നൈറ",
+      "New Zealand - Dollar": "ന്യൂസിലാൻഡ് - ഡോളർ",
+      "Norway - Krone": "നോർവേ - ക്രോൺ",
+      "Philippines - Piso": "ഫിലിപ്പീൻസ് - പിസോ",
+      "Poland - Zloty": "പോളണ്ട് - സ്ലോട്ടി",
+      "Qatar - Riyal": "ഖത്തർ - റിയാൽ",
+      "Saudi Arabia - Riyal": "സൗദി അറേബ്യ - റിയാൽ",
+      "Singapore - Dollar": "സിംഗപ്പൂർ - ഡോളർ",
+      "South Africa - Rand": "ദക്ഷിണാഫ്രിക്ക - റാൻഡ്",
+      "South Korea - Won": "ദക്ഷിണ കൊറിയ - വിജയിച്ചു",
+      "Sweden - Krona": "സ്വീഡൻ - ക്രോണ",
+      "Switzerland - Franc": "സ്വിറ്റ്സർലൻഡ് - ഫ്രാങ്ക്",
+      "Thailand - Baht": "തായ്‌ലൻഡ് - ബാറ്റ്",
+      "Turkey - Lira": "തുർക്കി - ലിറ",
+      "Turkmenistan - Manat": "തുർക്ക്മെനിസ്ഥാൻ - മനാറ്റ്",
+      "Uganda - Shilling": "ഉഗാണ്ട - ഷില്ലിംഗ്",
+      "Ukraine - Hryvnia": "ഉക്രെയ്ൻ - ഹ്രീവ്നിയ",
+      "United Arab Emirates - Dirham": "യുണൈറ്റഡ് അറബ് എമിറേറ്റ്സ് - ദിർഹം",
+      "Uruguay - Peso": "ഉറുഗ്വേ - പെസോ",
+      "Uzbekistan - Som": "ഉസ്ബെക്കിസ്ഥാൻ - സോം",
+      "Vanuatu - Vatu": "വാനുവാട്ടു - വാതു",
+      "Venezuela - Bolívar Soberano": "വെനിസ്വേല - ബൊളിവർ സോബെറാനോ",
+      "Vietnam - Dong": "വിയറ്റ്നാം - ഡോങ്",
+      "Yemen - Rial": "യെമൻ - റിയാൽ"
+    }
+  }
+}

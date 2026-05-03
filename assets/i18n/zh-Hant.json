@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "計算器",
+    "name": "計算器"
+  },
+  "common": {
+    "back": "返回",
+    "backspace": "退格鍵",
+    "closeSidePanel": "關閉面板"
+  },
+  "converter": {
+    "unitConverter": "單位轉換器",
+    "title": "單位轉換器",
+    "builtInCollections": "內建集合",
+    "category": "類別",
+    "from": "來自",
+    "to": "至",
+    "inputValue": "要轉換的值",
+    "convertedValue": "轉換值",
+    "swapUnits": "交換單位",
+    "keypad": "轉換器鍵盤",
+    "unit": "單位",
+    "unitOptions": "單位選項",
+    "currency": {
+      "updatingRates": "正在更新費率...",
+      "updateRates": "更新率",
+      "keypad": "貨幣鍵盤",
+      "currency": "貨幣",
+      "options": "貨幣選項",
+      "updated": "已更新{timestamp}",
+      "status": {
+        "mockNote": "獨立應用示範的模擬參考費率。",
+        "fetching": "正在获取最新的美元参考汇率...",
+        "liveRatesLoaded": "从 ExchangeRate-API 加载的实时汇率。",
+        "liveUpdateUnavailable": "即時更新不可用。本地刷新了演示費率。"
+      }
+    },
+    "aboutEqualTo": "大约等于"
+  },
+  "errors": {
+    "invalidInput": "输入无效",
+    "cannotDivideByZero": "不能除以零",
+    "cannotModuloByZero": "不能以零為模",
+    "invalidProgrammerOperation": "无效操作",
+    "overflow": "結果太大"
+  },
+  "date": {
+    "calculationMode": "计算模式",
+    "from": "來自",
+    "to": "至",
+    "results": {
+      "difference": "差異",
+      "sameDates": "相同日期",
+      "date": "日期"
+    },
+    "calculationModeOptions": "計算模式選項",
+    "mode": {
+      "difference": "差异",
+      "shift": "轉變"
+    },
+    "operation": "操作",
+    "add": "添加",
+    "subtract": "減去",
+    "years": "年",
+    "months": "月",
+    "days": "天",
+    "chooseDate": "選擇日期",
+    "previousMonth": "上個月",
+    "nextMonth": "下個月",
+    "duration": {
+      "year": {
+        "one": "{count} 年",
+        "other": "{count} 年"
+      },
+      "month": {
+        "one": "{count}月",
+        "other": "{count} 個月"
+      },
+      "week": {
+        "one": "{count}週",
+        "other": "{count}週"
+      },
+      "day": {
+        "one": "{count} 天",
+        "other": "{count} 天"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from}和{to}之間的差異",
+      "addTo": "將 {duration} 加入到 {date}",
+      "subtractFrom": "從 {date} 中減去 {duration}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "檢查反白的表達式",
+    "enterExpression": "輸入表達式",
+    "canvas": "圖表畫布",
+    "stopTracing": "停止追蹤",
+    "startTracing": "開始追蹤",
+    "share": "分享",
+    "options": "選項",
+    "zoomIn": "放大",
+    "zoomInLabel": "放大",
+    "zoomOut": "縮小",
+    "zoomOutLabel": "縮小",
+    "refreshViewAutomatically": "自動刷新視圖",
+    "view": "查看",
+    "expressions": "表達式",
+    "mobileView": "移動視圖",
+    "showGraph": "顯示圖表",
+    "showExpressions": "顯示表達式",
+    "backToFunctionList": "傳回函數列表",
+    "window": "視窗",
+    "resetView": "重設視圖",
+    "units": "單位",
+    "radians": "弧度",
+    "degrees": "度",
+    "gradians": "梯度",
+    "lineThickness": "線條粗細",
+    "theme": "主題",
+    "alwaysLight": "始終明亮",
+    "matchAppTheme": "匹配應用主題",
+    "groups": {
+      "inequalities": "不平等",
+      "trigonometry": "三角學",
+      "function": "功能"
+    },
+    "functions": "功能",
+    "showEquation": "顯示方程",
+    "hideEquation": "隱藏方程",
+    "lineOptions": "線路選項",
+    "color": "顏色",
+    "style": "風格",
+    "analysis": {
+      "title": "分析",
+      "domain": "域名",
+      "range": "範圍",
+      "xIntercept": "x 截距",
+      "yIntercept": "y 軸截距",
+      "minima": "最小值",
+      "maxima": "千里馬",
+      "inflectionPoints": "拐點",
+      "verticalAsymptotes": "垂直漸近線",
+      "horizontalAsymptotes": "水平漸近線",
+      "obliqueAsymptotes": "斜漸近線",
+      "parity": "奇偶校驗",
+      "period": "期間",
+      "monotonicity": "單調性",
+      "domainNone": "無域限制",
+      "rangeNone": "無範圍限制",
+      "xInterceptNone": "無 x 截距",
+      "yInterceptNone": "沒有 y 軸截距",
+      "minimaNone": "沒有最低限度",
+      "maximaNone": "沒有最大值",
+      "inflectionNone": "無拐點",
+      "verticalAsymptotesNone": "無垂直漸近線",
+      "horizontalAsymptotesNone": "無水平漸近線",
+      "obliqueAsymptotesNone": "無斜漸近線",
+      "parityUnknown": "未知",
+      "parityOdd": "奇數",
+      "parityEven": "偶數",
+      "parityNeither": "都不是",
+      "periodicityUnknown": "未知",
+      "periodicityNotPeriodic": "非週期性",
+      "monotonicityConstant": "常數",
+      "monotonicityIncreasing": "增加",
+      "monotonicityDecreasing": "減少",
+      "monotonicityUnknown": "未知",
+      "monotonicityError": "無法確定",
+      "featureTooComplexPlural": "太複雜，無法分析",
+      "analysisCouldNotBePerformed": "無法執行分析",
+      "analysisNotSupported": "不支援分析",
+      "variableIsNotX": "變數不是 x"
+    },
+    "plottingExpressions": "繪製 {count} 表達式",
+    "xMin": "X-分鐘",
+    "xMax": "X-最大",
+    "yMin": "Y-分鐘",
+    "yMax": "Y-最大",
+    "selectExpression": "選擇表達式 {index}",
+    "expressionIndex": "表達式{index}",
+    "analyzeFunction": "分析函數",
+    "changeEquationStyle": "更改方程式樣式",
+    "removeEquation": "刪除方程",
+    "lineStyle": {
+      "solid": "實線樣式",
+      "dash": "虛線樣式",
+      "dot": "點線樣式"
+    }
+  },
+  "history": {
+    "empty": "歷史記錄為空",
+    "clearAll": "全部清除",
+    "clear": "清除歷史記錄",
+    "title": "歷史",
+    "andMemory": "歷史與記憶",
+    "aria": {
+      "historyPanel": "歷史面板",
+      "historyAndMemoryPanel": "歷史與記憶體面板"
+    },
+    "closeFlyout": "關閉歷史記錄",
+    "openFlyout": "開啟歷史記錄"
+  },
+  "memory": {
+    "empty": "記憶體已空",
+    "clearItem": "清除項目",
+    "addCurrentValue": "新增目前值",
+    "subtractCurrentValue": "減去當前值",
+    "clearAll": "全部清除",
+    "clear": "清除內存",
+    "title": "內存",
+    "controls": "記憶體控制",
+    "tooltips": {
+      "clearAll": "清除所有內存",
+      "recall": "從記憶體中調用",
+      "add": "加入內存",
+      "subtract": "從記憶體中減去",
+      "store": "儲存在記憶體中"
+    },
+    "recallValue": "呼叫記憶體{value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "導航",
+      "closeNavigation": "關閉導航",
+      "openNavigation": "開啟導航"
+    },
+    "groups": {
+      "calculator": "計算器",
+      "converter": "轉換器"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "位元翻轉面板",
+    "baseReadouts": "基礎讀數",
+    "surfaceMode": "表面模式",
+    "fullKeypad": "全鍵盤",
+    "showKeypad": "顯示鍵盤",
+    "bitTogglingKeypad": "位元切換鍵盤",
+    "showBitView": "顯示位元視圖",
+    "wordSize": "字長",
+    "bitwise": "按位",
+    "bitShift": "位移位"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "三角學",
+      "function": "函數",
+      "functionsAria": "功能",
+      "trigonometricFunctionsAria": "三角函數",
+      "angleUnit": "角度單位{value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "外觀",
+      "themeTitle": "主題",
+      "themeDescription": "選擇配色方案",
+      "light": "光",
+      "dark": "黑暗",
+      "blue": "藍色",
+      "green": "綠色",
+      "system": "系統"
+    },
+    "language": {
+      "group": "語言",
+      "title": "語言",
+      "description": "選擇您的首選語言"
+    },
+    "about": {
+      "group": "關於"
+    },
+    "feedback": "傳送回饋",
+    "contribute": {
+      "prefix": "貢獻於",
+      "link": "GitHub",
+      "suffix": "幫助改進此計算器"
+    },
+    "links": {
+      "repository": "專案儲存庫",
+      "readme": "自述文件",
+      "license": "麻省理工學院許可證"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "標準",
+      "subtitle": "經典立即評估"
+    },
+    "scientific": {
+      "label": "科學",
+      "subtitle": "運算子、函數和表達式支持"
+    },
+    "graphing": {
+      "label": "繪圖",
+      "subtitle": "在笛卡爾平面上繪製簡單表達式"
+    },
+    "programmer": {
+      "label": "程式設計師",
+      "subtitle": "帶有基數轉換的整數數學"
+    },
+    "date": {
+      "label": "日期計算",
+      "subtitle": "查找持續時間和輪班日期"
+    },
+    "currency": {
+      "label": "貨幣",
+      "subtitle": "轉換模擬匯率"
+    },
+    "volume": {
+      "label": "成交量",
+      "subtitle": "轉換體積測量值"
+    },
+    "length": {
+      "label": "長度",
+      "subtitle": "轉換距離與長度單位"
+    },
+    "weight": {
+      "label": "重量和質量",
+      "subtitle": "轉換重量和質量單位"
+    },
+    "temperature": {
+      "label": "溫度",
+      "subtitle": "轉換溫標"
+    },
+    "energy": {
+      "label": "能源",
+      "subtitle": "轉換能量測量值"
+    },
+    "area": {
+      "label": "區域",
+      "subtitle": "轉換面積測量值"
+    },
+    "speed": {
+      "label": "速度",
+      "subtitle": "轉換速度測量值"
+    },
+    "time": {
+      "label": "時間",
+      "subtitle": "轉換時間測量"
+    },
+    "power": {
+      "label": "電源",
+      "subtitle": "轉換功率測量值"
+    },
+    "data": {
+      "label": "數據",
+      "subtitle": "轉換數位儲存單元"
+    },
+    "pressure": {
+      "label": "壓力",
+      "subtitle": "轉換壓力單位"
+    },
+    "angle": {
+      "label": "角度",
+      "subtitle": "轉換角度測量值"
+    },
+    "settings": {
+      "label": "設定",
+      "subtitle": "外觀與應用訊息"
+    }
+  },
+  "categories": {
+    "Currency": "貨幣",
+    "Volume": "成交量",
+    "Length": "長度",
+    "Mass": "質量",
+    "Temperature": "溫度",
+    "Energy": "能源",
+    "Area": "區域",
+    "Speed": "速度",
+    "Time": "時間",
+    "Power": "電源",
+    "Data": "數據",
+    "Pressure": "壓力",
+    "Angle": "角度"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "埃",
+      "Nanometers": "奈米",
+      "Microns": "微米",
+      "Millimeters": "毫米",
+      "Centimeters": "厘米",
+      "Meters": "米",
+      "Kilometers": "公里",
+      "Inches": "英寸",
+      "Feet": "腳",
+      "Yards": "碼",
+      "Miles": "英里",
+      "Nautical miles": "海裡",
+      "paperclips": "迴紋針",
+      "hands": "手",
+      "jumbo jets": "大型噴射機",
+      "Carats": "克拉",
+      "Milligrams": "毫克",
+      "Centigrams": "厘克",
+      "Decigrams": "十克",
+      "Grams": "克",
+      "Dekagrams": "十個字母表",
+      "Hectograms": "百克",
+      "Kilograms": "公斤",
+      "Metric tonnes": "公噸",
+      "Ounces": "盎司",
+      "Pounds": "英鎊",
+      "Stone": "石頭",
+      "Short tons (US)": "短噸（美國）",
+      "Long tons (UK)": "長噸（英國）",
+      "snowflakes": "雪花",
+      "soccer balls": "足球",
+      "elephants": "大象",
+      "whales": "鯨魚",
+      "Celsius": "攝氏度",
+      "Fahrenheit": "華氏度",
+      "Kelvin": "開爾文",
+      "Milliliters": "毫升",
+      "Cubic centimeters": "立方厘米",
+      "Liters": "升",
+      "Cubic meters": "立方米",
+      "Teaspoons (US)": "茶匙（美國）",
+      "Tablespoons (US)": "湯匙（美國）",
+      "Fluid ounces (US)": "液量盎司（美國）",
+      "Cups (US)": "杯子（美國）",
+      "Pints (US)": "品脫（美國）",
+      "Quarts (US)": "誇脫（美國）",
+      "Gallons (US)": "加侖（美國）",
+      "Cubic inches": "立方英寸",
+      "Cubic feet": "立方英尺",
+      "Cubic yards": "立方碼",
+      "Teaspoons (UK)": "茶匙（英國）",
+      "Tablespoons (UK)": "湯匙（英國）",
+      "Fluid ounces (UK)": "液量盎司（英國）",
+      "Pints (UK)": "品脫（英國）",
+      "Quarts (UK)": "誇脫（英國）",
+      "Gallons (UK)": "加侖（英國）",
+      "coffee cups": "咖啡杯",
+      "bathtubs": "浴缸",
+      "swimming pools": "游泳池",
+      "Square millimeters": "平方毫米",
+      "Square centimeters": "平方厘米",
+      "Square meters": "平方米",
+      "Hectares": "公頃",
+      "Square kilometers": "平方公里",
+      "Square inches": "平方英寸",
+      "Square feet": "平方英尺",
+      "Square yards": "平方碼",
+      "Acres": "英畝",
+      "Square miles": "平方英里",
+      "sheets of paper": "張紙",
+      "soccer fields": "足球場",
+      "castles": "城堡",
+      "Pyeong": "平",
+      "Centimeters per second": "公分每秒",
+      "Meters per second": "米每秒",
+      "Kilometers per hour": "公里每小時",
+      "Feet per second": "英尺每秒",
+      "Miles per hour": "每小時英哩數",
+      "Knots": "結",
+      "Mach": "馬赫",
+      "turtles": "海龜",
+      "horses": "馬匹",
+      "jets": "噴射機",
+      "Watts": "瓦",
+      "Kilowatts": "千瓦",
+      "Horsepower (US)": "馬力（美國）",
+      "Foot-pounds/minute": "英尺-磅/分鐘",
+      "BTUs/minute": "BTU/分鐘",
+      "light bulbs": "燈泡",
+      "train engines": "火車發動機",
+      "Thermal calories": "熱卡路里",
+      "Food calories": "食物熱量",
+      "British thermal units": "英國熱量單位",
+      "Kilojoules": "千焦耳",
+      "Kilowatt-hours": "千瓦時",
+      "Electron volts": "電子伏特",
+      "Joules": "焦耳",
+      "Foot-pounds": "英尺-磅",
+      "batteries": "電池",
+      "bananas": "香蕉",
+      "slices of cake": "蛋糕片",
+      "Bits": "位",
+      "Nibble": "蠶食",
+      "Bytes": "位元組",
+      "Kilobits": "千位",
+      "Kibibits": "千比特",
+      "Kilobytes": "千字節",
+      "Kibibytes": "千字節",
+      "Megabits": "兆比特",
+      "Mebibits": "Mebibits",
+      "Megabytes": "兆位元組",
+      "Mebibytes": "兆位元組",
+      "Gigabits": "千兆位",
+      "Gibibits": "吉比比特",
+      "Gigabytes": "千兆位元組",
+      "Gibibytes": "吉比字節",
+      "Terabits": "太比特",
+      "Tebibits": "太比比特",
+      "Terabytes": "太字節",
+      "Tebibytes": "太字節",
+      "Petabits": "拍位",
+      "Pebibits": "Pebibits",
+      "Petabytes": "PB",
+      "Pebibytes": "PB",
+      "Exabits": "Exab",
+      "Exbibits": "附件",
+      "Exabytes": "艾字節",
+      "Exbibytes": "艾字節",
+      "Zetabits": "澤比特",
+      "Zebibits": "澤比比特",
+      "Zetabytes": "澤字節",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottbits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "兆位元組",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "軟碟",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "氣氛",
+      "Bars": "酒吧",
+      "Kilopascals": "千帕斯卡",
+      "Millimeters of mercury": "毫米汞柱",
+      "Pascals": "帕斯卡",
+      "Pounds per square inch": "磅每平方英寸",
+      "Degrees": "度",
+      "Radians": "弧度",
+      "Gradians": "梯度",
+      "Microseconds": "微秒",
+      "Milliseconds": "毫秒",
+      "Seconds": "秒",
+      "Minutes": "分鐘",
+      "Hours": "時間",
+      "Days": "天",
+      "Weeks": "幾週",
+      "Years": "年"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "美元",
+      "Euro": "歐元",
+      "British Pound": "英鎊",
+      "Japanese Yen": "日元",
+      "Canadian Dollar": "加拿大元",
+      "Australian Dollar": "澳元",
+      "Brazilian Real": "巴西雷亞爾",
+      "Chilean Peso": "智利比索",
+      "Chinese Yuan": "人民幣",
+      "Colombian Peso": "哥倫比亞比索",
+      "Danish Krone": "丹麥克朗",
+      "Egyptian Pound": "埃及鎊",
+      "Hong Kong Dollar": "港元",
+      "Indian Rupee": "印度盧比",
+      "Kenyan Shilling": "肯亞先令",
+      "Mexican Peso": "墨西哥比索",
+      "Nigerian Naira": "奈及利亞奈拉",
+      "New Zealand Dollar": "紐西蘭元",
+      "Norwegian Krone": "挪威克朗",
+      "Philippine Piso": "菲律賓比索",
+      "Polish Zloty": "波蘭茲羅提",
+      "Qatari Riyal": "卡達裡亞爾",
+      "Saudi Riyal": "沙烏地裡亞爾",
+      "Singapore Dollar": "新加坡元",
+      "South African Rand": "南非蘭特",
+      "South Korean Won": "韓元",
+      "Swedish Krona": "瑞典克朗",
+      "Swiss Franc": "瑞士法郎",
+      "Thai Baht": "泰銖",
+      "Turkish Lira": "土耳其里拉",
+      "Turkmenistani Manat": "土庫曼馬納特",
+      "Ugandan Shilling": "烏幹達先令",
+      "Ukrainian Hryvnia": "烏克蘭格里夫納",
+      "UAE Dirham": "阿聯酋迪拉姆",
+      "Uruguayan Peso": "烏拉圭比索",
+      "Uzbekistani Som": "烏茲別克索姆",
+      "Vanuatu Vatu": "瓦努阿圖瓦圖",
+      "Venezuelan Bolivar Soberano": "委內瑞拉玻利瓦爾·索貝拉諾",
+      "Vietnamese Dong": "越南盾",
+      "Yemeni Rial": "也門裡亞爾"
+    },
+    "labels": {
+      "United States - Dollar": "美國 - 美元",
+      "Europe - Euro": "歐洲 - 歐元",
+      "United Kingdom - Pound": "英國 - 英鎊",
+      "Japan - Yen": "日本 - 日元",
+      "Canada - Dollar": "加拿大 - 美元",
+      "Australia - Dollar": "澳洲 - 美元",
+      "Brazil - Real": "巴西 - 真實",
+      "Chile - Peso": "智利 - 比索",
+      "China - Yuan Renminbi": "中國 - 人民幣",
+      "Colombia - Peso": "哥倫比亞 - 比索",
+      "Denmark - Krone": "丹麥 - 克朗",
+      "Egypt - Pound": "埃及 - 英鎊",
+      "Hong Kong SAR - Dollar": "香港特別行政區 - 美元",
+      "India - Rupee": "印度 - 盧比",
+      "Kenya - Shilling": "肯亞 - 先令",
+      "Mexico - Peso": "墨西哥 - 比索",
+      "Nigeria - Naira": "奈及利亞 - 奈拉",
+      "New Zealand - Dollar": "紐西蘭 - 美元",
+      "Norway - Krone": "挪威 - 克朗",
+      "Philippines - Piso": "菲律賓 - 皮索",
+      "Poland - Zloty": "波蘭 - 茲羅提",
+      "Qatar - Riyal": "卡達 - 裡亞爾",
+      "Saudi Arabia - Riyal": "沙烏地阿拉伯 - 裡亞爾",
+      "Singapore - Dollar": "新加坡 - 美元",
+      "South Africa - Rand": "南非 - 蘭德",
+      "South Korea - Won": "韓國 - 贏",
+      "Sweden - Krona": "瑞典 - 克朗",
+      "Switzerland - Franc": "瑞士 - 法郎",
+      "Thailand - Baht": "泰國 - 泰銖",
+      "Turkey - Lira": "土耳其 - 里拉",
+      "Turkmenistan - Manat": "土庫曼 - 馬納特",
+      "Uganda - Shilling": "烏幹達 - 先令",
+      "Ukraine - Hryvnia": "烏克蘭 - 格里夫納",
+      "United Arab Emirates - Dirham": "阿拉伯聯合大公國 - 迪拉姆",
+      "Uruguay - Peso": "烏拉圭 - 比索",
+      "Uzbekistan - Som": "烏茲別克 - 索姆",
+      "Vanuatu - Vatu": "瓦努阿圖 - 瓦圖",
+      "Venezuela - Bolívar Soberano": "委內瑞拉 - 玻利瓦爾·索貝拉諾",
+      "Vietnam - Dong": "越南 - 侗族",
+      "Yemen - Rial": "也門 - 裡亞爾"
+    }
+  }
+}

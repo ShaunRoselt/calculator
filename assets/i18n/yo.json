@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Ẹrọ iṣiro",
+    "name": "Iṣiro"
+  },
+  "common": {
+    "back": "Pada",
+    "backspace": "Apahin",
+    "closeSidePanel": "Pa nronu"
+  },
+  "converter": {
+    "unitConverter": "Ayipada kuro",
+    "title": "Awọn oluyipada kuro",
+    "builtInCollections": "Awọn akojọpọ ti a ṣe sinu",
+    "category": "Ẹka",
+    "from": "Lati",
+    "to": "Si",
+    "inputValue": "Iye lati yi pada",
+    "convertedValue": "Iye iyipada",
+    "swapUnits": "Yipada awọn ẹya",
+    "keypad": "Bọtini iyipada",
+    "unit": "ẹyọkan",
+    "unitOptions": "awọn aṣayan ẹyọkan",
+    "currency": {
+      "updatingRates": "Nṣe imudojuiwọn awọn oṣuwọn…",
+      "updateRates": "Awọn oṣuwọn imudojuiwọn",
+      "keypad": "Bọtini bọtini owo",
+      "currency": "owo",
+      "options": "awọn aṣayan owo",
+      "updated": "Ti ṣe imudojuiwọn {timestamp}",
+      "status": {
+        "mockNote": "Awọn oṣuwọn itọkasi ẹgan fun demo ohun elo adaduro.",
+        "fetching": "Ngba awọn oṣuwọn itọkasi USD tuntun wa...",
+        "liveRatesLoaded": "Awọn oṣuwọn ifiwe ti kojọpọ lati ExchangeRate-API.",
+        "liveUpdateUnavailable": "Imudojuiwọn laaye ko si. Awọn oṣuwọn demo isọdọtun ni agbegbe."
+      }
+    },
+    "aboutEqualTo": "Nipa dọgba si"
+  },
+  "errors": {
+    "invalidInput": "Igbewọle ti ko tọ",
+    "cannotDivideByZero": "Ko le pin si odo",
+    "cannotModuloByZero": "Ko le ṣe modulo nipasẹ odo",
+    "invalidProgrammerOperation": "Iṣẹ ti ko tọ",
+    "overflow": "Abajade ti o tobi ju"
+  },
+  "date": {
+    "calculationMode": "Ipo iṣiro",
+    "from": "Lati",
+    "to": "Si",
+    "results": {
+      "difference": "Iyatọ",
+      "sameDates": "Ọjọ kanna",
+      "date": "Ọjọ"
+    },
+    "calculationModeOptions": "Awọn aṣayan ipo iṣiro",
+    "mode": {
+      "difference": "Iyatọ",
+      "shift": "Yipada"
+    },
+    "operation": "Iṣẹ",
+    "add": "Fikun-un",
+    "subtract": "Iyokuro",
+    "years": "Awọn ọdun",
+    "months": "Awọn oṣu",
+    "days": "Ọjọ",
+    "chooseDate": "Yan ọjọ",
+    "previousMonth": "Osu ti o ti kọja",
+    "nextMonth": "Osu to nbo",
+    "duration": {
+      "year": {
+        "one": "{count} ọdun",
+        "other": "{count} ọdun"
+      },
+      "month": {
+        "one": "{count} oṣu",
+        "other": "{count} osu"
+      },
+      "week": {
+        "one": "{count} ọsẹ",
+        "other": "{count} ọsẹ"
+      },
+      "day": {
+        "one": "{count} ọjọ",
+        "other": "{count} ọjọ"
+      }
+    },
+    "history": {
+      "differenceBetween": "Iyatọ laarin {from} ati {to}",
+      "addTo": "Ṣafikun {duration} si {date}",
+      "subtractFrom": "Iyokuro {duration} lati {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Ṣayẹwo ọrọ ti o ni afihan",
+    "enterExpression": "Tẹ ọrọ sii",
+    "canvas": "Kanfasi ayaworan",
+    "stopTracing": "Duro wiwa wa",
+    "startTracing": "Bẹrẹ wiwa",
+    "share": "Pinpin",
+    "options": "Awọn aṣayan",
+    "zoomIn": "Sun-un sinu",
+    "zoomInLabel": "Sun-un sinu",
+    "zoomOut": "Sun-un sita",
+    "zoomOutLabel": "Sun-un jade",
+    "refreshViewAutomatically": "Tuntun wiwo laifọwọyi",
+    "view": "Wo",
+    "expressions": "Awọn ikosile",
+    "mobileView": "Wiwo alagbeka",
+    "showGraph": "Fi aworan han",
+    "showExpressions": "Ṣafihan awọn ikosile",
+    "backToFunctionList": "Pada si atokọ iṣẹ",
+    "window": "Ferese",
+    "resetView": "Atunto wiwo",
+    "units": "Awọn ẹya",
+    "radians": "Radians",
+    "degrees": "Awọn ipele",
+    "gradians": "Gradian",
+    "lineThickness": "sisanra laini",
+    "theme": "Akori",
+    "alwaysLight": "Ina nigbagbogbo",
+    "matchAppTheme": "Akori app baramu",
+    "groups": {
+      "inequalities": "Awọn aidogba",
+      "trigonometry": "Trigonometry",
+      "function": "Iṣẹ"
+    },
+    "functions": "Awọn iṣẹ",
+    "showEquation": "Ṣafihan idogba",
+    "hideEquation": "Tọju idogba",
+    "lineOptions": "Awọn aṣayan ila",
+    "color": "Awọ",
+    "style": "Iri",
+    "analysis": {
+      "title": "Itupalẹ",
+      "domain": "Ibugbe",
+      "range": "Agbegbe",
+      "xIntercept": "x-intercept",
+      "yIntercept": "y-intercept",
+      "minima": "Minima",
+      "maxima": "Maxima",
+      "inflectionPoints": "Awọn aaye ifọkasi",
+      "verticalAsymptotes": "Awọn asymptotes inaro",
+      "horizontalAsymptotes": "Awọn asymptotes petele",
+      "obliqueAsymptotes": "Awọn asymptotes oblique",
+      "parity": "Ibaṣepọ",
+      "period": "Akoko",
+      "monotonicity": "Akankan",
+      "domainNone": "Ko si awọn ihamọ agbegbe",
+      "rangeNone": "Ko si awọn ihamọ ibiti",
+      "xInterceptNone": "Ko si awọn idalọwọduro x",
+      "yInterceptNone": "Ko si y-idasi",
+      "minimaNone": "Ko si minima",
+      "maximaNone": "Ko si maxima",
+      "inflectionNone": "Ko si awọn aaye ipalọlọ",
+      "verticalAsymptotesNone": "Ko si awọn asymptotes inaro",
+      "horizontalAsymptotesNone": "Ko si awọn asymptotes petele",
+      "obliqueAsymptotesNone": "Ko si awọn asymptotes oblique",
+      "parityUnknown": "Aimọ",
+      "parityOdd": "Odd",
+      "parityEven": "Paapaa",
+      "parityNeither": "Bẹẹkọ",
+      "periodicityUnknown": "Aimọ",
+      "periodicityNotPeriodic": "Kii ṣe igbakọọkan",
+      "monotonicityConstant": "Ibakan",
+      "monotonicityIncreasing": "Npọ si",
+      "monotonicityDecreasing": "N dinku",
+      "monotonicityUnknown": "Aimọ",
+      "monotonicityError": "Ko le pinnu",
+      "featureTooComplexPlural": "Idiju pupọ lati ṣe itupalẹ",
+      "analysisCouldNotBePerformed": "A ko le ṣe itupalẹ",
+      "analysisNotSupported": "Ayẹwo ko ni atilẹyin",
+      "variableIsNotX": "Ayipada kii ṣe x"
+    },
+    "plottingExpressions": "Idite {count} awọn ikosile",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Mini",
+    "yMax": "Y-Max",
+    "selectExpression": "Yan ikosile {index}",
+    "expressionIndex": "ikosile {index}",
+    "analyzeFunction": "Ṣe itupalẹ iṣẹ",
+    "changeEquationStyle": "Yi ara idogba pada",
+    "removeEquation": "Yọ idogba kuro",
+    "lineStyle": {
+      "solid": "Aṣa ila ti o lagbara",
+      "dash": "Dash ila ara",
+      "dot": "Iri ila aami"
+    }
+  },
+  "history": {
+    "empty": "Itan jẹ ofo",
+    "clearAll": "Pa gbogbo rẹ kuro",
+    "clear": "Pa itan-akọọlẹ kuro",
+    "title": "Itan",
+    "andMemory": "Itan ati Iranti",
+    "aria": {
+      "historyPanel": "Pẹnalẹ itan",
+      "historyAndMemoryPanel": "Itan ati igbimọ iranti"
+    },
+    "closeFlyout": "Pa itan-akọọlẹ pa",
+    "openFlyout": "Itan ṣiṣi"
+  },
+  "memory": {
+    "empty": "Iranti sofo",
+    "clearItem": "Pa ohun kan kuro",
+    "addCurrentValue": "Ṣafikun iye lọwọlọwọ",
+    "subtractCurrentValue": "Yọ iye lọwọlọwọ kuro",
+    "clearAll": "Pa gbogbo rẹ kuro",
+    "clear": "Pa iranti kuro",
+    "title": "Iranti",
+    "controls": "Awọn iṣakoso iranti",
+    "tooltips": {
+      "clearAll": "Ko gbogbo iranti kuro",
+      "recall": "ÌRÁNTÍ lati iranti",
+      "add": "Fi kun si iranti",
+      "subtract": "Yọkuro lati iranti",
+      "store": "Itaja ni iranti"
+    },
+    "recallValue": "Iranti iranti {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Lilọ kiri",
+      "closeNavigation": "Pa lilọ kiri",
+      "openNavigation": "Ṣii lilọ kiri"
+    },
+    "groups": {
+      "calculator": "Ẹrọ iṣiro",
+      "converter": "Ayipada"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Aparẹ isipade Bit",
+    "baseReadouts": "Awọn kika ipilẹ",
+    "surfaceMode": "Ipo oju",
+    "fullKeypad": "Bọtini foonu ni kikun",
+    "showKeypad": "Ṣafihan oriṣi bọtini",
+    "bitTogglingKeypad": "Bọtini togling bit",
+    "showBitView": "Ṣafihan iwo diẹ",
+    "wordSize": "Iwọn ọrọ",
+    "bitwise": "Bitwise",
+    "bitShift": "Iyipada diẹ"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometry",
+      "function": "Iṣẹ",
+      "functionsAria": "Awọn iṣẹ",
+      "trigonometricFunctionsAria": "Awọn iṣẹ trigonometric",
+      "angleUnit": "Ẹyọ igun {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Irisi",
+      "themeTitle": "Akori",
+      "themeDescription": "Yan eto awọ kan",
+      "light": "Imọlẹ",
+      "dark": "Dudu",
+      "blue": "bulu",
+      "green": "Alawọ ewe",
+      "system": "Eto"
+    },
+    "language": {
+      "group": "Ede",
+      "title": "Ede",
+      "description": "Yan ede ti o fẹ"
+    },
+    "about": {
+      "group": "Nipa"
+    },
+    "feedback": "Fi esi ranṣẹ",
+    "contribute": {
+      "prefix": "Ṣe alabapin si",
+      "link": "GitHub",
+      "suffix": "lati ṣe iranlọwọ imudara ẹrọ iṣiro yii"
+    },
+    "links": {
+      "repository": "Ibi ipamọ ise agbese",
+      "readme": "README",
+      "license": "MIT iwe-ašẹ"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Boṣewa",
+      "subtitle": "Ayebaye lẹsẹkẹsẹ"
+    },
+    "scientific": {
+      "label": "Imọ ijinle sayensi",
+      "subtitle": "Awọn oniṣẹ, awọn iṣẹ, ati atilẹyin ikosile"
+    },
+    "graphing": {
+      "label": "Iyaworan",
+      "subtitle": "Gbero ọrọ ti o rọrun lori ọkọ ofurufu cartesian kan"
+    },
+    "programmer": {
+      "label": "Oluṣeto",
+      "subtitle": "Iṣiro odidi pẹlu iyipada ipilẹ"
+    },
+    "date": {
+      "label": "Iṣiro ọjọ",
+      "subtitle": "Wa awọn akoko ati awọn ọjọ iyipada"
+    },
+    "currency": {
+      "label": "Owo",
+      "subtitle": "Yipada awọn oṣuwọn paṣipaarọ ẹlẹgàn"
+    },
+    "volume": {
+      "label": "Iwọn didun",
+      "subtitle": "Yipada awọn wiwọn iwọn didun"
+    },
+    "length": {
+      "label": "Gigun",
+      "subtitle": "Yipada ijinna ati awọn ẹya gigun"
+    },
+    "weight": {
+      "label": "Iwọn ati Ibi",
+      "subtitle": "Yipada iwuwo ati awọn ẹyọ titobi"
+    },
+    "temperature": {
+      "label": "Iwọn otutu",
+      "subtitle": "Yipada awọn iwọn otutu"
+    },
+    "energy": {
+      "label": "Agbara",
+      "subtitle": "Yipada awọn iwọn agbara"
+    },
+    "area": {
+      "label": "Agbegbe",
+      "subtitle": "Yipada awọn wiwọn agbegbe"
+    },
+    "speed": {
+      "label": "Iyara",
+      "subtitle": "Yiyipada awọn wiwọn iyara"
+    },
+    "time": {
+      "label": "Akoko",
+      "subtitle": "Yipada awọn wiwọn akoko"
+    },
+    "power": {
+      "label": "Agbara",
+      "subtitle": "Yipada awọn iwọn agbara"
+    },
+    "data": {
+      "label": "Data",
+      "subtitle": "Yipada awọn ibi ipamọ oni nọmba"
+    },
+    "pressure": {
+      "label": "Titẹ",
+      "subtitle": "Yipada awọn ẹya titẹ"
+    },
+    "angle": {
+      "label": "Igun",
+      "subtitle": "Yipada awọn wiwọn igun"
+    },
+    "settings": {
+      "label": "Eto",
+      "subtitle": "Irisi ati alaye app"
+    }
+  },
+  "categories": {
+    "Currency": "Owo",
+    "Volume": "Iwọn didun",
+    "Length": "Gigun",
+    "Mass": "Mass",
+    "Temperature": "Iwọn otutu",
+    "Energy": "Agbara",
+    "Area": "Agbegbe",
+    "Speed": "Iyara",
+    "Time": "Akoko",
+    "Power": "Agbara",
+    "Data": "Data",
+    "Pressure": "Titẹ",
+    "Angle": "Igun"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanometers",
+      "Microns": "Awọn micron",
+      "Millimeters": "Milimita",
+      "Centimeters": "Awọn centimeters",
+      "Meters": "Mita",
+      "Kilometers": "Ibusọ",
+      "Inches": "Inṣi",
+      "Feet": "Ẹsẹ",
+      "Yards": "Awọn àgbàlá",
+      "Miles": "Miles",
+      "Nautical miles": "Nautical miles",
+      "paperclips": "awọn agekuru iwe",
+      "hands": "ọwọ",
+      "jumbo jets": "awọn ọkọ ofurufu jumbo",
+      "Carats": "Carats",
+      "Milligrams": "Miligiramu",
+      "Centigrams": "Awọn centigiramu",
+      "Decigrams": "Decigrams",
+      "Grams": "Giramu",
+      "Dekagrams": "Dekagrams",
+      "Hectograms": "Awọn hectogram",
+      "Kilograms": "kilogram",
+      "Metric tonnes": "Awọn tonnu metiriki",
+      "Ounces": "iwon",
+      "Pounds": "iwon",
+      "Stone": "Okuta",
+      "Short tons (US)": "Awọn toonu kukuru (AMẸRIKA)",
+      "Long tons (UK)": "Awọn toonu gigun (UK)",
+      "snowflakes": "Eyin yinyin",
+      "soccer balls": "bọọlu afẹsẹgba",
+      "elephants": "erin",
+      "whales": "ẹja nlanla",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Milionu",
+      "Cubic centimeters": "Iwọn sẹntimita onigun",
+      "Liters": "Liters",
+      "Cubic meters": "Awọn mita onigun",
+      "Teaspoons (US)": "Awọn apọn (AMẸRIKA)",
+      "Tablespoons (US)": "Awọn ọpọ́n tabili (AMẸRIKA)",
+      "Fluid ounces (US)": "Awọn iwon omi (AMẸRIKA)",
+      "Cups (US)": "Awọn ife (AMẸRIKA)",
+      "Pints (US)": "Pints (AMẸRIKA)",
+      "Quarts (US)": "Awọn mẹẹdogun (AMẸRIKA)",
+      "Gallons (US)": "Lọ (AMẸRIKA)",
+      "Cubic inches": "Inṣi onigun",
+      "Cubic feet": "Ẹsẹ onigun",
+      "Cubic yards": "Awọn agbala onigun",
+      "Teaspoons (UK)": "Awọn apọn (UK)",
+      "Tablespoons (UK)": "Awọn ọpọ́n tabili (UK)",
+      "Fluid ounces (UK)": "Awọn iwon omi (UK)",
+      "Pints (UK)": "Pints (UK)",
+      "Quarts (UK)": "Quarts (UK)",
+      "Gallons (UK)": "Awọn galonu (UK)",
+      "coffee cups": "awọn ife kọfi",
+      "bathtubs": "awọn ibi iwẹ",
+      "swimming pools": "awọn adagun omi",
+      "Square millimeters": "Awọn milimita onigun",
+      "Square centimeters": "Ogun sẹntimita",
+      "Square meters": "Awọn mita onigun",
+      "Hectares": "saare",
+      "Square kilometers": "Ibugbe onigun",
+      "Square inches": "Square inches",
+      "Square feet": "Ẹsẹ onigun",
+      "Square yards": "Awọn agbala onigun",
+      "Acres": "Awon eka",
+      "Square miles": "Ibusọ onigun",
+      "sheets of paper": "iwe ti iwe",
+      "soccer fields": "awọn aaye bọọlu afẹsẹgba",
+      "castles": "awọn ile-iṣọ",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Awọn centimeters fun iṣẹju kan",
+      "Meters per second": "Mita fun iṣẹju kan",
+      "Kilometers per hour": "Ibusọ fun wakati kan",
+      "Feet per second": "Ẹsẹ ni iṣẹju-aaya",
+      "Miles per hour": "maili fun wakati kan",
+      "Knots": "Awọn sorapo",
+      "Mach": "Mach",
+      "turtles": "awọn ijapa",
+      "horses": "ẹṣin",
+      "jets": "awọn ọkọ ofurufu",
+      "Watts": "Wattis",
+      "Kilowatts": "kilowatt",
+      "Horsepower (US)": "Ẹṣin (AMẸRIKA)",
+      "Foot-pounds/minute": "Ẹsẹ-poun/iṣẹju",
+      "BTUs/minute": "BTUs/iseju",
+      "light bulbs": "awọn gilobu ina",
+      "train engines": "reluwe enjini",
+      "Thermal calories": "Awọn kalori igbona",
+      "Food calories": "Awọn kalori ounjẹ",
+      "British thermal units": "Awọn ẹya igbona ti Ilu Gẹẹsi",
+      "Kilojoules": "kilojoules",
+      "Kilowatt-hours": "Kilowatt-wakati",
+      "Electron volts": "Electron folti",
+      "Joules": "Joules",
+      "Foot-pounds": "Poun ẹsẹ",
+      "batteries": "awọn batiri",
+      "bananas": "ogede",
+      "slices of cake": "awọn ege akara oyinbo",
+      "Bits": "Awọn ege",
+      "Nibble": "Nibble",
+      "Bytes": "Awọn baiti",
+      "Kilobits": "kilobits",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "kilobytes",
+      "Kibibytes": "Kibibytes",
+      "Megabits": "Megabits",
+      "Mebibits": "Mebits",
+      "Megabytes": "Megabytes",
+      "Mebibytes": "Mebibytes",
+      "Gigabits": "Gigabits",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Gigabytes",
+      "Gibibytes": "Gibibytes",
+      "Terabits": "Terabits",
+      "Tebibits": "Tibibits",
+      "Terabytes": "Terabytes",
+      "Tebibytes": "Tebibytes",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebilets",
+      "Petabytes": "Petabytes",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Exabits",
+      "Exbibits": "Awọn ifihan",
+      "Exabytes": "Exabyte",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebits",
+      "Zetabytes": "Zetabytes",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabytes",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "awọn disiki floppy",
+      "CDs": "Awọn CD",
+      "DVDs": "DVDs",
+      "Atmospheres": "Afẹfẹ",
+      "Bars": "Awọn ifipa",
+      "Kilopascals": "kilopascals",
+      "Millimeters of mercury": "Millimeters of mercury",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Awọn poun fun inch square",
+      "Degrees": "Awọn ipele",
+      "Radians": "Awọn redio",
+      "Gradians": "Gradian",
+      "Microseconds": "Awọn iṣẹju-aaya",
+      "Milliseconds": "Awọn iṣẹju-aaya",
+      "Seconds": "iṣẹju-aaya",
+      "Minutes": "Iṣẹju",
+      "Hours": "Awọn wakati",
+      "Days": "Ọjọ",
+      "Weeks": "Awọn ọsẹ",
+      "Years": "Awọn ọdun"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Dọla AMẸRIKA",
+      "Euro": "Euro",
+      "British Pound": "Pound British",
+      "Japanese Yen": "Yeni Japanese",
+      "Canadian Dollar": "Dola Canada",
+      "Australian Dollar": "Dọla Ọstrelia",
+      "Brazilian Real": "Brazil gidi",
+      "Chilean Peso": "Peso Chile",
+      "Chinese Yuan": "Yuan Kannada",
+      "Colombian Peso": "Colombian Peso",
+      "Danish Krone": "Krone Danish",
+      "Egyptian Pound": "Iwon ara Egipti",
+      "Hong Kong Dollar": "Hong Kong Dọla",
+      "Indian Rupee": "Rupe India",
+      "Kenyan Shilling": "Shilling Kenya",
+      "Mexican Peso": "Peso Mexico",
+      "Nigerian Naira": "Naira Naijiria",
+      "New Zealand Dollar": "Dola New Zealand",
+      "Norwegian Krone": "Krone Norwegian",
+      "Philippine Piso": "Philippines Piso",
+      "Polish Zloty": "Polish Zloty",
+      "Qatari Riyal": "Qatar Riyal",
+      "Saudi Riyal": "Rial Saudi",
+      "Singapore Dollar": "Dola Singapore",
+      "South African Rand": "Rand South Africa",
+      "South Korean Won": "South Korean Won",
+      "Swedish Krona": "Krona Swedish",
+      "Swiss Franc": "Franc Swiss",
+      "Thai Baht": "Thai Baht",
+      "Turkish Lira": "Lira ti Tọki",
+      "Turkmenistani Manat": "Turkmenistan Manat",
+      "Ugandan Shilling": "Uganda Shilling",
+      "Ukrainian Hryvnia": "Hryvnia Ti Ukarain",
+      "UAE Dirham": "Dirham UAE",
+      "Uruguayan Peso": "Uruguayan Peso",
+      "Uzbekistani Som": "Usibekisitani Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuela Bolívar Soberano",
+      "Vietnamese Dong": "Dong Vietnamese",
+      "Yemeni Rial": "Rial Yemen"
+    },
+    "labels": {
+      "United States - Dollar": "Orilẹ Amẹrika - Dọla",
+      "Europe - Euro": "Yuroopu - Euro",
+      "United Kingdom - Pound": "Ijọba Gẹẹsi - Iwon",
+      "Japan - Yen": "Japan - Yen",
+      "Canada - Dollar": "Canada - Dọla",
+      "Australia - Dollar": "Australia - Dọla",
+      "Brazil - Real": "Brazil – Otitọ",
+      "Chile - Peso": "Chile - Peso",
+      "China - Yuan Renminbi": "China - Yuan Renminbi",
+      "Colombia - Peso": "Colombia - Peso",
+      "Denmark - Krone": "Denmark - Kroni",
+      "Egypt - Pound": "Egipti - Iwon",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - dola",
+      "India - Rupee": "India - Rupe",
+      "Kenya - Shilling": "Kenya - Shilling",
+      "Mexico - Peso": "Mexico - Peso",
+      "Nigeria - Naira": "Naijiria - Naira",
+      "New Zealand - Dollar": "Ilu Niu silandii - Dọla",
+      "Norway - Krone": "Norway - Kroni",
+      "Philippines - Piso": "Philippines - Piso",
+      "Poland - Zloty": "Poland - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Saudi Arabia - Riyal",
+      "Singapore - Dollar": "Singapore - Dọla",
+      "South Africa - Rand": "South Africa - Rand",
+      "South Korea - Won": "South Korea - Won",
+      "Sweden - Krona": "Sweden - Krona",
+      "Switzerland - Franc": "Siwitsalandi - Franc",
+      "Thailand - Baht": "Thailand - Baht",
+      "Turkey - Lira": "Tọki - Lira",
+      "Turkmenistan - Manat": "Tọkimenisitani - Manat",
+      "Uganda - Shilling": "Uganda - Shilling",
+      "Ukraine - Hryvnia": "Yukirenia - Hryvnia",
+      "United Arab Emirates - Dirham": "United Arab Emirates - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Usibekisitani - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemen - Rial"
+    }
+  }
+}

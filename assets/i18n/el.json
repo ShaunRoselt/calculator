@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Αριθμομηχανή",
+    "name": "Αριθμομηχανή"
+  },
+  "common": {
+    "back": "Επιστροφή",
+    "backspace": "Backspace",
+    "closeSidePanel": "Κλείστε το πλαίσιο"
+  },
+  "converter": {
+    "unitConverter": "Μετατροπέας μονάδων",
+    "title": "Μετατροπείς μονάδων",
+    "builtInCollections": "Ενσωματωμένες συλλογές",
+    "category": "Κατηγορία",
+    "from": "Από",
+    "to": "Προς",
+    "inputValue": "Τιμή προς μετατροπή",
+    "convertedValue": "Τιμή μετατροπής",
+    "swapUnits": "Ανταλλαγή μονάδων",
+    "keypad": "Πληκτρολόγιο μετατροπέα",
+    "unit": "μονάδα",
+    "unitOptions": "επιλογές μονάδας",
+    "currency": {
+      "updatingRates": "Ενημέρωση ποσοστών…",
+      "updateRates": "Ποσοστά ενημέρωσης",
+      "keypad": "Πληκτρολόγιο νομίσματος",
+      "currency": "νόμισμα",
+      "options": "επιλογές νομίσματος",
+      "updated": "Ενημερώθηκε {timestamp}",
+      "status": {
+        "mockNote": "Προσεγμένες τιμές αναφοράς για την αυτόνομη επίδειξη εφαρμογής.",
+        "fetching": "Λήψη των πιο πρόσφατων τιμών αναφοράς σε USD...",
+        "liveRatesLoaded": "Οι ζωντανές τιμές φορτώθηκαν από το ExchangeRate-API.",
+        "liveUpdateUnavailable": "Η ζωντανή ενημέρωση δεν είναι διαθέσιμη. Ανανεωμένες τιμές επίδειξης τοπικά."
+      }
+    },
+    "aboutEqualTo": "Περίπου ίσο με"
+  },
+  "errors": {
+    "invalidInput": "Μη έγκυρη εισαγωγή",
+    "cannotDivideByZero": "Δεν είναι δυνατή η διαίρεση με το μηδέν",
+    "cannotModuloByZero": "Δεν είναι δυνατή η διαμόρφωση με μηδέν",
+    "invalidProgrammerOperation": "Μη έγκυρη λειτουργία",
+    "overflow": "Το αποτέλεσμα είναι πολύ μεγάλο"
+  },
+  "date": {
+    "calculationMode": "Λειτουργία υπολογισμού",
+    "from": "Από",
+    "to": "Προς",
+    "results": {
+      "difference": "Διαφορά",
+      "sameDates": "Ίδιες ημερομηνίες",
+      "date": "Ημερομηνία"
+    },
+    "calculationModeOptions": "Επιλογές λειτουργίας υπολογισμού",
+    "mode": {
+      "difference": "Διαφορά",
+      "shift": "Shift"
+    },
+    "operation": "Λειτουργία",
+    "add": "Προσθήκη",
+    "subtract": "Αφαίρεση",
+    "years": "Έτη",
+    "months": "Μήνες",
+    "days": "Ημέρες",
+    "chooseDate": "Επιλέξτε ημερομηνία",
+    "previousMonth": "Προηγούμενος μήνας",
+    "nextMonth": "Τον επόμενο μήνα",
+    "duration": {
+      "year": {
+        "one": "{count} έτος",
+        "other": "{count} έτη"
+      },
+      "month": {
+        "one": "{count} μήνας",
+        "other": "{count} μήνες"
+      },
+      "week": {
+        "one": "{count} εβδομάδα",
+        "other": "{count} εβδομάδες"
+      },
+      "day": {
+        "one": "{count} ημέρα",
+        "other": "{count} ημέρες"
+      }
+    },
+    "history": {
+      "differenceBetween": "Διαφορά μεταξύ {from} και {to}",
+      "addTo": "Προσθήκη {duration} σε {date}",
+      "subtractFrom": "Αφαίρεση {duration} από {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Ελέγξτε την επισημασμένη έκφραση",
+    "enterExpression": "Εισαγάγετε μια έκφραση",
+    "canvas": "Καμβάς γραφήματος",
+    "stopTracing": "Διακοπή ανίχνευσης",
+    "startTracing": "Έναρξη ανίχνευσης",
+    "share": "Κοινή χρήση",
+    "options": "Επιλογές",
+    "zoomIn": "Μεγέθυνση",
+    "zoomInLabel": "Μεγέθυνση",
+    "zoomOut": "Σμίκρυνση",
+    "zoomOutLabel": "Σμίκρυνση",
+    "refreshViewAutomatically": "Αυτόματη ανανέωση της προβολής",
+    "view": "Προβολή",
+    "expressions": "Εκφράσεις",
+    "mobileView": "Προβολή κινητού",
+    "showGraph": "Εμφάνιση γραφήματος",
+    "showExpressions": "Εμφάνιση εκφράσεων",
+    "backToFunctionList": "Επιστροφή στη λίστα λειτουργιών",
+    "window": "Παράθυρο",
+    "resetView": "Επαναφορά προβολής",
+    "units": "Μονάδες",
+    "radians": "Ακτίνια",
+    "degrees": "Πτυχία",
+    "gradians": "Gradians",
+    "lineThickness": "Πάχος γραμμής",
+    "theme": "Θέμα",
+    "alwaysLight": "Πάντα ελαφρύ",
+    "matchAppTheme": "Αντιστοιχίστε το θέμα της εφαρμογής",
+    "groups": {
+      "inequalities": "Ανισότητες",
+      "trigonometry": "Τριγωνομετρία",
+      "function": "Λειτουργία"
+    },
+    "functions": "Λειτουργίες",
+    "showEquation": "Εμφάνιση εξίσωσης",
+    "hideEquation": "Απόκρυψη εξίσωσης",
+    "lineOptions": "Επιλογές γραμμής",
+    "color": "Χρώμα",
+    "style": "Στυλ",
+    "analysis": {
+      "title": "Ανάλυση",
+      "domain": "Τομέας",
+      "range": "Εύρος",
+      "xIntercept": "χ-τομή",
+      "yIntercept": "y-τομή",
+      "minima": "Ελάχιστο",
+      "maxima": "Maxima",
+      "inflectionPoints": "Σημεία καμπής",
+      "verticalAsymptotes": "Κάθετες ασύμπτωτες",
+      "horizontalAsymptotes": "Οριζόντιες ασύμπτωτες",
+      "obliqueAsymptotes": "Πλάγιες ασύμπτωτες",
+      "parity": "Ισοτιμία",
+      "period": "Περίοδος",
+      "monotonicity": "Μονοτονικότητα",
+      "domainNone": "Δεν υπάρχουν περιορισμοί τομέα",
+      "rangeNone": "Δεν υπάρχουν περιορισμοί εύρους",
+      "xInterceptNone": "Δεν υπάρχουν παρεμβολές x",
+      "yInterceptNone": "Κανένα y-intertains",
+      "minimaNone": "Δεν υπάρχουν ελάχιστα",
+      "maximaNone": "Δεν υπάρχουν μέγιστα",
+      "inflectionNone": "Δεν υπάρχουν σημεία καμπής",
+      "verticalAsymptotesNone": "Χωρίς κάθετες ασύμπτωτες",
+      "horizontalAsymptotesNone": "Χωρίς οριζόντια ασύμπτωτα",
+      "obliqueAsymptotesNone": "Χωρίς λοξές ασυμπτώσεις",
+      "parityUnknown": "Άγνωστο",
+      "parityOdd": "Περίον",
+      "parityEven": "Ακόμη",
+      "parityNeither": "Κανένα από τα δύο",
+      "periodicityUnknown": "Άγνωστο",
+      "periodicityNotPeriodic": "Μη περιοδικό",
+      "monotonicityConstant": "Σταθερά",
+      "monotonicityIncreasing": "Αύξηση",
+      "monotonicityDecreasing": "Μειώνεται",
+      "monotonicityUnknown": "Άγνωστο",
+      "monotonicityError": "Δεν είναι δυνατός ο προσδιορισμός",
+      "featureTooComplexPlural": "Υπερβολικά περίπλοκο για ανάλυση",
+      "analysisCouldNotBePerformed": "Δεν ήταν δυνατή η εκτέλεση της ανάλυσης",
+      "analysisNotSupported": "Η ανάλυση δεν υποστηρίζεται",
+      "variableIsNotX": "Η μεταβλητή δεν είναι x"
+    },
+    "plottingExpressions": "Σχεδίαση {count} εκφράσεων",
+    "xMin": "Χ-λεπτ",
+    "xMax": "X-Max",
+    "yMin": "Ε-Ελπ",
+    "yMax": "Y-Max",
+    "selectExpression": "Επιλέξτε έκφραση {index}",
+    "expressionIndex": "Έκφραση {index}",
+    "analyzeFunction": "Ανάλυση συνάρτησης",
+    "changeEquationStyle": "Αλλαγή στυλ εξίσωσης",
+    "removeEquation": "Κατάργηση εξίσωσης",
+    "lineStyle": {
+      "solid": "Στιλ συμπαγούς γραμμής",
+      "dash": "Στυλ γραμμής παύλας",
+      "dot": "Στυλ γραμμής κουκκίδας"
+    }
+  },
+  "history": {
+    "empty": "Το ιστορικό είναι κενό",
+    "clearAll": "Διαγραφή όλων",
+    "clear": "Διαγραφή ιστορικού",
+    "title": "Ιστορικό",
+    "andMemory": "Ιστορία και Μνήμη",
+    "aria": {
+      "historyPanel": "Πίνακας ιστορικού",
+      "historyAndMemoryPanel": "Πίνακας ιστορικού και μνήμης"
+    },
+    "closeFlyout": "Κλείσιμο ιστορικού",
+    "openFlyout": "Άνοιγμα ιστορικού"
+  },
+  "memory": {
+    "empty": "Η μνήμη είναι κενή",
+    "clearItem": "Διαγραφή στοιχείου",
+    "addCurrentValue": "Προσθέστε την τρέχουσα τιμή",
+    "subtractCurrentValue": "Αφαιρέστε την τρέχουσα τιμή",
+    "clearAll": "Διαγραφή όλων",
+    "clear": "Διαγραφή μνήμης",
+    "title": "Μνήμη",
+    "controls": "Στοιχεία ελέγχου μνήμης",
+    "tooltips": {
+      "clearAll": "Διαγραφή όλης της μνήμης",
+      "recall": "Ανάκληση από τη μνήμη",
+      "add": "Προσθήκη στη μνήμη",
+      "subtract": "Αφαίρεση από τη μνήμη",
+      "store": "Αποθήκευση στη μνήμη"
+    },
+    "recallValue": "Μνήμη ανάκλησης {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Πλοήγηση",
+      "closeNavigation": "Κλείσιμο πλοήγησης",
+      "openNavigation": "Άνοιγμα πλοήγησης"
+    },
+    "groups": {
+      "calculator": "Αριθμομηχανή",
+      "converter": "Μετατροπέας"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Πίνακας αναστροφής bit",
+    "baseReadouts": "Βασικές ενδείξεις",
+    "surfaceMode": "Λειτουργία επιφάνειας",
+    "fullKeypad": "Πλήρες πληκτρολόγιο",
+    "showKeypad": "Εμφάνιση πληκτρολογίου",
+    "bitTogglingKeypad": "Πληκτρολόγιο εναλλαγής bit",
+    "showBitView": "Εμφάνιση προβολής bit",
+    "wordSize": "Μέγεθος λέξης",
+    "bitwise": "Από bitwise",
+    "bitShift": "Μετατόπιση bit"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Τριγωνομετρία",
+      "function": "Λειτουργία",
+      "functionsAria": "Λειτουργίες",
+      "trigonometricFunctionsAria": "Τριγωνομετρικές συναρτήσεις",
+      "angleUnit": "Μονάδα γωνίας {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Εμφάνιση",
+      "themeTitle": "Θέμα",
+      "themeDescription": "Επιλέξτε έναν συνδυασμό χρωμάτων",
+      "light": "Φως",
+      "dark": "Σκοτεινό",
+      "blue": "Μπλε",
+      "green": "Πράσινο",
+      "system": "Σύστημα"
+    },
+    "language": {
+      "group": "Γλώσσα",
+      "title": "Γλώσσα",
+      "description": "Επιλέξτε τη γλώσσα που προτιμάτε"
+    },
+    "about": {
+      "group": "Περίπου"
+    },
+    "feedback": "Αποστολή σχολίων",
+    "contribute": {
+      "prefix": "Συμβάλετε στο",
+      "link": "GitHub",
+      "suffix": "για να βοηθήσετε στη βελτίωση αυτής της αριθμομηχανής"
+    },
+    "links": {
+      "repository": "Αποθήκη έργου",
+      "readme": "ΔΙΑΒΑΣΤΕ",
+      "license": "Άδεια MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Τυπικό",
+      "subtitle": "Κλασική άμεση αξιολόγηση"
+    },
+    "scientific": {
+      "label": "Επιστημονική",
+      "subtitle": "Υποστήριξη χειριστών, συναρτήσεων και έκφρασης"
+    },
+    "graphing": {
+      "label": "Γράφημα",
+      "subtitle": "Σχεδιάστε μια απλή έκφραση σε καρτεσιανό επίπεδο"
+    },
+    "programmer": {
+      "label": "Προγραμματιστής",
+      "subtitle": "Ακέραια μαθηματικά με μετατροπή βάσης"
+    },
+    "date": {
+      "label": "Υπολογισμός ημερομηνίας",
+      "subtitle": "Βρείτε τις διάρκειες και τις ημερομηνίες βάρδιας"
+    },
+    "currency": {
+      "label": "Νόμισμα",
+      "subtitle": "Μετατροπή ψευδών συναλλαγματικών ισοτιμιών"
+    },
+    "volume": {
+      "label": "Τόμος",
+      "subtitle": "Μετατροπή μετρήσεων όγκου"
+    },
+    "length": {
+      "label": "Μήκος",
+      "subtitle": "Μετατροπή μονάδων απόστασης και μήκους"
+    },
+    "weight": {
+      "label": "Βάρος και μάζα",
+      "subtitle": "Μετατροπή μονάδων βάρους και μάζας"
+    },
+    "temperature": {
+      "label": "Θερμοκρασία",
+      "subtitle": "Μετατροπή κλίμακες θερμοκρασίας"
+    },
+    "energy": {
+      "label": "Ενέργεια",
+      "subtitle": "Μετατροπή μετρήσεων ενέργειας"
+    },
+    "area": {
+      "label": "Περιοχή",
+      "subtitle": "Μετατροπή μετρήσεων περιοχής"
+    },
+    "speed": {
+      "label": "Ταχύτητα",
+      "subtitle": "Μετατροπή μετρήσεων ταχύτητας"
+    },
+    "time": {
+      "label": "Ώρα",
+      "subtitle": "Μετατροπή μετρήσεων χρόνου"
+    },
+    "power": {
+      "label": "Ισχύς",
+      "subtitle": "Μετατροπή μετρήσεων ισχύος"
+    },
+    "data": {
+      "label": "Δεδομένα",
+      "subtitle": "Μετατροπή ψηφιακών μονάδων αποθήκευσης"
+    },
+    "pressure": {
+      "label": "Πίεση",
+      "subtitle": "Μετατροπή μονάδων πίεσης"
+    },
+    "angle": {
+      "label": "Γωνία",
+      "subtitle": "Μετατροπή μετρήσεων γωνίας"
+    },
+    "settings": {
+      "label": "Ρυθμίσεις",
+      "subtitle": "Εμφάνιση και πληροφορίες εφαρμογής"
+    }
+  },
+  "categories": {
+    "Currency": "Νόμισμα",
+    "Volume": "Τόμος",
+    "Length": "Μήκος",
+    "Mass": "Μάζα",
+    "Temperature": "Θερμοκρασία",
+    "Energy": "Ενέργεια",
+    "Area": "Περιοχή",
+    "Speed": "Ταχύτητα",
+    "Time": "Ώρα",
+    "Power": "Ισχύς",
+    "Data": "Δεδομένα",
+    "Pressure": "Πίεση",
+    "Angle": "Γωνία"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Νανόμετρα",
+      "Microns": "Μικρά",
+      "Millimeters": "Χιλιοστά",
+      "Centimeters": "εκατοστά",
+      "Meters": "Μέτρα",
+      "Kilometers": "Χιλιόμετρα",
+      "Inches": "Ίντσες",
+      "Feet": "Πόδια",
+      "Yards": "Γυάρδες",
+      "Miles": "Μίλια",
+      "Nautical miles": "Ναυτικά μίλια",
+      "paperclips": "κλιπ",
+      "hands": "χέρια",
+      "jumbo jets": "τζάμπο τζετ",
+      "Carats": "Καράτια",
+      "Milligrams": "Χιλιοστόγραμμα",
+      "Centigrams": "Centigrams",
+      "Decigrams": "Δεκαγραμμάρια",
+      "Grams": "Γραμάρια",
+      "Dekagrams": "Δεκαγραμμάρια",
+      "Hectograms": "Εκτογράμματα",
+      "Kilograms": "Κιλά",
+      "Metric tonnes": "Μετρικοί τόνοι",
+      "Ounces": "Ουγγιές",
+      "Pounds": "Λίρες",
+      "Stone": "Πέτρα",
+      "Short tons (US)": "Κοντοί τόνοι (ΗΠΑ)",
+      "Long tons (UK)": "Μακρύι τόνοι (Ηνωμένο Βασίλειο)",
+      "snowflakes": "νιφάδες χιονιού",
+      "soccer balls": "μπάλες ποδοσφαίρου",
+      "elephants": "ελέφαντες",
+      "whales": "φάλαινες",
+      "Celsius": "Κελσίου",
+      "Fahrenheit": "Φαρενάιτ",
+      "Kelvin": "Κέλβιν",
+      "Milliliters": "Χιλιοστόλιτρα",
+      "Cubic centimeters": "Κυβικά εκατοστά",
+      "Liters": "Λίτρα",
+      "Cubic meters": "Κυβικά μέτρα",
+      "Teaspoons (US)": "Κουταλάκια του γλυκού (ΗΠΑ)",
+      "Tablespoons (US)": "Κουταλιές της σούπας (ΗΠΑ)",
+      "Fluid ounces (US)": "Ρευστές ουγγιές (ΗΠΑ)",
+      "Cups (US)": "Κύπελλα (ΗΠΑ)",
+      "Pints (US)": "Πίντες (ΗΠΑ)",
+      "Quarts (US)": "Quarts (ΗΠΑ)",
+      "Gallons (US)": "Γαλόνια (ΗΠΑ)",
+      "Cubic inches": "Κυβικές ίντσες",
+      "Cubic feet": "Κυβικά πόδια",
+      "Cubic yards": "Κυβικά γιάρδες",
+      "Teaspoons (UK)": "κουταλάκια του γλυκού (Ηνωμένο Βασίλειο)",
+      "Tablespoons (UK)": "Κουταλιές της σούπας (Ηνωμένο Βασίλειο)",
+      "Fluid ounces (UK)": "Ρευστές ουγγιές (Ηνωμένο Βασίλειο)",
+      "Pints (UK)": "Πίντες (Ηνωμένο Βασίλειο)",
+      "Quarts (UK)": "Quarts (Ηνωμένο Βασίλειο)",
+      "Gallons (UK)": "Γαλόνια (Ηνωμένο Βασίλειο)",
+      "coffee cups": "κούπες καφέ",
+      "bathtubs": "μπανιέρες",
+      "swimming pools": "πισίνες",
+      "Square millimeters": "Τετραγωνικά χιλιοστά",
+      "Square centimeters": "Τετραγωνικά εκατοστά",
+      "Square meters": "Τετραγωνικά μέτρα",
+      "Hectares": "Εκτάρια",
+      "Square kilometers": "Τετραγωνικά χιλιόμετρα",
+      "Square inches": "Τετραγωνικές ίντσες",
+      "Square feet": "Τετραγωνικά πόδια",
+      "Square yards": "Τετραγωνικές γιάρδες",
+      "Acres": "Στρέμματα",
+      "Square miles": "Τετραγωνικά μίλια",
+      "sheets of paper": "φύλλα χαρτιού",
+      "soccer fields": "γήπεδα ποδοσφαίρου",
+      "castles": "κάστρα",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "εκατοστά ανά δευτερόλεπτο",
+      "Meters per second": "Μέτρα ανά δευτερόλεπτο",
+      "Kilometers per hour": "Χιλιόμετρα ανά ώρα",
+      "Feet per second": "Πόδια ανά δευτερόλεπτο",
+      "Miles per hour": "Μίλια ανά ώρα",
+      "Knots": "Κόμβοι",
+      "Mach": "Μαχ",
+      "turtles": "χελώνες",
+      "horses": "άλογα",
+      "jets": "τζετ",
+      "Watts": "Watts",
+      "Kilowatts": "Κιλοβάτ",
+      "Horsepower (US)": "Ιπποδύναμη (ΗΠΑ)",
+      "Foot-pounds/minute": "Πόδια/λεπτό",
+      "BTUs/minute": "BTU/λεπτό",
+      "light bulbs": "λάμπες",
+      "train engines": "μηχανές τρένου",
+      "Thermal calories": "Θερμικές θερμίδες",
+      "Food calories": "Θερμίδες τροφής",
+      "British thermal units": "Βρετανικές θερμικές μονάδες",
+      "Kilojoules": "Kilojoules",
+      "Kilowatt-hours": "Κιλοβατώρες",
+      "Electron volts": "Ηλεκτρονβολτ",
+      "Joules": "Τζάουλ",
+      "Foot-pounds": "Πάουντ",
+      "batteries": "μπαταρίες",
+      "bananas": "μπανάνες",
+      "slices of cake": "φέτες κέικ",
+      "Bits": "Μιτ",
+      "Nibble": "Nibble",
+      "Bytes": "Byte",
+      "Kilobits": "Kilobit",
+      "Kibibits": "Kibibit",
+      "Kilobytes": "Kilobyte",
+      "Kibibytes": "Kibibyte",
+      "Megabits": "Megabit",
+      "Mebibits": "Mebibit",
+      "Megabytes": "Megabyte",
+      "Mebibytes": "Mebibyte",
+      "Gigabits": "Gigabit",
+      "Gibibits": "Gibibit",
+      "Gigabytes": "Gigabyte",
+      "Gibibytes": "Gibibyte",
+      "Terabits": "Terabits",
+      "Tebibits": "Tebibit",
+      "Terabytes": "Terabyte",
+      "Tebibytes": "Tebibyte",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibit",
+      "Petabytes": "Petabyte",
+      "Pebibytes": "Pebibyte",
+      "Exabits": "Exabits",
+      "Exbibits": "Εκθέματα",
+      "Exabytes": "Exabyte",
+      "Exbibytes": "Exbibyte",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabyte",
+      "Zebibytes": "Zebibyte",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobbits",
+      "Yottabytes": "Yottabyte",
+      "Yobibytes": "Yobibyte",
+      "floppy disks": "δισκέτες",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "Ατμόσφαιρες",
+      "Bars": "Μπάρες",
+      "Kilopascals": "Kilopascals",
+      "Millimeters of mercury": "Χιλιοστά υδραργύρου",
+      "Pascals": "Πασκάλ",
+      "Pounds per square inch": "Λίβρες ανά τετραγωνική ίντσα",
+      "Degrees": "Πτυχία",
+      "Radians": "Ακτίνια",
+      "Gradians": "Gradians",
+      "Microseconds": "Μικροδευτερόλεπτα",
+      "Milliseconds": "Χιλιοστά του δευτερολέπτου",
+      "Seconds": "Δευτερόλεπτα",
+      "Minutes": "Λεπτά",
+      "Hours": "Ώρες",
+      "Days": "Ημέρες",
+      "Weeks": "Εβδομάδες",
+      "Years": "Έτη"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Δολάριο ΗΠΑ",
+      "Euro": "Ευρώ",
+      "British Pound": "Λίρα Βρετανίας",
+      "Japanese Yen": "Γεν Ιαπωνίας",
+      "Canadian Dollar": "Δολάριο Καναδά",
+      "Australian Dollar": "Δολάριο Αυστραλίας",
+      "Brazilian Real": "Ρεάλ Βραζιλίας",
+      "Chilean Peso": "Πέσο Χιλής",
+      "Chinese Yuan": "Γουάν Κίνας",
+      "Colombian Peso": "Πέσο Κολομβίας",
+      "Danish Krone": "Κορόνα Δανίας",
+      "Egyptian Pound": "Λίρα Αιγύπτου",
+      "Hong Kong Dollar": "Δολάριο Χονγκ Κονγκ",
+      "Indian Rupee": "Ρουπία Ινδίας",
+      "Kenyan Shilling": "Σέλινι Κένυας",
+      "Mexican Peso": "Πέσο Μεξικού",
+      "Nigerian Naira": "Νιγηριανή Νάιρα",
+      "New Zealand Dollar": "Δολάριο Νέας Ζηλανδίας",
+      "Norwegian Krone": "Κορόνα Νορβηγίας",
+      "Philippine Piso": "Piso των Φιλιππίνων",
+      "Polish Zloty": "Πολωνικό ζλότι",
+      "Qatari Riyal": "Ριάλ Κατάρ",
+      "Saudi Riyal": "Ριάλ Σαουδικής Αραβίας",
+      "Singapore Dollar": "Δολάριο Σιγκαπούρης",
+      "South African Rand": "Ραντ Νότιας Αφρικής",
+      "South Korean Won": "Γουόν Νότιας Κορέας",
+      "Swedish Krona": "Κορόνα Σουηδίας",
+      "Swiss Franc": "Ελβετικό φράγκο",
+      "Thai Baht": "Μπατ Ταϊλάνδης",
+      "Turkish Lira": "Τουρκική λίρα",
+      "Turkmenistani Manat": "Τουρκμενιστάν Μανάτ",
+      "Ugandan Shilling": "Σελίνι Ουγκάντα",
+      "Ukrainian Hryvnia": "Ουκρανικό γριβνία",
+      "UAE Dirham": "Ντιρχάμ ΗΑΕ",
+      "Uruguayan Peso": "Πέσο Ουρουγουάης",
+      "Uzbekistani Som": "Ουζμπεκιστάν Σομ",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Μπολιβάρ Βενεζουέλας Soberano",
+      "Vietnamese Dong": "Βιετναμέζος Ντονγκ",
+      "Yemeni Rial": "Ριάλ Υεμένης"
+    },
+    "labels": {
+      "United States - Dollar": "Ηνωμένες Πολιτείες - Δολάριο",
+      "Europe - Euro": "Ευρώπη - Ευρώ",
+      "United Kingdom - Pound": "Ηνωμένο Βασίλειο - Λίρα",
+      "Japan - Yen": "Ιαπωνία - Γιεν",
+      "Canada - Dollar": "Καναδάς - Δολάριο",
+      "Australia - Dollar": "Αυστραλία - Δολάριο",
+      "Brazil - Real": "Βραζιλία - Ρεάλ",
+      "Chile - Peso": "Χιλή - Πέσο",
+      "China - Yuan Renminbi": "Κίνα - Γιουάν Ρενμίνμπι",
+      "Colombia - Peso": "Κολομβία - Πέσο",
+      "Denmark - Krone": "Δανία - Κορόνα",
+      "Egypt - Pound": "Αίγυπτος - Λίρα",
+      "Hong Kong SAR - Dollar": "SAR Χονγκ Κονγκ - Δολάριο",
+      "India - Rupee": "Ινδία - Ρουπία",
+      "Kenya - Shilling": "Κένυα - Σελίνι",
+      "Mexico - Peso": "Μεξικό - Πέσο",
+      "Nigeria - Naira": "Νιγηρία - Νάιρα",
+      "New Zealand - Dollar": "Νέα Ζηλανδία - Δολάριο",
+      "Norway - Krone": "Νορβηγία - Κορόνα",
+      "Philippines - Piso": "Φιλιππίνες - Πίζο",
+      "Poland - Zloty": "Πολωνία - Ζλότι",
+      "Qatar - Riyal": "Κατάρ - Ριάλ",
+      "Saudi Arabia - Riyal": "Σαουδική Αραβία - Ριάλ",
+      "Singapore - Dollar": "Σιγκαπούρη - Δολάριο",
+      "South Africa - Rand": "Νότια Αφρική - Ραντ",
+      "South Korea - Won": "Νότια Κορέα - Νίκη",
+      "Sweden - Krona": "Σουηδία - Κορόνα",
+      "Switzerland - Franc": "Ελβετία - Φράγκο",
+      "Thailand - Baht": "Ταϊλάνδη - Μπατ",
+      "Turkey - Lira": "Τουρκία - Λίρα",
+      "Turkmenistan - Manat": "Τουρκμενιστάν - Μανάτ",
+      "Uganda - Shilling": "Ουγκάντα - Σελίνι",
+      "Ukraine - Hryvnia": "Ουκρανία - Γρίβνα",
+      "United Arab Emirates - Dirham": "Ηνωμένα Αραβικά Εμιράτα - Ντιράμ",
+      "Uruguay - Peso": "Ουρουγουάη - Πέσο",
+      "Uzbekistan - Som": "Ουζμπεκιστάν - Σομ",
+      "Vanuatu - Vatu": "Βανουάτου - Βατού",
+      "Venezuela - Bolívar Soberano": "Βενεζουέλα - Μπολιβάρ Σομπεράνο",
+      "Vietnam - Dong": "Βιετνάμ - Ντονγκ",
+      "Yemen - Rial": "Υεμένη - Ριάλ"
+    }
+  }
+}

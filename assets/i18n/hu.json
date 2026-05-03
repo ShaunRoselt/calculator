@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Számológép",
+    "name": "Számológép"
+  },
+  "common": {
+    "back": "Vissza",
+    "backspace": "Backspace",
+    "closeSidePanel": "Zárja be a panelt"
+  },
+  "converter": {
+    "unitConverter": "Mértékegység-átalakító",
+    "title": "Mértékegység-átalakítók",
+    "builtInCollections": "Beépített gyűjtemények",
+    "category": "Kategória",
+    "from": "Feladó",
+    "to": "Címzett",
+    "inputValue": "Konvertálni kívánt érték",
+    "convertedValue": "Konvertált érték",
+    "swapUnits": "Egységek cseréje",
+    "keypad": "Konverter billentyűzet",
+    "unit": "egység",
+    "unitOptions": "egységbeállítások",
+    "currency": {
+      "updatingRates": "Árak frissítése…",
+      "updateRates": "Díjak frissítése",
+      "keypad": "Pénznem billentyűzet",
+      "currency": "pénznem",
+      "options": "valuta opciók",
+      "updated": "Frissítve {timestamp}",
+      "status": {
+        "mockNote": "Referencia-kamatláb az önálló alkalmazás bemutatójához.",
+        "fetching": "A legújabb USD referencia-kamatláb lekérése...",
+        "liveRatesLoaded": "Az ExchangeRate-API-ból betöltött élő árfolyamok.",
+        "liveUpdateUnavailable": "Az élő frissítés nem érhető el. Frissített demo árak helyben."
+      }
+    },
+    "aboutEqualTo": "Körülbelül egyenlő"
+  },
+  "errors": {
+    "invalidInput": "Érvénytelen bevitel",
+    "cannotDivideByZero": "Nem osztható nullával",
+    "cannotModuloByZero": "Nem lehet nullával modulálni",
+    "invalidProgrammerOperation": "Érvénytelen művelet",
+    "overflow": "A találat túl nagy"
+  },
+  "date": {
+    "calculationMode": "Számítási mód",
+    "from": "Feladó",
+    "to": "Címzett",
+    "results": {
+      "difference": "Különbség",
+      "sameDates": "Ugyanazok a dátumok",
+      "date": "Dátum"
+    },
+    "calculationModeOptions": "Számítási mód beállításai",
+    "mode": {
+      "difference": "Különbség",
+      "shift": "Shift"
+    },
+    "operation": "Művelet",
+    "add": "Hozzáadás",
+    "subtract": "Kivonás",
+    "years": "Évek",
+    "months": "Hónapok",
+    "days": "Napok",
+    "chooseDate": "Válaszd ki a dátumot",
+    "previousMonth": "Előző hónap",
+    "nextMonth": "Jövő hónapban",
+    "duration": {
+      "year": {
+        "one": "{count} év",
+        "other": "{count} év"
+      },
+      "month": {
+        "one": "{count} hónap",
+        "other": "{count} hónap"
+      },
+      "week": {
+        "one": "{count} hét",
+        "other": "{count} hét"
+      },
+      "day": {
+        "one": "{count} nap",
+        "other": "{count} nap"
+      }
+    },
+    "history": {
+      "differenceBetween": "Különbség {from} és {to} között",
+      "addTo": "{duration} hozzáadása ehhez: {date}",
+      "subtractFrom": "{duration} kivonása {date} összegből"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Ellenőrizze a kiemelt kifejezést",
+    "enterExpression": "Adjon meg egy kifejezést",
+    "canvas": "Grafikon vászon",
+    "stopTracing": "A nyomkövetés leállítása",
+    "startTracing": "Indítsa el a nyomkövetést",
+    "share": "Megosztás",
+    "options": "Opciók",
+    "zoomIn": "Nagyítás",
+    "zoomInLabel": "Nagyítás",
+    "zoomOut": "Kicsinyítés",
+    "zoomOutLabel": "Kicsinyítés",
+    "refreshViewAutomatically": "A nézet automatikus frissítése",
+    "view": "Megtekintés",
+    "expressions": "Kifejezések",
+    "mobileView": "Mobil nézet",
+    "showGraph": "Grafikon megjelenítése",
+    "showExpressions": "Kifejezések megjelenítése",
+    "backToFunctionList": "Vissza a függvénylistához",
+    "window": "Ablak",
+    "resetView": "Nézet visszaállítása",
+    "units": "Egységek",
+    "radians": "Radián",
+    "degrees": "Fok",
+    "gradians": "Gradiánok",
+    "lineThickness": "Vonalvastagság",
+    "theme": "Téma",
+    "alwaysLight": "Mindig világos",
+    "matchAppTheme": "Egyezze meg az alkalmazástémát",
+    "groups": {
+      "inequalities": "Egyenlőtlenségek",
+      "trigonometry": "Trigonometria",
+      "function": "Funkció"
+    },
+    "functions": "Funkciók",
+    "showEquation": "Egyenlet megjelenítése",
+    "hideEquation": "Egyenlet elrejtése",
+    "lineOptions": "Vonalbeállítások",
+    "color": "Szín",
+    "style": "Stílus",
+    "analysis": {
+      "title": "Elemzés",
+      "domain": "Domain",
+      "range": "Tartomány",
+      "xIntercept": "x-elfogás",
+      "yIntercept": "y-elfog",
+      "minima": "Minimális",
+      "maxima": "Maximális",
+      "inflectionPoints": "Inflexiós pontok",
+      "verticalAsymptotes": "Függőleges aszimptoták",
+      "horizontalAsymptotes": "Horizontális aszimptoták",
+      "obliqueAsymptotes": "Ferde aszimptoták",
+      "parity": "Paritás",
+      "period": "Időszak",
+      "monotonicity": "Monotonitás",
+      "domainNone": "Nincs domain korlátozás",
+      "rangeNone": "Nincs tartománykorlátozás",
+      "xInterceptNone": "Nincs x-elfogás",
+      "yInterceptNone": "Nincsenek y-elfogók",
+      "minimaNone": "Nincs minimum",
+      "maximaNone": "Nincs maximum",
+      "inflectionNone": "Nincsenek inflexiós pontok",
+      "verticalAsymptotesNone": "Nincsenek függőleges aszimptoták",
+      "horizontalAsymptotesNone": "Nincsenek vízszintes aszimptoták",
+      "obliqueAsymptotesNone": "Nincsenek ferde aszimptoták",
+      "parityUnknown": "Ismeretlen",
+      "parityOdd": "Különös",
+      "parityEven": "Még",
+      "parityNeither": "Egyik sem",
+      "periodicityUnknown": "Ismeretlen",
+      "periodicityNotPeriodic": "Nem időszakos",
+      "monotonicityConstant": "Állandó",
+      "monotonicityIncreasing": "Növekszik",
+      "monotonicityDecreasing": "Csökken",
+      "monotonicityUnknown": "Ismeretlen",
+      "monotonicityError": "Nem lehet meghatározni",
+      "featureTooComplexPlural": "Túl bonyolult az elemzéshez",
+      "analysisCouldNotBePerformed": "Az elemzést nem sikerült végrehajtani",
+      "analysisNotSupported": "Az elemzés nem támogatott",
+      "variableIsNotX": "A változó nem x"
+    },
+    "plottingExpressions": "{count} kifejezések ábrázolása",
+    "xMin": "X-min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Válassza ki a {index} kifejezést",
+    "expressionIndex": "Kifejezés {index}",
+    "analyzeFunction": "Funkció elemzése",
+    "changeEquationStyle": "Módosítsa az egyenlet stílusát",
+    "removeEquation": "Egyenlet eltávolítása",
+    "lineStyle": {
+      "solid": "Folyamatos vonal stílus",
+      "dash": "Szaggatott vonal stílusa",
+      "dot": "Pontvonal stílusa"
+    }
+  },
+  "history": {
+    "empty": "Az előzmények üresek",
+    "clearAll": "Összes törlése",
+    "clear": "Előzmények törlése",
+    "title": "Előzmények",
+    "andMemory": "Előzmények és memória",
+    "aria": {
+      "historyPanel": "Előzmények panel",
+      "historyAndMemoryPanel": "Előzmények és memória panel"
+    },
+    "closeFlyout": "Előzmények bezárása",
+    "openFlyout": "Előzmények megnyitása"
+  },
+  "memory": {
+    "empty": "A memória üres",
+    "clearItem": "Elem törlése",
+    "addCurrentValue": "Adja hozzá az aktuális értéket",
+    "subtractCurrentValue": "Vonja ki az aktuális értéket",
+    "clearAll": "Összes törlése",
+    "clear": "Memória törlése",
+    "title": "Memória",
+    "controls": "Memóriavezérlők",
+    "tooltips": {
+      "clearAll": "Az összes memória törlése",
+      "recall": "Emlékezzen emlékezetből",
+      "add": "Hozzáadás a memóriához",
+      "subtract": "Kivonás a memóriából",
+      "store": "Tárolás a memóriában"
+    },
+    "recallValue": "A memória felidézése {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigáció",
+      "closeNavigation": "Navigáció bezárása",
+      "openNavigation": "Navigáció megnyitása"
+    },
+    "groups": {
+      "calculator": "Számológép",
+      "converter": "Konverter"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit flip panel",
+    "baseReadouts": "Alapkiolvasások",
+    "surfaceMode": "Felszíni mód",
+    "fullKeypad": "Teljes billentyűzet",
+    "showKeypad": "Billentyűzet megjelenítése",
+    "bitTogglingKeypad": "Bit váltó billentyűzet",
+    "showBitView": "Bitnézet megjelenítése",
+    "wordSize": "Szóméret",
+    "bitwise": "Bitenként",
+    "bitShift": "Biteltolás"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometria",
+      "function": "Funkció",
+      "functionsAria": "Funkciók",
+      "trigonometricFunctionsAria": "Trigonometrikus függvények",
+      "angleUnit": "Szög mértékegysége {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Megjelenés",
+      "themeTitle": "Téma",
+      "themeDescription": "Válassz színsémát",
+      "light": "Fény",
+      "dark": "Sötét",
+      "blue": "Kék",
+      "green": "Zöld",
+      "system": "Rendszer"
+    },
+    "language": {
+      "group": "Nyelv",
+      "title": "Nyelv",
+      "description": "Válassza ki a kívánt nyelvet"
+    },
+    "about": {
+      "group": "Körülbelül"
+    },
+    "feedback": "Visszajelzés küldése",
+    "contribute": {
+      "prefix": "Hozzájárulás:",
+      "link": "GitHub",
+      "suffix": ", hogy segítsen továbbfejleszteni a számológépet"
+    },
+    "links": {
+      "repository": "Projekttár",
+      "readme": "OLVASÁS",
+      "license": "MIT-licenc"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Szabvány",
+      "subtitle": "Klasszikus azonnali kiértékelés"
+    },
+    "scientific": {
+      "label": "Tudományos",
+      "subtitle": "Operátorok, funkciók és kifejezések támogatása"
+    },
+    "graphing": {
+      "label": "Grafikon készítése",
+      "subtitle": "Ábrázoljon egy egyszerű kifejezést derékszögű síkon"
+    },
+    "programmer": {
+      "label": "Programozó",
+      "subtitle": "Egész számok alapkonverzióval"
+    },
+    "date": {
+      "label": "Dátum kiszámítása",
+      "subtitle": "Időtartamok és műszakdátumok keresése"
+    },
+    "currency": {
+      "label": "Pénznem",
+      "subtitle": "Állított árfolyamok konvertálása"
+    },
+    "volume": {
+      "label": "Hangerő",
+      "subtitle": "A hangerőmértékek konvertálása"
+    },
+    "length": {
+      "label": "Hossz",
+      "subtitle": "A távolság és a hossz mértékegységeinek konvertálása"
+    },
+    "weight": {
+      "label": "Tömeg és tömeg",
+      "subtitle": "Súly- és tömegegységek konvertálása"
+    },
+    "temperature": {
+      "label": "Hőmérséklet",
+      "subtitle": "A hőmérsékleti skálák konvertálása"
+    },
+    "energy": {
+      "label": "Energia",
+      "subtitle": "Konvertálja az energiaméréseket"
+    },
+    "area": {
+      "label": "Terület",
+      "subtitle": "A területméretek konvertálása"
+    },
+    "speed": {
+      "label": "Sebesség",
+      "subtitle": "A sebességmérés konvertálása"
+    },
+    "time": {
+      "label": "Idő",
+      "subtitle": "Időmérések konvertálása"
+    },
+    "power": {
+      "label": "Erő",
+      "subtitle": "A teljesítménymérések konvertálása"
+    },
+    "data": {
+      "label": "Adatok",
+      "subtitle": "A digitális tárolóegységek konvertálása"
+    },
+    "pressure": {
+      "label": "Nyomás",
+      "subtitle": "Nyomásegységek konvertálása"
+    },
+    "angle": {
+      "label": "Szög",
+      "subtitle": "Szögmérések konvertálása"
+    },
+    "settings": {
+      "label": "Beállítások",
+      "subtitle": "Megjelenés és alkalmazásinformációk"
+    }
+  },
+  "categories": {
+    "Currency": "Pénznem",
+    "Volume": "Hangerő",
+    "Length": "Hossz",
+    "Mass": "mise",
+    "Temperature": "Hőmérséklet",
+    "Energy": "Energia",
+    "Area": "Terület",
+    "Speed": "Sebesség",
+    "Time": "Idő",
+    "Power": "Erő",
+    "Data": "Adatok",
+    "Pressure": "Nyomás",
+    "Angle": "Szög"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanométerek",
+      "Microns": "Mikron",
+      "Millimeters": "Milliméter",
+      "Centimeters": "Centiméter",
+      "Meters": "Méter",
+      "Kilometers": "Kilométer",
+      "Inches": "Inch",
+      "Feet": "Láb",
+      "Yards": "Yardok",
+      "Miles": "Mérföld",
+      "Nautical miles": "Tengeri mérföld",
+      "paperclips": "gemkapcsok",
+      "hands": "kezek",
+      "jumbo jets": "jumbo jets",
+      "Carats": "Karát",
+      "Milligrams": "Milligramm",
+      "Centigrams": "Centigramm",
+      "Decigrams": "Decigramm",
+      "Grams": "gramm",
+      "Dekagrams": "Dekagramok",
+      "Hectograms": "Hektogramok",
+      "Kilograms": "Kilogramm",
+      "Metric tonnes": "Métikus tonna",
+      "Ounces": "Uncia",
+      "Pounds": "Font",
+      "Stone": "Kő",
+      "Short tons (US)": "Rövid tonnák (USA)",
+      "Long tons (UK)": "Hosszú tonna (Egyesült Királyság)",
+      "snowflakes": "hópelyhek",
+      "soccer balls": "futball-labdák",
+      "elephants": "elefánt",
+      "whales": "bálnák",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Milliliter",
+      "Cubic centimeters": "Köbcentiméter",
+      "Liters": "Literek",
+      "Cubic meters": "Köbméter",
+      "Teaspoons (US)": "Teáskanál (USA)",
+      "Tablespoons (US)": "Evőkanál (USA)",
+      "Fluid ounces (US)": "Fluid uncia (USA)",
+      "Cups (US)": "Kupa (USA)",
+      "Pints (US)": "Pint (USA)",
+      "Quarts (US)": "Quarts (USA)",
+      "Gallons (US)": "Gallon (USA)",
+      "Cubic inches": "Köbhüvelyk",
+      "Cubic feet": "Köbláb",
+      "Cubic yards": "Köbyard",
+      "Teaspoons (UK)": "Teáskanál (Egyesült Királyság)",
+      "Tablespoons (UK)": "Evőkanál (Egyesült Királyság)",
+      "Fluid ounces (UK)": "Fluid uncia (Egyesült Királyság)",
+      "Pints (UK)": "Pints (Egyesült Királyság)",
+      "Quarts (UK)": "Quarts (Egyesült Királyság)",
+      "Gallons (UK)": "Gallon (Egyesült Királyság)",
+      "coffee cups": "kávéscsészék",
+      "bathtubs": "fürdőkádak",
+      "swimming pools": "úszómedencék",
+      "Square millimeters": "Négzetmilliméter",
+      "Square centimeters": "Négzetcentiméter",
+      "Square meters": "Négyzetméter",
+      "Hectares": "Hektár",
+      "Square kilometers": "Négyzetkilométer",
+      "Square inches": "Négyzet hüvelyk",
+      "Square feet": "Négyzetláb",
+      "Square yards": "Négyzetméter",
+      "Acres": "Hektár",
+      "Square miles": "Négyzet mérföld",
+      "sheets of paper": "papírlap",
+      "soccer fields": "focipályák",
+      "castles": "kastélyok",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Centiméter per másodperc",
+      "Meters per second": "Méter másodpercenként",
+      "Kilometers per hour": "Kilométer per óra",
+      "Feet per second": "Láb/másodperc",
+      "Miles per hour": "Mérföld per óra",
+      "Knots": "Csomók",
+      "Mach": "Mach",
+      "turtles": "teknősök",
+      "horses": "lovak",
+      "jets": "fúvókák",
+      "Watts": "Watt",
+      "Kilowatts": "Kilowatt",
+      "Horsepower (US)": "Lóerő (USA)",
+      "Foot-pounds/minute": "Lábfont/perc",
+      "BTUs/minute": "BTU/perc",
+      "light bulbs": "izzók",
+      "train engines": "vonathajtóművek",
+      "Thermal calories": "Termikus kalória",
+      "Food calories": "Élelmiszerek kalóriái",
+      "British thermal units": "Brit hőmértékegységek",
+      "Kilojoules": "Kilojoule",
+      "Kilowatt-hours": "Kilowattóra",
+      "Electron volts": "Elektron volt",
+      "Joules": "Joule",
+      "Foot-pounds": "Foot-foot",
+      "batteries": "akkumulátorok",
+      "bananas": "banán",
+      "slices of cake": "szelet torta",
+      "Bits": "Bit",
+      "Nibble": "Rápog",
+      "Bytes": "Bájtok",
+      "Kilobits": "Kilobit",
+      "Kibibits": "Kibibit",
+      "Kilobytes": "Kilobyte",
+      "Kibibytes": "Kibibájt",
+      "Megabits": "Megabit",
+      "Mebibits": "Mebibit",
+      "Megabytes": "Megabájt",
+      "Mebibytes": "Mebibyte",
+      "Gigabits": "Gigabit",
+      "Gibibits": "Gibibit",
+      "Gigabytes": "Gigabájt",
+      "Gibibytes": "Gibibájt",
+      "Terabits": "Terabit",
+      "Tebibits": "Tebibit",
+      "Terabytes": "Terabájt",
+      "Tebibytes": "Tebibájt",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabájt",
+      "Pebibytes": "Pebibyte",
+      "Exabits": "Exabits",
+      "Exbibits": "Kimutat",
+      "Exabytes": "Exabyte",
+      "Exbibytes": "Exbibyte",
+      "Zetabits": "Zetabitek",
+      "Zebibits": "Zebibitek",
+      "Zetabytes": "Zetabájt",
+      "Zebibytes": "Zebibyte",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabájt",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "hajlékonylemezek",
+      "CDs": "CD-k",
+      "DVDs": "DVD-k",
+      "Atmospheres": "Légkör",
+      "Bars": "Rávok",
+      "Kilopascals": "Kilopascal",
+      "Millimeters of mercury": "Higanymilliméter",
+      "Pascals": "Pascal",
+      "Pounds per square inch": "Font per négyzethüvelyk",
+      "Degrees": "Fok",
+      "Radians": "Radián",
+      "Gradians": "Gradiánok",
+      "Microseconds": "Mikroszekundum",
+      "Milliseconds": "Ezredmásodperc",
+      "Seconds": "Másodperc",
+      "Minutes": "Percek",
+      "Hours": "Nyitvatartás",
+      "Days": "Napok",
+      "Weeks": "Hét",
+      "Years": "Évek"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "amerikai dollár",
+      "Euro": "Euró",
+      "British Pound": "angol font",
+      "Japanese Yen": "Japán jen",
+      "Canadian Dollar": "kanadai dollár",
+      "Australian Dollar": "ausztrál dollár",
+      "Brazilian Real": "Brazil Real",
+      "Chilean Peso": "Chilei peso",
+      "Chinese Yuan": "Kínai jüan",
+      "Colombian Peso": "kolumbiai peso",
+      "Danish Krone": "dán korona",
+      "Egyptian Pound": "egyiptomi font",
+      "Hong Kong Dollar": "Hongkongi dollár",
+      "Indian Rupee": "indiai rúpia",
+      "Kenyan Shilling": "kenyai shilling",
+      "Mexican Peso": "Mexikói peso",
+      "Nigerian Naira": "Nigériai Naira",
+      "New Zealand Dollar": "Új-zélandi dollár",
+      "Norwegian Krone": "Norvég korona",
+      "Philippine Piso": "Fülöp Piso",
+      "Polish Zloty": "Lengyel zloty",
+      "Qatari Riyal": "Katari riál",
+      "Saudi Riyal": "Szaudi riál",
+      "Singapore Dollar": "Szingapúri dollár",
+      "South African Rand": "Dél-afrikai rand",
+      "South Korean Won": "Dél-koreai von",
+      "Swedish Krona": "Svéd korona",
+      "Swiss Franc": "Svájci frank",
+      "Thai Baht": "Thai baht",
+      "Turkish Lira": "török líra",
+      "Turkmenistani Manat": "Türkmenisztáni Manat",
+      "Ugandan Shilling": "Ugandai shilling",
+      "Ukrainian Hryvnia": "Ukrán hrivnya",
+      "UAE Dirham": "EAE dirham",
+      "Uruguayan Peso": "Uruguayi peso",
+      "Uzbekistani Som": "Uzbekistan Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuelai Bolívar Soberano",
+      "Vietnamese Dong": "Vietnami Dong",
+      "Yemeni Rial": "Jemeni riál"
+    },
+    "labels": {
+      "United States - Dollar": "Amerikai Egyesült Államok – dollár",
+      "Europe - Euro": "Európa – euró",
+      "United Kingdom - Pound": "Egyesült Királyság – font",
+      "Japan - Yen": "Japán – Yen",
+      "Canada - Dollar": "Kanada – dollár",
+      "Australia - Dollar": "Ausztrália – dollár",
+      "Brazil - Real": "Brazília – Real",
+      "Chile - Peso": "Chile – Peso",
+      "China - Yuan Renminbi": "Kína – Yuan Renminbi",
+      "Colombia - Peso": "Kolumbia – Peso",
+      "Denmark - Krone": "Dánia – Krone",
+      "Egypt - Pound": "Egyiptom – font",
+      "Hong Kong SAR - Dollar": "Hongkong SAR – dollár",
+      "India - Rupee": "India – rúpia",
+      "Kenya - Shilling": "Kenya – shilling",
+      "Mexico - Peso": "Mexikó – Peso",
+      "Nigeria - Naira": "Nigéria – Naira",
+      "New Zealand - Dollar": "Új-Zéland – dollár",
+      "Norway - Krone": "Norvégia – Korona",
+      "Philippines - Piso": "Fülöp-szigetek – Piso",
+      "Poland - Zloty": "Lengyelország – Zloty",
+      "Qatar - Riyal": "Katar – Riál",
+      "Saudi Arabia - Riyal": "Szaúd-Arábia – riál",
+      "Singapore - Dollar": "Szingapúr – dollár",
+      "South Africa - Rand": "Dél-Afrika – Rand",
+      "South Korea - Won": "Dél-Korea – nyert",
+      "Sweden - Krona": "Svédország – Korona",
+      "Switzerland - Franc": "Svájc – frank",
+      "Thailand - Baht": "Thaiföld – baht",
+      "Turkey - Lira": "Törökország – líra",
+      "Turkmenistan - Manat": "Türkmenisztán – Manat",
+      "Uganda - Shilling": "Uganda – shilling",
+      "Ukraine - Hryvnia": "Ukrajna – Hrivnya",
+      "United Arab Emirates - Dirham": "Egyesült Arab Emírségek – Dirham",
+      "Uruguay - Peso": "Uruguay – Peso",
+      "Uzbekistan - Som": "Üzbegisztán – Som",
+      "Vanuatu - Vatu": "Vanuatu – Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela – Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam – Dong",
+      "Yemen - Rial": "Jemen – Rial"
+    }
+  }
+}

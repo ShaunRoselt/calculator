@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kikokotoo",
+    "name": "Kikokotoo"
+  },
+  "common": {
+    "back": "Nyuma",
+    "backspace": "Nyuma",
+    "closeSidePanel": "Funga paneli"
+  },
+  "converter": {
+    "unitConverter": "Kibadilishaji Kitengo",
+    "title": "Vibadilishaji vya kitengo",
+    "builtInCollections": "Mikusanyiko iliyojengwa ndani",
+    "category": "Kategoria",
+    "from": "Kutoka",
+    "to": "Kwa",
+    "inputValue": "Thamani ya kubadilisha",
+    "convertedValue": "Thamani iliyogeuzwa",
+    "swapUnits": "Badilisha vitengo",
+    "keypad": "Kibodi cha kubadilisha fedha",
+    "unit": "kitengo",
+    "unitOptions": "chaguo za kitengo",
+    "currency": {
+      "updatingRates": "Inasasisha viwango...",
+      "updateRates": "Sasisha viwango",
+      "keypad": "Kibadi cha vitufe vya sarafu",
+      "currency": "sarafu",
+      "options": "chaguo za sarafu",
+      "updated": "Ilisasishwa {timestamp}",
+      "status": {
+        "mockNote": "Bei za marejeleo za majaribio za onyesho la programu inayojitegemea.",
+        "fetching": "Inaleta viwango vipya zaidi vya marejeleo vya USD...",
+        "liveRatesLoaded": "Bei za moja kwa moja zilizopakiwa kutoka ExchangeRate-API.",
+        "liveUpdateUnavailable": "Sasisho la moja kwa moja halipatikani. Imerejesha viwango vya onyesho ndani ya nchi."
+      }
+    },
+    "aboutEqualTo": "Takriban sawa na"
+  },
+  "errors": {
+    "invalidInput": "Ingizo batili",
+    "cannotDivideByZero": "Haiwezi kugawanya kwa sufuri",
+    "cannotModuloByZero": "Haiwezi modulo kwa sufuri",
+    "invalidProgrammerOperation": "Operesheni batili",
+    "overflow": "Tokeo ni kubwa mno"
+  },
+  "date": {
+    "calculationMode": "Hali ya kukokotoa",
+    "from": "Kutoka",
+    "to": "Kwa",
+    "results": {
+      "difference": "Tofauti",
+      "sameDates": "Tarehe sawa",
+      "date": "Tarehe"
+    },
+    "calculationModeOptions": "Chaguo za hali ya kukokotoa",
+    "mode": {
+      "difference": "Tofauti",
+      "shift": "Shift"
+    },
+    "operation": "Operesheni",
+    "add": "Ongeza",
+    "subtract": "Toa",
+    "years": "Miaka",
+    "months": "Miezi",
+    "days": "Siku",
+    "chooseDate": "Chagua tarehe",
+    "previousMonth": "Mwezi uliopita",
+    "nextMonth": "Mwezi ujao",
+    "duration": {
+      "year": {
+        "one": "{count} mwaka",
+        "other": "{count} miaka"
+      },
+      "month": {
+        "one": "{count} mwezi",
+        "other": "{count} miezi"
+      },
+      "week": {
+        "one": "{count} wiki",
+        "other": "{count} wiki"
+      },
+      "day": {
+        "one": "{count} siku",
+        "other": "{count} siku"
+      }
+    },
+    "history": {
+      "differenceBetween": "Tofauti kati ya {from} na {to}",
+      "addTo": "Ongeza {duration} kwa {date}",
+      "subtractFrom": "Ondoa {duration} kutoka {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Angalia usemi ulioangaziwa",
+    "enterExpression": "Andika usemi",
+    "canvas": "Turubai ya grafu",
+    "stopTracing": "Acha kufuatilia",
+    "startTracing": "Anza kufuatilia",
+    "share": "Shiriki",
+    "options": "Chaguo",
+    "zoomIn": "Vuta karibu",
+    "zoomInLabel": "Vuta karibu",
+    "zoomOut": "Vuza mbali",
+    "zoomOutLabel": "Vuza mbali",
+    "refreshViewAutomatically": "Onyesha upya mwonekano kiotomatiki",
+    "view": "Tazama",
+    "expressions": "Vielezi",
+    "mobileView": "Mwonekano wa rununu",
+    "showGraph": "Onyesha grafu",
+    "showExpressions": "Onyesha vielezi",
+    "backToFunctionList": "Rudi kwenye orodha ya kazi",
+    "window": "Dirisha",
+    "resetView": "Weka mwonekano upya",
+    "units": "Vitengo",
+    "radians": "Radiani",
+    "degrees": "Shahada",
+    "gradians": "Wahitimu",
+    "lineThickness": "Unene wa mstari",
+    "theme": "Mandhari",
+    "alwaysLight": "Nyepesi kila wakati",
+    "matchAppTheme": "Linganisha mandhari ya programu",
+    "groups": {
+      "inequalities": "Kutokuwa na usawa",
+      "trigonometry": "Trigonometry",
+      "function": "Kazi"
+    },
+    "functions": "Kazi",
+    "showEquation": "Onyesha mlingano",
+    "hideEquation": "Ficha mlingano",
+    "lineOptions": "Chaguo za laini",
+    "color": "Rangi",
+    "style": "Mtindo",
+    "analysis": {
+      "title": "Uchambuzi",
+      "domain": "Kikoa",
+      "range": "Safu",
+      "xIntercept": "x-katiza",
+      "yIntercept": "y-katiza",
+      "minima": "Kidogo",
+      "maxima": "Maxima",
+      "inflectionPoints": "Alama za mwonekano",
+      "verticalAsymptotes": "Asymptotes wima",
+      "horizontalAsymptotes": "Dalili za mlalo",
+      "obliqueAsymptotes": "Asymptote za oblique",
+      "parity": "Usawa",
+      "period": "Kipindi",
+      "monotonicity": "Monotonicity",
+      "domainNone": "Hakuna vikwazo vya kikoa",
+      "rangeNone": "Hakuna vikwazo vya masafa",
+      "xInterceptNone": "Hakuna viingiliano vya x",
+      "yInterceptNone": "Hakuna viingilia y",
+      "minimaNone": "Hakuna minima",
+      "maximaNone": "Hakuna upeo",
+      "inflectionNone": "Hakuna alama za mkao",
+      "verticalAsymptotesNone": "Hakuna dalili za wima",
+      "horizontalAsymptotesNone": "Hakuna dalili za mlalo",
+      "obliqueAsymptotesNone": "Hakuna dalili za oblique",
+      "parityUnknown": "Haijulikani",
+      "parityOdd": "Isiyo ya kawaida",
+      "parityEven": "Hata",
+      "parityNeither": "Wala",
+      "periodicityUnknown": "Haijulikani",
+      "periodicityNotPeriodic": "Si mara kwa mara",
+      "monotonicityConstant": "Mara kwa mara",
+      "monotonicityIncreasing": "Inaongezeka",
+      "monotonicityDecreasing": "Inapungua",
+      "monotonicityUnknown": "Haijulikani",
+      "monotonicityError": "Haiwezi kubainisha",
+      "featureTooComplexPlural": "Ni ngumu sana kuchanganua",
+      "analysisCouldNotBePerformed": "Uchambuzi haukuweza kubebwa",
+      "analysisNotSupported": "Uchambuzi hautumiki",
+      "variableIsNotX": "Kigeu si x"
+    },
+    "plottingExpressions": "Kupanga misemo {count}",
+    "xMin": "Dak-X",
+    "xMax": "X-Upeo",
+    "yMin": "Y-Dak",
+    "yMax": "Y-Upeo",
+    "selectExpression": "Chagua usemi {index}",
+    "expressionIndex": "Maelezo {index}",
+    "analyzeFunction": "Changanua chaguo za kukokotoa",
+    "changeEquationStyle": "Badilisha mtindo wa mlingano",
+    "removeEquation": "Ondoa mlingano",
+    "lineStyle": {
+      "solid": "Mtindo thabiti wa mstari",
+      "dash": "Mtindo wa mstari wa dashi",
+      "dot": "Mtindo wa mstari wa nukta"
+    }
+  },
+  "history": {
+    "empty": "Historia haina chochote",
+    "clearAll": "Futa zote",
+    "clear": "Futa historia",
+    "title": "Historia",
+    "andMemory": "Historia na Kumbukumbu",
+    "aria": {
+      "historyPanel": "Kidirisha cha historia",
+      "historyAndMemoryPanel": "Paneli ya Historia na Kumbukumbu"
+    },
+    "closeFlyout": "Funga historia",
+    "openFlyout": "Historia iliyofunguliwa"
+  },
+  "memory": {
+    "empty": "Kumbukumbu ni tupu",
+    "clearItem": "Futa kipengee",
+    "addCurrentValue": "Ongeza thamani ya sasa",
+    "subtractCurrentValue": "Ondoa thamani ya sasa",
+    "clearAll": "Futa zote",
+    "clear": "Futa kumbukumbu",
+    "title": "Kumbukumbu",
+    "controls": "Vidhibiti vya kumbukumbu",
+    "tooltips": {
+      "clearAll": "Futa kumbukumbu zote",
+      "recall": "Kumbuka kutoka kwenye kumbukumbu",
+      "add": "Ongeza kwenye kumbukumbu",
+      "subtract": "Ondoa kutoka kwenye kumbukumbu",
+      "store": "Hifadhi katika kumbukumbu"
+    },
+    "recallValue": "Kumbuka kumbukumbu {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Urambazaji",
+      "closeNavigation": "Funga urambazaji",
+      "openNavigation": "Fungua urambazaji"
+    },
+    "groups": {
+      "calculator": "Kikokotoo",
+      "converter": "Kigeuzi"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Paneli ndogo ya kugeuza",
+    "baseReadouts": "Masomo ya msingi",
+    "surfaceMode": "Hali ya uso",
+    "fullKeypad": "Kibodi kizima",
+    "showKeypad": "Onyesha vitufe",
+    "bitTogglingKeypad": "Kitufe cha kugeuza kidogo",
+    "showBitView": "Onyesha mwonekano mdogo",
+    "wordSize": "Ukubwa wa neno",
+    "bitwise": "Bitwise",
+    "bitShift": "Kuhama kidogo"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometry",
+      "function": "Kazi",
+      "functionsAria": "Kazi",
+      "trigonometricFunctionsAria": "Vitendaji vya Trigonometric",
+      "angleUnit": "Kipimo cha pembe {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Muonekano",
+      "themeTitle": "Mandhari",
+      "themeDescription": "Chagua mpango wa rangi",
+      "light": "Nuru",
+      "dark": "Nyeusi",
+      "blue": "Bluu",
+      "green": "Kijani",
+      "system": "Mfumo"
+    },
+    "language": {
+      "group": "Lugha",
+      "title": "Lugha",
+      "description": "Chagua lugha unayopendelea"
+    },
+    "about": {
+      "group": "Kuhusu"
+    },
+    "feedback": "Tuma maoni",
+    "contribute": {
+      "prefix": "Changia ili uwashe",
+      "link": "GitHub",
+      "suffix": "ili kusaidia kuboresha kikokotoo hiki"
+    },
+    "links": {
+      "repository": "Hazina ya mradi",
+      "readme": "SOMA",
+      "license": "Leseni ya MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Kawaida",
+      "subtitle": "Tathmini ya awali ya haraka"
+    },
+    "scientific": {
+      "label": "Kisayansi",
+      "subtitle": "Waendeshaji, chaguo za kukokotoa na usaidizi wa kujieleza"
+    },
+    "graphing": {
+      "label": "Kuchora",
+      "subtitle": "Tunga usemi rahisi kwenye ndege ya cartesian"
+    },
+    "programmer": {
+      "label": "Msanidi programu",
+      "subtitle": "Hesabu kamili yenye ubadilishaji msingi"
+    },
+    "date": {
+      "label": "Hesabu ya tarehe",
+      "subtitle": "Tafuta muda na tarehe za kuhama"
+    },
+    "currency": {
+      "label": "Fedha",
+      "subtitle": "Badilisha viwango vya ubadilishaji vya mzaha"
+    },
+    "volume": {
+      "label": "Juzuu",
+      "subtitle": "Badilisha vipimo vya sauti"
+    },
+    "length": {
+      "label": "Urefu",
+      "subtitle": "Badilisha vitengo vya umbali na urefu"
+    },
+    "weight": {
+      "label": "Uzito na Misa",
+      "subtitle": "Badilisha uzito na vipimo vya uzito"
+    },
+    "temperature": {
+      "label": "Halijoto",
+      "subtitle": "Badilisha mizani ya halijoto"
+    },
+    "energy": {
+      "label": "Nishati",
+      "subtitle": "Geuza vipimo vya nishati"
+    },
+    "area": {
+      "label": "Eneo",
+      "subtitle": "Badilisha vipimo vya eneo"
+    },
+    "speed": {
+      "label": "Kasi",
+      "subtitle": "Badilisha vipimo vya kasi"
+    },
+    "time": {
+      "label": "Saa",
+      "subtitle": "Badilisha vipimo vya saa"
+    },
+    "power": {
+      "label": "Nguvu",
+      "subtitle": "Badilisha vipimo vya nguvu"
+    },
+    "data": {
+      "label": "Data",
+      "subtitle": "Badilisha vitengo vya hifadhi dijitali"
+    },
+    "pressure": {
+      "label": "Shinikizo",
+      "subtitle": "Badilisha vitengo vya shinikizo"
+    },
+    "angle": {
+      "label": "Pembe",
+      "subtitle": "Badilisha vipimo vya pembe"
+    },
+    "settings": {
+      "label": "Mipangilio",
+      "subtitle": "Maelezo ya mwonekano na programu"
+    }
+  },
+  "categories": {
+    "Currency": "Fedha",
+    "Volume": "Juzuu",
+    "Length": "Urefu",
+    "Mass": "Misa",
+    "Temperature": "Halijoto",
+    "Energy": "Nishati",
+    "Area": "Eneo",
+    "Speed": "Kasi",
+    "Time": "Saa",
+    "Power": "Nguvu",
+    "Data": "Data",
+    "Pressure": "Shinikizo",
+    "Angle": "Pembe"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanomita",
+      "Microns": "Vidogo",
+      "Millimeters": "Milimita",
+      "Centimeters": "Sentimita",
+      "Meters": "Mita",
+      "Kilometers": "Kilomita",
+      "Inches": "Inchi",
+      "Feet": "Miguu",
+      "Yards": "Yadi",
+      "Miles": "Maili",
+      "Nautical miles": "Maili ya baharini",
+      "paperclips": "klipu za karatasi",
+      "hands": "mikono",
+      "jumbo jets": "jeti kubwa",
+      "Carats": "Karati",
+      "Milligrams": "Miligramu",
+      "Centigrams": "Sentigramu",
+      "Decigrams": "Desigramu",
+      "Grams": "Gramu",
+      "Dekagrams": "Dekagramu",
+      "Hectograms": "Hektogramu",
+      "Kilograms": "Kilo",
+      "Metric tonnes": "Tani za kipimo",
+      "Ounces": "Onzi",
+      "Pounds": "Pauni",
+      "Stone": "Jiwe",
+      "Short tons (US)": "Tani fupi (Marekani)",
+      "Long tons (UK)": "Tani ndefu (Uingereza)",
+      "snowflakes": "vipande vya theluji",
+      "soccer balls": "mipira ya soka",
+      "elephants": "tembo",
+      "whales": "nyangumi",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mililita",
+      "Cubic centimeters": "Sentimita za ujazo",
+      "Liters": "Lita",
+      "Cubic meters": "Mita za ujazo",
+      "Teaspoons (US)": "Vijiko vya chai (Marekani)",
+      "Tablespoons (US)": "Vijiko vya chakula (Marekani)",
+      "Fluid ounces (US)": "Wansi za maji (Marekani)",
+      "Cups (US)": "Makombe (Marekani)",
+      "Pints (US)": "Pinti (Marekani)",
+      "Quarts (US)": "Robo (Marekani)",
+      "Gallons (US)": "Galoni (Marekani)",
+      "Cubic inches": "Inchi za ujazo",
+      "Cubic feet": "Miguu ya ujazo",
+      "Cubic yards": "Yadi za ujazo",
+      "Teaspoons (UK)": "Vijiko vya chai (Uingereza)",
+      "Tablespoons (UK)": "Vijiko (Uingereza)",
+      "Fluid ounces (UK)": "Wansi za maji (Uingereza)",
+      "Pints (UK)": "Pinti (Uingereza)",
+      "Quarts (UK)": "Robo (Uingereza)",
+      "Gallons (UK)": "Galoni (Uingereza)",
+      "coffee cups": "vikombe vya kahawa",
+      "bathtubs": "bafu",
+      "swimming pools": "mabwawa ya kuogelea",
+      "Square millimeters": "Milimita za mraba",
+      "Square centimeters": "Sentimita za mraba",
+      "Square meters": "Mita za mraba",
+      "Hectares": "Hekta",
+      "Square kilometers": "Kilomita za mraba",
+      "Square inches": "Inchi za mraba",
+      "Square feet": "Futi za mraba",
+      "Square yards": "Yadi za mraba",
+      "Acres": "Ekari",
+      "Square miles": "Maili za mraba",
+      "sheets of paper": "karatasi",
+      "soccer fields": "uwanja wa soka",
+      "castles": "majumba",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Sentimita kwa sekunde",
+      "Meters per second": "Mita kwa sekunde",
+      "Kilometers per hour": "Kilomita kwa saa",
+      "Feet per second": "Futi kwa sekunde",
+      "Miles per hour": "Maili kwa saa",
+      "Knots": "Mafundo",
+      "Mach": "Mach",
+      "turtles": "kasa",
+      "horses": "farasi",
+      "jets": "jeti",
+      "Watts": "Wati",
+      "Kilowatts": "Kilowati",
+      "Horsepower (US)": "Nguvu ya farasi (Marekani)",
+      "Foot-pounds/minute": "Pauni za miguu kwa dakika",
+      "BTUs/minute": "BTU/dakika",
+      "light bulbs": "balbu",
+      "train engines": "injini za treni",
+      "Thermal calories": "Kalori za joto",
+      "Food calories": "Kalori za chakula",
+      "British thermal units": "vitengo vya mafuta vya Uingereza",
+      "Kilojoules": "Kilojuli",
+      "Kilowatt-hours": "Saa za Kilowati",
+      "Electron volts": "Voti za elektroni",
+      "Joules": "Joule",
+      "Foot-pounds": "Paundi za miguu",
+      "batteries": "betri",
+      "bananas": "ndizi",
+      "slices of cake": "vipande vya keki",
+      "Bits": "Biti",
+      "Nibble": "Nyumbu",
+      "Bytes": "Baiti",
+      "Kilobits": "Kilobiti",
+      "Kibibits": "Kibibiti",
+      "Kilobytes": "Kilobaiti",
+      "Kibibytes": "Kibibytes",
+      "Megabits": "Megabiti",
+      "Mebibits": "Mebibits",
+      "Megabytes": "Megabaiti",
+      "Mebibytes": "Mebibytes",
+      "Gigabits": "Gigabiti",
+      "Gibibits": "Gibibiti",
+      "Gigabytes": "Gigabaiti",
+      "Gibibytes": "Gibibaiti",
+      "Terabits": "Tabia",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabaiti",
+      "Tebibytes": "Tebibytes",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabytes",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Uchunguzi",
+      "Exbibits": "Vielelezo",
+      "Exabytes": "Exabytes",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebibiti",
+      "Zetabytes": "Zetabytes",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabytes",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "diski za floppy",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "Angahewa",
+      "Bars": "Baa",
+      "Kilopascals": "Kilopascal",
+      "Millimeters of mercury": "Milimita za zebaki",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Pauni kwa inchi ya mraba",
+      "Degrees": "Digrii",
+      "Radians": "Radiani",
+      "Gradians": "Wahitimu",
+      "Microseconds": "Sekunde ndogo",
+      "Milliseconds": "Milisekunde",
+      "Seconds": "Sekunde",
+      "Minutes": "Dakika",
+      "Hours": "Saa",
+      "Days": "Siku",
+      "Weeks": "Wiki",
+      "Years": "Miaka"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Dola ya Marekani",
+      "Euro": "Ero",
+      "British Pound": "Pauni ya Uingereza",
+      "Japanese Yen": "Yen ya Kijapani",
+      "Canadian Dollar": "Dola ya Kanada",
+      "Australian Dollar": "Dola ya Australia",
+      "Brazilian Real": "Halisi ya Brazili",
+      "Chilean Peso": "Peso ya Chile",
+      "Chinese Yuan": "Yuan ya Uchina",
+      "Colombian Peso": "Peso ya Colombia",
+      "Danish Krone": "Krone ya Denmark",
+      "Egyptian Pound": "Pauni ya Misri",
+      "Hong Kong Dollar": "Dola ya Hong Kong",
+      "Indian Rupee": "Rupia ya India",
+      "Kenyan Shilling": "Shilingi ya Kenya",
+      "Mexican Peso": "Peso ya Meksiko",
+      "Nigerian Naira": "Naira ya Nigeria",
+      "New Zealand Dollar": "Dola ya Nyuzilandi",
+      "Norwegian Krone": "Krone ya Norway",
+      "Philippine Piso": "Philippine Piso",
+      "Polish Zloty": "Zloty ya Polandi",
+      "Qatari Riyal": "Riyal ya Qatar",
+      "Saudi Riyal": "Saudi Riyal",
+      "Singapore Dollar": "Dola ya Singapore",
+      "South African Rand": "Randi ya Afrika Kusini",
+      "South Korean Won": "Mshindi wa Korea Kusini",
+      "Swedish Krona": "Krona ya Uswidi",
+      "Swiss Franc": "Faranga za Uswizi",
+      "Thai Baht": "Baht ya Kithai",
+      "Turkish Lira": "Lira ya Kituruki",
+      "Turkmenistani Manat": "Turkmenistani Manat",
+      "Ugandan Shilling": "Shilingi ya Uganda",
+      "Ukrainian Hryvnia": "Hryvnia ya Kiukreni",
+      "UAE Dirham": "Dirham ya UAE",
+      "Uruguayan Peso": "Peso ya Uruguay",
+      "Uzbekistani Som": "Uzbekistani Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Bolívar Soberano wa Venezuela",
+      "Vietnamese Dong": "Dong ya Kivietinamu",
+      "Yemeni Rial": "Rial ya Yemeni"
+    },
+    "labels": {
+      "United States - Dollar": "Marekani - Dola",
+      "Europe - Euro": "Ulaya - Euro",
+      "United Kingdom - Pound": "Uingereza - Pauni",
+      "Japan - Yen": "Japan - Yen",
+      "Canada - Dollar": "Kanada - Dola",
+      "Australia - Dollar": "Australia - Dola",
+      "Brazil - Real": "Brazili - Halisi",
+      "Chile - Peso": "Chile - Peso",
+      "China - Yuan Renminbi": "Uchina - Yuan Renminbi",
+      "Colombia - Peso": "Kolombia - Peso",
+      "Denmark - Krone": "Denmark - Krone",
+      "Egypt - Pound": "Misri - Pauni",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Dola",
+      "India - Rupee": "India - Rupia",
+      "Kenya - Shilling": "Kenya - Shilingi",
+      "Mexico - Peso": "Mexico - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "Nyuzilandi - Dola",
+      "Norway - Krone": "Norwe - Krone",
+      "Philippines - Piso": "Ufilipino - Piso",
+      "Poland - Zloty": "Polandi - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Saudi Arabia - Riyal",
+      "Singapore - Dollar": "Singapore - Dola",
+      "South Africa - Rand": "Afrika Kusini - Randi",
+      "South Korea - Won": "Korea Kusini - Imeshinda",
+      "Sweden - Krona": "Uswidi - Krona",
+      "Switzerland - Franc": "Uswisi - Franc",
+      "Thailand - Baht": "Thailand - Baht",
+      "Turkey - Lira": "Uturuki - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Shilingi",
+      "Ukraine - Hryvnia": "Ukraine - Hryvnia",
+      "United Arab Emirates - Dirham": "Falme za Kiarabu - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Uzbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemen - Rial"
+    }
+  }
+}

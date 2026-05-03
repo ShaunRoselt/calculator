@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "מחשבון",
+    "name": "מחשבון"
+  },
+  "common": {
+    "back": "חזרה",
+    "backspace": "Backspace",
+    "closeSidePanel": "סגור את החלונית"
+  },
+  "converter": {
+    "unitConverter": "ממיר יחידות",
+    "title": "ממירי יחידות",
+    "builtInCollections": "אוספים מובנים",
+    "category": "קטגוריה",
+    "from": "מאת",
+    "to": "אל",
+    "inputValue": "ערך להמרה",
+    "convertedValue": "ערך המרה",
+    "swapUnits": "החלף יחידות",
+    "keypad": "מקלדת ממיר",
+    "unit": "יחידה",
+    "unitOptions": "אפשרויות יחידה",
+    "currency": {
+      "updatingRates": "מעדכן תעריפים...",
+      "updateRates": "עדכן תעריפים",
+      "keypad": "מקלדת מטבע",
+      "currency": "מטבע",
+      "options": "אפשרויות מטבע",
+      "updated": "עודכן {timestamp}",
+      "status": {
+        "mockNote": "שיעורי התייחסות מדומים עבור הדגמת האפליקציה העצמאית.",
+        "fetching": "מביא את שיעורי הייחוס העדכניים ביותר של דולר ארה\"ב...",
+        "liveRatesLoaded": "תעריפים בזמן אמת נטענו מ- ExchangeRate-API.",
+        "liveUpdateUnavailable": "עדכון חי לא זמין. רענון תעריפי הדגמה מקומית."
+      }
+    },
+    "aboutEqualTo": "בערך שווה ל"
+  },
+  "errors": {
+    "invalidInput": "קלט לא חוקי",
+    "cannotDivideByZero": "לא ניתן לחלק באפס",
+    "cannotModuloByZero": "לא ניתן למודולו באפס",
+    "invalidProgrammerOperation": "פעולה לא חוקית",
+    "overflow": "התוצאה גדולה מדי"
+  },
+  "date": {
+    "calculationMode": "מצב חישוב",
+    "from": "מאת",
+    "to": "אל",
+    "results": {
+      "difference": "הבדל",
+      "sameDates": "אותם תאריכים",
+      "date": "תאריך"
+    },
+    "calculationModeOptions": "אפשרויות מצב חישוב",
+    "mode": {
+      "difference": "הבדל",
+      "shift": "Shift"
+    },
+    "operation": "פעולה",
+    "add": "הוסף",
+    "subtract": "הורד",
+    "years": "שנים",
+    "months": "חודשים",
+    "days": "ימים",
+    "chooseDate": "בחר תאריך",
+    "previousMonth": "החודש הקודם",
+    "nextMonth": "בחודש הבא",
+    "duration": {
+      "year": {
+        "one": "{count} שנה",
+        "other": "{count} שנים"
+      },
+      "month": {
+        "one": "{count} חודש",
+        "other": "{count} חודשים"
+      },
+      "week": {
+        "one": "שבוע {count}",
+        "other": "{count} שבועות"
+      },
+      "day": {
+        "one": "יום {count}",
+        "other": "{count} ימים"
+      }
+    },
+    "history": {
+      "differenceBetween": "הבדל בין {from} ל-{to}",
+      "addTo": "הוסף את {duration} ל-{date}",
+      "subtractFrom": "הפחת את {duration} מ-{date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "בדוק את הביטוי המודגש",
+    "enterExpression": "הזן ביטוי",
+    "canvas": "בד גרף",
+    "stopTracing": "הפסק להתחקות",
+    "startTracing": "התחל להתחקות",
+    "share": "שתף",
+    "options": "אפשרויות",
+    "zoomIn": "התקרב",
+    "zoomInLabel": "התקרב",
+    "zoomOut": "התקרב",
+    "zoomOutLabel": "התקרב",
+    "refreshViewAutomatically": "רענן את התצוגה באופן אוטומטי",
+    "view": "הצג",
+    "expressions": "ביטויים",
+    "mobileView": "תצוגה לנייד",
+    "showGraph": "הצג גרף",
+    "showExpressions": "הצג ביטויים",
+    "backToFunctionList": "חזרה לרשימת הפונקציות",
+    "window": "חלון",
+    "resetView": "אפס את התצוגה",
+    "units": "יחידות",
+    "radians": "רדיאנים",
+    "degrees": "מעלות",
+    "gradians": "גרדיאנים",
+    "lineThickness": "עובי קו",
+    "theme": "נושא",
+    "alwaysLight": "תמיד קל",
+    "matchAppTheme": "התאמה לנושא האפליקציה",
+    "groups": {
+      "inequalities": "אי שוויון",
+      "trigonometry": "טריגונומטריה",
+      "function": "פונקציה"
+    },
+    "functions": "פונקציות",
+    "showEquation": "הצג משוואה",
+    "hideEquation": "הסתר משוואה",
+    "lineOptions": "אפשרויות קו",
+    "color": "צבע",
+    "style": "סגנון",
+    "analysis": {
+      "title": "ניתוח",
+      "domain": "דומיין",
+      "range": "טווח",
+      "xIntercept": "יירט x",
+      "yIntercept": "י-יירט",
+      "minima": "מינימום",
+      "maxima": "מקסימה",
+      "inflectionPoints": "נקודות פיתול",
+      "verticalAsymptotes": "אסימפטוטות אנכיות",
+      "horizontalAsymptotes": "אסימפטוטות אופקיות",
+      "obliqueAsymptotes": "אסימפטוטות אלכסוניות",
+      "parity": "שוויון",
+      "period": "תקופה",
+      "monotonicity": "מונוטוניות",
+      "domainNone": "אין הגבלות דומיין",
+      "rangeNone": "אין הגבלות טווח",
+      "xInterceptNone": "אין יירוט x",
+      "yInterceptNone": "אין יירוטים Y",
+      "minimaNone": "אין מינימום",
+      "maximaNone": "אין מקסימום",
+      "inflectionNone": "אין נקודות פיתול",
+      "verticalAsymptotesNone": "אין אסימפטוטות אנכיות",
+      "horizontalAsymptotesNone": "אין אסימפטוטות אופקיות",
+      "obliqueAsymptotesNone": "אין אסימפטוטות אלכסוניות",
+      "parityUnknown": "לא ידוע",
+      "parityOdd": "מוזר",
+      "parityEven": "אפילו",
+      "parityNeither": "גם לא",
+      "periodicityUnknown": "לא ידוע",
+      "periodicityNotPeriodic": "לא תקופתי",
+      "monotonicityConstant": "קבוע",
+      "monotonicityIncreasing": "גדל",
+      "monotonicityDecreasing": "בירידה",
+      "monotonicityUnknown": "לא ידוע",
+      "monotonicityError": "לא ניתן לקבוע",
+      "featureTooComplexPlural": "מורכב מדי לניתוח",
+      "analysisCouldNotBePerformed": "לא ניתן לבצע ניתוח",
+      "analysisNotSupported": "ניתוח אינו נתמך",
+      "variableIsNotX": "המשתנה אינו x"
+    },
+    "plottingExpressions": "מתווים ביטויים של {count}",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "בחר ביטוי {index}",
+    "expressionIndex": "ביטוי {index}",
+    "analyzeFunction": "ניתוח פונקציה",
+    "changeEquationStyle": "שנה את סגנון המשוואה",
+    "removeEquation": "הסר את המשוואה",
+    "lineStyle": {
+      "solid": "סגנון קו מוצק",
+      "dash": "סגנון קו מקפים",
+      "dot": "סגנון קו נקודות"
+    }
+  },
+  "history": {
+    "empty": "ההיסטוריה ריקה",
+    "clearAll": "נקה הכל",
+    "clear": "נקה היסטוריה",
+    "title": "היסטוריה",
+    "andMemory": "היסטוריה וזיכרון",
+    "aria": {
+      "historyPanel": "חלונית היסטוריה",
+      "historyAndMemoryPanel": "חלונית היסטוריה וזיכרון"
+    },
+    "closeFlyout": "סגור היסטוריה",
+    "openFlyout": "פתח את ההיסטוריה"
+  },
+  "memory": {
+    "empty": "הזיכרון ריק",
+    "clearItem": "נקה פריט",
+    "addCurrentValue": "הוסף ערך נוכחי",
+    "subtractCurrentValue": "הפחת את הערך הנוכחי",
+    "clearAll": "נקה הכל",
+    "clear": "נקה זיכרון",
+    "title": "זיכרון",
+    "controls": "פקדי זיכרון",
+    "tooltips": {
+      "clearAll": "נקה את כל הזיכרון",
+      "recall": "זכור מהזיכרון",
+      "add": "הוסף לזיכרון",
+      "subtract": "הורד מהזיכרון",
+      "store": "שמור בזיכרון"
+    },
+    "recallValue": "זיכרון זיכרון {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "ניווט",
+      "closeNavigation": "סגור את הניווט",
+      "openNavigation": "פתח את הניווט"
+    },
+    "groups": {
+      "calculator": "מחשבון",
+      "converter": "ממיר"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "לוח היפוך סיביות",
+    "baseReadouts": "קריאת בסיס",
+    "surfaceMode": "מצב פני השטח",
+    "fullKeypad": "לוח מקשים מלא",
+    "showKeypad": "הצג לוח מקשים",
+    "bitTogglingKeypad": "מקלדת להחלפת סיביות",
+    "showBitView": "הצג תצוגת סיביות",
+    "wordSize": "גודל מילה",
+    "bitwise": "Bitwise",
+    "bitShift": "הסטת סיביות"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "טריגונומטריה",
+      "function": "פונקציה",
+      "functionsAria": "פונקציות",
+      "trigonometricFunctionsAria": "פונקציות טריגונומטריות",
+      "angleUnit": "יחידת זווית {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "מראה",
+      "themeTitle": "נושא",
+      "themeDescription": "בחר ערכת צבעים",
+      "light": "קל",
+      "dark": "כהה",
+      "blue": "כחול",
+      "green": "ירוק",
+      "system": "מערכת"
+    },
+    "language": {
+      "group": "שפה",
+      "title": "שפה",
+      "description": "בחר את השפה המועדפת עליך"
+    },
+    "about": {
+      "group": "בערך"
+    },
+    "feedback": "שלח משוב",
+    "contribute": {
+      "prefix": "תרום ב",
+      "link": "GitHub",
+      "suffix": "כדי לעזור לשפר את המחשבון הזה"
+    },
+    "links": {
+      "repository": "מאגר פרויקטים",
+      "readme": "קרא אותי",
+      "license": "רישיון MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "סטנדרטי",
+      "subtitle": "הערכה מיידית קלאסית"
+    },
+    "scientific": {
+      "label": "מדעי",
+      "subtitle": "תמיכה באופרטורים, בפונקציות ובביטויים"
+    },
+    "graphing": {
+      "label": "תרשים",
+      "subtitle": "שרטו ביטוי פשוט במישור קרטזי"
+    },
+    "programmer": {
+      "label": "מתכנת",
+      "subtitle": "מתמטיקה שלמים עם המרת בסיס"
+    },
+    "date": {
+      "label": "חישוב תאריך",
+      "subtitle": "מצא משכים ותאריכי משמרות"
+    },
+    "currency": {
+      "label": "מטבע",
+      "subtitle": "המר שערי חליפין מדומים"
+    },
+    "volume": {
+      "label": "ווליום",
+      "subtitle": "המר מדידות נפח"
+    },
+    "length": {
+      "label": "אורך",
+      "subtitle": "המר יחידות מרחק ואורך"
+    },
+    "weight": {
+      "label": "משקל ומסה",
+      "subtitle": "המר יחידות משקל ומסה"
+    },
+    "temperature": {
+      "label": "טמפרטורה",
+      "subtitle": "המר סולמות טמפרטורה"
+    },
+    "energy": {
+      "label": "אנרגיה",
+      "subtitle": "המר מדידות אנרגיה"
+    },
+    "area": {
+      "label": "אזור",
+      "subtitle": "המר מדידות שטח"
+    },
+    "speed": {
+      "label": "מהירות",
+      "subtitle": "המר מדידות מהירות"
+    },
+    "time": {
+      "label": "זמן",
+      "subtitle": "המר מדידות זמן"
+    },
+    "power": {
+      "label": "כוח",
+      "subtitle": "המר מדידות הספק"
+    },
+    "data": {
+      "label": "נתונים",
+      "subtitle": "המר יחידות אחסון דיגיטליות"
+    },
+    "pressure": {
+      "label": "לחץ",
+      "subtitle": "המר יחידות לחץ"
+    },
+    "angle": {
+      "label": "זווית",
+      "subtitle": "המר מדידות זווית"
+    },
+    "settings": {
+      "label": "הגדרות",
+      "subtitle": "מידע על מראה ואפליקציה"
+    }
+  },
+  "categories": {
+    "Currency": "מטבע",
+    "Volume": "ווליום",
+    "Length": "אורך",
+    "Mass": "מסה",
+    "Temperature": "טמפרטורה",
+    "Energy": "אנרגיה",
+    "Area": "אזור",
+    "Speed": "מהירות",
+    "Time": "זמן",
+    "Power": "כוח",
+    "Data": "נתונים",
+    "Pressure": "לחץ",
+    "Angle": "זווית"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "אנגסטרום",
+      "Nanometers": "ננומטרים",
+      "Microns": "מיקרונים",
+      "Millimeters": "מילימטרים",
+      "Centimeters": "סנטימטרים",
+      "Meters": "מטרים",
+      "Kilometers": "קילומטרים",
+      "Inches": "אינץ'",
+      "Feet": "רגליים",
+      "Yards": "יארדים",
+      "Miles": "מיילים",
+      "Nautical miles": "מיילים ימיים",
+      "paperclips": "אטבי נייר",
+      "hands": "ידיים",
+      "jumbo jets": "מטוסי ג'מבו",
+      "Carats": "קראט",
+      "Milligrams": "מיליגרם",
+      "Centigrams": "סנטיגרמים",
+      "Decigrams": "דציגרמים",
+      "Grams": "גרם",
+      "Dekagrams": "דקגרמים",
+      "Hectograms": "הקטוגרמות",
+      "Kilograms": "קילוגרמים",
+      "Metric tonnes": "טון מטרי",
+      "Ounces": "אונקיות",
+      "Pounds": "פאונד",
+      "Stone": "אבן",
+      "Short tons (US)": "טונות קצרות (ארה\"ב)",
+      "Long tons (UK)": "טון ארוך (בריטניה)",
+      "snowflakes": "פתיתי שלג",
+      "soccer balls": "כדורי כדורגל",
+      "elephants": "פילים",
+      "whales": "לווייתנים",
+      "Celsius": "צלזיוס",
+      "Fahrenheit": "פרנהייט",
+      "Kelvin": "קלווין",
+      "Milliliters": "מיליליטר",
+      "Cubic centimeters": "סנטימטר מעוקב",
+      "Liters": "ליטר",
+      "Cubic meters": "מטר מעוקב",
+      "Teaspoons (US)": "כפיות (ארה\"ב)",
+      "Tablespoons (US)": "כפות (ארה\"ב)",
+      "Fluid ounces (US)": "אונקיות נוזליות (ארה\"ב)",
+      "Cups (US)": "כוסות (ארה\"ב)",
+      "Pints (US)": "פיינט (ארה\"ב)",
+      "Quarts (US)": "Quarts (ארה\"ב)",
+      "Gallons (US)": "גלונים (ארה\"ב)",
+      "Cubic inches": "אינץ' מעוקב",
+      "Cubic feet": "רגל מעוקב",
+      "Cubic yards": "יארד מעוקב",
+      "Teaspoons (UK)": "כפיות (בריטניה)",
+      "Tablespoons (UK)": "כפות (בריטניה)",
+      "Fluid ounces (UK)": "אונקיות נוזליות (בריטניה)",
+      "Pints (UK)": "Pints (בריטניה)",
+      "Quarts (UK)": "Quarts (בריטניה)",
+      "Gallons (UK)": "גלונים (בריטניה)",
+      "coffee cups": "כוסות קפה",
+      "bathtubs": "אמבטיות",
+      "swimming pools": "בריכות שחייה",
+      "Square millimeters": "מילימטרים רבועים",
+      "Square centimeters": "סנטימטרים רבועים",
+      "Square meters": "מטרים רבועים",
+      "Hectares": "הקטרים",
+      "Square kilometers": "קילומטרים רבועים",
+      "Square inches": "אינץ' רבועים",
+      "Square feet": "מטר מרובע",
+      "Square yards": "יארדים רבועים",
+      "Acres": "דונם",
+      "Square miles": "מייל רבועים",
+      "sheets of paper": "גליונות נייר",
+      "soccer fields": "מגרשי כדורגל",
+      "castles": "טירות",
+      "Pyeong": "פיונג",
+      "Centimeters per second": "סנטימטרים לשנייה",
+      "Meters per second": "מטרים לשנייה",
+      "Kilometers per hour": "קילומטרים לשעה",
+      "Feet per second": "רגל לשנייה",
+      "Miles per hour": "מיילים לשעה",
+      "Knots": "קשרים",
+      "Mach": "מאך",
+      "turtles": "צבים",
+      "horses": "סוסים",
+      "jets": "מטוסים",
+      "Watts": "וואט",
+      "Kilowatts": "קילווואט",
+      "Horsepower (US)": "כוח סוס (ארה\"ב)",
+      "Foot-pounds/minute": "פאונד-פאונד/דקה",
+      "BTUs/minute": "BTU/דקה",
+      "light bulbs": "נורות",
+      "train engines": "מנועי רכבת",
+      "Thermal calories": "קלוריות תרמיות",
+      "Food calories": "קלוריות של מזון",
+      "British thermal units": "יחידות תרמיות בריטיות",
+      "Kilojoules": "קילוג'אול",
+      "Kilowatt-hours": "קילווואט-שעה",
+      "Electron volts": "וולט אלקטרונים",
+      "Joules": "ג'אול",
+      "Foot-pounds": "קילוגרמים",
+      "batteries": "סוללות",
+      "bananas": "בננות",
+      "slices of cake": "פרוסות עוגה",
+      "Bits": "סיביות",
+      "Nibble": "נשנש",
+      "Bytes": "בייט",
+      "Kilobits": "קילוביטים",
+      "Kibibits": "קיביביטים",
+      "Kilobytes": "קילובייט",
+      "Kibibytes": "Kibibytes",
+      "Megabits": "מגה-ביט",
+      "Mebibits": "Mebibits",
+      "Megabytes": "מגה-בייט",
+      "Mebibytes": "Mebibytes",
+      "Gigabits": "גיגה-ביט",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "גיגה-בייט",
+      "Gibibytes": "Gibibytes",
+      "Terabits": "טרה-ביטים",
+      "Tebibits": "טביביטים",
+      "Terabytes": "טרה-בייט",
+      "Tebibytes": "טביבייט",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabytes",
+      "Pebibytes": "פביבייט",
+      "Exabits": "Exabits",
+      "Exbibits": "תערוכות",
+      "Exabytes": "אקסבייטים",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "זטאביטים",
+      "Zebibits": "זביביטים",
+      "Zetabytes": "זטה-בייט",
+      "Zebibytes": "זבי-בייט",
+      "Yottabits": "יוטאביטים",
+      "Yobibits": "יובייטים",
+      "Yottabytes": "יוטה-בייט",
+      "Yobibytes": "יובי-בייט",
+      "floppy disks": "תקליטונים",
+      "CDs": "תקליטורים",
+      "DVDs": "DVD",
+      "Atmospheres": "אטמוספירות",
+      "Bars": "ברים",
+      "Kilopascals": "קילופסקאל",
+      "Millimeters of mercury": "מילימטרים של כספית",
+      "Pascals": "פסקל",
+      "Pounds per square inch": "פאונד לאינץ' רבוע",
+      "Degrees": "מעלות",
+      "Radians": "רדיאנים",
+      "Gradians": "גרדיאנים",
+      "Microseconds": "מיקרו-שניות",
+      "Milliseconds": "מילישניות",
+      "Seconds": "שניות",
+      "Minutes": "דקות",
+      "Hours": "שעות",
+      "Days": "ימים",
+      "Weeks": "שבועות",
+      "Years": "שנים"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "דולר ארה\"ב",
+      "Euro": "אירו",
+      "British Pound": "פאונד בריטי",
+      "Japanese Yen": "ין יפני",
+      "Canadian Dollar": "דולר קנדי",
+      "Australian Dollar": "דולר אוסטרלי",
+      "Brazilian Real": "ריאל ברזילאי",
+      "Chilean Peso": "פזו צ'יליאני",
+      "Chinese Yuan": "יואן סיני",
+      "Colombian Peso": "פסו קולומביאני",
+      "Danish Krone": "קרון דני",
+      "Egyptian Pound": "לירה מצרית",
+      "Hong Kong Dollar": "דולר הונג קונגי",
+      "Indian Rupee": "רופי הודי",
+      "Kenyan Shilling": "שילינג קנייתי",
+      "Mexican Peso": "פסו מקסיקני",
+      "Nigerian Naira": "נאירה ניגרית",
+      "New Zealand Dollar": "דולר ניו זילנדי",
+      "Norwegian Krone": "קרון נורבגי",
+      "Philippine Piso": "פיזו הפיליפינית",
+      "Polish Zloty": "זלוטי פולני",
+      "Qatari Riyal": "ריאל קטארי",
+      "Saudi Riyal": "ריאל סעודי",
+      "Singapore Dollar": "דולר סינגפור",
+      "South African Rand": "ראנד דרום אפריקאי",
+      "South Korean Won": "וון דרום קוריאני",
+      "Swedish Krona": "קרונה שוודית",
+      "Swiss Franc": "פרנק שוויצרי",
+      "Thai Baht": "בהט תאילנדי",
+      "Turkish Lira": "לירה טורקית",
+      "Turkmenistani Manat": "מנאט טורקמניסטני",
+      "Ugandan Shilling": "שילינג אוגנדי",
+      "Ukrainian Hryvnia": "Hryvnia אוקראינית",
+      "UAE Dirham": "דירהם של איחוד האמירויות הערביות",
+      "Uruguayan Peso": "פסו אורוגוואי",
+      "Uzbekistani Som": "סום אוזבקיסטי",
+      "Vanuatu Vatu": "ונואטו ואטו",
+      "Venezuelan Bolivar Soberano": "בוליבר סובראנו הוונצואלי",
+      "Vietnamese Dong": "דונג וייטנאמי",
+      "Yemeni Rial": "ריאל תימני"
+    },
+    "labels": {
+      "United States - Dollar": "ארצות הברית - דולר",
+      "Europe - Euro": "אירופה - יורו",
+      "United Kingdom - Pound": "בריטניה - פאונד",
+      "Japan - Yen": "יפן - ין",
+      "Canada - Dollar": "קנדה - דולר",
+      "Australia - Dollar": "אוסטרליה - דולר",
+      "Brazil - Real": "ברזיל - ריאל",
+      "Chile - Peso": "צ'ילה - פזו",
+      "China - Yuan Renminbi": "סין - יואן רנמינבי",
+      "Colombia - Peso": "קולומביה - פזו",
+      "Denmark - Krone": "דנמרק - קרון",
+      "Egypt - Pound": "מצרים - פאונד",
+      "Hong Kong SAR - Dollar": "SAR הונג קונג - דולר",
+      "India - Rupee": "הודו - רופי",
+      "Kenya - Shilling": "קניה - שילינג",
+      "Mexico - Peso": "מקסיקו - פזו",
+      "Nigeria - Naira": "ניגריה - נאירה",
+      "New Zealand - Dollar": "ניו זילנד - דולר",
+      "Norway - Krone": "נורווגיה - קרון",
+      "Philippines - Piso": "פיליפינים - פיסו",
+      "Poland - Zloty": "פולין - זלוטי",
+      "Qatar - Riyal": "קטאר - ריאל",
+      "Saudi Arabia - Riyal": "ערב הסעודית - ריאל",
+      "Singapore - Dollar": "סינגפור - דולר",
+      "South Africa - Rand": "דרום אפריקה - ראנד",
+      "South Korea - Won": "דרום קוריאה - זכתה",
+      "Sweden - Krona": "שבדיה - קרונה",
+      "Switzerland - Franc": "שוויץ - פרנק",
+      "Thailand - Baht": "תאילנד - בהט",
+      "Turkey - Lira": "טורקיה - לירה",
+      "Turkmenistan - Manat": "טורקמניסטן - מנאט",
+      "Uganda - Shilling": "אוגנדה - שילינג",
+      "Ukraine - Hryvnia": "אוקראינה - Hryvnia",
+      "United Arab Emirates - Dirham": "איחוד האמירויות הערביות - דירהם",
+      "Uruguay - Peso": "אורוגוואי - פזו",
+      "Uzbekistan - Som": "אוזבקיסטן - סום",
+      "Vanuatu - Vatu": "ונואטו - ואטו",
+      "Venezuela - Bolívar Soberano": "ונצואלה - בוליבר סובראנו",
+      "Vietnam - Dong": "וייטנאם - דונג",
+      "Yemen - Rial": "תימן - ריאל"
+    }
+  }
+}

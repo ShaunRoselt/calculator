@@ -258,7 +258,9 @@
       "themeDescription": "Kies 'n kleurskema",
       "light": "Lig",
       "dark": "Donker",
-      "system": "Stelsel"
+      "system": "Stelsel",
+      "blue": "Blou",
+      "green": "Groen"
     },
     "language": {
       "group": "Taal",
@@ -517,7 +519,7 @@
       "Atmospheres": "Atmosfeer",
       "Bars": "Bar",
       "Kilopascals": "Kilopaskal",
-      "Millimeters of mercury ": "Millimeter kwik",
+      "Millimeters of mercury": "Millimeter kwik",
       "Pascals": "Paskal",
       "Pounds per square inch": "Pond per vierkante duim",
       "Degrees": "Grade",

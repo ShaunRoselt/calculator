@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Ihe mgbako",
+    "name": "Ihe mgbako"
+  },
+  "common": {
+    "back": "Azu",
+    "backspace": "Oghere azụ",
+    "closeSidePanel": "Mechie otu panel"
+  },
+  "converter": {
+    "unitConverter": "Ntụgharị nkeji",
+    "title": "Ndị ntụgharị otu",
+    "builtInCollections": "Mkpokọta arụnyere n'ime ya",
+    "category": "Otu",
+    "from": "Site na",
+    "to": "Ee",
+    "inputValue": "Uru ịtụgharị",
+    "convertedValue": "Uru atụgharịgharịrị",
+    "swapUnits": "Gbanwee nkeji",
+    "keypad": "Ahụigodo ntụgharị",
+    "unit": "nkeji",
+    "unitOptions": "nhọrọ nkeji",
+    "currency": {
+      "updatingRates": "Na-emelite ọnụego…",
+      "updateRates": "Ọnụego mmelite",
+      "keypad": "Ahụigodo ego",
+      "currency": "ego",
+      "options": "nhọrọ ego",
+      "updated": "Emelitere {timestamp}",
+      "status": {
+        "mockNote": "Ọnụ ego ntụaka akparị maka ngosi ngwa kwụụrụ onwe ya.",
+        "fetching": "Na-ebuta ọnụego ntụaka USD kacha ọhụrụ...",
+        "liveRatesLoaded": "Ọnụego efu sitere na ExchangeRate-API bugoro.",
+        "liveUpdateUnavailable": "Mmelite dị ndụ adịghị. Ọnụego ngosi ume ọhụrụ na mpaghara."
+      }
+    },
+    "aboutEqualTo": "Ihe dị ka hà nhata"
+  },
+  "errors": {
+    "invalidInput": "Ntinye na ezighi ezi",
+    "cannotDivideByZero": "Enweghị ike kewaa site na efu",
+    "cannotModuloByZero": "Enweghị ike ịmegharị ya site na efu",
+    "invalidProgrammerOperation": "Ọrụ na-ezighi ezi",
+    "overflow": "Nsonaazụ buru oke ibu"
+  },
+  "date": {
+    "calculationMode": "Ụdị ịgbakọ",
+    "from": "Site na",
+    "to": "Ee",
+    "results": {
+      "difference": "Ọdịiche",
+      "sameDates": "Otu ụbọchị",
+      "date": "Ụbọchị"
+    },
+    "calculationModeOptions": "Nhọrọ ụdị mgbako",
+    "mode": {
+      "difference": "Ọdịiche",
+      "shift": "Mgbanwe"
+    },
+    "operation": "Ọrụ",
+    "add": "Tinye",
+    "subtract": "Wepụ",
+    "years": "Afọ",
+    "months": "Ọnwa",
+    "days": "Ụbọchị",
+    "chooseDate": "Họrọ ụbọchị",
+    "previousMonth": "Ọnwa gara aga",
+    "nextMonth": "Ọnwa na-abịa",
+    "duration": {
+      "year": {
+        "one": "{count} afọ",
+        "other": "{count} afọ"
+      },
+      "month": {
+        "one": "{count} ọnwa",
+        "other": "{count} ọnwa"
+      },
+      "week": {
+        "one": "{count} izu",
+        "other": "{count} izu"
+      },
+      "day": {
+        "one": "{count} ụbọchị",
+        "other": "{count} ụbọchị"
+      }
+    },
+    "history": {
+      "differenceBetween": "Ọdịiche dị n'etiti {from} na {to}",
+      "addTo": "Tinye {duration} na {date}",
+      "subtractFrom": "Wepụ {duration} na {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Lelee okwu a pụtara ìhè",
+    "enterExpression": "Tinye nkwupụta",
+    "canvas": "Ihe eserese",
+    "stopTracing": "Kwụsị ịchụ",
+    "startTracing": "Bido ịchụ",
+    "share": "Kekọrịta",
+    "options": "Nhọrọ",
+    "zoomIn": "Batara",
+    "zoomInLabel": "Batara",
+    "zoomOut": "Wepụ ya",
+    "zoomOutLabel": "Wepụ ya",
+    "refreshViewAutomatically": "Weghachite nlele na-akpaghị aka",
+    "view": "Lelee",
+    "expressions": "Okwu",
+    "mobileView": "Nlegharị anya mkpanaka",
+    "showGraph": "Gosi eserese",
+    "showExpressions": "Gosi okwu",
+    "backToFunctionList": "Laghachi na ndepụta ọrụ",
+    "window": "windo",
+    "resetView": "Tọgharịa nlele",
+    "units": "Nkeji",
+    "radians": "Radian",
+    "degrees": "ogo",
+    "gradians": "Ndị gradian",
+    "lineThickness": "Ọkpụrụkpụ ahịrị",
+    "theme": "Gburugburu",
+    "alwaysLight": "Ọ na-enwu mgbe niile",
+    "matchAppTheme": "Isiokwu ngwa dakọtara",
+    "groups": {
+      "inequalities": "Ahaghị nhata",
+      "trigonometry": "Trigonometry",
+      "function": "Ọrụ"
+    },
+    "functions": "Ọrụ",
+    "showEquation": "Gosi nha nhata",
+    "hideEquation": "Zoo nha nhata",
+    "lineOptions": "Nhọrọ ahịrị",
+    "color": "Agba",
+    "style": "Ụdị",
+    "analysis": {
+      "title": "Nyocha",
+      "domain": "ngalaba",
+      "range": "Oke",
+      "xIntercept": "x-nkwụsị",
+      "yIntercept": "y-intercept",
+      "minima": "Obere",
+      "maxima": "Maxima",
+      "inflectionPoints": "Ebe ntụgharị",
+      "verticalAsymptotes": "Ihe asymptotes kwụ ọtọ",
+      "horizontalAsymptotes": "Ihe asymptotes kwụ ọtọ",
+      "obliqueAsymptotes": "asymptotes na-enweghị isi",
+      "parity": "Mmakọ",
+      "period": "Oge",
+      "monotonicity": "Ọkachamara",
+      "domainNone": "Enweghị mmachi ngalaba",
+      "rangeNone": "Enweghị mmachi oke",
+      "xInterceptNone": "Ọnweghị nkwụsịtụ x",
+      "yInterceptNone": "Enweghị y-intercepts",
+      "minimaNone": "Enweghị obere ihe",
+      "maximaNone": "Enweghị oke",
+      "inflectionNone": "Enweghị ntụgharị aka",
+      "verticalAsymptotesNone": "Enweghị asymptotes kwụ ọtọ",
+      "horizontalAsymptotesNone": "Enweghị asymptotes kwụ ọtọ",
+      "obliqueAsymptotesNone": "Onweghi ihe asymptotes doro anya",
+      "parityUnknown": "Amaghị",
+      "parityOdd": "Odi",
+      "parityEven": "Ọbụna",
+      "parityNeither": "Ọnweghịkwa",
+      "periodicityUnknown": "Amaghị",
+      "periodicityNotPeriodic": "Ọ bụghị kwa oge",
+      "monotonicityConstant": "na-adị mgbe niile",
+      "monotonicityIncreasing": "Na-abawanye",
+      "monotonicityDecreasing": "Na-ebelata",
+      "monotonicityUnknown": "Amaghị",
+      "monotonicityError": "Enweghị ike ikpebi",
+      "featureTooComplexPlural": "Ọ dị mgbagwoju anya nyocha",
+      "analysisCouldNotBePerformed": "Enweghị ike ịme nyocha",
+      "analysisNotSupported": "Akwadoghi nyocha",
+      "variableIsNotX": "Mgbanwe abụghị x"
+    },
+    "plottingExpressions": "Mkpesa {count} okwu",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Nkeji",
+    "yMax": "Y-Max",
+    "selectExpression": "Họrọ okwu {index}",
+    "expressionIndex": "Okwu {index}",
+    "analyzeFunction": "Nyochaa ọrụ",
+    "changeEquationStyle": "Gbanwee ụdị nha nhata",
+    "removeEquation": "Wepu nha nhata",
+    "lineStyle": {
+      "solid": "Ụdị ahịrị siri ike",
+      "dash": "Ụdị akara akara",
+      "dot": "Ụdị ahịrị ntụpọ"
+    }
+  },
+  "history": {
+    "empty": "Akụkọ tọgbọ chakoo",
+    "clearAll": "Kpochapụ ha niile",
+    "clear": "Kpochapụ akụkọ ihe mere eme",
+    "title": "Akụkọ",
+    "andMemory": "Akụkọ na ebe nchekwa",
+    "aria": {
+      "historyPanel": "Ogwe akụkọ",
+      "historyAndMemoryPanel": "Akụkọ ihe mere eme na ebe nchekwa"
+    },
+    "closeFlyout": "Mechie akụkọ ihe mere eme",
+    "openFlyout": "Mepee akụkọ"
+  },
+  "memory": {
+    "empty": "Ebe nchekwa abaghị uru",
+    "clearItem": "Kpochapụ ihe",
+    "addCurrentValue": "Tinye uru dị ugbu a",
+    "subtractCurrentValue": "Wepụ uru dị ugbu a",
+    "clearAll": "Kpochapụ ha niile",
+    "clear": "Kpochapụ ebe nchekwa",
+    "title": "Ebe nchekwa",
+    "controls": "Njikwa ebe nchekwa",
+    "tooltips": {
+      "clearAll": "Hichapụ ebe nchekwa niile",
+      "recall": "Cheta site na ebe nchekwa",
+      "add": "Tinye na ebe nchekwa",
+      "subtract": "Wepụ na ebe nchekwa",
+      "store": "Chekwa na ebe nchekwa"
+    },
+    "recallValue": "Cheta ebe nchekwa {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Nsoro ụzọ",
+      "closeNavigation": "Mechie igodo",
+      "openNavigation": "Mepee igodo"
+    },
+    "groups": {
+      "calculator": "Ihe mgbako",
+      "converter": "Ntụgharị"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Ogwe tụgharịa Bit",
+    "baseReadouts": "Ngụgharị ntọala",
+    "surfaceMode": "Ụdị ihu",
+    "fullKeypad": "Ahụigodo zuru ezu",
+    "showKeypad": "Gosi ahụ igodo",
+    "bitTogglingKeypad": "Ahụigodo na-atụgharị ntakịrị",
+    "showBitView": "Gosi ntakịrị nlele",
+    "wordSize": "Nha okwu",
+    "bitwise": "Otú ọ dị",
+    "bitShift": "Mgbanwe ntakịrị"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometry",
+      "function": "Ọrụ",
+      "functionsAria": "Ọrụ",
+      "trigonometricFunctionsAria": "Ọrụ trigonometric",
+      "angleUnit": "Otu akụkụ {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Ọdịdị",
+      "themeTitle": "Gburugburu",
+      "themeDescription": "Họrọ atụmatụ agba",
+      "light": "Ìhè",
+      "dark": "Ọchịchịrị",
+      "blue": "Na-acha anụnụ anụnụ",
+      "green": "Akwụkwọ ndụ akwụkwọ ndụ",
+      "system": "Sistemụ"
+    },
+    "language": {
+      "group": "Asụsụ",
+      "title": "Asụsụ",
+      "description": "Họrọ asụsụ ọkacha mmasị gị"
+    },
+    "about": {
+      "group": "gbasara"
+    },
+    "feedback": "Zipu nzaghachi",
+    "contribute": {
+      "prefix": "Nye aka na",
+      "link": "GitHub",
+      "suffix": "iji nyere aka melite mgbako a"
+    },
+    "links": {
+      "repository": "Ebe nchekwa ọrụ",
+      "readme": "README",
+      "license": "MIT ikike"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Ọkọlọtọ",
+      "subtitle": "Ntụle ozugbo"
+    },
+    "scientific": {
+      "label": "Sayensị",
+      "subtitle": "Ndị na-arụ ọrụ, ọrụ na nkwado okwu"
+    },
+    "graphing": {
+      "label": "Eserese",
+      "subtitle": "Chee echiche dị mfe n'ụgbọelu cartesian"
+    },
+    "programmer": {
+      "label": "Onye mmemme",
+      "subtitle": "Mgbakọ ọnụọgụ ọnụọgụgụ nwere ntụgharị ntọala"
+    },
+    "date": {
+      "label": "Mgbakọ ụbọchị",
+      "subtitle": "Chọta oge na ụbọchị mgbanwe"
+    },
+    "currency": {
+      "label": "Ego",
+      "subtitle": "Tụgharịa ọnụego mgbanwe aghụghọ"
+    },
+    "volume": {
+      "label": "Mpịakọta",
+      "subtitle": "Tụgharịa nha olu"
+    },
+    "length": {
+      "label": "Ogologo",
+      "subtitle": "Tụgharịa nkeji ogologo na ogologo"
+    },
+    "weight": {
+      "label": "Ibu na uka",
+      "subtitle": "Tụgharịa nha na nkeji oke"
+    },
+    "temperature": {
+      "label": "Okpomọkụ",
+      "subtitle": "Tụgharịa ọ̀tụ̀tụ̀ okpomọkụ"
+    },
+    "energy": {
+      "label": "Ike",
+      "subtitle": "Tụgharịa nha ike"
+    },
+    "area": {
+      "label": "Mpaghara",
+      "subtitle": "Tụgharịa nha mpaghara"
+    },
+    "speed": {
+      "label": "Ọsọ",
+      "subtitle": "Tụgharịa nha ọsọ"
+    },
+    "time": {
+      "label": "Oge",
+      "subtitle": "Tụgharịa nha oge"
+    },
+    "power": {
+      "label": "Ike",
+      "subtitle": "Tụgharịa nha ike"
+    },
+    "data": {
+      "label": "Data",
+      "subtitle": "Tụgharịa nkeji nchekwa dijitalụ"
+    },
+    "pressure": {
+      "label": "Nrụgide",
+      "subtitle": "Tụgharịa nkeji nrụgide"
+    },
+    "angle": {
+      "label": "Akụkụ",
+      "subtitle": "Tụgharịa nha akụkụ"
+    },
+    "settings": {
+      "label": "Ntọala",
+      "subtitle": "Ọdịdị na ozi ngwa"
+    }
+  },
+  "categories": {
+    "Currency": "Ego",
+    "Volume": "Mpịakọta",
+    "Length": "Ogologo",
+    "Mass": "Mas",
+    "Temperature": "Okpomọkụ",
+    "Energy": "Ike",
+    "Area": "Mpaghara",
+    "Speed": "Ọsọ",
+    "Time": "Oge",
+    "Power": "Ike",
+    "Data": "Data",
+    "Pressure": "Nrụgide",
+    "Angle": "Akụkụ"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanometers",
+      "Microns": "Micron",
+      "Millimeters": "millimita",
+      "Centimeters": "sentimita",
+      "Meters": "Mita",
+      "Kilometers": "kilomita",
+      "Inches": "sentimita asatọ",
+      "Feet": "Ụkwụ",
+      "Yards": "Ụlọ",
+      "Miles": "Miles",
+      "Nautical miles": "Maịl mmiri mmiri",
+      "paperclips": "Mpempe akwụkwọ",
+      "hands": "aka",
+      "jumbo jets": "ụgbọ elu jumbo",
+      "Carats": "Carats",
+      "Milligrams": "milligram",
+      "Centigrams": "Sentigram",
+      "Decigrams": "Decigram",
+      "Grams": "gram",
+      "Dekagrams": "Dekagram",
+      "Hectograms": "hectogram",
+      "Kilograms": "kilogram",
+      "Metric tonnes": "nha nha",
+      "Ounces": "ounce",
+      "Pounds": "paụnd",
+      "Stone": "Nkume",
+      "Short tons (US)": "Obere tọn (US)",
+      "Long tons (UK)": "Ogologo ogologo (UK)",
+      "snowflakes": "flakes snow",
+      "soccer balls": "bọọlụ bọọlụ",
+      "elephants": "enyí",
+      "whales": "whale",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "milliliters",
+      "Cubic centimeters": "Cubic centimita",
+      "Liters": "Lita",
+      "Cubic meters": "Mkpụrụ kubik",
+      "Teaspoons (US)": "Ngwọta tii (US)",
+      "Tablespoons (US)": "Ngaji tebụl (US)",
+      "Fluid ounces (US)": "ounce mmiri mmiri (US)",
+      "Cups (US)": "Iko (US)",
+      "Pints (US)": "Pint (US)",
+      "Quarts (US)": "Quarts (US)",
+      "Gallons (US)": "Galọn (US)",
+      "Cubic inches": "Cub inch",
+      "Cubic feet": "Ụkwụ kubik",
+      "Cubic yards": "Yadi cubic",
+      "Teaspoons (UK)": "Nri tii (UK)",
+      "Tablespoons (UK)": "Ngaji tebụl (UK)",
+      "Fluid ounces (UK)": "ounce mmiri mmiri (UK)",
+      "Pints (UK)": "Pints (UK)",
+      "Quarts (UK)": "Quarts (UK)",
+      "Gallons (UK)": "Galọn (UK)",
+      "coffee cups": "iko kọfị",
+      "bathtubs": "ụlọ ịsa ahụ",
+      "swimming pools": "ọdọ mmiri",
+      "Square millimeters": "milimita square",
+      "Square centimeters": "Square centimita",
+      "Square meters": "Mkpụrụ anọ",
+      "Hectares": "hectare",
+      "Square kilometers": "kilomita square",
+      "Square inches": "Square inch",
+      "Square feet": "Ụkwụ anọ",
+      "Square yards": "Oghere oghere",
+      "Acres": "Acres",
+      "Square miles": "Maịlụ square",
+      "sheets of paper": "mpempe akwụkwọ",
+      "soccer fields": "ogige bọọlụ",
+      "castles": "nnukwu ụlọ",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "centimeters kwa nkeji",
+      "Meters per second": "mita kwa nkeji",
+      "Kilometers per hour": "Kilomita kwa elekere",
+      "Feet per second": "Ụkwụ kwa nkeji",
+      "Miles per hour": "Maịl kwa elekere",
+      "Knots": "Akụkụ",
+      "Mach": "Mach",
+      "turtles": "nduru",
+      "horses": "ịnyịnya",
+      "jets": "ụgbọ elu",
+      "Watts": "Watts",
+      "Kilowatts": "kilowatts",
+      "Horsepower (US)": "Akụkụ (US)",
+      "Foot-pounds/minute": "Ụkwụ-paụn/nkeji",
+      "BTUs/minute": "BTUs/nkeji",
+      "light bulbs": "oriọna ọkụ",
+      "train engines": "igwe ụgbọ oloko",
+      "Thermal calories": "Kalori ọkụ",
+      "Food calories": "Kalori nri",
+      "British thermal units": "Ngalaba okpomọkụ nke Britain",
+      "Kilojoules": "kilojoules",
+      "Kilowatt-hours": "Kọwatt-awa",
+      "Electron volts": "Electron volt",
+      "Joules": "Joules",
+      "Foot-pounds": "Ụkwụ-paụnd",
+      "batteries": "batrị",
+      "bananas": "unere",
+      "slices of cake": "iberibe achicha",
+      "Bits": "Bit",
+      "Nibble": "Ụtọ",
+      "Bytes": "Bytes",
+      "Kilobits": "kilobits",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "Kilobytes",
+      "Kibibytes": "Kibibytes",
+      "Megabits": "Megabits",
+      "Mebibits": "Mbibits",
+      "Megabytes": "Megabytes",
+      "Mebibytes": "Mebibytes",
+      "Gigabits": "Gigabits",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Gigabyte",
+      "Gibibytes": "Gibibytes",
+      "Terabits": "Trabits",
+      "Tebibits": "Tibibits",
+      "Terabytes": "Terabytes",
+      "Tebibytes": "Tebibytes",
+      "Petabits": "Petbits",
+      "Pebibits": "Pebits",
+      "Petabytes": "Petabytes",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Ihe ngosi",
+      "Exbibits": "Ihe ngosi",
+      "Exabytes": "Exabytes",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebits",
+      "Zetabytes": "Zetabytes",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabytes",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "diski floppy",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "Igwe ikuku",
+      "Bars": "Ogwe",
+      "Kilopascals": "kilopascals",
+      "Pascals": "Pascal",
+      "Pounds per square inch": "Paụnd kwa square inch",
+      "Degrees": "ogo",
+      "Radians": "Radian",
+      "Gradians": "Ndị gradian",
+      "Microseconds": "nkeji nkeji",
+      "Milliseconds": "nkeji nkeji",
+      "Seconds": "Sekọnd",
+      "Minutes": "nkeji",
+      "Hours": "Aka elekere",
+      "Days": "Ụbọchị",
+      "Weeks": "Izuụka",
+      "Years": "Afọ",
+      "Millimeters of mercury": "Millimeters of mercury"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Dollar US",
+      "Euro": "Euro",
+      "British Pound": "Pọụn Britain",
+      "Japanese Yen": "Yen Japanese",
+      "Canadian Dollar": "Dollar Canada",
+      "Australian Dollar": "Dollar Australia",
+      "Brazilian Real": "Ezigbo Brazil",
+      "Chilean Peso": "Peso nke Chile",
+      "Chinese Yuan": "Yuan nke China",
+      "Colombian Peso": "Colombian peso",
+      "Danish Krone": "Danish Krone",
+      "Egyptian Pound": "Paụnd Ijipt",
+      "Hong Kong Dollar": "Dollar Hong Kong",
+      "Indian Rupee": "Rupe India",
+      "Kenyan Shilling": "Shilling nke Kenya",
+      "Mexican Peso": "Peso Mexico",
+      "Nigerian Naira": "Naira Naijiria",
+      "New Zealand Dollar": "Dollar New Zealand",
+      "Norwegian Krone": "Krone Norwegian",
+      "Philippine Piso": "Philippines Piso",
+      "Polish Zloty": "Zloty Polish",
+      "Qatari Riyal": "Riyal Qatar",
+      "Saudi Riyal": "Riyal Saudi",
+      "Singapore Dollar": "Dollar Singapore",
+      "South African Rand": "Rand South Africa",
+      "South Korean Won": "Ndị South Korea meriri",
+      "Swedish Krona": "Swedish krona",
+      "Swiss Franc": "franc Switzerland",
+      "Thai Baht": "Thai Baht",
+      "Turkish Lira": "Lira nke Turkey",
+      "Turkmenistani Manat": "Turkmenistan Manat",
+      "Ugandan Shilling": "Uganda Shilling",
+      "Ukrainian Hryvnia": "Hryvnia nke Ukraine",
+      "UAE Dirham": "Dirham UAE",
+      "Uruguayan Peso": "Peso Uruguayan",
+      "Uzbekistani Som": "Uzbekistan Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuelan Bolívar Soberano",
+      "Vietnamese Dong": "Dong Vietnamese",
+      "Yemeni Rial": "Rịlụ Yemen"
+    },
+    "labels": {
+      "United States - Dollar": "United States - Dollar",
+      "Europe - Euro": "Europe - Euro",
+      "United Kingdom - Pound": "United Kingdom - Pound",
+      "Japan - Yen": "Japan - Yen",
+      "Canada - Dollar": "Canada - Dollar",
+      "Australia - Dollar": "Australia - Dollar",
+      "Brazil - Real": "Brazil - Ezigbo",
+      "Chile - Peso": "Chile - Peso",
+      "China - Yuan Renminbi": "China - Yuan Renminbi",
+      "Colombia - Peso": "Colombia - Peso",
+      "Denmark - Krone": "Denmark - Krone",
+      "Egypt - Pound": "Egypt - Paụnd",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Dollar",
+      "India - Rupee": "India - Rupee",
+      "Kenya - Shilling": "Kenya - Shilling",
+      "Mexico - Peso": "Mexico - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "New Zealand - Dollar",
+      "Norway - Krone": "Norway - Krone",
+      "Philippines - Piso": "Philippines - Piso",
+      "Poland - Zloty": "Poland - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Saudi Arabia - Riyal",
+      "Singapore - Dollar": "Singapore - Dollar",
+      "South Africa - Rand": "South Africa - Rand",
+      "South Korea - Won": "South Korea - meriri",
+      "Sweden - Krona": "Sweden - Krona",
+      "Switzerland - Franc": "Switzerland - Franc",
+      "Thailand - Baht": "Thailand - Baht",
+      "Turkey - Lira": "Turki - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Shilling",
+      "Ukraine - Hryvnia": "Ukraine - Hryvnia",
+      "United Arab Emirates - Dirham": "United Arab Emirates - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Uzbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemen - Rial"
+    }
+  }
+}

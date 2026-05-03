@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "ಕ್ಯಾಲ್ಕುಲೇಟರ್",
+    "name": "ಕ್ಯಾಲ್ಕುಲೇಟರ್"
+  },
+  "common": {
+    "back": "ಹಿಂದೆ",
+    "backspace": "ಬ್ಯಾಕ್ ಸ್ಪೇಸ್",
+    "closeSidePanel": "ಪ್ಯಾನಲ್ ಮುಚ್ಚಿ"
+  },
+  "converter": {
+    "unitConverter": "ಯುನಿಟ್ ಪರಿವರ್ತಕ",
+    "title": "ಯುನಿಟ್ ಪರಿವರ್ತಕಗಳು",
+    "builtInCollections": "ಅಂತರ್ನಿರ್ಮಿತ ಸಂಗ್ರಹಣೆಗಳು",
+    "category": "ವರ್ಗ",
+    "from": "ಇಂದ",
+    "to": "ಗೆ",
+    "inputValue": "ಪರಿವರ್ತಿಸಲು ಮೌಲ್ಯ",
+    "convertedValue": "ಪರಿವರ್ತಿತ ಮೌಲ್ಯ",
+    "swapUnits": "ಸ್ವಾಪ್ ಘಟಕಗಳು",
+    "keypad": "ಪರಿವರ್ತಕ ಕೀಪ್ಯಾಡ್",
+    "unit": "ಘಟಕ",
+    "unitOptions": "ಘಟಕ ಆಯ್ಕೆಗಳು",
+    "currency": {
+      "updatingRates": "ದರಗಳನ್ನು ನವೀಕರಿಸಲಾಗುತ್ತಿದೆ...",
+      "updateRates": "ದರಗಳನ್ನು ನವೀಕರಿಸಿ",
+      "keypad": "ಕರೆನ್ಸಿ ಕೀಪ್ಯಾಡ್",
+      "currency": "ಕರೆನ್ಸಿ",
+      "options": "ಕರೆನ್ಸಿ ಆಯ್ಕೆಗಳು",
+      "updated": "ನವೀಕರಿಸಲಾಗಿದೆ {timestamp}",
+      "status": {
+        "mockNote": "ಸ್ವತಂತ್ರ ಅಪ್ಲಿಕೇಶನ್ ಡೆಮೊಗಾಗಿ ಅಣಕು ಉಲ್ಲೇಖ ದರಗಳು.",
+        "fetching": "ಇತ್ತೀಚಿನ USD ಉಲ್ಲೇಖ ದರಗಳನ್ನು ಪಡೆಯಲಾಗುತ್ತಿದೆ...",
+        "liveRatesLoaded": "ExchangeRate-API ನಿಂದ ಲೈವ್ ದರಗಳನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಿದೆ.",
+        "liveUpdateUnavailable": "ಲೈವ್ ಅಪ್‌ಡೇಟ್ ಲಭ್ಯವಿಲ್ಲ. ಸ್ಥಳೀಯವಾಗಿ ಡೆಮೊ ದರಗಳನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಲಾಗಿದೆ."
+      }
+    },
+    "aboutEqualTo": "ಸುಮಾರು ಸಮಾನವಾಗಿರುತ್ತದೆ"
+  },
+  "errors": {
+    "invalidInput": "ಅಮಾನ್ಯ ಇನ್‌ಪುಟ್",
+    "cannotDivideByZero": "ಸೊನ್ನೆಯಿಂದ ಭಾಗಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
+    "cannotModuloByZero": "ಶೂನ್ಯದಿಂದ ಮಾಡ್ಯುಲೋ ಮಾಡಲಾಗುವುದಿಲ್ಲ",
+    "invalidProgrammerOperation": "ಅಮಾನ್ಯ ಕಾರ್ಯಾಚರಣೆ",
+    "overflow": "ಫಲಿತಾಂಶ ತುಂಬಾ ದೊಡ್ಡದಾಗಿದೆ"
+  },
+  "date": {
+    "calculationMode": "ಲೆಕ್ಕಾಚಾರ ಮೋಡ್",
+    "from": "ಇಂದ",
+    "to": "ಗೆ",
+    "results": {
+      "difference": "ವ್ಯತ್ಯಾಸ",
+      "sameDates": "ಅದೇ ದಿನಾಂಕಗಳು",
+      "date": "ದಿನಾಂಕ"
+    },
+    "calculationModeOptions": "ಲೆಕ್ಕಾಚಾರ ಮೋಡ್ ಆಯ್ಕೆಗಳು",
+    "mode": {
+      "difference": "ವ್ಯತ್ಯಾಸ",
+      "shift": "ಶಿಫ್ಟ್"
+    },
+    "operation": "ಕಾರ್ಯಾಚರಣೆ",
+    "add": "ಸೇರಿಸು",
+    "subtract": "ಕಳೆಯಿರಿ",
+    "years": "ವರ್ಷಗಳು",
+    "months": "ತಿಂಗಳು",
+    "days": "ದಿನಗಳು",
+    "chooseDate": "ದಿನಾಂಕವನ್ನು ಆರಿಸಿ",
+    "previousMonth": "ಹಿಂದಿನ ತಿಂಗಳು",
+    "nextMonth": "ಮುಂದಿನ ತಿಂಗಳು",
+    "duration": {
+      "year": {
+        "one": "{count} ವರ್ಷ",
+        "other": "{count} ವರ್ಷಗಳು"
+      },
+      "month": {
+        "one": "{count} ತಿಂಗಳು",
+        "other": "{count} ತಿಂಗಳುಗಳು"
+      },
+      "week": {
+        "one": "{count} ವಾರ",
+        "other": "{count} ವಾರಗಳು"
+      },
+      "day": {
+        "one": "{count} ದಿನ",
+        "other": "{count} ದಿನಗಳು"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from} ಮತ್ತು {to} ನಡುವಿನ ವ್ಯತ್ಯಾಸ",
+      "addTo": "{duration} ಅನ್ನು {date} ಗೆ ಸೇರಿಸಿ",
+      "subtractFrom": "{date} ರಿಂದ {duration} ಕಳೆಯಿರಿ"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "ಹೈಲೈಟ್ ಮಾಡಲಾದ ಅಭಿವ್ಯಕ್ತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ",
+    "enterExpression": "ನಿರೂಪಣೆಯನ್ನು ನಮೂದಿಸಿ",
+    "canvas": "ಗ್ರಾಫ್ ಕ್ಯಾನ್ವಾಸ್",
+    "stopTracing": "ಪತ್ತೆಹಚ್ಚುವುದನ್ನು ನಿಲ್ಲಿಸಿ",
+    "startTracing": "ಟ್ರೇಸಿಂಗ್ ಪ್ರಾರಂಭಿಸಿ",
+    "share": "ಹಂಚಿಕೊಳ್ಳಿ",
+    "options": "ಆಯ್ಕೆಗಳು",
+    "zoomIn": "ಜೂಮ್ ಇನ್",
+    "zoomInLabel": "ಜೂಮ್ ಇನ್",
+    "zoomOut": "ಜೂಮ್ ಔಟ್",
+    "zoomOutLabel": "ಜೂಮ್ ಔಟ್",
+    "refreshViewAutomatically": "ವೀಕ್ಷಣೆಯನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಿಫ್ರೆಶ್ ಮಾಡಿ",
+    "view": "ವೀಕ್ಷಿಸಿ",
+    "expressions": "ಅಭಿವ್ಯಕ್ತಿಗಳು",
+    "mobileView": "ಮೊಬೈಲ್ ವೀಕ್ಷಣೆ",
+    "showGraph": "ಗ್ರಾಫ್ ತೋರಿಸು",
+    "showExpressions": "ಅಭಿವ್ಯಕ್ತಿಗಳನ್ನು ತೋರಿಸಿ",
+    "backToFunctionList": "ಕಾರ್ಯ ಪಟ್ಟಿಗೆ ಹಿಂತಿರುಗಿ",
+    "window": "ಕಿಟಕಿ",
+    "resetView": "ವೀಕ್ಷಣೆ ಮರುಹೊಂದಿಸಿ",
+    "units": "ಘಟಕಗಳು",
+    "radians": "ರೇಡಿಯನ್ಸ್",
+    "degrees": "ಡಿಗ್ರಿಗಳು",
+    "gradians": "ಗ್ರೇಡಿಯನ್ಸ್",
+    "lineThickness": "ರೇಖೆಯ ದಪ್ಪ",
+    "theme": "ಥೀಮ್",
+    "alwaysLight": "ಯಾವಾಗಲೂ ಬೆಳಕು",
+    "matchAppTheme": "ಅಪ್ಲಿಕೇಶನ್ ಥೀಮ್ ಹೊಂದಿಸಿ",
+    "groups": {
+      "inequalities": "ಅಸಮಾನತೆಗಳು",
+      "trigonometry": "ತ್ರಿಕೋನಮಿತಿ",
+      "function": "ಕಾರ್ಯ"
+    },
+    "functions": "ಕಾರ್ಯಗಳು",
+    "showEquation": "ಸಮೀಕರಣವನ್ನು ತೋರಿಸಿ",
+    "hideEquation": "ಸಮೀಕರಣವನ್ನು ಮರೆಮಾಡಿ",
+    "lineOptions": "ಲೈನ್ ಆಯ್ಕೆಗಳು",
+    "color": "ಬಣ್ಣ",
+    "style": "ಶೈಲಿ",
+    "analysis": {
+      "title": "ವಿಶ್ಲೇಷಣೆ",
+      "domain": "ಡೊಮೇನ್",
+      "range": "ಶ್ರೇಣಿ",
+      "xIntercept": "x-ಪ್ರತಿಬಂಧ",
+      "yIntercept": "y-ಇಂಟರ್ಸೆಪ್ಟ್",
+      "minima": "ಮಿನಿಮಾ",
+      "maxima": "ಮ್ಯಾಕ್ಸಿಮಾ",
+      "inflectionPoints": "ಇನ್‌ಫ್ಲೆಕ್ಷನ್ ಪಾಯಿಂಟ್‌ಗಳು",
+      "verticalAsymptotes": "ಲಂಬ ಅಸಿಂಪ್ಟೋಟ್‌ಗಳು",
+      "horizontalAsymptotes": "ಅಡ್ಡಲಕ್ಷಣಗಳು",
+      "obliqueAsymptotes": "ಓರೆಯಾದ ಅಸಿಂಪ್ಟೋಟ್ಗಳು",
+      "parity": "ಸಮಾನತೆ",
+      "period": "ಅವಧಿ",
+      "monotonicity": "ಏಕತಾನತೆ",
+      "domainNone": "ಯಾವುದೇ ಡೊಮೇನ್ ನಿರ್ಬಂಧಗಳಿಲ್ಲ",
+      "rangeNone": "ಯಾವುದೇ ವ್ಯಾಪ್ತಿಯ ನಿರ್ಬಂಧಗಳಿಲ್ಲ",
+      "xInterceptNone": "ಯಾವುದೇ x-ಇಂಟರ್ಸೆप್ಟ್ಗಳಿಲ್ಲ",
+      "yInterceptNone": "ಯಾವುದೇ y-ಇಂಟರ್ಸೆಪ್ಟ್ಗಳಿಲ್ಲ",
+      "minimaNone": "ಮಿನಿಮಾ ಇಲ್ಲ",
+      "maximaNone": "ಗರಿಷ್ಠ ಇಲ್ಲ",
+      "inflectionNone": "ಯಾವುದೇ ವಿಭಕ್ತಿ ಬಿಂದುಗಳಿಲ್ಲ",
+      "verticalAsymptotesNone": "ಯಾವುದೇ ಲಂಬವಾದ ಲಕ್ಷಣಗಳಿಲ್ಲ",
+      "horizontalAsymptotesNone": "ಯಾವುದೇ ಸಮತಲ ಲಕ್ಷಣಗಳಿಲ್ಲ",
+      "obliqueAsymptotesNone": "ಯಾವುದೇ ಓರೆಯಾದ ಲಕ್ಷಣಗಳಿಲ್ಲ",
+      "parityUnknown": "ಅಜ್ಞಾತ",
+      "parityOdd": "ಬೆಸ",
+      "parityEven": "ಸಹ",
+      "parityNeither": "ಆಗಲೂ ಇಲ್ಲ",
+      "periodicityUnknown": "ಅಜ್ಞಾತ",
+      "periodicityNotPeriodic": "ಆವರ್ತಕವಲ್ಲ",
+      "monotonicityConstant": "ಸ್ಥಿರ",
+      "monotonicityIncreasing": "ಹೆಚ್ಚುತ್ತಿದೆ",
+      "monotonicityDecreasing": "ಕಡಿಮೆಯಾಗುತ್ತಿದೆ",
+      "monotonicityUnknown": "ಅಜ್ಞಾತ",
+      "monotonicityError": "ನಿರ್ಧರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
+      "featureTooComplexPlural": "ವಿಶ್ಲೇಷಿಸಲು ತುಂಬಾ ಸಂಕೀರ್ಣವಾಗಿದೆ",
+      "analysisCouldNotBePerformed": "ವಿಶ್ಲೇಷಣೆಯನ್ನು ನಡೆಸಲಾಗಲಿಲ್ಲ",
+      "analysisNotSupported": "ವಿಶ್ಲೇಷಣೆ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ",
+      "variableIsNotX": "ವೇರಿಯೇಬಲ್ x ಅಲ್ಲ"
+    },
+    "plottingExpressions": "ಪ್ಲೋಟಿಂಗ್ {count} ಅಭಿವ್ಯಕ್ತಿಗಳು",
+    "xMin": "X-ನಿಮಿಷ",
+    "xMax": "ಎಕ್ಸ್-ಮ್ಯಾಕ್ಸ್",
+    "yMin": "Y-ನಿಮಿಷ",
+    "yMax": "Y-Max",
+    "selectExpression": "ನಿರೂಪಣೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ {index}",
+    "expressionIndex": "ಅಭಿವ್ಯಕ್ತಿ {index}",
+    "analyzeFunction": "ಕಾರ್ಯವನ್ನು ವಿಶ್ಲೇಷಿಸಿ",
+    "changeEquationStyle": "ಸಮೀಕರಣ ಶೈಲಿಯನ್ನು ಬದಲಾಯಿಸಿ",
+    "removeEquation": "ಸಮೀಕರಣವನ್ನು ತೆಗೆದುಹಾಕಿ",
+    "lineStyle": {
+      "solid": "ಸಾಲಿಡ್ ಲೈನ್ ಶೈಲಿ",
+      "dash": "ಡ್ಯಾಶ್ ಲೈನ್ ಶೈಲಿ",
+      "dot": "ಡಾಟ್ ಲೈನ್ ಶೈಲಿ"
+    }
+  },
+  "history": {
+    "empty": "ಇತಿಹಾಸ ಖಾಲಿಯಾಗಿದೆ",
+    "clearAll": "ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ",
+    "clear": "ಇತಿಹಾಸವನ್ನು ತೆರವುಗೊಳಿಸಿ",
+    "title": "ಇತಿಹಾಸ",
+    "andMemory": "ಇತಿಹಾಸ ಮತ್ತು ಸ್ಮರಣೆ",
+    "aria": {
+      "historyPanel": "ಇತಿಹಾಸ ಫಲಕ",
+      "historyAndMemoryPanel": "ಇತಿಹಾಸ ಮತ್ತು ಮೆಮೊರಿ ಫಲಕ"
+    },
+    "closeFlyout": "ಇತಿಹಾಸವನ್ನು ಮುಚ್ಚಿ",
+    "openFlyout": "ಇತಿಹಾಸವನ್ನು ತೆರೆಯಿರಿ"
+  },
+  "memory": {
+    "empty": "ಮೆಮೊರಿ ಖಾಲಿಯಾಗಿದೆ",
+    "clearItem": "ಐಟಂ ಅನ್ನು ತೆರವುಗೊಳಿಸಿ",
+    "addCurrentValue": "ಪ್ರಸ್ತುತ ಮೌಲ್ಯವನ್ನು ಸೇರಿಸಿ",
+    "subtractCurrentValue": "ಪ್ರಸ್ತುತ ಮೌಲ್ಯವನ್ನು ಕಳೆಯಿರಿ",
+    "clearAll": "ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ",
+    "clear": "ಸ್ಮೃತಿಯನ್ನು ತೆರವುಗೊಳಿಸಿ",
+    "title": "ಸ್ಮರಣಶಕ್ತಿ",
+    "controls": "ಮೆಮೊರಿ ನಿಯಂತ್ರಣಗಳು",
+    "tooltips": {
+      "clearAll": "ಎಲ್ಲಾ ಮೆಮೊರಿಯನ್ನು ತೆರವುಗೊಳಿಸಿ",
+      "recall": "ನೆನಪಿನಿಂದ ಮರುಪಡೆಯಿರಿ",
+      "add": "ನೆನಪಿಗೆ ಸೇರಿಸಿ",
+      "subtract": "ಮೆಮೊರಿಯಿಂದ ಕಳೆಯಿರಿ",
+      "store": "ಸ್ಮೃತಿಯಲ್ಲಿ ಸಂಗ್ರಹಿಸಿ"
+    },
+    "recallValue": "ರಿಕಾಲ್ ಮೆಮೊರಿ {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "ನ್ಯಾವಿಗೇಷನ್",
+      "closeNavigation": "ಸಂಚರಣೆ ಮುಚ್ಚಿ",
+      "openNavigation": "ನ್ಯಾವಿಗೇಶನ್ ತೆರೆಯಿರಿ"
+    },
+    "groups": {
+      "calculator": "ಕ್ಯಾಲ್ಕುಲೇಟರ್",
+      "converter": "ಪರಿವರ್ತಕ"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "ಬಿಟ್ ಫ್ಲಿಪ್ ಪ್ಯಾನಲ್",
+    "baseReadouts": "ಬೇಸ್ ರೀಡೌಟ್‌ಗಳು",
+    "surfaceMode": "ಮೇಲ್ಮೈ ಮೋಡ್",
+    "fullKeypad": "ಪೂರ್ಣ ಕೀಪ್ಯಾಡ್",
+    "showKeypad": "ಕೀಪ್ಯಾಡ್ ತೋರಿಸು",
+    "bitTogglingKeypad": "ಬಿಟ್ ಟಾಗಲ್ ಕೀಪ್ಯಾಡ್",
+    "showBitView": "ಬಿಟ್ ವೀಕ್ಷಣೆಯನ್ನು ತೋರಿಸು",
+    "wordSize": "ಪದದ ಗಾತ್ರ",
+    "bitwise": "ಬಿಟ್‌ವೈಸ್",
+    "bitShift": "ಬಿಟ್ ಶಿಫ್ಟ್"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "ತ್ರಿಕೋನಮಿತಿ",
+      "function": "ಕಾರ್ಯ",
+      "functionsAria": "ಕಾರ್ಯಗಳು",
+      "trigonometricFunctionsAria": "ತ್ರिकೋನಮಿತಿಯ ಕಾರ್ಯಗಳು",
+      "angleUnit": "ಕೋನ ಘಟಕ {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "ಗೋಚರತೆ",
+      "themeTitle": "ಥೀಮ್",
+      "themeDescription": "ಬಣ್ಣದ ಸ್ಕೀಮ್ ಆಯ್ಕೆಮಾಡಿ",
+      "light": "ಬೆಳಕು",
+      "dark": "ಕತ್ತಲು",
+      "blue": "ನೀಲಿ",
+      "green": "ಹಸಿರು",
+      "system": "ವ್ಯವಸ್ಥೆ"
+    },
+    "language": {
+      "group": "ಭಾಷೆ",
+      "title": "ಭಾಷೆ",
+      "description": "ನಿಮ್ಮ ಆದ್ಯತೆಯ ಭಾಷೆಯನ್ನು ಆರಿಸಿ"
+    },
+    "about": {
+      "group": "ಸುಮಾರು"
+    },
+    "feedback": "ಪ್ರತಿಕ್ರಿಯೆ ಕಳುಹಿಸಿ",
+    "contribute": {
+      "prefix": "ಕೊಡುಗೆ ನೀಡಿ",
+      "link": "GitHub",
+      "suffix": "ಈ ಕ್ಯಾಲ್ಕುಲೇಟರ್ ಅನ್ನು ಸುಧಾರಿಸಲು ಸಹಾಯ ಮಾಡಲು"
+    },
+    "links": {
+      "repository": "ಪ್ರಾಜೆಕ್ಟ್ ರೆಪೊಸಿಟರಿ",
+      "readme": "ಓದಿ",
+      "license": "MIT ਪਰವಾನಗಿ"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "ಸ್ಟ್ಯಾಂಡರ್ಡ್",
+      "subtitle": "ಕ್ಲಾಸಿಕ್ ತಕ್ಷಣದ ಮೌಲ್ಯಮಾಪನ"
+    },
+    "scientific": {
+      "label": "ವೈಜ্ঞানಿಕ",
+      "subtitle": "ಆಪರೇಟರ್‌ಗಳು, ಕಾರ್ಯಗಳು ಮತ್ತು ಅಭಿವ್ಯಕ್ತಿ ಬೆಂಬಲ"
+    },
+    "graphing": {
+      "label": "ಗ್ರಾಫಿಂಗ್",
+      "subtitle": "ಕಾರ್ಟಿಸಿಯನ್ ಪ್ಲೇನ್‌ನಲ್ಲಿ ಸರಳವಾದ ಅಭಿವ್ಯಕ್ತಿಯನ್ನು ರೂಪಿಸಿ"
+    },
+    "programmer": {
+      "label": "ಪ್ರೋಗ್ರಾಮರ್",
+      "subtitle": "ಮೂಲ ಪರಿವರ್ತನೆಯೊಂದಿಗೆ ಪೂರ್ಣಾಂಕ ಗಣಿತ"
+    },
+    "date": {
+      "label": "ದಿನಾಂಕ ಲೆಕ್ಕಾಚಾರ",
+      "subtitle": "ಅವಧಿಗಳು ಮತ್ತು ಶಿಫ್ಟ್ ದಿನಾಂಕಗಳನ್ನು ಹುಡುಕಿ"
+    },
+    "currency": {
+      "label": "ಕರೆನ್ಸಿ",
+      "subtitle": "ಮಾಕ್ ವಿನಿಮಯ ದರಗಳನ್ನು ಪರಿವರ್ತಿಸಿ"
+    },
+    "volume": {
+      "label": "ಸಂಪುಟ",
+      "subtitle": "ವಾಲ್ಯೂಮ್ ಅಳತೆಗಳನ್ನು ಪರಿವರ್ತಿಸಿ"
+    },
+    "length": {
+      "label": "ಉದ್ದ",
+      "subtitle": "ದೂರ ಮತ್ತು ಉದ್ದದ ಘಟಕಗಳನ್ನು ಪರಿವರ್ತಿಸಿ"
+    },
+    "weight": {
+      "label": "ತೂಕ ಮತ್ತು ದ್ರವ್ಯರಾಶಿ",
+      "subtitle": "ತೂಕ ಮತ್ತು ದ್ರವ್ಯರಾಶಿಯ ಘಟಕಗಳನ್ನು ಪರಿವರ್ತಿಸಿ"
+    },
+    "temperature": {
+      "label": "ತಾಪಮಾನ",
+      "subtitle": "ತಾಪಮಾನ ಮಾಪಕಗಳನ್ನು ಪರಿವರ್ತಿಸಿ"
+    },
+    "energy": {
+      "label": "ಶಕ್ತಿ",
+      "subtitle": "ಶಕ್ತಿ ಮಾಪನಗಳನ್ನು ಪರಿವರ್ತಿಸಿ"
+    },
+    "area": {
+      "label": "ಪ್ರದೇಶ",
+      "subtitle": "ಪ್ರದೇಶದ ಅಳತೆಗಳನ್ನು ಪರಿವರ್ತಿಸಿ"
+    },
+    "speed": {
+      "label": "ವೇಗ",
+      "subtitle": "ವೇಗದ ಅಳತೆಗಳನ್ನು ಪರಿವರ್ತಿಸಿ"
+    },
+    "time": {
+      "label": "ಸಮಯ",
+      "subtitle": "ಸಮಯದ ಅಳತೆಗಳನ್ನು ಪರಿವರ್ತಿಸಿ"
+    },
+    "power": {
+      "label": "ಪವರ್",
+      "subtitle": "ವಿದ್ಯುತ್ ಅಳತೆಗಳನ್ನು ಪರಿವರ್ತಿಸಿ"
+    },
+    "data": {
+      "label": "ಡೇಟಾ",
+      "subtitle": "ಡಿಜಿಟಲ್ ಶೇಖರಣಾ ಘಟಕಗಳನ್ನು ಪರಿವರ್ತಿಸಿ"
+    },
+    "pressure": {
+      "label": "ಒತ್ತಡ",
+      "subtitle": "ಒತ್ತಡದ ಘಟಕಗಳನ್ನು ಪರಿವರ್ತಿಸಿ"
+    },
+    "angle": {
+      "label": "ಕೋನ",
+      "subtitle": "ಕೋನ ಮಾಪನಗಳನ್ನು ಪರಿವರ್ತಿಸಿ"
+    },
+    "settings": {
+      "label": "ಸೆಟ್ಟಿಂಗ್ಗಳು",
+      "subtitle": "ಗೋಚರತೆ ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್ ಮಾಹಿತಿ"
+    }
+  },
+  "categories": {
+    "Currency": "ಕರೆನ್ಸಿ",
+    "Volume": "ಸಂಪುಟ",
+    "Length": "ಉದ್ದ",
+    "Mass": "ಮಾಸ್",
+    "Temperature": "ತಾಪಮಾನ",
+    "Energy": "ಶಕ್ತಿ",
+    "Area": "ಪ್ರದೇಶ",
+    "Speed": "ವೇಗ",
+    "Time": "ಸಮಯ",
+    "Power": "ಪವರ್",
+    "Data": "ಡೇಟಾ",
+    "Pressure": "ಒತ್ತಡ",
+    "Angle": "ಕೋನ"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "ಆಂಗ್‌ಸ್ಟ್ರೋಮ್ಸ್",
+      "Nanometers": "ನ್ಯಾನೊಮೀಟರ್‌ಗಳು",
+      "Microns": "ಮೈಕ್ರಾನ್ಸ್",
+      "Millimeters": "ಮಿಲಿಮೀಟರ್‌ಗಳು",
+      "Centimeters": "ಸೆಂಟಿಮೀಟರ್‌ಗಳು",
+      "Meters": "ಮೀಟರ್‌ಗಳು",
+      "Kilometers": "ಕಿಲೋಮೀಟರ್‌ಗಳು",
+      "Inches": "ಇಂಚುಗಳು",
+      "Feet": "ಅಡಿಗಳು",
+      "Yards": "ಗಜಗಳು",
+      "Miles": "ಮೈಲುಗಳು",
+      "Nautical miles": "ನಾಟಿಕಲ್ ಮೈಲುಗಳು",
+      "paperclips": "ಪೇಪರ್‌ಕ್ಲಿಪ್‌ಗಳು",
+      "hands": "ಕೈಗಳು",
+      "jumbo jets": "ಜಂಬೋ ಜೆಟ್‌ಗಳು",
+      "Carats": "ಕ್ಯಾರೆಟ್‌ಗಳು",
+      "Milligrams": "ಮಿಲಿಗ್ರಾಂಗಳು",
+      "Centigrams": "ಸೆಂಟಿಗ್ರಾಂಗಳು",
+      "Decigrams": "ಡೆಸಿಗ್ರಾಮ್‌ಗಳು",
+      "Grams": "ಗ್ರಾಂ",
+      "Dekagrams": "ಡೆಕಾಗ್ರಾಮ್‌ಗಳು",
+      "Hectograms": "ಹೆಕ್ಟೋಗ್ರಾಮ್‌ಗಳು",
+      "Kilograms": "ಕಿಲೋಗ್ರಾಂಗಳು",
+      "Metric tonnes": "ಮೆಟ್ರಿಕ್ ಟನ್‌ಗಳು",
+      "Ounces": "ಔನ್ಸ್",
+      "Pounds": "ಪೌಂಡ್‌ಗಳು",
+      "Stone": "ಕಲ್ಲು",
+      "Short tons (US)": "ಸಣ್ಣ ಟನ್‌ಗಳು (US)",
+      "Long tons (UK)": "ಲಾಂಗ್ ಟನ್‌ಗಳು (UK)",
+      "snowflakes": "ಸ್ನೋಫ್ಲೇಕ್‌ಗಳು",
+      "soccer balls": "ಸಾಕರ್ ಚೆಂಡುಗಳು",
+      "elephants": "ಆನೆಗಳು",
+      "whales": "ತಿಮಿಂಗಿಲಗಳು",
+      "Celsius": "ಸೆಲ್ಸಿಯಸ್",
+      "Fahrenheit": "ಫ್ಯಾರನ್‌ಹೀಟ್",
+      "Kelvin": "ಕೆಲ್ವಿನ್",
+      "Milliliters": "ಮಿಲಿಲೀಟರ್‌ಗಳು",
+      "Cubic centimeters": "ಘನ ಸೆಂಟಿಮೀಟರ್‌ಗಳು",
+      "Liters": "ಲೀಟರ್‌ಗಳು",
+      "Cubic meters": "ಘನ ಮೀಟರ್",
+      "Teaspoons (US)": "ಟೀಸ್ಪೂನ್ಗಳು (US)",
+      "Tablespoons (US)": "ಟೇಬಲ್‌ಸ್ಪೂನ್‌ಗಳು (US)",
+      "Fluid ounces (US)": "ದ್ರವ ಔನ್ಸ್ (US)",
+      "Cups (US)": "ಕಪ್‌ಗಳು (US)",
+      "Pints (US)": "ಪಿಂಟ್‌ಗಳು (US)",
+      "Quarts (US)": "ಕ್ವಾರ್ಟ್ಸ್ (US)",
+      "Gallons (US)": "ಗ್ಯಾಲನ್‌ಗಳು (US)",
+      "Cubic inches": "ಘನ ಇಂಚುಗಳು",
+      "Cubic feet": "ಘನ ಅಡಿಗಳು",
+      "Cubic yards": "ಘನ ಗಜಗಳು",
+      "Teaspoons (UK)": "ಟೀಸ್ಪೂನ್ಗಳು (UK)",
+      "Tablespoons (UK)": "ಟೇಬಲ್‌ಸ್ಪೂನ್‌ಗಳು (UK)",
+      "Fluid ounces (UK)": "ದ್ರವ ಔನ್ಸ್ (UK)",
+      "Pints (UK)": "ಪಿಂಟ್ಸ್ (UK)",
+      "Quarts (UK)": "ಕ್ವಾರ್ಟ್ಸ್ (UK)",
+      "Gallons (UK)": "ಗ್ಯಾಲನ್ಸ್ (UK)",
+      "coffee cups": "ಕಾಫಿ ಕಪ್‌ಗಳು",
+      "bathtubs": "ಸ್ನಾನದ ತೊಟ್ಟಿಗಳು",
+      "swimming pools": "ಈಜುಕೊಳಗಳು",
+      "Square millimeters": "ಚದರ ಮಿಲಿಮೀಟರ್‌ಗಳು",
+      "Square centimeters": "ಚದರ ಸೆಂಟಿಮೀಟರ್‌ಗಳು",
+      "Square meters": "ಚದರ ಮೀಟರ್",
+      "Hectares": "ಹೆಕ್ಟೇರ್",
+      "Square kilometers": "ಚದರ ಕಿಲೋಮೀಟರ್‌ಗಳು",
+      "Square inches": "ಚದರ ಇಂಚುಗಳು",
+      "Square feet": "ಚದರ ಅಡಿ",
+      "Square yards": "ಚದರ ಗಜಗಳು",
+      "Acres": "ಎಕರೆಗಳು",
+      "Square miles": "ಚದರ ಮೈಲಿಗಳು",
+      "sheets of paper": "ಕಾಗದದ ಹಾಳೆಗಳು",
+      "soccer fields": "ಸಾಕರ್ ಕ್ಷೇತ್ರಗಳು",
+      "castles": "ಕೋಟೆಗಳು",
+      "Pyeong": "ಪ್ಯೊಂಗ್",
+      "Centimeters per second": "ಸೆಕೆಂಡಿಗೆ ಸೆಂಟಿಮೀಟರ್‌ಗಳು",
+      "Meters per second": "ಮೀಟರ್‌ಗಳು ಪ್ರತಿ ಸೆಕೆಂಡಿಗೆ",
+      "Kilometers per hour": "ಪ್ರತಿ ಗಂಟೆಗೆ ಕಿಲೋಮೀಟರ್‌ಗಳು",
+      "Feet per second": "ಅಡಿ ಪ್ರತಿ ಸೆಕೆಂಡಿಗೆ",
+      "Miles per hour": "ಗಂಟೆಗೆ ಮೈಲುಗಳು",
+      "Knots": "ಗಂಟುಗಳು",
+      "Mach": "ಮ್ಯಾಚ್",
+      "turtles": "ಆಮೆಗಳು",
+      "horses": "ಕುದುರೆಗಳು",
+      "jets": "ಜೆಟ್‌ಗಳು",
+      "Watts": "ವ್ಯಾಟ್‌ಗಳು",
+      "Kilowatts": "ಕಿಲೋವ್ಯಾಟ್‌ಗಳು",
+      "Horsepower (US)": "ಅಶ್ವಶಕ್ತಿ (US)",
+      "Foot-pounds/minute": "ಅಡಿ-ಪೌಂಡ್‌ಗಳು/ನಿಮಿಷ",
+      "BTUs/minute": "BTUs/ನಿಮಿಷ",
+      "light bulbs": "ಲೈಟ್ ಬಲ್ಬ್‌ಗಳು",
+      "train engines": "ರೈಲು ಎಂಜಿನ್‌ಗಳು",
+      "Thermal calories": "ಥರ್ಮಲ್ ಕ್ಯಾಲೋರಿಗಳು",
+      "Food calories": "ಆಹಾರ ಕ್ಯಾಲೊರಿಗಳು",
+      "British thermal units": "ಬ್ರಿಟಿಷ್ ಥರ್ಮಲ್ ಘಟಕಗಳು",
+      "Kilojoules": "ಕಿಲೋಜೌಲ್ಸ್",
+      "Kilowatt-hours": "ಕಿಲೋವ್ಯಾಟ್-ಗಂಟೆಗಳು",
+      "Electron volts": "ಎಲೆಕ್ಟ್ರಾನ್ ವೋಲ್ಟ್‌ಗಳು",
+      "Joules": "ಜೌಲ್ಸ್",
+      "Foot-pounds": "ಅಡಿ-ಪೌಂಡ್‌ಗಳು",
+      "batteries": "ಬ್ಯಾಟರಿಗಳು",
+      "bananas": "ಬ್ಳೆಹಣ್ಣುಗಳು",
+      "slices of cake": "ಕೇಕ್ ಚೂರುಗಳು",
+      "Bits": "ಬಿಟ್‌ಗಳು",
+      "Nibble": "ನಿಬ್ಬಲ್",
+      "Bytes": "ಬೈಟ್‌ಗಳು",
+      "Kilobits": "ಕಿಲೋಬಿಟ್‌ಗಳು",
+      "Kibibits": "ಕಿಬಿಬಿಟ್ಸ್",
+      "Kilobytes": "ಕಿಲೋಬೈಟ್‌ಗಳು",
+      "Kibibytes": "ಕಿಬಿಬೈಟ್‌ಗಳು",
+      "Megabits": "ಮೆಗಾಬಿಟ್‌ಗಳು",
+      "Mebibits": "ಮೆಬಿಬಿಟ್ಸ್",
+      "Megabytes": "ಮೆಗಾಬೈಟ್‌ಗಳು",
+      "Mebibytes": "ಮೆಬಿಬೈಟ್‌ಗಳು",
+      "Gigabits": "ಗಿಗಾಬಿಟ್‌ಗಳು",
+      "Gibibits": "ಗಿಬಿಬಿಟ್ಸ್",
+      "Gigabytes": "ಗಿಗಾಬೈಟ್‌ಗಳು",
+      "Gibibytes": "ಗಿಬಿಬೈಟ್‌ಗಳು",
+      "Terabits": "ಟೆರಾಬಿಟ್ಸ್",
+      "Tebibits": "ಟೆಬಿಬಿಟ್ಸ್",
+      "Terabytes": "ಟೆರಾಬೈಟ್‌ಗಳು",
+      "Tebibytes": "ಟೆಬೈಬೈಟ್‌ಗಳು",
+      "Petabits": "ಪೆಟಾಬಿಟ್ಸ್",
+      "Pebibits": "ಪೆಬಿಬಿಟ್‌ಗಳು",
+      "Petabytes": "ಪೆಟಾಬೈಟ್‌ಗಳು",
+      "Pebibytes": "ಪೆಬಿಬೈಟ್‌ಗಳು",
+      "Exabits": "ಎಕ್ಸಾಬಿಟ್ಸ್",
+      "Exbibits": "ಪ್ರದರ್ಶನಗಳು",
+      "Exabytes": "ಎಕ್ಸಾಬೈಟ್‌ಗಳು",
+      "Exbibytes": "ಎಕ್ಸ್‌ಬಿಬೈಟ್‌ಗಳು",
+      "Zetabits": "Zetabits",
+      "Zebibits": "ಜೆಬಿಬಿಟ್ಸ್",
+      "Zetabytes": "ಝೆಟಾಬೈಟ್‌ಗಳು",
+      "Zebibytes": "ಜೆಬಿಬೈಟ್‌ಗಳು",
+      "Yottabits": "Yottabits",
+      "Yobibits": "ಯೋಬಿಬಿಟ್ಸ್",
+      "Yottabytes": "ಯೋಟಾಬೈಟ್‌ಗಳು",
+      "Yobibytes": "ಯೋಬಿಬೈಟ್‌ಗಳು",
+      "floppy disks": "ಫ್ಲಾಪಿ ಡಿಸ್ಕ್‌ಗಳು",
+      "CDs": "ಸಿಡಿಗಳು",
+      "DVDs": "ಡಿವಿಡಿಗಳು",
+      "Atmospheres": "ವಾತಾವರಣ",
+      "Bars": "ಬಾರ್‌ಗಳು",
+      "Kilopascals": "ಕಿಲೋಪಾಸ್ಕಲ್ಸ್",
+      "Pascals": "ಪಾಸ್ಕಲ್ಸ್",
+      "Pounds per square inch": "ಪ್ರತಿ ಚದರ ಇಂಚಿಗೆ ಪೌಂಡ್‌ಗಳು",
+      "Degrees": "ಡಿಗ್ರಿಗಳು",
+      "Radians": "ರೇಡಿಯನ್ಸ್",
+      "Gradians": "ಗ್ರೇಡಿಯನ್ಸ್",
+      "Microseconds": "ಮೈಕ್ರೋಸೆಕೆಂಡ್‌ಗಳು",
+      "Milliseconds": "ಮಿಲಿಸೆಕೆಂಡುಗಳು",
+      "Seconds": "ಸೆಕೆಂಡ್‌ಗಳು",
+      "Minutes": "ನಿಮಿಷಗಳು",
+      "Hours": "ಗಂಟೆಗಳು",
+      "Days": "ದಿನಗಳು",
+      "Weeks": "ವಾರಗಳು",
+      "Years": "ವರ್ಷಗಳು",
+      "Millimeters of mercury": "Millimeters of mercury"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "ಯುಎಸ್ ಡಾಲರ್",
+      "Euro": "ಯುರೋ",
+      "British Pound": "ಬ್ರಿಟಿಷ್ ಪೌಂಡ್",
+      "Japanese Yen": "ಜಪಾನೀಸ್ ಯೆನ್",
+      "Canadian Dollar": "ಕೆನಡಿಯನ್ ಡಾಲರ್",
+      "Australian Dollar": "ಆಸ್ಟ್ರೇಲಿಯನ್ ಡಾಲರ್",
+      "Brazilian Real": "ಬ್ರೆಜಿಲಿಯನ್ ರಿಯಲ್",
+      "Chilean Peso": "ಚಿಲಿಯ ಪೆಸೊ",
+      "Chinese Yuan": "ಚೀನೀ ಯುವಾನ್",
+      "Colombian Peso": "ಕೊಲಂಬಿಯನ್ ಪೆಸೊ",
+      "Danish Krone": "ಡ್ಯಾನಿಶ್ ಕ್ರೋನ್",
+      "Egyptian Pound": "ಈಜಿಪ್ಟ್ ಪೌಂಡ್",
+      "Hong Kong Dollar": "ಹಾಂಗ್ ಕಾಂಗ್ ಡಾಲರ್",
+      "Indian Rupee": "ಭಾರತೀಯ ರೂಪಾಯಿ",
+      "Kenyan Shilling": "ಕೀನ್ಯಾ ಶಿಲ್ಲಿಂಗ್",
+      "Mexican Peso": "ಮೆಕ್ಸิกನ್ ಪೆಸೊ",
+      "Nigerian Naira": "ನೈಜೀರಿಯನ್ ನೈರಾ",
+      "New Zealand Dollar": "ನ್ಯೂಜಿಲ್ಯಾಂಡ್ ಡಾಲರ್",
+      "Norwegian Krone": "ನಾರ್ವೆಜಿಯನ್ ಕ್ರೋನ್",
+      "Philippine Piso": "ಫಿಲಿಪೈನ್ ಪಿಸೊ",
+      "Polish Zloty": "ಪೋಲಿಷ್ ಝ್ಲೋಟಿ",
+      "Qatari Riyal": "ಕತಾರಿ ರಿಯಾಲ್",
+      "Saudi Riyal": "ಸೌದಿ ರಿಯಾಲ್",
+      "Singapore Dollar": "ಸಿಂಗಪುರ ಡಾಲರ್",
+      "South African Rand": "ದಕ್ಷಿಣ ಆಫ್ರಿಕಾದ ರಾಂಡ್",
+      "South Korean Won": "ದಕ್ಷಿಣ ಕೊರಿಯನ್ ವನ್",
+      "Swedish Krona": "ಸ್ವೀಡಿಷ್ ಕ್ರೋನಾ",
+      "Swiss Franc": "ಸ್ವಿಸ್ ಫ್ರಾಂಕ್",
+      "Thai Baht": "ಥಾಯ್ ಬಹ್ತ್",
+      "Turkish Lira": "ಟರ್ಕಿಶ್ ಲಿರಾ",
+      "Turkmenistani Manat": "ತುರ್ಕಮೆನಿಸ್ತಾನಿ ಮನಾತ್",
+      "Ugandan Shilling": "ಉಗಾಂಡಾ ಶಿಲ್ಲಿಂಗ್",
+      "Ukrainian Hryvnia": "ಉಕ್ರೇನಿಯನ್ ಹ್ರಿವ್ನಿಯಾ",
+      "UAE Dirham": "ಯುಎಇ ದಿರ್ಹಾಮ್",
+      "Uruguayan Peso": "ಉರುಗ್ವೆಯ ಪೆಸೊ",
+      "Uzbekistani Som": "ಉಜ್ಬೇಕಿಸ್ತಾನಿ ಸೋಮ್",
+      "Vanuatu Vatu": "ವನವಾಟು ವಟು",
+      "Venezuelan Bolivar Soberano": "ವೆನೆಜುವೆಲಾದ ಬೊಲಿವರ್ ಸೊಬೆರಾನೊ",
+      "Vietnamese Dong": "ವಿಯೆಟ್ನಾಮೀಸ್ ಡಾಂಗ್",
+      "Yemeni Rial": "ಯೆಮೆನ್ ರಿಯಾಲ್"
+    },
+    "labels": {
+      "United States - Dollar": "ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್ - ಡಾಲರ್",
+      "Europe - Euro": "ಯುರೋಪ್ - ಯುರೋ",
+      "United Kingdom - Pound": "ಯುನೈಟೆಡ್ ಕಿಂಗ್ಡಮ್ - ಪೌಂಡ್",
+      "Japan - Yen": "ಜಪಾನ್ - ಯೆನ್",
+      "Canada - Dollar": "ಕೆನಡಾ - ಡಾಲರ್",
+      "Australia - Dollar": "ಆಸ್ಟ್ರೇಲಿಯಾ - ಡಾಲರ್",
+      "Brazil - Real": "ಬ್ರೆಜಿಲ್ - ರಿಯಲ್",
+      "Chile - Peso": "ಚಿಲಿ - ಪೆಸೊ",
+      "China - Yuan Renminbi": "ಚೀನಾ - ಯುವಾನ್ ರೆನ್ಮಿನ್ಬಿ",
+      "Colombia - Peso": "ಕೊಲಂಬಿಯಾ - ಪೆಸೊ",
+      "Denmark - Krone": "ಡೆನ್ಮಾರ್ಕ್ - ಕ್ರೋನ್",
+      "Egypt - Pound": "ಈಜಿಪ್ಟ್ - ಪೌಂಡ್",
+      "Hong Kong SAR - Dollar": "ಹಾಂಗ್ ಕಾಂಗ್ SAR - ಡಾಲರ್",
+      "India - Rupee": "ಭಾರತ - ರೂಪಾಯಿ",
+      "Kenya - Shilling": "ಕೀನ್ಯಾ - ಶಿಲ್ಲಿಂಗ್",
+      "Mexico - Peso": "ಮೆಕ್ಸಿಕೋ - ಪೆಸೊ",
+      "Nigeria - Naira": "ನೈಜೀರಿಯಾ - ನೈರಾ",
+      "New Zealand - Dollar": "ನ್ಯೂಜಿಲ್ಯಾಂಡ್ - ಡಾಲರ್",
+      "Norway - Krone": "ನಾರ್ವೆ - ಕ್ರೋನ್",
+      "Philippines - Piso": "ಫಿಲಿಪೈನ್ಸ್ - ಪಿಸೊ",
+      "Poland - Zloty": "ಪೋಲೆಂಡ್ - ಝ್ಲೋಟಿ",
+      "Qatar - Riyal": "ಕತಾರ್ - ರಿಯಾಲ್",
+      "Saudi Arabia - Riyal": "ಸೌದಿ ಅರೇಬಿಯಾ - ರಿಯಾಲ್",
+      "Singapore - Dollar": "ಸಿಂಗಪುರ - ಡಾಲರ್",
+      "South Africa - Rand": "ದಕ್ಷಿಣ ಆಫ್ರಿಕಾ - ರಾಂಡ್",
+      "South Korea - Won": "ದಕ್ಷಿಣ ಕೊರಿಯಾ - ಗೆದ್ದಿದೆ",
+      "Sweden - Krona": "ಸ್ವೀಡನ್ - ಕ್ರೋನಾ",
+      "Switzerland - Franc": "ಸ್ವಿಟ್ಜರ್ಲೆಂಡ್ - ಫ್ರಾಂಕ್",
+      "Thailand - Baht": "ಥೈಲ್ಯಾಂಡ್ - ಬಹ್ತ್",
+      "Turkey - Lira": "ಟರ್ಕಿ - ಲಿರಾ",
+      "Turkmenistan - Manat": "ತುರ್ಕಮೆನಿಸ್ತಾನ್ - ಮನಾತ್",
+      "Uganda - Shilling": "ಉಗಾಂಡಾ - ಶಿಲ್ಲಿಂಗ್",
+      "Ukraine - Hryvnia": "ಉಕ್ರೇನ್ - ಹ್ರಿವ್ನಿಯಾ",
+      "United Arab Emirates - Dirham": "ಯುನೈಟೆಡ್ ಅರಬ್ ಎಮಿರೇಟ್ಸ್ - ದಿರ್ಹಾಮ್",
+      "Uruguay - Peso": "ಉರುಗ್ವೆ - ಪೆಸೊ",
+      "Uzbekistan - Som": "ಉಜ್ಬೇಕಿಸ್ತಾನ್ - ಸೋಮ್",
+      "Vanuatu - Vatu": "ವನವಾಟು - ವಟು",
+      "Venezuela - Bolívar Soberano": "ವೆನೆಜುವೆಲಾ - ಬೊಲಿವರ್ ಸೊಬೆರಾನೊ",
+      "Vietnam - Dong": "ವಿಯೆಟ್ನಾಂ - ಡಾಂಗ್",
+      "Yemen - Rial": "ಯೆಮೆನ್ - ರಿಯಾಲ್"
+    }
+  }
+}

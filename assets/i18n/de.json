@@ -258,7 +258,9 @@
       "themeDescription": "Wählen Sie ein Farbschema",
       "light": "Hell",
       "dark": "Dunkel",
-      "system": "System"
+      "system": "System",
+      "blue": "Blau",
+      "green": "Grün"
     },
     "language": {
       "group": "Sprache",
@@ -517,7 +519,7 @@
       "Atmospheres": "Atmosphären",
       "Bars": "Bar",
       "Kilopascals": "Kilopascal",
-      "Millimeters of mercury ": "Millimeter Quecksilber",
+      "Millimeters of mercury": "Millimeter Quecksilber",
       "Pascals": "Pascal",
       "Pounds per square inch": "Pfund pro Quadratzoll",
       "Degrees": "Grad",

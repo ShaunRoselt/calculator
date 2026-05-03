@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kalkulačka",
+    "name": "Kalkulačka"
+  },
+  "common": {
+    "back": "Späť",
+    "backspace": "Backspace",
+    "closeSidePanel": "Zavrieť panel"
+  },
+  "converter": {
+    "unitConverter": "Konvertor jednotiek",
+    "title": "Konvertory jednotiek",
+    "builtInCollections": "Vstavané zbierky",
+    "category": "Kategória",
+    "from": "Od",
+    "to": "Komu",
+    "inputValue": "Hodnota na konverziu",
+    "convertedValue": "Prevedená hodnota",
+    "swapUnits": "Vymeňte jednotky",
+    "keypad": "Konvertorová klávesnica",
+    "unit": "jednotka",
+    "unitOptions": "možnosti jednotiek",
+    "currency": {
+      "updatingRates": "Aktualizujú sa sadzby…",
+      "updateRates": "Aktualizovať sadzby",
+      "keypad": "Menová klávesnica",
+      "currency": "mena",
+      "options": "možnosti meny",
+      "updated": "Aktualizované {timestamp}",
+      "status": {
+        "mockNote": "Predskúšajte referenčné sadzby pre ukážku samostatnej aplikácie.",
+        "fetching": "Načítavajú sa najnovšie referenčné sadzby USD...",
+        "liveRatesLoaded": "Aktuálne kurzy načítané z ExchangeRate-API.",
+        "liveUpdateUnavailable": "Aktívna aktualizácia nie je k dispozícii. Miestne obnovené demo sadzby."
+      }
+    },
+    "aboutEqualTo": "Približne sa rovná"
+  },
+  "errors": {
+    "invalidInput": "Neplatný vstup",
+    "cannotDivideByZero": "Nedá sa deliť nulou",
+    "cannotModuloByZero": "Nedá sa modulo nula",
+    "invalidProgrammerOperation": "Neplatná operácia",
+    "overflow": "Výsledok je príliš veľký"
+  },
+  "date": {
+    "calculationMode": "Režim výpočtu",
+    "from": "Od",
+    "to": "Komu",
+    "results": {
+      "difference": "Rozdiel",
+      "sameDates": "Rovnaké dátumy",
+      "date": "Dátum"
+    },
+    "calculationModeOptions": "Možnosti režimu výpočtu",
+    "mode": {
+      "difference": "Rozdiel",
+      "shift": "Shift"
+    },
+    "operation": "Prevádzka",
+    "add": "Pridať",
+    "subtract": "Odčítajte",
+    "years": "Roky",
+    "months": "Mesiace",
+    "days": "dni",
+    "chooseDate": "Vyberte dátum",
+    "previousMonth": "Predchádzajúci mesiac",
+    "nextMonth": "Budúci mesiac",
+    "duration": {
+      "year": {
+        "one": "{count} rok",
+        "other": "{count} rokov"
+      },
+      "month": {
+        "one": "{count} mesiac",
+        "other": "{count} mesiacov"
+      },
+      "week": {
+        "one": "{count} týždeň",
+        "other": "{count} týždňov"
+      },
+      "day": {
+        "one": "{count} deň",
+        "other": "{count} dní"
+      }
+    },
+    "history": {
+      "differenceBetween": "Rozdiel medzi {from} a {to}",
+      "addTo": "Pridať {duration} do {date}",
+      "subtractFrom": "Odčítajte {duration} od {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Skontrolujte zvýraznený výraz",
+    "enterExpression": "Zadajte výraz",
+    "canvas": "Plátno grafu",
+    "stopTracing": "Zastaviť sledovanie",
+    "startTracing": "Spustiť sledovanie",
+    "share": "Zdieľať",
+    "options": "Možnosti",
+    "zoomIn": "Priblížiť",
+    "zoomInLabel": "Priblížiť",
+    "zoomOut": "Oddialiť",
+    "zoomOutLabel": "Oddialiť",
+    "refreshViewAutomatically": "Automaticky obnoviť zobrazenie",
+    "view": "Zobraziť",
+    "expressions": "Výrazy",
+    "mobileView": "Mobilné zobrazenie",
+    "showGraph": "Zobraziť graf",
+    "showExpressions": "Zobraziť výrazy",
+    "backToFunctionList": "Späť na zoznam funkcií",
+    "window": "Okno",
+    "resetView": "Obnoviť zobrazenie",
+    "units": "Jednotky",
+    "radians": "Radiány",
+    "degrees": "Stupne",
+    "gradians": "Gradiánov",
+    "lineThickness": "Hrúbka čiary",
+    "theme": "Motív",
+    "alwaysLight": "Vždy ľahké",
+    "matchAppTheme": "Prispôsobte motív aplikácie",
+    "groups": {
+      "inequalities": "Nerovnosti",
+      "trigonometry": "Trigonometria",
+      "function": "Funkcia"
+    },
+    "functions": "Funkcie",
+    "showEquation": "Zobraziť rovnicu",
+    "hideEquation": "Skryť rovnicu",
+    "lineOptions": "Možnosti čiar",
+    "color": "Farba",
+    "style": "Štýl",
+    "analysis": {
+      "title": "Analýza",
+      "domain": "Doména",
+      "range": "Dosah",
+      "xIntercept": "x-prierez",
+      "yIntercept": "prierez y",
+      "minima": "Minimálne",
+      "maxima": "Maximálne",
+      "inflectionPoints": "Inflexné body",
+      "verticalAsymptotes": "Vertikálne asymptoty",
+      "horizontalAsymptotes": "Horizontálne asymptoty",
+      "obliqueAsymptotes": "Šikmé asymptoty",
+      "parity": "Parita",
+      "period": "Tečka",
+      "monotonicity": "Monotónnosť",
+      "domainNone": "Žiadne obmedzenia domény",
+      "rangeNone": "Žiadne obmedzenia rozsahu",
+      "xInterceptNone": "Žiadne zachytenia x",
+      "yInterceptNone": "Žiadne priesečníky y",
+      "minimaNone": "Žiadne minimá",
+      "maximaNone": "Žiadne maximá",
+      "inflectionNone": "Žiadne inflexné body",
+      "verticalAsymptotesNone": "Žiadne vertikálne asymptoty",
+      "horizontalAsymptotesNone": "Žiadne horizontálne asymptoty",
+      "obliqueAsymptotesNone": "Žiadne šikmé asymptoty",
+      "parityUnknown": "Neznáme",
+      "parityOdd": "Nepárne",
+      "parityEven": "Párno",
+      "parityNeither": "Ani nie",
+      "periodicityUnknown": "Neznáme",
+      "periodicityNotPeriodic": "Nepravidelné",
+      "monotonicityConstant": "Konštantná",
+      "monotonicityIncreasing": "Rastúce",
+      "monotonicityDecreasing": "Znižuje sa",
+      "monotonicityUnknown": "Neznáme",
+      "monotonicityError": "Nedá sa určiť",
+      "featureTooComplexPlural": "Na analýzu je to príliš zložité",
+      "analysisCouldNotBePerformed": "Analýzu nebolo možné vykonať",
+      "analysisNotSupported": "Analýza nie je podporovaná",
+      "variableIsNotX": "Premenná nie je x"
+    },
+    "plottingExpressions": "Vykresľovanie {count} výrazov",
+    "xMin": "X-min",
+    "xMax": "X-Max",
+    "yMin": "Y-min",
+    "yMax": "Y-Max",
+    "selectExpression": "Vyberte výraz {index}",
+    "expressionIndex": "Výraz {index}",
+    "analyzeFunction": "Analyzovať funkciu",
+    "changeEquationStyle": "Zmeňte štýl rovnice",
+    "removeEquation": "Odstrániť rovnicu",
+    "lineStyle": {
+      "solid": "Štýl plnej čiary",
+      "dash": "Štýl prerušovanej čiary",
+      "dot": "Štýl bodkovej čiary"
+    }
+  },
+  "history": {
+    "empty": "História je prázdna",
+    "clearAll": "Vymazať všetko",
+    "clear": "Vymazať históriu",
+    "title": "História",
+    "andMemory": "História a pamäť",
+    "aria": {
+      "historyPanel": "Panel histórie",
+      "historyAndMemoryPanel": "Panel História a pamäť"
+    },
+    "closeFlyout": "Zavrieť históriu",
+    "openFlyout": "Otvoriť históriu"
+  },
+  "memory": {
+    "empty": "Pamäť je prázdna",
+    "clearItem": "Vymazať položku",
+    "addCurrentValue": "Pridajte aktuálnu hodnotu",
+    "subtractCurrentValue": "Odčítajte aktuálnu hodnotu",
+    "clearAll": "Vymazať všetko",
+    "clear": "Vymazať pamäť",
+    "title": "Pamäť",
+    "controls": "Ovládacie prvky pamäte",
+    "tooltips": {
+      "clearAll": "Vymažte celú pamäť",
+      "recall": "Vyvolať z pamäte",
+      "add": "Pridať do pamäte",
+      "subtract": "Odčítať z pamäte",
+      "store": "Uložiť do pamäte"
+    },
+    "recallValue": "Vyvolať pamäť {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigácia",
+      "closeNavigation": "Zavrieť navigáciu",
+      "openNavigation": "Otvoriť navigáciu"
+    },
+    "groups": {
+      "calculator": "Kalkulačka",
+      "converter": "Konvertor"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bitový preklápací panel",
+    "baseReadouts": "Základné hodnoty",
+    "surfaceMode": "Režim na povrchu",
+    "fullKeypad": "Úplná klávesnica",
+    "showKeypad": "Zobraziť klávesnicu",
+    "bitTogglingKeypad": "Bitová prepínacia klávesnica",
+    "showBitView": "Zobraziť bitové zobrazenie",
+    "wordSize": "Veľkosť slova",
+    "bitwise": "Bitovo",
+    "bitShift": "Bitový posun"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometria",
+      "function": "Funkcia",
+      "functionsAria": "Funkcie",
+      "trigonometricFunctionsAria": "Trigonometrické funkcie",
+      "angleUnit": "Jednotka uhla {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Vzhľad",
+      "themeTitle": "Motív",
+      "themeDescription": "Vyberte farebnú schému",
+      "light": "Svetlo",
+      "dark": "Tma",
+      "blue": "Modrá",
+      "green": "Zelená",
+      "system": "Systém"
+    },
+    "language": {
+      "group": "Jazyk",
+      "title": "Jazyk",
+      "description": "Vyberte si preferovaný jazyk"
+    },
+    "about": {
+      "group": "O"
+    },
+    "feedback": "Pošlite spätnú väzbu",
+    "contribute": {
+      "prefix": "Prispejte ďalej",
+      "link": "GitHub",
+      "suffix": "pomôžte zlepšiť túto kalkulačku"
+    },
+    "links": {
+      "repository": "Úložisko projektov",
+      "readme": "README",
+      "license": "Licencia MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Štandard",
+      "subtitle": "Klasické okamžité vyhodnotenie"
+    },
+    "scientific": {
+      "label": "Vedecké",
+      "subtitle": "Podpora operátorov, funkcií a výrazov"
+    },
+    "graphing": {
+      "label": "Grafovanie",
+      "subtitle": "Nakreslite jednoduchý výraz na karteziánskej rovine"
+    },
+    "programmer": {
+      "label": "Programátor",
+      "subtitle": "Celé číslo so základným prevodom"
+    },
+    "date": {
+      "label": "Výpočet dátumu",
+      "subtitle": "Nájdite trvanie a dátumy zmien"
+    },
+    "currency": {
+      "label": "Mena",
+      "subtitle": "Konvertovať falošné výmenné kurzy"
+    },
+    "volume": {
+      "label": "Zväzok",
+      "subtitle": "Previesť merania objemu"
+    },
+    "length": {
+      "label": "Dĺžka",
+      "subtitle": "Prevod jednotiek vzdialenosti a dĺžky"
+    },
+    "weight": {
+      "label": "Hmotnosť a hmotnosť",
+      "subtitle": "Previesť jednotky hmotnosti a hmotnosti"
+    },
+    "temperature": {
+      "label": "Teplota",
+      "subtitle": "Prevod teplotných stupníc"
+    },
+    "energy": {
+      "label": "Energia",
+      "subtitle": "Konvertovať merania energie"
+    },
+    "area": {
+      "label": "Oblasť",
+      "subtitle": "Previesť merania plochy"
+    },
+    "speed": {
+      "label": "Rýchlosť",
+      "subtitle": "Previesť merania rýchlosti"
+    },
+    "time": {
+      "label": "Čas",
+      "subtitle": "Previesť merania času"
+    },
+    "power": {
+      "label": "Napájanie",
+      "subtitle": "Konvertovať merania výkonu"
+    },
+    "data": {
+      "label": "Údaje",
+      "subtitle": "Konvertujte digitálne úložné jednotky"
+    },
+    "pressure": {
+      "label": "Tlak",
+      "subtitle": "Prevod jednotiek tlaku"
+    },
+    "angle": {
+      "label": "Uhol",
+      "subtitle": "Previesť merania uhla"
+    },
+    "settings": {
+      "label": "Nastavenia",
+      "subtitle": "Informácie o vzhľade a aplikácii"
+    }
+  },
+  "categories": {
+    "Currency": "Mena",
+    "Volume": "Zväzok",
+    "Length": "Dĺžka",
+    "Mass": "Hmot",
+    "Temperature": "Teplota",
+    "Energy": "Energia",
+    "Area": "Oblasť",
+    "Speed": "Rýchlosť",
+    "Time": "Čas",
+    "Power": "Napájanie",
+    "Data": "Údaje",
+    "Pressure": "Tlak",
+    "Angle": "Uhol"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstromy",
+      "Nanometers": "Nanometre",
+      "Microns": "Mikróny",
+      "Millimeters": "Milimetre",
+      "Centimeters": "Centimetre",
+      "Meters": "metre",
+      "Kilometers": "Kilometre",
+      "Inches": "palce",
+      "Feet": "Nohy",
+      "Yards": "Yardy",
+      "Miles": "Míle",
+      "Nautical miles": "Námorné míle",
+      "paperclips": "sponky",
+      "hands": "ruky",
+      "jumbo jets": "veľké lietadlá",
+      "Carats": "Karáty",
+      "Milligrams": "Miligramy",
+      "Centigrams": "Centigramy",
+      "Decigrams": "Decigramy",
+      "Grams": "Gramičky",
+      "Dekagrams": "Dekagramy",
+      "Hectograms": "Hektogramy",
+      "Kilograms": "Kilogramy",
+      "Metric tonnes": "Metrické tony",
+      "Ounces": "Unce",
+      "Pounds": "Librá",
+      "Stone": "Kameň",
+      "Short tons (US)": "Krátke tony (USA)",
+      "Long tons (UK)": "Veľké tony (Spojené kráľovstvo)",
+      "snowflakes": "snehové vločky",
+      "soccer balls": "futbalové lopty",
+      "elephants": "slonov",
+      "whales": "veľryby",
+      "Celsius": "Celzia",
+      "Fahrenheit": "Fahrenheita",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mililitre",
+      "Cubic centimeters": "kubické centimetre",
+      "Liters": "litrov",
+      "Cubic meters": "Mkubické metre",
+      "Teaspoons (US)": "Čajové lyžičky (USA)",
+      "Tablespoons (US)": "Polievkové lyžice (USA)",
+      "Fluid ounces (US)": "Tekuté unce (USA)",
+      "Cups (US)": "Poháre (USA)",
+      "Pints (US)": "Pinty (USA)",
+      "Quarts (US)": "Kvarty (USA)",
+      "Gallons (US)": "galóny (USA)",
+      "Cubic inches": "kubické palce",
+      "Cubic feet": "kubické stopy",
+      "Cubic yards": "kubické yardy",
+      "Teaspoons (UK)": "Čajové lyžice (Spojené kráľovstvo)",
+      "Tablespoons (UK)": "Polievkové lyžice (Spojené kráľovstvo)",
+      "Fluid ounces (UK)": "Tekuté unce (Spojené kráľovstvo)",
+      "Pints (UK)": "Pinty (Spojené kráľovstvo)",
+      "Quarts (UK)": "Quarts (Spojené kráľovstvo)",
+      "Gallons (UK)": "galóny (Spojené kráľovstvo)",
+      "coffee cups": "šálky na kávu",
+      "bathtubs": "vane",
+      "swimming pools": "bazény",
+      "Square millimeters": "Štvorcové milimetre",
+      "Square centimeters": "Štvorcové centimetre",
+      "Square meters": "Metre štvorcové",
+      "Hectares": "Hektáre",
+      "Square kilometers": "Štvorcové kilometre",
+      "Square inches": "Štvorcové palce",
+      "Square feet": "Štvorcové stopy",
+      "Square yards": "yardy štvorcové",
+      "Acres": "Akrov",
+      "Square miles": "Štvorcové míle",
+      "sheets of paper": "listov papiera",
+      "soccer fields": "futbalové ihriská",
+      "castles": "hrady",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Centimetre za sekundu",
+      "Meters per second": "Metre za sekundu",
+      "Kilometers per hour": "Kilometre za hodinu",
+      "Feet per second": "Stopy za sekundu",
+      "Miles per hour": "Míle za hodinu",
+      "Knots": "Uzly",
+      "Mach": "Mach",
+      "turtles": "korytnačky",
+      "horses": "kone",
+      "jets": "lietadlá",
+      "Watts": "Watty",
+      "Kilowatts": "Kilowatty",
+      "Horsepower (US)": "Konská sila (USA)",
+      "Foot-pounds/minute": "Fotografie/minúta",
+      "BTUs/minute": "BTU/minútu",
+      "light bulbs": "žiarovky",
+      "train engines": "vlakové motory",
+      "Thermal calories": "Tepelné kalórie",
+      "Food calories": "Potravinové kalórie",
+      "British thermal units": "Britské tepelné jednotky",
+      "Kilojoules": "Kilojouly",
+      "Kilowatt-hours": "Kilowatthodiny",
+      "Electron volts": "Elektrónvolty",
+      "Joules": "Jouly",
+      "Foot-pounds": "Kilogramy",
+      "batteries": "batérie",
+      "bananas": "banány",
+      "slices of cake": "plátky koláča",
+      "Bits": "Bity",
+      "Nibble": "Zahryznite sa",
+      "Bytes": "Bajty",
+      "Kilobits": "Kilobity",
+      "Kibibits": "Kibibity",
+      "Kilobytes": "Kilobajty",
+      "Kibibytes": "Kibibajty",
+      "Megabits": "Megabity",
+      "Mebibits": "Mebibity",
+      "Megabytes": "Megabajty",
+      "Mebibytes": "Mebibajty",
+      "Gigabits": "Gigabity",
+      "Gibibits": "Gibibity",
+      "Gigabytes": "Gigabajty",
+      "Gibibytes": "Gibibajty",
+      "Terabits": "Terabity",
+      "Tebibits": "Tebibity",
+      "Terabytes": "Terabajty",
+      "Tebibytes": "Tebibajty",
+      "Petabits": "Petabity",
+      "Pebibits": "Pebibity",
+      "Petabytes": "Petabajty",
+      "Pebibytes": "Pebibajty",
+      "Exabits": "Existuje",
+      "Exbibits": "Exbibity",
+      "Exabytes": "Exabajty",
+      "Exbibytes": "Exbibajty",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabajty",
+      "Zebibytes": "Zebibajty",
+      "Yottabits": "Yottabity",
+      "Yobibits": "Yobibiti",
+      "Yottabytes": "Yottabajty",
+      "Yobibytes": "Yobibajty",
+      "floppy disks": "diskety",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "Atmosféry",
+      "Bars": "Bary",
+      "Kilopascals": "Kilopascaly",
+      "Millimeters of mercury": "Milimetre ortuti",
+      "Pascals": "Pascaly",
+      "Pounds per square inch": "v librách na štvorcový palec",
+      "Degrees": "Stupne",
+      "Radians": "Radiány",
+      "Gradians": "Gradiánov",
+      "Microseconds": "Mikrosekundy",
+      "Milliseconds": "Milisekundy",
+      "Seconds": "Sekundy",
+      "Minutes": "minúty",
+      "Hours": "Hodiny",
+      "Days": "dní",
+      "Weeks": "Týždne",
+      "Years": "Roky"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Americký dolár",
+      "Euro": "EUR",
+      "British Pound": "Britská libra",
+      "Japanese Yen": "Japonský jen",
+      "Canadian Dollar": "Kanadský dolár",
+      "Australian Dollar": "Austrálsky dolár",
+      "Brazilian Real": "Brazílsky real",
+      "Chilean Peso": "Čílske peso",
+      "Chinese Yuan": "čínsky jüan",
+      "Colombian Peso": "Kolumbijské peso",
+      "Danish Krone": "dánska koruna",
+      "Egyptian Pound": "Egyptská libra",
+      "Hong Kong Dollar": "Hongkonský dolár",
+      "Indian Rupee": "Indická rupia",
+      "Kenyan Shilling": "Kenský šiling",
+      "Mexican Peso": "Mexické peso",
+      "Nigerian Naira": "Nigérijčanka Naira",
+      "New Zealand Dollar": "Novozélandský dolár",
+      "Norwegian Krone": "nórska koruna",
+      "Philippine Piso": "Filipine Piso",
+      "Polish Zloty": "Poľský zlotý",
+      "Qatari Riyal": "Katarský rijál",
+      "Saudi Riyal": "Saudský rijál",
+      "Singapore Dollar": "Singapurský dolár",
+      "South African Rand": "Juhoafrický rand",
+      "South Korean Won": "Juhokórejský won",
+      "Swedish Krona": "Švédska koruna",
+      "Swiss Franc": "švajčiarsky frank",
+      "Thai Baht": "thajský baht",
+      "Turkish Lira": "turecká líra",
+      "Turkmenistani Manat": "Turkménsky manat",
+      "Ugandan Shilling": "Ugandský šiling",
+      "Ukrainian Hryvnia": "Ukrajinská hrivna",
+      "UAE Dirham": "SAE Dirham",
+      "Uruguayan Peso": "Uruguajské peso",
+      "Uzbekistani Som": "Uzbekistan Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuelský Bolívar Soberano",
+      "Vietnamese Dong": "vietnamský dong",
+      "Yemeni Rial": "Jemenský rial"
+    },
+    "labels": {
+      "United States - Dollar": "Spojené štáty americké – dolár",
+      "Europe - Euro": "Európa – euro",
+      "United Kingdom - Pound": "Spojené kráľovstvo – libra",
+      "Japan - Yen": "Japonsko – jen",
+      "Canada - Dollar": "Kanada – dolár",
+      "Australia - Dollar": "Austrália – dolár",
+      "Brazil - Real": "Brazília – Real",
+      "Chile - Peso": "Čile – peso",
+      "China - Yuan Renminbi": "Čína – Yuan Renminbi",
+      "Colombia - Peso": "Kolumbia – peso",
+      "Denmark - Krone": "Dánsko – Krone",
+      "Egypt - Pound": "Egypt – libra",
+      "Hong Kong SAR - Dollar": "Hongkong SAR – dolár",
+      "India - Rupee": "India – rupia",
+      "Kenya - Shilling": "Keňa – šiling",
+      "Mexico - Peso": "Mexiko – peso",
+      "Nigeria - Naira": "Nigéria – Naira",
+      "New Zealand - Dollar": "Nový Zéland – dolár",
+      "Norway - Krone": "Nórsko – Krone",
+      "Philippines - Piso": "Filipíny – Piso",
+      "Poland - Zloty": "Poľsko – zlotý",
+      "Qatar - Riyal": "Katar – Riyal",
+      "Saudi Arabia - Riyal": "Saudská Arábia – Riyal",
+      "Singapore - Dollar": "Singapur – dolár",
+      "South Africa - Rand": "Južná Afrika – Rand",
+      "South Korea - Won": "Južná Kórea – víťazstvo",
+      "Sweden - Krona": "Švédsko – Krona",
+      "Switzerland - Franc": "Švajčiarsko – franc",
+      "Thailand - Baht": "Thajsko – baht",
+      "Turkey - Lira": "Turecko – Lira",
+      "Turkmenistan - Manat": "Turkménsko – Manat",
+      "Uganda - Shilling": "Uganda – šiling",
+      "Ukraine - Hryvnia": "Ukrajina – hrivna",
+      "United Arab Emirates - Dirham": "Spojené arabské emiráty – Dirham",
+      "Uruguay - Peso": "Uruguaj – peso",
+      "Uzbekistan - Som": "Uzbekistan – Som",
+      "Vanuatu - Vatu": "Vanuatu – Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela – Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam – Dong",
+      "Yemen - Rial": "Jemen – Rial"
+    }
+  }
+}

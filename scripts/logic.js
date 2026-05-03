@@ -15,6 +15,7 @@ import {
   solveGraphDerivativeWithCas,
   solveGraphExpressionWithCas
 } from './graphAnalysisCas.js';
+import { getGraphPaletteForSelection } from './themes.js';
 import { formatExpressionText, formatNumber } from './utils.js';
 
 function invalidInputMessage() {
@@ -4307,25 +4308,7 @@ function pushUniqueApproximatePoint(points, nextPoint, tolerance) {
 }
 
 function getGraphPalette() {
-  const activeTheme = document.documentElement.dataset.theme;
-  const useDarkTheme = state.graphing.theme === 'match-app' && ['dark', 'blue', 'green'].includes(activeTheme);
-  if (useDarkTheme) {
-    return {
-      background: '#1b1c20',
-      gridMajor: 'rgba(255, 255, 255, 0.14)',
-      gridMinor: 'rgba(255, 255, 255, 0.07)',
-      axis: '#c6cad2',
-      label: '#eef0f3'
-    };
-  }
-
-  return {
-    background: '#f8f7f6',
-    gridMajor: 'rgba(124, 124, 124, 0.28)',
-    gridMinor: 'rgba(124, 124, 124, 0.12)',
-    axis: '#666666',
-    label: '#5b5b5b'
-  };
+  return getGraphPaletteForSelection(state.graphing.theme, document.documentElement.dataset.theme);
 }
 
 function drawAxisDecorations(ctx, width, height, xAxisY, yAxisX, toScreenX, toScreenY, xMin, xMax, yMin, yMax, labelColor) {

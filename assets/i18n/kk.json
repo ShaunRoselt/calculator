@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Калькулятор",
+    "name": "Калькулятор"
+  },
+  "common": {
+    "back": "Артқа",
+    "backspace": "Backspace",
+    "closeSidePanel": "Панельді жабу"
+  },
+  "converter": {
+    "unitConverter": "Бірлік түрлендіргіші",
+    "title": "Бірлік түрлендіргіштері",
+    "builtInCollections": "Кірістірілген жинақтар",
+    "category": "Санат",
+    "from": "Кімнен",
+    "to": "Кімге",
+    "inputValue": "Түрлендіру қажет мән",
+    "convertedValue": "Түрлендірілген мән",
+    "swapUnits": "Бірліктерді ауыстыру",
+    "keypad": "Түрлендіргіш пернетақта",
+    "unit": "бірлік",
+    "unitOptions": "бірлік опциялары",
+    "currency": {
+      "updatingRates": "Тарифтер жаңартылуда…",
+      "updateRates": "Жаңарту тарифтері",
+      "keypad": "Валюта пернетақтасы",
+      "currency": "валюта",
+      "options": "валюта опциялары",
+      "updated": "Жаңартылған {timestamp}",
+      "status": {
+        "mockNote": "Оқшау қолданба демосының жалған анықтамалық бағалары.",
+        "fetching": "Ең соңғы АҚШ долларының анықтамалық бағамдары алынуда...",
+        "liveRatesLoaded": "ExchangeRate-API арқылы жүктелген тікелей бағамдар.",
+        "liveUpdateUnavailable": "Тікелей жаңарту қолжетімді емес. Жергілікті деңгейде жаңартылған демо тарифтері."
+      }
+    },
+    "aboutEqualTo": "Шамамен тең"
+  },
+  "errors": {
+    "invalidInput": "Жарамсыз енгізу",
+    "cannotDivideByZero": "Нөлге бөлу мүмкін емес",
+    "cannotModuloByZero": "Модульді нөлге бөлу мүмкін емес",
+    "invalidProgrammerOperation": "Жарамсыз әрекет",
+    "overflow": "Нәтиже тым үлкен"
+  },
+  "date": {
+    "calculationMode": "Есептеу режимі",
+    "from": "Кімнен",
+    "to": "Кімге",
+    "results": {
+      "difference": "Айырмашылық",
+      "sameDates": "Бірдей күндер",
+      "date": "Күні"
+    },
+    "calculationModeOptions": "Есептеу режимінің опциялары",
+    "mode": {
+      "difference": "Айырмашылық",
+      "shift": "Ауысу"
+    },
+    "operation": "Операция",
+    "add": "Қосу",
+    "subtract": "Алу",
+    "years": "Жылдар",
+    "months": "Айлар",
+    "days": "Күндер",
+    "chooseDate": "Күнді таңдаңыз",
+    "previousMonth": "Алдыңғы ай",
+    "nextMonth": "Келесі айда",
+    "duration": {
+      "year": {
+        "one": "{count} жыл",
+        "other": "{count} жыл"
+      },
+      "month": {
+        "one": "{count} ай",
+        "other": "{count} ай"
+      },
+      "week": {
+        "one": "{count} апта",
+        "other": "{count} апта"
+      },
+      "day": {
+        "one": "{count} күн",
+        "other": "{count} күн"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from} және {to} арасындағы айырмашылық",
+      "addTo": "{duration} {date} ішіне қосу",
+      "subtractFrom": "{date} мәнінен {duration} алу"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Бөлектелген өрнекті тексеріңіз",
+    "enterExpression": "Өрнекті енгізіңіз",
+    "canvas": "Графикалық кенеп",
+    "stopTracing": "Бақылауды тоқтату",
+    "startTracing": "Бақылауды бастау",
+    "share": "Бөлісу",
+    "options": "Параметрлер",
+    "zoomIn": "Ұлғайту",
+    "zoomInLabel": "Ұлғайту",
+    "zoomOut": "Кішірейту",
+    "zoomOutLabel": "Кішірейту",
+    "refreshViewAutomatically": "Көруді автоматты түрде жаңарту",
+    "view": "Көру",
+    "expressions": "Өрнектер",
+    "mobileView": "Мобильді көрініс",
+    "showGraph": "Графикті көрсету",
+    "showExpressions": "Өрнектерді көрсету",
+    "backToFunctionList": "Функциялар тізіміне оралу",
+    "window": "Терезе",
+    "resetView": "Көруді қалпына келтіру",
+    "units": "Бірліктер",
+    "radians": "Радиандар",
+    "degrees": "Дәрежелер",
+    "gradians": "Градиан",
+    "lineThickness": "Сызық қалыңдығы",
+    "theme": "Тақырып",
+    "alwaysLight": "Әрқашан жарық",
+    "matchAppTheme": "Қолданба тақырыбын сәйкестендіріңіз",
+    "groups": {
+      "inequalities": "Теңсіздіктер",
+      "trigonometry": "Тригонометрия",
+      "function": "Функция"
+    },
+    "functions": "Функциялар",
+    "showEquation": "Теңдеуді көрсету",
+    "hideEquation": "Теңдеуді жасыру",
+    "lineOptions": "Желі опциялары",
+    "color": "Түс",
+    "style": "Стиль",
+    "analysis": {
+      "title": "Талдау",
+      "domain": "Домен",
+      "range": "Ауқым",
+      "xIntercept": "x-кесінді",
+      "yIntercept": "y-кесінді",
+      "minima": "Минимум",
+      "maxima": "Максимум",
+      "inflectionPoints": "Иілу нүктелері",
+      "verticalAsymptotes": "Тік асимптоталар",
+      "horizontalAsymptotes": "Көлденең асимптоталар",
+      "obliqueAsymptotes": "Қиғаш асимптоталар",
+      "parity": "Паритет",
+      "period": "Кезең",
+      "monotonicity": "Монотондылық",
+      "domainNone": "Домен шектеулері жоқ",
+      "rangeNone": "Ауқым шектеулері жоқ",
+      "xInterceptNone": "X-кесінділері жоқ",
+      "yInterceptNone": "y-кесінділері жоқ",
+      "minimaNone": "Минимум жоқ",
+      "maximaNone": "Максимум жоқ",
+      "inflectionNone": "Иілу нүктелері жоқ",
+      "verticalAsymptotesNone": "Тік асимптоталар жоқ",
+      "horizontalAsymptotesNone": "Көлденең асимптоталар жоқ",
+      "obliqueAsymptotesNone": "Қиғаш асимптоталар жоқ",
+      "parityUnknown": "Белгісіз",
+      "parityOdd": "Тақ",
+      "parityEven": "Жіп",
+      "parityNeither": "Ешқайсысы",
+      "periodicityUnknown": "Белгісіз",
+      "periodicityNotPeriodic": "Мерзімді емес",
+      "monotonicityConstant": "Тұрақты",
+      "monotonicityIncreasing": "Өсуде",
+      "monotonicityDecreasing": "Азаюда",
+      "monotonicityUnknown": "Белгісіз",
+      "monotonicityError": "Анықтау мүмкін емес",
+      "featureTooComplexPlural": "Талдау үшін тым күрделі",
+      "analysisCouldNotBePerformed": "Талдау орындалмады",
+      "analysisNotSupported": "Талдауға қолдау көрсетілмейді",
+      "variableIsNotX": "Айнымалы x емес"
+    },
+    "plottingExpressions": "{count} өрнектерді салу",
+    "xMin": "X-мин",
+    "xMax": "X-Макс",
+    "yMin": "Ж-мин",
+    "yMax": "Y-Макс",
+    "selectExpression": "Өрнекті таңдау {index}",
+    "expressionIndex": "Өрнек {index}",
+    "analyzeFunction": "Функцияны талдау",
+    "changeEquationStyle": "Теңдеу стилін өзгерту",
+    "removeEquation": "Теңдеуді жою",
+    "lineStyle": {
+      "solid": "Тұтас сызық стилі",
+      "dash": "Сызық сызық стилі",
+      "dot": "Нүктелік сызық стилі"
+    }
+  },
+  "history": {
+    "empty": "Тарих бос",
+    "clearAll": "Барлығын өшіру",
+    "clear": "Тарихты өшіру",
+    "title": "Тарих",
+    "andMemory": "Тарих және жад",
+    "aria": {
+      "historyPanel": "Тарих тақтасы",
+      "historyAndMemoryPanel": "Тарих және жад тақтасы"
+    },
+    "closeFlyout": "Тарихты жабу",
+    "openFlyout": "Тарихты ашу"
+  },
+  "memory": {
+    "empty": "Жад бос",
+    "clearItem": "Элементті өшіру",
+    "addCurrentValue": "Ағымдағы мәнді қосыңыз",
+    "subtractCurrentValue": "Ағымдағы мәнді шегеріңіз",
+    "clearAll": "Барлығын өшіру",
+    "clear": "Жадты тазалау",
+    "title": "Жад",
+    "controls": "Жадты басқару элементтері",
+    "tooltips": {
+      "clearAll": "Барлық жадты өшіру",
+      "recall": "Жадтан шақыру",
+      "add": "Жадқа қосу",
+      "subtract": "Жадтан алу",
+      "store": "Жадта сақтау"
+    },
+    "recallValue": "Жадты қайта шақыру {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Навигация",
+      "closeNavigation": "Навигацияны жабу",
+      "openNavigation": "Ашық навигация"
+    },
+    "groups": {
+      "calculator": "Калькулятор",
+      "converter": "Түрлендіргіш"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Битті айналдыру панелі",
+    "baseReadouts": "Негізгі көрсеткіштер",
+    "surfaceMode": "Беттік режим",
+    "fullKeypad": "Толық пернетақта",
+    "showKeypad": "Пернетақтаны көрсету",
+    "bitTogglingKeypad": "Битті ауыстырып-қосқыш пернетақта",
+    "showBitView": "Бит көрінісін көрсету",
+    "wordSize": "Сөз өлшемі",
+    "bitwise": "Битпен",
+    "bitShift": "Битті ауыстыру"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Тригонометрия",
+      "function": "Функция",
+      "functionsAria": "Функциялар",
+      "trigonometricFunctionsAria": "Тригонометриялық функциялар",
+      "angleUnit": "Бұрыш бірлігі {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Көрініс",
+      "themeTitle": "Тақырып",
+      "themeDescription": "Түс схемасын таңдаңыз",
+      "light": "Жарық",
+      "dark": "Қараңғы",
+      "blue": "Көк",
+      "green": "Жасыл",
+      "system": "Жүйе"
+    },
+    "language": {
+      "group": "Тіл",
+      "title": "Тіл",
+      "description": "Қалаулы тілді таңдаңыз"
+    },
+    "about": {
+      "group": "туралы"
+    },
+    "feedback": "Пікір жіберу",
+    "contribute": {
+      "prefix": "Үлес қосу",
+      "link": "GitHub",
+      "suffix": "осы калькуляторды жақсартуға көмектесу үшін"
+    },
+    "links": {
+      "repository": "Жоба репозиторийі",
+      "readme": "README",
+      "license": "MIT лицензиясы"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Стандарт",
+      "subtitle": "Классикалық жедел бағалау"
+    },
+    "scientific": {
+      "label": "Ғылыми",
+      "subtitle": "Операторлар, функциялар және өрнекті қолдау"
+    },
+    "graphing": {
+      "label": "График",
+      "subtitle": "Декарттық жазықтықта қарапайым өрнек салу"
+    },
+    "programmer": {
+      "label": "Бағдарламашы",
+      "subtitle": "Негізгі түрлендіруі бар бүтін математика"
+    },
+    "date": {
+      "label": "Күнді есептеу",
+      "subtitle": "Ұзақтықтар мен ауысым күндерін табыңыз"
+    },
+    "currency": {
+      "label": "Валюта",
+      "subtitle": "Жалған валюта бағамдарын түрлендіру"
+    },
+    "volume": {
+      "label": "Дыбыс",
+      "subtitle": "Дыбыс өлшемдерін түрлендіру"
+    },
+    "length": {
+      "label": "Ұзындығы",
+      "subtitle": "Қашықтық пен ұзындық бірліктерін түрлендіру"
+    },
+    "weight": {
+      "label": "Салмақ және масса",
+      "subtitle": "Салмақ пен масса бірліктерін түрлендіру"
+    },
+    "temperature": {
+      "label": "Температура",
+      "subtitle": "Температура шкаласын түрлендіру"
+    },
+    "energy": {
+      "label": "Энергия",
+      "subtitle": "Энергия өлшемдерін түрлендіру"
+    },
+    "area": {
+      "label": "Аудан",
+      "subtitle": "Аумақ өлшемдерін түрлендіру"
+    },
+    "speed": {
+      "label": "Жылдамдық",
+      "subtitle": "Жылдамдық өлшемдерін түрлендіру"
+    },
+    "time": {
+      "label": "Уақыт",
+      "subtitle": "Уақыт өлшемдерін түрлендіру"
+    },
+    "power": {
+      "label": "Қуат",
+      "subtitle": "Қуат өлшемдерін түрлендіру"
+    },
+    "data": {
+      "label": "Дерек",
+      "subtitle": "Сандық жад бірліктерін түрлендіру"
+    },
+    "pressure": {
+      "label": "Қысым",
+      "subtitle": "Қысым бірліктерін түрлендіру"
+    },
+    "angle": {
+      "label": "Бұрыш",
+      "subtitle": "Бұрыш өлшемдерін түрлендіру"
+    },
+    "settings": {
+      "label": "Параметрлер",
+      "subtitle": "Көрініс және қолданба туралы ақпарат"
+    }
+  },
+  "categories": {
+    "Currency": "Валюта",
+    "Volume": "Дыбыс",
+    "Length": "Ұзындығы",
+    "Mass": "Масса",
+    "Temperature": "Температура",
+    "Energy": "Энергия",
+    "Area": "Аудан",
+    "Speed": "Жылдамдық",
+    "Time": "Уақыт",
+    "Power": "Қуат",
+    "Data": "Деректер",
+    "Pressure": "Қысым",
+    "Angle": "Бұрыш"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Ангстромдар",
+      "Nanometers": "Нанометрлер",
+      "Microns": "Микрондар",
+      "Millimeters": "Миллиметрлер",
+      "Centimeters": "Сантиметр",
+      "Meters": "Метрлер",
+      "Kilometers": "Километрлер",
+      "Inches": "Дюйм",
+      "Feet": "Фут",
+      "Yards": "Ярд",
+      "Miles": "Милл",
+      "Nautical miles": "Теңіз милясы",
+      "paperclips": "қағаз қыстырғыштары",
+      "hands": "қолдар",
+      "jumbo jets": "джамбо ұшағы",
+      "Carats": "Карат",
+      "Milligrams": "Миллиграмм",
+      "Centigrams": "Центиграмм",
+      "Decigrams": "Дециграммалар",
+      "Grams": "Грам",
+      "Dekagrams": "Декаграммалар",
+      "Hectograms": "Гектограммалар",
+      "Kilograms": "Килограмм",
+      "Metric tonnes": "Метрикалық тонна",
+      "Ounces": "унция",
+      "Pounds": "Фунт",
+      "Stone": "Тас",
+      "Short tons (US)": "Қысқа тонна (АҚШ)",
+      "Long tons (UK)": "Ұзын тонна (Ұлыбритания)",
+      "snowflakes": "қар бүршіктері",
+      "soccer balls": "футбол доптары",
+      "elephants": "пілдер",
+      "whales": "киттер",
+      "Celsius": "Цельсий",
+      "Fahrenheit": "Фаренгейт",
+      "Kelvin": "Келвин",
+      "Milliliters": "Миллилитр",
+      "Cubic centimeters": "Куб сантиметр",
+      "Liters": "литр",
+      "Cubic meters": "текше метр",
+      "Teaspoons (US)": "Шай қасықтар (АҚШ)",
+      "Tablespoons (US)": "Ас қасықтар (АҚШ)",
+      "Fluid ounces (US)": "Сұйықтық унциясы (АҚШ)",
+      "Cups (US)": "Кубоктар (АҚШ)",
+      "Pints (US)": "Пинт (АҚШ)",
+      "Quarts (US)": "Кварттар (АҚШ)",
+      "Gallons (US)": "Галлон (АҚШ)",
+      "Cubic inches": "Куб дюйм",
+      "Cubic feet": "Куб фут",
+      "Cubic yards": "Куб ярд",
+      "Teaspoons (UK)": "Шай қасықтар (Ұлыбритания)",
+      "Tablespoons (UK)": "Ас қасықтар (Ұлыбритания)",
+      "Fluid ounces (UK)": "Сұйықтық унциясы (Ұлыбритания)",
+      "Pints (UK)": "Пинт (Ұлыбритания)",
+      "Quarts (UK)": "Кварттар (Ұлыбритания)",
+      "Gallons (UK)": "Галлон (Ұлыбритания)",
+      "coffee cups": "кофе шыныаяқтары",
+      "bathtubs": "ванналар",
+      "swimming pools": "жүзу бассейндері",
+      "Square millimeters": "Квадрат миллиметр",
+      "Square centimeters": "Шаршы сантиметр",
+      "Square meters": "Шаршы метр",
+      "Hectares": "Гектер",
+      "Square kilometers": "Шаршы километр",
+      "Square inches": "Шаршы дюйм",
+      "Square feet": "Шаршы фут",
+      "Square yards": "Шаршы ярдтар",
+      "Acres": "Акрлар",
+      "Square miles": "Шаршы миль",
+      "sheets of paper": "қағаз парақтары",
+      "soccer fields": "футбол алаңдары",
+      "castles": "қалыптар",
+      "Pyeong": "Пхенг",
+      "Centimeters per second": "Сантиметр/секунд",
+      "Meters per second": "Секундына метр",
+      "Kilometers per hour": "Сағатына километр",
+      "Feet per second": "Фут/секунд",
+      "Miles per hour": "Сағатына миль",
+      "Knots": "Түйіндер",
+      "Mach": "Мах",
+      "turtles": "тасбақалар",
+      "horses": "жылқылар",
+      "jets": "ұшақтар",
+      "Watts": "Вт",
+      "Kilowatts": "КВт",
+      "Horsepower (US)": "Ат күші (АҚШ)",
+      "Foot-pounds/minute": "Фут-фунт/минут",
+      "BTUs/minute": "BTU/минут",
+      "light bulbs": "жарық шамдары",
+      "train engines": "пойыз қозғалтқыштары",
+      "Thermal calories": "Термиялық калориялар",
+      "Food calories": "Тағамның калориялары",
+      "British thermal units": "Британдық жылу қондырғылары",
+      "Kilojoules": "Килоджоуль",
+      "Kilowatt-hours": "КВт-сағат",
+      "Electron volts": "Электрондық вольт",
+      "Joules": "Джоуль",
+      "Foot-pounds": "Фут-фунт",
+      "batteries": "батареялар",
+      "bananas": "банандар",
+      "slices of cake": "торт тілімдері",
+      "Bits": "Биттер",
+      "Nibble": "Тіскеу",
+      "Bytes": "Байттар",
+      "Kilobits": "Килобит",
+      "Kibibits": "Кибибиттер",
+      "Kilobytes": "Килобайт",
+      "Kibibytes": "Кибайт",
+      "Megabits": "Мегабит",
+      "Mebibits": "Мебибиттер",
+      "Megabytes": "Мегабайт",
+      "Mebibytes": "Мебибайт",
+      "Gigabits": "Гигабит",
+      "Gibibits": "Гибибиттер",
+      "Gigabytes": "Гигабайт",
+      "Gibibytes": "Гиббайт",
+      "Terabits": "Терабиттер",
+      "Tebibits": "Тебiбістер",
+      "Terabytes": "Терабайт",
+      "Tebibytes": "Тебибайт",
+      "Petabits": "Пебититтер",
+      "Pebibits": "Пеббиттер",
+      "Petabytes": "Петабайт",
+      "Pebibytes": "Пебибайттар",
+      "Exabits": "Шығарылады",
+      "Exbibits": "Эксбибиттер",
+      "Exabytes": "Экзабайт",
+      "Exbibytes": "Эксбибайт",
+      "Zetabits": "Зетабиттер",
+      "Zebibits": "Зебибиттар",
+      "Zetabytes": "Зетабайт",
+      "Zebibytes": "Зебибайт",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobbits",
+      "Yottabytes": "Йоттабайт",
+      "Yobibytes": "Йобибайттар",
+      "floppy disks": "дискеттер",
+      "CDs": "CD дискілері",
+      "DVDs": "DVD дискілері",
+      "Atmospheres": "Атмосфералар",
+      "Bars": "Барлар",
+      "Kilopascals": "Килопаскаль",
+      "Millimeters of mercury": "Сынаптың миллиметрі",
+      "Pascals": "Паскаль",
+      "Pounds per square inch": "Бір шаршы дюймге фунт",
+      "Degrees": "Дәрежелер",
+      "Radians": "Радиандар",
+      "Gradians": "Градиан",
+      "Microseconds": "Микросекундтар",
+      "Milliseconds": "Миллисекунд",
+      "Seconds": "Секунд",
+      "Minutes": "Минуттар",
+      "Hours": "Сағат",
+      "Days": "Күндер",
+      "Weeks": "Апта",
+      "Years": "Жылдар"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "АҚШ доллары",
+      "Euro": "Еуро",
+      "British Pound": "Британ фунты",
+      "Japanese Yen": "Жапон иені",
+      "Canadian Dollar": "Канада доллары",
+      "Australian Dollar": "Австралия доллары",
+      "Brazilian Real": "Бразилиялық реал",
+      "Chilean Peso": "Чили песосы",
+      "Chinese Yuan": "Қытай юаны",
+      "Colombian Peso": "Колумбия песосы",
+      "Danish Krone": "Дат кроны",
+      "Egyptian Pound": "Египет фунты",
+      "Hong Kong Dollar": "Гонконг доллары",
+      "Indian Rupee": "Үнді рупиясы",
+      "Kenyan Shilling": "Кениялық шиллинг",
+      "Mexican Peso": "Мексикандық песо",
+      "Nigerian Naira": "Нигериялық Найра",
+      "New Zealand Dollar": "Жаңа Зеландия доллары",
+      "Norwegian Krone": "Норвегиялық крон",
+      "Philippine Piso": "Филиппиндік писо",
+      "Polish Zloty": "Польша злотиясы",
+      "Qatari Riyal": "Катар риалы",
+      "Saudi Riyal": "Сауд риалы",
+      "Singapore Dollar": "Сингапур доллары",
+      "South African Rand": "Оңтүстік Африка Рэнді",
+      "South Korean Won": "Оңтүстік Корея воны",
+      "Swedish Krona": "Швед кронасы",
+      "Swiss Franc": "Швейцариялық франк",
+      "Thai Baht": "Тайланд бат",
+      "Turkish Lira": "Түрік лирасы",
+      "Turkmenistani Manat": "Түркіменстан манаты",
+      "Ugandan Shilling": "Уганда шиллингі",
+      "Ukrainian Hryvnia": "Украин гривнасы",
+      "UAE Dirham": "БАӘ дирхамы",
+      "Uruguayan Peso": "Уругвай песосы",
+      "Uzbekistani Som": "Өзбекстан сомы",
+      "Vanuatu Vatu": "Вануату Вату",
+      "Venezuelan Bolivar Soberano": "Венесуэла боливары Соберано",
+      "Vietnamese Dong": "Вьетнамдық Донг",
+      "Yemeni Rial": "Йемен риалы"
+    },
+    "labels": {
+      "United States - Dollar": "Америка Құрама Штаттары - Доллар",
+      "Europe - Euro": "Еуропа - Еуро",
+      "United Kingdom - Pound": "Біріккен Корольдік - фунт",
+      "Japan - Yen": "Жапония - иен",
+      "Canada - Dollar": "Канада - доллар",
+      "Australia - Dollar": "Австралия - Доллар",
+      "Brazil - Real": "Бразилия - Реал",
+      "Chile - Peso": "Чили - Песо",
+      "China - Yuan Renminbi": "Қытай - Юань Жэньминби",
+      "Colombia - Peso": "Колумбия - Песо",
+      "Denmark - Krone": "Дания - Крона",
+      "Egypt - Pound": "Египет - фунт",
+      "Hong Kong SAR - Dollar": "Гонконг SAR - доллар",
+      "India - Rupee": "Үндістан - рупий",
+      "Kenya - Shilling": "Кения - Шиллинг",
+      "Mexico - Peso": "Мексика - Песо",
+      "Nigeria - Naira": "Нигерия - Найра",
+      "New Zealand - Dollar": "Жаңа Зеландия - доллар",
+      "Norway - Krone": "Норвегия - Крон",
+      "Philippines - Piso": "Филиппиндер - Писо",
+      "Poland - Zloty": "Польша - Злотый",
+      "Qatar - Riyal": "Катар - Риал",
+      "Saudi Arabia - Riyal": "Сауд Арабиясы - Риал",
+      "Singapore - Dollar": "Сингапур - доллар",
+      "South Africa - Rand": "Оңтүстік Африка - Рэнд",
+      "South Korea - Won": "Оңтүстік Корея - Жеңіс",
+      "Sweden - Krona": "Швеция - Крона",
+      "Switzerland - Franc": "Швейцария - Франк",
+      "Thailand - Baht": "Таиланд - бат",
+      "Turkey - Lira": "Түркия - Лира",
+      "Turkmenistan - Manat": "Түркіменстан - Манат",
+      "Uganda - Shilling": "Уганда - Шиллинг",
+      "Ukraine - Hryvnia": "Украина - гривна",
+      "United Arab Emirates - Dirham": "Біріккен Араб Әмірліктері - Дирхам",
+      "Uruguay - Peso": "Уругвай - Песо",
+      "Uzbekistan - Som": "Өзбекстан - Сом",
+      "Vanuatu - Vatu": "Вануату - Вату",
+      "Venezuela - Bolívar Soberano": "Венесуэла - Боливар Соберано",
+      "Vietnam - Dong": "Вьетнам - Донг",
+      "Yemen - Rial": "Йемен - Риал"
+    }
+  }
+}

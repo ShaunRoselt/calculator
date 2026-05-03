@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kalakuleta",
+    "name": "Kalakuleta"
+  },
+  "common": {
+    "back": "Komawa",
+    "backspace": "Baya",
+    "closeSidePanel": "Rufe panel"
+  },
+  "converter": {
+    "unitConverter": "Mai Canja Raka'a",
+    "title": "Masu sauya raka'a",
+    "builtInCollections": "Tarin da aka gina",
+    "category": "Kashi",
+    "from": "Daga",
+    "to": "Zuwa",
+    "inputValue": "Darajar don canzawa",
+    "convertedValue": "Kimar da aka canza",
+    "swapUnits": "Musanya raka'a",
+    "keypad": "faifan maɓalli mai canzawa",
+    "unit": "naúrar",
+    "unitOptions": "zabin naúrar",
+    "currency": {
+      "updatingRates": "Ana sabuntawa…",
+      "updateRates": "Sabunta farashin",
+      "keypad": "faifan maɓalli na kuɗi",
+      "currency": "kudin",
+      "options": "zaɓuɓɓukan kuɗi",
+      "updated": "An sabunta {timestamp}",
+      "status": {
+        "mockNote": "Darajar nunin izgili don nunin ƙa'idar keɓe.",
+        "fetching": "Ana samun sabbin ƙima na USD...",
+        "liveRatesLoaded": "An ɗora farashin kai tsaye daga ExchangeRate-API.",
+        "liveUpdateUnavailable": "Babu sabuntawa kai tsaye. An sabunta darajar demo a gida."
+      }
+    },
+    "aboutEqualTo": "Kimanin daidai"
+  },
+  "errors": {
+    "invalidInput": "Shigar da ba daidai ba",
+    "cannotDivideByZero": "Ba za a iya raba ta sifili ba",
+    "cannotModuloByZero": "Ba za a iya daidaita ta sifili ba",
+    "invalidProgrammerOperation": "Aiki mara inganci",
+    "overflow": "Sakamakon yayi girma sosai"
+  },
+  "date": {
+    "calculationMode": "Yanayin lissafi",
+    "from": "Daga",
+    "to": "Zuwa",
+    "results": {
+      "difference": "Bambanci",
+      "sameDates": "Kwanaki guda",
+      "date": "Kwanan wata"
+    },
+    "calculationModeOptions": "Zaɓuɓɓukan yanayin lissafi",
+    "mode": {
+      "difference": "Bambanci",
+      "shift": "Shift"
+    },
+    "operation": "Aiki",
+    "add": "Ƙara",
+    "subtract": "Rage",
+    "years": "Shekaru",
+    "months": "Watanni",
+    "days": "Kwanaki",
+    "chooseDate": "Zaɓi kwanan wata",
+    "previousMonth": "Watan da ya gabata",
+    "nextMonth": "Wata mai zuwa",
+    "duration": {
+      "year": {
+        "one": "{count} shekara",
+        "other": "{count} shekaru"
+      },
+      "month": {
+        "one": "{count} wata",
+        "other": "{count} watanni"
+      },
+      "week": {
+        "one": "{count} mako",
+        "other": "{count} makonni"
+      },
+      "day": {
+        "one": "{count} rana",
+        "other": "{count} kwanaki"
+      }
+    },
+    "history": {
+      "differenceBetween": "Bambanci tsakanin {from} da {to}",
+      "addTo": "Ƙara {duration} zuwa {date}",
+      "subtractFrom": "Rage {duration} daga {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Duba alamar da aka haskaka",
+    "enterExpression": "Shigar da magana",
+    "canvas": "Zane mai zane",
+    "stopTracing": "Dakatar da bincike",
+    "startTracing": "Fara bincike",
+    "share": "Raba",
+    "options": "Zabuka",
+    "zoomIn": "Shiga ciki",
+    "zoomInLabel": "Shiga ciki",
+    "zoomOut": "Haskakawa",
+    "zoomOutLabel": "Zuƙowa waje",
+    "refreshViewAutomatically": "Sake dubawa ta atomatik",
+    "view": "Duba",
+    "expressions": "Bayani",
+    "mobileView": "Duban wayar hannu",
+    "showGraph": "Nuna jadawali",
+    "showExpressions": "Nuna kalamai",
+    "backToFunctionList": "Komawa zuwa lissafin ayyuka",
+    "window": "Taga",
+    "resetView": "Sake saita duba",
+    "units": "Raka'a",
+    "radians": "Radiyon",
+    "degrees": "Digiri",
+    "gradians": "Gradians",
+    "lineThickness": "Kaurin layi",
+    "theme": "Jigo",
+    "alwaysLight": "Koyaushe haske",
+    "matchAppTheme": "Daidaita jigon app",
+    "groups": {
+      "inequalities": "Rashin daidaito",
+      "trigonometry": "Trigonometry",
+      "function": "Aiki"
+    },
+    "functions": "Ayyuka",
+    "showEquation": "Nuna daidaito",
+    "hideEquation": "Ɓoye daidaito",
+    "lineOptions": "Zaɓuɓɓukan layi",
+    "color": "Launi",
+    "style": "Salo",
+    "analysis": {
+      "title": "Nazari",
+      "domain": "Yanki",
+      "range": "Rage",
+      "xIntercept": "x-intercept",
+      "yIntercept": "y-intercept",
+      "minima": "Minima",
+      "maxima": "Maxima",
+      "inflectionPoints": "Makin juyawa",
+      "verticalAsymptotes": "Abubuwan asymptotes na tsaye",
+      "horizontalAsymptotes": "Abubuwan asymptotes na kwance",
+      "obliqueAsymptotes": "Abubuwan asymptotes",
+      "parity": "Daidaitawa",
+      "period": "Lokaci",
+      "monotonicity": "Halittu",
+      "domainNone": "Babu ƙuntatawa na yanki",
+      "rangeNone": "Babu hani",
+      "xInterceptNone": "Ba x-intercepts",
+      "yInterceptNone": "Babu y-intercepts",
+      "minimaNone": "Babu minima",
+      "maximaNone": "Babu maxima",
+      "inflectionNone": "Babu maki juzu'i",
+      "verticalAsymptotesNone": "Babu asymptotes a tsaye",
+      "horizontalAsymptotesNone": "Ba a kwance asymptotes",
+      "obliqueAsymptotesNone": "Babu alamun asymptotes",
+      "parityUnknown": "Ba a sani ba",
+      "parityOdd": "Ban sani ba",
+      "parityEven": "Ko da",
+      "parityNeither": "Haka",
+      "periodicityUnknown": "Ba a sani ba",
+      "periodicityNotPeriodic": "Ba na lokaci-lokaci ba",
+      "monotonicityConstant": "Ko da yaushe",
+      "monotonicityIncreasing": "Yana ƙaruwa",
+      "monotonicityDecreasing": "Yana raguwa",
+      "monotonicityUnknown": "Ba a sani ba",
+      "monotonicityError": "Ba za a iya tantancewa ba",
+      "featureTooComplexPlural": "Yana da wahala sosai don tantancewa",
+      "analysisCouldNotBePerformed": "Ba a iya yin nazari ba",
+      "analysisNotSupported": "Ba a goyan bayan nazari",
+      "variableIsNotX": "Mai canzawa ba x"
+    },
+    "plottingExpressions": "Makirci {count} maganganu",
+    "xMin": "X-min",
+    "xMax": "X-Max",
+    "yMin": "Y-min",
+    "yMax": "Y-Max",
+    "selectExpression": "Zaɓi magana {index}",
+    "expressionIndex": "Magana {index}",
+    "analyzeFunction": "Yi nazarin aiki",
+    "changeEquationStyle": "Canja salon daidaitawa",
+    "removeEquation": "Cire lissafi",
+    "lineStyle": {
+      "solid": "Salon layi mai ƙarfi",
+      "dash": "Salon layin dash",
+      "dot": "Salon layin digo"
+    }
+  },
+  "history": {
+    "empty": "Tarihi fanko ne",
+    "clearAll": "A share duka",
+    "clear": "Share tarihi",
+    "title": "Tarihi",
+    "andMemory": "Tarihi da Ƙwaƙwalwa",
+    "aria": {
+      "historyPanel": "Panel na tarihi",
+      "historyAndMemoryPanel": "Tarihi da Ƙungiyar Ƙwaƙwalwa"
+    },
+    "closeFlyout": "Rufe tarihi",
+    "openFlyout": "Bude tarihi"
+  },
+  "memory": {
+    "empty": "Ƙwaƙwalwar ajiya babu komai",
+    "clearItem": "Share abu",
+    "addCurrentValue": "Ƙara ƙimar halin yanzu",
+    "subtractCurrentValue": "Rage ƙimar halin yanzu",
+    "clearAll": "A share duka",
+    "clear": "Share ƙwaƙwalwar ajiya",
+    "title": "Ƙwaƙwalwa",
+    "controls": "Gudanar da ƙwaƙwalwar ajiya",
+    "tooltips": {
+      "clearAll": "Share duk ƙwaƙwalwar ajiya",
+      "recall": "Tuna daga ƙwaƙwalwar ajiya",
+      "add": "Ƙara zuwa ƙwaƙwalwar ajiya",
+      "subtract": "Rage daga ƙwaƙwalwar ajiya",
+      "store": "Adana a cikin ƙwaƙwalwar ajiya"
+    },
+    "recallValue": "Tunawa da ƙwaƙwalwar ajiya {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Kewayawa",
+      "closeNavigation": "Rufe kewayawa",
+      "openNavigation": "Buɗe kewayawa"
+    },
+    "groups": {
+      "calculator": "Kalkuleta",
+      "converter": "Mai juyawa"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Babban kwamitin juyewa",
+    "baseReadouts": "Abubuwan karantawa na asali",
+    "surfaceMode": "Yanayin saman",
+    "fullKeypad": "Cikakken faifan maɓalli",
+    "showKeypad": "Nuna faifan maɓalli",
+    "bitTogglingKeypad": "faifan maɓalli mai juyawa",
+    "showBitView": "Nuna ɗan kallo",
+    "wordSize": "Girman kalma",
+    "bitwise": "Bitwise",
+    "bitShift": "Canji"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometry",
+      "function": "Aiki",
+      "functionsAria": "Ayyuka",
+      "trigonometricFunctionsAria": "Ayyukan trigonometric",
+      "angleUnit": "Nau'in kusurwa {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Bayyanar",
+      "themeTitle": "Jigo",
+      "themeDescription": "Zaɓi tsarin launi",
+      "light": "Haske",
+      "dark": "Duhu",
+      "blue": "Blue",
+      "green": "Kore",
+      "system": "Tsari"
+    },
+    "language": {
+      "group": "Harshe",
+      "title": "Harshe",
+      "description": "Zaɓi yaren da kuka fi so"
+    },
+    "about": {
+      "group": "Game da"
+    },
+    "feedback": "Aika martani",
+    "contribute": {
+      "prefix": "Taimakawa kan",
+      "link": "GitHub",
+      "suffix": "don taimakawa inganta wannan kalkuleta"
+    },
+    "links": {
+      "repository": "Ma'ajiyar aikin",
+      "readme": "KU KARANTA",
+      "license": "MIT lasisi"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standard",
+      "subtitle": "Kima na yau da kullun"
+    },
+    "scientific": {
+      "label": "Na kimiyya",
+      "subtitle": "Masu gudanarwa, ayyuka, da tallafin magana"
+    },
+    "graphing": {
+      "label": "Zane",
+      "subtitle": "Yi tsari mai sauƙi a kan jirgin saman katisi"
+    },
+    "programmer": {
+      "label": "Mai tsara shirye-shirye",
+      "subtitle": "Math ɗin lamba tare da juyawa tushe"
+    },
+    "date": {
+      "label": "Lissafin kwanan wata",
+      "subtitle": "Nemo tsawon lokaci da kwanakin canji"
+    },
+    "currency": {
+      "label": "Kuɗi",
+      "subtitle": "Mayar da izgili farashin"
+    },
+    "volume": {
+      "label": "girma",
+      "subtitle": "Mayar da ma'auni"
+    },
+    "length": {
+      "label": "Tsawon",
+      "subtitle": "Maida nisa da tsayin raka'a"
+    },
+    "weight": {
+      "label": "Nauyi da yawa",
+      "subtitle": "Mayar da nauyi da yawan raka'a"
+    },
+    "temperature": {
+      "label": "Zazzabi",
+      "subtitle": "Maida ma'aunin zafi"
+    },
+    "energy": {
+      "label": "Makamashi",
+      "subtitle": "Maida ma'aunin kuzari"
+    },
+    "area": {
+      "label": "Yanki",
+      "subtitle": "Mayar da ma'aunin yanki"
+    },
+    "speed": {
+      "label": "Guri",
+      "subtitle": "Mayar da ma'aunin sauri"
+    },
+    "time": {
+      "label": "Lokaci",
+      "subtitle": "Maida ma'auni na lokaci"
+    },
+    "power": {
+      "label": "Iko",
+      "subtitle": "Mayar da ma'aunin wuta"
+    },
+    "data": {
+      "label": "Bayanai",
+      "subtitle": "Mayar da rumbun adana dijital"
+    },
+    "pressure": {
+      "label": "Matsi",
+      "subtitle": "Mayar da matsi"
+    },
+    "angle": {
+      "label": "Kungiya",
+      "subtitle": "Mayar da ma'aunin kusurwa"
+    },
+    "settings": {
+      "label": "Saituna",
+      "subtitle": "Bayyanar da bayanin app"
+    }
+  },
+  "categories": {
+    "Currency": "Kuɗi",
+    "Volume": "girma",
+    "Length": "Tsawon",
+    "Mass": "Jama'a",
+    "Temperature": "Zazzabi",
+    "Energy": "Makamashi",
+    "Area": "Wuri",
+    "Speed": "Guri",
+    "Time": "Lokaci",
+    "Power": "Wuta",
+    "Data": "Bayanai",
+    "Pressure": "Matsi",
+    "Angle": "Kungiya"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanometers",
+      "Microns": "Microns",
+      "Millimeters": "Mimitoci",
+      "Centimeters": "Santimita",
+      "Meters": "Mitoci",
+      "Kilometers": "Kilomita",
+      "Inches": "Inci",
+      "Feet": "Kafa",
+      "Yards": "Yadi",
+      "Miles": "Miles",
+      "Nautical miles": "mil na ruwa",
+      "paperclips": "shirye-shiryen bidiyo",
+      "hands": "hannu",
+      "jumbo jets": "jiragen saman jumbo",
+      "Carats": "Karat",
+      "Milligrams": "milligrams",
+      "Centigrams": "Centigrams",
+      "Decigrams": "Decigrams",
+      "Grams": "Giram",
+      "Dekagrams": "Dekagrams",
+      "Hectograms": "Hectogram",
+      "Kilograms": "Kilogram",
+      "Metric tonnes": "Yawan awo",
+      "Ounces": "oza",
+      "Pounds": "Fam",
+      "Stone": "Dutse",
+      "Short tons (US)": "Gajerun ton (US)",
+      "Long tons (UK)": "Dogon ton (Birtaniya)",
+      "snowflakes": "dusar ƙanƙara",
+      "soccer balls": "ƙwallon ƙafa",
+      "elephants": "giwaye",
+      "whales": "Whales",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Miliyoyin",
+      "Cubic centimeters": "Cubic santimita",
+      "Liters": "Lita",
+      "Cubic meters": "Mita masu Kubik",
+      "Teaspoons (US)": "Cokali (US)",
+      "Tablespoons (US)": "Cokali (US)",
+      "Fluid ounces (US)": "Yawan ruwa (US)",
+      "Cups (US)": "Kofuna (US)",
+      "Pints (US)": "Pints (US)",
+      "Quarts (US)": "Quarts (US)",
+      "Gallons (US)": "Gallon (US)",
+      "Cubic inches": "Inci Kubik",
+      "Cubic feet": "Ƙafafun Cubic",
+      "Cubic yards": "Yadi masu Kubik",
+      "Teaspoons (UK)": "Cokali (Birtaniya)",
+      "Tablespoons (UK)": "Cokali (Birtaniya)",
+      "Fluid ounces (UK)": "Yawan ruwa (Birtaniya)",
+      "Pints (UK)": "Pints (Birtaniya)",
+      "Quarts (UK)": "Quarts (Birtaniya)",
+      "Gallons (UK)": "Gallon (Birtaniya)",
+      "coffee cups": "kofuna na kofi",
+      "bathtubs": "wuraren wanka",
+      "swimming pools": "wuraren ninkaya",
+      "Square millimeters": "Mimitoci murabba'i",
+      "Square centimeters": "Square santimita",
+      "Square meters": "Mitoci masu murabba'i",
+      "Hectares": "kadada",
+      "Square kilometers": "Kilomita murabba'i",
+      "Square inches": "Inci murabba'i",
+      "Square feet": "Ƙafafun murabba'i",
+      "Square yards": "Yadi murabba'i",
+      "Acres": "Kadada",
+      "Square miles": "Nisan mil",
+      "sheets of paper": "takardar takarda",
+      "soccer fields": "filayen ƙwallon ƙafa",
+      "castles": "gidaje",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Santimita a sakan daya",
+      "Meters per second": "Mita a sakan daya",
+      "Kilometers per hour": "Kilomita a kowace awa",
+      "Feet per second": "Kafa a sakan daya",
+      "Miles per hour": "mil a kowace awa",
+      "Knots": "Knots",
+      "Mach": "Mas",
+      "turtles": "kunkuru",
+      "horses": "dawakai",
+      "jets": "jirage",
+      "Watts": "Watts",
+      "Kilowatts": "kilowatts",
+      "Horsepower (US)": "Ƙarfin doki (US)",
+      "Foot-pounds/minute": "Kafa-fam/minti",
+      "BTUs/minute": "BTUs/minti",
+      "light bulbs": "kwararan fitila",
+      "train engines": "injunan jirgin kasa",
+      "Thermal calories": "Kalori mai zafi",
+      "Food calories": "Kalori abinci",
+      "British thermal units": "Raka'a thermal na Burtaniya",
+      "Kilojoules": "Kilojoules",
+      "Kilowatt-hours": "-hours kilowatt",
+      "Electron volts": "Wutar lantarki",
+      "Joules": "Joules",
+      "Foot-pounds": "Fam-ƙafa",
+      "batteries": "batura",
+      "bananas": "ayaba",
+      "slices of cake": "yankan kek",
+      "Bits": "Ragowa",
+      "Nibble": "Gashi",
+      "Bytes": "Bytes",
+      "Kilobits": "kilobits",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "Kilobytes",
+      "Kibibytes": "Kibibytes",
+      "Megabits": "Megabits",
+      "Mebibits": "Matsaloli",
+      "Megabytes": "Megabytes",
+      "Mebibytes": "Mebibytes",
+      "Gigabits": "Gigabits",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Gigabyte",
+      "Gibibytes": "Gibibytes",
+      "Terabits": "Taurari",
+      "Tebibits": "Tebits",
+      "Terabytes": "Terabytes",
+      "Tebibytes": "Tebibytes",
+      "Petabits": "Petabits",
+      "Pebibits": "Ƙarfafawa",
+      "Petabytes": "Petabytes",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Abubuwan",
+      "Exbibits": "Nunawa",
+      "Exabytes": "Exabyte",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebits",
+      "Zetabytes": "Zetabytes",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabytes",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "faifai",
+      "CDs": "CD",
+      "DVDs": "DVDs",
+      "Atmospheres": "Yanayin yanayi",
+      "Bars": "Bars",
+      "Kilopascals": "Kilopascals",
+      "Millimeters of mercury": "Miliyoyin mercury",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Fam a kowane inci murabba'i",
+      "Degrees": "Digiri",
+      "Radians": "Radiyo",
+      "Gradians": "Gradians",
+      "Microseconds": "Microsecond",
+      "Milliseconds": "daƙiƙa guda",
+      "Seconds": "Dakika",
+      "Minutes": "Minti",
+      "Hours": "Awanni",
+      "Days": "Kwanaki",
+      "Weeks": "Makonni",
+      "Years": "Shekaru"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Dalar Amurka",
+      "Euro": "Yuro",
+      "British Pound": "Fam na Burtaniya",
+      "Japanese Yen": "Yen na Japan",
+      "Canadian Dollar": "Dalar Kanada",
+      "Australian Dollar": "Dalar Ostiraliya",
+      "Brazilian Real": "Brazilian Real",
+      "Chilean Peso": "Chilean peso",
+      "Chinese Yuan": "Yuan na kasar Sin",
+      "Colombian Peso": "Peso Colombian",
+      "Danish Krone": "Danish Krone",
+      "Egyptian Pound": "Fam Masar",
+      "Hong Kong Dollar": "Dalar Hong Kong",
+      "Indian Rupee": "Rufin Indiya",
+      "Kenyan Shilling": "Shilling na Kenya",
+      "Mexican Peso": "Peso na Meksiko",
+      "Nigerian Naira": "Naira Najeriya",
+      "New Zealand Dollar": "Dalar New Zealand",
+      "Norwegian Krone": "Krone na Norwegian",
+      "Philippine Piso": "Philippines Piso",
+      "Polish Zloty": "Yaren mutanen Poland Zloty",
+      "Qatari Riyal": "Qatar Riyal",
+      "Saudi Riyal": "Riyal Saudi",
+      "Singapore Dollar": "Dalar Singapore",
+      "South African Rand": "Rand na Afirka ta Kudu",
+      "South Korean Won": "Won Koriya ta Kudu",
+      "Swedish Krona": "Krona na Sweden",
+      "Swiss Franc": "Faransa Franc",
+      "Thai Baht": "Thai Baht",
+      "Turkish Lira": "Lira na Turkiyya",
+      "Turkmenistani Manat": "Turkmenistan Manat",
+      "Ugandan Shilling": "Uganda Shilling",
+      "Ukrainian Hryvnia": "Hryvnia na Yukren",
+      "UAE Dirham": "Dirham UAE",
+      "Uruguayan Peso": "Peso Uruguyan",
+      "Uzbekistani Som": "Uzbekistan Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuela Bolivar Soberano",
+      "Vietnamese Dong": "Dong Vietnamese",
+      "Yemeni Rial": "Rial na Yemen"
+    },
+    "labels": {
+      "United States - Dollar": "Amurka - Dala",
+      "Europe - Euro": "Turai - Yuro",
+      "United Kingdom - Pound": "United Kingdom - Pound",
+      "Japan - Yen": "Japan - Yen",
+      "Canada - Dollar": "Kanada - Dala",
+      "Australia - Dollar": "Ostiraliya - Dollar",
+      "Brazil - Real": "Brazil - Real",
+      "Chile - Peso": "Chile - Peso",
+      "China - Yuan Renminbi": "Sin - Yuan Renminbi",
+      "Colombia - Peso": "Colombia - Peso",
+      "Denmark - Krone": "Denmark - Krone",
+      "Egypt - Pound": "Masar - Fam",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Dala",
+      "India - Rupee": "Indiya - Rupee",
+      "Kenya - Shilling": "Kenya - Shilling",
+      "Mexico - Peso": "Mexico - Peso",
+      "Nigeria - Naira": "Najeriya - Naira",
+      "New Zealand - Dollar": "New Zealand - Dala",
+      "Norway - Krone": "Norway - Krone",
+      "Philippines - Piso": "Philippines - Piso",
+      "Poland - Zloty": "Poland - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Saudi Arabia - Riyal",
+      "Singapore - Dollar": "Singapore - Dala",
+      "South Africa - Rand": "Afirka ta Kudu - Rand",
+      "South Korea - Won": "Koriya ta Kudu - Ya ci",
+      "Sweden - Krona": "Sweden - Krona",
+      "Switzerland - Franc": "Switzerland - Franc",
+      "Thailand - Baht": "Thailand - Baht",
+      "Turkey - Lira": "Turkiyya - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Shilling",
+      "Ukraine - Hryvnia": "Ukraine - Hryvnia",
+      "United Arab Emirates - Dirham": "Hadaddiyar Daular Larabawa - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Uzbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemen - Rial"
+    }
+  }
+}

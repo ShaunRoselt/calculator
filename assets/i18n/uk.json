@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Калькулятор",
+    "name": "Калькулятор"
+  },
+  "common": {
+    "back": "Назад",
+    "backspace": "Backspace",
+    "closeSidePanel": "Закрити панель"
+  },
+  "converter": {
+    "unitConverter": "Конвертер одиниць",
+    "title": "Конвертери одиниць",
+    "builtInCollections": "Вбудовані колекції",
+    "category": "Категорія",
+    "from": "Від",
+    "to": "Кому",
+    "inputValue": "Значення для конвертації",
+    "convertedValue": "Перетворене значення",
+    "swapUnits": "Поміняти одиниці місцями",
+    "keypad": "Клавіатура конвертера",
+    "unit": "од",
+    "unitOptions": "варіанти одиниць",
+    "currency": {
+      "updatingRates": "Оновлення ставок…",
+      "updateRates": "Ставки оновлення",
+      "keypad": "Валютна клавіатура",
+      "currency": "валюта",
+      "options": "валютні опції",
+      "updated": "Оновлено {timestamp}",
+      "status": {
+        "mockNote": "Моктивні базові ставки для демонстрації автономної програми.",
+        "fetching": "Отримання останніх довідкових курсів долара...",
+        "liveRatesLoaded": "Активні курси, завантажені з ExchangeRate-API.",
+        "liveUpdateUnavailable": "Оновлення в реальному часі недоступне. Оновлені демонстраційні тарифи локально."
+      }
+    },
+    "aboutEqualTo": "Приблизно дорівнює"
+  },
+  "errors": {
+    "invalidInput": "Недійсне введення",
+    "cannotDivideByZero": "Неможливо поділити на нуль",
+    "cannotModuloByZero": "Неможливо по модулю на нуль",
+    "invalidProgrammerOperation": "Недійсна операція",
+    "overflow": "Результат завеликий"
+  },
+  "date": {
+    "calculationMode": "Режим розрахунку",
+    "from": "Від",
+    "to": "Кому",
+    "results": {
+      "difference": "Різниця",
+      "sameDates": "Ті самі дати",
+      "date": "Дата"
+    },
+    "calculationModeOptions": "Параметри режиму розрахунку",
+    "mode": {
+      "difference": "Різниця",
+      "shift": "Shift"
+    },
+    "operation": "Операція",
+    "add": "Додати",
+    "subtract": "Відняти",
+    "years": "Роки",
+    "months": "Місяці",
+    "days": "Днів",
+    "chooseDate": "Виберіть дату",
+    "previousMonth": "Попередній місяць",
+    "nextMonth": "Наступного місяця",
+    "duration": {
+      "year": {
+        "one": "{count} рік",
+        "other": "{count} років"
+      },
+      "month": {
+        "one": "{count} місяць",
+        "other": "{count} місяців"
+      },
+      "week": {
+        "one": "{count} тиждень",
+        "other": "{count} тижнів"
+      },
+      "day": {
+        "one": "{count} день",
+        "other": "{count} днів"
+      }
+    },
+    "history": {
+      "differenceBetween": "Різниця між {from} та {to}",
+      "addTo": "Додати {duration} до {date}",
+      "subtractFrom": "Відніміть {duration} від {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Перевірте виділений вираз",
+    "enterExpression": "Введіть вираз",
+    "canvas": "Полотно графіка",
+    "stopTracing": "Зупинити відстеження",
+    "startTracing": "Почати трасування",
+    "share": "Поділитися",
+    "options": "Параметри",
+    "zoomIn": "Збільшити",
+    "zoomInLabel": "Збільшення",
+    "zoomOut": "Зменшити",
+    "zoomOutLabel": "Зменшити",
+    "refreshViewAutomatically": "Оновити перегляд автоматично",
+    "view": "Переглянути",
+    "expressions": "Вирази",
+    "mobileView": "Мобільний перегляд",
+    "showGraph": "Показати графік",
+    "showExpressions": "Показати вирази",
+    "backToFunctionList": "Назад до списку функцій",
+    "window": "Вікно",
+    "resetView": "Скинути перегляд",
+    "units": "Одиниці",
+    "radians": "Радіани",
+    "degrees": "Ступені",
+    "gradians": "Градіани",
+    "lineThickness": "Товщина лінії",
+    "theme": "Тема",
+    "alwaysLight": "Завжди горить",
+    "matchAppTheme": "Відповідність темі програми",
+    "groups": {
+      "inequalities": "Нерівності",
+      "trigonometry": "Тригонометрія",
+      "function": "Функція"
+    },
+    "functions": "Функції",
+    "showEquation": "Показати рівняння",
+    "hideEquation": "Сховати рівняння",
+    "lineOptions": "Параметри лінії",
+    "color": "Колір",
+    "style": "Стиль",
+    "analysis": {
+      "title": "Аналіз",
+      "domain": "Домен",
+      "range": "Діапазон",
+      "xIntercept": "х-перехоплення",
+      "yIntercept": "перехоплення через y",
+      "minima": "Мінімум",
+      "maxima": "Максимум",
+      "inflectionPoints": "Точки перегину",
+      "verticalAsymptotes": "Вертикальні асимптоти",
+      "horizontalAsymptotes": "Горизонтальні асимптоти",
+      "obliqueAsymptotes": "Похилі асимптоти",
+      "parity": "Парність",
+      "period": "Крапка",
+      "monotonicity": "Монотонність",
+      "domainNone": "Немає обмежень щодо домену",
+      "rangeNone": "Немає обмежень діапазону",
+      "xInterceptNone": "Без х-перехоплень",
+      "yInterceptNone": "Жодних y-перехоплень",
+      "minimaNone": "Немає мінімумів",
+      "maximaNone": "Немає максимумів",
+      "inflectionNone": "Немає точок перегину",
+      "verticalAsymptotesNone": "Немає вертикальних асимптот",
+      "horizontalAsymptotesNone": "Немає горизонтальних асимптот",
+      "obliqueAsymptotesNone": "Немає похилих асимптот",
+      "parityUnknown": "Невідомо",
+      "parityOdd": "Непарне",
+      "parityEven": "Рівно",
+      "parityNeither": "Ні те, ні інше",
+      "periodicityUnknown": "Невідомо",
+      "periodicityNotPeriodic": "Не періодично",
+      "monotonicityConstant": "Константа",
+      "monotonicityIncreasing": "Зростає",
+      "monotonicityDecreasing": "Зменшується",
+      "monotonicityUnknown": "Невідомо",
+      "monotonicityError": "Неможливо визначити",
+      "featureTooComplexPlural": "Занадто складний для аналізу",
+      "analysisCouldNotBePerformed": "Не вдалося виконати аналіз",
+      "analysisNotSupported": "Аналіз не підтримується",
+      "variableIsNotX": "Змінна не є x"
+    },
+    "plottingExpressions": "Побудова {count} виразів",
+    "xMin": "X-хв",
+    "xMax": "X-Max",
+    "yMin": "Y-мін",
+    "yMax": "Y-макс",
+    "selectExpression": "Виберіть вираз {index}",
+    "expressionIndex": "Вираз {index}",
+    "analyzeFunction": "Функція аналізу",
+    "changeEquationStyle": "Змінити стиль рівняння",
+    "removeEquation": "Видалити рівняння",
+    "lineStyle": {
+      "solid": "Стиль суцільної лінії",
+      "dash": "Стиль штрихової лінії",
+      "dot": "Стиль крапкової лінії"
+    }
+  },
+  "history": {
+    "empty": "Історія порожня",
+    "clearAll": "Очистити все",
+    "clear": "Очистити історію",
+    "title": "Історія",
+    "andMemory": "Історія та пам'ять",
+    "aria": {
+      "historyPanel": "Панель історії",
+      "historyAndMemoryPanel": "Панель «Історія та пам’ять»."
+    },
+    "closeFlyout": "Закрити історію",
+    "openFlyout": "Відкрити історію"
+  },
+  "memory": {
+    "empty": "Пам'ять порожня",
+    "clearItem": "Очистити елемент",
+    "addCurrentValue": "Додати поточне значення",
+    "subtractCurrentValue": "Відняти поточне значення",
+    "clearAll": "Очистити все",
+    "clear": "Очистити пам'ять",
+    "title": "Пам'ять",
+    "controls": "Керування пам’яттю",
+    "tooltips": {
+      "clearAll": "Очистити всю пам’ять",
+      "recall": "Викликати з пам’яті",
+      "add": "Додати до пам’яті",
+      "subtract": "Віднімання по пам’яті",
+      "store": "Зберегти в пам’яті"
+    },
+    "recallValue": "Відновити пам’ять {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Навігація",
+      "closeNavigation": "Закрити навігацію",
+      "openNavigation": "Відкрити навігацію"
+    },
+    "groups": {
+      "calculator": "Калькулятор",
+      "converter": "Конвертер"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Панель біта",
+    "baseReadouts": "Показники бази",
+    "surfaceMode": "Поверхневий режим",
+    "fullKeypad": "Повна клавіатура",
+    "showKeypad": "Показати клавіатуру",
+    "bitTogglingKeypad": "Клавіатура для перемикання бітів",
+    "showBitView": "Показати бітовий перегляд",
+    "wordSize": "Розмір слова",
+    "bitwise": "Побітово",
+    "bitShift": "Зміщення бітів"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Тригонометрія",
+      "function": "Функція",
+      "functionsAria": "Функції",
+      "trigonometricFunctionsAria": "Тригонометричні функції",
+      "angleUnit": "Одиниця кута {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Зовнішній вигляд",
+      "themeTitle": "Тема",
+      "themeDescription": "Виберіть колірну схему",
+      "light": "Світло",
+      "dark": "Темний",
+      "blue": "Синій",
+      "green": "Зелений",
+      "system": "Система"
+    },
+    "language": {
+      "group": "Мова",
+      "title": "Мова",
+      "description": "Виберіть потрібну мову"
+    },
+    "about": {
+      "group": "Про"
+    },
+    "feedback": "Надіслати відгук",
+    "contribute": {
+      "prefix": "Зробити внесок у",
+      "link": "GitHub",
+      "suffix": ", щоб допомогти покращити цей калькулятор"
+    },
+    "links": {
+      "repository": "Сховище проектів",
+      "readme": "README",
+      "license": "Ліцензія MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Стандарт",
+      "subtitle": "Класична негайна оцінка"
+    },
+    "scientific": {
+      "label": "Наукова",
+      "subtitle": "Оператори, функції та підтримка виразів"
+    },
+    "graphing": {
+      "label": "Побудова графіків",
+      "subtitle": "Побудуйте простий вираз на декартовій площині"
+    },
+    "programmer": {
+      "label": "Програміст",
+      "subtitle": "Ціла математика з базовим перетворенням"
+    },
+    "date": {
+      "label": "Розрахунок дати",
+      "subtitle": "Знайти тривалість і дати зміни"
+    },
+    "currency": {
+      "label": "Валюта",
+      "subtitle": "Конвертуйте фіктивні курси валют"
+    },
+    "volume": {
+      "label": "Гучність",
+      "subtitle": "Конвертувати вимірювання обсягу"
+    },
+    "length": {
+      "label": "Тривалість",
+      "subtitle": "Конвертувати одиниці вимірювання відстані та довжини"
+    },
+    "weight": {
+      "label": "Вага та маса",
+      "subtitle": "Конвертувати одиниці ваги та маси"
+    },
+    "temperature": {
+      "label": "Температура",
+      "subtitle": "Перетворення температурних шкал"
+    },
+    "energy": {
+      "label": "Енергія",
+      "subtitle": "Перетворення вимірювань енергії"
+    },
+    "area": {
+      "label": "Площа",
+      "subtitle": "Конвертувати вимірювання площі"
+    },
+    "speed": {
+      "label": "Швидкість",
+      "subtitle": "Конвертувати вимірювання швидкості"
+    },
+    "time": {
+      "label": "Час",
+      "subtitle": "Конвертувати вимірювання часу"
+    },
+    "power": {
+      "label": "Потужність",
+      "subtitle": "Конвертувати вимірювання потужності"
+    },
+    "data": {
+      "label": "Дані",
+      "subtitle": "Перетворення цифрових одиниць зберігання"
+    },
+    "pressure": {
+      "label": "Тиск",
+      "subtitle": "Конвертувати одиниці тиску"
+    },
+    "angle": {
+      "label": "Кут",
+      "subtitle": "Конвертувати вимірювання кутів"
+    },
+    "settings": {
+      "label": "Налаштування",
+      "subtitle": "Зовнішній вигляд і інформація про програму"
+    }
+  },
+  "categories": {
+    "Currency": "Валюта",
+    "Volume": "Гучність",
+    "Length": "Тривалість",
+    "Mass": "Маса",
+    "Temperature": "Температура",
+    "Energy": "Енергія",
+    "Area": "Площа",
+    "Speed": "Швидкість",
+    "Time": "Час",
+    "Power": "Потужність",
+    "Data": "Дані",
+    "Pressure": "Тиск",
+    "Angle": "Кут"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Ангстреми",
+      "Nanometers": "Нанометри",
+      "Microns": "Мікрони",
+      "Millimeters": "Міліметри",
+      "Centimeters": "Сантиметри",
+      "Meters": "Метри",
+      "Kilometers": "Кілометри",
+      "Inches": "Дюйми",
+      "Feet": "Ноги",
+      "Yards": "Ярди",
+      "Miles": "Милі",
+      "Nautical miles": "Морські милі",
+      "paperclips": "скріпки",
+      "hands": "руки",
+      "jumbo jets": "джамбо-джети",
+      "Carats": "Карати",
+      "Milligrams": "Міліграми",
+      "Centigrams": "Сантиграми",
+      "Decigrams": "Дециграми",
+      "Grams": "Грами",
+      "Dekagrams": "Декаграми",
+      "Hectograms": "Гектограми",
+      "Kilograms": "Кілограми",
+      "Metric tonnes": "Метричні тонни",
+      "Ounces": "Унції",
+      "Pounds": "Фунти",
+      "Stone": "Камінь",
+      "Short tons (US)": "Короткі тонни (США)",
+      "Long tons (UK)": "Довгі тонни (Великобританія)",
+      "snowflakes": "сніжинки",
+      "soccer balls": "футбольні м'ячі",
+      "elephants": "слони",
+      "whales": "кити",
+      "Celsius": "Цельсія",
+      "Fahrenheit": "Фаренгейт",
+      "Kelvin": "Кельвін",
+      "Milliliters": "Мілілітрів",
+      "Cubic centimeters": "Кубічні сантиметри",
+      "Liters": "Літри",
+      "Cubic meters": "Кубічні метри",
+      "Teaspoons (US)": "Чайні ложки (США)",
+      "Tablespoons (US)": "Столові ложки (США)",
+      "Fluid ounces (US)": "Рідкі унції (США)",
+      "Cups (US)": "Кубки (США)",
+      "Pints (US)": "Пінти (США)",
+      "Quarts (US)": "Кварти (США)",
+      "Gallons (US)": "Галони (США)",
+      "Cubic inches": "Кубічні дюйми",
+      "Cubic feet": "Кубічні фути",
+      "Cubic yards": "Кубічні ярди",
+      "Teaspoons (UK)": "Чайні ложки (Великобританія)",
+      "Tablespoons (UK)": "Столові ложки (Великобританія)",
+      "Fluid ounces (UK)": "Рідкі унції (Великобританія)",
+      "Pints (UK)": "Пінти (Великобританія)",
+      "Quarts (UK)": "Кварти (Великобританія)",
+      "Gallons (UK)": "Галони (Великобританія)",
+      "coffee cups": "чашки для кави",
+      "bathtubs": "ванни",
+      "swimming pools": "басейни",
+      "Square millimeters": "Квадратний міліметр",
+      "Square centimeters": "Квадратний сантиметр",
+      "Square meters": "Квадратних метрів",
+      "Hectares": "Гектар",
+      "Square kilometers": "Квадратний кілометр",
+      "Square inches": "Квадратні дюйми",
+      "Square feet": "Квадратних футів",
+      "Square yards": "Квадратні ярди",
+      "Acres": "Акри",
+      "Square miles": "Квадратні милі",
+      "sheets of paper": "аркуші паперу",
+      "soccer fields": "футбольні поля",
+      "castles": "замки",
+      "Pyeong": "Пхен",
+      "Centimeters per second": "Сантиметрів на секунду",
+      "Meters per second": "Метри на секунду",
+      "Kilometers per hour": "Кілометрів на годину",
+      "Feet per second": "Футів на секунду",
+      "Miles per hour": "Милі на годину",
+      "Knots": "Вузли",
+      "Mach": "Мах",
+      "turtles": "черепахи",
+      "horses": "коней",
+      "jets": "форсунки",
+      "Watts": "Ватт",
+      "Kilowatts": "Кіловати",
+      "Horsepower (US)": "Кінська сила (США)",
+      "Foot-pounds/minute": "Фут-фунт/хв",
+      "BTUs/minute": "БТЕ/хв",
+      "light bulbs": "лампочки",
+      "train engines": "двигуни поїздів",
+      "Thermal calories": "Теплові калорії",
+      "Food calories": "Калорії в їжі",
+      "British thermal units": "Британські теплові одиниці",
+      "Kilojoules": "Кілоджоулі",
+      "Kilowatt-hours": "Кіловат-години",
+      "Electron volts": "Електрон-вольти",
+      "Joules": "Джоулі",
+      "Foot-pounds": "Фут-фунт",
+      "batteries": "батареї",
+      "bananas": "банани",
+      "slices of cake": "скибочки торта",
+      "Bits": "Біти",
+      "Nibble": "Відкушування",
+      "Bytes": "байт",
+      "Kilobits": "Кілобіт",
+      "Kibibits": "Кібібіт",
+      "Kilobytes": "Кілобайт",
+      "Kibibytes": "Кібібайт",
+      "Megabits": "Мегабіт",
+      "Mebibits": "Мебібіт",
+      "Megabytes": "Мегабайт",
+      "Mebibytes": "Мебібайт",
+      "Gigabits": "Гігабіт",
+      "Gibibits": "Гібібіт",
+      "Gigabytes": "Гігабайт",
+      "Gibibytes": "Гібібайт",
+      "Terabits": "Терабіт",
+      "Tebibits": "Тебібіт",
+      "Terabytes": "Терабайт",
+      "Tebibytes": "Тебібайт",
+      "Petabits": "Петабіт",
+      "Pebibits": "Пебібіти",
+      "Petabytes": "Петабайт",
+      "Pebibytes": "Пебібайт",
+      "Exabits": "Екзабіт",
+      "Exbibits": "Експонати",
+      "Exabytes": "Екзабайт",
+      "Exbibytes": "Екбібайт",
+      "Zetabits": "Зетабіти",
+      "Zebibits": "Зебібіти",
+      "Zetabytes": "Зетабайт",
+      "Zebibytes": "Зебібайт",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Йоттабайт",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "дискети",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "Атмосфери",
+      "Bars": "Барки",
+      "Kilopascals": "Кілопаскалі",
+      "Pascals": "Паскалі",
+      "Pounds per square inch": "Фунти на квадратний дюйм",
+      "Degrees": "Ступені",
+      "Radians": "Радіани",
+      "Gradians": "Градіани",
+      "Microseconds": "Мікросекунди",
+      "Milliseconds": "Мілісекунди",
+      "Seconds": "Секунди",
+      "Minutes": "хвилин",
+      "Hours": "Годин",
+      "Days": "Днів",
+      "Weeks": "Тижні",
+      "Years": "Роки",
+      "Millimeters of mercury": "Millimeters of mercury"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Долар США",
+      "Euro": "Євро",
+      "British Pound": "Британський фунт",
+      "Japanese Yen": "Японська єна",
+      "Canadian Dollar": "Канадський долар",
+      "Australian Dollar": "Австралійський долар",
+      "Brazilian Real": "Бразильський реал",
+      "Chilean Peso": "Чилійський песо",
+      "Chinese Yuan": "Китайський юань",
+      "Colombian Peso": "Колумбійський песо",
+      "Danish Krone": "Данська крона",
+      "Egyptian Pound": "Єгипетський фунт",
+      "Hong Kong Dollar": "Гонконгський долар",
+      "Indian Rupee": "Індійська рупія",
+      "Kenyan Shilling": "Кенійський шилінг",
+      "Mexican Peso": "Мексиканське песо",
+      "Nigerian Naira": "Нігерійська найра",
+      "New Zealand Dollar": "Новозеландський долар",
+      "Norwegian Krone": "Норвезької крони",
+      "Philippine Piso": "Філіппінський Пісо",
+      "Polish Zloty": "Польський злотий",
+      "Qatari Riyal": "Катарський ріал",
+      "Saudi Riyal": "Саудівський ріал",
+      "Singapore Dollar": "Сінгапурський долар",
+      "South African Rand": "Південноафриканський ранд",
+      "South Korean Won": "Південнокорейська вона",
+      "Swedish Krona": "Шведська крона",
+      "Swiss Franc": "Швейцарський франк",
+      "Thai Baht": "Тайський бат",
+      "Turkish Lira": "Турецька ліра",
+      "Turkmenistani Manat": "Туркменський манат",
+      "Ugandan Shilling": "Угандійський шилінг",
+      "Ukrainian Hryvnia": "Українська гривня",
+      "UAE Dirham": "Дирхам ОАЕ",
+      "Uruguayan Peso": "Уругвайський песо",
+      "Uzbekistani Som": "Узбецький сум",
+      "Vanuatu Vatu": "Вануату Вату",
+      "Venezuelan Bolivar Soberano": "Венесуельський Болівар Соберано",
+      "Vietnamese Dong": "В'єтнамський донг",
+      "Yemeni Rial": "Єменський ріал"
+    },
+    "labels": {
+      "United States - Dollar": "Сполучені Штати - долар",
+      "Europe - Euro": "Європа - євро",
+      "United Kingdom - Pound": "Великобританія - фунт",
+      "Japan - Yen": "Японія - Єна",
+      "Canada - Dollar": "Канада - долар",
+      "Australia - Dollar": "Австралія - долар",
+      "Brazil - Real": "Бразилія – Реал",
+      "Chile - Peso": "Чилі - песо",
+      "China - Yuan Renminbi": "Китай - юань",
+      "Colombia - Peso": "Колумбія - песо",
+      "Denmark - Krone": "Данія - крона",
+      "Egypt - Pound": "Єгипет - фунт",
+      "Hong Kong SAR - Dollar": "САР Гонконг - долар",
+      "India - Rupee": "Індія - рупія",
+      "Kenya - Shilling": "Кенія - Шилінг",
+      "Mexico - Peso": "Мексика - песо",
+      "Nigeria - Naira": "Нігерія – Найра",
+      "New Zealand - Dollar": "Нова Зеландія - долар",
+      "Norway - Krone": "Норвегія - крона",
+      "Philippines - Piso": "Філіппіни - Пісо",
+      "Poland - Zloty": "Польща - злотий",
+      "Qatar - Riyal": "Катар - Ріал",
+      "Saudi Arabia - Riyal": "Саудівська Аравія - Ріал",
+      "Singapore - Dollar": "Сінгапур - долар",
+      "South Africa - Rand": "Південна Африка – Ренд",
+      "South Korea - Won": "Південна Корея – Вона",
+      "Sweden - Krona": "Швеція - крона",
+      "Switzerland - Franc": "Швейцарія – франк",
+      "Thailand - Baht": "Таїланд - Бат",
+      "Turkey - Lira": "Туреччина - Ліра",
+      "Turkmenistan - Manat": "Туркменістан - манат",
+      "Uganda - Shilling": "Уганда - Шилінг",
+      "Ukraine - Hryvnia": "Україна - Гривня",
+      "United Arab Emirates - Dirham": "Об’єднані Арабські Емірати – дирхам",
+      "Uruguay - Peso": "Уругвай - песо",
+      "Uzbekistan - Som": "Узбекистан - сом",
+      "Vanuatu - Vatu": "Вануату - Вату",
+      "Venezuela - Bolívar Soberano": "Венесуела - Болівар Соберано",
+      "Vietnam - Dong": "В'єтнам - Донг",
+      "Yemen - Rial": "Ємен - Ріал"
+    }
+  }
+}

@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Llogaritësi",
+    "name": "Llogaritësi"
+  },
+  "common": {
+    "back": "Prapa",
+    "backspace": "Backspace",
+    "closeSidePanel": "Mbyll panelin"
+  },
+  "converter": {
+    "unitConverter": "Konvertuesi i njësisë",
+    "title": "Konvertuesit e njësive",
+    "builtInCollections": "Koleksione të integruara",
+    "category": "Kategoria",
+    "from": "Nga",
+    "to": "Për",
+    "inputValue": "Vlera për t'u konvertuar",
+    "convertedValue": "Vlera e konvertuar",
+    "swapUnits": "Ndërroni njësitë",
+    "keypad": "Tastiera e konvertuesit",
+    "unit": "njësi",
+    "unitOptions": "opsionet e njësisë",
+    "currency": {
+      "updatingRates": "Po përditëson tarifat…",
+      "updateRates": "Përditëso tarifat",
+      "keypad": "Tastiera e monedhës",
+      "currency": "valuta",
+      "options": "opsionet e monedhës",
+      "updated": "Përditësuar {timestamp}",
+      "status": {
+        "mockNote": "Tarifat e referencës tallëse për demonstrimin e aplikacionit të pavarur.",
+        "fetching": "Po merren normat më të fundit të referencës në USD...",
+        "liveRatesLoaded": "Normat e drejtpërdrejta të ngarkuara nga ExchangeRate-API.",
+        "liveUpdateUnavailable": "Përditësimi i drejtpërdrejtë nuk ofrohet. Tarifat demonstruese të rifreskuara në nivel lokal."
+      }
+    },
+    "aboutEqualTo": "Rreth e barabartë me"
+  },
+  "errors": {
+    "invalidInput": "Hyrje e pavlefshme",
+    "cannotDivideByZero": "Nuk mund të pjesëtohet me zero",
+    "cannotModuloByZero": "Nuk mund të modulohet me zero",
+    "invalidProgrammerOperation": "Operacion i pavlefshëm",
+    "overflow": "Rezultati shumë i madh"
+  },
+  "date": {
+    "calculationMode": "Modaliteti i llogaritjes",
+    "from": "Nga",
+    "to": "Për",
+    "results": {
+      "difference": "Dallimi",
+      "sameDates": "Të njëjtat data",
+      "date": "Data"
+    },
+    "calculationModeOptions": "Opsionet e modalitetit të llogaritjes",
+    "mode": {
+      "difference": "Dallimi",
+      "shift": "Shift"
+    },
+    "operation": "Operacioni",
+    "add": "Shto",
+    "subtract": "Zbrit",
+    "years": "Vite",
+    "months": "Muj",
+    "days": "Ditë",
+    "chooseDate": "Zgjidh datën",
+    "previousMonth": "Muaji i kaluar",
+    "nextMonth": "Muajin tjetër",
+    "duration": {
+      "year": {
+        "one": "{count} vit",
+        "other": "{count} vjet"
+      },
+      "month": {
+        "one": "{count} muaj",
+        "other": "{count} muaj"
+      },
+      "week": {
+        "one": "{count} javë",
+        "other": "{count} javë"
+      },
+      "day": {
+        "one": "{count} ditë",
+        "other": "{count} ditë"
+      }
+    },
+    "history": {
+      "differenceBetween": "Dallimi midis {from} dhe {to}",
+      "addTo": "Shto {duration} në {date}",
+      "subtractFrom": "Zbrit {duration} nga {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Kontrollo shprehjen e theksuar",
+    "enterExpression": "Fut një shprehje",
+    "canvas": "Kanavacë grafiku",
+    "stopTracing": "Ndalo gjurmimin",
+    "startTracing": "Fillo gjurmimin",
+    "share": "Ndaje",
+    "options": "Opsionet",
+    "zoomIn": "Zmadhoni",
+    "zoomInLabel": "Zmadhoni",
+    "zoomOut": "Zvogëlo",
+    "zoomOutLabel": "Zvogëlo",
+    "refreshViewAutomatically": "Rifresko automatikisht pamjen",
+    "view": "Shiko",
+    "expressions": "Shprehjet",
+    "mobileView": "Pamja e celularit",
+    "showGraph": "Shfaq grafikun",
+    "showExpressions": "Shfaq shprehjet",
+    "backToFunctionList": "Kthehu te lista e funksioneve",
+    "window": "Dritarja",
+    "resetView": "Rivendos pamjen",
+    "units": "Njësitë",
+    "radians": "Radianët",
+    "degrees": "Diplomë",
+    "gradians": "Gradianët",
+    "lineThickness": "Trashësia e linjës",
+    "theme": "Tema",
+    "alwaysLight": "Gjithmonë e lehtë",
+    "matchAppTheme": "Përputhni temën e aplikacionit",
+    "groups": {
+      "inequalities": "Pabarazitë",
+      "trigonometry": "Trigonometri",
+      "function": "Funksioni"
+    },
+    "functions": "Funksionet",
+    "showEquation": "Trego ekuacionin",
+    "hideEquation": "Fshih ekuacionin",
+    "lineOptions": "Opsionet e linjës",
+    "color": "Ngjyra",
+    "style": "Stil",
+    "analysis": {
+      "title": "Analiza",
+      "domain": "Domeni",
+      "range": "Sfera",
+      "xIntercept": "x-prerje",
+      "yIntercept": "y-prerje",
+      "minima": "Minimumi",
+      "maxima": "Maksima",
+      "inflectionPoints": "Pikat e lakimit",
+      "verticalAsymptotes": "Asimptota vertikale",
+      "horizontalAsymptotes": "Asimptota horizontale",
+      "obliqueAsymptotes": "Asimptota të zhdrejtë",
+      "parity": "Barazia",
+      "period": "Periudha",
+      "monotonicity": "Monotoniteti",
+      "domainNone": "Nuk ka kufizime në domen",
+      "rangeNone": "Nuk ka kufizime në rreze",
+      "xInterceptNone": "Nuk ka x-përgjime",
+      "yInterceptNone": "Asnjë përgjim y",
+      "minimaNone": "Asnjë minimum",
+      "maximaNone": "Asnjë maksimum",
+      "inflectionNone": "Asnjë pikë lakimi",
+      "verticalAsymptotesNone": "Nuk ka asimptota vertikale",
+      "horizontalAsymptotesNone": "Nuk ka asimptota horizontale",
+      "obliqueAsymptotesNone": "Nuk ka asimptota të zhdrejtë",
+      "parityUnknown": "E panjohur",
+      "parityOdd": "Tek",
+      "parityEven": "Edhe",
+      "parityNeither": "Asnjëra",
+      "periodicityUnknown": "E panjohur",
+      "periodicityNotPeriodic": "Jo periodike",
+      "monotonicityConstant": "Konstante",
+      "monotonicityIncreasing": "Në rritje",
+      "monotonicityDecreasing": "Në rënie",
+      "monotonicityUnknown": "E panjohur",
+      "monotonicityError": "Nuk mund të përcaktohet",
+      "featureTooComplexPlural": "Shumë komplekse për t'u analizuar",
+      "analysisCouldNotBePerformed": "Analiza nuk mund të kryhej",
+      "analysisNotSupported": "Analiza nuk mbështetet",
+      "variableIsNotX": "Ndryshorja nuk është x"
+    },
+    "plottingExpressions": "Pargrafi i {count} shprehjeve",
+    "xMin": "X-min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Maks",
+    "selectExpression": "Zgjidh shprehjen {index}",
+    "expressionIndex": "Shprehja {index}",
+    "analyzeFunction": "Analizo funksionin",
+    "changeEquationStyle": "Ndrysho stilin e ekuacionit",
+    "removeEquation": "Hiq ekuacionin",
+    "lineStyle": {
+      "solid": "Stil i linjës së ngurtë",
+      "dash": "Stili i vijës së vijës",
+      "dot": "Stili i vijës me pika"
+    }
+  },
+  "history": {
+    "empty": "Historia është bosh",
+    "clearAll": "Pastro të gjitha",
+    "clear": "Fshi historikun",
+    "title": "Historia",
+    "andMemory": "Historia dhe kujtesa",
+    "aria": {
+      "historyPanel": "Paneli i historisë",
+      "historyAndMemoryPanel": "Paneli i historisë dhe i kujtesës"
+    },
+    "closeFlyout": "Mbyll historikun",
+    "openFlyout": "Hape historiku"
+  },
+  "memory": {
+    "empty": "Kujtesa është bosh",
+    "clearItem": "Pastro artikullin",
+    "addCurrentValue": "Shto vlerën aktuale",
+    "subtractCurrentValue": "Zbrisni vlerën aktuale",
+    "clearAll": "Pastro të gjitha",
+    "clear": "Pastro memorien",
+    "title": "Kujtesa",
+    "controls": "Kontrollet e memories",
+    "tooltips": {
+      "clearAll": "Fshi gjithë kujtesën",
+      "recall": "Thirrje nga kujtesa",
+      "add": "Shto në memorie",
+      "subtract": "Zbrit nga kujtesa",
+      "store": "Ruaj në memorie"
+    },
+    "recallValue": "Kujto kujtesën {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigimi",
+      "closeNavigation": "Mbyll navigimin",
+      "openNavigation": "Hap navigimin"
+    },
+    "groups": {
+      "calculator": "Llogaritësi",
+      "converter": "Konvertuesi"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Paneli i kthimit të bitit",
+    "baseReadouts": "Leximet bazë",
+    "surfaceMode": "Modaliteti sipërfaqësor",
+    "fullKeypad": "Tastiera e plotë",
+    "showKeypad": "Shfaq tastierën",
+    "bitTogglingKeypad": "Tastiera me ndryshim të vogël",
+    "showBitView": "Shfaq pamjen e bitit",
+    "wordSize": "Madhësia e fjalës",
+    "bitwise": "Në bit",
+    "bitShift": "Zhvendosja e bitit"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometri",
+      "function": "Funksioni",
+      "functionsAria": "Funksionet",
+      "trigonometricFunctionsAria": "Funksionet trigonometrike",
+      "angleUnit": "Njësi këndi {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Pamja e jashtme",
+      "themeTitle": "Tema",
+      "themeDescription": "Zgjidh një skemë ngjyrash",
+      "light": "Drita",
+      "dark": "Errësirë",
+      "blue": "Blu",
+      "green": "E gjelbër",
+      "system": "Sistemi"
+    },
+    "language": {
+      "group": "Gjuha",
+      "title": "Gjuha",
+      "description": "Zgjidh gjuhën tënde të preferuar"
+    },
+    "about": {
+      "group": "Rreth"
+    },
+    "feedback": "Dërgo koment",
+    "contribute": {
+      "prefix": "Kontribuoni në",
+      "link": "GitHub",
+      "suffix": "për të ndihmuar në përmirësimin e këtij kalkulatori"
+    },
+    "links": {
+      "repository": "Depoja e projektit",
+      "readme": "LEXO",
+      "license": "Licenca MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standard",
+      "subtitle": "Vlerësimi i menjëhershëm klasik"
+    },
+    "scientific": {
+      "label": "Shkencore",
+      "subtitle": "Mbështetje për operatorët, funksionet dhe shprehjet"
+    },
+    "graphing": {
+      "label": "Grafikim",
+      "subtitle": "Paragrafoni një shprehje të thjeshtë në një plan kartezian"
+    },
+    "programmer": {
+      "label": "Programues",
+      "subtitle": "Numër i plotë matematikë me konvertim bazë"
+    },
+    "date": {
+      "label": "Llogaritja e datës",
+      "subtitle": "Gjeni kohëzgjatjet dhe datat e ndërrimit"
+    },
+    "currency": {
+      "label": "Valuta",
+      "subtitle": "Konverto kurset e këmbimit të rremë"
+    },
+    "volume": {
+      "label": "Vëllimi",
+      "subtitle": "Konverto matjet e volumit"
+    },
+    "length": {
+      "label": "Gjatësia",
+      "subtitle": "Konverto njësitë e distancës dhe gjatësisë"
+    },
+    "weight": {
+      "label": "Pesha dhe masa",
+      "subtitle": "Konverto njësitë e peshës dhe masës"
+    },
+    "temperature": {
+      "label": "Temperatura",
+      "subtitle": "Konverto shkallët e temperaturës"
+    },
+    "energy": {
+      "label": "Energjia",
+      "subtitle": "Konverto matjet e energjisë"
+    },
+    "area": {
+      "label": "Zonë",
+      "subtitle": "Konverto matjet e zonës"
+    },
+    "speed": {
+      "label": "Shpejtësia",
+      "subtitle": "Konverto matjet e shpejtësisë"
+    },
+    "time": {
+      "label": "Koha",
+      "subtitle": "Konverto matjet e kohës"
+    },
+    "power": {
+      "label": "Fuqia",
+      "subtitle": "Konverto matjet e fuqisë"
+    },
+    "data": {
+      "label": "Të dhënat",
+      "subtitle": "Konverto njësitë e ruajtjes dixhitale"
+    },
+    "pressure": {
+      "label": "Presion",
+      "subtitle": "Konverto njësitë e presionit"
+    },
+    "angle": {
+      "label": "Këndi",
+      "subtitle": "Konverto matjet e këndit"
+    },
+    "settings": {
+      "label": "Cilësimet",
+      "subtitle": "Pamja e jashtme dhe informacioni i aplikacionit"
+    }
+  },
+  "categories": {
+    "Currency": "Valuta",
+    "Volume": "Vëllimi",
+    "Length": "Gjatësia",
+    "Mass": "Meshë",
+    "Temperature": "Temperatura",
+    "Energy": "Energjia",
+    "Area": "Zonë",
+    "Speed": "Shpejtësia",
+    "Time": "Koha",
+    "Power": "Fuqia",
+    "Data": "Të dhënat",
+    "Pressure": "Presion",
+    "Angle": "Këndi"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanometra",
+      "Microns": "Mikronet",
+      "Millimeters": "Milimetra",
+      "Centimeters": "Centimetra",
+      "Meters": "Metra",
+      "Kilometers": "Kilometra",
+      "Inches": "Inç",
+      "Feet": "Këmbët",
+      "Yards": "Oborre",
+      "Miles": "Mile",
+      "Nautical miles": "Mile detare",
+      "paperclips": "kapëse letre",
+      "hands": "duart",
+      "jumbo jets": "jumbo jets",
+      "Carats": "Karatë",
+      "Milligrams": "Miligramë",
+      "Centigrams": "Centigramë",
+      "Decigrams": "Decigramë",
+      "Grams": "Gramë",
+      "Dekagrams": "Dekagram",
+      "Hectograms": "Hektogramet",
+      "Kilograms": "Kilogramë",
+      "Metric tonnes": "Tonët metrikë",
+      "Ounces": "unci",
+      "Pounds": "Paund",
+      "Stone": "Gur",
+      "Short tons (US)": "Tonelata të shkurtra (SHBA)",
+      "Long tons (UK)": "Tone të gjata (MB)",
+      "snowflakes": "flokë dëbore",
+      "soccer balls": "topa futbolli",
+      "elephants": "elefantët",
+      "whales": "balena",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mililitra",
+      "Cubic centimeters": "Centimetra kub",
+      "Liters": "Litra",
+      "Cubic meters": "Metër kub",
+      "Teaspoons (US)": "lugë çaji (SHBA)",
+      "Tablespoons (US)": "lugë gjelle (SHBA)",
+      "Fluid ounces (US)": "Oncat e lëngjeve (SHBA)",
+      "Cups (US)": "Kupa (SHBA)",
+      "Pints (US)": "Pinta (SHBA)",
+      "Quarts (US)": "Kuarts (SHBA)",
+      "Gallons (US)": "Gallon (SHBA)",
+      "Cubic inches": "Inç kub",
+      "Cubic feet": "Këmbë kub",
+      "Cubic yards": "Yarda kub",
+      "Teaspoons (UK)": "lugë çaji (MB)",
+      "Tablespoons (UK)": "lugë gjelle (MB)",
+      "Fluid ounces (UK)": "Oncat e lëngjeve (MB)",
+      "Pints (UK)": "Pinta (MB)",
+      "Quarts (UK)": "Kuarts (MB)",
+      "Gallons (UK)": "Gallon (MB)",
+      "coffee cups": "filxhanë kafeje",
+      "bathtubs": "vaska",
+      "swimming pools": "pishina",
+      "Square millimeters": "Milimetra katrorë",
+      "Square centimeters": "Centimetra katrore",
+      "Square meters": "Metër katror",
+      "Hectares": "Hektarë",
+      "Square kilometers": "Kilometra katrorë",
+      "Square inches": "Inç katror",
+      "Square feet": "Këmbë katrore",
+      "Square yards": "Jarda katrore",
+      "Acres": "Akra",
+      "Square miles": "milje katrore",
+      "sheets of paper": "fletë letre",
+      "soccer fields": "fusha futbolli",
+      "castles": "kështjellat",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Centimetra për sekondë",
+      "Meters per second": "Metra për sekondë",
+      "Kilometers per hour": "Kilometra në orë",
+      "Feet per second": "Këmbë për sekondë",
+      "Miles per hour": "Militë në orë",
+      "Knots": "Nyje",
+      "Mach": "Mach",
+      "turtles": "breshka",
+      "horses": "kuaj",
+      "jets": "avionët",
+      "Watts": "Watt",
+      "Kilowatts": "Kilovat",
+      "Horsepower (US)": "Kuajfuqi (SHBA)",
+      "Foot-pounds/minute": "Këmbë-paund/minutë",
+      "BTUs/minute": "BTU/minutë",
+      "light bulbs": "llamba",
+      "train engines": "motorët e trenit",
+      "Thermal calories": "Kaloritë termike",
+      "Food calories": "Kaloritë e ushqimit",
+      "British thermal units": "Njësitë termike britanike",
+      "Kilojoules": "Kilojoules",
+      "Kilowatt-hours": "Kilovat-orë",
+      "Electron volts": "Elektron volt",
+      "Joules": "Xhaul",
+      "Foot-pounds": "Këmbë-paund",
+      "batteries": "bateri",
+      "bananas": "banane",
+      "slices of cake": "feta torte",
+      "Bits": "Bit",
+      "Nibble": "Nibble",
+      "Bytes": "Bajt",
+      "Kilobits": "Kilobit",
+      "Kibibits": "Kibitë",
+      "Kilobytes": "Kilobajt",
+      "Kibibytes": "Kibajt",
+      "Megabits": "Megabit",
+      "Mebibits": "Mebibit",
+      "Megabytes": "Megabajt",
+      "Mebibytes": "Mebibajt",
+      "Gigabits": "Gigabit",
+      "Gibibits": "Gibibit",
+      "Gigabytes": "Gigabajt",
+      "Gibibytes": "Gibibajtë",
+      "Terabits": "Terabit",
+      "Tebibits": "Tebibit",
+      "Terabytes": "Terabajtë",
+      "Tebibytes": "Tebajt",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibit",
+      "Petabytes": "Petabajt",
+      "Pebibytes": "Pebajt",
+      "Exabits": "Ekszaton",
+      "Exbibits": "Eksbitet",
+      "Exabytes": "Eksabajt",
+      "Exbibytes": "Eksbibajtë",
+      "Zetabits": "Zetabit",
+      "Zebibits": "Zebibit",
+      "Zetabytes": "Zetabajt",
+      "Zebibytes": "Zebajt",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobbit",
+      "Yottabytes": "Jotabajt",
+      "Yobibytes": "Yobajt",
+      "floppy disks": "disketa",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "Atmosferat",
+      "Bars": "Shifare",
+      "Kilopascals": "Kilopaskale",
+      "Millimeters of mercury": "Milimetra merkur",
+      "Pascals": "Paskale",
+      "Pounds per square inch": "Paund për inç katror",
+      "Degrees": "Diplomë",
+      "Radians": "Radianët",
+      "Gradians": "Gradianët",
+      "Microseconds": "Mikrosekonda",
+      "Milliseconds": "Milisekonda",
+      "Seconds": "Sekonda",
+      "Minutes": "Minutat",
+      "Hours": "Orë",
+      "Days": "Ditë",
+      "Weeks": "Javë",
+      "Years": "Vite"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Dollarë amerikan",
+      "Euro": "Euro",
+      "British Pound": "Pundi Britanik",
+      "Japanese Yen": "Jen japonez",
+      "Canadian Dollar": "Dollari kanadez",
+      "Australian Dollar": "Dollari Australian",
+      "Brazilian Real": "Real brazilian",
+      "Chilean Peso": "Peso kilian",
+      "Chinese Yuan": "Juan kinez",
+      "Colombian Peso": "Peso kolumbiane",
+      "Danish Krone": "Krona daneze",
+      "Egyptian Pound": "Pund egjiptian",
+      "Hong Kong Dollar": "Dollari i Hong Kongut",
+      "Indian Rupee": "Rupia indiane",
+      "Kenyan Shilling": "Siling Kenyan",
+      "Mexican Peso": "Peso meksikan",
+      "Nigerian Naira": "Naira nigeriane",
+      "New Zealand Dollar": "Dollari i Zelandës së Re",
+      "Norwegian Krone": "Krona norvegjeze",
+      "Philippine Piso": "Piso Filipine",
+      "Polish Zloty": "Zloty polake",
+      "Qatari Riyal": "Rial i Katarit",
+      "Saudi Riyal": "Rial Saudit",
+      "Singapore Dollar": "Dollarë Singapori",
+      "South African Rand": "Rand i Afrikës së Jugut",
+      "South Korean Won": "Won i Koresë së Jugut",
+      "Swedish Krona": "Krona suedeze",
+      "Swiss Franc": "Franga zvicerane",
+      "Thai Baht": "Baht Thai",
+      "Turkish Lira": "Lira turke",
+      "Turkmenistani Manat": "Manat Turkmenistan",
+      "Ugandan Shilling": "Parla nga Uganda",
+      "Ukrainian Hryvnia": "Hryvnia ukrainase",
+      "UAE Dirham": "Dirham i Emirateve të Bashkuara Arabe",
+      "Uruguayan Peso": "Peso uruguaian",
+      "Uzbekistani Som": "Som uzbekistani",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Bolivar Soberano Venezuelian",
+      "Vietnamese Dong": "Dong vietnamez",
+      "Yemeni Rial": "Rial Jemeni"
+    },
+    "labels": {
+      "United States - Dollar": "Shtetet e Bashkuara - Dollar",
+      "Europe - Euro": "Evropë - Euro",
+      "United Kingdom - Pound": "Mbretëria e Bashkuar - Paund",
+      "Japan - Yen": "Japoni - jen",
+      "Canada - Dollar": "Kanada - Dollar",
+      "Australia - Dollar": "Australi - Dollar",
+      "Brazil - Real": "Brazil - Real",
+      "Chile - Peso": "Kili - Peso",
+      "China - Yuan Renminbi": "Kinë - Yuan Renminbi",
+      "Colombia - Peso": "Kolumbi - Peso",
+      "Denmark - Krone": "Danimarkë - Krone",
+      "Egypt - Pound": "Egjipt - Paund",
+      "Hong Kong SAR - Dollar": "SAR e Hong Kongut - Dollar",
+      "India - Rupee": "Indi - Rupi",
+      "Kenya - Shilling": "Kenia - Shilinga",
+      "Mexico - Peso": "Meksikë - Peso",
+      "Nigeria - Naira": "Nigeri - Naira",
+      "New Zealand - Dollar": "Zelanda e Re - Dollar",
+      "Norway - Krone": "Norvegji - Krone",
+      "Philippines - Piso": "Filipine - Piso",
+      "Poland - Zloty": "Poloni - Zloty",
+      "Qatar - Riyal": "Katar - Riyal",
+      "Saudi Arabia - Riyal": "Arabia Saudite - Rial",
+      "Singapore - Dollar": "Singapori - Dollar",
+      "South Africa - Rand": "Afrika e Jugut - Rand",
+      "South Korea - Won": "Koreja e Jugut - Fitoi",
+      "Sweden - Krona": "Suedi - Krona",
+      "Switzerland - Franc": "Zvicra - Franc",
+      "Thailand - Baht": "Tajlandë - Baht",
+      "Turkey - Lira": "Turqi - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Ugandë - Shilinga",
+      "Ukraine - Hryvnia": "Ukrainë - Hryvnia",
+      "United Arab Emirates - Dirham": "Emiratet e Bashkuara Arabe - Dirham",
+      "Uruguay - Peso": "Uruguai - Peso",
+      "Uzbekistan - Som": "Uzbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Jemen - Rial"
+    }
+  }
+}

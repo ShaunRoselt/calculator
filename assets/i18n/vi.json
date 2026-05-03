@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Máy tính",
+    "name": "Máy tính"
+  },
+  "common": {
+    "back": "Quay lại",
+    "backspace": "Xóa lùi",
+    "closeSidePanel": "Đóng bảng điều khiển"
+  },
+  "converter": {
+    "unitConverter": "Bộ chuyển đổi đơn vị",
+    "title": "Bộ chuyển đổi đơn vị",
+    "builtInCollections": "Bộ sưu tập tích hợp",
+    "category": "Danh mục",
+    "from": "Từ",
+    "to": "Tới",
+    "inputValue": "Giá trị cần chuyển đổi",
+    "convertedValue": "Giá trị được chuyển đổi",
+    "swapUnits": "Hoán đổi đơn vị",
+    "keypad": "Bàn phím chuyển đổi",
+    "unit": "đơn vị",
+    "unitOptions": "tùy chọn đơn vị",
+    "currency": {
+      "updatingRates": "Đang cập nhật tỷ giá…",
+      "updateRates": "Cập nhật giá",
+      "keypad": "Bàn phím tiền tệ",
+      "currency": "tiền tệ",
+      "options": "tùy chọn tiền tệ",
+      "updated": "Đã cập nhật {timestamp}",
+      "status": {
+        "mockNote": "Tỷ lệ tham chiếu mô phỏng cho bản demo ứng dụng độc lập.",
+        "fetching": "Đang tìm nạp tỷ giá tham chiếu USD mới nhất...",
+        "liveRatesLoaded": "Tỷ giá trực tiếp được tải từ ExchangeRate-API.",
+        "liveUpdateUnavailable": "Không có bản cập nhật trực tiếp. Tỷ lệ demo được làm mới tại địa phương."
+      }
+    },
+    "aboutEqualTo": "Xấp xỉ bằng"
+  },
+  "errors": {
+    "invalidInput": "Đầu vào không hợp lệ",
+    "cannotDivideByZero": "Không thể chia cho 0",
+    "cannotModuloByZero": "Không thể modulo bằng 0",
+    "invalidProgrammerOperation": "Thao tác không hợp lệ",
+    "overflow": "Kết quả quá lớn"
+  },
+  "date": {
+    "calculationMode": "Chế độ tính toán",
+    "from": "Từ",
+    "to": "Tới",
+    "results": {
+      "difference": "Sự khác biệt",
+      "sameDates": "Cùng ngày",
+      "date": "Ngày"
+    },
+    "calculationModeOptions": "Tùy chọn chế độ tính toán",
+    "mode": {
+      "difference": "Sự khác biệt",
+      "shift": "Ca"
+    },
+    "operation": "Hoạt động",
+    "add": "Thêm",
+    "subtract": "Trừ",
+    "years": "Năm",
+    "months": "Tháng",
+    "days": "Ngày",
+    "chooseDate": "Chọn ngày",
+    "previousMonth": "Tháng trước",
+    "nextMonth": "Tháng tới",
+    "duration": {
+      "year": {
+        "one": "{count} năm",
+        "other": "{count} năm"
+      },
+      "month": {
+        "one": "{count} tháng",
+        "other": "{count} tháng"
+      },
+      "week": {
+        "one": "{count} tuần",
+        "other": "{count} tuần"
+      },
+      "day": {
+        "one": "{count} ngày",
+        "other": "{count} ngày"
+      }
+    },
+    "history": {
+      "differenceBetween": "Sự khác biệt giữa {from} và {to}",
+      "addTo": "Thêm {duration} vào {date}",
+      "subtractFrom": "Trừ {duration} từ {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Kiểm tra biểu thức được đánh dấu",
+    "enterExpression": "Nhập một biểu thức",
+    "canvas": "Canvas biểu đồ",
+    "stopTracing": "Dừng theo dõi",
+    "startTracing": "Bắt đầu truy tìm",
+    "share": "Chia sẻ",
+    "options": "Tùy chọn",
+    "zoomIn": "Phóng to",
+    "zoomInLabel": "Phóng to",
+    "zoomOut": "Thu nhỏ",
+    "zoomOutLabel": "Thu nhỏ",
+    "refreshViewAutomatically": "Tự động làm mới chế độ xem",
+    "view": "Xem",
+    "expressions": "Biểu thức",
+    "mobileView": "Chế độ xem trên thiết bị di động",
+    "showGraph": "Hiển thị biểu đồ",
+    "showExpressions": "Hiển thị biểu thức",
+    "backToFunctionList": "Quay lại danh sách chức năng",
+    "window": "Cửa sổ",
+    "resetView": "Đặt lại chế độ xem",
+    "units": "Đơn vị",
+    "radians": "Radian",
+    "degrees": "Độ",
+    "gradians": "Người tốt nghiệp",
+    "lineThickness": "Độ dày của đường",
+    "theme": "Chủ đề",
+    "alwaysLight": "Luôn sáng",
+    "matchAppTheme": "Kết hợp chủ đề ứng dụng",
+    "groups": {
+      "inequalities": "Bất đẳng thức",
+      "trigonometry": "Lượng giác",
+      "function": "Chức năng"
+    },
+    "functions": "Chức năng",
+    "showEquation": "Hiển thị phương trình",
+    "hideEquation": "Ẩn phương trình",
+    "lineOptions": "Tùy chọn dòng",
+    "color": "Màu sắc",
+    "style": "Phong cách",
+    "analysis": {
+      "title": "Phân tích",
+      "domain": "Miền",
+      "range": "Phạm vi",
+      "xIntercept": "x-chặn",
+      "yIntercept": "y-chặn",
+      "minima": "Tối thiểu",
+      "maxima": "Maxima",
+      "inflectionPoints": "Điểm uốn",
+      "verticalAsymptotes": "Tiệm cận đứng",
+      "horizontalAsymptotes": "Tiệm cận ngang",
+      "obliqueAsymptotes": "Tiệm cận xiên",
+      "parity": "Tính chẵn lẻ",
+      "period": "Giai đoạn",
+      "monotonicity": "Tính đơn điệu",
+      "domainNone": "Không hạn chế tên miền",
+      "rangeNone": "Không hạn chế phạm vi",
+      "xInterceptNone": "Không có điểm chặn x",
+      "yInterceptNone": "Không có điểm chặn y",
+      "minimaNone": "Không có mức tối thiểu",
+      "maximaNone": "Không có cực đại",
+      "inflectionNone": "Không có điểm uốn",
+      "verticalAsymptotesNone": "Không có tiệm cận đứng",
+      "horizontalAsymptotesNone": "Không có tiệm cận ngang",
+      "obliqueAsymptotesNone": "Không có tiệm cận xiên",
+      "parityUnknown": "Không xác định",
+      "parityOdd": "Lẻ",
+      "parityEven": "Chẵn",
+      "parityNeither": "Không",
+      "periodicityUnknown": "Không xác định",
+      "periodicityNotPeriodic": "Không định kỳ",
+      "monotonicityConstant": "Không đổi",
+      "monotonicityIncreasing": "Tăng",
+      "monotonicityDecreasing": "Đang giảm",
+      "monotonicityUnknown": "Không xác định",
+      "monotonicityError": "Không thể xác định",
+      "featureTooComplexPlural": "Quá phức tạp để phân tích",
+      "analysisCouldNotBePerformed": "Không thể thực hiện phân tích",
+      "analysisNotSupported": "Không hỗ trợ phân tích",
+      "variableIsNotX": "Biến không phải là x"
+    },
+    "plottingExpressions": "Vẽ biểu thức {count}",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Chọn biểu thức {index}",
+    "expressionIndex": "Biểu thức {index}",
+    "analyzeFunction": "Chức năng phân tích",
+    "changeEquationStyle": "Thay đổi kiểu phương trình",
+    "removeEquation": "Xóa phương trình",
+    "lineStyle": {
+      "solid": "Phong cách đường nét liền",
+      "dash": "Phong cách đường nét đứt",
+      "dot": "Phong cách đường chấm"
+    }
+  },
+  "history": {
+    "empty": "Lịch sử trống",
+    "clearAll": "Xóa tất cả",
+    "clear": "Xóa lịch sử",
+    "title": "Lịch sử",
+    "andMemory": "Lịch sử và Ký ức",
+    "aria": {
+      "historyPanel": "Bảng lịch sử",
+      "historyAndMemoryPanel": "Bảng lịch sử và bộ nhớ"
+    },
+    "closeFlyout": "Đóng lịch sử",
+    "openFlyout": "Lịch sử mở"
+  },
+  "memory": {
+    "empty": "Bộ nhớ trống",
+    "clearItem": "Xóa mục",
+    "addCurrentValue": "Thêm giá trị hiện tại",
+    "subtractCurrentValue": "Trừ giá trị hiện tại",
+    "clearAll": "Xóa tất cả",
+    "clear": "Xóa bộ nhớ",
+    "title": "Bộ nhớ",
+    "controls": "Điều khiển bộ nhớ",
+    "tooltips": {
+      "clearAll": "Xóa tất cả bộ nhớ",
+      "recall": "Thu hồi từ bộ nhớ",
+      "add": "Thêm vào bộ nhớ",
+      "subtract": "Trừ khỏi bộ nhớ",
+      "store": "Lưu trữ trong bộ nhớ"
+    },
+    "recallValue": "Thu hồi bộ nhớ {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Điều hướng",
+      "closeNavigation": "Đóng điều hướng",
+      "openNavigation": "Mở điều hướng"
+    },
+    "groups": {
+      "calculator": "Máy tính",
+      "converter": "Bộ chuyển đổi"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bảng lật bit",
+    "baseReadouts": "Số đọc cơ bản",
+    "surfaceMode": "Chế độ bề mặt",
+    "fullKeypad": "Bàn phím đầy đủ",
+    "showKeypad": "Hiển thị bàn phím",
+    "bitTogglingKeypad": "Bàn phím chuyển đổi bit",
+    "showBitView": "Hiển thị chế độ xem bit",
+    "wordSize": "Kích thước từ",
+    "bitwise": "Theo bit",
+    "bitShift": "Dịch chuyển bit"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Lượng giác",
+      "function": "Chức năng",
+      "functionsAria": "Chức năng",
+      "trigonometricFunctionsAria": "Hàm lượng giác",
+      "angleUnit": "Đơn vị góc {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Diện mạo",
+      "themeTitle": "Chủ đề",
+      "themeDescription": "Chọn bảng màu",
+      "light": "Ánh sáng",
+      "dark": "Tối",
+      "blue": "Xanh lam",
+      "green": "Xanh lục",
+      "system": "Hệ thống"
+    },
+    "language": {
+      "group": "Ngôn ngữ",
+      "title": "Ngôn ngữ",
+      "description": "Chọn ngôn ngữ ưa thích của bạn"
+    },
+    "about": {
+      "group": "Giới thiệu"
+    },
+    "feedback": "Gửi phản hồi",
+    "contribute": {
+      "prefix": "Đóng góp trên",
+      "link": "GitHub",
+      "suffix": "để giúp cải thiện máy tính này"
+    },
+    "links": {
+      "repository": "Kho lưu trữ dự án",
+      "readme": "README",
+      "license": "Giấy phép MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Tiêu chuẩn",
+      "subtitle": "Đánh giá ngay lập tức cổ điển"
+    },
+    "scientific": {
+      "label": "Khoa học",
+      "subtitle": "Hỗ trợ toán tử, hàm và biểu thức"
+    },
+    "graphing": {
+      "label": "Vẽ đồ thị",
+      "subtitle": "Vẽ biểu thức đơn giản trên mặt phẳng Descartes"
+    },
+    "programmer": {
+      "label": "Lập trình viên",
+      "subtitle": "Toán số nguyên với chuyển đổi cơ số"
+    },
+    "date": {
+      "label": "Tính ngày",
+      "subtitle": "Tìm thời lượng và ngày làm ca"
+    },
+    "currency": {
+      "label": "Tiền tệ",
+      "subtitle": "Chuyển đổi tỷ giá hối đoái mô phỏng"
+    },
+    "volume": {
+      "label": "Khối lượng",
+      "subtitle": "Chuyển đổi số đo âm lượng"
+    },
+    "length": {
+      "label": "Chiều dài",
+      "subtitle": "Chuyển đổi đơn vị khoảng cách và độ dài"
+    },
+    "weight": {
+      "label": "Trọng lượng và khối lượng",
+      "subtitle": "Chuyển đổi đơn vị trọng lượng và khối lượng"
+    },
+    "temperature": {
+      "label": "Nhiệt độ",
+      "subtitle": "Chuyển đổi thang đo nhiệt độ"
+    },
+    "energy": {
+      "label": "Năng lượng",
+      "subtitle": "Chuyển đổi số đo năng lượng"
+    },
+    "area": {
+      "label": "Khu vực",
+      "subtitle": "Chuyển đổi số đo diện tích"
+    },
+    "speed": {
+      "label": "Tốc độ",
+      "subtitle": "Chuyển đổi số đo tốc độ"
+    },
+    "time": {
+      "label": "Thời gian",
+      "subtitle": "Chuyển đổi số đo thời gian"
+    },
+    "power": {
+      "label": "Nguồn",
+      "subtitle": "Chuyển đổi số đo công suất"
+    },
+    "data": {
+      "label": "Dữ liệu",
+      "subtitle": "Chuyển đổi đơn vị lưu trữ kỹ thuật số"
+    },
+    "pressure": {
+      "label": "Áp suất",
+      "subtitle": "Chuyển đổi đơn vị áp suất"
+    },
+    "angle": {
+      "label": "Góc",
+      "subtitle": "Chuyển đổi số đo góc"
+    },
+    "settings": {
+      "label": "Cài đặt",
+      "subtitle": "Thông tin về giao diện và ứng dụng"
+    }
+  },
+  "categories": {
+    "Currency": "Tiền tệ",
+    "Volume": "Khối lượng",
+    "Length": "Chiều dài",
+    "Mass": "Thánh lễ",
+    "Temperature": "Nhiệt độ",
+    "Energy": "Năng lượng",
+    "Area": "Khu vực",
+    "Speed": "Tốc độ",
+    "Time": "Thời gian",
+    "Power": "Nguồn",
+    "Data": "Dữ liệu",
+    "Pressure": "Áp suất",
+    "Angle": "Góc"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstrom",
+      "Nanometers": "Nanomet",
+      "Microns": "Micron",
+      "Millimeters": "Milimét",
+      "Centimeters": "Cmét",
+      "Meters": "Mét",
+      "Kilometers": "Km",
+      "Inches": "Inch",
+      "Feet": "Bàn chân",
+      "Yards": "Sân",
+      "Miles": "Dặm",
+      "Nautical miles": "Hải lý",
+      "paperclips": "kẹp giấy",
+      "hands": "tay",
+      "jumbo jets": "máy bay phản lực khổng lồ",
+      "Carats": "Carat",
+      "Milligrams": "Miligam",
+      "Centigrams": "Cen-gram",
+      "Decigrams": "Decigram",
+      "Grams": "Gam",
+      "Dekagrams": "Dekagram",
+      "Hectograms": "Hectogram",
+      "Kilograms": "Kilôgam",
+      "Metric tonnes": "Số liệu tấn",
+      "Ounces": "Ounơ",
+      "Pounds": "Bảng Anh",
+      "Stone": "Đá",
+      "Short tons (US)": "Tấn ngắn (US)",
+      "Long tons (UK)": "Tấn dài (Anh)",
+      "snowflakes": "bông tuyết",
+      "soccer balls": "bóng đá",
+      "elephants": "con voi",
+      "whales": "cá voi",
+      "Celsius": "Độ C",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mili lít",
+      "Cubic centimeters": "Cimét khối",
+      "Liters": "Lít",
+      "Cubic meters": "Mét khối",
+      "Teaspoons (US)": "Muỗng cà phê (Mỹ)",
+      "Tablespoons (US)": "Muỗng canh (Mỹ)",
+      "Fluid ounces (US)": "ounce chất lỏng (Mỹ)",
+      "Cups (US)": "Cốc (Mỹ)",
+      "Pints (US)": "Pint (Mỹ)",
+      "Quarts (US)": "Quarts (Mỹ)",
+      "Gallons (US)": "Galông (Mỹ)",
+      "Cubic inches": "Inch khối",
+      "Cubic feet": "feet khối",
+      "Cubic yards": "Mét khối",
+      "Teaspoons (UK)": "Muỗng cà phê (Anh)",
+      "Tablespoons (UK)": "Muỗng canh (Anh)",
+      "Fluid ounces (UK)": "ounce chất lỏng (Anh)",
+      "Pints (UK)": "Pint (Anh)",
+      "Quarts (UK)": "Quarts (Anh)",
+      "Gallons (UK)": "Galông (Anh)",
+      "coffee cups": "tách cà phê",
+      "bathtubs": "bồn tắm",
+      "swimming pools": "hồ bơi",
+      "Square millimeters": "Milimét vuông",
+      "Square centimeters": "Cimét vuông",
+      "Square meters": "Mét vuông",
+      "Hectares": "Hecta",
+      "Square kilometers": "Km vuông",
+      "Square inches": "Inch vuông",
+      "Square feet": "Mét vuông",
+      "Square yards": "Mét vuông",
+      "Acres": "Mẫu Anh",
+      "Square miles": "Dặm vuông",
+      "sheets of paper": "tờ giấy",
+      "soccer fields": "sân bóng đá",
+      "castles": "lâu đài",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Cmét trên giây",
+      "Meters per second": "Mét trên giây",
+      "Kilometers per hour": "Kilômét trên giờ",
+      "Feet per second": "Mét trên giây",
+      "Miles per hour": "Dặm trên giờ",
+      "Knots": "Nút thắt",
+      "Mach": "Mach",
+      "turtles": "rùa",
+      "horses": "ngựa",
+      "jets": "máy bay phản lực",
+      "Watts": "Watt",
+      "Kilowatts": "Kilôwatt",
+      "Horsepower (US)": "Mã lực (Mỹ)",
+      "Foot-pounds/minute": "Foot-lb/phút",
+      "BTUs/minute": "BTU/phút",
+      "light bulbs": "bóng đèn",
+      "train engines": "động cơ xe lửa",
+      "Thermal calories": "Lượng calo nhiệt",
+      "Food calories": "Lượng calo thực phẩm",
+      "British thermal units": "Đơn vị nhiệt của Anh",
+      "Kilojoules": "Kilôjun",
+      "Kilowatt-hours": "Kilôwatt-giờ",
+      "Electron volts": "Vôn điện tử",
+      "Joules": "Joule",
+      "Foot-pounds": "Foot- pound",
+      "batteries": "pin",
+      "bananas": "chuối",
+      "slices of cake": "lát bánh",
+      "Bits": "Bit",
+      "Nibble": "Gặm nhấm",
+      "Bytes": "Byte",
+      "Kilobits": "Kilobit",
+      "Kibibits": "Kibibit",
+      "Kilobytes": "Kilobyte",
+      "Kibibytes": "Kibibyte",
+      "Megabits": "Megabit",
+      "Mebibits": "Mebibit",
+      "Megabytes": "Megabyte",
+      "Mebibytes": "Mebibyte",
+      "Gigabits": "Gigabit",
+      "Gibibits": "Vượn cáo",
+      "Gigabytes": "Gigabyte",
+      "Gibibytes": "Gibibyte",
+      "Terabits": "Terabit",
+      "Tebibits": "Tebibit",
+      "Terabytes": "Terabyte",
+      "Tebibytes": "Tebibyte",
+      "Petabits": "Petabit",
+      "Pebibits": "Pebibit",
+      "Petabytes": "Petabyte",
+      "Pebibytes": "Pebibyte",
+      "Exabits": "Exabit",
+      "Exbibits": "Triển lãm",
+      "Exabytes": "Exabyte",
+      "Exbibytes": "Exbibyte",
+      "Zetabits": "Zetabit",
+      "Zebibits": "Zebibit",
+      "Zetabytes": "Zetabyte",
+      "Zebibytes": "Zebibyte",
+      "Yottabits": "Yottabit",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabyte",
+      "Yobibytes": "Yobibyte",
+      "floppy disks": "đĩa mềm",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "Khí quyển",
+      "Bars": "Thanh",
+      "Kilopascals": "Kilôpascal",
+      "Pascals": "Pascal",
+      "Pounds per square inch": "Pân trên inch vuông",
+      "Degrees": "Độ",
+      "Radians": "Radian",
+      "Gradians": "Người tốt nghiệp",
+      "Microseconds": "Micro giây",
+      "Milliseconds": "Mili giây",
+      "Seconds": "Giây",
+      "Minutes": "Phút",
+      "Hours": "Giờ",
+      "Days": "Ngày",
+      "Weeks": "Tuần",
+      "Years": "Năm",
+      "Millimeters of mercury": "Millimeters of mercury"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Đô la Mỹ",
+      "Euro": "Đồng Euro",
+      "British Pound": "Bảng Anh",
+      "Japanese Yen": "Yên Nhật",
+      "Canadian Dollar": "Đô la Canada",
+      "Australian Dollar": "Đô la Úc",
+      "Brazilian Real": "Real Brazil",
+      "Chilean Peso": "Peso Chile",
+      "Chinese Yuan": "Nhân dân tệ Trung Quốc",
+      "Colombian Peso": "Đồng Peso Colombia",
+      "Danish Krone": "Krone Đan Mạch",
+      "Egyptian Pound": "Bảng Ai Cập",
+      "Hong Kong Dollar": "Đô la Hồng Kông",
+      "Indian Rupee": "Rupee Ấn Độ",
+      "Kenyan Shilling": "Shilling Kenya",
+      "Mexican Peso": "Peso Mexico",
+      "Nigerian Naira": "Naira Nigeria",
+      "New Zealand Dollar": "Đô la New Zealand",
+      "Norwegian Krone": "Krone Na Uy",
+      "Philippine Piso": "Piso Philippines",
+      "Polish Zloty": "Zloty Ba Lan",
+      "Qatari Riyal": "Rian Qatar",
+      "Saudi Riyal": "Rian Ả Rập Saudi",
+      "Singapore Dollar": "Đô la Singapore",
+      "South African Rand": "Rand Nam Phi",
+      "South Korean Won": "Won Hàn Quốc",
+      "Swedish Krona": "Krona Thụy Điển",
+      "Swiss Franc": "Franc Thụy Sĩ",
+      "Thai Baht": "Baht Thái",
+      "Turkish Lira": "Lia Thổ Nhĩ Kỳ",
+      "Turkmenistani Manat": "Manat Turkmenistan",
+      "Ugandan Shilling": "Shilling Uganda",
+      "Ukrainian Hryvnia": "Hryvnia Ukraina",
+      "UAE Dirham": "Dirham UAE",
+      "Uruguayan Peso": "Đồng peso của Uruguay",
+      "Uzbekistani Som": "Som Uzbekistan",
+      "Vanuatu Vatu": "Vanuatu",
+      "Venezuelan Bolivar Soberano": "Bolivar Soberano của Venezuela",
+      "Vietnamese Dong": "Đồng Việt Nam",
+      "Yemeni Rial": "Rial Yemen"
+    },
+    "labels": {
+      "United States - Dollar": "Hoa Kỳ - Đô la",
+      "Europe - Euro": "Châu Âu - Euro",
+      "United Kingdom - Pound": "Vương quốc Anh - Bảng Anh",
+      "Japan - Yen": "Nhật Bản - Yên",
+      "Canada - Dollar": "Canada - Đô la",
+      "Australia - Dollar": "Úc - Đô la",
+      "Brazil - Real": "Brazil - Real",
+      "Chile - Peso": "Chilê - Peso",
+      "China - Yuan Renminbi": "Trung Quốc - Nhân dân tệ",
+      "Colombia - Peso": "Colombia - Peso",
+      "Denmark - Krone": "Đan Mạch - Krone",
+      "Egypt - Pound": "Ai Cập - Bảng Anh",
+      "Hong Kong SAR - Dollar": "Đặc khu Hành chính Hồng Kông - Đô la",
+      "India - Rupee": "Ấn Độ - Rupee",
+      "Kenya - Shilling": "Kenya - Shilling",
+      "Mexico - Peso": "Mexico - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "New Zealand - Đô la",
+      "Norway - Krone": "Na Uy - Krone",
+      "Philippines - Piso": "Philippines - Piso",
+      "Poland - Zloty": "Ba Lan - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Ả Rập Saudi - Riyal",
+      "Singapore - Dollar": "Singapo - Đô la",
+      "South Africa - Rand": "Nam Phi - Rand",
+      "South Korea - Won": "Hàn Quốc - Thắng",
+      "Sweden - Krona": "Thụy Điển - Krona",
+      "Switzerland - Franc": "Thụy Sĩ - Franc",
+      "Thailand - Baht": "Thái Lan - Baht",
+      "Turkey - Lira": "Thổ Nhĩ Kỳ - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Shilling",
+      "Ukraine - Hryvnia": "Ukraina - Hryvnia",
+      "United Arab Emirates - Dirham": "Các tiểu vương quốc Ả Rập thống nhất - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Uzbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Việt Nam - Đồng",
+      "Yemen - Rial": "Yemen - Rial"
+    }
+  }
+}

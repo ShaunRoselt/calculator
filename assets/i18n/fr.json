@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Calculator",
+    "name": "Calculator"
+  },
+  "common": {
+    "back": "Back",
+    "backspace": "Backspace",
+    "closeSidePanel": "Close panel"
+  },
+  "converter": {
+    "unitConverter": "Unit Converter",
+    "title": "Unit converters",
+    "builtInCollections": "Built-in collections",
+    "category": "Category",
+    "from": "From",
+    "to": "To",
+    "inputValue": "Value to convert",
+    "convertedValue": "Converted value",
+    "swapUnits": "Swap units",
+    "keypad": "Converter keypad",
+    "unit": "unit",
+    "unitOptions": "unit options",
+    "currency": {
+      "updatingRates": "Updating rates…",
+      "updateRates": "Update rates",
+      "keypad": "Currency keypad",
+      "currency": "currency",
+      "options": "currency options",
+      "updated": "Updated {timestamp}",
+      "status": {
+        "mockNote": "Mock reference rates for the standalone app demo.",
+        "fetching": "Fetching the latest USD reference rates...",
+        "liveRatesLoaded": "Live rates loaded from ExchangeRate-API.",
+        "liveUpdateUnavailable": "Live update unavailable. Refreshed demo rates locally."
+      }
+    },
+    "aboutEqualTo": "About equal to"
+  },
+  "errors": {
+    "invalidInput": "Invalid input",
+    "cannotDivideByZero": "Cannot divide by zero",
+    "cannotModuloByZero": "Cannot modulo by zero",
+    "invalidProgrammerOperation": "Invalid operation",
+    "overflow": "Result too large"
+  },
+  "date": {
+    "calculationMode": "Calculation mode",
+    "from": "From",
+    "to": "To",
+    "results": {
+      "difference": "Difference",
+      "sameDates": "Same dates",
+      "date": "Date"
+    },
+    "calculationModeOptions": "Calculation mode options",
+    "mode": {
+      "difference": "Difference",
+      "shift": "Shift"
+    },
+    "operation": "Operation",
+    "add": "Add",
+    "subtract": "Subtract",
+    "years": "Years",
+    "months": "Months",
+    "days": "Days",
+    "chooseDate": "Choose date",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "duration": {
+      "year": {
+        "one": "{count} year",
+        "other": "{count} years"
+      },
+      "month": {
+        "one": "{count} month",
+        "other": "{count} months"
+      },
+      "week": {
+        "one": "{count} week",
+        "other": "{count} weeks"
+      },
+      "day": {
+        "one": "{count} day",
+        "other": "{count} days"
+      }
+    },
+    "history": {
+      "differenceBetween": "Difference between {from} and {to}",
+      "addTo": "Add {duration} to {date}",
+      "subtractFrom": "Subtract {duration} from {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Check the highlighted expression",
+    "enterExpression": "Enter an expression",
+    "canvas": "Graph canvas",
+    "stopTracing": "Stop tracing",
+    "startTracing": "Start tracing",
+    "share": "Share",
+    "options": "Options",
+    "zoomIn": "Zoom in",
+    "zoomInLabel": "Zoom in",
+    "zoomOut": "Zoom out",
+    "zoomOutLabel": "Zoom out",
+    "refreshViewAutomatically": "Refresh view automatically",
+    "view": "View",
+    "expressions": "Expressions",
+    "mobileView": "Mobile view",
+    "showGraph": "Show graph",
+    "showExpressions": "Show expressions",
+    "backToFunctionList": "Back to function list",
+    "window": "Window",
+    "resetView": "Reset view",
+    "units": "Units",
+    "radians": "Radians",
+    "degrees": "Degrees",
+    "gradians": "Gradians",
+    "lineThickness": "Line thickness",
+    "theme": "Theme",
+    "alwaysLight": "Always light",
+    "matchAppTheme": "Match app theme",
+    "groups": {
+      "inequalities": "Inequalities",
+      "trigonometry": "Trigonometry",
+      "function": "Function"
+    },
+    "functions": "Functions",
+    "showEquation": "Show equation",
+    "hideEquation": "Hide equation",
+    "lineOptions": "Line options",
+    "color": "Color",
+    "style": "Style",
+    "analysis": {
+      "title": "Analysis",
+      "domain": "Domain",
+      "range": "Range",
+      "xIntercept": "x-intercept",
+      "yIntercept": "y-intercept",
+      "minima": "Minima",
+      "maxima": "Maxima",
+      "inflectionPoints": "Inflection points",
+      "verticalAsymptotes": "Vertical asymptotes",
+      "horizontalAsymptotes": "Horizontal asymptotes",
+      "obliqueAsymptotes": "Oblique asymptotes",
+      "parity": "Parity",
+      "period": "Period",
+      "monotonicity": "Monotonicity",
+      "domainNone": "No domain restrictions",
+      "rangeNone": "No range restrictions",
+      "xInterceptNone": "No x-intercepts",
+      "yInterceptNone": "No y-intercepts",
+      "minimaNone": "No minima",
+      "maximaNone": "No maxima",
+      "inflectionNone": "No inflection points",
+      "verticalAsymptotesNone": "No vertical asymptotes",
+      "horizontalAsymptotesNone": "No horizontal asymptotes",
+      "obliqueAsymptotesNone": "No oblique asymptotes",
+      "parityUnknown": "Unknown",
+      "parityOdd": "Odd",
+      "parityEven": "Even",
+      "parityNeither": "Neither",
+      "periodicityUnknown": "Unknown",
+      "periodicityNotPeriodic": "Not periodic",
+      "monotonicityConstant": "Constant",
+      "monotonicityIncreasing": "Increasing",
+      "monotonicityDecreasing": "Decreasing",
+      "monotonicityUnknown": "Unknown",
+      "monotonicityError": "Cannot determine",
+      "featureTooComplexPlural": "Too complex to analyze",
+      "analysisCouldNotBePerformed": "Analysis could not be performed",
+      "analysisNotSupported": "Analysis not supported",
+      "variableIsNotX": "Variable is not x"
+    },
+    "plottingExpressions": "Plotting {count} expressions",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Select expression {index}",
+    "expressionIndex": "Expression {index}",
+    "analyzeFunction": "Analyze function",
+    "changeEquationStyle": "Change equation style",
+    "removeEquation": "Remove equation",
+    "lineStyle": {
+      "solid": "Solid line style",
+      "dash": "Dash line style",
+      "dot": "Dot line style"
+    }
+  },
+  "history": {
+    "empty": "History is empty",
+    "clearAll": "Clear all",
+    "clear": "Clear history",
+    "title": "History",
+    "andMemory": "History and Memory",
+    "aria": {
+      "historyPanel": "History panel",
+      "historyAndMemoryPanel": "History and Memory panel"
+    },
+    "closeFlyout": "Close history",
+    "openFlyout": "Open history"
+  },
+  "memory": {
+    "empty": "Memory is empty",
+    "clearItem": "Clear item",
+    "addCurrentValue": "Add current value",
+    "subtractCurrentValue": "Subtract current value",
+    "clearAll": "Clear all",
+    "clear": "Clear memory",
+    "title": "Memory",
+    "controls": "Memory controls",
+    "tooltips": {
+      "clearAll": "Clear all memory",
+      "recall": "Recall from memory",
+      "add": "Add to memory",
+      "subtract": "Subtract from memory",
+      "store": "Store in memory"
+    },
+    "recallValue": "Recall memory {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigation",
+      "closeNavigation": "Close navigation",
+      "openNavigation": "Open navigation"
+    },
+    "groups": {
+      "calculator": "Calculator",
+      "converter": "Converter"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit flip panel",
+    "baseReadouts": "Base readouts",
+    "surfaceMode": "Surface mode",
+    "fullKeypad": "Full keypad",
+    "showKeypad": "Show keypad",
+    "bitTogglingKeypad": "Bit toggling keypad",
+    "showBitView": "Show bit view",
+    "wordSize": "Word size",
+    "bitwise": "Bitwise",
+    "bitShift": "Bit shift"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometry",
+      "function": "Function",
+      "functionsAria": "Functions",
+      "trigonometricFunctionsAria": "Trigonometric functions",
+      "angleUnit": "Angle unit {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Appearance",
+      "themeTitle": "Theme",
+      "themeDescription": "Choose a color scheme",
+      "light": "Light",
+      "dark": "Dark",
+      "blue": "Blue",
+      "green": "Green",
+      "system": "System"
+    },
+    "language": {
+      "group": "Language",
+      "title": "Language",
+      "description": "Choose your preferred language"
+    },
+    "about": {
+      "group": "About"
+    },
+    "feedback": "Send feedback",
+    "contribute": {
+      "prefix": "Contribute on",
+      "link": "GitHub",
+      "suffix": "to help improve this calculator"
+    },
+    "links": {
+      "repository": "Project repository",
+      "readme": "README",
+      "license": "MIT license"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standard",
+      "subtitle": "Classic immediate evaluation"
+    },
+    "scientific": {
+      "label": "Scientific",
+      "subtitle": "Operators, functions, and expression support"
+    },
+    "graphing": {
+      "label": "Graphing",
+      "subtitle": "Plot a simple expression on a cartesian plane"
+    },
+    "programmer": {
+      "label": "Programmer",
+      "subtitle": "Integer math with base conversion"
+    },
+    "date": {
+      "label": "Date calculation",
+      "subtitle": "Find durations and shift dates"
+    },
+    "currency": {
+      "label": "Currency",
+      "subtitle": "Convert mock exchange rates"
+    },
+    "volume": {
+      "label": "Volume",
+      "subtitle": "Convert volume measurements"
+    },
+    "length": {
+      "label": "Length",
+      "subtitle": "Convert distance and length units"
+    },
+    "weight": {
+      "label": "Weight and Mass",
+      "subtitle": "Convert weight and mass units"
+    },
+    "temperature": {
+      "label": "Temperature",
+      "subtitle": "Convert temperature scales"
+    },
+    "energy": {
+      "label": "Energy",
+      "subtitle": "Convert energy measurements"
+    },
+    "area": {
+      "label": "Area",
+      "subtitle": "Convert area measurements"
+    },
+    "speed": {
+      "label": "Speed",
+      "subtitle": "Convert speed measurements"
+    },
+    "time": {
+      "label": "Time",
+      "subtitle": "Convert time measurements"
+    },
+    "power": {
+      "label": "Power",
+      "subtitle": "Convert power measurements"
+    },
+    "data": {
+      "label": "Data",
+      "subtitle": "Convert digital storage units"
+    },
+    "pressure": {
+      "label": "Pressure",
+      "subtitle": "Convert pressure units"
+    },
+    "angle": {
+      "label": "Angle",
+      "subtitle": "Convert angle measurements"
+    },
+    "settings": {
+      "label": "Settings",
+      "subtitle": "Appearance and app information"
+    }
+  },
+  "categories": {
+    "Currency": "Currency",
+    "Volume": "Volume",
+    "Length": "Length",
+    "Mass": "Mass",
+    "Temperature": "Temperature",
+    "Energy": "Energy",
+    "Area": "Area",
+    "Speed": "Speed",
+    "Time": "Time",
+    "Power": "Power",
+    "Data": "Data",
+    "Pressure": "Pressure",
+    "Angle": "Angle"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanometers",
+      "Microns": "Microns",
+      "Millimeters": "Millimètres",
+      "Centimeters": "Centimètres",
+      "Meters": "Mètres",
+      "Kilometers": "Kilomètres",
+      "Inches": "Pouces",
+      "Feet": "Pieds",
+      "Yards": "Yards",
+      "Miles": "Miles",
+      "Nautical miles": "Milles nautiques",
+      "paperclips": "agrafes",
+      "hands": "mains",
+      "jumbo jets": "jumbo jets",
+      "Carats": "Carats",
+      "Milligrams": "Milligrammes",
+      "Centigrams": "Centigrammes",
+      "Decigrams": "Décigrammes",
+      "Grams": "Grammes",
+      "Dekagrams": "Dekagrammes",
+      "Hectograms": "Hectogrammes",
+      "Kilograms": "Kilogrammes",
+      "Metric tonnes": "Tonnes métriques",
+      "Ounces": "Onces",
+      "Pounds": "Livres",
+      "Stone": "Stone",
+      "Short tons (US)": "Short tons (US)",
+      "Long tons (UK)": "Long tons (UK)",
+      "snowflakes": "flocons de neige",
+      "soccer balls": "ballons de football",
+      "elephants": "éléphants",
+      "whales": "baleines",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Millilitres",
+      "Cubic centimeters": "Centimètres cubes",
+      "Liters": "Litres",
+      "Cubic meters": "Mètres cubes",
+      "Teaspoons (US)": "Cuillères à café (US)",
+      "Tablespoons (US)": "Cuillères à soupe (US)",
+      "Fluid ounces (US)": "Onces liquides (US)",
+      "Cups (US)": "Tasses (US)",
+      "Pints (US)": "Pintes (US)",
+      "Quarts (US)": "Quarts (US)",
+      "Gallons (US)": "Gallons (US)",
+      "Cubic inches": "Pouces cubes",
+      "Cubic feet": "Pieds cubes",
+      "Cubic yards": "Yards cubes",
+      "Teaspoons (UK)": "Cuillères à café (Royaume-Uni)",
+      "Tablespoons (UK)": "Cuillères à soupe (Royaume-Uni)",
+      "Fluid ounces (UK)": "Onces liquides (Royaume-Uni)",
+      "Pints (UK)": "Pintes (Royaume-Uni)",
+      "Quarts (UK)": "Quarts (Royaume-Uni)",
+      "Gallons (UK)": "Gallons (Royaume-Uni)",
+      "coffee cups": "tasses à café",
+      "bathtubs": "baignoires",
+      "swimming pools": "piscines",
+      "Square millimeters": "Millimètres carrés",
+      "Square centimeters": "Centimètres carrés",
+      "Square meters": "Mètres carrés",
+      "Hectares": "Hectares",
+      "Square kilometers": "Kilomètres carrés",
+      "Square inches": "Pouces carrés",
+      "Square feet": "Pieds carrés",
+      "Square yards": "Yards carrés",
+      "Acres": "Acres",
+      "Square miles": "Milles carrés",
+      "sheets of paper": "feuilles de papier",
+      "soccer fields": "terrains de football",
+      "castles": "châteaux",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Centimètres par seconde",
+      "Meters per second": "Mètres par seconde",
+      "Kilometers per hour": "Kilomètres par heure",
+      "Feet per second": "Pieds par seconde",
+      "Miles per hour": "Miles par heure",
+      "Knots": "Noeuds",
+      "Mach": "Mach",
+      "turtles": "tortues",
+      "horses": "chevaux",
+      "jets": "jets",
+      "Watts": "Watts",
+      "Kilowatts": "Kilowatts",
+      "Horsepower (US)": "Puissance (États-Unis)",
+      "Foot-pounds/minute": "Pieds-livres/minute",
+      "BTUs/minute": "BTU/minute",
+      "light bulbs": "ampoules",
+      "train engines": "moteurs de train",
+      "Thermal calories": "Calories thermiques",
+      "Food calories": "Calories alimentaires",
+      "British thermal units": "Unités thermiques britanniques",
+      "Kilojoules": "Kilojoules",
+      "Kilowatt-hours": "Kilowattheures",
+      "Electron volts": "Electronvolts",
+      "Joules": "Joules",
+      "Foot-pounds": "Pied-livres",
+      "batteries": "piles",
+      "bananas": "bananes",
+      "slices of cake": "tranches de gâteau",
+      "Bits": "Bits",
+      "Nibble": "Nibble",
+      "Bytes": "Octets",
+      "Kilobits": "Kilobits",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "Kilooctets",
+      "Kibibytes": "Kibioctets",
+      "Megabits": "Mégabits",
+      "Mebibits": "Mébibits",
+      "Megabytes": "Mégaoctets",
+      "Mebibytes": "Mebioctets",
+      "Gigabits": "Gigabits",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Gigaoctets",
+      "Gibibytes": "Gibioctets",
+      "Terabits": "Térabits",
+      "Tebibits": "Tébibits",
+      "Terabytes": "Téraoctets",
+      "Tebibytes": "Tébioctets",
+      "Petabits": "Pétabits",
+      "Pebibits": "Pébibits",
+      "Petabytes": "Pétaoctets",
+      "Pebibytes": "Pébioctets",
+      "Exabits": "Exabits",
+      "Exbibits": "Exbibits",
+      "Exabytes": "Exaoctets",
+      "Exbibytes": "Exbioctets",
+      "Zetabits": "Zétabits",
+      "Zebibits": "Zébibits",
+      "Zetabytes": "Zétaoctets",
+      "Zebibytes": "Zébioctets",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottaoctets",
+      "Yobibytes": "Yobioctets",
+      "floppy disks": "disquettes",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "Atmosphères",
+      "Bars": "Barres",
+      "Kilopascals": "Kilopascals",
+      "Millimeters of mercury": "Millimètres de mercure",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Livres par pouce carré",
+      "Degrees": "Degrés",
+      "Radians": "Radians",
+      "Gradians": "Gradians",
+      "Microseconds": "Microsecondes",
+      "Milliseconds": "Millisecondes",
+      "Seconds": "Secondes",
+      "Minutes": "Minutes",
+      "Hours": "Heures",
+      "Days": "Jours",
+      "Weeks": "Semaines",
+      "Years": "Années"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Dollar américain",
+      "Euro": "Euro",
+      "British Pound": "Livre sterling",
+      "Japanese Yen": "Yen japonais",
+      "Canadian Dollar": "Dollar canadien",
+      "Australian Dollar": "Dollar australien",
+      "Brazilian Real": "Réal brésilien",
+      "Chilean Peso": "Peso chilien",
+      "Chinese Yuan": "Yuan chinois",
+      "Colombian Peso": "Peso colombien",
+      "Danish Krone": "Couronne danoise",
+      "Egyptian Pound": "Livre égyptienne",
+      "Hong Kong Dollar": "Dollar de Hong Kong",
+      "Indian Rupee": "Roupie indienne",
+      "Kenyan Shilling": "Shilling kenyan",
+      "Mexican Peso": "Peso mexicain",
+      "Nigerian Naira": "Naira nigérian",
+      "New Zealand Dollar": "Dollar néo-zélandais",
+      "Norwegian Krone": "Couronne norvégienne",
+      "Philippine Piso": "Piso philippin",
+      "Polish Zloty": "Zloty polonais",
+      "Qatari Riyal": "Rial du Qatar",
+      "Saudi Riyal": "Rial saoudien",
+      "Singapore Dollar": "Dollar de Singapour",
+      "South African Rand": "Rand sud-africain",
+      "South Korean Won": "Won sud-coréen",
+      "Swedish Krona": "Couronne suédoise",
+      "Swiss Franc": "Franc suisse",
+      "Thai Baht": "Baht thaïlandais",
+      "Turkish Lira": "Lire turque",
+      "Turkmenistani Manat": "Manat turkmène",
+      "Ugandan Shilling": "Shilling ougandais",
+      "Ukrainian Hryvnia": "Hryvnia ukrainienne",
+      "UAE Dirham": "Dirham des Émirats arabes unis",
+      "Uruguayan Peso": "Peso uruguayen",
+      "Uzbekistani Som": "Som ouzbek",
+      "Vanuatu Vatu": "Vatu de Vanuatu",
+      "Venezuelan Bolivar Soberano": "Bolívar Soberano vénézuélien",
+      "Vietnamese Dong": "Dong vietnamien",
+      "Yemeni Rial": "Rial yéménite"
+    },
+    "labels": {
+      "United States - Dollar": "États-Unis - Dollar",
+      "Europe - Euro": "Europe - Euro",
+      "United Kingdom - Pound": "Royaume-Uni - Livre sterling",
+      "Japan - Yen": "Japon - Yen",
+      "Canada - Dollar": "Canada - Dollar",
+      "Australia - Dollar": "Australie - Dollar",
+      "Brazil - Real": "Brésil - Réal",
+      "Chile - Peso": "Chili - Peso",
+      "China - Yuan Renminbi": "Chine - Renminbi Yuan",
+      "Colombia - Peso": "Colombie - Peso",
+      "Denmark - Krone": "Danemark - Couronne",
+      "Egypt - Pound": "Égypte - Livre",
+      "Hong Kong SAR - Dollar": "RAS de Hong Kong - Dollar",
+      "India - Rupee": "Inde - Roupie",
+      "Kenya - Shilling": "Kenya - Shilling",
+      "Mexico - Peso": "Mexique - Peso",
+      "Nigeria - Naira": "Nigéria - Naira",
+      "New Zealand - Dollar": "Nouvelle-Zélande - Dollar",
+      "Norway - Krone": "Norvège - Couronne",
+      "Philippines - Piso": "Philippines - Peso",
+      "Poland - Zloty": "Pologne - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Arabie Saoudite - Riyal",
+      "Singapore - Dollar": "Singapour - Dollar",
+      "South Africa - Rand": "Afrique du Sud - Rand",
+      "South Korea - Won": "Corée du Sud - Won",
+      "Sweden - Krona": "Suède - Couronne",
+      "Switzerland - Franc": "Suisse - Franc",
+      "Thailand - Baht": "Thaïlande - Baht",
+      "Turkey - Lira": "Turquie - Lire",
+      "Turkmenistan - Manat": "Turkménistan - Manat",
+      "Uganda - Shilling": "Ouganda - Shilling",
+      "Ukraine - Hryvnia": "Ukraine - Hryvnia",
+      "United Arab Emirates - Dirham": "Émirats Arabes Unis - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Ouzbékistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yémen - Rial"
+    }
+  }
+}

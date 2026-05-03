@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Калкулатор",
+    "name": "Калкулатор"
+  },
+  "common": {
+    "back": "Назад",
+    "backspace": "Назад",
+    "closeSidePanel": "Затваряне на панела"
+  },
+  "converter": {
+    "unitConverter": "Конвертор на единици",
+    "title": "Конвертори на единици",
+    "builtInCollections": "Вградени колекции",
+    "category": "Категория",
+    "from": "От",
+    "to": "До",
+    "inputValue": "Стойност за конвертиране",
+    "convertedValue": "Преобразувана стойност",
+    "swapUnits": "Разменете единици",
+    "keypad": "Клавиатура на конвертора",
+    "unit": "единица",
+    "unitOptions": "опции на единици",
+    "currency": {
+      "updatingRates": "Цените се актуализират...",
+      "updateRates": "Ставки за актуализиране",
+      "keypad": "Валутна клавиатура",
+      "currency": "валута",
+      "options": "валутни опции",
+      "updated": "Актуализирано {timestamp}",
+      "status": {
+        "mockNote": "Фиктови референтни ставки за демонстрацията на самостоятелно приложение.",
+        "fetching": "Извличане на най-новите референтни курсове в USD...",
+        "liveRatesLoaded": "Техни курсове на живо, заредени от ExchangeRate-API.",
+        "liveUpdateUnavailable": "Не е налична актуализация на живо. Обновени демо цени на местно ниво."
+      }
+    },
+    "aboutEqualTo": "Приблизително равно на"
+  },
+  "errors": {
+    "invalidInput": "Невалиден вход",
+    "cannotDivideByZero": "Не може да се дели на нула",
+    "cannotModuloByZero": "Не може да се модулира с нула",
+    "invalidProgrammerOperation": "Невалидна операция",
+    "overflow": "Резултатът е твърде голям"
+  },
+  "date": {
+    "calculationMode": "Режим на изчисление",
+    "from": "От",
+    "to": "До",
+    "results": {
+      "difference": "Разлика",
+      "sameDates": "Същите дати",
+      "date": "Дата"
+    },
+    "calculationModeOptions": "Опции за режим на изчисление",
+    "mode": {
+      "difference": "Разлика",
+      "shift": "Смяна"
+    },
+    "operation": "Операция",
+    "add": "Добавяне",
+    "subtract": "Изваждане",
+    "years": "Години",
+    "months": "Месеци",
+    "days": "Дни",
+    "chooseDate": "Изберете дата",
+    "previousMonth": "Предишния месец",
+    "nextMonth": "Следващия месец",
+    "duration": {
+      "year": {
+        "one": "{count} година",
+        "other": "{count} години"
+      },
+      "month": {
+        "one": "{count} месец",
+        "other": "{count} месеца"
+      },
+      "week": {
+        "one": "{count} седмица",
+        "other": "{count} седмици"
+      },
+      "day": {
+        "one": "{count} ден",
+        "other": "{count} дни"
+      }
+    },
+    "history": {
+      "differenceBetween": "Разлика между {from} и {to}",
+      "addTo": "Добавяне на {duration} към {date}",
+      "subtractFrom": "Извадете {duration} от {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Проверете маркирания израз",
+    "enterExpression": "Въведете израз",
+    "canvas": "Графично платно",
+    "stopTracing": "Спиране на проследяването",
+    "startTracing": "Започнете проследяване",
+    "share": "Споделяне",
+    "options": "Опции",
+    "zoomIn": "Увеличаване",
+    "zoomInLabel": "Увеличаване",
+    "zoomOut": "Намаляване",
+    "zoomOutLabel": "Намаляване",
+    "refreshViewAutomatically": "Опресняване на изгледа автоматично",
+    "view": "Преглед",
+    "expressions": "Изрази",
+    "mobileView": "Мобилен изглед",
+    "showGraph": "Показване на графиката",
+    "showExpressions": "Показване на изрази",
+    "backToFunctionList": "Назад към списъка с функции",
+    "window": "Прозорец",
+    "resetView": "Нулиране на изгледа",
+    "units": "Единици",
+    "radians": "Радиани",
+    "degrees": "Градуси",
+    "gradians": "Градиани",
+    "lineThickness": "Дебелина на линията",
+    "theme": "Тема",
+    "alwaysLight": "Винаги свети",
+    "matchAppTheme": "Съвпада с темата на приложението",
+    "groups": {
+      "inequalities": "Неравенства",
+      "trigonometry": "Тригонометрия",
+      "function": "Функция"
+    },
+    "functions": "Функции",
+    "showEquation": "Показване на уравнението",
+    "hideEquation": "Скриване на уравнението",
+    "lineOptions": "Опции за линия",
+    "color": "Цвят",
+    "style": "Стил",
+    "analysis": {
+      "title": "Анализ",
+      "domain": "Домейн",
+      "range": "Диапазон",
+      "xIntercept": "х-отсечка",
+      "yIntercept": "y-отсечка",
+      "minima": "Минимум",
+      "maxima": "Максимум",
+      "inflectionPoints": "Точки на инфлексия",
+      "verticalAsymptotes": "Вертикални асимптоти",
+      "horizontalAsymptotes": "Хоризонтални асимптоти",
+      "obliqueAsymptotes": "Наклонени асимптоти",
+      "parity": "Паритет",
+      "period": "Точка",
+      "monotonicity": "Монотонност",
+      "domainNone": "Без ограничения на домейна",
+      "rangeNone": "Без ограничения на обхвата",
+      "xInterceptNone": "Няма х-прихващания",
+      "yInterceptNone": "Без y-отсечки",
+      "minimaNone": "Няма минимуми",
+      "maximaNone": "Няма максимуми",
+      "inflectionNone": "Няма инфлексни точки",
+      "verticalAsymptotesNone": "Няма вертикални асимптоти",
+      "horizontalAsymptotesNone": "Няма хоризонтални асимптоти",
+      "obliqueAsymptotesNone": "Без наклонени асимптоти",
+      "parityUnknown": "Неизвестно",
+      "parityOdd": "Странно",
+      "parityEven": "Равен",
+      "parityNeither": "Нито едно от двете",
+      "periodicityUnknown": "Неизвестно",
+      "periodicityNotPeriodic": "Не периодично",
+      "monotonicityConstant": "Константа",
+      "monotonicityIncreasing": "Увеличава се",
+      "monotonicityDecreasing": "Намалява",
+      "monotonicityUnknown": "Неизвестно",
+      "monotonicityError": "Не може да се определи",
+      "featureTooComplexPlural": "Твърде сложно за анализ",
+      "analysisCouldNotBePerformed": "Анализът не може да бъде извършен",
+      "analysisNotSupported": "Анализът не се поддържа",
+      "variableIsNotX": "Променливата не е x"
+    },
+    "plottingExpressions": "Изчертаване на {count} изрази",
+    "xMin": "X-мин",
+    "xMax": "X-Max",
+    "yMin": "Y-мин",
+    "yMax": "Y-макс",
+    "selectExpression": "Изберете израз {index}",
+    "expressionIndex": "Израз {index}",
+    "analyzeFunction": "Функция за анализ",
+    "changeEquationStyle": "Промяна на стила на уравнението",
+    "removeEquation": "Премахване на уравнението",
+    "lineStyle": {
+      "solid": "Стил на плътна линия",
+      "dash": "Стил на тире",
+      "dot": "Стил на точкова линия"
+    }
+  },
+  "history": {
+    "empty": "Историята е празна",
+    "clearAll": "Изчистване на всички",
+    "clear": "Изчистване на историята",
+    "title": "История",
+    "andMemory": "История и памет",
+    "aria": {
+      "historyPanel": "Панел с история",
+      "historyAndMemoryPanel": "Панел с история и памет"
+    },
+    "closeFlyout": "Затваряне на хронологията",
+    "openFlyout": "Отваряне на историята"
+  },
+  "memory": {
+    "empty": "Паметта е празна",
+    "clearItem": "Изчистване на елемента",
+    "addCurrentValue": "Добавяне на текуща стойност",
+    "subtractCurrentValue": "Изваждане на текущата стойност",
+    "clearAll": "Изчистване на всички",
+    "clear": "Изчистване на паметта",
+    "title": "Памет",
+    "controls": "Контроли на паметта",
+    "tooltips": {
+      "clearAll": "Изчистване на цялата памет",
+      "recall": "Извикване от паметта",
+      "add": "Добавяне към паметта",
+      "subtract": "Изваждане от паметта",
+      "store": "Запазване в паметта"
+    },
+    "recallValue": "Извикване на паметта {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Навигация",
+      "closeNavigation": "Затваряне на навигацията",
+      "openNavigation": "Отворете навигацията"
+    },
+    "groups": {
+      "calculator": "Калкулатор",
+      "converter": "Конвертор"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Панел за обръщане на бита",
+    "baseReadouts": "Базови показания",
+    "surfaceMode": "Повърхностен режим",
+    "fullKeypad": "Пълна клавиатура",
+    "showKeypad": "Показване на клавиатурата",
+    "bitTogglingKeypad": "Клавиатура за превключване на битове",
+    "showBitView": "Показване на битов изглед",
+    "wordSize": "Размер на думата",
+    "bitwise": "Побитово",
+    "bitShift": "Изместване на битовете"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Тригонометрия",
+      "function": "Функция",
+      "functionsAria": "Функции",
+      "trigonometricFunctionsAria": "Тригонометрични функции",
+      "angleUnit": "Единица за ъгъл {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Външен вид",
+      "themeTitle": "Тема",
+      "themeDescription": "Изберете цветова схема",
+      "light": "Светлина",
+      "dark": "Тъмно",
+      "blue": "Синьо",
+      "green": "Зелено",
+      "system": "Система"
+    },
+    "language": {
+      "group": "Език",
+      "title": "Език",
+      "description": "Изберете предпочитания от вас език"
+    },
+    "about": {
+      "group": "Относно"
+    },
+    "feedback": "Изпратете обратна връзка",
+    "contribute": {
+      "prefix": "Допринесете за",
+      "link": "GitHub",
+      "suffix": ", за да помогнете за подобряването на този калкулатор"
+    },
+    "links": {
+      "repository": "Хранилище на проекти",
+      "readme": "ПРОЧЕТЕТЕ МЕ",
+      "license": "Лиценз на MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Стандартен",
+      "subtitle": "Класическа незабавна оценка"
+    },
+    "scientific": {
+      "label": "Научен",
+      "subtitle": "Оператори, функции и поддръжка на изрази"
+    },
+    "graphing": {
+      "label": "Графика",
+      "subtitle": "Начертайте прост израз в декартова равнина"
+    },
+    "programmer": {
+      "label": "Програмист",
+      "subtitle": "Цялочислена математика с базово преобразуване"
+    },
+    "date": {
+      "label": "Изчисляване на дата",
+      "subtitle": "Намерете продължителности и дати на смени"
+    },
+    "currency": {
+      "label": "Валута",
+      "subtitle": "Конвертиране на фиктивни обменни курсове"
+    },
+    "volume": {
+      "label": "Обем",
+      "subtitle": "Преобразуване на измерванията на обема"
+    },
+    "length": {
+      "label": "Дължина",
+      "subtitle": "Преобразуване на единици за разстояние и дължина"
+    },
+    "weight": {
+      "label": "Тегло и маса",
+      "subtitle": "Преобразуване на единици за тегло и маса"
+    },
+    "temperature": {
+      "label": "Температура",
+      "subtitle": "Преобразуване на температурни скали"
+    },
+    "energy": {
+      "label": "Енергия",
+      "subtitle": "Преобразуване на енергийни измервания"
+    },
+    "area": {
+      "label": "Площ",
+      "subtitle": "Преобразуване на измервания на площ"
+    },
+    "speed": {
+      "label": "Скорост",
+      "subtitle": "Преобразуване на измерванията на скоростта"
+    },
+    "time": {
+      "label": "Време",
+      "subtitle": "Преобразуване на измерванията на времето"
+    },
+    "power": {
+      "label": "Мощност",
+      "subtitle": "Преобразуване на измерванията на мощността"
+    },
+    "data": {
+      "label": "Данни",
+      "subtitle": "Преобразуване на цифрови единици за съхранение"
+    },
+    "pressure": {
+      "label": "Налягане",
+      "subtitle": "Преобразуване на единици за налягане"
+    },
+    "angle": {
+      "label": "Ъгъл",
+      "subtitle": "Преобразуване на ъглови измервания"
+    },
+    "settings": {
+      "label": "Настройки",
+      "subtitle": "Външен вид и информация за приложението"
+    }
+  },
+  "categories": {
+    "Currency": "Валута",
+    "Volume": "Обем",
+    "Length": "Дължина",
+    "Mass": "Маса",
+    "Temperature": "Температура",
+    "Energy": "Енергия",
+    "Area": "Площ",
+    "Speed": "Скорост",
+    "Time": "Време",
+    "Power": "Мощност",
+    "Data": "Данни",
+    "Pressure": "Налягане",
+    "Angle": "Ъгъл"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Ангстрьоми",
+      "Nanometers": "Нанометри",
+      "Microns": "Микрони",
+      "Millimeters": "Милиметри",
+      "Centimeters": "Сантиметри",
+      "Meters": "Метри",
+      "Kilometers": "Километри",
+      "Inches": "Инчове",
+      "Feet": "Крака",
+      "Yards": "Ярдове",
+      "Miles": "Майлс",
+      "Nautical miles": "Морски мили",
+      "paperclips": "кламери",
+      "hands": "ръце",
+      "jumbo jets": "джъмбо джетове",
+      "Carats": "Карати",
+      "Milligrams": "милиграми",
+      "Centigrams": "Сантиграми",
+      "Decigrams": "Дециграми",
+      "Grams": "Грамове",
+      "Dekagrams": "Декаграми",
+      "Hectograms": "Хектограми",
+      "Kilograms": "Килограми",
+      "Metric tonnes": "Метрични тонове",
+      "Ounces": "Унции",
+      "Pounds": "Паундове",
+      "Stone": "Камък",
+      "Short tons (US)": "Къси тонове (САЩ)",
+      "Long tons (UK)": "Дълги тонове (UK)",
+      "snowflakes": "снежинки",
+      "soccer balls": "футболни топки",
+      "elephants": "слонове",
+      "whales": "китове",
+      "Celsius": "Целзий",
+      "Fahrenheit": "Фаренхайт",
+      "Kelvin": "Келвин",
+      "Milliliters": "милилитри",
+      "Cubic centimeters": "Кубични сантиметри",
+      "Liters": "Литри",
+      "Cubic meters": "Кубични метри",
+      "Teaspoons (US)": "Чаени лъжички (САЩ)",
+      "Tablespoons (US)": "Супени лъжици (САЩ)",
+      "Fluid ounces (US)": "течни унции (САЩ)",
+      "Cups (US)": "Купи (САЩ)",
+      "Pints (US)": "Пинти (САЩ)",
+      "Quarts (US)": "Кварти (САЩ)",
+      "Gallons (US)": "Галони (САЩ)",
+      "Cubic inches": "Кубични инчове",
+      "Cubic feet": "Кубични футове",
+      "Cubic yards": "Кубични ярдове",
+      "Teaspoons (UK)": "Чаени лъжички (UK)",
+      "Tablespoons (UK)": "Супени лъжици (UK)",
+      "Fluid ounces (UK)": "течни унции (UK)",
+      "Pints (UK)": "Пинти (UK)",
+      "Quarts (UK)": "кварти (UK)",
+      "Gallons (UK)": "Галони (UK)",
+      "coffee cups": "чаши за кафе",
+      "bathtubs": "вани",
+      "swimming pools": "басейни",
+      "Square millimeters": "Квадратни милиметри",
+      "Square centimeters": "Квадратни сантиметри",
+      "Square meters": "Квадратни метри",
+      "Hectares": "Хектари",
+      "Square kilometers": "Квадратни километри",
+      "Square inches": "Квадратни инчове",
+      "Square feet": "Квадратни фута",
+      "Square yards": "Квадратни ярдове",
+      "Acres": "Акра",
+      "Square miles": "Квадратни мили",
+      "sheets of paper": "листове хартия",
+      "soccer fields": "футболни игрища",
+      "castles": "замъци",
+      "Pyeong": "Пьонг",
+      "Centimeters per second": "Сантиметри в секунда",
+      "Meters per second": "Метри в секунда",
+      "Kilometers per hour": "Километри в час",
+      "Feet per second": "Футове в секунда",
+      "Miles per hour": "Мили в час",
+      "Knots": "Възли",
+      "Mach": "Мах",
+      "turtles": "костенурки",
+      "horses": "коне",
+      "jets": "струи",
+      "Watts": "Ватове",
+      "Kilowatts": "Киловати",
+      "Horsepower (US)": "Конски сили (САЩ)",
+      "Foot-pounds/minute": "Фут-фунт/минута",
+      "BTUs/minute": "BTU/минута",
+      "light bulbs": "електрически крушки",
+      "train engines": "влакови двигатели",
+      "Thermal calories": "Топлинни калории",
+      "Food calories": "Хранителни калории",
+      "British thermal units": "Британски термични единици",
+      "Kilojoules": "Килоджаули",
+      "Kilowatt-hours": "Киловатчаса",
+      "Electron volts": "Електронволтове",
+      "Joules": "Джаули",
+      "Foot-pounds": "Фут-фунтове",
+      "batteries": "батерии",
+      "bananas": "банани",
+      "slices of cake": "филии торта",
+      "Bits": "Битове",
+      "Nibble": "Захапване",
+      "Bytes": "Байтове",
+      "Kilobits": "Килобита",
+      "Kibibits": "Кибибити",
+      "Kilobytes": "Килобайта",
+      "Kibibytes": "Кибибайта",
+      "Megabits": "Мегабита",
+      "Mebibits": "Мебибити",
+      "Megabytes": "Мегабайта",
+      "Mebibytes": "Мебибайта",
+      "Gigabits": "Гигабита",
+      "Gibibits": "Гибибити",
+      "Gigabytes": "Гигабайта",
+      "Gibibytes": "Гибибайта",
+      "Terabits": "Терабити",
+      "Tebibits": "Тебибити",
+      "Terabytes": "Терабайти",
+      "Tebibytes": "тебибайта",
+      "Petabits": "Петабити",
+      "Pebibits": "Пебибити",
+      "Petabytes": "Петабайти",
+      "Pebibytes": "Пебибайтове",
+      "Exabits": "Екзабити",
+      "Exbibits": "Експонати",
+      "Exabytes": "Екзабайтове",
+      "Exbibytes": "Екбибайтове",
+      "Zetabits": "Зетабити",
+      "Zebibits": "Зебибити",
+      "Zetabytes": "Зетабайта",
+      "Zebibytes": "Зебибайтове",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Йотабайтове",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "флопи дискове",
+      "CDs": "CD дискове",
+      "DVDs": "DVD дискове",
+      "Atmospheres": "Атмосфери",
+      "Bars": "Ленти",
+      "Kilopascals": "Килопаскали",
+      "Pascals": "Паскали",
+      "Pounds per square inch": "Паундове на квадратен инч",
+      "Degrees": "Градуси",
+      "Radians": "Радиани",
+      "Gradians": "Градиани",
+      "Microseconds": "Микросекунди",
+      "Milliseconds": "милисекунди",
+      "Seconds": "Секунди",
+      "Minutes": "Минути",
+      "Hours": "Часове",
+      "Days": "Дни",
+      "Weeks": "Седмици",
+      "Years": "Години",
+      "Millimeters of mercury": "Millimeters of mercury"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Щатски долар",
+      "Euro": "евро",
+      "British Pound": "Британска лира",
+      "Japanese Yen": "Японска йена",
+      "Canadian Dollar": "Канадски долар",
+      "Australian Dollar": "Австралийски долар",
+      "Brazilian Real": "Бразилски реал",
+      "Chilean Peso": "Чилийско песо",
+      "Chinese Yuan": "Китайски юан",
+      "Colombian Peso": "Колумбийско песо",
+      "Danish Krone": "Датска крона",
+      "Egyptian Pound": "Египетски паунд",
+      "Hong Kong Dollar": "Хонконгски долар",
+      "Indian Rupee": "Индийска рупия",
+      "Kenyan Shilling": "Кенийски шилинг",
+      "Mexican Peso": "Мексиканско песо",
+      "Nigerian Naira": "Нигерийска найра",
+      "New Zealand Dollar": "Новозеландски долар",
+      "Norwegian Krone": "Норвежка крона",
+      "Philippine Piso": "Филипинско Писо",
+      "Polish Zloty": "Полска злота",
+      "Qatari Riyal": "Катарски риал",
+      "Saudi Riyal": "Саудитски риал",
+      "Singapore Dollar": "Сингапурски долар",
+      "South African Rand": "Южноафрикански ранд",
+      "South Korean Won": "Южнокорейски вон",
+      "Swedish Krona": "Шведска крона",
+      "Swiss Franc": "Швейцарски франк",
+      "Thai Baht": "Тайландски бат",
+      "Turkish Lira": "Турска лира",
+      "Turkmenistani Manat": "Туркменски манат",
+      "Ugandan Shilling": "Угандийски шилинг",
+      "Ukrainian Hryvnia": "украинска гривна",
+      "UAE Dirham": "Дирхам на ОАЕ",
+      "Uruguayan Peso": "Уругвайско песо",
+      "Uzbekistani Som": "Узбекски сом",
+      "Vanuatu Vatu": "Вануату Вату",
+      "Venezuelan Bolivar Soberano": "Венецуелски Боливар Соберано",
+      "Vietnamese Dong": "Виетнамски донг",
+      "Yemeni Rial": "Йеменски риал"
+    },
+    "labels": {
+      "United States - Dollar": "САЩ - долар",
+      "Europe - Euro": "Европа - евро",
+      "United Kingdom - Pound": "Обединено кралство - лира",
+      "Japan - Yen": "Япония - Йени",
+      "Canada - Dollar": "Канада - долар",
+      "Australia - Dollar": "Австралия - долар",
+      "Brazil - Real": "Бразилия – Реал",
+      "Chile - Peso": "Чили - песо",
+      "China - Yuan Renminbi": "Китай - Юан Ренминби",
+      "Colombia - Peso": "Колумбия - песо",
+      "Denmark - Krone": "Дания - крона",
+      "Egypt - Pound": "Египет - лира",
+      "Hong Kong SAR - Dollar": "Хонконг SAR - долар",
+      "India - Rupee": "Индия - рупия",
+      "Kenya - Shilling": "Кения - Шилинг",
+      "Mexico - Peso": "Мексико - песо",
+      "Nigeria - Naira": "Нигерия - Найра",
+      "New Zealand - Dollar": "Нова Зеландия - долар",
+      "Norway - Krone": "Норвегия - крона",
+      "Philippines - Piso": "Филипини - Писо",
+      "Poland - Zloty": "Полша - Злота",
+      "Qatar - Riyal": "Катар - риал",
+      "Saudi Arabia - Riyal": "Саудитска Арабия - риал",
+      "Singapore - Dollar": "Сингапур - долар",
+      "South Africa - Rand": "Южна Африка – Ранд",
+      "South Korea - Won": "Южна Корея - Won",
+      "Sweden - Krona": "Швеция - крона",
+      "Switzerland - Franc": "Швейцария - франк",
+      "Thailand - Baht": "Тайланд - бат",
+      "Turkey - Lira": "Турция - лира",
+      "Turkmenistan - Manat": "Туркменистан - манат",
+      "Uganda - Shilling": "Уганда - Шилинг",
+      "Ukraine - Hryvnia": "Украйна - Гривня",
+      "United Arab Emirates - Dirham": "Обединени арабски емирства - дирхам",
+      "Uruguay - Peso": "Уругвай - песо",
+      "Uzbekistan - Som": "Узбекистан - сом",
+      "Vanuatu - Vatu": "Вануату - Вату",
+      "Venezuela - Bolívar Soberano": "Венецуела - Боливар Соберано",
+      "Vietnam - Dong": "Виетнам - Донг",
+      "Yemen - Rial": "Йемен - Риал"
+    }
+  }
+}

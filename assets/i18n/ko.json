@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "계산기",
+    "name": "계산기"
+  },
+  "common": {
+    "back": "뒤로",
+    "backspace": "백스페이스",
+    "closeSidePanel": "패널 닫기"
+  },
+  "converter": {
+    "unitConverter": "단위 변환기",
+    "title": "단위 변환기",
+    "builtInCollections": "내장 컬렉션",
+    "category": "카테고리",
+    "from": "발신",
+    "to": "받는 사람",
+    "inputValue": "변환할 값",
+    "convertedValue": "변환된 값",
+    "swapUnits": "단위 교환",
+    "keypad": "변환기 키패드",
+    "unit": "단위",
+    "unitOptions": "단위 옵션",
+    "currency": {
+      "updatingRates": "요율 업데이트 중…",
+      "updateRates": "업데이트 속도",
+      "keypad": "통화 키패드",
+      "currency": "통화",
+      "options": "통화 옵션",
+      "updated": "업데이트됨 {timestamp}",
+      "status": {
+        "mockNote": "독립형 앱 데모에 대한 모의 참조율입니다.",
+        "fetching": "최신 USD 참조 환율을 가져오는 중...",
+        "liveRatesLoaded": "ExchangeRate-API에서 로드된 실시간 환율입니다.",
+        "liveUpdateUnavailable": "라이브 업데이트를 사용할 수 없습니다. 현지 데모 요금이 새로워졌습니다."
+      }
+    },
+    "aboutEqualTo": "약 같음"
+  },
+  "errors": {
+    "invalidInput": "잘못된 입력",
+    "cannotDivideByZero": "0으로 나눌 수 없습니다.",
+    "cannotModuloByZero": "0으로 모듈로화할 수 없습니다.",
+    "invalidProgrammerOperation": "잘못된 작업",
+    "overflow": "결과가 너무 큼"
+  },
+  "date": {
+    "calculationMode": "계산 모드",
+    "from": "시작",
+    "to": "받는 사람",
+    "results": {
+      "difference": "차이",
+      "sameDates": "같은 날짜",
+      "date": "날짜"
+    },
+    "calculationModeOptions": "계산 모드 옵션",
+    "mode": {
+      "difference": "차이",
+      "shift": "교대"
+    },
+    "operation": "작업",
+    "add": "추가",
+    "subtract": "빼기",
+    "years": "년",
+    "months": "월",
+    "days": "일",
+    "chooseDate": "날짜 선택",
+    "previousMonth": "지난 달",
+    "nextMonth": "다음 달",
+    "duration": {
+      "year": {
+        "one": "{count}년",
+        "other": "{count}년"
+      },
+      "month": {
+        "one": "{count}개월",
+        "other": "{count}개월"
+      },
+      "week": {
+        "one": "{count}주",
+        "other": "{count}주"
+      },
+      "day": {
+        "one": "{count}일",
+        "other": "{count}일"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from}과 {to}의 차이점",
+      "addTo": "{duration}을 {date}에 추가",
+      "subtractFrom": "{date}에서 {duration}을 뺍니다."
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "강조된 표현을 확인하세요",
+    "enterExpression": "식을 입력하세요.",
+    "canvas": "그래프 캔버스",
+    "stopTracing": "추적 중지",
+    "startTracing": "추적 시작",
+    "share": "공유",
+    "options": "옵션",
+    "zoomIn": "확대",
+    "zoomInLabel": "확대",
+    "zoomOut": "축소",
+    "zoomOutLabel": "축소",
+    "refreshViewAutomatically": "자동으로 보기 새로고침",
+    "view": "보기",
+    "expressions": "표현식",
+    "mobileView": "모바일 보기",
+    "showGraph": "그래프 표시",
+    "showExpressions": "표현식 표시",
+    "backToFunctionList": "기능 목록으로 돌아가기",
+    "window": "창",
+    "resetView": "보기 재설정",
+    "units": "단위",
+    "radians": "라디안",
+    "degrees": "도",
+    "gradians": "그라디안",
+    "lineThickness": "선 두께",
+    "theme": "테마",
+    "alwaysLight": "항상 밝음",
+    "matchAppTheme": "앱 테마 일치",
+    "groups": {
+      "inequalities": "불평등",
+      "trigonometry": "삼각법",
+      "function": "함수"
+    },
+    "functions": "기능",
+    "showEquation": "등식 표시",
+    "hideEquation": "등식 숨기기",
+    "lineOptions": "라인 옵션",
+    "color": "색상",
+    "style": "스타일",
+    "analysis": {
+      "title": "분석",
+      "domain": "도메인",
+      "range": "범위",
+      "xIntercept": "x절편",
+      "yIntercept": "y절편",
+      "minima": "최소값",
+      "maxima": "맥시마",
+      "inflectionPoints": "변곡점",
+      "verticalAsymptotes": "수직 점근선",
+      "horizontalAsymptotes": "수평 점근선",
+      "obliqueAsymptotes": "경사 점근선",
+      "parity": "패리티",
+      "period": "기간",
+      "monotonicity": "단조성",
+      "domainNone": "도메인 제한 없음",
+      "rangeNone": "범위 제한 없음",
+      "xInterceptNone": "x절편 없음",
+      "yInterceptNone": "y절편 없음",
+      "minimaNone": "최소값 없음",
+      "maximaNone": "최대값 없음",
+      "inflectionNone": "변곡점 없음",
+      "verticalAsymptotesNone": "수직 점근선 없음",
+      "horizontalAsymptotesNone": "수평 점근선 없음",
+      "obliqueAsymptotesNone": "사선 점근선 없음",
+      "parityUnknown": "알 수 없음",
+      "parityOdd": "이상함",
+      "parityEven": "짝수",
+      "parityNeither": "둘 다 아님",
+      "periodicityUnknown": "알 수 없음",
+      "periodicityNotPeriodic": "비정기적",
+      "monotonicityConstant": "상수",
+      "monotonicityIncreasing": "증가",
+      "monotonicityDecreasing": "감소",
+      "monotonicityUnknown": "알 수 없음",
+      "monotonicityError": "결정할 수 없음",
+      "featureTooComplexPlural": "분석하기에는 너무 복잡함",
+      "analysisCouldNotBePerformed": "분석을 수행할 수 없습니다.",
+      "analysisNotSupported": "분석이 지원되지 않음",
+      "variableIsNotX": "변수가 x가 아닙니다."
+    },
+    "plottingExpressions": "{count} 표현식 플로팅",
+    "xMin": "X-분",
+    "xMax": "X-맥스",
+    "yMin": "Y-민",
+    "yMax": "Y-최대",
+    "selectExpression": "표현식 선택 {index}",
+    "expressionIndex": "표현식 {index}",
+    "analyzeFunction": "분석 기능",
+    "changeEquationStyle": "등식 스타일 변경",
+    "removeEquation": "수식 삭제",
+    "lineStyle": {
+      "solid": "실선 스타일",
+      "dash": "점선 스타일",
+      "dot": "점선 스타일"
+    }
+  },
+  "history": {
+    "empty": "기록이 비어 있습니다.",
+    "clearAll": "모두 지우기",
+    "clear": "기록 지우기",
+    "title": "역사",
+    "andMemory": "역사와 기억",
+    "aria": {
+      "historyPanel": "기록 패널",
+      "historyAndMemoryPanel": "기록 및 메모리 패널"
+    },
+    "closeFlyout": "마감 기록",
+    "openFlyout": "열린 기록"
+  },
+  "memory": {
+    "empty": "메모리가 비어 있습니다.",
+    "clearItem": "항목 지우기",
+    "addCurrentValue": "현재 값 추가",
+    "subtractCurrentValue": "현재 값 빼기",
+    "clearAll": "모두 지우기",
+    "clear": "메모리 지우기",
+    "title": "메모리",
+    "controls": "메모리 제어",
+    "tooltips": {
+      "clearAll": "모든 메모리 지우기",
+      "recall": "메모리에서 호출",
+      "add": "메모리에 추가",
+      "subtract": "메모리에서 빼기",
+      "store": "메모리에 저장"
+    },
+    "recallValue": "기억 불러오기 {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "내비게이션",
+      "closeNavigation": "탐색 닫기",
+      "openNavigation": "탐색 열기"
+    },
+    "groups": {
+      "calculator": "계산기",
+      "converter": "변환기"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "비트 플립 패널",
+    "baseReadouts": "기본 판독값",
+    "surfaceMode": "표면 모드",
+    "fullKeypad": "풀 키패드",
+    "showKeypad": "키패드 표시",
+    "bitTogglingKeypad": "비트 토글 키패드",
+    "showBitView": "비트 보기 표시",
+    "wordSize": "단어 크기",
+    "bitwise": "비트별",
+    "bitShift": "비트 시프트"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "삼각법",
+      "function": "기능",
+      "functionsAria": "기능",
+      "trigonometricFunctionsAria": "삼각함수",
+      "angleUnit": "각도 단위 {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "외관",
+      "themeTitle": "테마",
+      "themeDescription": "색 구성표 선택",
+      "light": "빛",
+      "dark": "어두움",
+      "blue": "파란색",
+      "green": "녹색",
+      "system": "시스템"
+    },
+    "language": {
+      "group": "언어",
+      "title": "언어",
+      "description": "선호하는 언어를 선택하세요."
+    },
+    "about": {
+      "group": "정보"
+    },
+    "feedback": "의견 보내기",
+    "contribute": {
+      "prefix": "기여",
+      "link": "GitHub",
+      "suffix": "이 계산기 개선에 도움을 드리기 위해"
+    },
+    "links": {
+      "repository": "프로젝트 저장소",
+      "readme": "읽어보기",
+      "license": "MIT 라이센스"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "표준",
+      "subtitle": "클래식 즉시 평가"
+    },
+    "scientific": {
+      "label": "과학적",
+      "subtitle": "연산자, 함수 및 표현식 지원"
+    },
+    "graphing": {
+      "label": "그래프",
+      "subtitle": "직교 평면에 간단한 표현식을 그립니다."
+    },
+    "programmer": {
+      "label": "프로그래머",
+      "subtitle": "진수 변환이 포함된 정수 수학"
+    },
+    "date": {
+      "label": "날짜 계산",
+      "subtitle": "기간 및 교대 날짜 찾기"
+    },
+    "currency": {
+      "label": "통화",
+      "subtitle": "모의 환율 변환"
+    },
+    "volume": {
+      "label": "볼륨",
+      "subtitle": "체적 측정값 변환"
+    },
+    "length": {
+      "label": "길이",
+      "subtitle": "거리 및 길이 단위 변환"
+    },
+    "weight": {
+      "label": "무게와 질량",
+      "subtitle": "중량 및 질량 단위 변환"
+    },
+    "temperature": {
+      "label": "온도",
+      "subtitle": "온도 단위 변환"
+    },
+    "energy": {
+      "label": "에너지",
+      "subtitle": "에너지 측정 변환"
+    },
+    "area": {
+      "label": "지역",
+      "subtitle": "면적 측정 변환"
+    },
+    "speed": {
+      "label": "속도",
+      "subtitle": "속도 측정 변환"
+    },
+    "time": {
+      "label": "시간",
+      "subtitle": "시간 측정값 변환"
+    },
+    "power": {
+      "label": "전원",
+      "subtitle": "전력 측정 변환"
+    },
+    "data": {
+      "label": "데이터",
+      "subtitle": "디지털 저장 장치 변환"
+    },
+    "pressure": {
+      "label": "압력",
+      "subtitle": "압력 단위 변환"
+    },
+    "angle": {
+      "label": "각도",
+      "subtitle": "각도 측정값 변환"
+    },
+    "settings": {
+      "label": "설정",
+      "subtitle": "외관 및 앱 정보"
+    }
+  },
+  "categories": {
+    "Currency": "통화",
+    "Volume": "볼륨",
+    "Length": "길이",
+    "Mass": "미사",
+    "Temperature": "온도",
+    "Energy": "에너지",
+    "Area": "지역",
+    "Speed": "속도",
+    "Time": "시간",
+    "Power": "전원",
+    "Data": "데이터",
+    "Pressure": "압력",
+    "Angle": "각도"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "옹스트롬",
+      "Nanometers": "나노미터",
+      "Microns": "미크론",
+      "Millimeters": "밀리미터",
+      "Centimeters": "센티미터",
+      "Meters": "미터",
+      "Kilometers": "킬로미터",
+      "Inches": "인치",
+      "Feet": "발",
+      "Yards": "야드",
+      "Miles": "마일",
+      "Nautical miles": "해리",
+      "paperclips": "클립",
+      "hands": "손",
+      "jumbo jets": "점보 제트기",
+      "Carats": "캐럿",
+      "Milligrams": "밀리그램",
+      "Centigrams": "센티그램",
+      "Decigrams": "데시그램",
+      "Grams": "그램",
+      "Dekagrams": "데카그램",
+      "Hectograms": "헥토그램",
+      "Kilograms": "킬로그램",
+      "Metric tonnes": "미터톤",
+      "Ounces": "온스",
+      "Pounds": "파운드",
+      "Stone": "스톤",
+      "Short tons (US)": "쇼트톤(미국)",
+      "Long tons (UK)": "롱톤(영국)",
+      "snowflakes": "눈송이",
+      "soccer balls": "축구공",
+      "elephants": "코끼리",
+      "whales": "고래",
+      "Celsius": "섭씨",
+      "Fahrenheit": "화씨",
+      "Kelvin": "켈빈",
+      "Milliliters": "밀리리터",
+      "Cubic centimeters": "입방센티미터",
+      "Liters": "리터",
+      "Cubic meters": "입방미터",
+      "Teaspoons (US)": "티스푼(미국)",
+      "Tablespoons (US)": "테이블스푼(미국)",
+      "Fluid ounces (US)": "유동온스(미국)",
+      "Cups (US)": "컵(미국)",
+      "Pints (US)": "파인트(미국)",
+      "Quarts (US)": "쿼트(미국)",
+      "Gallons (US)": "갤런(미국)",
+      "Cubic inches": "입방인치",
+      "Cubic feet": "입방피트",
+      "Cubic yards": "입방야드",
+      "Teaspoons (UK)": "티스푼(영국)",
+      "Tablespoons (UK)": "테이블스푼(영국)",
+      "Fluid ounces (UK)": "유동온스(영국)",
+      "Pints (UK)": "파인트(영국)",
+      "Quarts (UK)": "쿼트(영국)",
+      "Gallons (UK)": "갤런(영국)",
+      "coffee cups": "커피잔",
+      "bathtubs": "욕조",
+      "swimming pools": "수영장",
+      "Square millimeters": "제곱밀리미터",
+      "Square centimeters": "제곱센티미터",
+      "Square meters": "제곱미터",
+      "Hectares": "헥타르",
+      "Square kilometers": "제곱킬로미터",
+      "Square inches": "제곱인치",
+      "Square feet": "평방피트",
+      "Square yards": "평방야드",
+      "Acres": "에이커",
+      "Square miles": "평방마일",
+      "sheets of paper": "종이 한 장",
+      "soccer fields": "축구장",
+      "castles": "성",
+      "Pyeong": "평",
+      "Centimeters per second": "초당 센티미터",
+      "Meters per second": "초당 미터",
+      "Kilometers per hour": "시간당 킬로미터",
+      "Feet per second": "초당 피트",
+      "Miles per hour": "시간당 마일",
+      "Knots": "매듭",
+      "Mach": "마하",
+      "turtles": "거북이",
+      "horses": "말",
+      "jets": "제트기",
+      "Watts": "와트",
+      "Kilowatts": "킬로와트",
+      "Horsepower (US)": "마력(미국)",
+      "Foot-pounds/minute": "피트-파운드/분",
+      "BTUs/minute": "BTU/분",
+      "light bulbs": "전구",
+      "train engines": "열차 엔진",
+      "Thermal calories": "열 칼로리",
+      "Food calories": "음식 칼로리",
+      "British thermal units": "영국 열 단위",
+      "Kilojoules": "킬로줄",
+      "Kilowatt-hours": "킬로와트시",
+      "Electron volts": "전자볼트",
+      "Joules": "줄",
+      "Foot-pounds": "피트파운드",
+      "batteries": "배터리",
+      "bananas": "바나나",
+      "slices of cake": "케이크 조각",
+      "Bits": "비트",
+      "Nibble": "니블",
+      "Bytes": "바이트",
+      "Kilobits": "킬로비트",
+      "Kibibits": "키비비트",
+      "Kilobytes": "킬로바이트",
+      "Kibibytes": "키비바이트",
+      "Megabits": "메가비트",
+      "Mebibits": "메비비트",
+      "Megabytes": "메가바이트",
+      "Mebibytes": "메비바이트",
+      "Gigabits": "기가비트",
+      "Gibibits": "기비비트",
+      "Gigabytes": "기가바이트",
+      "Gibibytes": "기비바이트",
+      "Terabits": "테라비트",
+      "Tebibits": "테비비트",
+      "Terabytes": "테라바이트",
+      "Tebibytes": "테비바이트",
+      "Petabits": "페타비트",
+      "Pebibits": "페비비트",
+      "Petabytes": "페타바이트",
+      "Pebibytes": "페비바이트",
+      "Exabits": "시험",
+      "Exbibits": "전시회",
+      "Exabytes": "엑사바이트",
+      "Exbibytes": "엑스비바이트",
+      "Zetabits": "제타비트",
+      "Zebibits": "제비비트",
+      "Zetabytes": "제타바이트",
+      "Zebibytes": "제비바이트",
+      "Yottabits": "요타비트",
+      "Yobibits": "요비비트",
+      "Yottabytes": "요타바이트",
+      "Yobibytes": "요비바이트",
+      "floppy disks": "플로피 디스크",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "분위기",
+      "Bars": "바",
+      "Kilopascals": "킬로파스칼",
+      "Millimeters of mercury": "수은주 밀리미터",
+      "Pascals": "파스칼",
+      "Pounds per square inch": "평방 인치당 파운드",
+      "Degrees": "도",
+      "Radians": "라디안",
+      "Gradians": "그라디언트",
+      "Microseconds": "마이크로초",
+      "Milliseconds": "밀리초",
+      "Seconds": "초",
+      "Minutes": "분",
+      "Hours": "시간",
+      "Days": "일",
+      "Weeks": "주",
+      "Years": "년"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "미국 달러",
+      "Euro": "유로",
+      "British Pound": "영국 파운드",
+      "Japanese Yen": "일본 엔",
+      "Canadian Dollar": "캐나다 달러",
+      "Australian Dollar": "호주 달러",
+      "Brazilian Real": "브라질 헤알",
+      "Chilean Peso": "칠레 페소",
+      "Chinese Yuan": "중국 위안",
+      "Colombian Peso": "콜롬비아 페소",
+      "Danish Krone": "덴마크 크로네",
+      "Egyptian Pound": "이집트 파운드",
+      "Hong Kong Dollar": "홍콩 달러",
+      "Indian Rupee": "인도 루피",
+      "Kenyan Shilling": "케냐 실링",
+      "Mexican Peso": "멕시코 페소",
+      "Nigerian Naira": "나이지리아 나이라",
+      "New Zealand Dollar": "뉴질랜드 달러",
+      "Norwegian Krone": "노르웨이 크로네",
+      "Philippine Piso": "필리핀 피소",
+      "Polish Zloty": "폴란드 즐로티",
+      "Qatari Riyal": "카타르 리얄",
+      "Saudi Riyal": "사우디 리얄",
+      "Singapore Dollar": "싱가포르 달러",
+      "South African Rand": "남아프리카 랜드",
+      "South Korean Won": "한국 원화",
+      "Swedish Krona": "스웨덴 크로나",
+      "Swiss Franc": "스위스 프랑",
+      "Thai Baht": "태국 바트",
+      "Turkish Lira": "터키 리라",
+      "Turkmenistani Manat": "투르크메니스탄 마나트",
+      "Ugandan Shilling": "우간다 실링",
+      "Ukrainian Hryvnia": "우크라이나 흐리브냐",
+      "UAE Dirham": "UAE 디르함",
+      "Uruguayan Peso": "우루과이 페소",
+      "Uzbekistani Som": "우즈베키스탄 솜",
+      "Vanuatu Vatu": "바누아투 바투",
+      "Venezuelan Bolivar Soberano": "베네수엘라 볼리바르 소베라노",
+      "Vietnamese Dong": "베트남 동",
+      "Yemeni Rial": "예멘 리알"
+    },
+    "labels": {
+      "United States - Dollar": "미국 - 달러",
+      "Europe - Euro": "유럽 - 유로",
+      "United Kingdom - Pound": "영국 - 파운드",
+      "Japan - Yen": "일본 - 엔",
+      "Canada - Dollar": "캐나다 - 달러",
+      "Australia - Dollar": "호주 - 달러",
+      "Brazil - Real": "브라질 - 레알",
+      "Chile - Peso": "칠레 - 페소",
+      "China - Yuan Renminbi": "중국 - 위안 인민폐",
+      "Colombia - Peso": "콜롬비아 - 페소",
+      "Denmark - Krone": "덴마크 - 크로네",
+      "Egypt - Pound": "이집트 - 파운드",
+      "Hong Kong SAR - Dollar": "홍콩 SAR - 달러",
+      "India - Rupee": "인도 - 루피",
+      "Kenya - Shilling": "케냐 - 실링",
+      "Mexico - Peso": "멕시코 - 페소",
+      "Nigeria - Naira": "나이지리아 - 나이라",
+      "New Zealand - Dollar": "뉴질랜드 - 달러",
+      "Norway - Krone": "노르웨이 - 크로네",
+      "Philippines - Piso": "필리핀 - 피소",
+      "Poland - Zloty": "폴란드 - 즐로티",
+      "Qatar - Riyal": "카타르 - 리얄",
+      "Saudi Arabia - Riyal": "사우디아라비아 - 리얄",
+      "Singapore - Dollar": "싱가포르 - 달러",
+      "South Africa - Rand": "남아프리카공화국 - 랜드",
+      "South Korea - Won": "대한민국 - 원",
+      "Sweden - Krona": "스웨덴 - 크로나",
+      "Switzerland - Franc": "스위스 - 프랑",
+      "Thailand - Baht": "태국 - 바트",
+      "Turkey - Lira": "터키 - 리라",
+      "Turkmenistan - Manat": "투르크메니스탄 - 마나트",
+      "Uganda - Shilling": "우간다 - 실링",
+      "Ukraine - Hryvnia": "우크라이나 - 흐리브냐",
+      "United Arab Emirates - Dirham": "아랍에미리트 - 디르함",
+      "Uruguay - Peso": "우루과이 - 페소",
+      "Uzbekistan - Som": "우즈베키스탄 - 솜",
+      "Vanuatu - Vatu": "바누아투 - 바투",
+      "Venezuela - Bolívar Soberano": "베네수엘라 - 볼리바르 소베라노",
+      "Vietnam - Dong": "베트남 - 동",
+      "Yemen - Rial": "예멘 - 리알"
+    }
+  }
+}

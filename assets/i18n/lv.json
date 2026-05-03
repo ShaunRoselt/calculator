@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kalkulators",
+    "name": "Kalkulators"
+  },
+  "common": {
+    "back": "Atpakaļ",
+    "backspace": "Atkāpšanās atkāpe",
+    "closeSidePanel": "Aizvērt paneli"
+  },
+  "converter": {
+    "unitConverter": "Vienību pārveidotājs",
+    "title": "Vienību pārveidotāji",
+    "builtInCollections": "Iebūvētas kolekcijas",
+    "category": "Kategorija",
+    "from": "No",
+    "to": "Kam",
+    "inputValue": "Konvertējamā vērtība",
+    "convertedValue": "Konvertētā vērtība",
+    "swapUnits": "Mainīt vienības",
+    "keypad": "Konvertora tastatūra",
+    "unit": "vienība",
+    "unitOptions": "vienības iespējas",
+    "currency": {
+      "updatingRates": "Notiek tarifu atjaunināšana…",
+      "updateRates": "Atjaunināt tarifus",
+      "keypad": "Valūtas tastatūra",
+      "currency": "valūta",
+      "options": "valūtas iespējas",
+      "updated": "Atjaunināts {timestamp}",
+      "status": {
+        "mockNote": "Izspēlētas atsauces likmes atsevišķai lietotnes demonstrācijai.",
+        "fetching": "Notiek jaunāko USD atsauces likmju iegūšana...",
+        "liveRatesLoaded": "Tiešraides kursi, kas ielādēti no ExchangeRate-API.",
+        "liveUpdateUnavailable": "Tiešraides atjauninājums nav pieejams. Atsvaidzināti demonstrācijas tarifi uz vietas."
+      }
+    },
+    "aboutEqualTo": "Apmēram vienāds ar"
+  },
+  "errors": {
+    "invalidInput": "Nederīga ievade",
+    "cannotDivideByZero": "Nevar dalīt ar nulli",
+    "cannotModuloByZero": "Nevar modulēt par nulli",
+    "invalidProgrammerOperation": "Nederīga darbība",
+    "overflow": "Rezultāts ir pārāk liels"
+  },
+  "date": {
+    "calculationMode": "Aprēķina režīms",
+    "from": "No",
+    "to": "Kam",
+    "results": {
+      "difference": "Atšķirība",
+      "sameDates": "Tie paši datumi",
+      "date": "Datums"
+    },
+    "calculationModeOptions": "Aprēķinu režīma opcijas",
+    "mode": {
+      "difference": "Atšķirība",
+      "shift": "Shift"
+    },
+    "operation": "Darbība",
+    "add": "Pievienot",
+    "subtract": "Atņemt",
+    "years": "Gadi",
+    "months": "Mēneši",
+    "days": "Dienas",
+    "chooseDate": "Izvēlieties datumu",
+    "previousMonth": "Iepriekšējais mēnesis",
+    "nextMonth": "Nākammēnes",
+    "duration": {
+      "year": {
+        "one": "{count} gads",
+        "other": "{count} gadi"
+      },
+      "month": {
+        "one": "{count} mēnesis",
+        "other": "{count} mēneši"
+      },
+      "week": {
+        "one": "{count} nedēļa",
+        "other": "{count} nedēļas"
+      },
+      "day": {
+        "one": "{count} diena",
+        "other": "{count} dienas"
+      }
+    },
+    "history": {
+      "differenceBetween": "Atšķirība starp {from} un {to}",
+      "addTo": "Pievienot {duration} mapei {date}",
+      "subtractFrom": "Atņemiet {duration} no {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Pārbaudiet izcelto izteiksmi",
+    "enterExpression": "Ievadiet izteiksmi",
+    "canvas": "Grafu audekls",
+    "stopTracing": "Pārtraukt izsekošanu",
+    "startTracing": "Sāciet izsekošanu",
+    "share": "Kopīgot",
+    "options": "Opcijas",
+    "zoomIn": "Tuvināt",
+    "zoomInLabel": "Tuvināt",
+    "zoomOut": "Tālināt",
+    "zoomOutLabel": "Tālināt",
+    "refreshViewAutomatically": "Automātiski atsvaidzināt skatu",
+    "view": "Skatīt",
+    "expressions": "Izteiksmes",
+    "mobileView": "Mobilais skats",
+    "showGraph": "Rādīt diagrammu",
+    "showExpressions": "Rādīt izteiksmes",
+    "backToFunctionList": "Atpakaļ uz funkciju sarakstu",
+    "window": "Logs",
+    "resetView": "Atiestatīt skatu",
+    "units": "Vienības",
+    "radians": "Radiāni",
+    "degrees": "Grādi",
+    "gradians": "Gradiāni",
+    "lineThickness": "Līnijas biezums",
+    "theme": "Motīvs",
+    "alwaysLight": "Vienmēr gaišs",
+    "matchAppTheme": "Saskaņojiet lietotnes motīvu",
+    "groups": {
+      "inequalities": "Nevienlīdzība",
+      "trigonometry": "Trigonometrija",
+      "function": "Funkcija"
+    },
+    "functions": "Funkcijas",
+    "showEquation": "Rādīt vienādojumu",
+    "hideEquation": "Slēpt vienādojumu",
+    "lineOptions": "Līnijas opcijas",
+    "color": "Krāsa",
+    "style": "Stils",
+    "analysis": {
+      "title": "Analīze",
+      "domain": "Domēns",
+      "range": "Diapazons",
+      "xIntercept": "x-pārtveršana",
+      "yIntercept": "y-pārtveršana",
+      "minima": "Minimums",
+      "maxima": "Maksimāli",
+      "inflectionPoints": "Līkuma punkti",
+      "verticalAsymptotes": "Vertikālās asimptotes",
+      "horizontalAsymptotes": "Horizontālās asimptotes",
+      "obliqueAsymptotes": "Slīpi asimptoti",
+      "parity": "Paritāte",
+      "period": "Periods",
+      "monotonicity": "Monotoniskums",
+      "domainNone": "Nav domēna ierobežojumu",
+      "rangeNone": "Nav diapazona ierobežojumu",
+      "xInterceptNone": "Nav x pārtveršanas",
+      "yInterceptNone": "Nav y-pārtveršanas",
+      "minimaNone": "Nav minimumu",
+      "maximaNone": "Nav maksimumu",
+      "inflectionNone": "Nav pagrieziena punktu",
+      "verticalAsymptotesNone": "Nav vertikālu asimptotu",
+      "horizontalAsymptotesNone": "Nav horizontālu asimptotu",
+      "obliqueAsymptotesNone": "Nav slīpu asimptotu",
+      "parityUnknown": "Nezināms",
+      "parityOdd": "Nepāra",
+      "parityEven": "Pat",
+      "parityNeither": "Ne viens, ne otrs",
+      "periodicityUnknown": "Nezināms",
+      "periodicityNotPeriodic": "Nav periodisks",
+      "monotonicityConstant": "Pastāvīga",
+      "monotonicityIncreasing": "Pieaug",
+      "monotonicityDecreasing": "Samazinās",
+      "monotonicityUnknown": "Nezināms",
+      "monotonicityError": "Nevar noteikt",
+      "featureTooComplexPlural": "Pārāk sarežģīti analizēt",
+      "analysisCouldNotBePerformed": "Analīzi nevarēja veikt",
+      "analysisNotSupported": "Analīze netiek atbalstīta",
+      "variableIsNotX": "Mainīgais nav x"
+    },
+    "plottingExpressions": "{count} izteiksmju uzzīmēšana",
+    "xMin": "X min",
+    "xMax": "X maks",
+    "yMin": "Y-min",
+    "yMax": "Y-maks",
+    "selectExpression": "Atlasīt izteiksmi {index}",
+    "expressionIndex": "Izteiksme {index}",
+    "analyzeFunction": "Analizēt funkciju",
+    "changeEquationStyle": "Mainiet vienādojuma stilu",
+    "removeEquation": "Noņemt vienādojumu",
+    "lineStyle": {
+      "solid": "Stingras līnijas stils",
+      "dash": "Svītru līnijas stils",
+      "dot": "Punktu līnijas stils"
+    }
+  },
+  "history": {
+    "empty": "Vēsture ir tukša",
+    "clearAll": "Notīrīt visu",
+    "clear": "Notīrīt vēsturi",
+    "title": "Vēsture",
+    "andMemory": "Vēsture un atmiņa",
+    "aria": {
+      "historyPanel": "Vēstures panelis",
+      "historyAndMemoryPanel": "Vēstures un atmiņas panelis"
+    },
+    "closeFlyout": "Aizvērt vēsturi",
+    "openFlyout": "Atvērt vēsturi"
+  },
+  "memory": {
+    "empty": "Atmiņa ir tukša",
+    "clearItem": "Notīrīt vienumu",
+    "addCurrentValue": "Pievienojiet pašreizējo vērtību",
+    "subtractCurrentValue": "Atņemiet pašreizējo vērtību",
+    "clearAll": "Notīrīt visu",
+    "clear": "Notīrīt atmiņu",
+    "title": "Atmiņa",
+    "controls": "Atmiņas vadīklas",
+    "tooltips": {
+      "clearAll": "Iztīrīt visu atmiņu",
+      "recall": "Atsaukt no atmiņas",
+      "add": "Pievienot atmiņai",
+      "subtract": "Atņemiet no atmiņas",
+      "store": "Saglabāt atmiņā"
+    },
+    "recallValue": "Atsaukt atmiņu {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigācija",
+      "closeNavigation": "Aizvērt navigāciju",
+      "openNavigation": "Atvērt navigāciju"
+    },
+    "groups": {
+      "calculator": "Kalkulators",
+      "converter": "Konvertors"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bitu pārslēgšanas panelis",
+    "baseReadouts": "Bāzes rādījumi",
+    "surfaceMode": "Virsmas režīms",
+    "fullKeypad": "Pilna tastatūra",
+    "showKeypad": "Rādīt tastatūru",
+    "bitTogglingKeypad": "Bitu pārslēgšanas tastatūra",
+    "showBitView": "Rādīt bitu skatu",
+    "wordSize": "Vārda lielums",
+    "bitwise": "Bitu veidā",
+    "bitShift": "Bitu maiņa"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometrija",
+      "function": "Funkcija",
+      "functionsAria": "Funkcijas",
+      "trigonometricFunctionsAria": "Trigonometriskās funkcijas",
+      "angleUnit": "Leņķa mērvienība {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Izskats",
+      "themeTitle": "Motīvs",
+      "themeDescription": "Izvēlieties krāsu shēmu",
+      "light": "Gaisma",
+      "dark": "Tumšs",
+      "blue": "Zils",
+      "green": "Zaļš",
+      "system": "Sistēma"
+    },
+    "language": {
+      "group": "Valoda",
+      "title": "Valoda",
+      "description": "Izvēlieties vēlamo valodu"
+    },
+    "about": {
+      "group": "Par"
+    },
+    "feedback": "Sūtiet atsauksmes",
+    "contribute": {
+      "prefix": "Piedalieties",
+      "link": "GitHub",
+      "suffix": ", lai palīdzētu uzlabot šo kalkulatoru"
+    },
+    "links": {
+      "repository": "Projekta krātuve",
+      "readme": "LASĪT",
+      "license": "MIT licence"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standarta",
+      "subtitle": "Klasisks tūlītējs novērtējums"
+    },
+    "scientific": {
+      "label": "Zinātniski",
+      "subtitle": "Operatoru, funkciju un izteiksmju atbalsts"
+    },
+    "graphing": {
+      "label": "Grafēšana",
+      "subtitle": "Uzzīmējiet vienkāršu izteiksmi Dekarta plaknē"
+    },
+    "programmer": {
+      "label": "Programmētājs",
+      "subtitle": "Vesela skaitļa matemātika ar bāzes reklāmguvumu"
+    },
+    "date": {
+      "label": "Datuma aprēķins",
+      "subtitle": "Atrodiet ilgumus un maiņas datumus"
+    },
+    "currency": {
+      "label": "Valūta",
+      "subtitle": "Konvertējiet viltotus valūtas maiņas kursus"
+    },
+    "volume": {
+      "label": "Skaļums",
+      "subtitle": "Konvertējiet skaļuma mērījumus"
+    },
+    "length": {
+      "label": "Garums",
+      "subtitle": "Konvertējiet attāluma un garuma vienības"
+    },
+    "weight": {
+      "label": "Svars un masa",
+      "subtitle": "Konvertējiet svara un masas vienības"
+    },
+    "temperature": {
+      "label": "Temperatūra",
+      "subtitle": "Konvertējiet temperatūras skalas"
+    },
+    "energy": {
+      "label": "Enerģija",
+      "subtitle": "Konvertējiet enerģijas mērījumus"
+    },
+    "area": {
+      "label": "Apgabals",
+      "subtitle": "Konvertējiet laukuma mērījumus"
+    },
+    "speed": {
+      "label": "Ātrums",
+      "subtitle": "Konvertējiet ātruma mērījumus"
+    },
+    "time": {
+      "label": "Laiks",
+      "subtitle": "Konvertējiet laika mērījumus"
+    },
+    "power": {
+      "label": "Jauda",
+      "subtitle": "Konvertējiet jaudas mērījumus"
+    },
+    "data": {
+      "label": "Dati",
+      "subtitle": "Konvertējiet digitālās atmiņas vienības"
+    },
+    "pressure": {
+      "label": "Spiediens",
+      "subtitle": "Konvertējiet spiediena vienības"
+    },
+    "angle": {
+      "label": "Leņķis",
+      "subtitle": "Konvertējiet leņķa mērījumus"
+    },
+    "settings": {
+      "label": "Iestatījumi",
+      "subtitle": "Izskats un lietotņu informācija"
+    }
+  },
+  "categories": {
+    "Currency": "Valūta",
+    "Volume": "Skaļums",
+    "Length": "Garums",
+    "Mass": "Sv",
+    "Temperature": "Temperatūra",
+    "Energy": "Enerģija",
+    "Area": "Apgabals",
+    "Speed": "Ātrums",
+    "Time": "Laiks",
+    "Power": "Jauda",
+    "Data": "Dati",
+    "Pressure": "Spiediens",
+    "Angle": "Leņķis"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanometri",
+      "Microns": "Mikroni",
+      "Millimeters": "Milimetri",
+      "Centimeters": "Centimetri",
+      "Meters": "Metri",
+      "Kilometers": "Kilometri",
+      "Inches": "collas",
+      "Feet": "Pēdas",
+      "Yards": "Jardi",
+      "Miles": "Jūdzes",
+      "Nautical miles": "Jūras jūdzes",
+      "paperclips": "saspraudītes",
+      "hands": "rokas",
+      "jumbo jets": "jūmbo lidmašīnām",
+      "Carats": "Karāti",
+      "Milligrams": "Mligrami",
+      "Centigrams": "Centigrami",
+      "Decigrams": "Decigrami",
+      "Grams": "Gramos",
+      "Dekagrams": "Dekagrammas",
+      "Hectograms": "Hektogrammas",
+      "Kilograms": "Kilogrami",
+      "Metric tonnes": "Metriskās tonnas",
+      "Ounces": "Unces",
+      "Pounds": "Mārciņas",
+      "Stone": "Akmens",
+      "Short tons (US)": "Īsas tonnas (ASV)",
+      "Long tons (UK)": "Garas tonnas (Apvienotā Karaliste)",
+      "snowflakes": "sniegpārslas",
+      "soccer balls": "futbola bumbas",
+      "elephants": "ziloņi",
+      "whales": "vaļi",
+      "Celsius": "Celsija",
+      "Fahrenheit": "Fārenheita",
+      "Kelvin": "Kelvins",
+      "Milliliters": "Militri",
+      "Cubic centimeters": "Kubikcentimetri",
+      "Liters": "Litri",
+      "Cubic meters": "Kubikmetri",
+      "Teaspoons (US)": "Tējkarotes (ASV)",
+      "Tablespoons (US)": "Ēdamkarotes (ASV)",
+      "Fluid ounces (US)": "Šķidruma unces (ASV)",
+      "Cups (US)": "Kauss (ASV)",
+      "Pints (US)": "Pints (ASV)",
+      "Quarts (US)": "Kvarti (ASV)",
+      "Gallons (US)": "Galoni (ASV)",
+      "Cubic inches": "Kubikcollas",
+      "Cubic feet": "Kubpēdas",
+      "Cubic yards": "Kubikjardi",
+      "Teaspoons (UK)": "Tējkarotes (AK)",
+      "Tablespoons (UK)": "Ēdamkarotes (Apvienotā Karaliste)",
+      "Fluid ounces (UK)": "Šķidruma unces (Apvienotā Karaliste)",
+      "Pints (UK)": "Pints (Apvienotā Karaliste)",
+      "Quarts (UK)": "Kvarts (Lielbritānija)",
+      "Gallons (UK)": "Galoni (Apvienotā Karaliste)",
+      "coffee cups": "kafijas krūzes",
+      "bathtubs": "vannas",
+      "swimming pools": "peldbaseini",
+      "Square millimeters": "Kvadrātmilimetri",
+      "Square centimeters": "Kvadrātcentimetri",
+      "Square meters": "Kvadrātmetri",
+      "Hectares": "Hektāri",
+      "Square kilometers": "Kvadrātkilometri",
+      "Square inches": "Kvadrātcollas",
+      "Square feet": "Kvadrātpēdas",
+      "Square yards": "Kvadrātjardi",
+      "Acres": "Akriem",
+      "Square miles": "Kvadrātjūdzes",
+      "sheets of paper": "papīra loksnes",
+      "soccer fields": "futbola laukumi",
+      "castles": "pils",
+      "Pyeong": "Pjona",
+      "Centimeters per second": "Centimetri sekundē",
+      "Meters per second": "Metri sekundē",
+      "Kilometers per hour": "Kilometri stundā",
+      "Feet per second": "Pēdas sekundē",
+      "Miles per hour": "Jūdzes stundā",
+      "Knots": "Mezgli",
+      "Mach": "Mach",
+      "turtles": "bruņurupuči",
+      "horses": "zirgi",
+      "jets": "strūklas",
+      "Watts": "vati",
+      "Kilowatts": "Kilovati",
+      "Horsepower (US)": "Zirgspēki (ASV)",
+      "Foot-pounds/minute": "Pēdas-mārciņas minūtē",
+      "BTUs/minute": "BTU minūtē",
+      "light bulbs": "spuldzes",
+      "train engines": "vilcienu dzinēji",
+      "Thermal calories": "Termiskās kalorijas",
+      "Food calories": "Pārtikas kalorijas",
+      "British thermal units": "Lielbritānijas siltuma vienības",
+      "Kilojoules": "Kilodžouli",
+      "Kilowatt-hours": "Kilovatstundas",
+      "Electron volts": "Elektronu volti",
+      "Joules": "Džouli",
+      "Foot-pounds": "Pēdas-mārciņas",
+      "batteries": "akumulatori",
+      "bananas": "banāni",
+      "slices of cake": "kūkas šķēles",
+      "Bits": "Biti",
+      "Nibble": "Knibināt",
+      "Bytes": "Baiti",
+      "Kilobits": "Kilobiti",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "Kilobaiti",
+      "Kibibytes": "Kibibaiti",
+      "Megabits": "Megabiti",
+      "Mebibits": "Mebibiti",
+      "Megabytes": "Megabaiti",
+      "Mebibytes": "Mebibaiti",
+      "Gigabits": "Gigabiti",
+      "Gibibits": "Gibibiti",
+      "Gigabytes": "Gigabaiti",
+      "Gibibytes": "Gibibaiti",
+      "Terabits": "Terabīti",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabaiti",
+      "Tebibytes": "Tebibaiti",
+      "Petabits": "Petabiti",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabaiti",
+      "Pebibytes": "Pebibaiti",
+      "Exabits": "Eksabits",
+      "Exbibits": "Izraksti",
+      "Exabytes": "Eksabaiti",
+      "Exbibytes": "Eksbibaiti",
+      "Zetabits": "Zetabiti",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabaiti",
+      "Zebibytes": "Zebibaiti",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Jobibits",
+      "Yottabytes": "Yotabaiti",
+      "Yobibytes": "Jobibaiti",
+      "floppy disks": "disketes",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "Atmosfēras",
+      "Bars": "Bāri",
+      "Kilopascals": "Kilopaskāli",
+      "Pascals": "Paskāls",
+      "Pounds per square inch": "Mārciņas uz kvadrātcollu",
+      "Degrees": "Grādi",
+      "Radians": "Radiāni",
+      "Gradians": "Gradiāni",
+      "Microseconds": "Mikrosekundes",
+      "Milliseconds": "Milisekundes",
+      "Seconds": "Sekundes",
+      "Minutes": "Minūtes",
+      "Hours": "Stundas",
+      "Days": "Dienas",
+      "Weeks": "Nedēļas",
+      "Years": "Gadi",
+      "Millimeters of mercury": "Millimeters of mercury"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "ASV dolārs",
+      "Euro": "Eiro",
+      "British Pound": "Lielbritānijas mārciņa",
+      "Japanese Yen": "Japānas jena",
+      "Canadian Dollar": "Kanādas dolārs",
+      "Australian Dollar": "Austrālijas dolārs",
+      "Brazilian Real": "Brazīlijas reāls",
+      "Chilean Peso": "Čīles peso",
+      "Chinese Yuan": "Ķīnas juaņa",
+      "Colombian Peso": "Kolumbijas peso",
+      "Danish Krone": "Dānijas krona",
+      "Egyptian Pound": "Ēģiptes mārciņa",
+      "Hong Kong Dollar": "Honkongas dolārs",
+      "Indian Rupee": "Indijas rūpija",
+      "Kenyan Shilling": "Kenijas šiliņš",
+      "Mexican Peso": "Meksikas peso",
+      "Nigerian Naira": "Nigērijas Naira",
+      "New Zealand Dollar": "Jaunzēlandes dolārs",
+      "Norwegian Krone": "Norvēģijas krona",
+      "Philippine Piso": "Filipīnu Pizo",
+      "Polish Zloty": "Polijas zlots",
+      "Qatari Riyal": "Kataras riāls",
+      "Saudi Riyal": "Saūda Arābijas riāls",
+      "Singapore Dollar": "Singapūras dolārs",
+      "South African Rand": "Dienvidāfrikas rands",
+      "South Korean Won": "Dienvidkorejas vona",
+      "Swedish Krona": "Zviedrijas krona",
+      "Swiss Franc": "Šveices franks",
+      "Thai Baht": "Taizemes bats",
+      "Turkish Lira": "Turcijas lira",
+      "Turkmenistani Manat": "Turkmenistānas manats",
+      "Ugandan Shilling": "Ugandas šiliņš",
+      "Ukrainian Hryvnia": "Ukrainas grivna",
+      "UAE Dirham": "AAE dirhēms",
+      "Uruguayan Peso": "Urugvajas peso",
+      "Uzbekistani Som": "Uzbekistānas Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venecuēlas Bolivars Soberano",
+      "Vietnamese Dong": "Vjetnamietis Dongs",
+      "Yemeni Rial": "Jemenas riāls"
+    },
+    "labels": {
+      "United States - Dollar": "ASV — dolārs",
+      "Europe - Euro": "Eiropa — eiro",
+      "United Kingdom - Pound": "Apvienotā Karaliste — mārciņa",
+      "Japan - Yen": "Japāna — jena",
+      "Canada - Dollar": "Kanāda — dolārs",
+      "Australia - Dollar": "Austrālija — dolārs",
+      "Brazil - Real": "Brazīlija — Real",
+      "Chile - Peso": "Čīle — peso",
+      "China - Yuan Renminbi": "Ķīna — juaņa renminbi",
+      "Colombia - Peso": "Kolumbija — peso",
+      "Denmark - Krone": "Dānija — krona",
+      "Egypt - Pound": "Ēģipte — mārciņa",
+      "Hong Kong SAR - Dollar": "Honkongas SAR — dolārs",
+      "India - Rupee": "Indija — rūpija",
+      "Kenya - Shilling": "Kenija — šiliņš",
+      "Mexico - Peso": "Meksika — peso",
+      "Nigeria - Naira": "Nigērija — Naira",
+      "New Zealand - Dollar": "Jaunzēlande — dolārs",
+      "Norway - Krone": "Norvēģija — krona",
+      "Philippines - Piso": "Filipīnas — Pizo",
+      "Poland - Zloty": "Polija — zlots",
+      "Qatar - Riyal": "Katara — riāls",
+      "Saudi Arabia - Riyal": "Saūda Arābija — riāls",
+      "Singapore - Dollar": "Singapūra — dolārs",
+      "South Africa - Rand": "Dienvidāfrika — Randa",
+      "South Korea - Won": "Dienvidkoreja — uzvarēja",
+      "Sweden - Krona": "Zviedrija — krona",
+      "Switzerland - Franc": "Šveice — franks",
+      "Thailand - Baht": "Taizeme — bats",
+      "Turkey - Lira": "Turcija — lira",
+      "Turkmenistan - Manat": "Turkmenistāna — Manata",
+      "Uganda - Shilling": "Uganda — šiliņš",
+      "Ukraine - Hryvnia": "Ukraina — grivna",
+      "United Arab Emirates - Dirham": "Apvienotie Arābu Emirāti — dirhēms",
+      "Uruguay - Peso": "Urugvaja — peso",
+      "Uzbekistan - Som": "Uzbekistāna — Som",
+      "Vanuatu - Vatu": "Vanuatu — Vatu",
+      "Venezuela - Bolívar Soberano": "Venecuēla — Bolivars Soberano",
+      "Vietnam - Dong": "Vjetnama — Donga",
+      "Yemen - Rial": "Jemena — Riāls"
+    }
+  }
+}

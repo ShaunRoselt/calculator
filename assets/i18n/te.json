@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "కాలిక్యులేటర్",
+    "name": "కాలిక్యులేటర్"
+  },
+  "common": {
+    "back": "వెనుకకు",
+    "backspace": "బ్యాక్‌స్పేస్",
+    "closeSidePanel": "ప్యానెల్‌ను మూసివేయండి"
+  },
+  "converter": {
+    "unitConverter": "యూనిట్ కన్వర్టర్",
+    "title": "యూనిట్ కన్వర్టర్లు",
+    "builtInCollections": "అంతర్నిర్మిత సేకరణలు",
+    "category": "వర్గం",
+    "from": "నుండి",
+    "to": "వీరికి",
+    "inputValue": "మార్పు చేయాల్సిన విలువ",
+    "convertedValue": "విలువ మార్చబడింది",
+    "swapUnits": "విభాగాలను మార్చుకోండి",
+    "keypad": "కన్వర్టర్ కీప్యాడ్",
+    "unit": "యూనిట్",
+    "unitOptions": "యూనిట్ ఎంపికలు",
+    "currency": {
+      "updatingRates": "రేట్లను నవీకరిస్తోంది…",
+      "updateRates": "రేట్లను నవీకరించండి",
+      "keypad": "కరెన్సీ కీప్యాడ్",
+      "currency": "కరెన్సీ",
+      "options": "కరెన్సీ ఎంపికలు",
+      "updated": "నవీకరించబడింది {timestamp}",
+      "status": {
+        "mockNote": "స్వతంత్ర యాప్ డెమో కోసం మాక్ రిఫరెన్స్ రేట్లు.",
+        "fetching": "తాజా USD సూచన రేట్లను పొందుతోంది...",
+        "liveRatesLoaded": "ప్రత్యక్ష ధరలు ExchangeRate-API నుండి లోడ్ చేయబడ్డాయి.",
+        "liveUpdateUnavailable": "ప్రత్యక్ష నవీకరణ అందుబాటులో లేదు. స్థానికంగా డెమో రేట్లు రిఫ్రెష్ చేయబడ్డాయి."
+      }
+    },
+    "aboutEqualTo": "సుమారు సమానం"
+  },
+  "errors": {
+    "invalidInput": "చెల్లని ఇన్‌పుట్",
+    "cannotDivideByZero": "సున్నాతో భాగించలేరు",
+    "cannotModuloByZero": "సున్నా ద్వారా మాడ్యులో చేయలేరు",
+    "invalidProgrammerOperation": "చెల్లని ఆపరేషన్",
+    "overflow": "ఫలితం చాలా పెద్దది"
+  },
+  "date": {
+    "calculationMode": "గణన మోడ్",
+    "from": "నుండి",
+    "to": "కి",
+    "results": {
+      "difference": "తేడా",
+      "sameDates": "అదే తేదీలు",
+      "date": "తేదీ"
+    },
+    "calculationModeOptions": "గణన మోడ్ ఎంపికలు",
+    "mode": {
+      "difference": "తేడా",
+      "shift": "షిఫ్ట్"
+    },
+    "operation": "ఆపరేషన్",
+    "add": "జోడించు",
+    "subtract": "తీసివేయండి",
+    "years": "సంవత్సరాలు",
+    "months": "నెలలు",
+    "days": "రోజులు",
+    "chooseDate": "తేదీని ఎంచుకోండి",
+    "previousMonth": "మునుపటి నెల",
+    "nextMonth": "వచ్చే నెల",
+    "duration": {
+      "year": {
+        "one": "{count} సంవత్సరం",
+        "other": "{count} సంవత్సరాలు"
+      },
+      "month": {
+        "one": "{count} నెల",
+        "other": "{count} నెలలు"
+      },
+      "week": {
+        "one": "{count} వారం",
+        "other": "{count} వారాలు"
+      },
+      "day": {
+        "one": "{count} రోజు",
+        "other": "{count} రోజులు"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from} మరియు {to} మధ్య వ్యత్యాసం",
+      "addTo": "{duration}ని {date}కి జోడించండి",
+      "subtractFrom": "{duration}ని {date} నుండి తీసివేయండి"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "హైలైట్ చేసిన వ్యక్తీకరణను తనిఖీ చేయండి",
+    "enterExpression": "ఒక వ్యక్తీకరణను నమోదు చేయండి",
+    "canvas": "గ్రాఫ్ కాన్వాస్",
+    "stopTracing": "ట్రేసింగ్ ఆపివేయండి",
+    "startTracing": "ట్రేసింగ్ ప్రారంభించండి",
+    "share": "భాగస్వామ్యం చేయండి",
+    "options": "ఎంపికలు",
+    "zoomIn": "జూమ్ ఇన్ చేయండి",
+    "zoomInLabel": "జూమ్ ఇన్ చేయండి",
+    "zoomOut": "జూమ్ అవుట్ చేయండి",
+    "zoomOutLabel": "జూమ్ అవుట్ చేయండి",
+    "refreshViewAutomatically": "వీక్షణను స్వయంచాలకంగా రిఫ్రెష్ చేయండి",
+    "view": "వీక్షణ",
+    "expressions": "వ్యక్తీకరణలు",
+    "mobileView": "మొబైల్ వీక్షణ",
+    "showGraph": "గ్రాఫ్‌ని చూపు",
+    "showExpressions": "వ్యక్తీకరణలను చూపు",
+    "backToFunctionList": "ఫంక్షన్ జాబితాకు తిరిగి వెళ్ళు",
+    "window": "విండో",
+    "resetView": "వీక్షణను రీసెట్ చేయండి",
+    "units": "యూనిట్లు",
+    "radians": "రేడియన్లు",
+    "degrees": "డిగ్రీలు",
+    "gradians": "గ్రేడియన్స్",
+    "lineThickness": "పంక్తి మందం",
+    "theme": "థీమ్",
+    "alwaysLight": "ఎల్లప్పుడూ కాంతి",
+    "matchAppTheme": "అనువర్తన థీమ్‌ను సరిపోల్చండి",
+    "groups": {
+      "inequalities": "అసమానతలు",
+      "trigonometry": "త్రికోణమితి",
+      "function": "ఫంక్షన్"
+    },
+    "functions": "ఫంక్షన్‌లు",
+    "showEquation": "సమీకరణాన్ని చూపు",
+    "hideEquation": "సమీకరణాన్ని దాచు",
+    "lineOptions": "లైన్ ఎంపికలు",
+    "color": "రంగు",
+    "style": "శైలి",
+    "analysis": {
+      "title": "విశ్లేషణ",
+      "domain": "డొమైన్",
+      "range": "పరిధి",
+      "xIntercept": "x-ఇంటర్‌సెప్ట్",
+      "yIntercept": "y-ఇంటర్‌సెప్ట్",
+      "minima": "కనీస",
+      "maxima": "గరిష్టంగా",
+      "inflectionPoints": "ఇన్‌ఫ్లెక్షన్ పాయింట్‌లు",
+      "verticalAsymptotes": "నిలువు లక్షణములు",
+      "horizontalAsymptotes": "క్షితిజ సమాంతర లక్షణములు",
+      "obliqueAsymptotes": "వాలుగా ఉన్న లక్షణములు",
+      "parity": "సమానత్వం",
+      "period": "కాలం",
+      "monotonicity": "మోనోటోనిసిటీ",
+      "domainNone": "డొమైన్ పరిమితులు లేవు",
+      "rangeNone": "పరిధి పరిమితులు లేవు",
+      "xInterceptNone": "x-అంతరాయాలు లేవు",
+      "yInterceptNone": "y-ఇంటర్‌సెప్ట్‌లు లేవు",
+      "minimaNone": "కనీసం లేదు",
+      "maximaNone": "గరిష్టం లేదు",
+      "inflectionNone": "ఇన్‌ఫ్లెక్షన్ పాయింట్‌లు లేవు",
+      "verticalAsymptotesNone": "నిలువు లక్షణములు లేవు",
+      "horizontalAsymptotesNone": "సమాంతర లక్షణములు లేవు",
+      "obliqueAsymptotesNone": "వాలుగా ఉండే లక్షణాలు లేవు",
+      "parityUnknown": "తెలియదు",
+      "parityOdd": "బేసి",
+      "parityEven": "సరి",
+      "parityNeither": "కాదు",
+      "periodicityUnknown": "తెలియదు",
+      "periodicityNotPeriodic": "ఆవర్తన కాదు",
+      "monotonicityConstant": "స్థిరమైనది",
+      "monotonicityIncreasing": "పెరుగుతోంది",
+      "monotonicityDecreasing": "తగ్గుతోంది",
+      "monotonicityUnknown": "తెలియదు",
+      "monotonicityError": "నిర్ధారించలేము",
+      "featureTooComplexPlural": "విశ్లేషణ చేయడం చాలా క్లిష్టంగా ఉంది",
+      "analysisCouldNotBePerformed": "విశ్లేషణ చేయడం సాధ్యపడలేదు",
+      "analysisNotSupported": "విశ్లేషణకు మద్దతు లేదు",
+      "variableIsNotX": "వేరియబుల్ x కాదు"
+    },
+    "plottingExpressions": "ప్లాటింగ్ {count} వ్యక్తీకరణలు",
+    "xMin": "X-నిమి",
+    "xMax": "X-మాక్స్",
+    "yMin": "Y-నిమి",
+    "yMax": "Y-Max",
+    "selectExpression": "వ్యవహారాన్ని ఎంచుకోండి {index}",
+    "expressionIndex": "వ్యక్తీకరణ {index}",
+    "analyzeFunction": "ఫంక్షన్‌ని విశ్లేషించండి",
+    "changeEquationStyle": "సమీకరణ శైలిని మార్చండి",
+    "removeEquation": "సమీకరణాన్ని తీసివేయండి",
+    "lineStyle": {
+      "solid": "ఘన పంక్తి శైలి",
+      "dash": "డాష్ లైన్ శైలి",
+      "dot": "డాట్ లైన్ శైలి"
+    }
+  },
+  "history": {
+    "empty": "చరిత్ర ఖాళీగా ఉంది",
+    "clearAll": "అన్నింటినీ క్లియర్ చేయండి",
+    "clear": "చరిత్రను క్లియర్ చేయండి",
+    "title": "చరిత్ర",
+    "andMemory": "చరిత్ర మరియు జ్ఞాపకం",
+    "aria": {
+      "historyPanel": "చరిత్ర ప్యానెల్",
+      "historyAndMemoryPanel": "చరిత్ర మరియు మెమరీ ప్యానెల్"
+    },
+    "closeFlyout": "చరిత్రను మూసివేయండి",
+    "openFlyout": "ఓపెన్ హిస్టరీ"
+  },
+  "memory": {
+    "empty": "మెమరీ ఖాళీగా ఉంది",
+    "clearItem": "అంశాన్ని క్లియర్ చేయండి",
+    "addCurrentValue": "ప్రస్తుత విలువను జోడించండి",
+    "subtractCurrentValue": "ప్రస్తుత విలువను తీసివేయి",
+    "clearAll": "అన్నింటినీ క్లియర్ చేయండి",
+    "clear": "మెమరీని క్లియర్ చేయండి",
+    "title": "జ్ఞాపకం",
+    "controls": "జ్ఞాపకశక్తి నియంత్రణలు",
+    "tooltips": {
+      "clearAll": "మొత్తం మెమరీని క్లియర్ చేయండి",
+      "recall": "మెమొరీ నుండి రీకాల్ చేయండి",
+      "add": "మెమొరీకి జోడించండి",
+      "subtract": "మెమొరీ నుండి తీసివేయి",
+      "store": "మెమొరీలో నిల్వ చేయండి"
+    },
+    "recallValue": "రీకాల్ మెమరీ {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "నావిగేషన్",
+      "closeNavigation": "నావిగేషన్‌ను మూసివేయండి",
+      "openNavigation": "నావిగేషన్‌ని తెరవండి"
+    },
+    "groups": {
+      "calculator": "కాలిక్యులేటర్",
+      "converter": "కన్వర్టర్"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "బిట్ ఫ్లిప్ ప్యానెల్",
+    "baseReadouts": "బేస్ రీడౌట్‌లు",
+    "surfaceMode": "ఉపరితల మోడ్",
+    "fullKeypad": "పూర్తి కీప్యాడ్",
+    "showKeypad": "కీప్యాడ్‌ని చూపు",
+    "bitTogglingKeypad": "బిట్ టోగుల్ కీప్యాడ్",
+    "showBitView": "బిట్ వీక్షణను చూపు",
+    "wordSize": "పద పరిమాణం",
+    "bitwise": "బిట్‌వైస్",
+    "bitShift": "బిట్ షిఫ్ట్"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "త్రికోణమితి",
+      "function": "ఫంక్షన్",
+      "functionsAria": "ఫంక్షన్‌లు",
+      "trigonometricFunctionsAria": "త్రికోణమితి విధులు",
+      "angleUnit": "కోణ యూనిట్ {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "ప్రదర్శన",
+      "themeTitle": "థీమ్",
+      "themeDescription": "రంగు పథకాన్ని ఎంచుకోండి",
+      "light": "కాంతి",
+      "dark": "ముదురు",
+      "blue": "నీలం",
+      "green": "ఆకుపచ్చ",
+      "system": "సిస్టమ్"
+    },
+    "language": {
+      "group": "భాష",
+      "title": "భాష",
+      "description": "మీ ప్రాధాన్య భాషను ఎంచుకోండి"
+    },
+    "about": {
+      "group": "గురించి"
+    },
+    "feedback": "అభిప్రాయాన్ని పంపండి",
+    "contribute": {
+      "prefix": "సహకారం అందించండి",
+      "link": "GitHub",
+      "suffix": "ఈ కాలిక్యులేటర్‌ని మెరుగుపరచడంలో సహాయపడటానికి"
+    },
+    "links": {
+      "repository": "ప్రాజెక్ట్ రిపోజిటరీ",
+      "readme": "చదవండి",
+      "license": "MIT లైసెన్స్"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "ప్రామాణికం",
+      "subtitle": "క్లాసిక్ తక్షణ మూల్యాంకనం"
+    },
+    "scientific": {
+      "label": "శాస్త్రీయమైనది",
+      "subtitle": "ఆపరేటర్లు, విధులు మరియు వ్యక్తీకరణ మద్దతు"
+    },
+    "graphing": {
+      "label": "గ్రాఫింగ్",
+      "subtitle": "కార్టీసియన్ ప్లేన్‌లో సరళమైన వ్యక్తీకరణను ప్లాట్ చేయండి"
+    },
+    "programmer": {
+      "label": "ప్రోగ్రామర్",
+      "subtitle": "ఆధార మార్పిడితో పూర్ణాంక గణిత"
+    },
+    "date": {
+      "label": "తేదీ గణన",
+      "subtitle": "వ్యవధులు మరియు షిఫ్ట్ తేదీలను కనుగొనండి"
+    },
+    "currency": {
+      "label": "కరెన్సీ",
+      "subtitle": "మాక్ ఎక్స్ఛేంజ్ రేట్లను మార్చండి"
+    },
+    "volume": {
+      "label": "వాల్యూమ్",
+      "subtitle": "వాల్యూమ్ కొలతలను మార్చండి"
+    },
+    "length": {
+      "label": "పొడవు",
+      "subtitle": "దూరం మరియు పొడవు యూనిట్‌లను మార్చండి"
+    },
+    "weight": {
+      "label": "బరువు మరియు బరువు",
+      "subtitle": "బరువు మరియు ద్రవ్యరాశి యూనిట్లను మార్చండి"
+    },
+    "temperature": {
+      "label": "ఉష్ణోగ్రత",
+      "subtitle": "ఉష్ణోగ్రత ప్రమాణాలను మార్చండి"
+    },
+    "energy": {
+      "label": "శక్తి",
+      "subtitle": "శక్తి కొలతలను మార్చండి"
+    },
+    "area": {
+      "label": "ప్రాంతం",
+      "subtitle": "ప్రాంత కొలతలను మార్చండి"
+    },
+    "speed": {
+      "label": "వేగం",
+      "subtitle": "వేగ కొలతలను మార్చండి"
+    },
+    "time": {
+      "label": "సమయం",
+      "subtitle": "సమయ కొలతలను మార్చండి"
+    },
+    "power": {
+      "label": "పవర్",
+      "subtitle": "పవర్ కొలతలను మార్చండి"
+    },
+    "data": {
+      "label": "డేటా",
+      "subtitle": "డిజిటల్ నిల్వ యూనిట్‌లను మార్చండి"
+    },
+    "pressure": {
+      "label": "ఒత్తిడి",
+      "subtitle": "పీడన యూనిట్లను మార్చండి"
+    },
+    "angle": {
+      "label": "కోణం",
+      "subtitle": "కోణ కొలతలను మార్చండి"
+    },
+    "settings": {
+      "label": "సెట్టింగ్‌లు",
+      "subtitle": "స్వరూపం మరియు అనువర్తన సమాచారం"
+    }
+  },
+  "categories": {
+    "Currency": "కరెన్సీ",
+    "Volume": "వాల్యూమ్",
+    "Length": "పొడవు",
+    "Mass": "మాస్",
+    "Temperature": "ఉష్ణోగ్రత",
+    "Energy": "శక్తి",
+    "Area": "ప్రాంతం",
+    "Speed": "వేగం",
+    "Time": "సమయం",
+    "Power": "పవర్",
+    "Data": "డేటా",
+    "Pressure": "ఒత్తిడి",
+    "Angle": "కోణం"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "ఆంగ్‌స్ట్రోమ్స్",
+      "Nanometers": "నానోమీటర్లు",
+      "Microns": "మైక్రాన్లు",
+      "Millimeters": "మిల్లీమీటర్లు",
+      "Centimeters": "సెంటీమీటర్లు",
+      "Meters": "మీటర్లు",
+      "Kilometers": "కిలోమీటర్లు",
+      "Inches": "అంగుళాలు",
+      "Feet": "అడుగులు",
+      "Yards": "గజాలు",
+      "Miles": "మైళ్లు",
+      "Nautical miles": "నాటికల్ మైళ్లు",
+      "paperclips": "పేపర్‌క్లిప్‌లు",
+      "hands": "చేతులు",
+      "jumbo jets": "జంబో జెట్‌లు",
+      "Carats": "క్యారెట్లు",
+      "Milligrams": "మిల్లీగ్రాములు",
+      "Centigrams": "సెంటిగ్రాములు",
+      "Decigrams": "డిసిగ్రామ్‌లు",
+      "Grams": "గ్రాములు",
+      "Dekagrams": "డెకాగ్రాములు",
+      "Hectograms": "హెక్టోగ్రామ్‌లు",
+      "Kilograms": "కిలోగ్రాములు",
+      "Metric tonnes": "మెట్రిక్ టన్నులు",
+      "Ounces": "ఔన్సులు",
+      "Pounds": "పౌండ్లు",
+      "Stone": "రాయి",
+      "Short tons (US)": "స్వల్ప టన్నులు (US)",
+      "Long tons (UK)": "లాంగ్ టన్నులు (UK)",
+      "snowflakes": "స్నోఫ్లేక్స్",
+      "soccer balls": "సాకర్ బంతులు",
+      "elephants": "ఏనుగులు",
+      "whales": "తిమింగలాలు",
+      "Celsius": "సెల్సియస్",
+      "Fahrenheit": "ఫారెన్‌హీట్",
+      "Kelvin": "కెల్విన్",
+      "Milliliters": "మిల్లీలీటర్లు",
+      "Cubic centimeters": "క్యూబిక్ సెంటీమీటర్లు",
+      "Liters": "లీటర్లు",
+      "Cubic meters": "క్యూబిక్ మీటర్లు",
+      "Teaspoons (US)": "టీస్పూన్లు (US)",
+      "Tablespoons (US)": "టేబుల్ స్పూన్లు (US)",
+      "Fluid ounces (US)": "ఫ్లూయిడ్ ఔన్సులు (US)",
+      "Cups (US)": "కప్‌లు (US)",
+      "Pints (US)": "పింట్లు (US)",
+      "Quarts (US)": "క్వార్ట్స్ (US)",
+      "Gallons (US)": "గ్యాలన్లు (US)",
+      "Cubic inches": "క్యూబిక్ అంగుళాలు",
+      "Cubic feet": "క్యూబిక్ అడుగులు",
+      "Cubic yards": "క్యూబిక్ గజాలు",
+      "Teaspoons (UK)": "టీస్పూన్లు (UK)",
+      "Tablespoons (UK)": "టేబుల్ స్పూన్లు (UK)",
+      "Fluid ounces (UK)": "ఫ్లూయిడ్ ఔన్సులు (UK)",
+      "Pints (UK)": "పింట్స్ (UK)",
+      "Quarts (UK)": "క్వార్ట్స్ (UK)",
+      "Gallons (UK)": "గ్యాలన్లు (UK)",
+      "coffee cups": "కాఫీ కప్పులు",
+      "bathtubs": "బాత్‌టబ్‌లు",
+      "swimming pools": "ఈత కొలనులు",
+      "Square millimeters": "చదరపు మిల్లీమీటర్లు",
+      "Square centimeters": "చదరపు సెంటీమీటర్లు",
+      "Square meters": "చదరపు మీటర్లు",
+      "Hectares": "హెక్టార్లు",
+      "Square kilometers": "చదరపు కిలోమీటర్లు",
+      "Square inches": "చదరపు అంగుళాలు",
+      "Square feet": "చదరపు అడుగులు",
+      "Square yards": "చదరపు గజాలు",
+      "Acres": "ఎకరాలు",
+      "Square miles": "చదరపు మైళ్లు",
+      "sheets of paper": "కాగితపు షీట్‌లు",
+      "soccer fields": "సాకర్ ఫీల్డ్‌లు",
+      "castles": "కోటలు",
+      "Pyeong": "ప్యోంగ్",
+      "Centimeters per second": "సెకనుకు సెంటీమీటర్లు",
+      "Meters per second": "సెకనుకు మీటర్లు",
+      "Kilometers per hour": "గంటకు కిలోమీటర్లు",
+      "Feet per second": "అడుగులు సెకనుకు",
+      "Miles per hour": "గంటకు మైళ్లు",
+      "Knots": "నాట్లు",
+      "Mach": "మాచ్",
+      "turtles": "తాబేళ్లు",
+      "horses": "గుర్రాలు",
+      "jets": "జెట్‌లు",
+      "Watts": "వాట్స్",
+      "Kilowatts": "కిలోవాట్లు",
+      "Horsepower (US)": "హార్స్ పవర్ (US)",
+      "Foot-pounds/minute": "అడుగు-పౌండ్లు/నిమిషం",
+      "BTUs/minute": "BTUలు/నిమిషం",
+      "light bulbs": "లైట్ బల్బులు",
+      "train engines": "రైలు ఇంజన్లు",
+      "Thermal calories": "థర్మల్ కేలరీలు",
+      "Food calories": "ఆహార కేలరీలు",
+      "British thermal units": "బ్రిటీష్ థర్మల్ యూనిట్లు",
+      "Kilojoules": "కిలోజౌల్స్",
+      "Kilowatt-hours": "కిలోవాట్-గంటలు",
+      "Electron volts": "ఎలక్ట్రాన్ వోల్ట్‌లు",
+      "Joules": "జౌల్స్",
+      "Foot-pounds": "అడుగు-పౌండ్లు",
+      "batteries": "బ్యాటరీలు",
+      "bananas": "అరటిపండ్లు",
+      "slices of cake": "కేక్ ముక్కలు",
+      "Bits": "బిట్‌లు",
+      "Nibble": "నిబుల్",
+      "Bytes": "బైట్‌లు",
+      "Kilobits": "కిలోబిట్‌లు",
+      "Kibibits": "కిబిబిట్స్",
+      "Kilobytes": "కిలోబైట్లు",
+      "Kibibytes": "కిబిబైట్‌లు",
+      "Megabits": "మెగాబిట్‌లు",
+      "Mebibits": "మెబిబిట్‌లు",
+      "Megabytes": "మెగాబైట్‌లు",
+      "Mebibytes": "మెబిబైట్‌లు",
+      "Gigabits": "గిగాబిట్‌లు",
+      "Gibibits": "గిబిబిట్స్",
+      "Gigabytes": "గిగాబైట్‌లు",
+      "Gibibytes": "గిబిబైట్లు",
+      "Terabits": "టెరాబిట్స్",
+      "Tebibits": "టెబిబిట్స్",
+      "Terabytes": "టెరాబైట్‌లు",
+      "Tebibytes": "టెబిబైట్లు",
+      "Petabits": "పెటాబిట్స్",
+      "Pebibits": "పెబిబిట్‌లు",
+      "Petabytes": "పెటాబైట్‌లు",
+      "Pebibytes": "పెబిబైట్‌లు",
+      "Exabits": "ఎగ్జాబిట్స్",
+      "Exbibits": "ప్రదర్శనలు",
+      "Exabytes": "ఎక్సాబైట్‌లు",
+      "Exbibytes": "ఎక్స్‌బిబైట్‌లు",
+      "Zetabits": "జెటాబిట్స్",
+      "Zebibits": "జెబిబిట్స్",
+      "Zetabytes": "జెటాబైట్‌లు",
+      "Zebibytes": "జెబిబైట్లు",
+      "Yottabits": "యోటాబిట్స్",
+      "Yobibits": "యోబిబిట్స్",
+      "Yottabytes": "యోటాబైట్‌లు",
+      "Yobibytes": "యోబిబైట్‌లు",
+      "floppy disks": "ఫ్లాపీ డిస్క్‌లు",
+      "CDs": "CDలు",
+      "DVDs": "DVDలు",
+      "Atmospheres": "వాతావరణం",
+      "Bars": "బార్లు",
+      "Kilopascals": "కిలోపాస్కల్స్",
+      "Millimeters of mercury": "మిల్లీమీటర్ల పాదరసం",
+      "Pascals": "పాస్కల్స్",
+      "Pounds per square inch": "చదరపు అంగుళానికి పౌండ్లు",
+      "Degrees": "డిగ్రీలు",
+      "Radians": "రేడియన్లు",
+      "Gradians": "గ్రేడియన్స్",
+      "Microseconds": "మైక్రోసెకన్లు",
+      "Milliseconds": "మిల్లీసెకన్లు",
+      "Seconds": "సెకన్లు",
+      "Minutes": "నిమిషాలు",
+      "Hours": "గంటలు",
+      "Days": "రోజులు",
+      "Weeks": "వారాలు",
+      "Years": "సంవత్సరాలు"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "US డాలర్",
+      "Euro": "యూరో",
+      "British Pound": "బ్రిటీష్ పౌండ్",
+      "Japanese Yen": "జపనీస్ యెన్",
+      "Canadian Dollar": "కెనడియన్ డాలర్",
+      "Australian Dollar": "ఆస్ట్రేలియన్ డాలర్",
+      "Brazilian Real": "బ్రెజిలియన్ రియల్",
+      "Chilean Peso": "చిలీ పెసో",
+      "Chinese Yuan": "చైనీస్ యువాన్",
+      "Colombian Peso": "కొలంబియన్ పెసో",
+      "Danish Krone": "డానిష్ క్రోన్",
+      "Egyptian Pound": "ఈజిప్షియన్ పౌండ్",
+      "Hong Kong Dollar": "హాంకాంగ్ డాలర్",
+      "Indian Rupee": "భారత రూపాయి",
+      "Kenyan Shilling": "కెన్యా షిల్లింగ్",
+      "Mexican Peso": "మెక్సికన్ పెసో",
+      "Nigerian Naira": "నైజీరియన్ నైరా",
+      "New Zealand Dollar": "న్యూజిలాండ్ డాలర్",
+      "Norwegian Krone": "నార్వేజియన్ క్రోన్",
+      "Philippine Piso": "ఫిలిప్పైన్ పిసో",
+      "Polish Zloty": "పోలిష్ జ్లోటీ",
+      "Qatari Riyal": "ఖతారీ రియాల్",
+      "Saudi Riyal": "సౌదీ రియాల్",
+      "Singapore Dollar": "సింగపూర్ డాలర్",
+      "South African Rand": "దక్షిణాఫ్రికా రాండ్",
+      "South Korean Won": "దక్షిణ కొరియన్ వోన్",
+      "Swedish Krona": "స్వీడిష్ క్రోనా",
+      "Swiss Franc": "స్విస్ ఫ్రాంక్",
+      "Thai Baht": "థాయ్ బాట్",
+      "Turkish Lira": "టర్కిష్ లిరా",
+      "Turkmenistani Manat": "తుర్క్‌మెనిస్తానీ మనత్",
+      "Ugandan Shilling": "ఉగాండా షిల్లింగ్",
+      "Ukrainian Hryvnia": "ఉక్రేనియన్ హ్రివ్నియా",
+      "UAE Dirham": "UAE దిర్హామ్",
+      "Uruguayan Peso": "ఉరుగ్వే పెసో",
+      "Uzbekistani Som": "ఉజ్బెకిస్తానీ సోమ్",
+      "Vanuatu Vatu": "వనాటు వటు",
+      "Venezuelan Bolivar Soberano": "వెనిజులా బొలివర్ సోబెరానో",
+      "Vietnamese Dong": "వియత్నామీస్ డాంగ్",
+      "Yemeni Rial": "యెమెన్ రియాల్"
+    },
+    "labels": {
+      "United States - Dollar": "యునైటెడ్ స్టేట్స్ - డాలర్",
+      "Europe - Euro": "యూరప్ - యూరో",
+      "United Kingdom - Pound": "యునైటెడ్ కింగ్‌డమ్ - పౌండ్",
+      "Japan - Yen": "జపాన్ - యెన్",
+      "Canada - Dollar": "కెనడా - డాలర్",
+      "Australia - Dollar": "ఆస్ట్రేలియా - డాలర్",
+      "Brazil - Real": "బ్రెజిల్ - రియల్",
+      "Chile - Peso": "చిలీ - పెసో",
+      "China - Yuan Renminbi": "చైనా - యువాన్ రెన్మిన్బి",
+      "Colombia - Peso": "కొలంబియా - పెసో",
+      "Denmark - Krone": "డెన్మార్క్ - క్రోన్",
+      "Egypt - Pound": "ఈజిప్ట్ - పౌండ్",
+      "Hong Kong SAR - Dollar": "హాంకాంగ్ SAR - డాలర్",
+      "India - Rupee": "భారతదేశం - రూపాయి",
+      "Kenya - Shilling": "కెన్యా - షిల్లింగ్",
+      "Mexico - Peso": "మెక్సికో - పెసో",
+      "Nigeria - Naira": "నైజీరియా - నైరా",
+      "New Zealand - Dollar": "న్యూజిలాండ్ - డాలర్",
+      "Norway - Krone": "నార్వే - క్రోన్",
+      "Philippines - Piso": "ఫిలిప్పీన్స్ - పిసో",
+      "Poland - Zloty": "పోలాండ్ - జ్లోటీ",
+      "Qatar - Riyal": "ఖతార్ - రియాల్",
+      "Saudi Arabia - Riyal": "సౌదీ అరేబియా - రియాల్",
+      "Singapore - Dollar": "సింగపూర్ - డాలర్",
+      "South Africa - Rand": "దక్షిణాఫ్రికా - రాండ్",
+      "South Korea - Won": "దక్షిణ కొరియా - గెలిచింది",
+      "Sweden - Krona": "స్వీడన్ - క్రోనా",
+      "Switzerland - Franc": "స్విట్జర్లాండ్ - ఫ్రాంక్",
+      "Thailand - Baht": "థాయిలాండ్ - భాట్",
+      "Turkey - Lira": "టర్కీ - లిరా",
+      "Turkmenistan - Manat": "తుర్క్‌మెనిస్తాన్ - మనత్",
+      "Uganda - Shilling": "ఉగాండా - షిల్లింగ్",
+      "Ukraine - Hryvnia": "ఉక్రెయిన్ - హ్రివ్నియా",
+      "United Arab Emirates - Dirham": "యునైటెడ్ అరబ్ ఎమిరేట్స్ - దిర్హామ్",
+      "Uruguay - Peso": "ఉరుగ్వే - పెసో",
+      "Uzbekistan - Som": "ఉజ్బెకిస్తాన్ - సోమ్",
+      "Vanuatu - Vatu": "వనాటు - వటు",
+      "Venezuela - Bolívar Soberano": "వెనిజులా - బోలివర్ సోబెరానో",
+      "Vietnam - Dong": "వియత్నాం - డాంగ్",
+      "Yemen - Rial": "యెమెన్ - రియాల్"
+    }
+  }
+}

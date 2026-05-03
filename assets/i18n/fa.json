@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "ماشین حساب",
+    "name": "ماشین حساب"
+  },
+  "common": {
+    "back": "بازگشت",
+    "backspace": "Backspace",
+    "closeSidePanel": "پانل را ببندید"
+  },
+  "converter": {
+    "unitConverter": "تبدیل واحد",
+    "title": "مبدل واحد",
+    "builtInCollections": "مجموعه‌های داخلی",
+    "category": "دسته",
+    "from": "از",
+    "to": "به",
+    "inputValue": "مقداری برای تبدیل",
+    "convertedValue": "مقدار تبدیل شده",
+    "swapUnits": "واحدها را تعویض کنید",
+    "keypad": "صفحه‌کلید مبدل",
+    "unit": "واحد",
+    "unitOptions": "گزینه‌های واحد",
+    "currency": {
+      "updatingRates": "در حال به‌روزرسانی نرخ‌ها…",
+      "updateRates": "نرخ‌های به‌روزرسانی",
+      "keypad": "صفحه‌کلید ارز",
+      "currency": "ارز",
+      "options": "گزینه‌های ارز",
+      "updated": "به‌روزرسانی شد {timestamp}",
+      "status": {
+        "mockNote": "نرخ‌های مرجع ساختگی برای نسخه نمایشی برنامه مستقل.",
+        "fetching": "در حال واکشی آخرین نرخ‌های مرجع USD...",
+        "liveRatesLoaded": "نرخ‌های زنده از ExchangeRate-API بارگیری شده است.",
+        "liveUpdateUnavailable": "به‌روزرسانی زنده در دسترس نیست. نرخ های نسخه ی نمایشی به صورت محلی به روز شده است."
+      }
+    },
+    "aboutEqualTo": "تقریباً برابر با"
+  },
+  "errors": {
+    "invalidInput": "ورودی نامعتبر است",
+    "cannotDivideByZero": "نمی توان بر صفر تقسیم کرد",
+    "cannotModuloByZero": "نمی توان مدول صفر کرد",
+    "invalidProgrammerOperation": "عملیات نامعتبر است",
+    "overflow": "نتیجه خیلی بزرگ است"
+  },
+  "date": {
+    "calculationMode": "حالت محاسبه",
+    "from": "از",
+    "to": "به",
+    "results": {
+      "difference": "تفاوت",
+      "sameDates": "تاریخ یکسان",
+      "date": "تاریخ"
+    },
+    "calculationModeOptions": "گزینه‌های حالت محاسبه",
+    "mode": {
+      "difference": "تفاوت",
+      "shift": "شیفت"
+    },
+    "operation": "عملیات",
+    "add": "افزودن",
+    "subtract": "تفریق",
+    "years": "سال",
+    "months": "ماه",
+    "days": "روزها",
+    "chooseDate": "تاریخ را انتخاب کنید",
+    "previousMonth": "ماه قبل",
+    "nextMonth": "ماه آینده",
+    "duration": {
+      "year": {
+        "one": "{count} سال",
+        "other": "{count} سال"
+      },
+      "month": {
+        "one": "{count} ماه",
+        "other": "{count} ماه"
+      },
+      "week": {
+        "one": "{count} هفته",
+        "other": "{count} هفته"
+      },
+      "day": {
+        "one": "{count} روز",
+        "other": "{count} روز"
+      }
+    },
+    "history": {
+      "differenceBetween": "تفاوت بین {from} و {to}",
+      "addTo": "افزودن {duration} به {date}",
+      "subtractFrom": "کاهش {duration} از {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "عبارت برجسته شده را بررسی کنید",
+    "enterExpression": "یک عبارت را وارد کنید",
+    "canvas": "بوم نمودار",
+    "stopTracing": "ردیابی را متوقف کنید",
+    "startTracing": "ردیابی را شروع کنید",
+    "share": "به اشتراک بگذارید",
+    "options": "گزینه‌ها",
+    "zoomIn": "بزرگنمایی کنید",
+    "zoomInLabel": "بزرگنمایی کنید",
+    "zoomOut": "بزرگنمایی",
+    "zoomOutLabel": "بزرگنمایی",
+    "refreshViewAutomatically": "نما را به‌طور خودکار بازخوانی کنید",
+    "view": "مشاهده",
+    "expressions": "عبارات",
+    "mobileView": "نمای تلفن همراه",
+    "showGraph": "نمایش نمودار",
+    "showExpressions": "نمایش عبارات",
+    "backToFunctionList": "بازگشت به لیست عملکرد",
+    "window": "پنجره",
+    "resetView": "بازنشانی نمای",
+    "units": "واحدها",
+    "radians": "رادیان",
+    "degrees": "درجات",
+    "gradians": "گرادیان",
+    "lineThickness": "ضخامت خط",
+    "theme": "موضوع",
+    "alwaysLight": "همیشه سبک",
+    "matchAppTheme": "تطابق با تم برنامه",
+    "groups": {
+      "inequalities": "نابرابری‌ها",
+      "trigonometry": "مثلثات",
+      "function": "عملکرد"
+    },
+    "functions": "عملکردها",
+    "showEquation": "نمایش معادله",
+    "hideEquation": "پنهان کردن معادله",
+    "lineOptions": "گزینه‌های خط",
+    "color": "رنگ",
+    "style": "سبک",
+    "analysis": {
+      "title": "تجزیه و تحلیل",
+      "domain": "دامنه",
+      "range": "محدوده",
+      "xIntercept": "x-intercept",
+      "yIntercept": "تقاطع y",
+      "minima": "حداقل",
+      "maxima": "ماکسیما",
+      "inflectionPoints": "نقاط عطف",
+      "verticalAsymptotes": "مجانب عمودی",
+      "horizontalAsymptotes": "مجانب افقی",
+      "obliqueAsymptotes": "مجانب مایل",
+      "parity": "تعادل",
+      "period": "دوره",
+      "monotonicity": "یکنواختی",
+      "domainNone": "بدون محدودیت دامنه",
+      "rangeNone": "بدون محدودیت محدوده",
+      "xInterceptNone": "بدون x-intercept",
+      "yInterceptNone": "بدون وقفه y",
+      "minimaNone": "بدون حداقل",
+      "maximaNone": "بدون حداکثر",
+      "inflectionNone": "بدون نقطه عطف",
+      "verticalAsymptotesNone": "بدون مجانب عمودی",
+      "horizontalAsymptotesNone": "بدون مجانب افقی",
+      "obliqueAsymptotesNone": "بدون مجانب مایل",
+      "parityUnknown": "ناشناس",
+      "parityOdd": "فرد",
+      "parityEven": "حتی",
+      "parityNeither": "هیچکدام",
+      "periodicityUnknown": "ناشناس",
+      "periodicityNotPeriodic": "دوره ای نیست",
+      "monotonicityConstant": "ثابت",
+      "monotonicityIncreasing": "در حال افزایش است",
+      "monotonicityDecreasing": "کاهش",
+      "monotonicityUnknown": "ناشناس",
+      "monotonicityError": "نمی توان تعیین کرد",
+      "featureTooComplexPlural": "برای تجزیه و تحلیل خیلی پیچیده است",
+      "analysisCouldNotBePerformed": "تحلیل انجام نشد",
+      "analysisNotSupported": "تحلیل پشتیبانی نمی‌شود",
+      "variableIsNotX": "متغیر x نیست"
+    },
+    "plottingExpressions": "تصویر {count} عبارت",
+    "xMin": "X-min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "انتخاب عبارت {index}",
+    "expressionIndex": "عبارت {index}",
+    "analyzeFunction": "تجزیه و تحلیل تابع",
+    "changeEquationStyle": "سبک معادله را تغییر دهید",
+    "removeEquation": "حذف معادله",
+    "lineStyle": {
+      "solid": "سبک خط یکپارچه",
+      "dash": "سبک خط خط تیره",
+      "dot": "سبک خط نقطه"
+    }
+  },
+  "history": {
+    "empty": "تاریخچه خالی است",
+    "clearAll": "پاک کردن همه",
+    "clear": "پاک کردن سابقه",
+    "title": "تاریخچه",
+    "andMemory": "تاریخچه و حافظه",
+    "aria": {
+      "historyPanel": "پانل تاریخچه",
+      "historyAndMemoryPanel": "پانل تاریخچه و حافظه"
+    },
+    "closeFlyout": "بستن سابقه",
+    "openFlyout": "باز کردن سابقه"
+  },
+  "memory": {
+    "empty": "حافظه خالی است",
+    "clearItem": "مورد را پاک کنید",
+    "addCurrentValue": "مقدار فعلی را اضافه کنید",
+    "subtractCurrentValue": "مقدار فعلی را کم کنید",
+    "clearAll": "پاک کردن همه",
+    "clear": "حافظه را پاک کنید",
+    "title": "حافظه",
+    "controls": "کنترل‌های حافظه",
+    "tooltips": {
+      "clearAll": "تمام حافظه را پاک کنید",
+      "recall": "یادآوری از حافظه",
+      "add": "افزودن به حافظه",
+      "subtract": "از حافظه کم کنید",
+      "store": "ذخیره در حافظه"
+    },
+    "recallValue": "حافظه یادآوری {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "ناوبری",
+      "closeNavigation": "پیمایش را ببندید",
+      "openNavigation": "پیمایش را باز کنید"
+    },
+    "groups": {
+      "calculator": "ماشین حساب",
+      "converter": "مبدل"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "پانل چرخشی بیتی",
+    "baseReadouts": "بازخوانی‌های پایه",
+    "surfaceMode": "حالت سطحی",
+    "fullKeypad": "صفحه‌کلید کامل",
+    "showKeypad": "نمایش صفحه کلید",
+    "bitTogglingKeypad": "تغییر بیت صفحه کلید",
+    "showBitView": "نمایش نمای بیت",
+    "wordSize": "اندازه کلمه",
+    "bitwise": "به صورت بیتی",
+    "bitShift": "تغییر بیت"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "مثلثات",
+      "function": "عملکرد",
+      "functionsAria": "عملکردها",
+      "trigonometricFunctionsAria": "توابع مثلثاتی",
+      "angleUnit": "واحد زاویه {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "ظاهر",
+      "themeTitle": "موضوع",
+      "themeDescription": "طرح رنگی را انتخاب کنید",
+      "light": "نور",
+      "dark": "تاریک",
+      "blue": "آبی",
+      "green": "سبز",
+      "system": "سیستم"
+    },
+    "language": {
+      "group": "زبان",
+      "title": "زبان",
+      "description": "زبان دلخواه خود را انتخاب کنید"
+    },
+    "about": {
+      "group": "درباره"
+    },
+    "feedback": "ارسال بازخورد",
+    "contribute": {
+      "prefix": "همکاری در",
+      "link": "GitHub",
+      "suffix": "برای کمک به بهبود این ماشین حساب"
+    },
+    "links": {
+      "repository": "مخزن پروژه",
+      "readme": "README",
+      "license": "مجوز MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "استاندارد",
+      "subtitle": "ارزیابی فوری کلاسیک"
+    },
+    "scientific": {
+      "label": "علمی",
+      "subtitle": "اپراتورها، توابع، و پشتیبانی بیان"
+    },
+    "graphing": {
+      "label": "نمودار",
+      "subtitle": "یک عبارت ساده را در صفحه دکارتی ترسیم کنید"
+    },
+    "programmer": {
+      "label": "برنامه نویس",
+      "subtitle": "ریاضی عدد صحیح با تبدیل پایه"
+    },
+    "date": {
+      "label": "محاسبه تاریخ",
+      "subtitle": "مدت‌ها و تاریخ‌های شیفت را پیدا کنید"
+    },
+    "currency": {
+      "label": "ارز",
+      "subtitle": "تبدیل نرخ ارز ساختگی"
+    },
+    "volume": {
+      "label": "حجم",
+      "subtitle": "تبدیل اندازه‌گیری‌های حجم"
+    },
+    "length": {
+      "label": "طول",
+      "subtitle": "تبدیل واحدهای فاصله و طول"
+    },
+    "weight": {
+      "label": "وزن و جرم",
+      "subtitle": "تبدیل واحدهای وزن و جرم"
+    },
+    "temperature": {
+      "label": "دما",
+      "subtitle": "تبدیل مقیاس‌های دما"
+    },
+    "energy": {
+      "label": "انرژی",
+      "subtitle": "تبدیل اندازه‌گیری‌های انرژی"
+    },
+    "area": {
+      "label": "منطقه",
+      "subtitle": "تبدیل اندازه‌گیری‌های مساحت"
+    },
+    "speed": {
+      "label": "سرعت",
+      "subtitle": "تبدیل اندازه‌گیری‌های سرعت"
+    },
+    "time": {
+      "label": "زمان",
+      "subtitle": "تبدیل اندازه‌گیری‌های زمان"
+    },
+    "power": {
+      "label": "قدرت",
+      "subtitle": "تبدیل اندازه‌گیری‌های توان"
+    },
+    "data": {
+      "label": "داده‌ها",
+      "subtitle": "تبدیل واحدهای ذخیره‌سازی دیجیتال"
+    },
+    "pressure": {
+      "label": "فشار",
+      "subtitle": "تبدیل واحدهای فشار"
+    },
+    "angle": {
+      "label": "زاویه",
+      "subtitle": "تبدیل اندازه‌گیری‌های زاویه"
+    },
+    "settings": {
+      "label": "تنظیمات",
+      "subtitle": "ظاهر و اطلاعات برنامه"
+    }
+  },
+  "categories": {
+    "Currency": "ارز",
+    "Volume": "حجم",
+    "Length": "طول",
+    "Mass": "جرم",
+    "Temperature": "دما",
+    "Energy": "انرژی",
+    "Area": "منطقه",
+    "Speed": "سرعت",
+    "Time": "زمان",
+    "Power": "قدرت",
+    "Data": "داده‌ها",
+    "Pressure": "فشار",
+    "Angle": "زاویه"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "انگستروم",
+      "Nanometers": "نانو متر",
+      "Microns": "میکرون",
+      "Millimeters": "میلی متر",
+      "Centimeters": "سانتی متر",
+      "Meters": "متر",
+      "Kilometers": "کیلومتر",
+      "Inches": "اینچ",
+      "Feet": "پا",
+      "Yards": "یارد",
+      "Miles": "مایل",
+      "Nautical miles": "مایل دریایی",
+      "paperclips": "گیره کاغذ",
+      "hands": "دست",
+      "jumbo jets": "جت‌های جامبو",
+      "Carats": "قیراط",
+      "Milligrams": "میلی گرم",
+      "Centigrams": "سانتی گرم",
+      "Decigrams": "دسی گرم",
+      "Grams": "گرم",
+      "Dekagrams": "دکاگرم",
+      "Hectograms": "هکتوگرام",
+      "Kilograms": "کیلوگرم",
+      "Metric tonnes": "تن متریک",
+      "Ounces": "اونس",
+      "Pounds": "پوند",
+      "Stone": "سنگ",
+      "Short tons (US)": "تن کوتاه (ایالات متحده)",
+      "Long tons (UK)": "تن بلند (بریتانیا)",
+      "snowflakes": "دانه های برف",
+      "soccer balls": "توپ های فوتبال",
+      "elephants": "فیل ها",
+      "whales": "نهنگ",
+      "Celsius": "سانتیگراد",
+      "Fahrenheit": "فارنهایت",
+      "Kelvin": "کلوین",
+      "Milliliters": "میلی لیتر",
+      "Cubic centimeters": "سانتی متر مکعب",
+      "Liters": "لیتر",
+      "Cubic meters": "متر مکعب",
+      "Teaspoons (US)": "قاشق چای‌خوری (ایالات متحده)",
+      "Tablespoons (US)": "قاشق غذاخوری (ایالات متحده)",
+      "Fluid ounces (US)": "اونس سیال (ایالات متحده)",
+      "Cups (US)": "جام (ایالات متحده)",
+      "Pints (US)": "پینت (ایالات متحده)",
+      "Quarts (US)": "کوارتز (ایالات متحده)",
+      "Gallons (US)": "گالن (ایالات متحده)",
+      "Cubic inches": "اینچ مکعب",
+      "Cubic feet": "فوت مکعب",
+      "Cubic yards": "یارد مکعب",
+      "Teaspoons (UK)": "قاشق چای‌خوری (بریتانیا)",
+      "Tablespoons (UK)": "قاشق غذاخوری (بریتانیا)",
+      "Fluid ounces (UK)": "اونس سیال (بریتانیا)",
+      "Pints (UK)": "پینت (بریتانیا)",
+      "Quarts (UK)": "کوارتز (بریتانیا)",
+      "Gallons (UK)": "گالن (بریتانیا)",
+      "coffee cups": "فنجان قهوه",
+      "bathtubs": "وان",
+      "swimming pools": "استخرهای شنا",
+      "Square millimeters": "میلی متر مربع",
+      "Square centimeters": "سانتی متر مربع",
+      "Square meters": "متر مربع",
+      "Hectares": "هکتار",
+      "Square kilometers": "کیلومتر مربع",
+      "Square inches": "اینچ مربع",
+      "Square feet": "فوت مربع",
+      "Square yards": "یارد مربع",
+      "Acres": "هکتار",
+      "Square miles": "مایل مربع",
+      "sheets of paper": "ورق کاغذ",
+      "soccer fields": "زمین فوتبال",
+      "castles": "قلعه",
+      "Pyeong": "پیونگ",
+      "Centimeters per second": "سانتی متر در ثانیه",
+      "Meters per second": "متر در ثانیه",
+      "Kilometers per hour": "کیلومتر در ساعت",
+      "Feet per second": "پا در ثانیه",
+      "Miles per hour": "مایل در ساعت",
+      "Knots": "گره",
+      "Mach": "ماشین",
+      "turtles": "لاک پشت",
+      "horses": "اسب",
+      "jets": "جت",
+      "Watts": "وات",
+      "Kilowatts": "کیلووات",
+      "Horsepower (US)": "اسب بخار (ایالات متحده)",
+      "Foot-pounds/minute": "فوت-پوند/دقیقه",
+      "BTUs/minute": "BTU در دقیقه",
+      "light bulbs": "لامپ",
+      "train engines": "موتورهای قطار",
+      "Thermal calories": "کالری حرارتی",
+      "Food calories": "کالری غذا",
+      "British thermal units": "واحدهای حرارتی بریتانیا",
+      "Kilojoules": "کیلوژول",
+      "Kilowatt-hours": "کیلووات ساعت",
+      "Electron volts": "الکترون ولت",
+      "Joules": "ژول",
+      "Foot-pounds": "فوت-پوند",
+      "batteries": "باتری",
+      "bananas": "موز",
+      "slices of cake": "برش‌های کیک",
+      "Bits": "بیت",
+      "Nibble": "نیبل",
+      "Bytes": "بایت",
+      "Kilobits": "کیلوبیت",
+      "Kibibits": "کیبی‌بیت",
+      "Kilobytes": "کیلوبایت",
+      "Kibibytes": "کیبی بایت",
+      "Megabits": "مگابیت",
+      "Mebibits": "مبی بیت",
+      "Megabytes": "مگابایت",
+      "Mebibytes": "مبایت",
+      "Gigabits": "گیگابیت",
+      "Gibibits": "گیبی بیت",
+      "Gigabytes": "گیگا بایت",
+      "Gibibytes": "گیبی بایت",
+      "Terabits": "ترابیت",
+      "Tebibits": "تبی بیت",
+      "Terabytes": "ترابایت",
+      "Tebibytes": "تبی بایت",
+      "Petabits": "Petabits",
+      "Pebibits": "پبی بیت",
+      "Petabytes": "پتابایت",
+      "Pebibytes": "پبی بایت",
+      "Exabits": "Exabits",
+      "Exbibits": "نمایش",
+      "Exabytes": "اگزابایت",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "زتابیت",
+      "Zebibits": "زبی بیت",
+      "Zetabytes": "زتابایت",
+      "Zebibytes": "زبی بایت",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobbits",
+      "Yottabytes": "یوتابایت",
+      "Yobibytes": "یوبی بایت",
+      "floppy disks": "فلاپی دیسک",
+      "CDs": "سی‌دی",
+      "DVDs": "DVD",
+      "Atmospheres": "اتمسفر",
+      "Bars": "میله",
+      "Kilopascals": "کیلو پاسکال",
+      "Millimeters of mercury": "میلی‌متر جیوه",
+      "Pascals": "پاسکال",
+      "Pounds per square inch": "پوند در هر اینچ مربع",
+      "Degrees": "درجات",
+      "Radians": "رادیان",
+      "Gradians": "گرادیان",
+      "Microseconds": "میکرو ثانیه",
+      "Milliseconds": "میلی ثانیه",
+      "Seconds": "ثانیه",
+      "Minutes": "دقیقه",
+      "Hours": "ساعت",
+      "Days": "روزها",
+      "Weeks": "هفته‌ها",
+      "Years": "سال"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "دلار آمریکا",
+      "Euro": "یورو",
+      "British Pound": "پوند بریتانیا",
+      "Japanese Yen": "ین ژاپن",
+      "Canadian Dollar": "دلار کانادا",
+      "Australian Dollar": "دلار استرالیا",
+      "Brazilian Real": "رئال برزیل",
+      "Chilean Peso": "پسوی شیلی",
+      "Chinese Yuan": "یوان چین",
+      "Colombian Peso": "پسوی کلمبیا",
+      "Danish Krone": "کرون دانمارک",
+      "Egyptian Pound": "پوند مصر",
+      "Hong Kong Dollar": "دلار هنگ کنگ",
+      "Indian Rupee": "روپیه هند",
+      "Kenyan Shilling": "شیلینگ کنیا",
+      "Mexican Peso": "پزوی مکزیکی",
+      "Nigerian Naira": "نایرا نیجریه",
+      "New Zealand Dollar": "دلار نیوزیلند",
+      "Norwegian Krone": "کرون نروژ",
+      "Philippine Piso": "پیزو فیلیپین",
+      "Polish Zloty": "Zloty لهستانی",
+      "Qatari Riyal": "ریال قطر",
+      "Saudi Riyal": "ریال عربستان",
+      "Singapore Dollar": "دلار سنگاپور",
+      "South African Rand": "راند آفریقای جنوبی",
+      "South Korean Won": "وون کره جنوبی",
+      "Swedish Krona": "کرون سوئد",
+      "Swiss Franc": "فرانک سوئیس",
+      "Thai Baht": "بات تایلند",
+      "Turkish Lira": "لیره ترکیه",
+      "Turkmenistani Manat": "منات ترکمنستان",
+      "Ugandan Shilling": "شیلینگ اوگاندا",
+      "Ukrainian Hryvnia": "هریونای اوکراین",
+      "UAE Dirham": "درهم امارات",
+      "Uruguayan Peso": "پسوی اروگوئه",
+      "Uzbekistani Som": "سوم ازبکستانی",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "بولیوار سوبرانو ونزوئلا",
+      "Vietnamese Dong": "دونگ ویتنامی",
+      "Yemeni Rial": "ریال یمن"
+    },
+    "labels": {
+      "United States - Dollar": "ایالات متحده - دلار",
+      "Europe - Euro": "اروپا - یورو",
+      "United Kingdom - Pound": "بریتانیا - پوند",
+      "Japan - Yen": "ژاپن - ین",
+      "Canada - Dollar": "کانادا - دلار",
+      "Australia - Dollar": "استرالیا - دلار",
+      "Brazil - Real": "برزیل - رئال",
+      "Chile - Peso": "شیلی - پزو",
+      "China - Yuan Renminbi": "چین - یوان رنمینبی",
+      "Colombia - Peso": "کلمبیا - پزو",
+      "Denmark - Krone": "دانمارک - کرون",
+      "Egypt - Pound": "مصر - پوند",
+      "Hong Kong SAR - Dollar": "SAR هنگ کنگ - دلار",
+      "India - Rupee": "هند - روپیه",
+      "Kenya - Shilling": "کنیا - شیلینگ",
+      "Mexico - Peso": "مکزیک - پزو",
+      "Nigeria - Naira": "نیجریه - نایرا",
+      "New Zealand - Dollar": "نیوزیلند - دلار",
+      "Norway - Krone": "نروژ - کرون",
+      "Philippines - Piso": "فیلیپین - پیزو",
+      "Poland - Zloty": "لهستان - زلوتی",
+      "Qatar - Riyal": "قطر - ریال",
+      "Saudi Arabia - Riyal": "عربستان سعودی - ریال",
+      "Singapore - Dollar": "سنگاپور - دلار",
+      "South Africa - Rand": "آفریقای جنوبی - رند",
+      "South Korea - Won": "کره جنوبی - برد",
+      "Sweden - Krona": "سوئد - کرون",
+      "Switzerland - Franc": "سوئیس - فرانک",
+      "Thailand - Baht": "تایلند - بات",
+      "Turkey - Lira": "ترکیه - لیر",
+      "Turkmenistan - Manat": "ترکمنستان - منات",
+      "Uganda - Shilling": "اوگاندا - شیلینگ",
+      "Ukraine - Hryvnia": "اوکراین - هریونیا",
+      "United Arab Emirates - Dirham": "امارات متحده عربی - درهم",
+      "Uruguay - Peso": "اروگوئه - پزو",
+      "Uzbekistan - Som": "ازبکستان - سوم",
+      "Vanuatu - Vatu": "وانواتو - واتو",
+      "Venezuela - Bolívar Soberano": "ونزوئلا - بولیوار سوبرانو",
+      "Vietnam - Dong": "ویتنام - دونگ",
+      "Yemen - Rial": "یمن - ریال"
+    }
+  }
+}

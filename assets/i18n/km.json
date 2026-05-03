@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "ម៉ាស៊ីនគិតលេខ",
+    "name": "ម៉ាស៊ីនគិតលេខ"
+  },
+  "common": {
+    "back": "ត្រឡប់មកវិញ",
+    "backspace": "ថយក្រោយ",
+    "closeSidePanel": "បិទបន្ទះ"
+  },
+  "converter": {
+    "unitConverter": "កម្មវិធីបម្លែងឯកតា",
+    "title": "កម្មវិធីបំប្លែងឯកតា",
+    "builtInCollections": "បណ្តុំដែលភ្ជាប់មកជាមួយ",
+    "category": "ប្រភេទ",
+    "from": "ពី",
+    "to": "ទៅ",
+    "inputValue": "តម្លៃដែលត្រូវបំប្លែង",
+    "convertedValue": "តម្លៃដែលបានបំប្លែង",
+    "swapUnits": "ប្តូរឯកតា",
+    "keypad": "កម្មវិធីបំប្លែងក្តារចុច",
+    "unit": "ឯកតា",
+    "unitOptions": "ជម្រើសឯកតា",
+    "currency": {
+      "updatingRates": "កំពុងអាប់ដេតអត្រា...",
+      "updateRates": "អត្រាធ្វើបច្ចុប្បន្នភាព",
+      "keypad": "ក្ដារចុចរូបិយប័ណ្ណ",
+      "currency": "រូបិយប័ណ្ណ",
+      "options": "ជម្រើសរូបិយប័ណ្ណ",
+      "updated": "បានធ្វើបច្ចុប្បន្នភាព {timestamp}",
+      "status": {
+        "mockNote": "អត្រាយោងក្លែងក្លាយសម្រាប់ការបង្ហាញកម្មវិធីដាច់ដោយឡែក។",
+        "fetching": "កំពុងទាញយកអត្រាយោងចុងក្រោយបង្អស់របស់ USD...",
+        "liveRatesLoaded": "អត្រាបន្តផ្ទាល់បានផ្ទុកពី ExchangeRate-API ។",
+        "liveUpdateUnavailable": "ការអាប់ដេតបន្តផ្ទាល់មិនមានទេ។ អត្រា​បង្ហាញ​សាកល្បង​ឡើងវិញ​ក្នុង​ស្រុក។"
+      }
+    },
+    "aboutEqualTo": "ប្រហែលស្មើនឹង"
+  },
+  "errors": {
+    "invalidInput": "ការបញ្ចូលមិនត្រឹមត្រូវ",
+    "cannotDivideByZero": "មិនអាចបែងចែកដោយសូន្យទេ។",
+    "cannotModuloByZero": "មិនអាចម៉ូឌុលដោយសូន្យទេ។",
+    "invalidProgrammerOperation": "ប្រតិបត្តិការមិនត្រឹមត្រូវ",
+    "overflow": "លទ្ធផលធំពេក"
+  },
+  "date": {
+    "calculationMode": "របៀបគណនា",
+    "from": "ពី",
+    "to": "ទៅ",
+    "results": {
+      "difference": "ភាពខុសគ្នា",
+      "sameDates": "កាលបរិច្ឆេទដូចគ្នា។",
+      "date": "កាលបរិច្ឆេទ"
+    },
+    "calculationModeOptions": "ជម្រើសរបៀបគណនា",
+    "mode": {
+      "difference": "ភាពខុសគ្នា",
+      "shift": "ប្ដូរ"
+    },
+    "operation": "ប្រតិបត្តិការ",
+    "add": "បន្ថែម",
+    "subtract": "ដក",
+    "years": "ឆ្នាំ",
+    "months": "ខែ",
+    "days": "ថ្ងៃ",
+    "chooseDate": "ជ្រើសរើសកាលបរិច្ឆេទ",
+    "previousMonth": "ខែមុន។",
+    "nextMonth": "ខែក្រោយ",
+    "duration": {
+      "year": {
+        "one": "{count} ឆ្នាំ។",
+        "other": "{count} ឆ្នាំ។"
+      },
+      "month": {
+        "one": "{count} ខែ",
+        "other": "{count} ខែ"
+      },
+      "week": {
+        "one": "{count} សប្តាហ៍",
+        "other": "{count} សប្តាហ៍"
+      },
+      "day": {
+        "one": "{count} ថ្ងៃ។",
+        "other": "{count} ថ្ងៃ។"
+      }
+    },
+    "history": {
+      "differenceBetween": "ភាពខុសគ្នារវាង {from} និង {to}",
+      "addTo": "បន្ថែម {duration} ទៅ {date}",
+      "subtractFrom": "ដក {duration} ពី {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "ពិនិត្យកន្សោមដែលបានបន្លិច",
+    "enterExpression": "បញ្ចូលកន្សោមមួយ។",
+    "canvas": "ផ្ទាំងក្រណាត់ក្រាហ្វ",
+    "stopTracing": "បញ្ឈប់ការតាមដាន",
+    "startTracing": "ចាប់ផ្តើមតាមដាន",
+    "share": "ចែករំលែក",
+    "options": "ជម្រើស",
+    "zoomIn": "ពង្រីក",
+    "zoomInLabel": "ពង្រីក",
+    "zoomOut": "ពង្រីក",
+    "zoomOutLabel": "ពង្រីក",
+    "refreshViewAutomatically": "មើលឡើងវិញដោយស្វ័យប្រវត្តិ",
+    "view": "មើល",
+    "expressions": "កន្សោម",
+    "mobileView": "ទិដ្ឋភាពទូរស័ព្ទ",
+    "showGraph": "បង្ហាញក្រាហ្វ",
+    "showExpressions": "បង្ហាញកន្សោម",
+    "backToFunctionList": "ត្រឡប់ទៅបញ្ជីមុខងារ",
+    "window": "បង្អួច",
+    "resetView": "កំណត់ទិដ្ឋភាពឡើងវិញ",
+    "units": "ឯកតា",
+    "radians": "រ៉ាដ្យង់",
+    "degrees": "ដឺក្រេ",
+    "gradians": "ជម្រាល",
+    "lineThickness": "កម្រាស់បន្ទាត់",
+    "theme": "ស្បែក",
+    "alwaysLight": "ពន្លឺជានិច្ច",
+    "matchAppTheme": "ផ្គូផ្គងរចនាប័ទ្មកម្មវិធី",
+    "groups": {
+      "inequalities": "វិសមភាព",
+      "trigonometry": "ត្រីកោណមាត្រ",
+      "function": "មុខងារ"
+    },
+    "functions": "មុខងារ",
+    "showEquation": "បង្ហាញសមីការ",
+    "hideEquation": "លាក់សមីការ",
+    "lineOptions": "ជម្រើសបន្ទាត់",
+    "color": "ពណ៌",
+    "style": "រចនាប័ទ្ម",
+    "analysis": {
+      "title": "ការវិភាគ",
+      "domain": "ដែន",
+      "range": "ជួរ",
+      "xIntercept": "x-intercept",
+      "yIntercept": "y-ស្ទាក់ចាប់",
+      "minima": "តូច",
+      "maxima": "អតិបរមា",
+      "inflectionPoints": "ចំណុចបញ្ឆេះ",
+      "verticalAsymptotes": "សញ្ញាសម្គាល់បញ្ឈរ",
+      "horizontalAsymptotes": "និមិត្តសញ្ញាផ្តេក",
+      "obliqueAsymptotes": "រូបសញ្ញា oblique",
+      "parity": "ភាពស្មើគ្នា",
+      "period": "រយៈពេល",
+      "monotonicity": "ភាពឯកកោ",
+      "domainNone": "គ្មានការកម្រិតដែនទេ។",
+      "rangeNone": "គ្មានការរឹតបន្តឹងជួរទេ។",
+      "xInterceptNone": "គ្មាន x-intercepts",
+      "yInterceptNone": "គ្មានការស្ទាក់ចាប់ y",
+      "minimaNone": "គ្មានអប្បបរមាទេ។",
+      "maximaNone": "គ្មានអតិបរមាទេ។",
+      "inflectionNone": "គ្មានចំណុចបញ្ឆេះទេ។",
+      "verticalAsymptotesNone": "មិនមានសញ្ញាសម្គាល់បញ្ឈរទេ។",
+      "horizontalAsymptotesNone": "គ្មាន asymtotes ផ្ដេកទេ។",
+      "obliqueAsymptotesNone": "គ្មាន asymtotes oblique",
+      "parityUnknown": "មិនស្គាល់",
+      "parityOdd": "សេស",
+      "parityEven": "គូ",
+      "parityNeither": "ក៏មិនអីដែរ។",
+      "periodicityUnknown": "មិនស្គាល់",
+      "periodicityNotPeriodic": "មិនទៀងទាត់",
+      "monotonicityConstant": "ថេរ",
+      "monotonicityIncreasing": "កើនឡើង",
+      "monotonicityDecreasing": "ថយចុះ",
+      "monotonicityUnknown": "មិនស្គាល់",
+      "monotonicityError": "មិនអាចកំណត់បានទេ។",
+      "featureTooComplexPlural": "ស្មុគស្មាញពេកក្នុងការវិភាគ",
+      "analysisCouldNotBePerformed": "ការវិភាគមិនអាចអនុវត្តបានទេ។",
+      "analysisNotSupported": "ការវិភាគមិនត្រូវបានគាំទ្រទេ។",
+      "variableIsNotX": "អថេរមិនមែនជា x"
+    },
+    "plottingExpressions": "គ្រោង {count} កន្សោម",
+    "xMin": "X-Min",
+    "xMax": "X-អតិបរមា",
+    "yMin": "Y-នាទី",
+    "yMax": "Y-អតិបរមា",
+    "selectExpression": "ជ្រើសរើសកន្សោម {index}",
+    "expressionIndex": "កន្សោម {index}",
+    "analyzeFunction": "វិភាគមុខងារ",
+    "changeEquationStyle": "ផ្លាស់ប្តូររចនាប័ទ្មសមីការ",
+    "removeEquation": "លុបសមីការ",
+    "lineStyle": {
+      "solid": "រចនាប័ទ្មបន្ទាត់រឹង",
+      "dash": "រចនាប័ទ្មបន្ទាត់ដាច់",
+      "dot": "រចនាប័ទ្មបន្ទាត់ចំនុច"
+    }
+  },
+  "history": {
+    "empty": "ប្រវត្តិគឺទទេ",
+    "clearAll": "ជម្រះទាំងអស់។",
+    "clear": "ជម្រះប្រវត្តិ",
+    "title": "ប្រវត្តិ",
+    "andMemory": "ប្រវត្តិ និងការចងចាំ",
+    "aria": {
+      "historyPanel": "បន្ទះប្រវត្តិ",
+      "historyAndMemoryPanel": "បន្ទះប្រវត្តិ និងអង្គចងចាំ"
+    },
+    "closeFlyout": "ប្រវត្តិបិទ",
+    "openFlyout": "ប្រវត្តិបើក"
+  },
+  "memory": {
+    "empty": "អង្គចងចាំគឺទទេ",
+    "clearItem": "ជម្រះធាតុ",
+    "addCurrentValue": "បន្ថែមតម្លៃបច្ចុប្បន្ន",
+    "subtractCurrentValue": "ដកតម្លៃបច្ចុប្បន្ន",
+    "clearAll": "ជម្រះទាំងអស់។",
+    "clear": "ជម្រះអង្គចងចាំ",
+    "title": "អង្គចងចាំ",
+    "controls": "ការគ្រប់គ្រងអង្គចងចាំ",
+    "tooltips": {
+      "clearAll": "ជម្រះអង្គចងចាំទាំងអស់។",
+      "recall": "រំលឹកឡើងវិញពីអង្គចងចាំ",
+      "add": "បន្ថែមទៅអង្គចងចាំ",
+      "subtract": "ដកពីអង្គចងចាំ",
+      "store": "រក្សាទុកក្នុងអង្គចងចាំ"
+    },
+    "recallValue": "ចងចាំការចងចាំ {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "ការរុករក",
+      "closeNavigation": "បិទការរុករក",
+      "openNavigation": "បើកការរុករក"
+    },
+    "groups": {
+      "calculator": "ម៉ាស៊ីនគិតលេខ",
+      "converter": "កម្មវិធីបម្លែង"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "បន្ទះបត់បន្តិច",
+    "baseReadouts": "ការអានមូលដ្ឋាន",
+    "surfaceMode": "មុខងារផ្ទៃ",
+    "fullKeypad": "គ្រាប់ចុចពេញ",
+    "showKeypad": "បង្ហាញក្តារចុច",
+    "bitTogglingKeypad": "បន្ទះចុចបិទបើកបន្តិច",
+    "showBitView": "បង្ហាញទិដ្ឋភាពបន្តិច",
+    "wordSize": "ទំហំពាក្យ",
+    "bitwise": "បន្តិច",
+    "bitShift": "ការផ្លាស់ប្តូរបន្តិច"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "ត្រីកោណមាត្រ",
+      "function": "មុខងារ",
+      "functionsAria": "មុខងារ",
+      "trigonometricFunctionsAria": "អនុគមន៍ត្រីកោណមាត្រ",
+      "angleUnit": "ឯកតាមុំ {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "រូបរាង",
+      "themeTitle": "ស្បែក",
+      "themeDescription": "ជ្រើសរើសពណ៌ចម្រុះ",
+      "light": "ពន្លឺ",
+      "dark": "ងងឹត",
+      "blue": "ខៀវ",
+      "green": "បៃតង",
+      "system": "ប្រព័ន្ធ"
+    },
+    "language": {
+      "group": "ភាសា",
+      "title": "ភាសា",
+      "description": "ជ្រើសរើសភាសាដែលអ្នកពេញចិត្ត"
+    },
+    "about": {
+      "group": "អំពី"
+    },
+    "feedback": "ផ្ញើមតិកែលម្អ",
+    "contribute": {
+      "prefix": "ចូលរួមចំណែក",
+      "link": "GitHub",
+      "suffix": "ដើម្បីជួយកែលម្អម៉ាស៊ីនគិតលេខនេះ។"
+    },
+    "links": {
+      "repository": "ឃ្លាំងគម្រោង",
+      "readme": "README",
+      "license": "អាជ្ញាប័ណ្ណ MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "ស្តង់ដារ",
+      "subtitle": "ការវាយតម្លៃភ្លាមៗបែបបុរាណ"
+    },
+    "scientific": {
+      "label": "វិទ្យាសាស្ត្រ",
+      "subtitle": "ប្រតិបត្តិករ មុខងារ និងការគាំទ្រការបញ្ចេញមតិ"
+    },
+    "graphing": {
+      "label": "ក្រាហ្វ",
+      "subtitle": "រៀបចំកន្សោមសាមញ្ញមួយនៅលើយន្តហោះ cartesian"
+    },
+    "programmer": {
+      "label": "អ្នកសរសេរកម្មវិធី",
+      "subtitle": "គណិតវិទ្យាចំនួនគត់ជាមួយការបំប្លែងមូលដ្ឋាន"
+    },
+    "date": {
+      "label": "ការគណនាកាលបរិច្ឆេទ",
+      "subtitle": "ស្វែងរករយៈពេល និងការផ្លាស់ប្តូរកាលបរិច្ឆេទ"
+    },
+    "currency": {
+      "label": "រូបិយប័ណ្ណ",
+      "subtitle": "បំប្លែងអត្រាប្តូរប្រាក់ក្លែងក្លាយ"
+    },
+    "volume": {
+      "label": "កម្រិតសំឡេង",
+      "subtitle": "បំប្លែងរង្វាស់កម្រិតសំឡេង"
+    },
+    "length": {
+      "label": "ប្រវែង",
+      "subtitle": "បំប្លែងឯកតាចម្ងាយ និងប្រវែង"
+    },
+    "weight": {
+      "label": "ទម្ងន់ និងម៉ាស",
+      "subtitle": "បំប្លែងទម្ងន់ និងឯកតាម៉ាស"
+    },
+    "temperature": {
+      "label": "សីតុណ្ហភាព",
+      "subtitle": "បំប្លែងមាត្រដ្ឋានសីតុណ្ហភាព"
+    },
+    "energy": {
+      "label": "ថាមពល",
+      "subtitle": "បំប្លែងរង្វាស់ថាមពល"
+    },
+    "area": {
+      "label": "តំបន់",
+      "subtitle": "បំប្លែងការវាស់វែងតំបន់"
+    },
+    "speed": {
+      "label": "ល្បឿន",
+      "subtitle": "បំប្លែងរង្វាស់ល្បឿន"
+    },
+    "time": {
+      "label": "ម៉ោង",
+      "subtitle": "បម្លែងការវាស់វែងពេលវេលា"
+    },
+    "power": {
+      "label": "ថាមពល",
+      "subtitle": "បំប្លែងរង្វាស់ថាមពល"
+    },
+    "data": {
+      "label": "ទិន្នន័យ",
+      "subtitle": "បំប្លែងអង្គផ្ទុកទិន្នន័យឌីជីថល"
+    },
+    "pressure": {
+      "label": "សម្ពាធ",
+      "subtitle": "បំប្លែងឯកតាសម្ពាធ"
+    },
+    "angle": {
+      "label": "មុំ",
+      "subtitle": "បំប្លែងរង្វាស់មុំ"
+    },
+    "settings": {
+      "label": "ការកំណត់",
+      "subtitle": "រូបរាង និងព័ត៌មានកម្មវិធី"
+    }
+  },
+  "categories": {
+    "Currency": "រូបិយប័ណ្ណ",
+    "Volume": "កម្រិតសំឡេង",
+    "Length": "ប្រវែង",
+    "Mass": "អភិបូជា",
+    "Temperature": "សីតុណ្ហភាព",
+    "Energy": "ថាមពល",
+    "Area": "តំបន់",
+    "Speed": "ល្បឿន",
+    "Time": "ម៉ោង",
+    "Power": "ថាមពល",
+    "Data": "ទិន្នន័យ",
+    "Pressure": "សម្ពាធ",
+    "Angle": "មុំ"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "ណាណូម៉ែត្រ",
+      "Microns": "មីក្រូ",
+      "Millimeters": "មីលីម៉ែត្រ",
+      "Centimeters": "សង់ទីម៉ែត្រ",
+      "Meters": "ម៉ែត្រ",
+      "Kilometers": "គីឡូម៉ែត្រ",
+      "Inches": "អ៊ីញ",
+      "Feet": "ជើង",
+      "Yards": "យ៉ាត",
+      "Miles": "ម៉ាយល៍",
+      "Nautical miles": "ម៉ាយក្នុងសមុទ្រ",
+      "paperclips": "ក្លីបក្រដាស",
+      "hands": "ដៃ",
+      "jumbo jets": "យន្តហោះចម្បាំង jumbo",
+      "Carats": "ការ៉ាត់",
+      "Milligrams": "មីលីក្រាម",
+      "Centigrams": "សង់ទីក្រាម",
+      "Decigrams": "ដេស៊ីក្រាម",
+      "Grams": "ក្រាម",
+      "Dekagrams": "Dekagrams",
+      "Hectograms": "ហិចតូក្រាម",
+      "Kilograms": "គីឡូក្រាម",
+      "Metric tonnes": "តោនម៉ែត្រ",
+      "Ounces": "អោន",
+      "Pounds": "ផោន",
+      "Stone": "ថ្ម",
+      "Short tons (US)": "តោនខ្លី (អាមេរិក)",
+      "Long tons (UK)": "តោនវែង (ចក្រភពអង់គ្លេស)",
+      "snowflakes": "ផ្កាព្រិល",
+      "soccer balls": "បាល់បាល់ទាត់",
+      "elephants": "ដំរី",
+      "whales": "ត្រីបាឡែន",
+      "Celsius": "អង្សាសេ",
+      "Fahrenheit": "ហ្វារិនហៃ",
+      "Kelvin": "Kelvin",
+      "Milliliters": "មីលីលីត្រ",
+      "Cubic centimeters": "សង់ទីម៉ែត្រគូប",
+      "Liters": "លីត្រ",
+      "Cubic meters": "ម៉ែត្រគូប",
+      "Teaspoons (US)": "ស្លាបព្រាកាហ្វេ (អាមេរិក)",
+      "Tablespoons (US)": "ស្លាបព្រាបាយ (អាមេរិក)",
+      "Fluid ounces (US)": "អោនរាវ (អាមេរិក)",
+      "Cups (US)": "Cups (US)",
+      "Pints (US)": "Pints (អាមេរិក)",
+      "Quarts (US)": "Quarts (អាមេរិក)",
+      "Gallons (US)": "ហ្គាឡុង (អាមេរិក)",
+      "Cubic inches": "អ៊ីញគូប",
+      "Cubic feet": "ហ្វីតគូប",
+      "Cubic yards": "ម៉ែត្រគូប",
+      "Teaspoons (UK)": "ស្លាបព្រាកាហ្វេ (ចក្រភពអង់គ្លេស)",
+      "Tablespoons (UK)": "ស្លាបព្រាបាយ (ចក្រភពអង់គ្លេស)",
+      "Fluid ounces (UK)": "អោនរាវ (ចក្រភពអង់គ្លេស)",
+      "Pints (UK)": "Pints (ចក្រភពអង់គ្លេស)",
+      "Quarts (UK)": "Quarts (ចក្រភពអង់គ្លេស)",
+      "Gallons (UK)": "ហ្គាឡុង (ចក្រភពអង់គ្លេស)",
+      "coffee cups": "ពែងកាហ្វេ",
+      "bathtubs": "អាងងូតទឹក",
+      "swimming pools": "អាងហែលទឹក",
+      "Square millimeters": "មិល្លីម៉ែត្រការ៉េ",
+      "Square centimeters": "សង់ទីម៉ែត្រការ៉េ",
+      "Square meters": "ម៉ែត្រការ៉េ",
+      "Hectares": "ហិកតា",
+      "Square kilometers": "គីឡូម៉ែត្រការ៉េ",
+      "Square inches": "អ៊ីញការ៉េ",
+      "Square feet": "ការ៉េ",
+      "Square yards": "ការ៉េ",
+      "Acres": "ហិចតា",
+      "Square miles": "ម៉ាយការ៉េ",
+      "sheets of paper": "សន្លឹកក្រដាស",
+      "soccer fields": "វាលបាល់ទាត់",
+      "castles": "ប្រាសាទ",
+      "Pyeong": "ព្យុង",
+      "Centimeters per second": "សង់ទីម៉ែត្រក្នុងមួយវិនាទី",
+      "Meters per second": "ម៉ែត្រក្នុងមួយវិនាទី",
+      "Kilometers per hour": "គីឡូម៉ែត្រក្នុងមួយម៉ោង",
+      "Feet per second": "ហ្វីតក្នុងមួយវិនាទី",
+      "Miles per hour": "ម៉ាយក្នុងមួយម៉ោង",
+      "Knots": "គន្លាក់",
+      "Mach": "ម៉ាច",
+      "turtles": "អណ្តើក",
+      "horses": "សេះ",
+      "jets": "យន្តហោះ",
+      "Watts": "វ៉ាត់",
+      "Kilowatts": "គីឡូវ៉ាត់",
+      "Horsepower (US)": "កម្លាំងសេះ (អាមេរិក)",
+      "Foot-pounds/minute": "ជើងផោន/នាទី",
+      "BTUs/minute": "BTUs/នាទី",
+      "light bulbs": "អំពូលភ្លើង",
+      "train engines": "ម៉ាស៊ីនរថភ្លើង",
+      "Thermal calories": "កាឡូរីកម្ដៅ",
+      "Food calories": "កាឡូរីអាហារ",
+      "British thermal units": "ឯកតាកម្ដៅរបស់អង់គ្លេស",
+      "Kilojoules": "គីឡូស៊ូល",
+      "Kilowatt-hours": "គីឡូវ៉ាត់ម៉ោង",
+      "Electron volts": "វ៉ុលអេឡិចត្រុង",
+      "Joules": "ជូល។",
+      "Foot-pounds": "ជើងផោន",
+      "batteries": "ថ្ម",
+      "bananas": "ចេក",
+      "slices of cake": "នំខេក",
+      "Bits": "ប៊ីត",
+      "Nibble": "Nibble",
+      "Bytes": "បៃ",
+      "Kilobits": "គីឡូ",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "គីឡូបៃ",
+      "Kibibytes": "Kibibytes",
+      "Megabits": "មេកាបៃ",
+      "Mebibits": "Mebibits",
+      "Megabytes": "មេកាបៃ",
+      "Mebibytes": "មេប៊ីបៃ",
+      "Gigabits": "ជីហ្គាបៃ",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "ជីហ្គាបៃ",
+      "Gibibytes": "ជីប៊ីបៃ",
+      "Terabits": "Terabits",
+      "Tebibits": "Tebibits",
+      "Terabytes": "តេរ៉ាបៃ",
+      "Tebibytes": "Tebibytes",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabytes",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "ការចាកចេញ",
+      "Exbibits": "ពិព័រណ៍",
+      "Exabytes": "Exabytes",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabytes",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabytes",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "ថាសទន់",
+      "CDs": "ស៊ីឌី",
+      "DVDs": "ឌីវីឌី",
+      "Atmospheres": "បរិយាកាស",
+      "Bars": "បារ",
+      "Kilopascals": "គីឡូប៉ាស្កាល់",
+      "Millimeters of mercury": "មីលីម៉ែត្របារត",
+      "Pascals": "ប៉ាស្កាល់",
+      "Pounds per square inch": "ផោនក្នុងមួយអ៊ីញការ៉េ",
+      "Degrees": "ដឺក្រេ",
+      "Radians": "រ៉ាដ្យង់",
+      "Gradians": "ជម្រាល",
+      "Microseconds": "មីក្រូវិនាទី",
+      "Milliseconds": "មិល្លីវិនាទី",
+      "Seconds": "វិនាទី",
+      "Minutes": "នាទី",
+      "Hours": "ម៉ោង",
+      "Days": "ថ្ងៃ",
+      "Weeks": "សប្តាហ៍",
+      "Years": "ឆ្នាំ"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "ដុល្លារអាមេរិក",
+      "Euro": "អឺរ៉ូ",
+      "British Pound": "ផោនអង់គ្លេស",
+      "Japanese Yen": "ប្រាក់យ៉េនជប៉ុន",
+      "Canadian Dollar": "ដុល្លារកាណាដា",
+      "Australian Dollar": "ដុល្លារអូស្ត្រាលី",
+      "Brazilian Real": "Real ប្រេស៊ីល",
+      "Chilean Peso": "ប៉េសូឈីលី",
+      "Chinese Yuan": "យន់ចិន",
+      "Colombian Peso": "ប្រាក់ប៉េសូរបស់ប្រទេសកូឡុំប៊ី",
+      "Danish Krone": "ដាណឺម៉ាកក្រូន",
+      "Egyptian Pound": "ផោនអេហ្ស៊ីប",
+      "Hong Kong Dollar": "ដុល្លារហុងកុង",
+      "Indian Rupee": "ប្រាក់រូពីឥណ្ឌា",
+      "Kenyan Shilling": "Kenyan Shilling",
+      "Mexican Peso": "ប៉េសូម៉ិកស៊ិក",
+      "Nigerian Naira": "Nigerian Naira",
+      "New Zealand Dollar": "ដុល្លារនូវែលសេឡង់",
+      "Norwegian Krone": "Norwegian Krone",
+      "Philippine Piso": "ភីលីពីន ភីសូ",
+      "Polish Zloty": "ប៉ូឡូញ Zloty",
+      "Qatari Riyal": "កាតារីយ៉ាល់",
+      "Saudi Riyal": "Saudi Riyal",
+      "Singapore Dollar": "ដុល្លារសិង្ហបុរី",
+      "South African Rand": "Rand អាហ្វ្រិកខាងត្បូង",
+      "South Korean Won": "ប្រាក់វ៉ុនរបស់កូរ៉េខាងត្បូង",
+      "Swedish Krona": "ក្រូណាស៊ុយអែត",
+      "Swiss Franc": "ហ្វ្រង់ស្វីស",
+      "Thai Baht": "ប្រាក់បាតថៃ",
+      "Turkish Lira": "លីរ៉ាទួរគី",
+      "Turkmenistani Manat": "តូមិននីស្ថាន ម៉ាណាត",
+      "Ugandan Shilling": "អ៊ូហ្គង់ដា ស៊ីលលីង",
+      "Ukrainian Hryvnia": "Hryvnia អ៊ុយក្រែន",
+      "UAE Dirham": "UAE Dirham",
+      "Uruguayan Peso": "ប្រាក់ប៉េសូអ៊ុយរូហ្គាយ",
+      "Uzbekistani Som": "អ៊ូសបេគីស្ថាន សោម",
+      "Vanuatu Vatu": "វ៉ានូអាទូ វ៉ាទូ",
+      "Venezuelan Bolivar Soberano": "ប្រទេស Venezuelan Bolívar Soberano",
+      "Vietnamese Dong": "ដុងវៀតណាម",
+      "Yemeni Rial": "Rial យេម៉ែន"
+    },
+    "labels": {
+      "United States - Dollar": "សហរដ្ឋអាមេរិក - ដុល្លារ",
+      "Europe - Euro": "អឺរ៉ុប - អឺរ៉ូ",
+      "United Kingdom - Pound": "ចក្រភពអង់គ្លេស - ផោន",
+      "Japan - Yen": "ជប៉ុន - យ៉េន",
+      "Canada - Dollar": "កាណាដា - ដុល្លារ",
+      "Australia - Dollar": "អូស្ត្រាលី - ដុល្លារ",
+      "Brazil - Real": "ប្រេស៊ីល - Real",
+      "Chile - Peso": "ឈីលី - ប៉េសូ",
+      "China - Yuan Renminbi": "ប្រទេសចិន - Yuan Renminbi",
+      "Colombia - Peso": "កូឡុំប៊ី - ប៉េសូ",
+      "Denmark - Krone": "ដាណឺម៉ាក - ក្រូន",
+      "Egypt - Pound": "អេហ្ស៊ីប - ផោន",
+      "Hong Kong SAR - Dollar": "SAR ហុងកុង - ដុល្លារ",
+      "India - Rupee": "ឥណ្ឌា - រូពី",
+      "Kenya - Shilling": "កេនយ៉ា - ស៊ីលលីង",
+      "Mexico - Peso": "ម៉ិកស៊ិក - ប៉េសូ",
+      "Nigeria - Naira": "នីហ្សេរីយ៉ា - ណារ៉ា",
+      "New Zealand - Dollar": "នូវែលសេឡង់ - ដុល្លារ",
+      "Norway - Krone": "ន័រវេស - ក្រូន",
+      "Philippines - Piso": "ហ្វីលីពីន - ភីសូ",
+      "Poland - Zloty": "ប៉ូឡូញ - Zloty",
+      "Qatar - Riyal": "កាតា - រីយ៉ាល់",
+      "Saudi Arabia - Riyal": "អារ៉ាប៊ីសាអូឌីត - រីយ៉ាល់",
+      "Singapore - Dollar": "សិង្ហបុរី - ដុល្លារ",
+      "South Africa - Rand": "អាហ្វ្រិកខាងត្បូង - Rand",
+      "South Korea - Won": "កូរ៉េខាងត្បូង - វ៉ុន",
+      "Sweden - Krona": "ស៊ុយអែត - ក្រូណា",
+      "Switzerland - Franc": "ស្វីស - ហ្វ្រង់",
+      "Thailand - Baht": "ថៃ - បាត",
+      "Turkey - Lira": "តួកគី - លីរ៉ា",
+      "Turkmenistan - Manat": "តូមិននីស្ថាន - ម៉ាណាត",
+      "Uganda - Shilling": "អ៊ូហ្គង់ដា - ស៊ីលលីង",
+      "Ukraine - Hryvnia": "អ៊ុយក្រែន - Hryvnia",
+      "United Arab Emirates - Dirham": "United Arab Emirates - Dirham",
+      "Uruguay - Peso": "អ៊ុយរូហ្គាយ - ប៉េសូ",
+      "Uzbekistan - Som": "អ៊ូសបេគីស្ថាន - សោម",
+      "Vanuatu - Vatu": "វ៉ានូអាទូ - វ៉ាទូ",
+      "Venezuela - Bolívar Soberano": "វេណេស៊ុយអេឡា - Bolívar Soberano",
+      "Vietnam - Dong": "វៀតណាម - ដុង",
+      "Yemen - Rial": "យេម៉ែន - រៀល"
+    }
+  }
+}

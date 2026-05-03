@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "კალკულატორი",
+    "name": "კალკულატორი"
+  },
+  "common": {
+    "back": "უკან",
+    "backspace": "Backspace",
+    "closeSidePanel": "პანელის დახურვა"
+  },
+  "converter": {
+    "unitConverter": "ერთეულის გადამყვანი",
+    "title": "ერთეულის გადამყვანები",
+    "builtInCollections": "ჩაშენებული კოლექციები",
+    "category": "კატეგორია",
+    "from": "საიდან",
+    "to": "მის",
+    "inputValue": "გადასაყვანი მნიშვნელობა",
+    "convertedValue": "გადაკეთებული მნიშვნელობა",
+    "swapUnits": "ერთეულების გაცვლა",
+    "keypad": "კონვერტორის კლავიატურა",
+    "unit": "ერთეული",
+    "unitOptions": "ერთეულის ვარიანტები",
+    "currency": {
+      "updatingRates": "განახლდება ტარიფები…",
+      "updateRates": "განახლების ტარიფები",
+      "keypad": "ვალუტის კლავიატურა",
+      "currency": "ვალუტა",
+      "options": "ვალუტის ვარიანტები",
+      "updated": "განახლებულია {timestamp}",
+      "status": {
+        "mockNote": "იმიტირებული მითითების ტარიფები დამოუკიდებელი აპის დემოსთვის.",
+        "fetching": "მიმდინარეობს აშშ დოლარის უახლესი საცნობარო განაკვეთების მიღება...",
+        "liveRatesLoaded": "Live განაკვეთები ჩატვირთულია ExchangeRate-API-დან.",
+        "liveUpdateUnavailable": "პირდაპირი განახლება მიუწვდომელია. განახლებული დემო განაკვეთები ადგილობრივად."
+      }
+    },
+    "aboutEqualTo": "დაახლოებით ტოლია"
+  },
+  "errors": {
+    "invalidInput": "არასწორი შეყვანა",
+    "cannotDivideByZero": "ნულზე გაყოფა შეუძლებელია",
+    "cannotModuloByZero": "ნულის მოდულირება შეუძლებელია",
+    "invalidProgrammerOperation": "არასწორი ოპერაცია",
+    "overflow": "შედეგი ძალიან დიდია"
+  },
+  "date": {
+    "calculationMode": "გაანგარიშების რეჟიმი",
+    "from": "საიდან",
+    "to": "მეთქი",
+    "results": {
+      "difference": "განსხვავება",
+      "sameDates": "იგივე თარიღები",
+      "date": "თარიღი"
+    },
+    "calculationModeOptions": "გაანგარიშების რეჟიმის ვარიანტები",
+    "mode": {
+      "difference": "განსხვავება",
+      "shift": "ცვლა"
+    },
+    "operation": "ოპერაცია",
+    "add": "დამატება",
+    "subtract": "გამოკლება",
+    "years": "წლები",
+    "months": "თვე",
+    "days": "დღეები",
+    "chooseDate": "აირჩიეთ თარიღი",
+    "previousMonth": "წინა თვე",
+    "nextMonth": "შემდეგ თვეში",
+    "duration": {
+      "year": {
+        "one": "{count} წელი",
+        "other": "{count} წელი"
+      },
+      "month": {
+        "one": "{count} თვე",
+        "other": "{count} თვე"
+      },
+      "week": {
+        "one": "{count} კვირა",
+        "other": "{count} კვირა"
+      },
+      "day": {
+        "one": "{count} დღე",
+        "other": "{count} დღე"
+      }
+    },
+    "history": {
+      "differenceBetween": "განსხვავება {from}-სა და {to}-ს შორის",
+      "addTo": "დაამატეთ {duration} {date}-ს",
+      "subtractFrom": "გამოკლება {duration} {date}-ს"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "შეამოწმეთ მონიშნული გამონათქვამი",
+    "enterExpression": "შეიყვანეთ გამოხატულება",
+    "canvas": "გრაფიული ტილო",
+    "stopTracing": "შეწყვიტე მიკვლევა",
+    "startTracing": "დაიწყეთ მიკვლევა",
+    "share": "გაზიარება",
+    "options": "ოფციები",
+    "zoomIn": "გადიდება",
+    "zoomInLabel": "გადიდება",
+    "zoomOut": "დაპატარავება",
+    "zoomOutLabel": "დაპატარავება",
+    "refreshViewAutomatically": "ნახვის განახლება ავტომატურად",
+    "view": "ნახვა",
+    "expressions": "გამონათქვამები",
+    "mobileView": "მობილური ხედი",
+    "showGraph": "გრაფიკის ჩვენება",
+    "showExpressions": "გამონათქვამების ჩვენება",
+    "backToFunctionList": "ფუნქციების სიაში დაბრუნება",
+    "window": "ფანჯარა",
+    "resetView": "ხედის გადატვირთვა",
+    "units": "ერთეული",
+    "radians": "რადიანები",
+    "degrees": "გრადუსები",
+    "gradians": "გრადიანები",
+    "lineThickness": "ხაზის სისქე",
+    "theme": "თემა",
+    "alwaysLight": "ყოველთვის მსუბუქი",
+    "matchAppTheme": "აპის თემის შესატყვისი",
+    "groups": {
+      "inequalities": "უტოლობა",
+      "trigonometry": "ტრიგონომეტრია",
+      "function": "ფუნქცია"
+    },
+    "functions": "ფუნქციები",
+    "showEquation": "განტოლების ჩვენება",
+    "hideEquation": "განტოლების დამალვა",
+    "lineOptions": "ხაზის ვარიანტები",
+    "color": "ფერი",
+    "style": "სტილი",
+    "analysis": {
+      "title": "ანალიზი",
+      "domain": "დომენი",
+      "range": "დიაპაზონი",
+      "xIntercept": "x-გადაკვეთა",
+      "yIntercept": "y-გადაკვეთა",
+      "minima": "მინიმუმი",
+      "maxima": "მაქსიმა",
+      "inflectionPoints": "დაბრუნების წერტილები",
+      "verticalAsymptotes": "ვერტიკალური ასიმპტოტები",
+      "horizontalAsymptotes": "ჰორიზონტალური ასიმპტოტები",
+      "obliqueAsymptotes": "ირიბი ასიმპტოტები",
+      "parity": "პარიტეტი",
+      "period": "პერიოდი",
+      "monotonicity": "მონოტონურობა",
+      "domainNone": "დომენის შეზღუდვები არ არის",
+      "rangeNone": "არეგის შეზღუდვები არ არის",
+      "xInterceptNone": "X-გადაკვეთები არ არის",
+      "yInterceptNone": "y-გადაკვეთები არ არის",
+      "minimaNone": "მინიმუმების გარეშე",
+      "maximaNone": "მაქსიმუმი არ არის",
+      "inflectionNone": "გადახრის წერტილები არ არის",
+      "verticalAsymptotesNone": "ვერტიკალური ასიმპტოტები არ არის",
+      "horizontalAsymptotesNone": "ჰორიზონტალური ასიმპტოტები არ არის",
+      "obliqueAsymptotesNone": "ირიბი ასიმპტოტები არ არის",
+      "parityUnknown": "უცნობი",
+      "parityOdd": "კენტი",
+      "parityEven": "თუნდაც",
+      "parityNeither": "არც",
+      "periodicityUnknown": "უცნობი",
+      "periodicityNotPeriodic": "არა პერიოდული",
+      "monotonicityConstant": "მუდმივი",
+      "monotonicityIncreasing": "იზრდება",
+      "monotonicityDecreasing": "მცირდება",
+      "monotonicityUnknown": "უცნობი",
+      "monotonicityError": "ვერ განვსაზღვრავთ",
+      "featureTooComplexPlural": "ძალიან რთული ანალიზისთვის",
+      "analysisCouldNotBePerformed": "ანალიზი ვერ შესრულდა",
+      "analysisNotSupported": "ანალიზი არ არის მხარდაჭერილი",
+      "variableIsNotX": "ცვლადი არ არის x"
+    },
+    "plottingExpressions": "{count} გამონათქვამების შედგენა",
+    "xMin": "X-წთ",
+    "xMax": "X-მაქს",
+    "yMin": "წ-წთ",
+    "yMax": "Y-მაქს",
+    "selectExpression": "აირჩიეთ გამოხატულება {index}",
+    "expressionIndex": "გამოხატვა {index}",
+    "analyzeFunction": "ფუნქციის ანალიზი",
+    "changeEquationStyle": "განტოლების სტილის შეცვლა",
+    "removeEquation": "განტოლების წაშლა",
+    "lineStyle": {
+      "solid": "მყარი ხაზის სტილი",
+      "dash": "ტირე ხაზის სტილი",
+      "dot": "წერტილის ხაზის სტილი"
+    }
+  },
+  "history": {
+    "empty": "ისტორია ცარიელია",
+    "clearAll": "ყველას გასუფთავება",
+    "clear": "ისტორიის გასუფთავება",
+    "title": "ისტორია",
+    "andMemory": "ისტორია და მეხსიერება",
+    "aria": {
+      "historyPanel": "ისტორიის პანელი",
+      "historyAndMemoryPanel": "ისტორიისა და მეხსიერების პანელი"
+    },
+    "closeFlyout": "ისტორიის დახურვა",
+    "openFlyout": "გახსენით ისტორია"
+  },
+  "memory": {
+    "empty": "მეხსიერება ცარიელია",
+    "clearItem": "ერთეულის გასუფთავება",
+    "addCurrentValue": "მიმდინარე მნიშვნელობის დამატება",
+    "subtractCurrentValue": "გამოვაკლოთ მიმდინარე მნიშვნელობა",
+    "clearAll": "ყველას გასუფთავება",
+    "clear": "მეხსიერების გასუფთავება",
+    "title": "მეხსიერება",
+    "controls": "მეხსიერების მართვის საშუალებები",
+    "tooltips": {
+      "clearAll": "მთელი მეხსიერების გასუფთავება",
+      "recall": "გახსენება მეხსიერებიდან",
+      "add": "დაამატეთ მეხსიერებაში",
+      "subtract": "გამოკლება მეხსიერებიდან",
+      "store": "შენახვა მეხსიერებაში"
+    },
+    "recallValue": "მეხსიერების გახსენება {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "ნავიგაცია",
+      "closeNavigation": "ნავიგაციის დახურვა",
+      "openNavigation": "გახსენით ნავიგაცია"
+    },
+    "groups": {
+      "calculator": "კალკულატორი",
+      "converter": "კონვერტორი"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "ბიტიანი გადაბრუნების პანელი",
+    "baseReadouts": "ბაზის წაკითხვა",
+    "surfaceMode": "ზედაპირის რეჟიმი",
+    "fullKeypad": "სრული კლავიატურა",
+    "showKeypad": "კლავიატურის ჩვენება",
+    "bitTogglingKeypad": "კლავიატურის ბიტით გადართვა",
+    "showBitView": "ბიტი ხედის ჩვენება",
+    "wordSize": "სიტყვის ზომა",
+    "bitwise": "ბიტიურად",
+    "bitShift": "ბიტის ცვლა"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "ტრიგონომეტრია",
+      "function": "ფუნქცია",
+      "functionsAria": "ფუნქციები",
+      "trigonometricFunctionsAria": "ტრიგონომეტრიული ფუნქციები",
+      "angleUnit": "კუთხის ერთეული {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "გარეგნობა",
+      "themeTitle": "თემა",
+      "themeDescription": "აირჩიეთ ფერის სქემა",
+      "light": "სინათლე",
+      "dark": "ბნელი",
+      "blue": "ლურჯი",
+      "green": "მწვანე",
+      "system": "სისტემა"
+    },
+    "language": {
+      "group": "ენა",
+      "title": "ენა",
+      "description": "აირჩიეთ თქვენთვის სასურველი ენა"
+    },
+    "about": {
+      "group": "დაახლოებით"
+    },
+    "feedback": "გამოხმაურების გაგზავნა",
+    "contribute": {
+      "prefix": "წვლილის შეტანა",
+      "link": "GitHub",
+      "suffix": "ამ კალკულატორის გასაუმჯობესებლად"
+    },
+    "links": {
+      "repository": "პროექტის საცავი",
+      "readme": "წაიკითხეთ",
+      "license": "MIT ლიცენზია"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "სტანდარტული",
+      "subtitle": "კლასიკური დაუყოვნებელი შეფასება"
+    },
+    "scientific": {
+      "label": "სამეცნიერო",
+      "subtitle": "ოპერატორების, ფუნქციების და გამოხატვის მხარდაჭერა"
+    },
+    "graphing": {
+      "label": "გრაფირება",
+      "subtitle": "დახაზეთ მარტივი გამოხატულება კარტეზიულ სიბრტყეზე"
+    },
+    "programmer": {
+      "label": "პროგრამისტი",
+      "subtitle": "მთელი რიცხვი მათემატიკა ბაზის კონვერტაციით"
+    },
+    "date": {
+      "label": "თარიღის გაანგარიშება",
+      "subtitle": "იპოვეთ ხანგრძლივობა და ცვლის თარიღები"
+    },
+    "currency": {
+      "label": "ვალუტა",
+      "subtitle": "იმიტირებული გაცვლითი კურსების კონვერტაცია"
+    },
+    "volume": {
+      "label": "ტომი",
+      "subtitle": "მოცულობის გაზომვების კონვერტაცია"
+    },
+    "length": {
+      "label": "სიგრძე",
+      "subtitle": "დისტანციისა და სიგრძის ერთეულების კონვერტაცია"
+    },
+    "weight": {
+      "label": "წონა და მასა",
+      "subtitle": "წონისა და მასის ერთეულების კონვერტაცია"
+    },
+    "temperature": {
+      "label": "ტემპერატურა",
+      "subtitle": "ტემპერატურული სკალების კონვერტაცია"
+    },
+    "energy": {
+      "label": "ენერგია",
+      "subtitle": "ენერგიის გაზომვების კონვერტაცია"
+    },
+    "area": {
+      "label": "რაიონი",
+      "subtitle": "არეალის გაზომვების კონვერტაცია"
+    },
+    "speed": {
+      "label": "სიჩქარე",
+      "subtitle": "სიჩქარის გაზომვების კონვერტაცია"
+    },
+    "time": {
+      "label": "დრო",
+      "subtitle": "დროის გაზომვების კონვერტაცია"
+    },
+    "power": {
+      "label": "დენი",
+      "subtitle": "ენერგიის გაზომვების კონვერტაცია"
+    },
+    "data": {
+      "label": "მონაცემები",
+      "subtitle": "ციფრული მეხსიერების ერთეულების კონვერტაცია"
+    },
+    "pressure": {
+      "label": "წნევა",
+      "subtitle": "წნევის ერთეულების კონვერტაცია"
+    },
+    "angle": {
+      "label": "კუთხე",
+      "subtitle": "კუთხის გაზომვების კონვერტაცია"
+    },
+    "settings": {
+      "label": "პარამეტრები",
+      "subtitle": "გარეგნობისა და აპის ინფორმაცია"
+    }
+  },
+  "categories": {
+    "Currency": "ვალუტა",
+    "Volume": "ტომი",
+    "Length": "სიგრძე",
+    "Mass": "მას",
+    "Temperature": "ტემპერატურა",
+    "Energy": "ენერგია",
+    "Area": "რაიონი",
+    "Speed": "სიჩქარე",
+    "Time": "დრო",
+    "Power": "დენი",
+    "Data": "მონაცემები",
+    "Pressure": "წნევა",
+    "Angle": "კუთხე"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "ანგსტრომები",
+      "Nanometers": "ნანომეტრი",
+      "Microns": "მიკრონი",
+      "Millimeters": "მილიმეტრი",
+      "Centimeters": "სანტიმეტრი",
+      "Meters": "მეტრი",
+      "Kilometers": "კილომეტრი",
+      "Inches": "ინჩი",
+      "Feet": "ფეხები",
+      "Yards": "იარდები",
+      "Miles": "მილები",
+      "Nautical miles": "საზღვაო მილი",
+      "paperclips": "ქაღალდის სამაგრები",
+      "hands": "ხელები",
+      "jumbo jets": "ჯუმბო ჯეტები",
+      "Carats": "კარატი",
+      "Milligrams": "მილიგრამი",
+      "Centigrams": "ცენტიგრამები",
+      "Decigrams": "დეციგრამები",
+      "Grams": "გრამი",
+      "Dekagrams": "დეკაგრამები",
+      "Hectograms": "ჰექტოგრამები",
+      "Kilograms": "კილოგრამები",
+      "Metric tonnes": "მეტრული ტონა",
+      "Ounces": "უნცია",
+      "Pounds": "ფუნტი",
+      "Stone": "ქვა",
+      "Short tons (US)": "მოკლე ტონა (აშშ)",
+      "Long tons (UK)": "გრძელი ტონა (დიდი ბრიტანეთი)",
+      "snowflakes": "ფიფქები",
+      "soccer balls": "ფეხბურთის ბურთები",
+      "elephants": "სპილოები",
+      "whales": "ვეშაპები",
+      "Celsius": "ცელსიუსი",
+      "Fahrenheit": "ფარენჰაიტი",
+      "Kelvin": "კელვინი",
+      "Milliliters": "მილილიტრი",
+      "Cubic centimeters": "კუბური სანტიმეტრი",
+      "Liters": "ლიტრი",
+      "Cubic meters": "კუბური მეტრი",
+      "Teaspoons (US)": "ჩაის კოვზი (აშშ)",
+      "Tablespoons (US)": "სუფრის კოვზი (აშშ)",
+      "Fluid ounces (US)": "სითხის უნცია (აშშ)",
+      "Cups (US)": "თასები (აშშ)",
+      "Pints (US)": "პინი (აშშ)",
+      "Quarts (US)": "კვარტები (აშშ)",
+      "Gallons (US)": "გალონი (აშშ)",
+      "Cubic inches": "კუბური ინჩი",
+      "Cubic feet": "კუბური ფუტი",
+      "Cubic yards": "კუბური იარდი",
+      "Teaspoons (UK)": "ჩაის კოვზი (დიდი ბრიტანეთი)",
+      "Tablespoons (UK)": "სუფრის კოვზი (დიდი ბრიტანეთი)",
+      "Fluid ounces (UK)": "სითხის უნცია (დიდი ბრიტანეთი)",
+      "Pints (UK)": "პინი (დიდი ბრიტანეთი)",
+      "Quarts (UK)": "კვარტები (დიდი ბრიტანეთი)",
+      "Gallons (UK)": "გალონი (დიდი ბრიტანეთი)",
+      "coffee cups": "ყავის ჭიქები",
+      "bathtubs": "აბაზანები",
+      "swimming pools": "საცურაო აუზები",
+      "Square millimeters": "კვადრატული მილიმეტრი",
+      "Square centimeters": "კვადრატული სანტიმეტრი",
+      "Square meters": "კვადრატული მეტრი",
+      "Hectares": "ჰექტარი",
+      "Square kilometers": "კვადრატული კილომეტრი",
+      "Square inches": "კვადრატული ინჩი",
+      "Square feet": "კვადრატული ფუტი",
+      "Square yards": "კვადრატული იარდები",
+      "Acres": "ჰექტარი",
+      "Square miles": "კვადრატული მილი",
+      "sheets of paper": "ფურცლები",
+      "soccer fields": "ფეხბურთის მოედანი",
+      "castles": "ციხე",
+      "Pyeong": "პიონგი",
+      "Centimeters per second": "სანტიმეტრი წამში",
+      "Meters per second": "მეტრი წამში",
+      "Kilometers per hour": "კილომეტრი საათში",
+      "Feet per second": "ფუტი წამში",
+      "Miles per hour": "მილი საათში",
+      "Knots": "კვანძები",
+      "Mach": "მახ",
+      "turtles": "კუ",
+      "horses": "ცხენები",
+      "jets": "რეაქტიული თვითმფრინავები",
+      "Watts": "ვატი",
+      "Kilowatts": "კილოვატი",
+      "Horsepower (US)": "ცხენის ძალა (აშშ)",
+      "Foot-pounds/minute": "ფუტ-ფუნტი/წუთში",
+      "BTUs/minute": "BTU/წუთი",
+      "light bulbs": "ნათურები",
+      "train engines": "მატარებლის ძრავები",
+      "Thermal calories": "თერმული კალორია",
+      "Food calories": "საკვების კალორია",
+      "British thermal units": "ბრიტანული თერმული ერთეული",
+      "Kilojoules": "კილოჯოულები",
+      "Kilowatt-hours": "კილოვატ-საათი",
+      "Electron volts": "ელექტრონვოლტი",
+      "Joules": "ჯული",
+      "Foot-pounds": "ფუტ-ფუნტი",
+      "batteries": "ბატარეები",
+      "bananas": "ბანანი",
+      "slices of cake": "ტორტის ნაჭერი",
+      "Bits": "ბიტი",
+      "Nibble": "Nibble",
+      "Bytes": "ბაიტი",
+      "Kilobits": "კილობიტი",
+      "Kibibits": "კიბიბიტი",
+      "Kilobytes": "კილობაიტები",
+      "Kibibytes": "კიბიბაიტი",
+      "Megabits": "მეგაბიტი",
+      "Mebibits": "მბიბიტები",
+      "Megabytes": "მეგაბაიტი",
+      "Mebibytes": "მბიბიტი",
+      "Gigabits": "გიგაბიტი",
+      "Gibibits": "გიბიბიტები",
+      "Gigabytes": "გიგაბაიტი",
+      "Gibibytes": "გიბიბაიტი",
+      "Terabits": "ტერაბიტები",
+      "Tebibits": "ბიბიტები",
+      "Terabytes": "ტერაბაიტი",
+      "Tebibytes": "ბიბაიტი",
+      "Petabits": "პეტაბიტები",
+      "Pebibits": "პებიბიტები",
+      "Petabytes": "პეტაბაიტი",
+      "Pebibytes": "პებიბაიტი",
+      "Exabits": "Exabits",
+      "Exbibits": "ექსბიბიტები",
+      "Exabytes": "ეგბაიტი",
+      "Exbibytes": "ექსბიბაიტი",
+      "Zetabits": "ზეტაბიტები",
+      "Zebibits": "ზებიბიტები",
+      "Zetabytes": "ზეტაბაიტი",
+      "Zebibytes": "ზებიბაიტები",
+      "Yottabits": "იოტაბიტი",
+      "Yobibits": "იობიბიტები",
+      "Yottabytes": "იოტაბაიტი",
+      "Yobibytes": "იობიბიტი",
+      "floppy disks": "ფლოპი დისკები",
+      "CDs": "დისკი",
+      "DVDs": "DVD",
+      "Atmospheres": "ატმოსფერო",
+      "Bars": "ბარები",
+      "Kilopascals": "კილოპასკალი",
+      "Millimeters of mercury": "მილიმეტრი ვერცხლისწყალი",
+      "Pascals": "პასკალი",
+      "Pounds per square inch": "ფუნტი კვადრატულ ინჩზე",
+      "Degrees": "გრადუსები",
+      "Radians": "რადიანები",
+      "Gradians": "გრადიანები",
+      "Microseconds": "მიკროწამები",
+      "Milliseconds": "მილიწამები",
+      "Seconds": "წამი",
+      "Minutes": "წუთი",
+      "Hours": "საათები",
+      "Days": "დღეები",
+      "Weeks": "კვირები",
+      "Years": "წლები"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "აშშ დოლარი",
+      "Euro": "ევრო",
+      "British Pound": "ბრიტანული ფუნტი",
+      "Japanese Yen": "იაპონური იენი",
+      "Canadian Dollar": "კანადური დოლარი",
+      "Australian Dollar": "ავსტრალიური დოლარი",
+      "Brazilian Real": "ბრაზილიური რეალი",
+      "Chilean Peso": "ჩილეს პესო",
+      "Chinese Yuan": "ჩინური იუანი",
+      "Colombian Peso": "კოლუმბიური პესო",
+      "Danish Krone": "დანიური კრონი",
+      "Egyptian Pound": "ეგვიპტური ფუნტი",
+      "Hong Kong Dollar": "ჰონკონგის დოლარი",
+      "Indian Rupee": "ინდური რუპია",
+      "Kenyan Shilling": "კენიური შილინგი",
+      "Mexican Peso": "მექსიკური პესო",
+      "Nigerian Naira": "ნიგერიელი ნაირა",
+      "New Zealand Dollar": "ახალი ზელანდიური დოლარი",
+      "Norwegian Krone": "ნორვეგიული კრონი",
+      "Philippine Piso": "ფილიპინის პისო",
+      "Polish Zloty": "პოლონური ზლოტი",
+      "Qatari Riyal": "ყატარის რიალი",
+      "Saudi Riyal": "საუდის რიალი",
+      "Singapore Dollar": "სინგაპურის დოლარი",
+      "South African Rand": "სამხრეთ აფრიკის რენდი",
+      "South Korean Won": "სამხრეთ კორეის ვონი",
+      "Swedish Krona": "შვედური კრონა",
+      "Swiss Franc": "შვეიცარიული ფრანკი",
+      "Thai Baht": "ტაილანდური ბატი",
+      "Turkish Lira": "თურქული ლირა",
+      "Turkmenistani Manat": "თურქმენეთის მანათი",
+      "Ugandan Shilling": "უგანდური შილინგი",
+      "Ukrainian Hryvnia": "უკრაინული გრივნა",
+      "UAE Dirham": "UAE Dirham",
+      "Uruguayan Peso": "ურუგვაის პესო",
+      "Uzbekistani Som": "უზბეკეთის სომ",
+      "Vanuatu Vatu": "ვანუატუს ვატუ",
+      "Venezuelan Bolivar Soberano": "ვენესუელური ბოლივარი სობერანო",
+      "Vietnamese Dong": "ვიეტნამური დონგი",
+      "Yemeni Rial": "იემენის რიალი"
+    },
+    "labels": {
+      "United States - Dollar": "ამერიკის შეერთებული შტატები - დოლარი",
+      "Europe - Euro": "ევროპა - ევრო",
+      "United Kingdom - Pound": "გაერთიანებული სამეფო - ფუნტი",
+      "Japan - Yen": "იაპონია - იენი",
+      "Canada - Dollar": "კანადა - დოლარი",
+      "Australia - Dollar": "ავსტრალია - დოლარი",
+      "Brazil - Real": "ბრაზილია - რეალი",
+      "Chile - Peso": "ჩილე - პესო",
+      "China - Yuan Renminbi": "ჩინეთი - იუან რენმინბი",
+      "Colombia - Peso": "კოლუმბია - პესო",
+      "Denmark - Krone": "დანია - კრონა",
+      "Egypt - Pound": "ეგვიპტე - ფუნტი",
+      "Hong Kong SAR - Dollar": "ჰონკონგის SAR - დოლარი",
+      "India - Rupee": "ინდოეთი - რუპია",
+      "Kenya - Shilling": "კენია - შილინგი",
+      "Mexico - Peso": "მექსიკა - პესო",
+      "Nigeria - Naira": "ნიგერია - ნაირა",
+      "New Zealand - Dollar": "ახალი ზელანდია - დოლარი",
+      "Norway - Krone": "ნორვეგია - კრონა",
+      "Philippines - Piso": "ფილიპინები - პისო",
+      "Poland - Zloty": "პოლონეთი - ზლოტი",
+      "Qatar - Riyal": "კატარი - რიალი",
+      "Saudi Arabia - Riyal": "საუდის არაბეთი - რიალი",
+      "Singapore - Dollar": "სინგაპური - დოლარი",
+      "South Africa - Rand": "სამხრეთ აფრიკა - რენდი",
+      "South Korea - Won": "სამხრეთ კორეა - მოიგო",
+      "Sweden - Krona": "შვედეთი - კრონა",
+      "Switzerland - Franc": "შვეიცარია - ფრანკი",
+      "Thailand - Baht": "ტაილანდი - ბახტი",
+      "Turkey - Lira": "თურქეთი - ლირა",
+      "Turkmenistan - Manat": "თურქმენეთი - მანათ",
+      "Uganda - Shilling": "უგანდა - შილინგი",
+      "Ukraine - Hryvnia": "უკრაინა - გრივნა",
+      "United Arab Emirates - Dirham": "არაბთა გაერთიანებული საამიროები - დირჰამი",
+      "Uruguay - Peso": "ურუგვაი - პესო",
+      "Uzbekistan - Som": "უზბეკეთი - სომ",
+      "Vanuatu - Vatu": "ვანუატუ - ვატუ",
+      "Venezuela - Bolívar Soberano": "ვენესუელა - ბოლივარ სობერანო",
+      "Vietnam - Dong": "ვიეტნამი - დონგი",
+      "Yemen - Rial": "იემენი - რიალი"
+    }
+  }
+}

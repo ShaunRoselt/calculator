@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Rechner",
+    "name": "Rechner"
+  },
+  "common": {
+    "back": "Zréck",
+    "backspace": "Backspace",
+    "closeSidePanel": "Panel zoumaachen"
+  },
+  "converter": {
+    "unitConverter": "Eenheetskonverter",
+    "title": "Eenheetskonverter",
+    "builtInCollections": "Built-in Sammlungen",
+    "category": "Kategorie",
+    "from": "Vun",
+    "to": "An",
+    "inputValue": "Wäert fir ze konvertéieren",
+    "convertedValue": "Konvertéierte Wäert",
+    "swapUnits": "Unitéiten tauschen",
+    "keypad": "Konverter Tastatur",
+    "unit": "Eenheet",
+    "unitOptions": "Eenheetsoptiounen",
+    "currency": {
+      "updatingRates": "Tariffer aktualiséieren…",
+      "updateRates": "Tariffer aktualiséieren",
+      "keypad": "Währung Tastatur",
+      "currency": "Währung",
+      "options": "Währungsoptiounen",
+      "updated": "Aktualiséiert {timestamp}",
+      "status": {
+        "mockNote": "Mock Referenzraten fir déi standalone App Demo.",
+        "fetching": "Fëllt déi lescht USD Referenzraten ...",
+        "liveRatesLoaded": "Live Tariffer gelueden vum ExchangeRate-API.",
+        "liveUpdateUnavailable": "Live Update net verfügbar. Erfrëscht Demo Tariffer lokal."
+      }
+    },
+    "aboutEqualTo": "Ongeféier gläich wéi"
+  },
+  "errors": {
+    "invalidInput": "Invalid Input",
+    "cannotDivideByZero": "Kann net mat Null deelen",
+    "cannotModuloByZero": "Kann net modulo vun Null",
+    "invalidProgrammerOperation": "Invalid Operatioun",
+    "overflow": "Resultat ze grouss"
+  },
+  "date": {
+    "calculationMode": "Berechnungsmodus",
+    "from": "Vun",
+    "to": "An",
+    "results": {
+      "difference": "Differenz",
+      "sameDates": "Selwecht Datumen",
+      "date": "Datum"
+    },
+    "calculationModeOptions": "Berechnungsmodus Optiounen",
+    "mode": {
+      "difference": "Differenz",
+      "shift": "Verschiebung"
+    },
+    "operation": "Operatioun",
+    "add": "Füügt",
+    "subtract": "Subtractéieren",
+    "years": "Joer",
+    "months": "Méint",
+    "days": "Deeg",
+    "chooseDate": "Datum wielen",
+    "previousMonth": "Méint virdrun",
+    "nextMonth": "Nächste Mount",
+    "duration": {
+      "year": {
+        "one": "{count} Joer",
+        "other": "{count} Joer"
+      },
+      "month": {
+        "one": "{count} Mount",
+        "other": "{count} Méint"
+      },
+      "week": {
+        "one": "{count} Woch",
+        "other": "{count} Wochen"
+      },
+      "day": {
+        "one": "{count} Dag",
+        "other": "{count} Deeg"
+      }
+    },
+    "history": {
+      "differenceBetween": "Ënnerscheed tëscht {from} an {to}",
+      "addTo": "Füügt {duration} op {date}",
+      "subtractFrom": "{duration} vun {date} ofzéien"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Kuckt den markéierten Ausdrock",
+    "enterExpression": "Gitt en Ausdrock un",
+    "canvas": "Grafik Leinwand",
+    "stopTracing": "Stopp Tracing",
+    "startTracing": "Fänkt Tracing un",
+    "share": "Deelen",
+    "options": "Optiounen",
+    "zoomIn": "Zoom an",
+    "zoomInLabel": "Zoom an",
+    "zoomOut": "Auszoomen",
+    "zoomOutLabel": "Auszoomen",
+    "refreshViewAutomatically": "Siicht automatesch opfrëschen",
+    "view": "Kuckt",
+    "expressions": "Ausdréck",
+    "mobileView": "Mobil Vue",
+    "showGraph": "Grafik weisen",
+    "showExpressions": "Ausdréck weisen",
+    "backToFunctionList": "Zréck op d'Funktiounslëscht",
+    "window": "Fenster",
+    "resetView": "Zrécksetzen Vue",
+    "units": "Unitéiten",
+    "radians": "Radianer",
+    "degrees": "Grad",
+    "gradians": "Gradians",
+    "lineThickness": "Linndicke",
+    "theme": "Thema",
+    "alwaysLight": "Emmer hell",
+    "matchAppTheme": "Match App Thema",
+    "groups": {
+      "inequalities": "Ongläichheeten",
+      "trigonometry": "Trigonometrie",
+      "function": "Funktioun"
+    },
+    "functions": "Funktiounen",
+    "showEquation": "Equatioun weisen",
+    "hideEquation": "Equatioun verstoppen",
+    "lineOptions": "Linnoptiounen",
+    "color": "Faarf",
+    "style": "Styl",
+    "analysis": {
+      "title": "Analyse",
+      "domain": "Domain",
+      "range": "Gamme",
+      "xIntercept": "x-Intercept",
+      "yIntercept": "y-Intercept",
+      "minima": "Minimum",
+      "maxima": "Maxima",
+      "inflectionPoints": "Inflektiounspunkte",
+      "verticalAsymptotes": "Vertikal Asymptoten",
+      "horizontalAsymptotes": "Horizontal Asymptoten",
+      "obliqueAsymptotes": "Oblique Asymptoten",
+      "parity": "Paritéit",
+      "period": "Period",
+      "monotonicity": "Monotonicitéit",
+      "domainNone": "Keng Domain Restriktiounen",
+      "rangeNone": "Keng Beräich Restriktiounen",
+      "xInterceptNone": "Keng x-Interceptiounen",
+      "yInterceptNone": "Keng Y-Interceptiounen",
+      "minimaNone": "Keng Minima",
+      "maximaNone": "Keng Maxima",
+      "inflectionNone": "Keng Inflektiounspunkte",
+      "verticalAsymptotesNone": "Keng vertikal Asymptoten",
+      "horizontalAsymptotesNone": "Keng horizontal Asymptoten",
+      "obliqueAsymptotesNone": "Keng schräg Asymptoten",
+      "parityUnknown": "Onbekannt",
+      "parityOdd": "Odd",
+      "parityEven": "Och",
+      "parityNeither": "Weder",
+      "periodicityUnknown": "Onbekannt",
+      "periodicityNotPeriodic": "Net periodesch",
+      "monotonicityConstant": "Konstant",
+      "monotonicityIncreasing": "Erhéijung",
+      "monotonicityDecreasing": "Verréngert",
+      "monotonicityUnknown": "Onbekannt",
+      "monotonicityError": "Kann net bestëmmen",
+      "featureTooComplexPlural": "Ze komplex fir ze analyséieren",
+      "analysisCouldNotBePerformed": "D'Analyse konnt net gemaach ginn",
+      "analysisNotSupported": "Analyse net ënnerstëtzt",
+      "variableIsNotX": "Variabel ass net x"
+    },
+    "plottingExpressions": "Plottet {count} Ausdréck",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Auswiel auswielen {index}",
+    "expressionIndex": "Ausdrock {index}",
+    "analyzeFunction": "Funktion analyséieren",
+    "changeEquationStyle": "Änneren Equatiounstil",
+    "removeEquation": "Equatioun ewechhuelen",
+    "lineStyle": {
+      "solid": "Solid Line Style",
+      "dash": "Dash Line Style",
+      "dot": "Punktlinnstil"
+    }
+  },
+  "history": {
+    "empty": "Geschicht ass eidel",
+    "clearAll": "Alles läschen",
+    "clear": "Klär Geschicht",
+    "title": "Geschicht",
+    "andMemory": "Geschicht an Erënnerung",
+    "aria": {
+      "historyPanel": "Geschicht Panel",
+      "historyAndMemoryPanel": "Geschicht a Memory Panel"
+    },
+    "closeFlyout": "Geschicht zoumaachen",
+    "openFlyout": "Open Geschicht"
+  },
+  "memory": {
+    "empty": "Erënnerung ass eidel",
+    "clearItem": "Element läschen",
+    "addCurrentValue": "Den aktuelle Wäert derbäi",
+    "subtractCurrentValue": "Aktuelle Wäert ofzéien",
+    "clearAll": "Alles läschen",
+    "clear": "Läischt Erënnerung",
+    "title": "Erënnerung",
+    "controls": "Memory Kontrollen",
+    "tooltips": {
+      "clearAll": "All Erënnerung läschen",
+      "recall": "Erënnerung aus Erënnerung",
+      "add": "Füügt an d'Erënnerung",
+      "subtract": "Aus Erënnerung ofzéien",
+      "store": "Späicheren an Erënnerung"
+    },
+    "recallValue": "Erënnert Erënnerung {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigatioun",
+      "closeNavigation": "Navigatioun zoumaachen",
+      "openNavigation": "Navigatioun opmaachen"
+    },
+    "groups": {
+      "calculator": "Rechner",
+      "converter": "Konverter"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit Flip Panel",
+    "baseReadouts": "Basis Liesungen",
+    "surfaceMode": "Surface Modus",
+    "fullKeypad": "Voll Tastatur",
+    "showKeypad": "Tastatur weisen",
+    "bitTogglingKeypad": "Bit wiesselen Tastatur",
+    "showBitView": "Bit Vue weisen",
+    "wordSize": "Wuertgréisst",
+    "bitwise": "Bitwise",
+    "bitShift": "Bit Verréckelung"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometrie",
+      "function": "Funktioun",
+      "functionsAria": "Funktiounen",
+      "trigonometricFunctionsAria": "Trigonometresch Funktiounen",
+      "angleUnit": "Wénkel Eenheet {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Erscheinung",
+      "themeTitle": "Thema",
+      "themeDescription": "Wielt e Faarfschema",
+      "light": "Liicht",
+      "dark": "Däischter",
+      "blue": "Blo",
+      "green": "Gréng",
+      "system": "System"
+    },
+    "language": {
+      "group": "Sprooch",
+      "title": "Sprooch",
+      "description": "Wielt Är gewënschte Sprooch"
+    },
+    "about": {
+      "group": "Iwwer"
+    },
+    "feedback": "Schéckt Feedback",
+    "contribute": {
+      "prefix": "Bäiträg op",
+      "link": "GitHub",
+      "suffix": "fir ze hëllefen dëse Rechner ze verbesseren"
+    },
+    "links": {
+      "repository": "Projet Repository",
+      "readme": "LIÉIERT",
+      "license": "MIT Lizenz"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standard",
+      "subtitle": "Klassesch direkt Evaluatioun"
+    },
+    "scientific": {
+      "label": "Wëssenschaftlech",
+      "subtitle": "Operateuren, Funktiounen an Ausdrock Ënnerstëtzung"
+    },
+    "graphing": {
+      "label": "Grafiken",
+      "subtitle": "Plot en einfachen Ausdrock op engem kartesesche Fliger"
+    },
+    "programmer": {
+      "label": "Programmer",
+      "subtitle": "Ganz Mathematik mat Basiskonversioun"
+    },
+    "date": {
+      "label": "Datumberechnung",
+      "subtitle": "Fannt Dauer a Verréckelungsdatum"
+    },
+    "currency": {
+      "label": "Währung",
+      "subtitle": "Konvertéieren mock Wechselkursen"
+    },
+    "volume": {
+      "label": "Volume",
+      "subtitle": "Konvertéiert Volumenmiessungen"
+    },
+    "length": {
+      "label": "Längt",
+      "subtitle": "Distanz- a Längtunitéiten ëmsetzen"
+    },
+    "weight": {
+      "label": "Gewiicht a Mass",
+      "subtitle": "Gewiicht a Mass Eenheeten ëmsetzen"
+    },
+    "temperature": {
+      "label": "Temperatur",
+      "subtitle": "Temperaturskalen konvertéieren"
+    },
+    "energy": {
+      "label": "Energie",
+      "subtitle": "Energiemiessunge konvertéieren"
+    },
+    "area": {
+      "label": "Beräich",
+      "subtitle": "Konvertéiert Beräichmiessungen"
+    },
+    "speed": {
+      "label": "Geschwindegkeet",
+      "subtitle": "Konvertéiert Geschwindegkeetsmessungen"
+    },
+    "time": {
+      "label": "Zeit",
+      "subtitle": "Konvertéiert Zäitmiessungen"
+    },
+    "power": {
+      "label": "Kraaft",
+      "subtitle": "Konvertéiert Kraaftmiessungen"
+    },
+    "data": {
+      "label": "Daten",
+      "subtitle": "Konvertéiert digital Späichereenheeten"
+    },
+    "pressure": {
+      "label": "Drock",
+      "subtitle": "Drock Eenheeten ëmsetzen"
+    },
+    "angle": {
+      "label": "Wénkel",
+      "subtitle": "Wénkelmiessunge konvertéieren"
+    },
+    "settings": {
+      "label": "Astellungen",
+      "subtitle": "Ausgesinn an App Informatioun"
+    }
+  },
+  "categories": {
+    "Currency": "Währung",
+    "Volume": "Volume",
+    "Length": "Längt",
+    "Mass": "Mass",
+    "Temperature": "Temperatur",
+    "Energy": "Energie",
+    "Area": "Beräich",
+    "Speed": "Geschwindegkeet",
+    "Time": "Zeit",
+    "Power": "Kraaft",
+    "Data": "Daten",
+    "Pressure": "Drock",
+    "Angle": "Wénkel"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstrom",
+      "Nanometers": "Nanometer",
+      "Microns": "Mikronen",
+      "Millimeters": "Millimeter",
+      "Centimeters": "Zentimeter",
+      "Meters": "Meter",
+      "Kilometers": "Kilometer",
+      "Inches": "Zoll",
+      "Feet": "Féiss",
+      "Yards": "Meter",
+      "Miles": "Meilen",
+      "Nautical miles": "Nautesch Meilen",
+      "paperclips": "pabeierclips",
+      "hands": "Hänn",
+      "jumbo jets": "JumboJets",
+      "Carats": "Karat",
+      "Milligrams": "Milligramm",
+      "Centigrams": "Centigramm",
+      "Decigrams": "Decigramm",
+      "Grams": "Gramm",
+      "Dekagrams": "Dekagrammen",
+      "Hectograms": "Hektogramm",
+      "Kilograms": "Kilogramm",
+      "Metric tonnes": "Tonnen",
+      "Ounces": "Unze",
+      "Pounds": "Pond",
+      "Stone": "Steng",
+      "Short tons (US)": "Kuerz Tonnen (US)",
+      "Long tons (UK)": "Long Tonnen (UK)",
+      "snowflakes": "Schneeflocken",
+      "soccer balls": "Fussballbäll",
+      "elephants": "Elefanten",
+      "whales": "Walen",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Milliliter",
+      "Cubic centimeters": "Kubikzentimeter",
+      "Liters": "Liter",
+      "Cubic meters": "Kubikmeter",
+      "Teaspoons (US)": "Téilöffel (US)",
+      "Tablespoons (US)": "Tablespoons (US)",
+      "Fluid ounces (US)": "Flësseg Unzen (US)",
+      "Cups (US)": "Coupe (US)",
+      "Pints (US)": "Pints (US)",
+      "Quarts (US)": "Quarts (US)",
+      "Gallons (US)": "Gallons (US)",
+      "Cubic inches": "Kubik Zoll",
+      "Cubic feet": "Kubikféiss",
+      "Cubic yards": "Kubikmeter",
+      "Teaspoons (UK)": "Téilöffel (UK)",
+      "Tablespoons (UK)": "Tablespoons (UK)",
+      "Fluid ounces (UK)": "Flësseg Unzen (UK)",
+      "Pints (UK)": "Pints (UK)",
+      "Quarts (UK)": "Quarts (UK)",
+      "Gallons (UK)": "Gallons (UK)",
+      "coffee cups": "Kaffisecher",
+      "bathtubs": "buedem",
+      "swimming pools": "Schwammen",
+      "Square millimeters": "Quadratmillimeter",
+      "Square centimeters": "Quadratzentimeter",
+      "Square meters": "Quadratmeter",
+      "Hectares": "Hektar",
+      "Square kilometers": "Quadratkilometer",
+      "Square inches": "Quadrat Zoll",
+      "Square feet": "Quadratféiss",
+      "Square yards": "Quadratmeter",
+      "Acres": "Hektar",
+      "Square miles": "Quadratkilometer",
+      "sheets of paper": "Blieder",
+      "soccer fields": "Fussballfelder",
+      "castles": "Schlässer",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Zentimeter pro Sekonn",
+      "Meters per second": "Meter pro Sekonn",
+      "Kilometers per hour": "Kilometer pro Stonn",
+      "Feet per second": "Féiss pro Sekonn",
+      "Miles per hour": "Meilen pro Stonn",
+      "Knots": "Knuet",
+      "Mach": "Mach",
+      "turtles": "Schildkröten",
+      "horses": "Päerd",
+      "jets": "Jets",
+      "Watts": "Watt",
+      "Kilowatts": "Kilowatt",
+      "Horsepower (US)": "Päerdskraaft (US)",
+      "Foot-pounds/minute": "Fouss-Pound/Minutt",
+      "BTUs/minute": "BTUs/min",
+      "light bulbs": "Glühbirnen",
+      "train engines": "Zuchmotoren",
+      "Thermal calories": "Thermesch Kalorien",
+      "Food calories": "Iessen Kalorien",
+      "British thermal units": "Britesch thermesch Eenheeten",
+      "Kilojoules": "Kilojoule",
+      "Kilowatt-hours": "Kilowatt-Stonnen",
+      "Electron volts": "Elektronvolt",
+      "Joules": "Joule",
+      "Foot-pounds": "Fouss-Pound",
+      "batteries": "Batterien",
+      "bananas": "Bananen",
+      "slices of cake": "Kuchstécker",
+      "Bits": "Bits",
+      "Nibble": "Nibble",
+      "Bytes": "Bytes",
+      "Kilobits": "Kilobit",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "Kilobytes",
+      "Kibibytes": "Kibibytes",
+      "Megabits": "Megabits",
+      "Mebibits": "Mebibits",
+      "Megabytes": "Megabytes",
+      "Mebibytes": "Mebibytes",
+      "Gigabits": "Gigabits",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Gigabytes",
+      "Gibibytes": "Gibibytes",
+      "Terabits": "Terabits",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabytes",
+      "Tebibytes": "Tebibytes",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabytes",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Exabits",
+      "Exbibits": "Ausstellungen",
+      "Exabytes": "Exabytes",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabytes",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yotabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabytes",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "Floppy Disks",
+      "CDs": "CDs",
+      "DVDs": "DVDs",
+      "Atmospheres": "Atmosphär",
+      "Bars": "Baren",
+      "Kilopascals": "Kilopascal",
+      "Millimeters of mercury": "Millimeter Quecksëlwer",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Pond pro Quadrat Zoll",
+      "Degrees": "Grad",
+      "Radians": "Radianer",
+      "Gradians": "Gradians",
+      "Microseconds": "Mikrosekonnen",
+      "Milliseconds": "Millisekonnen",
+      "Seconds": "Sekonnen",
+      "Minutes": "Minuten",
+      "Hours": "Stonnen",
+      "Days": "Deeg",
+      "Weeks": "Wochen",
+      "Years": "Joer"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "US Dollar",
+      "Euro": "Euro",
+      "British Pound": "Britescht Pond",
+      "Japanese Yen": "Japanesch Yen",
+      "Canadian Dollar": "Kanadeschen Dollar",
+      "Australian Dollar": "Australeschen Dollar",
+      "Brazilian Real": "Brasilianesche Real",
+      "Chilean Peso": "Chileanesche Peso",
+      "Chinese Yuan": "Chinesesch Yuan",
+      "Colombian Peso": "Kolumbianesche Peso",
+      "Danish Krone": "Dänesch Kroun",
+      "Egyptian Pound": "Ägyptescht Pond",
+      "Hong Kong Dollar": "Hong Kong Dollar",
+      "Indian Rupee": "Indesch Rupie",
+      "Kenyan Shilling": "Kenianesch shilling",
+      "Mexican Peso": "Mexikanesche Peso",
+      "Nigerian Naira": "Nigerian Naira",
+      "New Zealand Dollar": "Neiséiland Dollar",
+      "Norwegian Krone": "Norwegesch Kroun",
+      "Philippine Piso": "Philippinesch Piso",
+      "Polish Zloty": "polneschen Zloty",
+      "Qatari Riyal": "Qatari Riyal",
+      "Saudi Riyal": "Saudi riyal",
+      "Singapore Dollar": "Singapur Dollar",
+      "South African Rand": "Südafrikanesche Rand",
+      "South Korean Won": "Südkoreanesche Won",
+      "Swedish Krona": "Schwedesch Kroun",
+      "Swiss Franc": "Schwäizer Frang",
+      "Thai Baht": "Thailännesche Baht",
+      "Turkish Lira": "Tierkesch Lira",
+      "Turkmenistani Manat": "Turkmenistanesch Manat",
+      "Ugandan Shilling": "Uganda shilling",
+      "Ukrainian Hryvnia": "Ukrainesch Hrywnja",
+      "UAE Dirham": "UAE Dirham",
+      "Uruguayan Peso": "Uruguayanesche Peso",
+      "Uzbekistani Som": "Usbekistan Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezolanesche Bolívar Soberano",
+      "Vietnamese Dong": "Vietnameseschen Dong",
+      "Yemeni Rial": "Yemeni-Rial"
+    },
+    "labels": {
+      "United States - Dollar": "Vereenegt Staaten - Dollar",
+      "Europe - Euro": "Europa - Euro",
+      "United Kingdom - Pound": "Vereenegt Kinnekräich - Pound",
+      "Japan - Yen": "Japan - Yen",
+      "Canada - Dollar": "Kanada - Dollar",
+      "Australia - Dollar": "Australien - Dollar",
+      "Brazil - Real": "Brasilien - Real",
+      "Chile - Peso": "Chile - Peso",
+      "China - Yuan Renminbi": "China - Yuan Renminbi",
+      "Colombia - Peso": "Kolumbien - Peso",
+      "Denmark - Krone": "Dänemark - Krone",
+      "Egypt - Pound": "Ägypten - Pound",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Dollar",
+      "India - Rupee": "Indien - Rupie",
+      "Kenya - Shilling": "Kenia - Shilling",
+      "Mexico - Peso": "Mexiko - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "Neiséiland - Dollar",
+      "Norway - Krone": "Norwegen - Kroun",
+      "Philippines - Piso": "Philippinen - Piso",
+      "Poland - Zloty": "Polen - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Saudi Arabien - Riyal",
+      "Singapore - Dollar": "Singapur - Dollar",
+      "South Africa - Rand": "Südafrika - Rand",
+      "South Korea - Won": "Südkorea - gewonnen",
+      "Sweden - Krona": "Schweden - Kroun",
+      "Switzerland - Franc": "Schwäiz - Frang",
+      "Thailand - Baht": "Thailand - Baht",
+      "Turkey - Lira": "Tierkei - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Shilling",
+      "Ukraine - Hryvnia": "Ukraine - Hrywnja",
+      "United Arab Emirates - Dirham": "Vereenegt Arabesch Emirater - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Usbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemen - Rial"
+    }
+  }
+}

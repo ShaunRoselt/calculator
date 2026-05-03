@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Ajtz'ib' (Kalkulador)",
+    "name": "Ajtz'ib' (Kalkulador)"
+  },
+  "common": {
+    "back": "Tzalij",
+    "backspace": "Chup tijox",
+    "closeSidePanel": "Tz'apij ch'ich'"
+  },
+  "converter": {
+    "unitConverter": "K'exonel ch'ich'",
+    "title": "K'exonela' ch'ich'",
+    "builtInCollections": "Molonela' ch'ich' pa ruwi'",
+    "category": "Ruwach",
+    "from": "Chupam",
+    "to": "Pa",
+    "inputValue": "Ruwach k'exonel",
+    "convertedValue": "Ruwach k'exonel chik",
+    "swapUnits": "K'ex taq ch'ich'",
+    "keypad": "Ruch'ich' k'exonel",
+    "unit": "ch'ich'",
+    "unitOptions": "ch'ich' taq ch'ich'",
+    "currency": {
+      "updatingRates": "K'ex taq ch'ich'...",
+      "updateRates": "K'ex taq ch'ich'",
+      "keypad": "Ruch'ich' pwaq",
+      "currency": "pwaq",
+      "options": "pwaq taq ch'ich'",
+      "updated": "K'ex taq ch'ich' {timestamp}",
+      "status": {
+        "mockNote": "K'ex taq ch'ich' pa ruwi' ch'ich' chik.",
+        "fetching": "K'ayij ch'ich' chik pa ruwi' USD...",
+        "liveRatesLoaded": "K'ex taq ch'ich' chik pa ExchangeRate-API.",
+        "liveUpdateUnavailable": "Man k'ex taq ch'ich' chik ta. K'ex taq ch'ich' chik pa ruwi' ch'ich'."
+      }
+    },
+    "aboutEqualTo": "K'ayij ch'ich'"
+  },
+  "errors": {
+    "invalidInput": "Man utz ta ch'ich'",
+    "cannotDivideByZero": "Man k'ex taq ch'ich' chik pa ruwi' cero",
+    "cannotModuloByZero": "Man k'ex taq ch'ich' chik pa ruwi' cero",
+    "invalidProgrammerOperation": "Man utz ta ch'ich'",
+    "overflow": "Ruwach ch'ich' nim"
+  },
+  "date": {
+    "calculationMode": "Ruwach ch'ich' chik",
+    "from": "Chupam",
+    "to": "Pa",
+    "results": {
+      "difference": "K'ex taq ch'ich'",
+      "sameDates": "Junam taq ch'ich'",
+      "date": "Q'ij"
+    },
+    "calculationModeOptions": "Ruwach ch'ich' chik taq ch'ich'",
+    "mode": {
+      "difference": "K'ex taq ch'ich'",
+      "shift": "K'ex"
+    },
+    "operation": "Ch'ich'",
+    "add": "Tz'aqat",
+    "subtract": "Telesaj",
+    "years": "Juna' (plural: juna')",
+    "months": "Ik' (plural: ik')",
+    "days": "Q'ij (plural: q'ij)",
+    "chooseDate": "Cha' jun q'ij",
+    "previousMonth": "Ik' chikij",
+    "nextMonth": "Ik' chikij",
+    "duration": {
+      "year": {
+        "one": "{count} juna'",
+        "other": "{count} juna'"
+      },
+      "month": {
+        "one": "{count} ik'",
+        "other": "{count} ik'"
+      },
+      "week": {
+        "one": "{count} wuq'ij",
+        "other": "{count} wuq'ij"
+      },
+      "day": {
+        "one": "{count} q'ij",
+        "other": "{count} q'ij"
+      }
+    },
+    "history": {
+      "differenceBetween": "Kojol chuxe' {from} chuqa' {to}",
+      "addTo": "Titz'aqatisaj {duration} pa {date}",
+      "subtractFrom": "Telesaj {duration} chupam {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Tatz'eta' ri tz'ib'atalik",
+    "enterExpression": "Tatz'ib'aj jun tz'ib'axik",
+    "canvas": "Ruch'ich' b'antajik",
+    "stopTracing": "Chatani' ch'awem",
+    "startTracing": "Chatikirisaj ch'awem",
+    "share": "Tatzijoj",
+    "options": "Ta'ik",
+    "zoomIn": "Tatz'aqatisaj",
+    "zoomInLabel": "Tatz'aqatisaj",
+    "zoomOut": "Telesaj",
+    "zoomOutLabel": "Telesaj",
+    "refreshViewAutomatically": "Tik'ut chikij ri wachib'äl",
+    "view": "Wachib'äl",
+    "expressions": "Tz'ib'axik",
+    "mobileView": "Wachib'äl pa ruch'ich'",
+    "showGraph": "Tik'ut wachib'äl",
+    "showExpressions": "Tik'ut tz'ib'axik",
+    "backToFunctionList": "Titzolin pa ri cholajem taq chak",
+    "window": "Tz'alam",
+    "resetView": "Tik'ut chikij ri wachib'äl",
+    "units": "Ta'ik",
+    "radians": "Raqan",
+    "degrees": "Raqan",
+    "gradians": "Raqan",
+    "lineThickness": "Ruchuq'a' ri tz'ib' (Line thickness)",
+    "theme": "Ruwach (Theme)",
+    "alwaysLight": "Junam saq (Always light)",
+    "matchAppTheme": "Choj junam ruk' ri app (Match app theme)",
+    "groups": {
+      "inequalities": "Man junam ta (Inequalities)",
+      "trigonometry": "Tijoxik (Trigonometry)",
+      "function": "Chak (Function)"
+    },
+    "functions": "Chakib' (Functions)",
+    "showEquation": "K'ut ri junam (Show equation)",
+    "hideEquation": "Muq ri junam (Hide equation)",
+    "lineOptions": "Rucha'ik ri tz'ib' (Line options)",
+    "color": "B'onil (Color)",
+    "style": "Ruwach (Style)",
+    "analysis": {
+      "title": "Tzijonem (Analysis)",
+      "domain": "Ruwach'aj (Domain)",
+      "range": "Ruch'aj (Range)",
+      "xIntercept": "x-ch'akat (x-intercept)",
+      "yIntercept": "y-ch'akat (y-intercept)",
+      "minima": "Ch'ich' (Minima)",
+      "maxima": "Nim (Maxima)",
+      "inflectionPoints": "Tukel taq b'e (Inflection points)",
+      "verticalAsymptotes": "Pa'ik taq tz'ib' (Vertical asymptotes)",
+      "horizontalAsymptotes": "K'olik taq tz'ib' (Horizontal asymptotes)",
+      "obliqueAsymptotes": "K'olik taq tz'ib' (Oblique asymptotes)",
+      "parity": "Junam (Parity)",
+      "period": "K'ij (Period)",
+      "monotonicity": "Junam chak (Monotonicity)",
+      "domainNone": "Man k'o ta ruk'u'x (No domain restrictions)",
+      "rangeNone": "Man k'o ta ruk'u'x (No range restrictions)",
+      "xInterceptNone": "Man k'o ta x-ch'akat (No x-intercepts)",
+      "yInterceptNone": "Man k'o ta y-ch'akat (No y-intercepts)",
+      "minimaNone": "Man k'o ta ch'ich' (No minima)",
+      "maximaNone": "Man k'o ta nim (No maxima)",
+      "inflectionNone": "Man k'o ta tukel taq b'e (No inflection points)",
+      "verticalAsymptotesNone": "Man k'o ta pa'ik taq tz'ib' (No vertical asymptotes)",
+      "horizontalAsymptotesNone": "Man k'o ta k'olik taq tz'ib' (No horizontal asymptotes)",
+      "obliqueAsymptotesNone": "Man k'o ta k'olik taq tz'ib' (No oblique asymptotes)",
+      "parityUnknown": "Man etaman (Unknown)",
+      "parityOdd": "Man junam ta (Odd)",
+      "parityEven": "Junam (Even)",
+      "parityNeither": "Mani",
+      "periodicityUnknown": "Man etaman (Unknown)",
+      "periodicityNotPeriodic": "Mani junam",
+      "monotonicityConstant": "Junam",
+      "monotonicityIncreasing": "K'iyinaq",
+      "monotonicityDecreasing": "Q'axinaq",
+      "monotonicityUnknown": "Man etaman (Unknown)",
+      "monotonicityError": "Mani kowinik tz'ib'axik",
+      "featureTooComplexPlural": "Sib'alaj k'ax chupam",
+      "analysisCouldNotBePerformed": "Mani kowinik chupam",
+      "analysisNotSupported": "Mani kowinik chupam",
+      "variableIsNotX": "Mani x ta x"
+    },
+    "plottingExpressions": "Tz'ib'axik {count} tzij",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Ch'aj chik tzij {index}",
+    "expressionIndex": "Tzij {index}",
+    "analyzeFunction": "Ch'aj chik chak",
+    "changeEquationStyle": "K'ex chak pa rub'anikil",
+    "removeEquation": "Q'etej chak",
+    "lineStyle": {
+      "solid": "Rub'anikil junam ray",
+      "dash": "Rub'anikil ray ch'aj",
+      "dot": "Rub'anikil ray ch'aj"
+    }
+  },
+  "history": {
+    "empty": "Mani junam chak",
+    "clearAll": "Ch'aj chik ronojel",
+    "clear": "Ch'aj chik junam chak",
+    "title": "Junam chak",
+    "andMemory": "Junam chak chuqa' na'oj",
+    "aria": {
+      "historyPanel": "Junam chak panel",
+      "historyAndMemoryPanel": "Junam chak chuqa' na'oj panel"
+    },
+    "closeFlyout": "Tz'apij junam chak",
+    "openFlyout": "Ja'ij junam chak"
+  },
+  "memory": {
+    "empty": "Mani na'oj",
+    "clearItem": "Ch'aj chik junam",
+    "addCurrentValue": "Tik'ij chik junam",
+    "subtractCurrentValue": "Q'etej chik junam",
+    "clearAll": "Ch'aj chik ronojel",
+    "clear": "Ch'aj chik na'oj",
+    "title": "Na'oj",
+    "controls": "Na'oj chak",
+    "tooltips": {
+      "clearAll": "Ch'aj chik ronojel na'oj",
+      "recall": "Chomolaj chupam ri na'oj",
+      "add": "Tik'ut chupam ri na'oj",
+      "subtract": "Q'uq' chupam ri na'oj",
+      "store": "Tuyuj chupam ri na'oj"
+    },
+    "recallValue": "Chomolaj na'oj {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "B'e",
+      "closeNavigation": "Tz'apij ri b'e",
+      "openNavigation": "Ja ri b'e"
+    },
+    "groups": {
+      "calculator": "Ajtz'ib' (Kalkulador)",
+      "converter": "K'exonel"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Rupam ri bit",
+    "baseReadouts": "Rutzijol ri k'u'x",
+    "surfaceMode": "Ruwach ulew",
+    "fullKeypad": "Ronojej teclado",
+    "showKeypad": "K'ut ri teclado",
+    "bitTogglingKeypad": "Teclado rech ri bit",
+    "showBitView": "K'ut ri bit",
+    "wordSize": "Ruch'awib'al tzij",
+    "bitwise": "Bitwise",
+    "bitShift": "K'exoj ri bit"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Tijoxik (Trigonometry)",
+      "function": "Chak (Function)",
+      "functionsAria": "Chakib' (Functions)",
+      "trigonometricFunctionsAria": "Samaj rech trigonometría",
+      "angleUnit": "Rucholajil ángulo {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Ruwach",
+      "themeTitle": "Ruwach (Theme)",
+      "themeDescription": "Cha' jun rutzijol",
+      "light": "Saq",
+      "dark": "Q'eq",
+      "blue": "Rax",
+      "green": "Rax",
+      "system": "Sistema"
+    },
+    "language": {
+      "group": "Ch'ab'al",
+      "title": "Ch'ab'al",
+      "description": "Cha' ri ch'ab'al"
+    },
+    "about": {
+      "group": "Puwuj"
+    },
+    "feedback": "Taq jun rutzij",
+    "contribute": {
+      "prefix": "To' pa",
+      "link": "GitHub",
+      "suffix": "re utzilaj ri'ajil re'"
+    },
+    "links": {
+      "repository": "Rupam ri proyecto",
+      "readme": "README",
+      "license": "Licencia MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Estandard",
+      "subtitle": "K'axk'olaj chupam ri q'ij"
+    },
+    "scientific": {
+      "label": "Tzijonel",
+      "subtitle": "Chakub'al, chakub'al, chuqa' ch'awem ruk' ri tzij"
+    },
+    "graphing": {
+      "label": "Wachib'äl",
+      "subtitle": "Tz'ib'aj jun ch'awem chupam jun wachib'äl cartesiano"
+    },
+    "programmer": {
+      "label": "Ajtz'ib'anel",
+      "subtitle": "Ajilab'äl ruk' jaloj rech ajilab'äl"
+    },
+    "date": {
+      "label": "Ajilab'äl q'ij",
+      "subtitle": "K'ulwachitaj q'ij chuqa' jalwachitaj q'ij"
+    },
+    "currency": {
+      "label": "Pwaq",
+      "subtitle": "Jalwachitaj pwaq"
+    },
+    "volume": {
+      "label": "Q'uq'uj",
+      "subtitle": "Jalwachitaj q'uq'uj"
+    },
+    "length": {
+      "label": "Nimilej",
+      "subtitle": "Jalwachitaj nimilej chuqa' ch'ekoj"
+    },
+    "weight": {
+      "label": "Alaj chuqa' alaj",
+      "subtitle": "Jalwachitaj alaj chuqa' alaj"
+    },
+    "temperature": {
+      "label": "Q'ij",
+      "subtitle": "Jalwachitaj q'ij"
+    },
+    "energy": {
+      "label": "Ch'umil",
+      "subtitle": "Jalwachitaj ch'umil"
+    },
+    "area": {
+      "label": "Ulew",
+      "subtitle": "Jalwachitaj ulew"
+    },
+    "speed": {
+      "label": "Aninaq",
+      "subtitle": "Jalwachitaj aninaq"
+    },
+    "time": {
+      "label": "Q'ij",
+      "subtitle": "Jalwachitaj q'ij"
+    },
+    "power": {
+      "label": "Ch'umil",
+      "subtitle": "Jalwachitaj ch'umil"
+    },
+    "data": {
+      "label": "Tzij",
+      "subtitle": "Jalwachitaj tzij"
+    },
+    "pressure": {
+      "label": "Ch'ich'",
+      "subtitle": "Jalwachitaj ch'ich'"
+    },
+    "angle": {
+      "label": "Wachib'äl",
+      "subtitle": "Jalwachitaj wachib'äl"
+    },
+    "settings": {
+      "label": "Chojmil",
+      "subtitle": "Wachib'äl chuqa' etamab'äl"
+    }
+  },
+  "categories": {
+    "Currency": "Pwaq",
+    "Volume": "Q'uq'uj",
+    "Length": "Nimilej",
+    "Mass": "Alaj",
+    "Temperature": "Q'ij",
+    "Energy": "Ch'umil",
+    "Area": "Ulew",
+    "Speed": "Aninaq",
+    "Time": "Q'ij",
+    "Power": "Ch'umil",
+    "Data": "Tzij",
+    "Pressure": "Ch'ich'",
+    "Angle": "Wachib'äl"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanómetros",
+      "Microns": "Micras",
+      "Millimeters": "Milímetros",
+      "Centimeters": "Centímetros",
+      "Meters": "Metros",
+      "Kilometers": "Kilómetros",
+      "Inches": "Pulgadas",
+      "Feet": "Pies",
+      "Yards": "Yardas",
+      "Miles": "Millas",
+      "Nautical miles": "Millas náuticas",
+      "paperclips": "sujetapapeles",
+      "hands": "manos",
+      "jumbo jets": "aviones jumbo",
+      "Carats": "Quilates",
+      "Milligrams": "Miligramos",
+      "Centigrams": "Centigramos",
+      "Decigrams": "Decigramos",
+      "Grams": "Gramos",
+      "Dekagrams": "Decagramos",
+      "Hectograms": "Hectogramos",
+      "Kilograms": "Kilogramos",
+      "Metric tonnes": "Toneladas métricas",
+      "Ounces": "Onzas",
+      "Pounds": "Libras",
+      "Stone": "Piedras",
+      "Short tons (US)": "Toneladas cortas (EE. UU.)",
+      "Long tons (UK)": "Toneladas largas (Reino Unido)",
+      "snowflakes": "copos de nieve",
+      "soccer balls": "balones de fútbol",
+      "elephants": "elefantes",
+      "whales": "ballenas",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mililitros",
+      "Cubic centimeters": "Centímetros cúbicos",
+      "Liters": "Litros",
+      "Cubic meters": "Metros cúbicos",
+      "Teaspoons (US)": "Cucharaditas (EE. UU.)",
+      "Tablespoons (US)": "Cucharadas (EE. UU.)",
+      "Fluid ounces (US)": "Onzas líquidas (EE. UU.)",
+      "Cups (US)": "Raxa' (US)",
+      "Pints (US)": "Pintas (US)",
+      "Quarts (US)": "Kuartas (US)",
+      "Gallons (US)": "Galones (US)",
+      "Cubic inches": "Púlb'äl ch'ajch'oj",
+      "Cubic feet": "Púlb'äl juyub'",
+      "Cubic yards": "Púlb'äl ulew",
+      "Teaspoons (UK)": "Cucharitas (UK)",
+      "Tablespoons (UK)": "Cucharadas (UK)",
+      "Fluid ounces (UK)": "Onzas líquidas (UK)",
+      "Pints (UK)": "Pintas (UK)",
+      "Quarts (UK)": "Kuartas (UK)",
+      "Gallons (UK)": "Galones (UK)",
+      "coffee cups": "Raxa' kape",
+      "bathtubs": "Ch'ajch'oj ja'",
+      "swimming pools": "Nim ja' b'enaq",
+      "Square millimeters": "Milímetros cuadrados",
+      "Square centimeters": "Centímetros cuadrados",
+      "Square meters": "Metros cuadrados",
+      "Hectares": "Hectáreas",
+      "Square kilometers": "Kilómetros cuadrados",
+      "Square inches": "Pulgadas cuadradas",
+      "Square feet": "Pies cuadrados",
+      "Square yards": "Yardas cuadradas",
+      "Acres": "Acres",
+      "Square miles": "Millas cuadradas",
+      "sheets of paper": "Wuj ch'ich'",
+      "soccer fields": "B'eyom tz'ib'",
+      "castles": "K'ak'äj",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Centímetros por segundo",
+      "Meters per second": "Metros por segundo",
+      "Kilometers per hour": "Kilómetros por hora",
+      "Feet per second": "Pies por segundo",
+      "Miles per hour": "Millas por hora",
+      "Knots": "Nudos",
+      "Mach": "Mach",
+      "turtles": "Tortugas",
+      "horses": "Kiej",
+      "jets": "Jet",
+      "Watts": "Watts (watts)",
+      "Kilowatts": "Kilowatts (kilowatts)",
+      "Horsepower (US)": "Horsepower (US) (cabayos, US)",
+      "Foot-pounds/minute": "Foot-pounds/minute (pies-libras por minuto)",
+      "BTUs/minute": "BTUs/minute (BTUs por minuto)",
+      "light bulbs": "light bulbs (bombillas)",
+      "train engines": "train engines (motores de tren)",
+      "Thermal calories": "Thermal calories (calorías térmicas)",
+      "Food calories": "Food calories (calorías de comida)",
+      "British thermal units": "British thermal units (unidades térmicas británicas)",
+      "Kilojoules": "Kilojoules (kilojulios)",
+      "Kilowatt-hours": "Kilowatt-hours (kilovatios-hora)",
+      "Electron volts": "Electron volts (electrón voltios)",
+      "Joules": "Joules (julios)",
+      "Foot-pounds": "Foot-pounds (pies-libras)",
+      "batteries": "batteries (pilas)",
+      "bananas": "bananas (bananos)",
+      "slices of cake": "slices of cake (pedazos de pastel)",
+      "Bits": "Bits (bits)",
+      "Nibble": "Nibble (nibble)",
+      "Bytes": "Bytes (bytes)",
+      "Kilobits": "Kilobits (kilobits)",
+      "Kibibits": "Kibibits (kibibits)",
+      "Kilobytes": "Kilobytes (kilobytes)",
+      "Kibibytes": "Kibibytes (kibibytes)",
+      "Megabits": "Megabits (megabits)",
+      "Mebibits": "Mebibits (mebibits)",
+      "Megabytes": "Megabytes (megabytes)",
+      "Mebibytes": "Mebibytes (mebibytes)",
+      "Gigabits": "Gigabits (gigabits)",
+      "Gibibits": "Gibibits (gibibits)",
+      "Gigabytes": "Gigabytes (gigabytes)",
+      "Gibibytes": "Gibibytes (gibibytes)",
+      "Terabits": "Terabits (terabits)",
+      "Tebibits": "Tebibits (tebibits)",
+      "Terabytes": "Terabytes (terabytes)",
+      "Tebibytes": "Tebibytes (tebibytes)",
+      "Petabits": "Petabits (petabits)",
+      "Pebibits": "Pebibits (pebibits)",
+      "Petabytes": "Petabytes (petabytes)",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Exabits",
+      "Exbibits": "Exbibits",
+      "Exabytes": "Exabytes",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabytes",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabytes",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "floppy disks",
+      "CDs": "CDs",
+      "DVDs": "DVDs",
+      "Atmospheres": "Atmospheres",
+      "Bars": "Bars",
+      "Kilopascals": "Kilopascals",
+      "Millimeters of mercury": "Millimeters of mercury",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Pounds per square inch",
+      "Degrees": "Raqan",
+      "Radians": "Raqan",
+      "Gradians": "Raqan",
+      "Microseconds": "Microseconds",
+      "Milliseconds": "Milliseconds",
+      "Seconds": "Seconds",
+      "Minutes": "Minutes",
+      "Hours": "Hours",
+      "Days": "Q'ij (plural: q'ij)",
+      "Weeks": "Weeks",
+      "Years": "Juna' (plural: juna')"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "US Dollar",
+      "Euro": "Euro",
+      "British Pound": "British Pound",
+      "Japanese Yen": "Japanese Yen",
+      "Canadian Dollar": "Canadian Dollar",
+      "Australian Dollar": "Australian Dollar",
+      "Brazilian Real": "Brazilian Real",
+      "Chilean Peso": "Chilean Peso",
+      "Chinese Yuan": "Chinese Yuan",
+      "Colombian Peso": "Colombian Peso",
+      "Danish Krone": "Danish Krone",
+      "Egyptian Pound": "Egyptian Pound",
+      "Hong Kong Dollar": "Hong Kong Dollar",
+      "Indian Rupee": "Indian Rupee",
+      "Kenyan Shilling": "Kenyan Shilling",
+      "Mexican Peso": "Mexican Peso",
+      "Nigerian Naira": "Nigerian Naira",
+      "New Zealand Dollar": "New Zealand Dollar",
+      "Norwegian Krone": "Norwegian Krone",
+      "Philippine Piso": "Philippine Piso",
+      "Polish Zloty": "Polish Zloty",
+      "Qatari Riyal": "Qatari Riyal",
+      "Saudi Riyal": "Saudi Riyal",
+      "Singapore Dollar": "Singapore Dollar",
+      "South African Rand": "South African Rand",
+      "South Korean Won": "South Korean Won",
+      "Swedish Krona": "Swedish Krona",
+      "Swiss Franc": "Swiss Franc",
+      "Thai Baht": "Thai Baht",
+      "Turkish Lira": "Turkish Lira",
+      "Turkmenistani Manat": "Turkmenistani Manat",
+      "Ugandan Shilling": "Ugandan Shilling",
+      "Ukrainian Hryvnia": "Ukrainian Hryvnia",
+      "UAE Dirham": "UAE Dirham",
+      "Uruguayan Peso": "Uruguayan Peso",
+      "Uzbekistani Som": "Uzbekistani Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuelan Bolívar Soberano",
+      "Vietnamese Dong": "Vietnamese Dong",
+      "Yemeni Rial": "Yemeni Rial"
+    },
+    "labels": {
+      "United States - Dollar": "Estados Unidos - Dólar",
+      "Europe - Euro": "Europa - Euro",
+      "United Kingdom - Pound": "Reino Unido - Libra",
+      "Japan - Yen": "Japón - Yen",
+      "Canada - Dollar": "Canadá - Dólar",
+      "Australia - Dollar": "Australia - Dólar",
+      "Brazil - Real": "Brasil - Real",
+      "Chile - Peso": "Chile - Peso",
+      "China - Yuan Renminbi": "China - Yuan Renminbi",
+      "Colombia - Peso": "Colombia - Peso",
+      "Denmark - Krone": "Dinamarca - Corona",
+      "Egypt - Pound": "Egipto - Libra",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Dolar",
+      "India - Rupee": "India - Rupia",
+      "Kenya - Shilling": "Kenya - Chelín",
+      "Mexico - Peso": "México - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "Nueva Zelanda - Dolar",
+      "Norway - Krone": "Noruega - Krona",
+      "Philippines - Piso": "Filipinas - Piso",
+      "Poland - Zloty": "Polonia - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Arabia Saudita - Riyal",
+      "Singapore - Dollar": "Singapur - Dolar",
+      "South Africa - Rand": "Sudáfrica - Rand",
+      "South Korea - Won": "Corea del Sur - Won",
+      "Sweden - Krona": "Suecia - Krona",
+      "Switzerland - Franc": "Suiza - Franco",
+      "Thailand - Baht": "Tailandia - Baht",
+      "Turkey - Lira": "Turquía - Lira",
+      "Turkmenistan - Manat": "Turkmenistán - Manat",
+      "Uganda - Shilling": "Uganda - Chelín",
+      "Ukraine - Hryvnia": "Ucrania - Grivnia",
+      "United Arab Emirates - Dirham": "Emiratos Árabes Unidos - Dírham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Uzbekistán - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemen - Rial"
+    }
+  }
+}

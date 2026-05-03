@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kalkulagailua",
+    "name": "Kalkulagailua"
+  },
+  "common": {
+    "back": "Itzuli",
+    "backspace": "Atzera atzera",
+    "closeSidePanel": "Itxi panela"
+  },
+  "converter": {
+    "unitConverter": "Unitate-bihurgailua",
+    "title": "Unitate-bihurgailuak",
+    "builtInCollections": "Bildumak barneratuak",
+    "category": "Kategoria",
+    "from": "Nork",
+    "to": "Hori",
+    "inputValue": "Bihurtu beharreko balioa",
+    "convertedValue": "Bihurtutako balioa",
+    "swapUnits": "Trukatu unitateak",
+    "keypad": "Bihurgailuaren teklatua",
+    "unit": "unitatea",
+    "unitOptions": "unitate aukerak",
+    "currency": {
+      "updatingRates": "Tarifak eguneratzen…",
+      "updateRates": "Eguneratu tarifak",
+      "keypad": "Moneta teklatua",
+      "currency": "moneta",
+      "options": "moneta aukerak",
+      "updated": "Eguneratua {timestamp}",
+      "status": {
+        "mockNote": "Aplikazio autonomoaren demoaren erreferentzia-tasak simulatu.",
+        "fetching": "USDaren azken erreferentzia-tasak eskuratzen...",
+        "liveRatesLoaded": "ExchangeRate-APItik kargatu dira zuzeneko tarifak.",
+        "liveUpdateUnavailable": "Zuzenean eguneratzea ez dago erabilgarri. Demo-tasa freskatuak lokalean."
+      }
+    },
+    "aboutEqualTo": "Gutxi gorabehera berdina"
+  },
+  "errors": {
+    "invalidInput": "Sarrera baliogabea",
+    "cannotDivideByZero": "Ezin da zeroz zatitu",
+    "cannotModuloByZero": "Ezin da zeroz modulatu",
+    "invalidProgrammerOperation": "Eragiketa baliogabea",
+    "overflow": "Emaitza handiegia"
+  },
+  "date": {
+    "calculationMode": "Kalkulatzeko modua",
+    "from": "Nork",
+    "to": "Hori",
+    "results": {
+      "difference": "aldea",
+      "sameDates": "Data berdinak",
+      "date": "Data"
+    },
+    "calculationModeOptions": "Kalkulatzeko moduaren aukerak",
+    "mode": {
+      "difference": "aldea",
+      "shift": "Maius"
+    },
+    "operation": "Eragiketa",
+    "add": "Gehitu",
+    "subtract": "Kendu",
+    "years": "Urteak",
+    "months": "Hilabeteak",
+    "days": "Egunak",
+    "chooseDate": "Aukeratu data",
+    "previousMonth": "Aurreko hilabetea",
+    "nextMonth": "Hurrengo hilabetea",
+    "duration": {
+      "year": {
+        "one": "{count} urtea",
+        "other": "{count} urte"
+      },
+      "month": {
+        "one": "{count} hilabete",
+        "other": "{count} hilabete"
+      },
+      "week": {
+        "one": "{count} astea",
+        "other": "{count} aste"
+      },
+      "day": {
+        "one": "{count} eguna",
+        "other": "{count} egun"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from} eta {to} arteko aldea",
+      "addTo": "Gehitu {duration} {date}",
+      "subtractFrom": "Kendu {duration} {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Egiaztatu nabarmendutako adierazpena",
+    "enterExpression": "Idatzi esamolde bat",
+    "canvas": "Mihise grafikoa",
+    "stopTracing": "Utzi trazatzeari",
+    "startTracing": "Hasi trazatzen",
+    "share": "Partekatu",
+    "options": "Aukerak",
+    "zoomIn": "Zokatu",
+    "zoomInLabel": "Zokatu",
+    "zoomOut": "Zatiagotu",
+    "zoomOutLabel": "Zatiagotu",
+    "refreshViewAutomatically": "Freskatu ikuspegia automatikoki",
+    "view": "Ikusi",
+    "expressions": "Adierazpenak",
+    "mobileView": "Mugikorren ikuspegia",
+    "showGraph": "Erakutsi grafikoa",
+    "showExpressions": "Erakutsi esamoldeak",
+    "backToFunctionList": "Itzuli funtzioen zerrendara",
+    "window": "Leihoa",
+    "resetView": "Berrezarri ikuspegia",
+    "units": "Unitateak",
+    "radians": "Radians",
+    "degrees": "Graduak",
+    "gradians": "Gradianak",
+    "lineThickness": "Marroaren lodiera",
+    "theme": "Gaia",
+    "alwaysLight": "Beti argia",
+    "matchAppTheme": "Lotu aplikazioaren gaia",
+    "groups": {
+      "inequalities": "Desberdintasunak",
+      "trigonometry": "Trigonometria",
+      "function": "Funtzioa"
+    },
+    "functions": "Funtzioak",
+    "showEquation": "Erakutsi ekuazioa",
+    "hideEquation": "Ekuazioa ezkutatu",
+    "lineOptions": "Lerro-aukerak",
+    "color": "Kolorea",
+    "style": "Estiloa",
+    "analysis": {
+      "title": "Analisia",
+      "domain": "Domeinua",
+      "range": "Barrutia",
+      "xIntercept": "x-ebakidura",
+      "yIntercept": "y-ebakidura",
+      "minima": "Gutxienez",
+      "maxima": "Maxima",
+      "inflectionPoints": "Inflexio-puntuak",
+      "verticalAsymptotes": "Asintota bertikalak",
+      "horizontalAsymptotes": "Asintota horizontalak",
+      "obliqueAsymptotes": "Asintota zeiharrak",
+      "parity": "Parekidetasuna",
+      "period": "Epea",
+      "monotonicity": "Monotonikotasuna",
+      "domainNone": "Domeinu-murrizketarik ez",
+      "rangeNone": "Ez dago barruti mugarik",
+      "xInterceptNone": "X-ebakitzerik ez",
+      "yInterceptNone": "Ez dago y-ebakidurarik",
+      "minimaNone": "Ez dago minimorik",
+      "maximaNone": "Maximorik ez",
+      "inflectionNone": "Ez dago inflexio punturik",
+      "verticalAsymptotesNone": "Asintota bertikalik ez",
+      "horizontalAsymptotesNone": "Asintota horizontalik ez",
+      "obliqueAsymptotesNone": "Asintota zeiharrik ez",
+      "parityUnknown": "Ezezaguna",
+      "parityOdd": "Bakoitia",
+      "parityEven": "Baita ere",
+      "parityNeither": "Eta ere ez",
+      "periodicityUnknown": "Ezezaguna",
+      "periodicityNotPeriodic": "Ez aldizka",
+      "monotonicityConstant": "Konstantea",
+      "monotonicityIncreasing": "Gortzen ari da",
+      "monotonicityDecreasing": "Gutxitzen ari da",
+      "monotonicityUnknown": "Ezezaguna",
+      "monotonicityError": "Ezin da zehaztu",
+      "featureTooComplexPlural": "Konplexuegia aztertzeko",
+      "analysisCouldNotBePerformed": "Analisia ezin izan da egin",
+      "analysisNotSupported": "Analisia ez da onartzen",
+      "variableIsNotX": "Aldagaia ez da x"
+    },
+    "plottingExpressions": "{count} adierazpenak marrazten",
+    "xMin": "X-min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Hautatu {index} adierazpena",
+    "expressionIndex": "Adierazpena {index}",
+    "analyzeFunction": "Aztertu funtzioa",
+    "changeEquationStyle": "Aldatu ekuazioaren estiloa",
+    "removeEquation": "Kendu ekuazioa",
+    "lineStyle": {
+      "solid": "Lerro sendoko estiloa",
+      "dash": "Marra-lerroaren estiloa",
+      "dot": "Punto-lerroaren estiloa"
+    }
+  },
+  "history": {
+    "empty": "Historia hutsik dago",
+    "clearAll": "Garbitu guztiak",
+    "clear": "Garbitu historia",
+    "title": "Historia",
+    "andMemory": "Historia eta memoria",
+    "aria": {
+      "historyPanel": "Historia panela",
+      "historyAndMemoryPanel": "Historia eta Memoria panela"
+    },
+    "closeFlyout": "Itxi historia",
+    "openFlyout": "Ireki historia"
+  },
+  "memory": {
+    "empty": "Memoria hutsik dago",
+    "clearItem": "Garbitu elementua",
+    "addCurrentValue": "Gehitu uneko balioa",
+    "subtractCurrentValue": "Kendu uneko balioa",
+    "clearAll": "Garbitu guztiak",
+    "clear": "Garbitu memoria",
+    "title": "Memoria",
+    "controls": "Memoriaren kontrolak",
+    "tooltips": {
+      "clearAll": "Garbitu memoria guztia",
+      "recall": "Gogoratu memoriatik",
+      "add": "Gehitu memoriara",
+      "subtract": "Kendu memoriatik",
+      "store": "Gorde memorian"
+    },
+    "recallValue": "Gogoratu memoria {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Nabigazioa",
+      "closeNavigation": "Itxi nabigazioa",
+      "openNavigation": "Ireki nabigazioa"
+    },
+    "groups": {
+      "calculator": "Kalkulagailua",
+      "converter": "Bihurgailua"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit irauli panela",
+    "baseReadouts": "Oinarrizko irakurketak",
+    "surfaceMode": "Azalera modua",
+    "fullKeypad": "Teklatu osoa",
+    "showKeypad": "Erakutsi teklatua",
+    "bitTogglingKeypad": "Biteko teklatua aldatzeko",
+    "showBitView": "Erakutsi bit ikuspegia",
+    "wordSize": "Hitz tamaina",
+    "bitwise": "Bibitan",
+    "bitShift": "Biten desplazamendua"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometria",
+      "function": "Funtzioa",
+      "functionsAria": "Funtzioak",
+      "trigonometricFunctionsAria": "Funtzio trigonometrikoak",
+      "angleUnit": "Angelu-unitatea {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Itxura",
+      "themeTitle": "Gaia",
+      "themeDescription": "Aukeratu kolore-eskema bat",
+      "light": "Argia",
+      "dark": "Iluna",
+      "blue": "Urdina",
+      "green": "Berdea",
+      "system": "Sistema"
+    },
+    "language": {
+      "group": "Hizkuntza",
+      "title": "Hizkuntza",
+      "description": "Aukeratu nahi duzun hizkuntza"
+    },
+    "about": {
+      "group": "Hori buruz"
+    },
+    "feedback": "Bidali iritzia",
+    "contribute": {
+      "prefix": "Ekarpena",
+      "link": "GitHub",
+      "suffix": "kalkulagailua hobetzen laguntzeko"
+    },
+    "links": {
+      "repository": "Proiektuaren biltegia",
+      "readme": "IRAKURRI",
+      "license": "MIT lizentzia"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Estandarra",
+      "subtitle": "Berehalako ebaluazio klasikoa"
+    },
+    "scientific": {
+      "label": "Zentifikoa",
+      "subtitle": "Eragileak, funtzioak eta adierazpen-laguntza"
+    },
+    "graphing": {
+      "label": "Grafikatzea",
+      "subtitle": "Markatu adierazpen sinple bat plano kartesiar batean"
+    },
+    "programmer": {
+      "label": "Programatzailea",
+      "subtitle": "Oinarrizko bihurketarekin osoko matematika"
+    },
+    "date": {
+      "label": "Data kalkulatzea",
+      "subtitle": "Bilatu iraupenak eta txandakako datak"
+    },
+    "currency": {
+      "label": "Moneta",
+      "subtitle": "Bihurtu truke-tasak"
+    },
+    "volume": {
+      "label": "Bolumena",
+      "subtitle": "Bihurtu bolumen-neurriak"
+    },
+    "length": {
+      "label": "Luzera",
+      "subtitle": "Bihurtu distantzia eta luzera unitateak"
+    },
+    "weight": {
+      "label": "Pisua eta masa",
+      "subtitle": "Bihurtu pisu eta masa unitateak"
+    },
+    "temperature": {
+      "label": "Tenperatura",
+      "subtitle": "Bihurtu tenperatura eskalak"
+    },
+    "energy": {
+      "label": "Energia",
+      "subtitle": "Bihurtu energia-neurriak"
+    },
+    "area": {
+      "label": "Eremua",
+      "subtitle": "Bihurtu eremuaren neurriak"
+    },
+    "speed": {
+      "label": "Abiadura",
+      "subtitle": "Bihurtu abiadura-neurriak"
+    },
+    "time": {
+      "label": "Ordua",
+      "subtitle": "Bihurtu denbora-neurriak"
+    },
+    "power": {
+      "label": "Potentzia",
+      "subtitle": "Bihurtu potentzia-neurriak"
+    },
+    "data": {
+      "label": "Datuak",
+      "subtitle": "Bihurtu biltegiratze-unitate digitalak"
+    },
+    "pressure": {
+      "label": "Presioa",
+      "subtitle": "Bihurtu presio-unitateak"
+    },
+    "angle": {
+      "label": "Angelua",
+      "subtitle": "Bihurtu angeluen neurriak"
+    },
+    "settings": {
+      "label": "Ezarpenak",
+      "subtitle": "Itxura eta aplikazioaren informazioa"
+    }
+  },
+  "categories": {
+    "Currency": "Moneta",
+    "Volume": "Bolumena",
+    "Length": "Luzera",
+    "Mass": "Meza",
+    "Temperature": "Tenperatura",
+    "Energy": "Energia",
+    "Area": "Eremua",
+    "Speed": "Abiadura",
+    "Time": "Ordua",
+    "Power": "Potentzia",
+    "Data": "Datuak",
+    "Pressure": "Presioa",
+    "Angle": "Angelua"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanometroak",
+      "Microns": "Mikronak",
+      "Millimeters": "Milimetroak",
+      "Centimeters": "Zentimetroak",
+      "Meters": "Metroak",
+      "Kilometers": "Kilometroak",
+      "Inches": "Hazbete",
+      "Feet": "Oinak",
+      "Yards": "Yarda",
+      "Miles": "Milia",
+      "Nautical miles": "Mila nautikoak",
+      "paperclips": "paper-klipak",
+      "hands": "eskuak",
+      "jumbo jets": "jumbo jet",
+      "Carats": "karateak",
+      "Milligrams": "Miligramo",
+      "Centigrams": "Zentigramo",
+      "Decigrams": "Dezigramo",
+      "Grams": "Gramo",
+      "Dekagrams": "Dekagramak",
+      "Hectograms": "Hectogramo",
+      "Kilograms": "Kilogramo",
+      "Metric tonnes": "Tona metrikoak",
+      "Ounces": "Ontzak",
+      "Pounds": "Libra",
+      "Stone": "Harria",
+      "Short tons (US)": "Tona laburrak (AEB)",
+      "Long tons (UK)": "Tona luzeak (Erresuma Batua)",
+      "snowflakes": "elur malutak",
+      "soccer balls": "futboleko pilotak",
+      "elephants": "elefanteak",
+      "whales": "baleak",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mililitro",
+      "Cubic centimeters": "Zentimetro kubikoak",
+      "Liters": "Litroak",
+      "Cubic meters": "Metro kubikoak",
+      "Teaspoons (US)": "Koilarakada (AEB)",
+      "Tablespoons (US)": "Koilarakada (AEB)",
+      "Fluid ounces (US)": "Ontza fluidoak (AEB)",
+      "Cups (US)": "Kopa (AEB)",
+      "Pints (US)": "Pinta (AEB)",
+      "Quarts (US)": "Quarts (AEB)",
+      "Gallons (US)": "galoiak (AEB)",
+      "Cubic inches": "Hazbete kubikoak",
+      "Cubic feet": "Oin kubikoak",
+      "Cubic yards": "Yarda kubikoak",
+      "Teaspoons (UK)": "Koilarakada (Erresuma Batua)",
+      "Tablespoons (UK)": "Koilarakada (Erresuma Batua)",
+      "Fluid ounces (UK)": "Ontza fluidoak (Erresuma Batua)",
+      "Pints (UK)": "Pintak (Erresuma Batua)",
+      "Quarts (UK)": "Quarts (Erresuma Batua)",
+      "Gallons (UK)": "galoiak (Erresuma Batua)",
+      "coffee cups": "kafe-etiluak",
+      "bathtubs": "bainuontzia",
+      "swimming pools": "igerilekuak",
+      "Square millimeters": "Milimetro koadroak",
+      "Square centimeters": "Zentimetro koadroak",
+      "Square meters": "Metro koadroak",
+      "Hectares": "Hektarea",
+      "Square kilometers": "Kilometro koadroak",
+      "Square inches": "Hazbete karratu",
+      "Square feet": "Oin karratuak",
+      "Square yards": "Yarda koadroak",
+      "Acres": "Hektarea",
+      "Square miles": "Milia koadro",
+      "sheets of paper": "paper-orriak",
+      "soccer fields": "futbol-zelaiak",
+      "castles": "gazteluak",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Zentimetro segundoko",
+      "Meters per second": "Metro segundoko",
+      "Kilometers per hour": "Kilometroak orduko",
+      "Feet per second": "Oin segundoko",
+      "Miles per hour": "Milia orduko",
+      "Knots": "Korapiloak",
+      "Mach": "Mach",
+      "turtles": "dortokak",
+      "horses": "zaldiak",
+      "jets": "hegazkinak",
+      "Watts": "Watt",
+      "Kilowatts": "Kilowatt",
+      "Horsepower (US)": "Zaldi-potentzia (AEB)",
+      "Foot-pounds/minute": "Oin-libra/minutu",
+      "BTUs/minute": "BTU/minutu",
+      "light bulbs": "bonbillak",
+      "train engines": "tren-motorrak",
+      "Thermal calories": "Kaloria termikoak",
+      "Food calories": "Elikagaien kaloriak",
+      "British thermal units": "Britainia Handiko unitate termikoak",
+      "Kilojoules": "Kilojoule",
+      "Kilowatt-hours": "Kilowatt-orduak",
+      "Electron volts": "Electroien volt",
+      "Joules": "Joules",
+      "Foot-pounds": "Oin-libra",
+      "batteries": "pilak",
+      "bananas": "platanoak",
+      "slices of cake": "tarta xerra",
+      "Bits": "Bits",
+      "Nibble": "Mosta",
+      "Bytes": "byte",
+      "Kilobits": "Kilobit",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "Kilobyte",
+      "Kibibytes": "Kibibyte",
+      "Megabits": "Megabitak",
+      "Mebibits": "Mebibits",
+      "Megabytes": "Megabyte",
+      "Mebibytes": "Mebibyte",
+      "Gigabits": "Gigabitak",
+      "Gibibits": "Gibibitak",
+      "Gigabytes": "Gigabyte",
+      "Gibibytes": "Gibibyte",
+      "Terabits": "Terabitak",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabyte",
+      "Tebibytes": "Tebibytes",
+      "Petabits": "Petabitak",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabyte",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Exabits",
+      "Exbibits": "Erakusketak",
+      "Exabytes": "Exabyte",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabitak",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabyte",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabyte",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "disketeak",
+      "CDs": "CDak",
+      "DVDs": "DVDak",
+      "Atmospheres": "Giroak",
+      "Bars": "Tabernak",
+      "Kilopascals": "Kilopaskalak",
+      "Pascals": "Paskalak",
+      "Pounds per square inch": "Libra hazbete karratuko",
+      "Degrees": "Graduak",
+      "Radians": "Radians",
+      "Gradians": "Gradians",
+      "Microseconds": "Mikrosegundoak",
+      "Milliseconds": "Milisegundoak",
+      "Seconds": "Segundoak",
+      "Minutes": "Minutu",
+      "Hours": "Orduak",
+      "Days": "Egunak",
+      "Weeks": "Astea",
+      "Years": "Urteak",
+      "Millimeters of mercury": "Millimeters of mercury"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "AEBetako dolar",
+      "Euro": "Euro",
+      "British Pound": "Libra britainiarra",
+      "Japanese Yen": "Yen japoniarra",
+      "Canadian Dollar": "Kanadako dolarra",
+      "Australian Dollar": "Dolar australiarra",
+      "Brazilian Real": "Brasilgo Reala",
+      "Chilean Peso": "Txileko pesoa",
+      "Chinese Yuan": "Txinako Yuan",
+      "Colombian Peso": "Kolonbiar pesoa",
+      "Danish Krone": "Koroa daniarra",
+      "Egyptian Pound": "Egiptoko libra",
+      "Hong Kong Dollar": "Hong Kongeko dolarra",
+      "Indian Rupee": "Indiako errupia",
+      "Kenyan Shilling": "Keniako xelina",
+      "Mexican Peso": "Mexikoko pesoa",
+      "Nigerian Naira": "Nigeriar Naira",
+      "New Zealand Dollar": "Zeelanda Berriko dolarra",
+      "Norwegian Krone": "Norvegiako koroa",
+      "Philippine Piso": "Filipinar Pisoa",
+      "Polish Zloty": "Poliar Zlotya",
+      "Qatari Riyal": "Qatar Riyal",
+      "Saudi Riyal": "Saudi Riyal",
+      "Singapore Dollar": "Singapur dolarra",
+      "South African Rand": "Hego Afrikako Rand",
+      "South Korean Won": "Hego Koreako Won",
+      "Swedish Krona": "Suediako koroa",
+      "Swiss Franc": "Suitzako frankoa",
+      "Thai Baht": "Thailandiako baht",
+      "Turkish Lira": "Lira turkiarra",
+      "Turkmenistani Manat": "Turkmenistango Manat",
+      "Ugandan Shilling": "Ugandako xelina",
+      "Ukrainian Hryvnia": "Ukrainiako Grivnia",
+      "UAE Dirham": "UAE Dirhama",
+      "Uruguayan Peso": "Uruguaiko pesoa",
+      "Uzbekistani Som": "Uzbekistango Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Bolívar Soberano Venezuelarra",
+      "Vietnamese Dong": "Vietnameko Dong",
+      "Yemeni Rial": "Yemen Rial"
+    },
+    "labels": {
+      "United States - Dollar": "Estatu Batuak - dolarra",
+      "Europe - Euro": "Europa - Euro",
+      "United Kingdom - Pound": "Erresuma Batua - Libra",
+      "Japan - Yen": "Japonia - Yen",
+      "Canada - Dollar": "Kanada - dolarra",
+      "Australia - Dollar": "Australia - dolarra",
+      "Brazil - Real": "Brasil - Reala",
+      "Chile - Peso": "Txile - Peso",
+      "China - Yuan Renminbi": "Txina - Yuan Renminbi",
+      "Colombia - Peso": "Kolonbia - Peso",
+      "Denmark - Krone": "Danimarka - Krone",
+      "Egypt - Pound": "Egipto - Libra",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - dolarra",
+      "India - Rupee": "India - Errupia",
+      "Kenya - Shilling": "Kenia - Shilling",
+      "Mexico - Peso": "Mexiko - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "Zeelanda Berria - dolarra",
+      "Norway - Krone": "Norvegia - Krone",
+      "Philippines - Piso": "Filipinak - Piso",
+      "Poland - Zloty": "Polonia - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Saudi Arabia - Riyal",
+      "Singapore - Dollar": "Singapur - dolarra",
+      "South Africa - Rand": "Hegoafrika - Rand",
+      "South Korea - Won": "Hego Korea - Irabazi",
+      "Sweden - Krona": "Suedia - Krona",
+      "Switzerland - Franc": "Suitza - Frankoa",
+      "Thailand - Baht": "Tailandia - Baht",
+      "Turkey - Lira": "Turkia - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Shilling",
+      "Ukraine - Hryvnia": "Ukraina - Hryvnia",
+      "United Arab Emirates - Dirham": "Arabiar Emirerri Batuak - Dirham",
+      "Uruguay - Peso": "Uruguai - Peso",
+      "Uzbekistan - Som": "Uzbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemen - Rial"
+    }
+  }
+}

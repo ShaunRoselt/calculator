@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "ڪيڪروليٽر",
+    "name": "ڪيلڪوليٽر"
+  },
+  "common": {
+    "back": "واپس",
+    "backspace": "بيڪ اسپيس",
+    "closeSidePanel": "بند ڪريو پينل"
+  },
+  "converter": {
+    "unitConverter": "يونٽ ڪنورٽر",
+    "title": "يونٽ ڪنورٽر",
+    "builtInCollections": "بدليل مجموعا",
+    "category": "زمرو",
+    "from": "کان",
+    "to": "ڏانهن",
+    "inputValue": "قدر بدلائڻ لاءِ",
+    "convertedValue": "تبديل ٿيل قدر",
+    "swapUnits": "ادل بدليو يونٽ",
+    "keypad": "ڪنورٽر ڪي پيڊ",
+    "unit": "يونٽ",
+    "unitOptions": "يونٽ جا اختيار",
+    "currency": {
+      "updatingRates": "ريٽس کي اپڊيٽ ڪيو پيو وڃي...",
+      "updateRates": "تازه ڪاري جي شرح",
+      "keypad": "ڪرنسي ڪي پيڊ",
+      "currency": "ڪرنسي",
+      "options": "ڪرنسي جا اختيار",
+      "updated": "تازه ڪاري {timestamp}",
+      "status": {
+        "mockNote": "اسٽينڊل ايپ ڊيمو لاءِ ٺٺولي ريفرنس ريٽ.",
+        "fetching": "تازين USD ريفرنس جي شرحن کي آڻڻ...",
+        "liveRatesLoaded": "لائيو ريٽ لوڊ ڪيا ويا ExchangeRate-API کان.",
+        "liveUpdateUnavailable": "لائيو اپڊيٽ دستياب ناهي. ريفريش ٿيل ڊيمو قيمتون مقامي طور تي."
+      }
+    },
+    "aboutEqualTo": "اٽڪل برابر"
+  },
+  "errors": {
+    "invalidInput": "غلط ان پٽ",
+    "cannotDivideByZero": "صفر سان ورهائي نٿو سگھجي",
+    "cannotModuloByZero": "صفر سان ماڊل نٿو ڪري سگھجي",
+    "invalidProgrammerOperation": "غلط آپريشن",
+    "overflow": "نتيجو تمام وڏو"
+  },
+  "date": {
+    "calculationMode": "حساب جو طريقو",
+    "from": "کان",
+    "to": "ڏانهن",
+    "results": {
+      "difference": "فرق",
+      "sameDates": "ساڳيون تاريخون",
+      "date": "تاريخ"
+    },
+    "calculationModeOptions": "حساب جي موڊ جا اختيار",
+    "mode": {
+      "difference": "فرق",
+      "shift": "شفٽ"
+    },
+    "operation": "آپريشن",
+    "add": "شامل ڪريو",
+    "subtract": "گهٽايو",
+    "years": "سال",
+    "months": "مهينو",
+    "days": "ڏينهن",
+    "chooseDate": "تاريخ چونڊيو",
+    "previousMonth": "اڳوڻو مهينو",
+    "nextMonth": "ايندڙ مهينو",
+    "duration": {
+      "year": {
+        "one": "{count} سال",
+        "other": "{count} سال"
+      },
+      "month": {
+        "one": "{count} مهينو",
+        "other": "{count} مهينا"
+      },
+      "week": {
+        "one": "{count} هفتو",
+        "other": "{count} هفتا"
+      },
+      "day": {
+        "one": "{count} ڏينهن",
+        "other": "{count} ڏينهن"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from} ۽ {to} جي وچ ۾ فرق",
+      "addTo": "شامل ڪريو {duration} ۾ {date}",
+      "subtractFrom": "گهٽايو {duration} مان {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "نمايان ٿيل اظهار چيڪ ڪريو",
+    "enterExpression": "هڪ اظهار داخل ڪريو",
+    "canvas": "گراف ڪينواس",
+    "stopTracing": "ٽريڪنگ بند ڪريو",
+    "startTracing": "ٽريڪنگ شروع ڪريو",
+    "share": "شيئر ڪريو",
+    "options": "اختيارن",
+    "zoomIn": "زوم ان ڪريو",
+    "zoomInLabel": "زوم ان ڪريو",
+    "zoomOut": "زوم آئوٽ ڪريو",
+    "zoomOutLabel": "زوم آئوٽ ڪريو",
+    "refreshViewAutomatically": "ڏس پاڻمرادو تازو ڪريو",
+    "view": "ڏسو",
+    "expressions": "اظهار",
+    "mobileView": "موبائل جو ڏيک",
+    "showGraph": "گراف ڏيکاريو",
+    "showExpressions": "اظهار ڏيکاريو",
+    "backToFunctionList": "فڪشن لسٽ ڏانھن واپس",
+    "window": "ونڊو",
+    "resetView": "ڏيک ري سيٽ ڪريو",
+    "units": "يونٽ",
+    "radians": "ريڊين",
+    "degrees": "ڊگريون",
+    "gradians": "گريڊين",
+    "lineThickness": "ليڪ جي ٿلهي",
+    "theme": "موضوع",
+    "alwaysLight": "هميشه روشن",
+    "matchAppTheme": "ملايو ايپ جو موضوع",
+    "groups": {
+      "inequalities": "عدم مساوات",
+      "trigonometry": "Trigonometry",
+      "function": "فنڪشن"
+    },
+    "functions": "ڪم",
+    "showEquation": "مساوات ڏيکاريو",
+    "hideEquation": "مساوات لڪايو",
+    "lineOptions": "لائن جا اختيار",
+    "color": "رنگ",
+    "style": "انداز",
+    "analysis": {
+      "title": "تجزيو",
+      "domain": "ڊومين",
+      "range": "رينج",
+      "xIntercept": "x-intercept",
+      "yIntercept": "y-intercept",
+      "minima": "منيما",
+      "maxima": "ميڪسيما",
+      "inflectionPoints": "انفليڪشن پوائنٽس",
+      "verticalAsymptotes": "عمودي علامتون",
+      "horizontalAsymptotes": "Horizontal asymptotes",
+      "obliqueAsymptotes": "Oblique asymptotes",
+      "parity": "برابري",
+      "period": "مدت",
+      "monotonicity": "نيڪيت",
+      "domainNone": "ڪوبه ڊومين پابنديون ناهي",
+      "rangeNone": "ڪنهن حد تائين پابنديون ناهي",
+      "xInterceptNone": "ڪو به x-انٽرسيپشن ناهي",
+      "yInterceptNone": "ڪابه y-انٽرسيپٽس نه",
+      "minimaNone": "ڪو به گھٽ ناهي",
+      "maximaNone": "ڪابه وڌاءُ نه",
+      "inflectionNone": "ڪوبه انفليڪشن پوائنٽ",
+      "verticalAsymptotesNone": "ڪوبه عمودي علامتون نه آهن",
+      "horizontalAsymptotesNone": "ڪوبه افقي علامتون نه آهن",
+      "obliqueAsymptotesNone": "ڪوبه ٿلهو نشان ناهي",
+      "parityUnknown": "اڻڄاڻ",
+      "parityOdd": "عجيب",
+      "parityEven": "جيتوڻيڪ",
+      "parityNeither": "نه ئي",
+      "periodicityUnknown": "اڻڄاڻ",
+      "periodicityNotPeriodic": "دوري نه",
+      "monotonicityConstant": "مسلسل",
+      "monotonicityIncreasing": "وڌندڙ",
+      "monotonicityDecreasing": "گهٽجڻ",
+      "monotonicityUnknown": "اڻڄاڻ",
+      "monotonicityError": "تعين نه ٿو ڪري سگھجي",
+      "featureTooComplexPlural": "تجزيو ڪرڻ تمام پيچيده",
+      "analysisCouldNotBePerformed": "تجزيو نه ٿي سگهيو",
+      "analysisNotSupported": "تجزيو سهڪار ناهي",
+      "variableIsNotX": "متغير x نه آهي"
+    },
+    "plottingExpressions": "پلاٽنگ {count} اظهار",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "اظهار چونڊيو {index}",
+    "expressionIndex": "اظهار {index}",
+    "analyzeFunction": "فڪشن جو تجزيو ڪريو",
+    "changeEquationStyle": "مساوات جو انداز تبديل ڪريو",
+    "removeEquation": "مساوات کي هٽايو",
+    "lineStyle": {
+      "solid": "سالڊ لائين اسلوب",
+      "dash": "ڊيش لائن جو انداز",
+      "dot": "ڊٽ لائين انداز"
+    }
+  },
+  "history": {
+    "empty": "تاريخ خالي آهي",
+    "clearAll": "سڀني کي صاف ڪريو",
+    "clear": "تاريخ صاف ڪريو",
+    "title": "تاريخ",
+    "andMemory": "تاريخ ۽ ياداشت",
+    "aria": {
+      "historyPanel": "تاريخ پينل",
+      "historyAndMemoryPanel": "تاريخ ۽ ميموري پينل"
+    },
+    "closeFlyout": "تاريخ بند ڪريو",
+    "openFlyout": "اوپن تاريخ"
+  },
+  "memory": {
+    "empty": "ميموري خالي آهي",
+    "clearItem": "آئٽم صاف ڪريو",
+    "addCurrentValue": "موجوده قدر شامل ڪريو",
+    "subtractCurrentValue": "موجوده قدر گھٽايو",
+    "clearAll": "سڀني کي صاف ڪريو",
+    "clear": "ميموري صاف ڪريو",
+    "title": "ميموري",
+    "controls": "ميموري ڪنٽرول",
+    "tooltips": {
+      "clearAll": "سڀني ياداشت کي صاف ڪريو",
+      "recall": "ياد کان ياد ڪريو",
+      "add": "ياداشت ۾ شامل ڪريو",
+      "subtract": "ياداشت مان گھٽايو",
+      "store": "ياداشت ۾ ذخيرو"
+    },
+    "recallValue": "ياد ياد ڏياريو {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "نيويگيشن",
+      "closeNavigation": "نيويگيشن بند ڪريو",
+      "openNavigation": "اوپن نيويگيشن"
+    },
+    "groups": {
+      "calculator": "ڪيلڪوليٽر",
+      "converter": "ڪنورٽر"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "بٽ فلپ پينل",
+    "baseReadouts": "بنيادي ريڊ آئوٽ",
+    "surfaceMode": "سطح موڊ",
+    "fullKeypad": "مڪمل ڪي پيڊ",
+    "showKeypad": "ڪي پيڊ ڏيکاريو",
+    "bitTogglingKeypad": "بٽ ٽوگلنگ ڪي پيڊ",
+    "showBitView": "بٽ ڏيک ڏيکاريو",
+    "wordSize": "لفظ جي ماپ",
+    "bitwise": "Bitwise",
+    "bitShift": "بٽ شفٽ"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometry",
+      "function": "فنڪشن",
+      "functionsAria": "ڪم",
+      "trigonometricFunctionsAria": "Trigonometric فنڪشن",
+      "angleUnit": "زاويه يونٽ {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "ظاهر",
+      "themeTitle": "موضوع",
+      "themeDescription": "رنگ اسڪيم چونڊيو",
+      "light": "روشني",
+      "dark": "اونداهو",
+      "blue": "نيرو",
+      "green": "سائو",
+      "system": "سسٽم"
+    },
+    "language": {
+      "group": "ٻولي",
+      "title": "ٻولي",
+      "description": "پنهنجي پسند جي ٻولي چونڊيو"
+    },
+    "about": {
+      "group": "بابت"
+    },
+    "feedback": "راءِ موڪليو",
+    "contribute": {
+      "prefix": "مدد ڪريو",
+      "link": "GitHub",
+      "suffix": "مدد ڪرڻ لاءِ هن حساب ڪتاب کي بهتر ڪرڻ لاءِ"
+    },
+    "links": {
+      "repository": "پروجيڪٽ ريپوزٽري",
+      "readme": "README",
+      "license": "MIT لائسنس"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "معياري",
+      "subtitle": "کلاسڪ فوري تشخيص"
+    },
+    "scientific": {
+      "label": "سائنسي",
+      "subtitle": "آپريٽر، افعال، ۽ اظهار جي حمايت"
+    },
+    "graphing": {
+      "label": "گرافنگ",
+      "subtitle": "هڪ ڪارٽيزئن جهاز تي هڪ سادي اظهار جو پلاٽ"
+    },
+    "programmer": {
+      "label": "پروگرامر",
+      "subtitle": "انٽيجر رياضي بنيادي تبديلي سان"
+    },
+    "date": {
+      "label": "تاريخ جي حساب ڪتاب",
+      "subtitle": "مدو ڳوليو ۽ تاريخون ڦيرايو"
+    },
+    "currency": {
+      "label": "ڪرنسي",
+      "subtitle": "ٺٺولي جي بدلي جي شرحن کي تبديل ڪريو"
+    },
+    "volume": {
+      "label": "حجم",
+      "subtitle": "حجم جي ماپ کي تبديل ڪريو"
+    },
+    "length": {
+      "label": "ڊگھائي",
+      "subtitle": "فاصلو ۽ ڊگھائي يونٽ تبديل ڪريو"
+    },
+    "weight": {
+      "label": "وزن ۽ ماس",
+      "subtitle": "وزن ۽ ماس يونٽن کي تبديل ڪريو"
+    },
+    "temperature": {
+      "label": "درجه حرارت",
+      "subtitle": "پمپريچر اسڪيل کي تبديل ڪريو"
+    },
+    "energy": {
+      "label": "توانائي",
+      "subtitle": "انرجي ماپن کي تبديل ڪريو"
+    },
+    "area": {
+      "label": "ايريا",
+      "subtitle": "علائقي جي ماپن کي تبديل ڪريو"
+    },
+    "speed": {
+      "label": "رفتار",
+      "subtitle": "اسپيڊ جي ماپن کي تبديل ڪريو"
+    },
+    "time": {
+      "label": "وقت",
+      "subtitle": "وقت جي ماپن کي تبديل ڪريو"
+    },
+    "power": {
+      "label": "طاقت",
+      "subtitle": "بجلي جي ماپ کي تبديل ڪريو"
+    },
+    "data": {
+      "label": "ڊيٽا",
+      "subtitle": "ڊجيٽل اسٽوريج يونٽن کي تبديل ڪريو"
+    },
+    "pressure": {
+      "label": "پريشر",
+      "subtitle": "پريشر يونٽن کي تبديل ڪريو"
+    },
+    "angle": {
+      "label": "زاو",
+      "subtitle": "ڪنورٽ اينگل ماپون"
+    },
+    "settings": {
+      "label": "سيٽنگون",
+      "subtitle": "ظاهر ۽ ايپ جي معلومات"
+    }
+  },
+  "categories": {
+    "Currency": "ڪرنسي",
+    "Volume": "حجم",
+    "Length": "ڊگھائي",
+    "Mass": "ماس",
+    "Temperature": "درجه حرارت",
+    "Energy": "توانائي",
+    "Area": "ايريا",
+    "Speed": "رفتار",
+    "Time": "وقت",
+    "Power": "پاور",
+    "Data": "ڊيٽا",
+    "Pressure": "پريشر",
+    "Angle": "زاو"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "ناراضگي",
+      "Nanometers": "نانوميٽر",
+      "Microns": "مائڪرون",
+      "Millimeters": "ملي ميٽر",
+      "Centimeters": "سينٽي ميٽر",
+      "Meters": "ميٽر",
+      "Kilometers": "ڪلوميٽر",
+      "Inches": "انچ",
+      "Feet": "فوٽ",
+      "Yards": "گز",
+      "Miles": "ميل",
+      "Nautical miles": "ناٽيڪل ميل",
+      "paperclips": "پيپر ڪلپس",
+      "hands": "هٿ",
+      "jumbo jets": "جمبو جيٽ",
+      "Carats": "ڪيريٽ",
+      "Milligrams": "مليگرام",
+      "Centigrams": "سينٽيگرام",
+      "Decigrams": "ڊيسيگرام",
+      "Grams": "گرام",
+      "Dekagrams": "ڊيڪاگرام",
+      "Hectograms": "هيڪٽوگرامس",
+      "Kilograms": "ڪلوگرام",
+      "Metric tonnes": "ميٽرڪ ٽين",
+      "Ounces": "اونس",
+      "Pounds": "پائونڊ",
+      "Stone": "پٿر",
+      "Short tons (US)": "شارٽ ٽين (يو ايس)",
+      "Long tons (UK)": "ڊگهو ٽين (برطانيه)",
+      "snowflakes": "برف جا ڦڙا",
+      "soccer balls": "ساڪر بالز",
+      "elephants": "هاٿي",
+      "whales": "وييل",
+      "Celsius": "Celsius",
+      "Fahrenheit": "فارن هائٽ",
+      "Kelvin": "ڪيلون",
+      "Milliliters": "ملي ليٽر",
+      "Cubic centimeters": "ڪعبي سينٽي ميٽر",
+      "Liters": "ليٽر",
+      "Cubic meters": "ڪعبي ميٽر",
+      "Teaspoons (US)": "چمچ (آمريڪا)",
+      "Tablespoons (US)": "چمچ (يو ايس)",
+      "Fluid ounces (US)": "فلوئڊ آونس (US)",
+      "Cups (US)": "ڪپ (آمريڪا)",
+      "Pints (US)": "پنٽس (يو ايس)",
+      "Quarts (US)": "Quarts (US)",
+      "Gallons (US)": "گيلن (US)",
+      "Cubic inches": "ڪعبي انچ",
+      "Cubic feet": "ڪعبي فوٽ",
+      "Cubic yards": "ڪعبي گز",
+      "Teaspoons (UK)": "چمچ (برطانيه)",
+      "Tablespoons (UK)": "چمچ (برطانيه)",
+      "Fluid ounces (UK)": "فلوئڊ آونس (برطانيه)",
+      "Pints (UK)": "پنٽس (برطانيه)",
+      "Quarts (UK)": "Quarts (UK)",
+      "Gallons (UK)": "گيلن (برطانيه)",
+      "coffee cups": "ڪافي کپ",
+      "bathtubs": "باٿ ٽب",
+      "swimming pools": "سوئمنگ پول",
+      "Square millimeters": "چورس ملي ميٽر",
+      "Square centimeters": "چورس سينٽي ميٽر",
+      "Square meters": "اسڪوائر ميٽر",
+      "Hectares": "هيڪٽر",
+      "Square kilometers": "چورس ڪلوميٽر",
+      "Square inches": "چورس انچ",
+      "Square feet": "اسڪوائر فوٽ",
+      "Square yards": "چورس گز",
+      "Acres": "ايڪڙ",
+      "Square miles": "چورس ميل",
+      "sheets of paper": "ڪاغذ جا چادر",
+      "soccer fields": "فٽ بال جا ميدان",
+      "castles": "قلعا",
+      "Pyeong": "پيونگ",
+      "Centimeters per second": "سينٽي ميٽر في سيڪنڊ",
+      "Meters per second": "ميٽر في سيڪنڊ",
+      "Kilometers per hour": "ڪلوميٽر في ڪلاڪ",
+      "Feet per second": "فيٽ في سيڪنڊ",
+      "Miles per hour": "ميل في ڪلاڪ",
+      "Knots": "ڳٽ",
+      "Mach": "مچ",
+      "turtles": "ڪڇڙو",
+      "horses": "گھوڙا",
+      "jets": "جيٽ",
+      "Watts": "واٽ",
+      "Kilowatts": "ڪلو واٽ",
+      "Horsepower (US)": "هارس پاور (يو ايس)",
+      "Foot-pounds/minute": "فوٽ پائونڊ/ منٽ",
+      "BTUs/minute": "BTUs/منٽ",
+      "light bulbs": "لائيٽ بلب",
+      "train engines": "ريل گاڏيون",
+      "Thermal calories": "حرارتي ڪيلوريون",
+      "Food calories": "کاڌو ڪيلوريون",
+      "British thermal units": "برطانوي حرارتي يونٽ",
+      "Kilojoules": "ڪلوجولز",
+      "Kilowatt-hours": "ڪلو واٽ ڪلاڪ",
+      "Electron volts": "اليڪٽران وولٽس",
+      "Joules": "جولز",
+      "Foot-pounds": "فوٽ پائونڊ",
+      "batteries": "بيٽريون",
+      "bananas": "ڪيلا",
+      "slices of cake": "ڪيڪ جا سلائسس",
+      "Bits": "بٽس",
+      "Nibble": "نبل",
+      "Bytes": "بائيٽس",
+      "Kilobits": "ڪلو بٽس",
+      "Kibibits": "ڪيبيٽس",
+      "Kilobytes": "ڪلو بائيٽ",
+      "Kibibytes": "ڪيبي بائيٽس",
+      "Megabits": "ميگا بِٽ",
+      "Mebibits": "ميابيٽ",
+      "Megabytes": "ميگا بائيٽ",
+      "Mebibytes": "ميبائيٽس",
+      "Gigabits": "گيگا بِٽ",
+      "Gibibits": "گيبيٽس",
+      "Gigabytes": "گيگا بائيٽ",
+      "Gibibytes": "گيبي بائيٽس",
+      "Terabits": "Terabits",
+      "Tebibits": "ٽيبيٽس",
+      "Terabytes": "ٽيرابائيٽ",
+      "Tebibytes": "ٽيبي بائيٽس",
+      "Petabits": "پيتابيٽس",
+      "Pebibits": "پيبيٽس",
+      "Petabytes": "پيٽا بائيٽس",
+      "Pebibytes": "پيبي بائيٽس",
+      "Exabits": "امتحان",
+      "Exbibits": "نمائشون",
+      "Exabytes": "Exabytes",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "زيٽابٽس",
+      "Zebibits": "زيبٽس",
+      "Zetabytes": "زيٽا بائيٽس",
+      "Zebibytes": "زيبائيٽس",
+      "Yottabits": "Yottabits",
+      "Yobibits": "يوبيٽس",
+      "Yottabytes": "يوٽا بائيٽس",
+      "Yobibytes": "يوبي بائيٽس",
+      "floppy disks": "فلاپي ڊسڪ",
+      "CDs": "CDs",
+      "DVDs": "DVDs",
+      "Atmospheres": "ماحول",
+      "Bars": "بارز",
+      "Kilopascals": "ڪلوپاسڪلز",
+      "Millimeters of mercury": "ملي ميٽرس پاري",
+      "Pascals": "پاسڪلز",
+      "Pounds per square inch": "پائونڊ في چورس انچ",
+      "Degrees": "درجا",
+      "Radians": "ريڊين",
+      "Gradians": "گريڊين",
+      "Microseconds": "مائڪرو سيڪنڊ",
+      "Milliseconds": "ملي سيڪنڊ",
+      "Seconds": "سيڪنڊ",
+      "Minutes": "منٽ",
+      "Hours": "ڪلاڪ",
+      "Days": "ڏينهن",
+      "Weeks": "هفتو",
+      "Years": "سال"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "آمريڪي ڊالر",
+      "Euro": "يورو",
+      "British Pound": "برطانوي پائونڊ",
+      "Japanese Yen": "جاپاني ين",
+      "Canadian Dollar": "ڪينيڊين ڊالر",
+      "Australian Dollar": "آسٽريليا ڊالر",
+      "Brazilian Real": "برازيل ريئل",
+      "Chilean Peso": "چلي پئسو",
+      "Chinese Yuan": "چيني يوآن",
+      "Colombian Peso": "ڪولمبيا پيسو",
+      "Danish Krone": "ڊينش ڪرون",
+      "Egyptian Pound": "مصري پائونڊ",
+      "Hong Kong Dollar": "هانگ ڪانگ ڊالر",
+      "Indian Rupee": "هندستاني روپيو",
+      "Kenyan Shilling": "ڪينيا شلنگ",
+      "Mexican Peso": "ميڪسيڪن پئسو",
+      "Nigerian Naira": "نائجيرين نيرا",
+      "New Zealand Dollar": "نيوزيلينڊ ڊالر",
+      "Norwegian Krone": "نارويجن ڪرون",
+      "Philippine Piso": "فلپائن پيسو",
+      "Polish Zloty": "پولش زلوٽي",
+      "Qatari Riyal": "قطري ريال",
+      "Saudi Riyal": "سعودي ريال",
+      "Singapore Dollar": "سنگاپور ڊالر",
+      "South African Rand": "ڏکڻ آفريڪا رينڊ",
+      "South Korean Won": "ڏکڻ ڪورين وون",
+      "Swedish Krona": "سويڊش ڪرونا",
+      "Swiss Franc": "سوئس فرانڪ",
+      "Thai Baht": "ٿائي باٿ",
+      "Turkish Lira": "ترڪي ليرا",
+      "Turkmenistani Manat": "ترڪمانستاني منات",
+      "Ugandan Shilling": "يوگنڊا شلنگ",
+      "Ukrainian Hryvnia": "يوڪريني هرينيا",
+      "UAE Dirham": "UAE درهم",
+      "Uruguayan Peso": "Uruguayan Peso",
+      "Uzbekistani Som": "ازبڪستاني سوم",
+      "Vanuatu Vatu": "وانواتو واتو",
+      "Venezuelan Bolivar Soberano": "وينزويلا بوليوار سوبرانو",
+      "Vietnamese Dong": "ويٽنامي ڊانگ",
+      "Yemeni Rial": "يمني ريال"
+    },
+    "labels": {
+      "United States - Dollar": "آمريڪا - ڊالر",
+      "Europe - Euro": "يورپ - يورو",
+      "United Kingdom - Pound": "برطانيه - پائونڊ",
+      "Japan - Yen": "جاپان - ين",
+      "Canada - Dollar": "ڪئناڊا - ڊالر",
+      "Australia - Dollar": "آسٽريليا - ڊالر",
+      "Brazil - Real": "برازيل - ريئل",
+      "Chile - Peso": "چلي - پيسو",
+      "China - Yuan Renminbi": "چين - Yuan Renminbi",
+      "Colombia - Peso": "ڪولمبيا - پيسو",
+      "Denmark - Krone": "ڊنمارڪ - ڪرون",
+      "Egypt - Pound": "مصر - پائونڊ",
+      "Hong Kong SAR - Dollar": "هانگ ڪانگ SAR - ڊالر",
+      "India - Rupee": "هندستان - روپيو",
+      "Kenya - Shilling": "ڪينيا - شلنگ",
+      "Mexico - Peso": "ميڪسيڪو - پيسو",
+      "Nigeria - Naira": "نائيجيريا - نيرا",
+      "New Zealand - Dollar": "نيوزيلينڊ - ڊالر",
+      "Norway - Krone": "ناروي - ڪرون",
+      "Philippines - Piso": "فلپائن - Piso",
+      "Poland - Zloty": "پولينڊ - زلوٽي",
+      "Qatar - Riyal": "قطر - ريال",
+      "Saudi Arabia - Riyal": "سعودي عرب - ريال",
+      "Singapore - Dollar": "سنگاپور - ڊالر",
+      "South Africa - Rand": "ڏکڻ آفريڪا - رينڊ",
+      "South Korea - Won": "ڏکڻ ڪوريا - وون",
+      "Sweden - Krona": "سويڊن - ڪرونا",
+      "Switzerland - Franc": "سوئٽزرلينڊ - فرانڪ",
+      "Thailand - Baht": "ٿائيلينڊ - Baht",
+      "Turkey - Lira": "ترڪي - ليرا",
+      "Turkmenistan - Manat": "ترڪمانستان - منات",
+      "Uganda - Shilling": "يوگنڊا - شلنگ",
+      "Ukraine - Hryvnia": "يوڪرين - Hryvnia",
+      "United Arab Emirates - Dirham": "متحده عرب امارات - درهم",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "ازبڪستان - سوم",
+      "Vanuatu - Vatu": "وانواتو - واتو",
+      "Venezuela - Bolívar Soberano": "وينزويلا - بوليوار سوبرانو",
+      "Vietnam - Dong": "ويتنام - ڊانگ",
+      "Yemen - Rial": "يمن - ريال"
+    }
+  }
+}

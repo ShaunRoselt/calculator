@@ -1,4 +1,5 @@
 import { CONVERTER_MODE_TO_CATEGORY, DEFAULT_CURRENCY_RATES, MOCK_CURRENCY_UPDATED_AT, STORAGE_KEYS } from './config.js';
+import { isSupportedLanguage } from './i18n.js';
 import { toDateInputValue } from './utils.js';
 
 const CALCULATOR_COLLECTION_MODES = ['standard', 'scientific', 'programmer', 'date', ...Object.keys(CONVERTER_MODE_TO_CATEGORY)];
@@ -115,7 +116,7 @@ function createGraphingState() {
     stylePanelExpressionIndex: null,
     angle: 'RAD',
     lineThickness: 2,
-    theme: 'light',
+    theme: 'match-app',
     isManualAdjustment: false,
     tracingEnabled: false,
     mobileView: 'graph',
@@ -135,7 +136,8 @@ function createInitialState() {
     collections: createEmptyCollections(),
     settings: {
       theme: 'system',
-      language: 'en'
+      language: 'en',
+      openMenu: null
     },
     standard: createStandardState(),
     scientific: createScientificState(),
@@ -236,10 +238,10 @@ export function hydrateState() {
     if (typeof nav === 'boolean') {
       state.navOpen = nav;
     }
-    if (['light', 'dark', 'blue', 'green', 'system'].includes(theme)) {
-      state.settings.theme = theme;
+    if (typeof theme === 'string' && theme.trim()) {
+      state.settings.theme = theme.trim();
     }
-    if (['en', 'af', 'de', 'nl', 'zu', 'xh'].includes(language)) {
+    if (isSupportedLanguage(language)) {
       state.settings.language = language;
     }
   } catch {

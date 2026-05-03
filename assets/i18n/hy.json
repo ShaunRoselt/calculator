@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Հաշվիչ",
+    "name": "Հաշվիչ"
+  },
+  "common": {
+    "back": "Վերադարձ",
+    "backspace": "Backspace",
+    "closeSidePanel": "Փակել վահանակը"
+  },
+  "converter": {
+    "unitConverter": "Միավորի փոխարկիչ",
+    "title": "Միավորի փոխարկիչներ",
+    "builtInCollections": "Ներկառուցված հավաքածուներ",
+    "category": "Կատեգորիա",
+    "from": "Սկսած",
+    "to": "Դեպի",
+    "inputValue": "Փոխակերպման արժեք",
+    "convertedValue": "Փոխարկված արժեք",
+    "swapUnits": "Փոխանակեք միավորները",
+    "keypad": "Կոդավորիչի ստեղնաշար",
+    "unit": "միավոր",
+    "unitOptions": "միավորի ընտրանքներ",
+    "currency": {
+      "updatingRates": "Գները թարմացվում են…",
+      "updateRates": "Թարմացնել սակագները",
+      "keypad": "Արժույթի ստեղնաշար",
+      "currency": "արժույթ",
+      "options": "արժույթի ընտրանքներ",
+      "updated": "Թարմացվել է {timestamp}",
+      "status": {
+        "mockNote": "Ծաղրական տեղեկանքների դրույքաչափերը առանձին հավելվածի ցուցադրման համար:",
+        "fetching": "Վերցվում է ԱՄՆ դոլարի վերջին հղման դրույքաչափերը...",
+        "liveRatesLoaded": "Ուղիղ փոխարժեքները բեռնված են ExchangeRate-API-ից:",
+        "liveUpdateUnavailable": "Ուղիղ թարմացումն անհասանելի է: Թարմացված ցուցադրական գները տեղական մակարդակում:"
+      }
+    },
+    "aboutEqualTo": "Մոտավորապես հավասար է"
+  },
+  "errors": {
+    "invalidInput": "Սխալ մուտքագրում",
+    "cannotDivideByZero": "Հնարավոր չէ բաժանել զրոյի",
+    "cannotModuloByZero": "Հնարավոր չէ մոդուլավորել զրոյով",
+    "invalidProgrammerOperation": "Անվավեր գործողություն",
+    "overflow": "Արդյունքը չափազանց մեծ է"
+  },
+  "date": {
+    "calculationMode": "Հաշվի ռեժիմ",
+    "from": "Սկսած",
+    "to": "Դեպի",
+    "results": {
+      "difference": "Տարբերությունը",
+      "sameDates": "Նույն ամսաթվերը",
+      "date": "Ամսաթիվ"
+    },
+    "calculationModeOptions": "Հաշվի ռեժիմի ընտրանքներ",
+    "mode": {
+      "difference": "Տարբերությունը",
+      "shift": "Հերթափոխ"
+    },
+    "operation": "Գործողություն",
+    "add": "Ավելացնել",
+    "subtract": "Հանել",
+    "years": "Տարիներ",
+    "months": "Ամիս",
+    "days": "Օրեր",
+    "chooseDate": "Ընտրեք ամսաթիվ",
+    "previousMonth": "Նախորդ ամիս",
+    "nextMonth": "Հաջորդ ամիս",
+    "duration": {
+      "year": {
+        "one": "{count} տարի",
+        "other": "{count} տարի"
+      },
+      "month": {
+        "one": "{count} ամիս",
+        "other": "{count} ամիս"
+      },
+      "week": {
+        "one": "{count} շաբաթ",
+        "other": "{count} շաբաթ"
+      },
+      "day": {
+        "one": "{count} օր",
+        "other": "{count} օր"
+      }
+    },
+    "history": {
+      "differenceBetween": "Տարբերությունը {from}-ի և {to}-ի միջև",
+      "addTo": "Ավելացրեք {duration} {date}-ին",
+      "subtractFrom": "Հանեք {duration} {date}-ից"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Ստուգեք ընդգծված արտահայտությունը",
+    "enterExpression": "Մուտքագրեք արտահայտություն",
+    "canvas": "Գծապատկերային կտավ",
+    "stopTracing": "Դադարեցնել հետագծումը",
+    "startTracing": "Սկսել հետագծումը",
+    "share": "Կիսվել",
+    "options": "Ընտրանքներ",
+    "zoomIn": "Մեծացնել",
+    "zoomInLabel": "Մեծացնել",
+    "zoomOut": "Մեծացնել",
+    "zoomOutLabel": "Մեծացնել",
+    "refreshViewAutomatically": "Թարմացրեք դիտումն ավտոմատ կերպով",
+    "view": "Դիտել",
+    "expressions": "Արտահայտություններ",
+    "mobileView": "Բջջային դիտում",
+    "showGraph": "Ցուցադրել գրաֆիկը",
+    "showExpressions": "Ցուցադրել արտահայտությունները",
+    "backToFunctionList": "Վերադառնալ գործառույթների ցանկին",
+    "window": "Պատուհան",
+    "resetView": "Վերականգնել տեսքը",
+    "units": "Միավորներ",
+    "radians": "Ռադիաններ",
+    "degrees": "Աստիճաններ",
+    "gradians": "Գրադիաններ",
+    "lineThickness": "Գծի հաստությունը",
+    "theme": "Թեման",
+    "alwaysLight": "Միշտ թեթև",
+    "matchAppTheme": "Համապատասխանեցրեք հավելվածի թեմային",
+    "groups": {
+      "inequalities": "Անհավասարություններ",
+      "trigonometry": "Եռանկյունաչափություն",
+      "function": "Գործառույթ"
+    },
+    "functions": "Գործառույթները",
+    "showEquation": "Ցուցադրել հավասարումը",
+    "hideEquation": "Թաքցնել հավասարումը",
+    "lineOptions": "Տողի ընտրանքներ",
+    "color": "Գույն",
+    "style": "Ոճ",
+    "analysis": {
+      "title": "Վերլուծություն",
+      "domain": "Դոմեն",
+      "range": "Շրջանակ",
+      "xIntercept": "x-հատում",
+      "yIntercept": "y-հատում",
+      "minima": "Նվազագույնը",
+      "maxima": "Մաքսիմա",
+      "inflectionPoints": "Թեքման կետեր",
+      "verticalAsymptotes": "Ուղղահայաց ասիմպտոտներ",
+      "horizontalAsymptotes": "Հորիզոնական ասիմպտոտներ",
+      "obliqueAsymptotes": "Թեք ասիմպտոտներ",
+      "parity": "Հավասարություն",
+      "period": "Ժամանակաշրջան",
+      "monotonicity": "Միապաղաղություն",
+      "domainNone": "Դոմենի սահմանափակումներ չկան",
+      "rangeNone": "Շրջանակի սահմանափակումներ չկան",
+      "xInterceptNone": "X-հատումներ չկան",
+      "yInterceptNone": "Y-հատումներ չկան",
+      "minimaNone": "Չկան նվազագույն",
+      "maximaNone": "Մաքսիմում չկա",
+      "inflectionNone": "Թեքման կետեր չկան",
+      "verticalAsymptotesNone": "Ուղղահայաց ասիմպտոտներ չկան",
+      "horizontalAsymptotesNone": "Հորիզոնական ասիմպտոտներ չկան",
+      "obliqueAsymptotesNone": "Չկան թեք ասիմպտոտներ",
+      "parityUnknown": "Անհայտ",
+      "parityOdd": "Կենտ",
+      "parityEven": "Նույնիսկ",
+      "parityNeither": "Ոչ մեկը",
+      "periodicityUnknown": "Անհայտ",
+      "periodicityNotPeriodic": "Պարբերական չէ",
+      "monotonicityConstant": "Մշտական",
+      "monotonicityIncreasing": "Աճում է",
+      "monotonicityDecreasing": "Նվազում է",
+      "monotonicityUnknown": "Անհայտ",
+      "monotonicityError": "Հնարավոր չէ որոշել",
+      "featureTooComplexPlural": "Չափազանց բարդ է վերլուծելու համար",
+      "analysisCouldNotBePerformed": "Վերլուծությունը չհաջողվեց կատարել",
+      "analysisNotSupported": "Վերլուծությունը չի աջակցվում",
+      "variableIsNotX": "Փոփոխականը x չէ"
+    },
+    "plottingExpressions": "Գծագրում {count} արտահայտություններ",
+    "xMin": "X-ր",
+    "xMax": "X-Max",
+    "yMin": "Տ-ր",
+    "yMax": "Y-Max",
+    "selectExpression": "Ընտրեք արտահայտությունը {index}",
+    "expressionIndex": "Արտահայտություն {index}",
+    "analyzeFunction": "Վերլուծել ֆունկցիան",
+    "changeEquationStyle": "Փոխել հավասարման ոճը",
+    "removeEquation": "Հեռացնել հավասարումը",
+    "lineStyle": {
+      "solid": "Կոշտ գծի ոճ",
+      "dash": "Գծի գծի ոճը",
+      "dot": "Կետերի ոճը"
+    }
+  },
+  "history": {
+    "empty": "Պատմությունը դատարկ է",
+    "clearAll": "Ջնջել բոլորը",
+    "clear": "Մաքրել պատմությունը",
+    "title": "Պատմություն",
+    "andMemory": "Պատմություն և հիշողություն",
+    "aria": {
+      "historyPanel": "Պատմության վահանակ",
+      "historyAndMemoryPanel": "Պատմության և հիշողության վահանակ"
+    },
+    "closeFlyout": "Փակել պատմությունը",
+    "openFlyout": "Բացել պատմությունը"
+  },
+  "memory": {
+    "empty": "Հիշողությունը դատարկ է",
+    "clearItem": "Մաքրել տարրը",
+    "addCurrentValue": "Ավելացրեք ընթացիկ արժեք",
+    "subtractCurrentValue": "Նվազեցնել ընթացիկ արժեքը",
+    "clearAll": "Ջնջել բոլորը",
+    "clear": "Մաքրել հիշողությունը",
+    "title": "Հիշողություն",
+    "controls": "Հիշողության կառավարում",
+    "tooltips": {
+      "clearAll": "Մաքրել ամբողջ հիշողությունը",
+      "recall": "Հիշողություն հիշողությունից",
+      "add": "Ավելացնել հիշողության մեջ",
+      "subtract": "Հիշողությունից հանել",
+      "store": "Պահել հիշողության մեջ"
+    },
+    "recallValue": "Հիշողություն {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Նավարկություն",
+      "closeNavigation": "Փակել նավիգացիան",
+      "openNavigation": "Բացել նավիգացիան"
+    },
+    "groups": {
+      "calculator": "Հաշվիչ",
+      "converter": "Կոդավորիչ"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Բիթային շրջադարձային վահանակ",
+    "baseReadouts": "Հիմնական ընթերցումներ",
+    "surfaceMode": "Մակերեւութային ռեժիմ",
+    "fullKeypad": "Լրիվ ստեղնաշար",
+    "showKeypad": "Ցուցադրել ստեղնաշարը",
+    "bitTogglingKeypad": "Բիթային փոփոխվող ստեղնաշար",
+    "showBitView": "Ցուցադրել բիթային տեսքը",
+    "wordSize": "Բառի չափը",
+    "bitwise": "Բիթային",
+    "bitShift": "Բիթային տեղաշարժ"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Եռանկյունաչափություն",
+      "function": "Գործառույթ",
+      "functionsAria": "Գործառույթները",
+      "trigonometricFunctionsAria": "Եռանկյունաչափական ֆունկցիաներ",
+      "angleUnit": "Անկյունի միավոր {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Արտաքին տեսք",
+      "themeTitle": "Թեման",
+      "themeDescription": "Ընտրեք գունային սխեման",
+      "light": "Լույս",
+      "dark": "Մութ",
+      "blue": "Կապույտ",
+      "green": "Կանաչ",
+      "system": "Համակարգ"
+    },
+    "language": {
+      "group": "Լեզու",
+      "title": "Լեզու",
+      "description": "Ընտրեք ձեր նախընտրած լեզուն"
+    },
+    "about": {
+      "group": "Մոտ"
+    },
+    "feedback": "Ուղարկել կարծիք",
+    "contribute": {
+      "prefix": "Ներդրեք",
+      "link": "GitHub",
+      "suffix": "Այս հաշվիչը բարելավելու համար"
+    },
+    "links": {
+      "repository": "Նախագծի պահոց",
+      "readme": "ԿԱՐԴԱԼ",
+      "license": "MIT լիցենզիա"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Ստանդարտ",
+      "subtitle": "Դասական անհապաղ գնահատում"
+    },
+    "scientific": {
+      "label": "Գիտ",
+      "subtitle": "Օպերատորների, գործառույթների և արտահայտությունների աջակցություն"
+    },
+    "graphing": {
+      "label": "Գծապատկերում",
+      "subtitle": "Գծե՛ք պարզ արտահայտություն դեկարտյան հարթության վրա"
+    },
+    "programmer": {
+      "label": "Ծրագրավորող",
+      "subtitle": "Ամբողջ թվերի մաթեմատիկա բազային փոխակերպմամբ"
+    },
+    "date": {
+      "label": "Ամսաթվի հաշվարկ",
+      "subtitle": "Գտեք տևողությունները և հերթափոխի ամսաթվերը"
+    },
+    "currency": {
+      "label": "Արժույթ",
+      "subtitle": "Փոխակերպեք կեղծ փոխարժեքները"
+    },
+    "volume": {
+      "label": "Ծավալը",
+      "subtitle": "Փոխակերպեք ծավալի չափումները"
+    },
+    "length": {
+      "label": "Երկարություն",
+      "subtitle": "Փոխակերպեք հեռավորության և երկարության միավորները"
+    },
+    "weight": {
+      "label": "Քաշ և զանգված",
+      "subtitle": "Փոխակերպեք քաշի և զանգվածի միավորները"
+    },
+    "temperature": {
+      "label": "Ջերմաստիճանը",
+      "subtitle": "Փոխակերպել ջերմաստիճանի սանդղակները"
+    },
+    "energy": {
+      "label": "Էներգիա",
+      "subtitle": "Փոխակերպել էներգիայի չափումները"
+    },
+    "area": {
+      "label": "Տարածք",
+      "subtitle": "Փոխակերպեք տարածքի չափումները"
+    },
+    "speed": {
+      "label": "Արագություն",
+      "subtitle": "Փոխակերպեք արագության չափումները"
+    },
+    "time": {
+      "label": "Ժամանակ",
+      "subtitle": "Փոխակերպեք ժամանակի չափումները"
+    },
+    "power": {
+      "label": "Հզորությունը",
+      "subtitle": "Փոխակերպեք հզորության չափումները"
+    },
+    "data": {
+      "label": "Տվյալներ",
+      "subtitle": "Փոխակերպեք թվային պահեստավորման միավորները"
+    },
+    "pressure": {
+      "label": "Ճնշում",
+      "subtitle": "Փոխակերպեք ճնշման միավորները"
+    },
+    "angle": {
+      "label": "Անկյուն",
+      "subtitle": "Փոխակերպեք անկյունների չափումները"
+    },
+    "settings": {
+      "label": "Կարգավորումներ",
+      "subtitle": "Տվյալներ արտաքին տեսքի և հավելվածի մասին"
+    }
+  },
+  "categories": {
+    "Currency": "Արժույթ",
+    "Volume": "Ծավալը",
+    "Length": "Երկարություն",
+    "Mass": "Զանգվածային",
+    "Temperature": "Ջերմաստիճանը",
+    "Energy": "Էներգիա",
+    "Area": "Տարածք",
+    "Speed": "Արագություն",
+    "Time": "Ժամանակը",
+    "Power": "Հզորությունը",
+    "Data": "Տվյալներ",
+    "Pressure": "Ճնշում",
+    "Angle": "Անկյուն"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Անգստրոմներ",
+      "Nanometers": "Նանոմետր",
+      "Microns": "Միկրոններ",
+      "Millimeters": "Միլիմետր",
+      "Centimeters": "Սանտիմետր",
+      "Meters": "Մետր",
+      "Kilometers": "Կիլոմետրեր",
+      "Inches": "դյույմ",
+      "Feet": "Ոտքեր",
+      "Yards": "Բակեր",
+      "Miles": "Մղոն",
+      "Nautical miles": "Ծովային մղոն",
+      "paperclips": "թղթի սեղմիչներ",
+      "hands": "ձեռքեր",
+      "jumbo jets": "jumbo-jets",
+      "Carats": "Կարատ",
+      "Milligrams": "Միլիգրամ",
+      "Centigrams": "Ցենտիգրամ",
+      "Decigrams": "Դեցիգրամ",
+      "Grams": "գրամ",
+      "Dekagrams": "Դեկագրամ",
+      "Hectograms": "Հեկտոգրամներ",
+      "Kilograms": "կիլոգրամ",
+      "Metric tonnes": "Մետրիկ տոննա",
+      "Ounces": "ունցիա",
+      "Pounds": "Ֆունտ",
+      "Stone": "Քար",
+      "Short tons (US)": "Կարճ տոննա (ԱՄՆ)",
+      "Long tons (UK)": "Երկար տոննա (Մեծ Բրիտանիա)",
+      "snowflakes": "ձյան փաթիլներ",
+      "soccer balls": "ֆուտբոլի գնդակներ",
+      "elephants": "փղեր",
+      "whales": "կետեր",
+      "Celsius": "Ցելսիուս",
+      "Fahrenheit": "Ֆարենհայթ",
+      "Kelvin": "Քելվին",
+      "Milliliters": "Միլիլիտր",
+      "Cubic centimeters": "Խորանարդ սանտիմետր",
+      "Liters": "լիտր",
+      "Cubic meters": "Խմ",
+      "Teaspoons (US)": "Թեյի գդալ (ԱՄՆ)",
+      "Tablespoons (US)": "ճաշի գդալ (ԱՄՆ)",
+      "Fluid ounces (US)": "Հեղուկ ունցիա (ԱՄՆ)",
+      "Cups (US)": "Գավաթներ (ԱՄՆ)",
+      "Pints (US)": "Պինտ (ԱՄՆ)",
+      "Quarts (US)": "Կվարտ (ԱՄՆ)",
+      "Gallons (US)": "Գալոն (ԱՄՆ)",
+      "Cubic inches": "Խորանարդ դյույմ",
+      "Cubic feet": "խորանարդ ֆուտ",
+      "Cubic yards": "խորանարդ յարդ",
+      "Teaspoons (UK)": "Թեյի գդալ (Մեծ Բրիտանիա)",
+      "Tablespoons (UK)": "ճաշի գդալ (Մեծ Բրիտանիա)",
+      "Fluid ounces (UK)": "Հեղուկի ունցիա (Մեծ Բրիտանիա)",
+      "Pints (UK)": "Պինտ (Մեծ Բրիտանիա)",
+      "Quarts (UK)": "Կվարտս (Մեծ Բրիտանիա)",
+      "Gallons (UK)": "Գալոն (Մեծ Բրիտանիա)",
+      "coffee cups": "սուրճի գավաթներ",
+      "bathtubs": "լոգարաններ",
+      "swimming pools": "լողավազաններ",
+      "Square millimeters": "Քառակուսի միլիմետր",
+      "Square centimeters": "Քառակուսի սանտիմետր",
+      "Square meters": "Քառակուսի մետր",
+      "Hectares": "Հեկտար",
+      "Square kilometers": "Քառակուսի կիլոմետր",
+      "Square inches": "Քառակուսի դյույմ",
+      "Square feet": "Քառակուսի ոտնաչափ",
+      "Square yards": "Քառակուսի յարդեր",
+      "Acres": "Ակր",
+      "Square miles": "Քառակուսի մղոն",
+      "sheets of paper": "թղթի թերթեր",
+      "soccer fields": "ֆուտբոլի դաշտեր",
+      "castles": "ամրոցներ",
+      "Pyeong": "Փհեն",
+      "Centimeters per second": "Սանտիմետր վայրկյանում",
+      "Meters per second": "Մ/վրկ",
+      "Kilometers per hour": "Կիլոմետր ժամում",
+      "Feet per second": "Ֆուտ վայրկյանում",
+      "Miles per hour": "Մղոն/ժամ",
+      "Knots": "Հանգույցներ",
+      "Mach": "Մախ",
+      "turtles": "կրիաներ",
+      "horses": "ձի",
+      "jets": "ռակտիվ ինքնաթիռներ",
+      "Watts": "Վտ",
+      "Kilowatts": "ԿՎտ",
+      "Horsepower (US)": "Ձիաուժ (ԱՄՆ)",
+      "Foot-pounds/minute": "Ֆուտ-ֆունտ/րոպե",
+      "BTUs/minute": "BTU/րոպե",
+      "light bulbs": "լամպեր",
+      "train engines": "գնացքի շարժիչներ",
+      "Thermal calories": "Ջերմային կալորիաներ",
+      "Food calories": "Սննդի կալորիաներ",
+      "British thermal units": "Բրիտանական ջերմային միավորներ",
+      "Kilojoules": "Կիլոջոուլ",
+      "Kilowatt-hours": "ԿՎտ/ժ",
+      "Electron volts": "Էլեկտրոն վոլտ",
+      "Joules": "Ջուլ",
+      "Foot-pounds": "Ֆուտ-ֆունտ",
+      "batteries": "մարտկոցներ",
+      "bananas": "բանան",
+      "slices of cake": "տորթի կտորներ",
+      "Bits": "Բիթ",
+      "Nibble": "Նիբլ",
+      "Bytes": "Բայթ",
+      "Kilobits": "Կիլոբիթ",
+      "Kibibits": "Կիբիբիթ",
+      "Kilobytes": "Կիլոբայթ",
+      "Kibibytes": "Կիբիբայթ",
+      "Megabits": "Մեգաբիթ",
+      "Mebibits": "Մեբիբիթ",
+      "Megabytes": "Մեգաբայթ",
+      "Mebibytes": "Մեբիբայթ",
+      "Gigabits": "Գիգաբիթ",
+      "Gibibits": "Գիբիբիթներ",
+      "Gigabytes": "Գիգաբայթ",
+      "Gibibytes": "Գիբիբայթ",
+      "Terabits": "Տերաբիթներ",
+      "Tebibits": "Տեբիբիթ",
+      "Terabytes": "Տերաբայթ",
+      "Tebibytes": "Տեբիբայթ",
+      "Petabits": "Պետաբիթ",
+      "Pebibits": "Պեբիբիթ",
+      "Petabytes": "Պետաբայթ",
+      "Pebibytes": "Պեբիբայթ",
+      "Exabits": "Ներկայացումներ",
+      "Exbibits": "Էքսբիբիթներ",
+      "Exabytes": "Էկսաբայթ",
+      "Exbibytes": "Էքսբիբայթ",
+      "Zetabits": "Զետաբիթներ",
+      "Zebibits": "Զեբիբիթներ",
+      "Zetabytes": "Զետաբայթ",
+      "Zebibytes": "Զեբիբայթ",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Յոբիբիթներ",
+      "Yottabytes": "Յոթաբայթ",
+      "Yobibytes": "Յոբայթ",
+      "floppy disks": "ֆլոպպի սկավառակներ",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "Մթնոլորտներ",
+      "Bars": "Ձողեր",
+      "Kilopascals": "Կիլոպասկալ",
+      "Millimeters of mercury": "Միլիմետր սնդիկ",
+      "Pascals": "Պասկալ",
+      "Pounds per square inch": "Ֆունտ մեկ քառակուսի դյույմ",
+      "Degrees": "Աստիճաններ",
+      "Radians": "Ռադիաններ",
+      "Gradians": "Գրադիաններ",
+      "Microseconds": "Միկրովայրկյան",
+      "Milliseconds": "Միլիվայրկյան",
+      "Seconds": "Վայրկյան",
+      "Minutes": "Րոպե",
+      "Hours": "Ժամ",
+      "Days": "Օրեր",
+      "Weeks": "Շաբաթներ",
+      "Years": "Տարիներ"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "ԱՄՆ դոլար",
+      "Euro": "Եվրո",
+      "British Pound": "Բրիտանական ֆունտ",
+      "Japanese Yen": "Ճապոնական իեն",
+      "Canadian Dollar": "Կանադական դոլար",
+      "Australian Dollar": "Ավստրալիական դոլար",
+      "Brazilian Real": "Բրազիլական Ռեալ",
+      "Chilean Peso": "Չիլիական պեսո",
+      "Chinese Yuan": "Չինական յուան",
+      "Colombian Peso": "Կոլումբիական պեսո",
+      "Danish Krone": "Դանիական կրոն",
+      "Egyptian Pound": "Եգիպտական ֆունտ",
+      "Hong Kong Dollar": "Հոնգ Կոնգի դոլար",
+      "Indian Rupee": "Հնդկական ռուփի",
+      "Kenyan Shilling": "Քենիայի շիլլինգ",
+      "Mexican Peso": "Մեքսիկական պեսո",
+      "Nigerian Naira": "Նիգերիական Նաիրա",
+      "New Zealand Dollar": "Նոր Զելանդական դոլար",
+      "Norwegian Krone": "Նորվեգական կրոն",
+      "Philippine Piso": "Ֆիլիպինյան Պիզո",
+      "Polish Zloty": "Լեհական զլոտի",
+      "Qatari Riyal": "Կատարի ռիալ",
+      "Saudi Riyal": "Սաուդյան ռիալ",
+      "Singapore Dollar": "Սինգապուրյան դոլար",
+      "South African Rand": "Հարավաֆրիկյան ռանդ",
+      "South Korean Won": "Հարավկորեական վոն",
+      "Swedish Krona": "Շվեդական կրոն",
+      "Swiss Franc": "Շվեյցարական ֆրանկ",
+      "Thai Baht": "Թայլանդական բահ",
+      "Turkish Lira": "Թուրքական լիրա",
+      "Turkmenistani Manat": "Թուրքմենստանի մանաթ",
+      "Ugandan Shilling": "Ուգանդական շիլլինգ",
+      "Ukrainian Hryvnia": "Ուկրաինական գրիվնյա",
+      "UAE Dirham": "ԱՄԷ դիրհամ",
+      "Uruguayan Peso": "Ուրուգվայական պեսո",
+      "Uzbekistani Som": "Ուզբեկստանի սոմ",
+      "Vanuatu Vatu": "Վանուատու Վատու",
+      "Venezuelan Bolivar Soberano": "Վենեսուելական Բոլիվար Սոբերանո",
+      "Vietnamese Dong": "Վիետնամական Դոնգ",
+      "Yemeni Rial": "Եմենի ռիալ"
+    },
+    "labels": {
+      "United States - Dollar": "Միացյալ Նահանգներ - դոլար",
+      "Europe - Euro": "Եվրոպա – Եվրո",
+      "United Kingdom - Pound": "Միացյալ Թագավորություն - ֆունտ",
+      "Japan - Yen": "Ճապոնիա - իեն",
+      "Canada - Dollar": "Կանադա - դոլար",
+      "Australia - Dollar": "Ավստրալիա - դոլար",
+      "Brazil - Real": "Բրազիլիա - Ռեալ",
+      "Chile - Peso": "Չիլի - Պեսո",
+      "China - Yuan Renminbi": "Չինաստան - Յուան Ռենմինբի",
+      "Colombia - Peso": "Կոլումբիա - Պեսո",
+      "Denmark - Krone": "Դանիա - Կրոն",
+      "Egypt - Pound": "Եգիպտոս – ֆունտ",
+      "Hong Kong SAR - Dollar": "Հոնկոնգի SAR - դոլար",
+      "India - Rupee": "Հնդկաստան - ռուփի",
+      "Kenya - Shilling": "Քենիա – Շիլլինգ",
+      "Mexico - Peso": "Մեքսիկա - Պեսո",
+      "Nigeria - Naira": "Նիգերիա - Նաիրա",
+      "New Zealand - Dollar": "Նոր Զելանդիա - դոլար",
+      "Norway - Krone": "Նորվեգիա - Կրոն",
+      "Philippines - Piso": "Ֆիլիպիններ - Պիզո",
+      "Poland - Zloty": "Լեհաստան – Զլոտի",
+      "Qatar - Riyal": "Քաթար - Ռիալ",
+      "Saudi Arabia - Riyal": "Սաուդյան Արաբիա - Ռիալ",
+      "Singapore - Dollar": "Սինգապուր - դոլար",
+      "South Africa - Rand": "Հարավային Աֆրիկա – Ռանդ",
+      "South Korea - Won": "Հարավային Կորեա – Հաղթել է",
+      "Sweden - Krona": "Շվեդիա – Կրոնա",
+      "Switzerland - Franc": "Շվեյցարիա – ֆրանկ",
+      "Thailand - Baht": "Թաիլանդ - Բահ",
+      "Turkey - Lira": "Թուրքիա – Լիրա",
+      "Turkmenistan - Manat": "Թուրքմենստան - Մանաթ",
+      "Uganda - Shilling": "Ուգանդա – Շիլլինգ",
+      "Ukraine - Hryvnia": "Ուկրաինա - Գրիվնյա",
+      "United Arab Emirates - Dirham": "Արաբական Միացյալ Էմիրություններ - Դիրհամ",
+      "Uruguay - Peso": "Ուրուգվայ - Պեսո",
+      "Uzbekistan - Som": "Ուզբեկստան - Սոմ",
+      "Vanuatu - Vatu": "Վանուատու - Վատու",
+      "Venezuela - Bolívar Soberano": "Վենեսուելա - Բոլիվար Սոբերանո",
+      "Vietnam - Dong": "Վիետնամ - Դոնգ",
+      "Yemen - Rial": "Եմեն – Ռիալ"
+    }
+  }
+}

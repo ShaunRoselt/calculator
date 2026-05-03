@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Ҳисобкунак",
+    "name": "Ҳисобкунак"
+  },
+  "common": {
+    "back": "Бозгашт",
+    "backspace": "Backspace",
+    "closeSidePanel": "Панелро пӯшед"
+  },
+  "converter": {
+    "unitConverter": "Табдилдиҳандаи воҳид",
+    "title": "Табдилдиҳандаҳои воҳид",
+    "builtInCollections": "Маҷмӯаҳои дарунсохт",
+    "category": "Категория",
+    "from": "Аз",
+    "to": "Ба",
+    "inputValue": "Арзиш барои табдил додан",
+    "convertedValue": "Арзиши табдилшуда",
+    "swapUnits": "Иваз кардани воҳидҳо",
+    "keypad": "Клавиатураи табдилдиҳанда",
+    "unit": "воҳид",
+    "unitOptions": "имконоти воҳид",
+    "currency": {
+      "updatingRates": "Навсозии нархҳо…",
+      "updateRates": "Меъёрҳои навсозӣ",
+      "keypad": "Клавиатураи асъор",
+      "currency": "асъор",
+      "options": "имконоти асъор",
+      "updated": "Таҷдидшуда {timestamp}",
+      "status": {
+        "mockNote": "Меъёрҳои тақаллубӣ барои намоиши барномаи мустақил.",
+        "fetching": "Қурбҳои охирини истинод ба доллари ИМА гирифта мешаванд...",
+        "liveRatesLoaded": "Қурбҳои зинда аз ExchangeRate-API бор карда шудаанд.",
+        "liveUpdateUnavailable": "Навсозии зинда дастрас нест. Қурбҳои намоишии навшуда дар сатҳи маҳаллӣ."
+      }
+    },
+    "aboutEqualTo": "Тақрибан баробар ба"
+  },
+  "errors": {
+    "invalidInput": "Вориди нодуруст",
+    "cannotDivideByZero": "Ба сифр тақсим кардан мумкин нест",
+    "cannotModuloByZero": "Модул ба сифр карда намешавад",
+    "invalidProgrammerOperation": "Амали нодуруст",
+    "overflow": "Натиҷа хеле калон"
+  },
+  "date": {
+    "calculationMode": "Усули ҳисобкунӣ",
+    "from": "Аз",
+    "to": "Ба",
+    "results": {
+      "difference": "Фарқият",
+      "sameDates": "Ҳамон санаҳо",
+      "date": "Сана"
+    },
+    "calculationModeOptions": "Имконоти режими ҳисобкунӣ",
+    "mode": {
+      "difference": "Фарқият",
+      "shift": "Гузариш"
+    },
+    "operation": "Амал",
+    "add": "Илова кунед",
+    "subtract": "Тарҳ кардан",
+    "years": "Солҳо",
+    "months": "Моҳҳо",
+    "days": "Рӯзҳо",
+    "chooseDate": "Сана интихоб кунед",
+    "previousMonth": "Моҳи гузашта",
+    "nextMonth": "Моҳи оянда",
+    "duration": {
+      "year": {
+        "one": "{count} сол",
+        "other": "{count} сол"
+      },
+      "month": {
+        "one": "{count} моҳ",
+        "other": "{count} моҳ"
+      },
+      "week": {
+        "one": "{count} ҳафта",
+        "other": "{count} ҳафта"
+      },
+      "day": {
+        "one": "{count} рӯз",
+        "other": "{count} рӯз"
+      }
+    },
+    "history": {
+      "differenceBetween": "Тафовут байни {from} ва {to}",
+      "addTo": "{duration} ба {date} илова кунед",
+      "subtractFrom": "Тарҳи {duration} аз {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Ифодаи таъкидшударо санҷед",
+    "enterExpression": "Ифода ворид кунед",
+    "canvas": "Канваси графикӣ",
+    "stopTracing": "Қатъи пайгирӣ",
+    "startTracing": "Ба пайгирӣ оғоз кунед",
+    "share": "Мубодила",
+    "options": "Интихобҳо",
+    "zoomIn": "Масъала кардан",
+    "zoomInLabel": "Масъала кардан",
+    "zoomOut": "Кур кардан",
+    "zoomOutLabel": "Кур кардан",
+    "refreshViewAutomatically": "Намоишро ба таври худкор навсозӣ кунед",
+    "view": "Дидани",
+    "expressions": "Ифодаҳо",
+    "mobileView": "Намоиши мобилӣ",
+    "showGraph": "Графикро нишон диҳед",
+    "showExpressions": "Ифодаҳоро нишон диҳед",
+    "backToFunctionList": "Бозгашт ба рӯйхати функсияҳо",
+    "window": "Равзана",
+    "resetView": "Намоишро аз нав танзим кунед",
+    "units": "Воҳидҳо",
+    "radians": "Радианҳо",
+    "degrees": "Дараҷаҳо",
+    "gradians": "Градианҳо",
+    "lineThickness": "Ғафсӣ хати",
+    "theme": "Мавзӯъ",
+    "alwaysLight": "Ҳамеша равшан",
+    "matchAppTheme": "Ба мавзӯи барнома мувофиқат кунед",
+    "groups": {
+      "inequalities": "Нобаробарӣ",
+      "trigonometry": "Тригонометрия",
+      "function": "Функсия"
+    },
+    "functions": "Функсияҳо",
+    "showEquation": "Муодиларо нишон диҳед",
+    "hideEquation": "Пинҳон кардани муодила",
+    "lineOptions": "Имконоти сатр",
+    "color": "Ранг",
+    "style": "Услуб",
+    "analysis": {
+      "title": "Таҳлил",
+      "domain": "Домен",
+      "range": "Дипазон",
+      "xIntercept": "х-монеъшавӣ",
+      "yIntercept": "y-монеъшавӣ",
+      "minima": "Минима",
+      "maxima": "Максим",
+      "inflectionPoints": "Нуқтаҳои гардиш",
+      "verticalAsymptotes": "Асимптотҳои амудӣ",
+      "horizontalAsymptotes": "Асимптотҳои уфуқӣ",
+      "obliqueAsymptotes": "Асимптотҳои монеа",
+      "parity": "Паритет",
+      "period": "Давлат",
+      "monotonicity": "Монотония",
+      "domainNone": "Ягон маҳдудияти домен",
+      "rangeNone": "Ягон маҳдудияти диапазон",
+      "xInterceptNone": "Ягон x-пайвастан",
+      "yInterceptNone": "Ягон y-пайвастшавӣ нест",
+      "minimaNone": "Не ҳадди ақал",
+      "maximaNone": "Максимум нест",
+      "inflectionNone": "Нуқтаҳои гардиш нест",
+      "verticalAsymptotesNone": "Ягон асимптотҳои амудӣ",
+      "horizontalAsymptotesNone": "Ягон асимптотҳои уфуқӣ",
+      "obliqueAsymptotesNone": "Ягон асимптотҳои монеа",
+      "parityUnknown": "Номаълум",
+      "parityOdd": "Тоқ",
+      "parityEven": "Ҳатто",
+      "parityNeither": "Не",
+      "periodicityUnknown": "Номаълум",
+      "periodicityNotPeriodic": "Даврӣ нест",
+      "monotonicityConstant": "Доимӣ",
+      "monotonicityIncreasing": "афзоиш",
+      "monotonicityDecreasing": "Коҳиши",
+      "monotonicityUnknown": "Номаълум",
+      "monotonicityError": "Муайян карда намешавад",
+      "featureTooComplexPlural": "Барои таҳлил хеле мураккаб",
+      "analysisCouldNotBePerformed": "Таҳлил анҷом дода нашуд",
+      "analysisNotSupported": "Таҳлил дастгирӣ намешавад",
+      "variableIsNotX": "Тағйирёбанда x нест"
+    },
+    "plottingExpressions": "Нақшаи {count} ифодаҳо",
+    "xMin": "Х-дақ",
+    "xMax": "X-Макс",
+    "yMin": "Y-дақ",
+    "yMax": "Y-Макс",
+    "selectExpression": "Ифодаи {index}-ро интихоб кунед",
+    "expressionIndex": "Ифода {index}",
+    "analyzeFunction": "Таҳлил кардани функсия",
+    "changeEquationStyle": "Тағйири услуби муодила",
+    "removeEquation": "Муодиларо хориҷ кунед",
+    "lineStyle": {
+      "solid": "Услуби хати устувор",
+      "dash": "Услуби хати тире",
+      "dot": "Услуби хати нуқта"
+    }
+  },
+  "history": {
+    "empty": "Таърих холӣ аст",
+    "clearAll": "Ҳамаро тоза кунед",
+    "clear": "Таърихро тоза кунед",
+    "title": "Таърих",
+    "andMemory": "Таърих ва хотира",
+    "aria": {
+      "historyPanel": "Панели таърих",
+      "historyAndMemoryPanel": "Панели таърих ва хотира"
+    },
+    "closeFlyout": "Таърихро пӯшед",
+    "openFlyout": "Таърихи кушода"
+  },
+  "memory": {
+    "empty": "Хотира холӣ аст",
+    "clearItem": "Тозакунии ашё",
+    "addCurrentValue": "Илова кардани арзиши ҷорӣ",
+    "subtractCurrentValue": "Арзиши ҷориро тарҳ кунед",
+    "clearAll": "Ҳамаро тоза кунед",
+    "clear": "Хотира тоза кунед",
+    "title": "Хотира",
+    "controls": "Назорати хотира",
+    "tooltips": {
+      "clearAll": "Ҳамаи хотираро тоза кунед",
+      "recall": "Аз хотира бозхонд",
+      "add": "Ба хотира илова кунед",
+      "subtract": "Аз хотира тарс кунед",
+      "store": "Дар хотира нигоҳ доред"
+    },
+    "recallValue": "Хотираро бозхонд {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Навигатсия",
+      "closeNavigation": "Навигатсияро пӯшед",
+      "openNavigation": "Навигатсияро кушоед"
+    },
+    "groups": {
+      "calculator": "Ҳисобкунак",
+      "converter": "Табдилдиҳанда"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Панели флипи каме",
+    "baseReadouts": "Хондани асос",
+    "surfaceMode": "Ҳолати рӯизаминӣ",
+    "fullKeypad": "Клавиатураи пурра",
+    "showKeypad": "Клавиатураро нишон диҳед",
+    "bitTogglingKeypad": "Клавиатураи ивазкунандаи каме",
+    "showBitView": "Намоиши бит",
+    "wordSize": "Андозаи калима",
+    "bitwise": "Ба таври каме",
+    "bitShift": "Тағйири бит"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Тригонометрия",
+      "function": "Функсия",
+      "functionsAria": "Функсияҳо",
+      "trigonometricFunctionsAria": "Функсияҳои тригонометрӣ",
+      "angleUnit": "Воҳиди кунҷӣ {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Намуди зоҳирӣ",
+      "themeTitle": "Мавзӯъ",
+      "themeDescription": "Схемаи рангро интихоб кунед",
+      "light": "Нур",
+      "dark": "Торик",
+      "blue": "Кабуд",
+      "green": "Сабз",
+      "system": "Система"
+    },
+    "language": {
+      "group": "Забон",
+      "title": "Забон",
+      "description": "Забони дилхоҳи худро интихоб кунед"
+    },
+    "about": {
+      "group": "Дар бораи"
+    },
+    "feedback": "Ирсоли фикру мулоҳиза",
+    "contribute": {
+      "prefix": "Саҳм кунед",
+      "link": "GitHub",
+      "suffix": "ба беҳтар кардани ин ҳисобкунак"
+    },
+    "links": {
+      "repository": "Анбори лоиҳа",
+      "readme": "ХОНЕД",
+      "license": "Иҷозатномаи MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Стандарт",
+      "subtitle": "Арзёбии фаврии классикӣ"
+    },
+    "scientific": {
+      "label": "Илмӣ",
+      "subtitle": "Операторҳо, функсияҳо ва дастгирии ифода"
+    },
+    "graphing": {
+      "label": "Графиксозӣ",
+      "subtitle": "Ифодаи оддиро дар ҳамвории декартӣ кашед"
+    },
+    "programmer": {
+      "label": "Барномасоз",
+      "subtitle": "Математикаи бутун бо табдили асос"
+    },
+    "date": {
+      "label": "Ҳисобкунии сана",
+      "subtitle": "Давомнокӣ ва санаҳои гузаришро пайдо кунед"
+    },
+    "currency": {
+      "label": "Аъор",
+      "subtitle": "Табдил додани қурби қалбакӣ"
+    },
+    "volume": {
+      "label": "Ҳаҷм",
+      "subtitle": "Табдил додани андозагирии ҳаҷм"
+    },
+    "length": {
+      "label": "Дарозӣ",
+      "subtitle": "Воҳидҳои масофа ва дарозиро табдил диҳед"
+    },
+    "weight": {
+      "label": "Вазн ва вазн",
+      "subtitle": "Воҳидҳои вазн ва вазнро табдил диҳед"
+    },
+    "temperature": {
+      "label": "Ҳарорат",
+      "subtitle": "Тарозуи ҳароратро табдил диҳед"
+    },
+    "energy": {
+      "label": "Энергетика",
+      "subtitle": "Табдил додани андозагирии энергия"
+    },
+    "area": {
+      "label": "Майдон",
+      "subtitle": "Тағир додани андозагирии минтақа"
+    },
+    "speed": {
+      "label": "Суръат",
+      "subtitle": "Андозаҳои суръатро табдил диҳед"
+    },
+    "time": {
+      "label": "Вақт",
+      "subtitle": "Табдил додани андозагирии вақт"
+    },
+    "power": {
+      "label": "Қувва",
+      "subtitle": "Андозаҳои барқро табдил диҳед"
+    },
+    "data": {
+      "label": "Маълумот",
+      "subtitle": "Воҳидҳои нигаҳдории рақамиро табдил диҳед"
+    },
+    "pressure": {
+      "label": "Фишор",
+      "subtitle": "Воҳидҳои фишорро табдил диҳед"
+    },
+    "angle": {
+      "label": "Кунҷ",
+      "subtitle": "Табдил додани андозагирии кунҷ"
+    },
+    "settings": {
+      "label": "Танзимот",
+      "subtitle": "Маълумоти намуди зоҳирӣ ва барнома"
+    }
+  },
+  "categories": {
+    "Currency": "Аъор",
+    "Volume": "Ҳаҷм",
+    "Length": "Дарозӣ",
+    "Mass": "Мас",
+    "Temperature": "Ҳарорат",
+    "Energy": "Энергетика",
+    "Area": "Майдон",
+    "Speed": "Суръат",
+    "Time": "Вақт",
+    "Power": "Қувва",
+    "Data": "Маълумот",
+    "Pressure": "Фишор",
+    "Angle": "Гунҷ"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Ангстромҳо",
+      "Nanometers": "Нанометрҳо",
+      "Microns": "Микронҳо",
+      "Millimeters": "Миллиметр",
+      "Centimeters": "Сантиметр",
+      "Meters": "Метр",
+      "Kilometers": "Километр",
+      "Inches": "Дюйм",
+      "Feet": "Фут",
+      "Yards": "Ярд",
+      "Miles": "Мил",
+      "Nautical miles": "Милҳои баҳрӣ",
+      "paperclips": "клипҳои коғазӣ",
+      "hands": "дастҳо",
+      "jumbo jets": "ҳавопаймоҳои ҷамбо",
+      "Carats": "Карат",
+      "Milligrams": "Миллиграмм",
+      "Centigrams": "Сантиграм",
+      "Decigrams": "Дециграммаҳо",
+      "Grams": "Грам",
+      "Dekagrams": "Декаграммаҳо",
+      "Hectograms": "Гектограммаҳо",
+      "Kilograms": "Килограмм",
+      "Metric tonnes": "Тонна метрикӣ",
+      "Ounces": "унсия",
+      "Pounds": "Фунт",
+      "Stone": "Санг",
+      "Short tons (US)": "Тоннаҳои кӯтоҳ (ИМА)",
+      "Long tons (UK)": "Тоннаҳои дароз (Бритониё)",
+      "snowflakes": "пораҳои барфӣ",
+      "soccer balls": "тубҳои футбол",
+      "elephants": "филҳо",
+      "whales": "наҳангҳо",
+      "Celsius": "Сельсия",
+      "Fahrenheit": "Фаренгейт",
+      "Kelvin": "Келвин",
+      "Milliliters": "Миллилитр",
+      "Cubic centimeters": "Сантиметри мукааб",
+      "Liters": "Лтр",
+      "Cubic meters": "метри мукааб",
+      "Teaspoons (US)": "қошуқи (ИМА)",
+      "Tablespoons (US)": "қошуқҳо (ИМА)",
+      "Fluid ounces (US)": "унсияҳои моеъ (ИМА)",
+      "Cups (US)": "Ҷомҳо (ИМА)",
+      "Pints (US)": "Пинт (ИМА)",
+      "Quarts (US)": "Кварт (ИМА)",
+      "Gallons (US)": "Галлон (ИМА)",
+      "Cubic inches": "Дюймаи мукааб",
+      "Cubic feet": "Футҳои мукааб",
+      "Cubic yards": "метри мукааб",
+      "Teaspoons (UK)": "қошуқи (Бритониёи Кабир)",
+      "Tablespoons (UK)": "қошуқи (Бритониёи Кабир)",
+      "Fluid ounces (UK)": "унсияҳои моеъ (Бритониё)",
+      "Pints (UK)": "Пинт (Бритониё)",
+      "Quarts (UK)": "Квартҳо (Бритониё)",
+      "Gallons (UK)": "Галлон (Бритониё)",
+      "coffee cups": "пиёлаҳои қаҳва",
+      "bathtubs": "ванҳо",
+      "swimming pools": "ҳавзҳои шиноварӣ",
+      "Square millimeters": "Миллиметри мураббаъ",
+      "Square centimeters": "Сантиметри мураббаъ",
+      "Square meters": "метри мураббаъ",
+      "Hectares": "Гектар",
+      "Square kilometers": "Километри мураббаъ",
+      "Square inches": "Дюймаи мураббаъ",
+      "Square feet": "Футҳои мураббаъ",
+      "Square yards": "Ярдҳои мураббаъ",
+      "Acres": "Акрҳо",
+      "Square miles": "Ми мураббаъ",
+      "sheets of paper": "варақаҳои коғаз",
+      "soccer fields": "майдонҳои футбол",
+      "castles": "қасрҳо",
+      "Pyeong": "Пёнг",
+      "Centimeters per second": "Сантиметр дар як сония",
+      "Meters per second": "Метр дар як сония",
+      "Kilometers per hour": "Километр дар як соат",
+      "Feet per second": "Фут дар як сония",
+      "Miles per hour": "Мил дар як соат",
+      "Knots": "Гиреҳҳо",
+      "Mach": "Мах",
+      "turtles": "сангпуштҳо",
+      "horses": "аспҳо",
+      "jets": "ҳавопаймоҳо",
+      "Watts": "Ватт",
+      "Kilowatts": "КВт",
+      "Horsepower (US)": "Қувваи асп (ИМА)",
+      "Foot-pounds/minute": "Фут-фунт/дақиқа",
+      "BTUs/minute": "BTUs/дақиқа",
+      "light bulbs": "лампаҳои барқ",
+      "train engines": "муҳаррикҳои қатораҳо",
+      "Thermal calories": "Калорияҳои гармидиҳӣ",
+      "Food calories": "Калорияҳои ғизо",
+      "British thermal units": "Воҳидҳои гармидиҳии Бритониё",
+      "Kilojoules": "Килоджоул",
+      "Kilowatt-hours": "КВт-соат",
+      "Electron volts": "Волтҳои электронӣ",
+      "Joules": "Ҷоул",
+      "Foot-pounds": "Фут-фут",
+      "batteries": "батареяҳо",
+      "bananas": "банан",
+      "slices of cake": "пораҳои торт",
+      "Bits": "Битҳо",
+      "Nibble": "Нибл",
+      "Bytes": "Байт",
+      "Kilobits": "Килобит",
+      "Kibibits": "Кибибитҳо",
+      "Kilobytes": "Килобайт",
+      "Kibibytes": "Киббайт",
+      "Megabits": "Мегабит",
+      "Mebibits": "Мебибитҳо",
+      "Megabytes": "Мегабайт",
+      "Mebibytes": "Мебибайт",
+      "Gigabits": "Гигабит",
+      "Gibibits": "Гибибитҳо",
+      "Gigabytes": "Гигабайт",
+      "Gibibytes": "Гиббайт",
+      "Terabits": "Терабитҳо",
+      "Tebibits": "Теббитс",
+      "Terabytes": "Терабайт",
+      "Tebibytes": "Тебибайт",
+      "Petabits": "Петбитҳо",
+      "Pebibits": "Пеббитҳо",
+      "Petabytes": "Петабайт",
+      "Pebibytes": "Пебибайт",
+      "Exabits": "Имтиҳодҳо",
+      "Exbibits": "Эксбибитҳо",
+      "Exabytes": "Экзабайт",
+      "Exbibytes": "Эксбибайт",
+      "Zetabits": "Зетабитҳо",
+      "Zebibits": "Зебибитс",
+      "Zetabytes": "Зетабайт",
+      "Zebibytes": "Зебибайт",
+      "Yottabits": "Ёттабитҳо",
+      "Yobibits": "Ёбибитҳо",
+      "Yottabytes": "Ёттабайт",
+      "Yobibytes": "Ёбибайт",
+      "floppy disks": "дискҳо",
+      "CDs": "дискҳо",
+      "DVDs": "DVD",
+      "Atmospheres": "Атмосфера",
+      "Bars": "Барҳо",
+      "Kilopascals": "Килопаскал",
+      "Millimeters of mercury": "Миллиметр симоб",
+      "Pascals": "Паскал",
+      "Pounds per square inch": "Фунт барои як дюйм мураббаъ",
+      "Degrees": "Дараҷаҳо",
+      "Radians": "Радианҳо",
+      "Gradians": "Градианҳо",
+      "Microseconds": "Микросонияҳо",
+      "Milliseconds": "Миллисония",
+      "Seconds": "сонияҳо",
+      "Minutes": "Дақиқаҳо",
+      "Hours": "Соатҳо",
+      "Days": "Рӯзҳо",
+      "Weeks": "Ҳафтаҳо",
+      "Years": "Солҳо"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "доллари ИМА",
+      "Euro": "Евро",
+      "British Pound": "Фунти Бритониё",
+      "Japanese Yen": "Йени Ҷопон",
+      "Canadian Dollar": "доллари Канада",
+      "Australian Dollar": "Долҳои Австралия",
+      "Brazilian Real": "Реали Бразилия",
+      "Chilean Peso": "Песои Чили",
+      "Chinese Yuan": "Юани Чин",
+      "Colombian Peso": "Песои Колумбия",
+      "Danish Krone": "Крони Дания",
+      "Egyptian Pound": "Фунти Миср",
+      "Hong Kong Dollar": "Доллари Ҳонконг",
+      "Indian Rupee": "Рупияи Ҳиндустон",
+      "Kenyan Shilling": "Шиллинги Кения",
+      "Mexican Peso": "Песои Мексика",
+      "Nigerian Naira": "Наири Нигерия",
+      "New Zealand Dollar": "Доллари Зеландияи Нав",
+      "Norwegian Krone": "Кронии Норвегия",
+      "Philippine Piso": "Писо Филиппин",
+      "Polish Zloty": "Злотияи Лаҳистон",
+      "Qatari Riyal": "Рияли Қатар",
+      "Saudi Riyal": "Рияли Саудӣ",
+      "Singapore Dollar": "Долҳои Сингапур",
+      "South African Rand": "Рэнди Африқои Ҷанубӣ",
+      "South Korean Won": "Вон Кореяи Ҷанубӣ",
+      "Swedish Krona": "Кронаи Шветсия",
+      "Swiss Franc": "Франки Швейтсария",
+      "Thai Baht": "Бати Таиланд",
+      "Turkish Lira": "Лири туркӣ",
+      "Turkmenistani Manat": "Манати Туркманистон",
+      "Ugandan Shilling": "Шиллинги Уганда",
+      "Ukrainian Hryvnia": "Гривнияи Украина",
+      "UAE Dirham": "Дирҳами АМА",
+      "Uruguayan Peso": "Песои Уругвай",
+      "Uzbekistani Som": "Соми Узбакистон",
+      "Vanuatu Vatu": "Вануату Вату",
+      "Venezuelan Bolivar Soberano": "Венесуэла Боливар Соберано",
+      "Vietnamese Dong": "Дунги Ветнами",
+      "Yemeni Rial": "Риали Яман"
+    },
+    "labels": {
+      "United States - Dollar": "Иёлоти Муттаҳида - Доллар",
+      "Europe - Euro": "Аврупо - Евро",
+      "United Kingdom - Pound": "Подшоҳии Муттаҳида - Фунт",
+      "Japan - Yen": "Ҷопон - Йен",
+      "Canada - Dollar": "Канада - доллар",
+      "Australia - Dollar": "Австралия - Доллар",
+      "Brazil - Real": "Бразилия - Реал",
+      "Chile - Peso": "Чили - Песо",
+      "China - Yuan Renminbi": "Чин - Юан Жэньминби",
+      "Colombia - Peso": "Колумбия - Песо",
+      "Denmark - Krone": "Дания - Кроне",
+      "Egypt - Pound": "Миср - Фунт",
+      "Hong Kong SAR - Dollar": "САР Ҳонконг - Доллар",
+      "India - Rupee": "Ҳиндустон - рупия",
+      "Kenya - Shilling": "Кения - Шилинг",
+      "Mexico - Peso": "Мексика - Песо",
+      "Nigeria - Naira": "Нигерия - Найра",
+      "New Zealand - Dollar": "Зеландияи Нав - Доллар",
+      "Norway - Krone": "Норвегия - Кроне",
+      "Philippines - Piso": "Филиппин - Писо",
+      "Poland - Zloty": "Полша - Злотия",
+      "Qatar - Riyal": "Қатар - Риёл",
+      "Saudi Arabia - Riyal": "Арабистони Саудӣ - Риёл",
+      "Singapore - Dollar": "Сингапур - доллар",
+      "South Africa - Rand": "Африқои Ҷанубӣ - Ранд",
+      "South Korea - Won": "Кореяи Ҷанубӣ - бурд",
+      "Sweden - Krona": "Шветсия - Крона",
+      "Switzerland - Franc": "Швейтсария - Франк",
+      "Thailand - Baht": "Таиланд - Бат",
+      "Turkey - Lira": "Туркия - лира",
+      "Turkmenistan - Manat": "Туркманистон - Манат",
+      "Uganda - Shilling": "Уганда - Шилинг",
+      "Ukraine - Hryvnia": "Украина - Гривния",
+      "United Arab Emirates - Dirham": "Аморати Муттаҳидаи Араб - Дирҳам",
+      "Uruguay - Peso": "Уругвай - Песо",
+      "Uzbekistan - Som": "Узбекистон - Сом",
+      "Vanuatu - Vatu": "Вануату - Вату",
+      "Venezuela - Bolívar Soberano": "Венесуэла - Боливар Соберано",
+      "Vietnam - Dong": "Вьетнам - Донг",
+      "Yemen - Rial": "Яман - Риал"
+    }
+  }
+}

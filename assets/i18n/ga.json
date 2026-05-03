@@ -1,0 +1,624 @@
+{
+  "app": {
+    "name": "Áireamhán",
+    "title": "Áireamhán"
+  },
+  "calculator": {
+    "scientific": {
+      "angleUnit": "Aonad uillinne {value}",
+      "function": "Feidhm",
+      "functionsAria": "Feidhmeanna",
+      "trigonometricFunctionsAria": "Feidhmeanna triantánachta",
+      "trigonometry": "Tréineachas"
+    }
+  },
+  "categories": {
+    "Angle": "Uillinn",
+    "Area": "Ceantar",
+    "Currency": "Airgeadra",
+    "Data": "Sonraí",
+    "Energy": "Fuinneamh",
+    "Length": "Fad",
+    "Mass": "Aifreann",
+    "Power": "Cumhacht",
+    "Pressure": "Brú",
+    "Speed": "Luas",
+    "Temperature": "Teocht",
+    "Time": "Am",
+    "Volume": "Imleabhar"
+  },
+  "common": {
+    "back": "Ar ais",
+    "backspace": "Cúlspás",
+    "closeSidePanel": "Dún an painéal"
+  },
+  "converter": {
+    "aboutEqualTo": "Maidir le",
+    "builtInCollections": "Bailiúcháin ionsuite",
+    "category": "Catagóir",
+    "convertedValue": "Luach tiontaithe",
+    "currency": {
+      "currency": "airgeadra",
+      "keypad": "Eochaircheap airgeadra",
+      "options": "roghanna airgeadra",
+      "status": {
+        "fetching": "Na rátaí tagartha USD is déanaí á fháil...",
+        "liveRatesLoaded": "Rátaí beo lódáilte ó ExchangeRate-API.",
+        "liveUpdateUnavailable": "Níl nuashonrú beo ar fáil. Rátaí taispeána athnuaite go háitiúil.",
+        "mockNote": "Rátaí tagartha bréige don léiriú aip neamhspleách."
+      },
+      "updateRates": "Rátaí nuashonraithe",
+      "updated": "Nuashonraithe {timestamp}",
+      "updatingRates": "Tá rátaí nuashonraithe…"
+    },
+    "from": "Ó",
+    "inputValue": "Luach le tiontú",
+    "keypad": "Eochrach an tiontaire",
+    "swapUnits": "Babhtáil aonaid",
+    "title": "Tiontairí aonaid",
+    "to": "Chuig",
+    "unit": "aonad",
+    "unitConverter": "Tiontaire Aonaid",
+    "unitOptions": "roghanna aonaid"
+  },
+  "currencies": {
+    "labels": {
+      "Australia - Dollar": "An Astráil - Dollar",
+      "Brazil - Real": "An Bhrasaíl - Fíor",
+      "Canada - Dollar": "Ceanada - Dollar",
+      "Chile - Peso": "An tSile - Peso",
+      "China - Yuan Renminbi": "An tSín - Yuan Renminbi",
+      "Colombia - Peso": "An Cholóim - Peso",
+      "Denmark - Krone": "An Danmhairg - Coróin",
+      "Egypt - Pound": "An Éigipt - Punt",
+      "Europe - Euro": "An Eoraip - Euro",
+      "Hong Kong SAR - Dollar": "SAR Hong Cong - Dollar",
+      "India - Rupee": "An India - Rúipí",
+      "Japan - Yen": "An tSeapáin - Yen",
+      "Kenya - Shilling": "An Chéinia - Scilling",
+      "Mexico - Peso": "Meicsiceo - Peso",
+      "New Zealand - Dollar": "An Nua-Shéalainn - Dollar",
+      "Nigeria - Naira": "An Nigéir - Naira",
+      "Norway - Krone": "An Iorua - Coróin",
+      "Philippines - Piso": "Na hOileáin Fhilipíneacha - Piso",
+      "Poland - Zloty": "An Pholainn - Zloty",
+      "Qatar - Riyal": "Catar - Riyal",
+      "Saudi Arabia - Riyal": "An Araib Shádach - Riyal",
+      "Singapore - Dollar": "Singeapór - Dollar",
+      "South Africa - Rand": "An Afraic Theas - Rand",
+      "South Korea - Won": "An Chóiré Theas - Bhuaigh",
+      "Sweden - Krona": "An tSualainn - Krona",
+      "Switzerland - Franc": "An Eilvéis - Franc",
+      "Thailand - Baht": "An Téalainn - Baht",
+      "Turkey - Lira": "An Tuirc - Lira",
+      "Turkmenistan - Manat": "An Tuircméanastáin - Manat",
+      "Uganda - Shilling": "Uganda - Scilling",
+      "Ukraine - Hryvnia": "An Úcráin - Hryvnia",
+      "United Arab Emirates - Dirham": "Aontas na nÉimíríochtaí Arabacha - Dirham",
+      "United Kingdom - Pound": "An Ríocht Aontaithe - Punt",
+      "United States - Dollar": "Stáit Aontaithe Mheiriceá - Dollar",
+      "Uruguay - Peso": "Uragua - Peso",
+      "Uzbekistan - Som": "Úisbéiceastáin - Som",
+      "Vanuatu - Vatu": "Vanuatú - Vatú",
+      "Venezuela - Bolívar Soberano": "Veiniséala - Bolívar Soberano",
+      "Vietnam - Dong": "Vítneaimis - Dong",
+      "Yemen - Rial": "Éimin - Rial"
+    },
+    "names": {
+      "Australian Dollar": "Dollar na hAstráile",
+      "Brazilian Real": "Fíor na Brasaíle",
+      "British Pound": "Punt na Breataine",
+      "Canadian Dollar": "Dollar Cheanada",
+      "Chilean Peso": "Peso na Sile",
+      "Chinese Yuan": "Yuan Síneach",
+      "Colombian Peso": "Peso na Colóime",
+      "Danish Krone": "Cróna na Danmhairge",
+      "Egyptian Pound": "Punt na hÉigipte",
+      "Euro": "Euro",
+      "Hong Kong Dollar": "Dollar Hong Cong",
+      "Indian Rupee": "Rúipí Indiach",
+      "Japanese Yen": "Yen na Seapáine",
+      "Kenyan Shilling": "Scilling na Céinia",
+      "Mexican Peso": "Peso Mheicsiceo",
+      "New Zealand Dollar": "Dollar na Nua-Shéalainne",
+      "Nigerian Naira": "Náire na Nigéire",
+      "Norwegian Krone": "Cróna na hIorua",
+      "Philippine Piso": "Písó na hOileáin Fhilipíneacha",
+      "Polish Zloty": "Zloty Polainnis",
+      "Qatari Riyal": "Catari Riyal",
+      "Saudi Riyal": "Saudi Riyal",
+      "Singapore Dollar": "Dollar Shingeapór",
+      "South African Rand": "Rand na hAfraice Theas",
+      "South Korean Won": "Bhuaite na Cóiré Theas",
+      "Swedish Krona": "Cróna na Sualainne",
+      "Swiss Franc": "Franc na hEilvéise",
+      "Thai Baht": "Baht Téalainnis",
+      "Turkish Lira": "Lira Tuircis",
+      "Turkmenistani Manat": "Manat Tuircméanastáine",
+      "UAE Dirham": "UAE Dirham",
+      "US Dollar": "Dollar SAM",
+      "Ugandan Shilling": "Scilling Uganda",
+      "Ukrainian Hryvnia": "Dulio na hÚcráine",
+      "Uruguayan Peso": "Peso Uragua",
+      "Uzbekistani Som": "Som na hÚisbéiceastáine",
+      "Vanuatu Vatu": "Vanuatú Vatu",
+      "Venezuelan Bolivar Soberano": "Bolívar Soberano Veinéiseach",
+      "Vietnamese Dong": "Vítneaimis Dong",
+      "Yemeni Rial": "Éimin Rial"
+    }
+  },
+  "date": {
+    "add": "Cuir leis",
+    "calculationMode": "Mód ríofa",
+    "calculationModeOptions": "Roghanna mód ríofa",
+    "chooseDate": "Roghnaigh dáta",
+    "days": "Laethanta",
+    "duration": {
+      "day": {
+        "one": "{count} lá",
+        "other": "{count} lá"
+      },
+      "month": {
+        "one": "{count} míosa",
+        "other": "{count} mhí"
+      },
+      "week": {
+        "one": "{count} seachtaine",
+        "other": "{count} seachtaine"
+      },
+      "year": {
+        "one": "{count} bhliain",
+        "other": "{count} bliana"
+      }
+    },
+    "from": "Ó",
+    "history": {
+      "addTo": "Cuir {duration} le {date}",
+      "differenceBetween": "Difríocht idir {from} agus {to}",
+      "subtractFrom": "Dealaigh {duration} ó {date}"
+    },
+    "mode": {
+      "difference": "Difríocht",
+      "shift": "Aistriú"
+    },
+    "months": "Mí",
+    "nextMonth": "An mhí seo chugainn",
+    "operation": "Oibríocht",
+    "previousMonth": "An mhí roimhe sin",
+    "results": {
+      "date": "Dáta",
+      "difference": "Difríocht",
+      "sameDates": "Dátaí céanna"
+    },
+    "subtract": "Dealaigh",
+    "to": "Chuig",
+    "years": "Blianta"
+  },
+  "errors": {
+    "cannotDivideByZero": "Ní féidir é a roinnt ar nialas",
+    "cannotModuloByZero": "Ní féidir modú a dhéanamh le nialas",
+    "invalidInput": "Ionchur neamhbhailí",
+    "invalidProgrammerOperation": "Oibríocht neamhbhailí",
+    "overflow": "Toradh rómhór"
+  },
+  "graph": {
+    "alwaysLight": "Éadrom i gcónaí",
+    "analysis": {
+      "analysisCouldNotBePerformed": "Níorbh fhéidir anailís a dhéanamh",
+      "analysisNotSupported": "Ní thacaítear leis an anailís",
+      "domain": "Fearainn",
+      "domainNone": "Níl aon srianta fearainn",
+      "featureTooComplexPlural": "Ró-chasta chun anailís a dhéanamh",
+      "horizontalAsymptotes": "Asymptotes cothrománacha",
+      "horizontalAsymptotesNone": "Níl asymptotes cothrománacha ar bith",
+      "inflectionNone": "Gan infhilleadh pointí",
+      "inflectionPoints": "Pointe inathraithe",
+      "maxima": "Uasmhéid",
+      "maximaNone": "Gan uasmhéid",
+      "minima": "Íosmhéid",
+      "minimaNone": "Gan íosmhéid",
+      "monotonicity": "Monatónacht",
+      "monotonicityConstant": "Leasach",
+      "monotonicityDecreasing": "Ag laghdú",
+      "monotonicityError": "Ní féidir a chinneadh",
+      "monotonicityIncreasing": "Ag méadú",
+      "monotonicityUnknown": "Anaithnid",
+      "obliqueAsymptotes": "Asymptotes fiar",
+      "obliqueAsymptotesNone": "Níl aon fhaar-symptotes",
+      "parity": "Paireacht",
+      "parityEven": "Fiú amháin",
+      "parityNeither": "Ach an oiread",
+      "parityOdd": "Ceart",
+      "parityUnknown": "Anaithnid",
+      "period": "Tréimhse",
+      "periodicityNotPeriodic": "Ní tréimhsiúil",
+      "periodicityUnknown": "Anaithnid",
+      "range": "Raon",
+      "rangeNone": "Níl aon srianta raoin",
+      "title": "Anailís",
+      "variableIsNotX": "Ní athróg é x",
+      "verticalAsymptotes": "Asymptotes ingearacha",
+      "verticalAsymptotesNone": "Gan asymptotes ingearacha",
+      "xIntercept": "x-thascradh",
+      "xInterceptNone": "Gan x-idircheapadh",
+      "yIntercept": "y-idircheap",
+      "yInterceptNone": "Níl aon y-idircheapadh"
+    },
+    "analyzeFunction": "Déan anailís ar an bhfeidhm",
+    "backToFunctionList": "Ar ais go liosta na bhfeidhmeanna",
+    "canvas": "Canbhás graf",
+    "changeEquationStyle": "Athraigh stíl na cothromóide",
+    "checkHighlightedExpression": "Seiceáil an slonn aibhsithe",
+    "color": "Dath",
+    "degrees": "Céimeanna",
+    "enterExpression": "Cuir isteach slonn",
+    "expressionIndex": "Sloinn {index}",
+    "expressions": "Sloinn",
+    "functions": "Feidhmeanna",
+    "gradians": "Gradians",
+    "groups": {
+      "function": "Feidhm",
+      "inequalities": "Éagothroime",
+      "trigonometry": "Tréineachas"
+    },
+    "hideEquation": "Folaigh an chothromóid",
+    "lineOptions": "Roghanna líne",
+    "lineStyle": {
+      "dash": "Stíl líne na dash",
+      "dot": "Stíl líne phonc",
+      "solid": "Stíl líne sholadach"
+    },
+    "lineThickness": "Tiús líne",
+    "matchAppTheme": "Meaitseáil téama na haipe",
+    "mobileView": "Amharc soghluaiste",
+    "options": "Roghanna",
+    "plottingExpressions": "Sloinn {count} á bhreacadh",
+    "radians": "Raidians",
+    "refreshViewAutomatically": "Athnuaigh an t-amharc go huathoibríoch",
+    "removeEquation": "Bain an chothromóid",
+    "resetView": "Athshocraigh an t-amharc",
+    "selectExpression": "Roghnaigh slonn {index}",
+    "share": "Comhroinn",
+    "showEquation": "Taispeáin an chothromóid",
+    "showExpressions": "Taispeáin na slonn",
+    "showGraph": "Taispeáin graf",
+    "startTracing": "Cuir tús le rianú",
+    "stopTracing": "Cuir deireadh leis an rianú",
+    "style": "Stíl",
+    "theme": "Téama",
+    "units": "Aonaid",
+    "view": "Amharc",
+    "window": "Fuinneog",
+    "xMax": "X-Uasmhéid",
+    "xMin": "X-nóiméad",
+    "yMax": "Y-Max",
+    "yMin": "Y-Min",
+    "zoomIn": "Súmáil isteach",
+    "zoomInLabel": "Súmáil isteach",
+    "zoomOut": "Súmáil amach",
+    "zoomOutLabel": "Súmáil amach"
+  },
+  "history": {
+    "andMemory": "Stair agus Cuimhne",
+    "aria": {
+      "historyAndMemoryPanel": "Painéal Staire agus Cuimhne",
+      "historyPanel": "Painéal staire"
+    },
+    "clear": "Glan an stair",
+    "clearAll": "Glan gach rud",
+    "closeFlyout": "Dún an stair",
+    "empty": "Tá an stair folamh",
+    "openFlyout": "Stair oscailte",
+    "title": "Stair"
+  },
+  "memory": {
+    "addCurrentValue": "Cuir luach reatha leis",
+    "clear": "Glan cuimhne",
+    "clearAll": "Glan gach rud",
+    "clearItem": "Glan an mhír",
+    "controls": "Rialuithe cuimhne",
+    "empty": "Tá an chuimhne folamh",
+    "recallValue": "Athghairm cuimhne {value}",
+    "subtractCurrentValue": "Dealaigh an luach reatha",
+    "title": "Cuimhne",
+    "tooltips": {
+      "add": "Cuir leis an gcuimhne",
+      "clearAll": "Glan gach cuimhne",
+      "recall": "Athghairm ó chuimhne",
+      "store": "Stóráil i gcuimhne",
+      "subtract": "Dealaigh ón gcuimhne"
+    }
+  },
+  "modes": {
+    "angle": {
+      "label": "Uillinn",
+      "subtitle": "Tiontaigh tomhais uillinne"
+    },
+    "area": {
+      "label": "Ceantar",
+      "subtitle": "Tiontaigh tomhais achair"
+    },
+    "currency": {
+      "label": "Airgeadra",
+      "subtitle": "Tiontaigh rátaí malairte bréige"
+    },
+    "data": {
+      "label": "Sonraí",
+      "subtitle": "Tiontaigh aonaid stórála digiteacha"
+    },
+    "date": {
+      "label": "Dáta ríofa",
+      "subtitle": "Faigh tréimhsí agus dátaí seala"
+    },
+    "energy": {
+      "label": "Fuinneamh",
+      "subtitle": "Tiontaigh tomhais fuinnimh"
+    },
+    "graphing": {
+      "label": "Grafáil",
+      "subtitle": "Breac slonn simplí ar eitleán cairtéiseach"
+    },
+    "length": {
+      "label": "Fad",
+      "subtitle": "Tiontaigh aonaid faid agus faid"
+    },
+    "power": {
+      "label": "Cumhacht",
+      "subtitle": "Tiontaigh tomhais chumhachta"
+    },
+    "pressure": {
+      "label": "Brú",
+      "subtitle": "Tiontaigh aonaid bhrú"
+    },
+    "programmer": {
+      "label": "ríomhchláraitheoir",
+      "subtitle": "Slánuimhir matamaitic le bunathrú"
+    },
+    "scientific": {
+      "label": "Eolaíoch",
+      "subtitle": "Oibreoirí, feidhmeanna, agus tacaíocht slonn"
+    },
+    "settings": {
+      "label": "Socruithe",
+      "subtitle": "Faisnéis faoi chuma agus aipeanna"
+    },
+    "speed": {
+      "label": "Luas",
+      "subtitle": "Tiontaigh tomhais luais"
+    },
+    "standard": {
+      "label": "Caighdeánach",
+      "subtitle": "Meastóireacht láithreach clasaiceach"
+    },
+    "temperature": {
+      "label": "Teocht",
+      "subtitle": "Tiontaigh scálaí teochta"
+    },
+    "time": {
+      "label": "Am",
+      "subtitle": "Tiontaigh tomhais ama"
+    },
+    "volume": {
+      "label": "Imleabhar",
+      "subtitle": "Tiontaigh tomhais toirte"
+    },
+    "weight": {
+      "label": "Meáchan agus Mais",
+      "subtitle": "Tiontaigh aonaid meáchain agus maise"
+    }
+  },
+  "navigation": {
+    "aria": {
+      "closeNavigation": "Dún an nascleanúint",
+      "navigation": "Loingseoireacht",
+      "openNavigation": "Oscail nascleanúint"
+    },
+    "groups": {
+      "calculator": "Áireamhán",
+      "converter": "Tiontaire"
+    }
+  },
+  "programmer": {
+    "baseReadouts": "Bunléamha",
+    "bitFlipPanel": "Painéal smeach giotán",
+    "bitShift": "Aistriú giotán",
+    "bitTogglingKeypad": "Eochrach eochaircheap scoránaithe beagán",
+    "bitwise": "I mbeagán focal",
+    "fullKeypad": "Méarchlár iomlán",
+    "showBitView": "Taispeáin an t-amharc giotáin",
+    "showKeypad": "Taispeáin an eochaircheap",
+    "surfaceMode": "Mód an dromchla",
+    "wordSize": "Méid na bhfocal"
+  },
+  "settings": {
+    "about": {
+      "group": "Maidir le"
+    },
+    "appearance": {
+      "blue": "Gorm",
+      "dark": "Dorcha",
+      "green": "Glas",
+      "group": "chuma",
+      "light": "Solas",
+      "system": "Córas",
+      "themeDescription": "Roghnaigh scéim dathanna",
+      "themeTitle": "Téama"
+    },
+    "contribute": {
+      "link": "GitHub",
+      "prefix": "Cabhair le",
+      "suffix": "chun cabhrú leis an áireamhán seo a fheabhsú"
+    },
+    "feedback": "Seol aiseolas",
+    "language": {
+      "description": "Roghnaigh do rogha teanga",
+      "group": "Teanga",
+      "title": "Teanga"
+    },
+    "links": {
+      "license": "Ceadúnas MIT",
+      "readme": "LÉIGHINN",
+      "repository": "Stór tionscadail"
+    }
+  },
+  "units": {
+    "labels": {
+      "Acres": "Acra",
+      "Angstroms": "Angstroms",
+      "Atmospheres": "Atmaisféir",
+      "BTUs/minute": "BTUanna/nóiméad",
+      "Bars": "Barraí",
+      "Bits": "Giotán",
+      "British thermal units": "Aonaid theirmeacha na Breataine",
+      "Bytes": "bearta",
+      "CDs": "Dlúthdhioscaí",
+      "Carats": "Carats",
+      "Celsius": "Celsius",
+      "Centigrams": "Ceinteagraim",
+      "Centimeters": "Ceintiméadar",
+      "Centimeters per second": "Ceintiméadar in aghaidh an tsoicind",
+      "Cubic centimeters": "Ceintiméadar ciúbach",
+      "Cubic feet": "Cosa chiúbacha",
+      "Cubic inches": "Orlach ciúbach",
+      "Cubic meters": "Méadair chiúbacha",
+      "Cubic yards": "Slat ciúbach",
+      "Cups (US)": "Cupanna (SAM)",
+      "DVDs": "DVDanna",
+      "Days": "Laethanta",
+      "Decigrams": "Déiceagraim",
+      "Degrees": "Céimeanna",
+      "Dekagrams": "Déiceagraim",
+      "Electron volts": "Volta leictreacha",
+      "Exabits": "Scoileanna",
+      "Exabytes": "Exabytes",
+      "Exbibits": "Taispeántais",
+      "Exbibytes": "Taispeántas",
+      "Fahrenheit": "Fahrenheit",
+      "Feet": "Cosa",
+      "Feet per second": "Cosa sa soicind",
+      "Fluid ounces (UK)": "unsa sreabhán (RA)",
+      "Fluid ounces (US)": "unsa sreabhán (SAM)",
+      "Food calories": "Calraí bia",
+      "Foot-pounds": "Punna cois",
+      "Foot-pounds/minute": "Cois-punt/nóiméad",
+      "Gallons (UK)": "Gallóin (RA)",
+      "Gallons (US)": "Gallóin (SAM)",
+      "Gibibits": "Gibibits",
+      "Gibibytes": "Gibibytes",
+      "Gigabits": "Gigibheart",
+      "Gigabytes": "Gigibheart",
+      "Gradians": "Gradians",
+      "Grams": "Gram",
+      "Hectares": "heicteáir",
+      "Hectograms": "Hecteagram",
+      "Horsepower (US)": "Cumhacht (SAM)",
+      "Hours": "Uaireanta",
+      "Inches": "orlach",
+      "Joules": "Joules",
+      "Kelvin": "Kelvin",
+      "Kibibits": "Ciibítí",
+      "Kibibytes": "Cibíbheart",
+      "Kilobits": "Cileabar",
+      "Kilobytes": "Cileabairt",
+      "Kilograms": "Cileagram",
+      "Kilojoules": "Cileajoule",
+      "Kilometers": "Ciliméadar",
+      "Kilometers per hour": "Ciliméadar in aghaidh na huaire",
+      "Kilopascals": "Cileopascal",
+      "Kilowatt-hours": "Cileavata-uaire an chloig",
+      "Kilowatts": "Cileavata",
+      "Knots": "Snaidhmeanna",
+      "Liters": "Lítear",
+      "Long tons (UK)": "Tona fada (RA)",
+      "Mach": "Mach",
+      "Mebibits": "Mebibit",
+      "Mebibytes": "Mebibytes",
+      "Megabits": "Meigibheart",
+      "Megabytes": "Meigibheart",
+      "Meters": "Méadair",
+      "Meters per second": "Méadair in aghaidh an tsoicind",
+      "Metric tonnes": "Tonaí méadracha",
+      "Microns": "Miocrón",
+      "Microseconds": "Micreasoicindí",
+      "Miles": "Míle",
+      "Miles per hour": "Míle san uair",
+      "Milligrams": "Milleagram",
+      "Milliliters": "Millilítir",
+      "Millimeters": "milliméadar",
+      "Millimeters of mercury": "Millimeters of mercury",
+      "Milliseconds": "Milleasoicindí",
+      "Minutes": "Nóiméad",
+      "Nanometers": "Nanaiméadar",
+      "Nautical miles": "Na muirmhíle",
+      "Nibble": "Nablaigh",
+      "Ounces": "unsa",
+      "Pascals": "Pascals",
+      "Pebibits": "Piobóid",
+      "Pebibytes": "Peibít",
+      "Petabits": "Petabits",
+      "Petabytes": "Petabytes",
+      "Pints (UK)": "Pionta (RA)",
+      "Pints (US)": "Pionta (SAM)",
+      "Pounds": "Punta",
+      "Pounds per square inch": "Puntaí in aghaidh an orlach cearnach",
+      "Pyeong": "Pyeong",
+      "Quarts (UK)": "Ceathrúna (RA)",
+      "Quarts (US)": "Ceathrúna (SAM)",
+      "Radians": "Raidians",
+      "Seconds": "Soicindí",
+      "Short tons (US)": "Tona gearr (SAM)",
+      "Square centimeters": "Ceintiméadar cearnach",
+      "Square feet": "Cosa cearnacha",
+      "Square inches": "Orlach cearnach",
+      "Square kilometers": "Ciliméadar cearnach",
+      "Square meters": "méadar cearnach",
+      "Square miles": "Míle cearnach",
+      "Square millimeters": "milliméadar cearnach",
+      "Square yards": "Slat chearnacha",
+      "Stone": "Cloch",
+      "Tablespoons (UK)": "spúnóg bhoird (RA)",
+      "Tablespoons (US)": "spúnóg bhoird (SAM)",
+      "Teaspoons (UK)": "Lúine tae (RA)",
+      "Teaspoons (US)": "Luchtanna tae (SAM)",
+      "Tebibits": "Tebibits",
+      "Tebibytes": "Teibíteanna",
+      "Terabits": "Tearmaí",
+      "Terabytes": "Teiribít",
+      "Thermal calories": "Calraí teirmeacha",
+      "Watts": "Wataí",
+      "Weeks": "Seachtainí",
+      "Yards": "Slat",
+      "Years": "Blianta",
+      "Yobibits": "Yobibit",
+      "Yobibytes": "Yobibytes",
+      "Yottabits": "Yottabits",
+      "Yottabytes": "Yottabytes",
+      "Zebibits": "Zebibit",
+      "Zebibytes": "Séibít",
+      "Zetabits": "Zetabits",
+      "Zetabytes": "Zetabytes",
+      "bananas": "bananaí",
+      "bathtubs": "folcadáin",
+      "batteries": "ceallraí",
+      "castles": "caisleáin",
+      "coffee cups": "cupáin caife",
+      "elephants": "eilifint",
+      "floppy disks": "dioscaí flapacha",
+      "hands": "lámha",
+      "horses": "capall",
+      "jets": "scairde",
+      "jumbo jets": "scairdeanna jumbo",
+      "light bulbs": "bolgán solais",
+      "paperclips": "gearrthóga páipéir",
+      "sheets of paper": "bileog páipéir",
+      "slices of cake": "sliseanna cáca",
+      "snowflakes": "caithríní sneachta",
+      "soccer balls": "liathróidí sacair",
+      "soccer fields": "réimsí sacair",
+      "swimming pools": "linnte snámha",
+      "train engines": "innill traenach",
+      "turtles": "turtar",
+      "whales": "míolta móra"
+    }
+  }
+}

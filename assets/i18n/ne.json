@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "क्याल्कुलेटर",
+    "name": "क्याल्कुलेटर"
+  },
+  "common": {
+    "back": "पछाडि",
+    "backspace": "ब्याकस्पेस",
+    "closeSidePanel": "प्यानल बन्द गर्नुहोस्"
+  },
+  "converter": {
+    "unitConverter": "एकाइ कन्भर्टर",
+    "title": "एकाइ कन्भर्टरहरू",
+    "builtInCollections": "निर्मित सङ्ग्रहहरू",
+    "category": "श्रेणी",
+    "from": "बाट",
+    "to": "प्रति",
+    "inputValue": "रूपान्तरण गर्न मान",
+    "convertedValue": "रूपान्तरित मान",
+    "swapUnits": "एकाइहरू बदल्नुहोस्",
+    "keypad": "कन्भर्टर कीप्याड",
+    "unit": "एकाइ",
+    "unitOptions": "एकाइ विकल्पहरू",
+    "currency": {
+      "updatingRates": "दरहरू अद्यावधिक गर्दै...",
+      "updateRates": "दरहरू अद्यावधिक गर्नुहोस्",
+      "keypad": "मुद्रा किप्याड",
+      "currency": "मुद्रा",
+      "options": "मुद्रा विकल्पहरू",
+      "updated": "अद्यावधिक {timestamp}",
+      "status": {
+        "mockNote": "स्ट्यान्डअलोन एप डेमोको लागि नक्कली सन्दर्भ दरहरू।",
+        "fetching": "पछिल्लो USD सन्दर्भ दरहरू ल्याउँदै...",
+        "liveRatesLoaded": "लाइभ दरहरू ExchangeRate-API बाट लोड गरियो।",
+        "liveUpdateUnavailable": "लाइभ अपडेट उपलब्ध छैन। स्थानीय रूपमा डेमो दरहरू ताजा गरियो।"
+      }
+    },
+    "aboutEqualTo": "लगभग बराबर"
+  },
+  "errors": {
+    "invalidInput": "अमान्य इनपुट",
+    "cannotDivideByZero": "शून्यले भाग गर्न सकिँदैन",
+    "cannotModuloByZero": "शून्यले मोड्युलो गर्न सकिँदैन",
+    "invalidProgrammerOperation": "अमान्य सञ्चालन",
+    "overflow": "परिणाम धेरै ठूलो छ"
+  },
+  "date": {
+    "calculationMode": "गणना मोड",
+    "from": "बाट",
+    "to": "प्रति",
+    "results": {
+      "difference": "फरक",
+      "sameDates": "उही मितिहरू",
+      "date": "मिति"
+    },
+    "calculationModeOptions": "गणना मोड विकल्पहरू",
+    "mode": {
+      "difference": "भिन्नता",
+      "shift": "शिफ्ट"
+    },
+    "operation": "सञ्चालन",
+    "add": "थप्नुहोस्",
+    "subtract": "घटाउनुहोस्",
+    "years": "वर्षहरू",
+    "months": "महिनाहरू",
+    "days": "दिनहरू",
+    "chooseDate": "मिति छान्नुहोस्",
+    "previousMonth": "अघिल्लो महिना",
+    "nextMonth": "अर्को महिना",
+    "duration": {
+      "year": {
+        "one": "{count} वर्ष",
+        "other": "{count} वर्ष"
+      },
+      "month": {
+        "one": "{count} महिना",
+        "other": "{count} महिना"
+      },
+      "week": {
+        "one": "{count} हप्ता",
+        "other": "{count} हप्ता"
+      },
+      "day": {
+        "one": "{count} दिन",
+        "other": "{count} दिन"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from} र {to} बीचको भिन्नता",
+      "addTo": "{duration} मा {date} थप्नुहोस्",
+      "subtractFrom": "{date} बाट {duration} घटाउनुहोस्"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "हाइलाइट गरिएको अभिव्यक्ति जाँच गर्नुहोस्",
+    "enterExpression": "एउटा अभिव्यक्ति प्रविष्ट गर्नुहोस्",
+    "canvas": "ग्राफ क्यानभास",
+    "stopTracing": "ट्रेसिङ रोक्नुहोस्",
+    "startTracing": "ट्रेसिङ सुरु गर्नुहोस्",
+    "share": "साझेदारी गर्नुहोस्",
+    "options": "विकल्पहरू",
+    "zoomIn": "जुम इन गर्नुहोस्",
+    "zoomInLabel": "जुम इन गर्नुहोस्",
+    "zoomOut": "जुम आउट गर्नुहोस्",
+    "zoomOutLabel": "जुम आउट गर्नुहोस्",
+    "refreshViewAutomatically": "दृश्य स्वतः ताजा गर्नुहोस्",
+    "view": "हेर्नुहोस्",
+    "expressions": "अभिव्यक्ति",
+    "mobileView": "मोबाइल दृश्य",
+    "showGraph": "ग्राफ देखाउनुहोस्",
+    "showExpressions": "अभिव्यक्ति देखाउनुहोस्",
+    "backToFunctionList": "कार्य सूचीमा फर्कनुहोस्",
+    "window": "विन्डो",
+    "resetView": "दृश्य रिसेट गर्नुहोस्",
+    "units": "इकाइहरू",
+    "radians": "रेडियन",
+    "degrees": "डिग्री",
+    "gradians": "ग्रेडियनहरू",
+    "lineThickness": "रेखा मोटाई",
+    "theme": "विषयवस्तु",
+    "alwaysLight": "सधैं उज्यालो",
+    "matchAppTheme": "अनुप्रयोगको विषयवस्तु मिलाउनुहोस्",
+    "groups": {
+      "inequalities": "असमानताहरू",
+      "trigonometry": "त्रिकोनमिति",
+      "function": "प्रकार्य"
+    },
+    "functions": "कार्यहरू",
+    "showEquation": "समीकरण देखाउनुहोस्",
+    "hideEquation": "समीकरण लुकाउनुहोस्",
+    "lineOptions": "लाइन विकल्पहरू",
+    "color": "रङ",
+    "style": "शैली",
+    "analysis": {
+      "title": "विश्लेषण",
+      "domain": "डोमेन",
+      "range": "दायरा",
+      "xIntercept": "x-अवरोध",
+      "yIntercept": "y-अवरोध",
+      "minima": "मिनिमा",
+      "maxima": "म्याक्सिमा",
+      "inflectionPoints": "इन्फ्लेक्शन बिन्दुहरू",
+      "verticalAsymptotes": "ठाडो लक्षणहरू",
+      "horizontalAsymptotes": "क्षैतिज लक्षणहरू",
+      "obliqueAsymptotes": "Oblique asymptotes",
+      "parity": "समानता",
+      "period": "अवधि",
+      "monotonicity": "मोनोटोनिसिटी",
+      "domainNone": "कुनै डोमेन प्रतिबन्ध छैन",
+      "rangeNone": "कुनै दायरा प्रतिबन्धहरू छैनन्",
+      "xInterceptNone": "कुनै x-intercepts छैन",
+      "yInterceptNone": "कुनै y-अवरोधहरू छैनन्",
+      "minimaNone": "कुनै न्यूनतम छैन",
+      "maximaNone": "कुनै अधिकतम छैन",
+      "inflectionNone": "कुनै इन्फ्लेक्शन बिन्दुहरू छैनन्",
+      "verticalAsymptotesNone": "कुनै ठाडो लक्षणहरू छैनन्",
+      "horizontalAsymptotesNone": "कुनै तेर्सो लक्षणहरू छैनन्",
+      "obliqueAsymptotesNone": "कुनै ओब्लिक एसिम्प्टोट छैन",
+      "parityUnknown": "अज्ञात",
+      "parityOdd": "अनौठो",
+      "parityEven": "सम्म",
+      "parityNeither": "न त",
+      "periodicityUnknown": "अज्ञात",
+      "periodicityNotPeriodic": "आवधिक होइन",
+      "monotonicityConstant": "स्थिर",
+      "monotonicityIncreasing": "बढ्दै",
+      "monotonicityDecreasing": "घट्दै",
+      "monotonicityUnknown": "अज्ञात",
+      "monotonicityError": "निर्धारण गर्न सकिँदैन",
+      "featureTooComplexPlural": "विश्लेषण गर्न धेरै जटिल",
+      "analysisCouldNotBePerformed": "विश्लेषण गर्न सकिएन",
+      "analysisNotSupported": "विश्लेषण समर्थित छैन",
+      "variableIsNotX": "चर x होइन"
+    },
+    "plottingExpressions": "प्लटिङ {count} अभिव्यक्ति",
+    "xMin": "X-मिनेट",
+    "xMax": "X-अधिकतम",
+    "yMin": "Y-मिनट",
+    "yMax": "Y-अधिकतम",
+    "selectExpression": "अभिव्यक्ति चयन गर्नुहोस् {index}",
+    "expressionIndex": "अभिव्यक्ति {index}",
+    "analyzeFunction": "प्रकार्यको विश्लेषण गर्नुहोस्",
+    "changeEquationStyle": "समीकरण शैली परिवर्तन गर्नुहोस्",
+    "removeEquation": "समीकरण हटाउनुहोस्",
+    "lineStyle": {
+      "solid": "ठोस रेखा शैली",
+      "dash": "ड्यास लाइन शैली",
+      "dot": "डट लाइन शैली"
+    }
+  },
+  "history": {
+    "empty": "इतिहास खाली छ",
+    "clearAll": "सबै खाली गर्नुहोस्",
+    "clear": "इतिहास खाली गर्नुहोस्",
+    "title": "इतिहास",
+    "andMemory": "इतिहास र मेमोरी",
+    "aria": {
+      "historyPanel": "इतिहास प्यानल",
+      "historyAndMemoryPanel": "इतिहास र मेमोरी प्यानल"
+    },
+    "closeFlyout": "इतिहास बन्द गर्नुहोस्",
+    "openFlyout": "खुल्ला इतिहास"
+  },
+  "memory": {
+    "empty": "मेमोरी खाली छ",
+    "clearItem": "वस्तु खाली गर्नुहोस्",
+    "addCurrentValue": "हालको मान थप्नुहोस्",
+    "subtractCurrentValue": "हालको मान घटाउनुहोस्",
+    "clearAll": "सबै खाली गर्नुहोस्",
+    "clear": "मेमोरी खाली गर्नुहोस्",
+    "title": "मेमोरी",
+    "controls": "मेमोरी नियन्त्रणहरू",
+    "tooltips": {
+      "clearAll": "सबै मेमोरी खाली गर्नुहोस्",
+      "recall": "मेमोरीबाट सम्झनुहोस्",
+      "add": "मेमोरीमा थप्नुहोस्",
+      "subtract": "मेमोरीबाट घटाउनुहोस्",
+      "store": "मेमोरीमा भण्डार गर्नुहोस्"
+    },
+    "recallValue": "रिकल मेमोरी {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "नेभिगेसन",
+      "closeNavigation": "नेभिगेसन बन्द गर्नुहोस्",
+      "openNavigation": "नेभिगेसन खोल्नुहोस्"
+    },
+    "groups": {
+      "calculator": "क्याल्कुलेटर",
+      "converter": "कनभर्टर"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "बिट फ्लिप प्यानल",
+    "baseReadouts": "बेस रिडआउटहरू",
+    "surfaceMode": "सतह मोड",
+    "fullKeypad": "पूर्ण कीप्याड",
+    "showKeypad": "कीप्याड देखाउनुहोस्",
+    "bitTogglingKeypad": "बिट टगल गर्ने किप्याड",
+    "showBitView": "बिट दृश्य देखाउनुहोस्",
+    "wordSize": "शब्द आकार",
+    "bitwise": "बिटवाइज",
+    "bitShift": "बिट शिफ्ट"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "त्रिकोनमिति",
+      "function": "प्रकार्य",
+      "functionsAria": "कार्यहरू",
+      "trigonometricFunctionsAria": "त्रिकोनमितीय कार्यहरू",
+      "angleUnit": "कोण एकाइ {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "उपस्थिति",
+      "themeTitle": "विषयवस्तु",
+      "themeDescription": "रङ योजना छान्नुहोस्",
+      "light": "लाइट",
+      "dark": "अँध्यारो",
+      "blue": "निलो",
+      "green": "हरियो",
+      "system": "प्रणाली"
+    },
+    "language": {
+      "group": "भाषा",
+      "title": "भाषा",
+      "description": "आफ्नो मनपर्ने भाषा छान्नुहोस्"
+    },
+    "about": {
+      "group": "को बारेमा"
+    },
+    "feedback": "प्रतिक्रिया पठाउनुहोस्",
+    "contribute": {
+      "prefix": "योगदान दिनुहोस्",
+      "link": "GitHub",
+      "suffix": "यो क्याल्कुलेटर सुधार गर्न मद्दत गर्न"
+    },
+    "links": {
+      "repository": "परियोजना भण्डार",
+      "readme": "README",
+      "license": "MIT लाइसेन्स"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "मानक",
+      "subtitle": "क्लासिक तत्काल मूल्याङ्कन"
+    },
+    "scientific": {
+      "label": "वैज्ञानिक",
+      "subtitle": "अपरेटर, प्रकार्य, र अभिव्यक्ति समर्थन"
+    },
+    "graphing": {
+      "label": "ग्राफिङ",
+      "subtitle": "कार्टेसियन प्लेनमा साधारण अभिव्यक्ति प्लट गर्नुहोस्"
+    },
+    "programmer": {
+      "label": "प्रोग्रामर",
+      "subtitle": "आधार रूपान्तरणको साथ पूर्णांक गणित"
+    },
+    "date": {
+      "label": "मिति गणना",
+      "subtitle": "अवधि खोज्नुहोस् र मितिहरू परिवर्तन गर्नुहोस्"
+    },
+    "currency": {
+      "label": "मुद्रा",
+      "subtitle": "नक्कली विनिमय दरहरू रूपान्तरण गर्नुहोस्"
+    },
+    "volume": {
+      "label": "भोल्युम",
+      "subtitle": "भोल्युम मापनहरू रूपान्तरण गर्नुहोस्"
+    },
+    "length": {
+      "label": "लम्बाइ",
+      "subtitle": "दूरी र लम्बाइ एकाइहरू रूपान्तरण गर्नुहोस्"
+    },
+    "weight": {
+      "label": "तौल र भार",
+      "subtitle": "तौल र द्रव्यमान एकाइहरू रूपान्तरण गर्नुहोस्"
+    },
+    "temperature": {
+      "label": "तापमान",
+      "subtitle": "तापक्रम मापन रूपान्तरण गर्नुहोस्"
+    },
+    "energy": {
+      "label": "ऊर्जा",
+      "subtitle": "ऊर्जा मापन रूपान्तरण गर्नुहोस्"
+    },
+    "area": {
+      "label": "क्षेत्र",
+      "subtitle": "क्षेत्र मापन रूपान्तरण गर्नुहोस्"
+    },
+    "speed": {
+      "label": "गति",
+      "subtitle": "गति मापनहरू रूपान्तरण गर्नुहोस्"
+    },
+    "time": {
+      "label": "समय",
+      "subtitle": "समय मापनहरू रूपान्तरण गर्नुहोस्"
+    },
+    "power": {
+      "label": "शक्ति",
+      "subtitle": "शक्ति मापन रूपान्तरण"
+    },
+    "data": {
+      "label": "डेटा",
+      "subtitle": "डिजिटल भण्डारण एकाइहरू रूपान्तरण गर्नुहोस्"
+    },
+    "pressure": {
+      "label": "दबाव",
+      "subtitle": "दबाव एकाइहरू रूपान्तरण गर्नुहोस्"
+    },
+    "angle": {
+      "label": "कोण",
+      "subtitle": "कोण मापन रूपान्तरण गर्नुहोस्"
+    },
+    "settings": {
+      "label": "सेटिङहरू",
+      "subtitle": "उपस्थिति र एप जानकारी"
+    }
+  },
+  "categories": {
+    "Currency": "मुद्रा",
+    "Volume": "भोल्युम",
+    "Length": "लम्बाइ",
+    "Mass": "मास",
+    "Temperature": "तापमान",
+    "Energy": "ऊर्जा",
+    "Area": "क्षेत्र",
+    "Speed": "गति",
+    "Time": "समय",
+    "Power": "शक्ति",
+    "Data": "डेटा",
+    "Pressure": "दबाव",
+    "Angle": "कोण"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "न्यानोमिटर",
+      "Microns": "माइक्रोन्स",
+      "Millimeters": "मिलिमिटर",
+      "Centimeters": "सेन्टिमिटर",
+      "Meters": "मिटर",
+      "Kilometers": "किलोमिटर",
+      "Inches": "इन्च",
+      "Feet": "फिट",
+      "Yards": "यार्ड",
+      "Miles": "माइल",
+      "Nautical miles": "नाटिकल माइल",
+      "paperclips": "पेपरक्लिपहरू",
+      "hands": "हातहरू",
+      "jumbo jets": "जम्बो जेटहरू",
+      "Carats": "क्यारेट",
+      "Milligrams": "मिलीग्राम",
+      "Centigrams": "सेन्टिग्राम",
+      "Decigrams": "डेसिग्राम",
+      "Grams": "ग्राम",
+      "Dekagrams": "डेकाग्राम",
+      "Hectograms": "हेक्टोग्राम",
+      "Kilograms": "किलोग्राम",
+      "Metric tonnes": "मेट्रिक टन",
+      "Ounces": "औन्स",
+      "Pounds": "पाउन्ड",
+      "Stone": "ढुङ्गा",
+      "Short tons (US)": "सर्ट टन (संयुक्त राज्य अमेरिका)",
+      "Long tons (UK)": "लामो टन (युके)",
+      "snowflakes": "हिउँका कणहरू",
+      "soccer balls": "सकर बलहरू",
+      "elephants": "हात्तीहरू",
+      "whales": "ह्वेल",
+      "Celsius": "सेल्सियस",
+      "Fahrenheit": "फरेनहाइट",
+      "Kelvin": "केल्भिन",
+      "Milliliters": "मिलिलिटर",
+      "Cubic centimeters": "घन सेन्टिमिटर",
+      "Liters": "लिटर",
+      "Cubic meters": "घन मिटर",
+      "Teaspoons (US)": "चम्चा (संयुक्त राज्य अमेरिका)",
+      "Tablespoons (US)": "टेबलस्पून (संयुक्त राज्य अमेरिका)",
+      "Fluid ounces (US)": "फ्लुइड औंस (US)",
+      "Cups (US)": "कप (संयुक्त राज्य अमेरिका)",
+      "Pints (US)": "Pints (US)",
+      "Quarts (US)": "क्वार्ट्स (संयुक्त राज्य अमेरिका)",
+      "Gallons (US)": "ग्यालन (संयुक्त राज्य अमेरिका)",
+      "Cubic inches": "घन इन्च",
+      "Cubic feet": "घन फिट",
+      "Cubic yards": "क्युबिक यार्ड",
+      "Teaspoons (UK)": "चम्चा (युके)",
+      "Tablespoons (UK)": "टेबलस्पून (युके)",
+      "Fluid ounces (UK)": "फ्लुइड औंस (युके)",
+      "Pints (UK)": "Pints (युके)",
+      "Quarts (UK)": "क्वार्ट्स (युके)",
+      "Gallons (UK)": "ग्यालन (युके)",
+      "coffee cups": "कफी कप",
+      "bathtubs": "बाथटबहरू",
+      "swimming pools": "स्विमिङ पूलहरू",
+      "Square millimeters": "वर्ग मिलिमिटर",
+      "Square centimeters": "वर्ग सेन्टिमिटर",
+      "Square meters": "वर्ग मिटर",
+      "Hectares": "हेक्टर",
+      "Square kilometers": "वर्ग किलोमिटर",
+      "Square inches": "वर्ग इन्च",
+      "Square feet": "वर्ग फुट",
+      "Square yards": "वर्ग गज",
+      "Acres": "एकड",
+      "Square miles": "वर्ग माइल",
+      "sheets of paper": "कागजका पानाहरू",
+      "soccer fields": "फुटबल क्षेत्रहरू",
+      "castles": "किल्लाहरू",
+      "Pyeong": "प्योङ",
+      "Centimeters per second": "सेन्टिमिटर प्रति सेकेन्ड",
+      "Meters per second": "मिटर प्रति सेकेन्ड",
+      "Kilometers per hour": "किलोमिटर प्रति घण्टा",
+      "Feet per second": "फिट प्रति सेकेन्ड",
+      "Miles per hour": "माइल प्रति घण्टा",
+      "Knots": "गाँठो",
+      "Mach": "म्याच",
+      "turtles": "कछुवाहरू",
+      "horses": "घोडाहरू",
+      "jets": "जेट्स",
+      "Watts": "वाट",
+      "Kilowatts": "किलोवाट",
+      "Horsepower (US)": "अश्वशक्ति (US)",
+      "Foot-pounds/minute": "फुट-पाउन्ड/मिनेट",
+      "BTUs/minute": "BTUs/मिनेट",
+      "light bulbs": "बत्तीका बल्बहरू",
+      "train engines": "रेल इन्जिनहरू",
+      "Thermal calories": "थर्मल क्यालोरीहरू",
+      "Food calories": "खानाको क्यालोरी",
+      "British thermal units": "ब्रिटिस थर्मल एकाइहरू",
+      "Kilojoules": "किलोजुल",
+      "Kilowatt-hours": "किलोवाट-घन्टा",
+      "Electron volts": "इलेक्ट्रोन भोल्ट",
+      "Joules": "जुल्स",
+      "Foot-pounds": "फुट-पाउन्ड",
+      "batteries": "ब्याट्रीहरू",
+      "bananas": "केरा",
+      "slices of cake": "केकका टुक्राहरू",
+      "Bits": "बिट्स",
+      "Nibble": "निबल",
+      "Bytes": "बाइटहरू",
+      "Kilobits": "किलोबिट्स",
+      "Kibibits": "किबिबिट्स",
+      "Kilobytes": "किलोबाइट",
+      "Kibibytes": "किबिबाइट",
+      "Megabits": "मेगाबिट्स",
+      "Mebibits": "मेबिबिट्स",
+      "Megabytes": "मेगाबाइट",
+      "Mebibytes": "मेबिबाइट्स",
+      "Gigabits": "गीगाबिट्स",
+      "Gibibits": "गिबिबिट्स",
+      "Gigabytes": "गीगाबाइट",
+      "Gibibytes": "Gibibytes",
+      "Terabits": "टेराबिटहरू",
+      "Tebibits": "टेबिबिट्स",
+      "Terabytes": "टेराबाइट",
+      "Tebibytes": "टेबिबाइट्स",
+      "Petabits": "पेटाबिट्स",
+      "Pebibits": "पेबिबिट्स",
+      "Petabytes": "पेटाबाइट्स",
+      "Pebibytes": "पेबिबाइट्स",
+      "Exabits": "परीक्षणहरू",
+      "Exbibits": "प्रदर्शनीहरू",
+      "Exabytes": "एक्साबाइट्स",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "जेटाबिट्स",
+      "Zebibits": "जेबिबिट्स",
+      "Zetabytes": "जेटाबाइट्स",
+      "Zebibytes": "जेबिबाइट्स",
+      "Yottabits": "योटाबिट्स",
+      "Yobibits": "योबिबिट्स",
+      "Yottabytes": "योटाबाइट्स",
+      "Yobibytes": "योबिबाइट्स",
+      "floppy disks": "फ्लपी डिस्क",
+      "CDs": "CDs",
+      "DVDs": "DVD हरू",
+      "Atmospheres": "वातावरण",
+      "Bars": "बारहरू",
+      "Kilopascals": "किलोपास्कल",
+      "Millimeters of mercury": "पाराको मिलिमिटर",
+      "Pascals": "पास्कल",
+      "Pounds per square inch": "पाउन्ड प्रति वर्ग इन्च",
+      "Degrees": "डिग्री",
+      "Radians": "रेडियन",
+      "Gradians": "ग्रेडियनहरू",
+      "Microseconds": "माइक्रोसेकेन्ड",
+      "Milliseconds": "मिलिसेकेन्ड",
+      "Seconds": "सेकेन्ड",
+      "Minutes": "मिनेटहरू",
+      "Hours": "घन्टा",
+      "Days": "दिनहरू",
+      "Weeks": "हप्ताहरू",
+      "Years": "वर्षहरू"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "अमेरिकी डलर",
+      "Euro": "यूरो",
+      "British Pound": "ब्रिटिस पाउण्ड",
+      "Japanese Yen": "जापानी येन",
+      "Canadian Dollar": "क्यानेडियन डलर",
+      "Australian Dollar": "अस्ट्रेलियन डलर",
+      "Brazilian Real": "ब्राजिलियन रियल",
+      "Chilean Peso": "चिली पेसो",
+      "Chinese Yuan": "चिनियाँ युआन",
+      "Colombian Peso": "कोलम्बियन पेसो",
+      "Danish Krone": "डेनिस क्रोन",
+      "Egyptian Pound": "इजिप्टियन पाउन्ड",
+      "Hong Kong Dollar": "हङकङ डलर",
+      "Indian Rupee": "भारतीय रुपैयाँ",
+      "Kenyan Shilling": "केन्याली शिलिंग",
+      "Mexican Peso": "मेक्सिकन पेसो",
+      "Nigerian Naira": "नाइजेरियन नाइरा",
+      "New Zealand Dollar": "न्युजिल्याण्ड डलर",
+      "Norwegian Krone": "नर्वेजियन क्रोन",
+      "Philippine Piso": "फिलिपिन्स पिसो",
+      "Polish Zloty": "पोलिस ज्लोटी",
+      "Qatari Riyal": "कतारी रियाल",
+      "Saudi Riyal": "साउदी रियाल",
+      "Singapore Dollar": "सिङ्गापुर डलर",
+      "South African Rand": "दक्षिण अफ्रिकी र्यान्ड",
+      "South Korean Won": "दक्षिण कोरियाली वोन",
+      "Swedish Krona": "स्वीडिश क्रोना",
+      "Swiss Franc": "स्विस फ्रैंक",
+      "Thai Baht": "थाई बात",
+      "Turkish Lira": "टर्किस लिरा",
+      "Turkmenistani Manat": "तुर्कमेनिस्तानी मानत",
+      "Ugandan Shilling": "युगान्डा शिलिंग",
+      "Ukrainian Hryvnia": "युक्रेनी रिभनिया",
+      "UAE Dirham": "UAE दिर्हाम",
+      "Uruguayan Peso": "उरुग्वेयन पेसो",
+      "Uzbekistani Som": "उज्बेकिस्तानी सोम",
+      "Vanuatu Vatu": "भानुअतु भातु",
+      "Venezuelan Bolivar Soberano": "भेनेजुएला बोलिभर सोबेरानो",
+      "Vietnamese Dong": "भियतनामी डोङ",
+      "Yemeni Rial": "यमनी रियाल"
+    },
+    "labels": {
+      "United States - Dollar": "संयुक्त राज्य अमेरिका - डलर",
+      "Europe - Euro": "युरोप - यूरो",
+      "United Kingdom - Pound": "युनाइटेड किंगडम - पाउन्ड",
+      "Japan - Yen": "जापान - येन",
+      "Canada - Dollar": "क्यानाडा - डलर",
+      "Australia - Dollar": "अष्ट्रेलिया - डलर",
+      "Brazil - Real": "ब्राजिल - रियल",
+      "Chile - Peso": "चिली - पेसो",
+      "China - Yuan Renminbi": "चीन - युआन रेन्मिन्बी",
+      "Colombia - Peso": "कोलम्बिया - पेसो",
+      "Denmark - Krone": "डेनमार्क - क्रोन",
+      "Egypt - Pound": "इजिप्ट - पाउन्ड",
+      "Hong Kong SAR - Dollar": "हङकङ SAR - डलर",
+      "India - Rupee": "भारत - रुपैयाँ",
+      "Kenya - Shilling": "केन्या - शिलिंग",
+      "Mexico - Peso": "मेक्सिको - पेसो",
+      "Nigeria - Naira": "नाइजेरिया - नायरा",
+      "New Zealand - Dollar": "न्युजिल्याण्ड - डलर",
+      "Norway - Krone": "नर्वे - क्रोन",
+      "Philippines - Piso": "फिलिपिन्स - पिसो",
+      "Poland - Zloty": "पोल्याण्ड - ज्लोटी",
+      "Qatar - Riyal": "कतार - रियाल",
+      "Saudi Arabia - Riyal": "साउदी अरब - रियाल",
+      "Singapore - Dollar": "सिंगापुर - डलर",
+      "South Africa - Rand": "दक्षिण अफ्रिका - रान्ड",
+      "South Korea - Won": "दक्षिण कोरिया - जित्यो",
+      "Sweden - Krona": "स्वीडेन - क्रोना",
+      "Switzerland - Franc": "स्विजरल्याण्ड - फ्रान्क",
+      "Thailand - Baht": "थाइल्याण्ड - बात",
+      "Turkey - Lira": "टर्की - लिरा",
+      "Turkmenistan - Manat": "तुर्कमेनिस्तान - मनाट",
+      "Uganda - Shilling": "युगान्डा - शिलिंग",
+      "Ukraine - Hryvnia": "युक्रेन - रिभनिया",
+      "United Arab Emirates - Dirham": "संयुक्त अरब इमिरेट्स - दिर्हाम",
+      "Uruguay - Peso": "उरुग्वे - पेसो",
+      "Uzbekistan - Som": "उज्बेकिस्तान - सोम",
+      "Vanuatu - Vatu": "भानुअतु - Vatu",
+      "Venezuela - Bolívar Soberano": "भेनेजुएला - बोलिभर सोबेरानो",
+      "Vietnam - Dong": "भियतनाम - डोङ",
+      "Yemen - Rial": "यमन - रियाल"
+    }
+  }
+}

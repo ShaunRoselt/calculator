@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kalkulator",
+    "name": "Kalkulator"
+  },
+  "common": {
+    "back": "Natrag",
+    "backspace": "Povratnica",
+    "closeSidePanel": "Zatvori ploču"
+  },
+  "converter": {
+    "unitConverter": "Konvertor jedinica",
+    "title": "Pretvarači jedinica",
+    "builtInCollections": "Ugrađene zbirke",
+    "category": "Kategorija",
+    "from": "Od",
+    "to": "Za",
+    "inputValue": "Vrijednost za pretvorbu",
+    "convertedValue": "Konvertirana vrijednost",
+    "swapUnits": "Zamijenite jedinice",
+    "keypad": "Tipkovnica pretvarača",
+    "unit": "jedinica",
+    "unitOptions": "opcije jedinice",
+    "currency": {
+      "updatingRates": "Ažuriranje stopa…",
+      "updateRates": "Stope ažuriranja",
+      "keypad": "Valutna tipkovnica",
+      "currency": "valuta",
+      "options": "valutne opcije",
+      "updated": "Ažurirano {timestamp}",
+      "status": {
+        "mockNote": "Lažne referentne stope za demonstraciju samostalne aplikacije.",
+        "fetching": "Dohvaćanje najnovijih referentnih tečajeva USD...",
+        "liveRatesLoaded": "Tečajevi uživo učitani iz ExchangeRate-API-ja.",
+        "liveUpdateUnavailable": "Ažuriranje uživo nije dostupno. Osvježene demo cijene lokalno."
+      }
+    },
+    "aboutEqualTo": "Otprilike jednako"
+  },
+  "errors": {
+    "invalidInput": "Nevažeći unos",
+    "cannotDivideByZero": "Nije moguće podijeliti s nulom",
+    "cannotModuloByZero": "Ne može modulo za nulu",
+    "invalidProgrammerOperation": "Nevažeća operacija",
+    "overflow": "Rezultat je prevelik"
+  },
+  "date": {
+    "calculationMode": "Način izračuna",
+    "from": "Od",
+    "to": "Za",
+    "results": {
+      "difference": "Razlika",
+      "sameDates": "Isti datumi",
+      "date": "Datum"
+    },
+    "calculationModeOptions": "Opcije načina izračuna",
+    "mode": {
+      "difference": "Razlika",
+      "shift": "Pomak"
+    },
+    "operation": "Operacija",
+    "add": "Dodaj",
+    "subtract": "Oduzmi",
+    "years": "Godine",
+    "months": "Mjeseci",
+    "days": "Dani",
+    "chooseDate": "Odaberite datum",
+    "previousMonth": "Prethodni mjesec",
+    "nextMonth": "Sljedeći mjesec",
+    "duration": {
+      "year": {
+        "one": "{count} godina",
+        "other": "{count} godina"
+      },
+      "month": {
+        "one": "{count} mjesec",
+        "other": "{count} mjeseci"
+      },
+      "week": {
+        "one": "{count} tjedan",
+        "other": "{count} tjedana"
+      },
+      "day": {
+        "one": "{count} dan",
+        "other": "{count} dana"
+      }
+    },
+    "history": {
+      "differenceBetween": "Razlika između {from} i {to}",
+      "addTo": "Dodajte {duration} u {date}",
+      "subtractFrom": "Oduzmi {duration} od {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Provjerite istaknuti izraz",
+    "enterExpression": "Unesite izraz",
+    "canvas": "Platno s grafikonom",
+    "stopTracing": "Zaustavi praćenje",
+    "startTracing": "Pokreni praćenje",
+    "share": "Podijeli",
+    "options": "Opcije",
+    "zoomIn": "Uvećaj",
+    "zoomInLabel": "Uvećaj",
+    "zoomOut": "Smanji",
+    "zoomOutLabel": "Smanji",
+    "refreshViewAutomatically": "Automatski osvježi prikaz",
+    "view": "Pogledaj",
+    "expressions": "Izrazi",
+    "mobileView": "Mobilni prikaz",
+    "showGraph": "Prikaži grafikon",
+    "showExpressions": "Prikaži izraze",
+    "backToFunctionList": "Natrag na popis funkcija",
+    "window": "Prozor",
+    "resetView": "Poništi prikaz",
+    "units": "Jedinice",
+    "radians": "Radijani",
+    "degrees": "stupnjevi",
+    "gradians": "Gradijani",
+    "lineThickness": "Debljina linije",
+    "theme": "Tema",
+    "alwaysLight": "Uvijek svijetli",
+    "matchAppTheme": "Uparite temu aplikacije",
+    "groups": {
+      "inequalities": "Nejednakosti",
+      "trigonometry": "Trigonometrija",
+      "function": "Funkcija"
+    },
+    "functions": "Funkcije",
+    "showEquation": "Prikaži jednadžbu",
+    "hideEquation": "Sakrij jednadžbu",
+    "lineOptions": "Opcije linije",
+    "color": "Boja",
+    "style": "Stil",
+    "analysis": {
+      "title": "Analiza",
+      "domain": "Domena",
+      "range": "Raspon",
+      "xIntercept": "x-odsječak",
+      "yIntercept": "y-odsječak",
+      "minima": "Minimum",
+      "maxima": "Maksimalno",
+      "inflectionPoints": "Točke infleksije",
+      "verticalAsymptotes": "Okomite asimptote",
+      "horizontalAsymptotes": "Horizontalne asimptote",
+      "obliqueAsymptotes": "Kose asimptote",
+      "parity": "Paritet",
+      "period": "Točka",
+      "monotonicity": "Monotonost",
+      "domainNone": "Nema ograničenja domene",
+      "rangeNone": "Nema ograničenja raspona",
+      "xInterceptNone": "Nema x-presretanja",
+      "yInterceptNone": "Nema y-presjecanja",
+      "minimaNone": "Nema minimuma",
+      "maximaNone": "Nema maksimuma",
+      "inflectionNone": "Nema točaka infleksije",
+      "verticalAsymptotesNone": "Nema vertikalnih asimptota",
+      "horizontalAsymptotesNone": "Nema horizontalnih asimptota",
+      "obliqueAsymptotesNone": "Nema kosih asimptota",
+      "parityUnknown": "Nepoznato",
+      "parityOdd": "Neparno",
+      "parityEven": "Ujednačeno",
+      "parityNeither": "Nijedno",
+      "periodicityUnknown": "Nepoznato",
+      "periodicityNotPeriodic": "Nije periodično",
+      "monotonicityConstant": "Konstanta",
+      "monotonicityIncreasing": "U porastu",
+      "monotonicityDecreasing": "Smanjuje se",
+      "monotonicityUnknown": "Nepoznato",
+      "monotonicityError": "Ne mogu odrediti",
+      "featureTooComplexPlural": "Presloženo za analizu",
+      "analysisCouldNotBePerformed": "Analiza se nije mogla izvršiti",
+      "analysisNotSupported": "Analiza nije podržana",
+      "variableIsNotX": "Varijabla nije x"
+    },
+    "plottingExpressions": "Pravljenje {count} izraza",
+    "xMin": "X min",
+    "xMax": "X-Max",
+    "yMin": "Min. Y",
+    "yMax": "Y-maks",
+    "selectExpression": "Odaberi izraz {index}",
+    "expressionIndex": "Izraz {index}",
+    "analyzeFunction": "Funkcija analize",
+    "changeEquationStyle": "Promijeni stil jednadžbe",
+    "removeEquation": "Ukloni jednadžbu",
+    "lineStyle": {
+      "solid": "Stil pune linije",
+      "dash": "Stil crta crtice",
+      "dot": "Stil točkaste linije"
+    }
+  },
+  "history": {
+    "empty": "Povijest je prazna",
+    "clearAll": "Izbriši sve",
+    "clear": "Izbriši povijest",
+    "title": "Povijest",
+    "andMemory": "Povijest i pamćenje",
+    "aria": {
+      "historyPanel": "Ploča povijesti",
+      "historyAndMemoryPanel": "Ploča Povijest i Memorija"
+    },
+    "closeFlyout": "Zatvori povijest",
+    "openFlyout": "Otvori povijest"
+  },
+  "memory": {
+    "empty": "Memorija je prazna",
+    "clearItem": "Izbriši stavku",
+    "addCurrentValue": "Dodaj trenutnu vrijednost",
+    "subtractCurrentValue": "Oduzmi trenutnu vrijednost",
+    "clearAll": "Izbriši sve",
+    "clear": "Očisti memoriju",
+    "title": "Memorija",
+    "controls": "Kontrole memorije",
+    "tooltips": {
+      "clearAll": "Izbriši svu memoriju",
+      "recall": "Pozovi iz sjećanja",
+      "add": "Dodaj u memoriju",
+      "subtract": "Oduzimanje iz memorije",
+      "store": "Pohrani u memoriju"
+    },
+    "recallValue": "Pozovi memoriju {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigacija",
+      "closeNavigation": "Zatvori navigaciju",
+      "openNavigation": "Otvori navigaciju"
+    },
+    "groups": {
+      "calculator": "Kalkulator",
+      "converter": "Pretvornik"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit flip ploča",
+    "baseReadouts": "Osnovna očitanja",
+    "surfaceMode": "Površinski način",
+    "fullKeypad": "Puna tipkovnica",
+    "showKeypad": "Prikaži tipkovnicu",
+    "bitTogglingKeypad": "Tipkovnica za prebacivanje bitova",
+    "showBitView": "Prikaži bitni prikaz",
+    "wordSize": "Veličina riječi",
+    "bitwise": "Po bitovima",
+    "bitShift": "Pomak bita"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometrija",
+      "function": "Funkcija",
+      "functionsAria": "Funkcije",
+      "trigonometricFunctionsAria": "Trigonometrijske funkcije",
+      "angleUnit": "Jedinica kuta {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Izgled",
+      "themeTitle": "Tema",
+      "themeDescription": "Odaberite shemu boja",
+      "light": "Svjetlo",
+      "dark": "Tamno",
+      "blue": "Plava",
+      "green": "Zelena",
+      "system": "Sustav"
+    },
+    "language": {
+      "group": "Jezik",
+      "title": "Jezik",
+      "description": "Odaberite željeni jezik"
+    },
+    "about": {
+      "group": "O"
+    },
+    "feedback": "Pošalji povratne informacije",
+    "contribute": {
+      "prefix": "Doprinesite na",
+      "link": "GitHub",
+      "suffix": "kako biste pomogli poboljšati ovaj kalkulator"
+    },
+    "links": {
+      "repository": "Repozitorij projekta",
+      "readme": "PROČITAJ ME",
+      "license": "MIT licenca"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standardno",
+      "subtitle": "Klasična neposredna evaluacija"
+    },
+    "scientific": {
+      "label": "Znanstveno",
+      "subtitle": "Operatori, funkcije i podrška za izraze"
+    },
+    "graphing": {
+      "label": "Izrada grafikona",
+      "subtitle": "Nacrtajte jednostavan izraz na kartezijanskoj ravnini"
+    },
+    "programmer": {
+      "label": "Programer",
+      "subtitle": "Cjelobrojna matematika s osnovnom konverzijom"
+    },
+    "date": {
+      "label": "Izračun datuma",
+      "subtitle": "Pronađi trajanje i datume smjene"
+    },
+    "currency": {
+      "label": "Valuta",
+      "subtitle": "Pretvorite lažne tečajeve"
+    },
+    "volume": {
+      "label": "Glasnoća",
+      "subtitle": "Pretvorite mjere volumena"
+    },
+    "length": {
+      "label": "Duljina",
+      "subtitle": "Pretvorite jedinice za duljinu i udaljenost"
+    },
+    "weight": {
+      "label": "Težina i masa",
+      "subtitle": "Pretvorite jedinice za težinu i masu"
+    },
+    "temperature": {
+      "label": "Temperatura",
+      "subtitle": "Pretvorite temperaturne ljestvice"
+    },
+    "energy": {
+      "label": "Energija",
+      "subtitle": "Pretvorite mjerenja energije"
+    },
+    "area": {
+      "label": "Područje",
+      "subtitle": "Pretvori mjere površine"
+    },
+    "speed": {
+      "label": "Brzina",
+      "subtitle": "Pretvori mjerenja brzine"
+    },
+    "time": {
+      "label": "Vrijeme",
+      "subtitle": "Pretvorite mjerenje vremena"
+    },
+    "power": {
+      "label": "Snaga",
+      "subtitle": "Pretvori mjerenja snage"
+    },
+    "data": {
+      "label": "Podaci",
+      "subtitle": "Pretvorite digitalne jedinice za pohranu"
+    },
+    "pressure": {
+      "label": "Tlak",
+      "subtitle": "Pretvori jedinice tlaka"
+    },
+    "angle": {
+      "label": "Kut",
+      "subtitle": "Pretvaranje mjerenja kuta"
+    },
+    "settings": {
+      "label": "Postavke",
+      "subtitle": "Informacije o izgledu i aplikaciji"
+    }
+  },
+  "categories": {
+    "Currency": "Valuta",
+    "Volume": "Glasnoća",
+    "Length": "Duljina",
+    "Mass": "Masa",
+    "Temperature": "Temperatura",
+    "Energy": "Energija",
+    "Area": "Područje",
+    "Speed": "Brzina",
+    "Time": "Vrijeme",
+    "Power": "Snaga",
+    "Data": "Podaci",
+    "Pressure": "Tlak",
+    "Angle": "Kut"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstrom",
+      "Nanometers": "Nanometri",
+      "Microns": "Mikroni",
+      "Millimeters": "Milimetri",
+      "Centimeters": "Centimetri",
+      "Meters": "Metri",
+      "Kilometers": "Kilometri",
+      "Inches": "Inča",
+      "Feet": "Stope",
+      "Yards": "Jardi",
+      "Miles": "Milje",
+      "Nautical miles": "Nautičke milje",
+      "paperclips": "spajalice",
+      "hands": "ruke",
+      "jumbo jets": "jumbo jetovi",
+      "Carats": "Karati",
+      "Milligrams": "Miligrama",
+      "Centigrams": "Centigrami",
+      "Decigrams": "Decigrami",
+      "Grams": "Grama",
+      "Dekagrams": "Dekagrami",
+      "Hectograms": "Hektogrami",
+      "Kilograms": "Kilogrami",
+      "Metric tonnes": "Metričke tone",
+      "Ounces": "Unce",
+      "Pounds": "Funta",
+      "Stone": "Kamen",
+      "Short tons (US)": "Kratke tone (SAD)",
+      "Long tons (UK)": "Duge tone (UK)",
+      "snowflakes": "pahuljice",
+      "soccer balls": "nogometne lopte",
+      "elephants": "slonovi",
+      "whales": "kitovi",
+      "Celsius": "Celzijevi",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mililitara",
+      "Cubic centimeters": "Kubični centimetri",
+      "Liters": "Litre",
+      "Cubic meters": "Kubični metri",
+      "Teaspoons (US)": "Žličice (SAD)",
+      "Tablespoons (US)": "Žlice (SAD)",
+      "Fluid ounces (US)": "Tekuće unce (SAD)",
+      "Cups (US)": "Kupovi (SAD)",
+      "Pints (US)": "pinte (SAD)",
+      "Quarts (US)": "Kvarti (SAD)",
+      "Gallons (US)": "Galoni (SAD)",
+      "Cubic inches": "Kubični inči",
+      "Cubic feet": "Kubične stope",
+      "Cubic yards": "Kubični jardi",
+      "Teaspoons (UK)": "Žličice (UK)",
+      "Tablespoons (UK)": "Žlice (UK)",
+      "Fluid ounces (UK)": "Tekuće unce (UK)",
+      "Pints (UK)": "pinte (UK)",
+      "Quarts (UK)": "Kvarti (UK)",
+      "Gallons (UK)": "Galoni (UK)",
+      "coffee cups": "šalice za kavu",
+      "bathtubs": "kade",
+      "swimming pools": "bazeni",
+      "Square millimeters": "Kvadratni milimetri",
+      "Square centimeters": "Kvadratni centimetri",
+      "Square meters": "Kvadratni metri",
+      "Hectares": "Hektara",
+      "Square kilometers": "Kvadratni kilometri",
+      "Square inches": "Kvadratni inči",
+      "Square feet": "Kvadratne stope",
+      "Square yards": "Kvadratni jardi",
+      "Acres": "Akri",
+      "Square miles": "Kvadratne milje",
+      "sheets of paper": "listova papira",
+      "soccer fields": "nogometna igrališta",
+      "castles": "dvorci",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Centimetri u sekundi",
+      "Meters per second": "Metra u sekundi",
+      "Kilometers per hour": "Kilometara na sat",
+      "Feet per second": "Stope u sekundi",
+      "Miles per hour": "Milje na sat",
+      "Knots": "Čvorovi",
+      "Mach": "Mah",
+      "turtles": "kornjače",
+      "horses": "konji",
+      "jets": "mlaznice",
+      "Watts": "Wati",
+      "Kilowatts": "Kilovati",
+      "Horsepower (US)": "Konjske snage (SAD)",
+      "Foot-pounds/minute": "Foot-pounds/minuta",
+      "BTUs/minute": "BTUs/minuta",
+      "light bulbs": "žarulje",
+      "train engines": "strojevi vlakova",
+      "Thermal calories": "Termičke kalorije",
+      "Food calories": "Kalorije hrane",
+      "British thermal units": "Britanske toplinske jedinice",
+      "Kilojoules": "Kilodžuli",
+      "Kilowatt-hours": "Kilovat-sati",
+      "Electron volts": "Elektronvolti",
+      "Joules": "Juli",
+      "Foot-pounds": "Foot-pounds",
+      "batteries": "baterije",
+      "bananas": "banane",
+      "slices of cake": "kriške torte",
+      "Bits": "Bitovi",
+      "Nibble": "Grickanje",
+      "Bytes": "Bajtovi",
+      "Kilobits": "Kilobiti",
+      "Kibibits": "Kibibiti",
+      "Kilobytes": "Kilobajti",
+      "Kibibytes": "Kibibajti",
+      "Megabits": "Megabiti",
+      "Mebibits": "Mebibiti",
+      "Megabytes": "Megabajti",
+      "Mebibytes": "Mebibajti",
+      "Gigabits": "Gigabita",
+      "Gibibits": "Gibibiti",
+      "Gigabytes": "Gigabajti",
+      "Gibibytes": "Gibibajti",
+      "Terabits": "Terabiti",
+      "Tebibits": "Tebibiti",
+      "Terabytes": "Terabajti",
+      "Tebibytes": "Tebibajti",
+      "Petabits": "Petabiti",
+      "Pebibits": "Pebibiti",
+      "Petabytes": "Petabajti",
+      "Pebibytes": "Pebibajti",
+      "Exabits": "Egzabiti",
+      "Exbibits": "Izlošci",
+      "Exabytes": "Eksabajti",
+      "Exbibytes": "Exbibajti",
+      "Zetabits": "Zetabiti",
+      "Zebibits": "Zebibiti",
+      "Zetabytes": "Zetabajti",
+      "Zebibytes": "Zebibajti",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabytes",
+      "Yobibytes": "Yobibajti",
+      "floppy disks": "floppy diskovi",
+      "CDs": "CD-ovi",
+      "DVDs": "DVD-ovi",
+      "Atmospheres": "Atmosfere",
+      "Bars": "Tačke",
+      "Kilopascals": "Kilopaskali",
+      "Millimeters of mercury": "Milimetri živinog stupca",
+      "Pascals": "Paskali",
+      "Pounds per square inch": "Funta po kvadratnom inču",
+      "Degrees": "stupnjevi",
+      "Radians": "Radijani",
+      "Gradians": "Gradijani",
+      "Microseconds": "Mikrosekunde",
+      "Milliseconds": "Milisekunde",
+      "Seconds": "Sekundi",
+      "Minutes": "Minute",
+      "Hours": "Sati",
+      "Days": "Dani",
+      "Weeks": "Tjedni",
+      "Years": "Godine"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Američki dolar",
+      "Euro": "Euro",
+      "British Pound": "Britanska funta",
+      "Japanese Yen": "Japanski jen",
+      "Canadian Dollar": "Kanadski dolar",
+      "Australian Dollar": "Australski dolar",
+      "Brazilian Real": "Brazilski real",
+      "Chilean Peso": "Čileanski pezo",
+      "Chinese Yuan": "Kineski juan",
+      "Colombian Peso": "Kolumbijski pezo",
+      "Danish Krone": "Danska kruna",
+      "Egyptian Pound": "Egipatska funta",
+      "Hong Kong Dollar": "Hongkonški dolar",
+      "Indian Rupee": "Indijska rupija",
+      "Kenyan Shilling": "Kenijski šiling",
+      "Mexican Peso": "Meksički pezo",
+      "Nigerian Naira": "Nigerijska Naira",
+      "New Zealand Dollar": "Novozelandski dolar",
+      "Norwegian Krone": "Norveška kruna",
+      "Philippine Piso": "Filipinski Pizo",
+      "Polish Zloty": "Poljski zlot",
+      "Qatari Riyal": "Katarski rijal",
+      "Saudi Riyal": "Saudijski rijal",
+      "Singapore Dollar": "Singapurski dolar",
+      "South African Rand": "Južnoafrički rand",
+      "South Korean Won": "Južnokorejski Won",
+      "Swedish Krona": "Švedska kruna",
+      "Swiss Franc": "švicarski franak",
+      "Thai Baht": "Tajlandski bat",
+      "Turkish Lira": "Turska lira",
+      "Turkmenistani Manat": "Turkmenistanski manat",
+      "Ugandan Shilling": "Ugandski šiling",
+      "Ukrainian Hryvnia": "Ukrajinska grivna",
+      "UAE Dirham": "Dirham UAE",
+      "Uruguayan Peso": "Urugvajski pezo",
+      "Uzbekistani Som": "Uzbekistanski som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuelanski Bolívar Soberano",
+      "Vietnamese Dong": "Vijetnamski dong",
+      "Yemeni Rial": "Jemenski rijal"
+    },
+    "labels": {
+      "United States - Dollar": "Sjedinjene Američke Države - dolar",
+      "Europe - Euro": "Europa - Euro",
+      "United Kingdom - Pound": "Ujedinjeno Kraljevstvo - funta",
+      "Japan - Yen": "Japan - jen",
+      "Canada - Dollar": "Kanada - dolar",
+      "Australia - Dollar": "Australija - dolar",
+      "Brazil - Real": "Brazil - Real",
+      "Chile - Peso": "Čile - pezo",
+      "China - Yuan Renminbi": "Kina - juan renminbi",
+      "Colombia - Peso": "Kolumbija - pezo",
+      "Denmark - Krone": "Danska - kruna",
+      "Egypt - Pound": "Egipat - funta",
+      "Hong Kong SAR - Dollar": "SAR Hong Kong - dolar",
+      "India - Rupee": "Indija - rupija",
+      "Kenya - Shilling": "Kenija - šiling",
+      "Mexico - Peso": "Meksiko - pezo",
+      "Nigeria - Naira": "Nigerija - Naira",
+      "New Zealand - Dollar": "Novi Zeland - dolar",
+      "Norway - Krone": "Norveška - kruna",
+      "Philippines - Piso": "Filipini - Piso",
+      "Poland - Zloty": "Poljska - zlot",
+      "Qatar - Riyal": "Katar - rijal",
+      "Saudi Arabia - Riyal": "Saudijska Arabija - rijal",
+      "Singapore - Dollar": "Singapur - dolar",
+      "South Africa - Rand": "Južna Afrika - Rand",
+      "South Korea - Won": "Južna Koreja - Won",
+      "Sweden - Krona": "Švedska - kruna",
+      "Switzerland - Franc": "Švicarska - franak",
+      "Thailand - Baht": "Tajland - Baht",
+      "Turkey - Lira": "Turska - lira",
+      "Turkmenistan - Manat": "Turkmenistan - manat",
+      "Uganda - Shilling": "Uganda - šiling",
+      "Ukraine - Hryvnia": "Ukrajina - grivna",
+      "United Arab Emirates - Dirham": "Ujedinjeni Arapski Emirati - Dirham",
+      "Uruguay - Peso": "Urugvaj - pezo",
+      "Uzbekistan - Som": "Uzbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vijetnam - Dong",
+      "Yemen - Rial": "Jemen - rijal"
+    }
+  }
+}

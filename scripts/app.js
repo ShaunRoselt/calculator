@@ -49,22 +49,15 @@ import {
   updateGraph,
   zoomGraph
 } from './logic.js';
+import {
+  applyThemeToElement,
+  getResolvedAppThemeId,
+  isSupportedTheme,
+  normalizeGraphThemeSetting
+} from './themes.js';
 
 const PAGE_QUERY_PARAM = 'page';
 const CURRENCY_TYPEAHEAD_RESET_MS = 900;
-const THEME_META_COLORS = {
-  dark: '#1f2025',
-  light: '#ececec',
-  blue: '#15212d',
-  green: '#15231c'
-};
-
-const THEME_LOGO_PATHS = {
-  dark: 'assets/logo-dark.svg',
-  light: 'assets/logo-light.svg',
-  blue: 'assets/logo-blue.svg',
-  green: 'assets/logo-green.svg'
-};
 
 const systemThemeMedia = typeof window.matchMedia === 'function'
   ? window.matchMedia('(prefers-color-scheme: light)')
@@ -92,6 +85,7 @@ window.addEventListener('popstate', handlePopState);
 systemThemeMedia?.addEventListener?.('change', () => {
   if (state.settings.theme === 'system') {
     applyTheme();
+    render();
   }
 });
 
@@ -141,6 +135,10 @@ function setMode(nextMode, { replaceHistory = false, renderView = true } = {}) {
     state.converter.converterKeyboardField = 'from';
   }
 
+  if (resolvedMode !== 'settings') {
+    state.settings.openMenu = null;
+  }
+
   state.mode = resolvedMode;
   state.navOpen = false;
   state.historyOpen = supportsHistoryPanelMode(state.mode) ? state.historyOpen : false;
@@ -164,12 +162,19 @@ function applyUrlMode({ replaceHistory = false, renderView = true } = {}) {
 }
 
 function applyTheme() {
-  const effectiveTheme = state.settings.theme === 'system'
-    ? getSystemTheme()
-    : state.settings.theme;
-  document.documentElement.dataset.theme = effectiveTheme;
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', THEME_META_COLORS[effectiveTheme] ?? THEME_META_COLORS.dark);
-  document.querySelector('#app-favicon')?.setAttribute('href', THEME_LOGO_PATHS[effectiveTheme] ?? THEME_LOGO_PATHS.dark);
+  const normalizedThemeSetting = state.settings.theme === 'system' || isSupportedTheme(state.settings.theme)
+    ? state.settings.theme
+    : 'system';
+
+  if (normalizedThemeSetting !== state.settings.theme) {
+    state.settings.theme = normalizedThemeSetting;
+    persistTheme();
+  }
+
+  const effectiveTheme = getResolvedAppThemeId(normalizedThemeSetting, getSystemTheme());
+  const appliedTheme = applyThemeToElement(document.documentElement, effectiveTheme);
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', appliedTheme.metaColor ?? '#1f2025');
+  document.querySelector('#app-favicon')?.setAttribute('href', appliedTheme.logoPath ?? 'assets/logo-dark.svg');
 }
 
 async function applyLanguageChange(language) {
@@ -204,6 +209,11 @@ function handleClick(event) {
 
   if (source && state.mode === 'date' && state.date.openPicker && !source.closest('.date-native-picker-shell')) {
     state.date.openPicker = null;
+    shouldRender = true;
+  }
+
+  if (source && state.mode === 'settings' && state.settings.openMenu && !source.closest('.settings-select-menu-wrap')) {
+    state.settings.openMenu = null;
     shouldRender = true;
   }
 
@@ -367,6 +377,43 @@ function handleClick(event) {
     commitDateHistory();
     render();
     return;
+  }
+
+  if (target.dataset.settingsMenuToggle) {
+    const nextMenu = target.dataset.settingsMenuToggle;
+    const isOpening = state.settings.openMenu !== nextMenu;
+    state.settings.openMenu = isOpening ? nextMenu : null;
+    render();
+    if (isOpening) {
+      requestAnimationFrame(() => {
+        const searchInput = document.querySelector(`[data-settings-menu-search="${nextMenu}"]`);
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.focus();
+        }
+      });
+    }
+    return;
+  }
+
+  if (target.dataset.settingsMenuSelect) {
+    const menu = target.dataset.settingsMenuSelect;
+    const value = target.dataset.settingsMenuValue ?? '';
+    state.settings.openMenu = null;
+
+    if (menu === 'theme') {
+      state.settings.theme = value === 'system' || isSupportedTheme(value)
+        ? value
+        : 'system';
+      persistTheme();
+      applyTheme();
+      render();
+      return;
+    }
+
+    if (menu === 'language') {
+      void applyLanguageChange(value);
+      return;
+    }
   }
 
   if (target.dataset.datePickerToggle) {
@@ -733,7 +780,9 @@ function handleChange(event) {
   }
 
   if (target.name === 'settings-theme') {
-    state.settings.theme = target.value;
+    state.settings.theme = target.value === 'system' || isSupportedTheme(target.value)
+      ? target.value
+      : 'system';
     persistTheme();
     applyTheme();
     render();
@@ -792,8 +841,7 @@ function handleChange(event) {
   }
 
   if (target.name === 'graph-theme') {
-    state.graphing.theme = target.value === 'match-app' ? 'match-app' : 'light';
-    drawGraph();
+    state.graphing.theme = normalizeGraphThemeSetting(target.value);
     render();
     return;
   }
@@ -818,6 +866,36 @@ function handleChange(event) {
 function handleInput(event) {
   const target = event.target;
   if (!(target instanceof HTMLInputElement)) {
+    return;
+  }
+
+  if (target.dataset.settingsMenuSearch) {
+    const menu = target.closest('.settings-select-menu');
+    if (!(menu instanceof HTMLElement)) {
+      return;
+    }
+
+    const query = target.value.trim().toLowerCase();
+    const options = [...menu.querySelectorAll('[data-settings-menu-option]')];
+    let visibleOptions = 0;
+
+    for (const option of options) {
+      if (!(option instanceof HTMLElement)) {
+        continue;
+      }
+
+      const searchText = option.dataset.settingsMenuText ?? option.textContent ?? '';
+      const matches = query === '' || searchText.includes(query);
+      option.hidden = !matches;
+      if (matches) {
+        visibleOptions += 1;
+      }
+    }
+
+    const emptyState = menu.querySelector('[data-settings-menu-empty]');
+    if (emptyState instanceof HTMLElement) {
+      emptyState.hidden = visibleOptions > 0;
+    }
     return;
   }
 
@@ -894,6 +972,13 @@ function handleKeydown(event) {
 
   if (state.mode === 'date' && event.key === 'Escape' && state.date.openModeMenu) {
     state.date.openModeMenu = false;
+    render();
+    event.preventDefault();
+    return;
+  }
+
+  if (state.mode === 'settings' && event.key === 'Escape' && state.settings.openMenu) {
+    state.settings.openMenu = null;
     render();
     event.preventDefault();
     return;

@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kalkulator",
+    "name": "Kalkulator"
+  },
+  "common": {
+    "back": "Kembali",
+    "backspace": "Ruang belakang",
+    "closeSidePanel": "Tutup panel"
+  },
+  "converter": {
+    "unitConverter": "Penukar Unit",
+    "title": "Penukar unit",
+    "builtInCollections": "Koleksi terbina dalam",
+    "category": "Kategori",
+    "from": "Daripada",
+    "to": "Kepada",
+    "inputValue": "Nilai untuk ditukar",
+    "convertedValue": "Nilai ditukar",
+    "swapUnits": "Tukar unit",
+    "keypad": "Pad kekunci penukar",
+    "unit": "unit",
+    "unitOptions": "pilihan unit",
+    "currency": {
+      "updatingRates": "Mengemas kini kadar…",
+      "updateRates": "Kemas kini kadar",
+      "keypad": "Pad kekunci mata wang",
+      "currency": "mata wang",
+      "options": "pilihan mata wang",
+      "updated": "Dikemas kini {timestamp}",
+      "status": {
+        "mockNote": "Kadar rujukan olok-olok untuk tunjuk cara apl kendiri.",
+        "fetching": "Mengambil kadar rujukan USD terkini...",
+        "liveRatesLoaded": "Kadar langsung dimuatkan daripada ExchangeRate-API.",
+        "liveUpdateUnavailable": "Kemas kini langsung tidak tersedia. Kadar tunjuk cara diperbaharui secara tempatan."
+      }
+    },
+    "aboutEqualTo": "Kira-kira sama dengan"
+  },
+  "errors": {
+    "invalidInput": "Input tidak sah",
+    "cannotDivideByZero": "Tidak boleh membahagi dengan sifar",
+    "cannotModuloByZero": "Tidak boleh modulo dengan sifar",
+    "invalidProgrammerOperation": "Pengendalian tidak sah",
+    "overflow": "Hasil terlalu besar"
+  },
+  "date": {
+    "calculationMode": "Mod pengiraan",
+    "from": "Daripada",
+    "to": "Kepada",
+    "results": {
+      "difference": "Perbezaan",
+      "sameDates": "Tarikh yang sama",
+      "date": "Tarikh"
+    },
+    "calculationModeOptions": "Pilihan mod pengiraan",
+    "mode": {
+      "difference": "Perbezaan",
+      "shift": "Anjakan"
+    },
+    "operation": "Operasi",
+    "add": "Tambah",
+    "subtract": "Tolak",
+    "years": "Tahun",
+    "months": "Bulan",
+    "days": "Hari",
+    "chooseDate": "Pilih tarikh",
+    "previousMonth": "Bulan sebelumnya",
+    "nextMonth": "Bulan depan",
+    "duration": {
+      "year": {
+        "one": "{count} tahun",
+        "other": "{count} tahun"
+      },
+      "month": {
+        "one": "{count} bulan",
+        "other": "{count} bulan"
+      },
+      "week": {
+        "one": "{count} minggu",
+        "other": "{count} minggu"
+      },
+      "day": {
+        "one": "{count} hari",
+        "other": "{count} hari"
+      }
+    },
+    "history": {
+      "differenceBetween": "Perbezaan antara {from} dan {to}",
+      "addTo": "Tambahkan {duration} pada {date}",
+      "subtractFrom": "Tolak {duration} daripada {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Semak ungkapan yang diserlahkan",
+    "enterExpression": "Masukkan ungkapan",
+    "canvas": "Kanvas graf",
+    "stopTracing": "Berhenti mengesan",
+    "startTracing": "Mulakan jejak",
+    "share": "Kongsi",
+    "options": "Pilihan",
+    "zoomIn": "Zum masuk",
+    "zoomInLabel": "Zum masuk",
+    "zoomOut": "Zum keluar",
+    "zoomOutLabel": "Zum keluar",
+    "refreshViewAutomatically": "Muat semula paparan secara automatik",
+    "view": "Lihat",
+    "expressions": "Ungkapan",
+    "mobileView": "Paparan mudah alih",
+    "showGraph": "Tunjukkan graf",
+    "showExpressions": "Tunjukkan ungkapan",
+    "backToFunctionList": "Kembali ke senarai fungsi",
+    "window": "Tetingkap",
+    "resetView": "Tetapkan semula paparan",
+    "units": "Unit",
+    "radians": "Radian",
+    "degrees": "Ijazah",
+    "gradians": "Gradian",
+    "lineThickness": "Ketebalan garisan",
+    "theme": "Tema",
+    "alwaysLight": "Sentiasa ringan",
+    "matchAppTheme": "Padankan tema apl",
+    "groups": {
+      "inequalities": "Ketidaksamaan",
+      "trigonometry": "Trigonometri",
+      "function": "Fungsi"
+    },
+    "functions": "Fungsi",
+    "showEquation": "Tunjukkan persamaan",
+    "hideEquation": "Sembunyikan persamaan",
+    "lineOptions": "Pilihan talian",
+    "color": "Warna",
+    "style": "Gaya",
+    "analysis": {
+      "title": "Analisis",
+      "domain": "Domain",
+      "range": "Julat",
+      "xIntercept": "x-pintasan",
+      "yIntercept": "y-pintasan",
+      "minima": "Minima",
+      "maxima": "Maxima",
+      "inflectionPoints": "Titik infleksi",
+      "verticalAsymptotes": "Asimtot menegak",
+      "horizontalAsymptotes": "Asimtot mendatar",
+      "obliqueAsymptotes": "Asimtot serong",
+      "parity": "Pariti",
+      "period": "Tempoh",
+      "monotonicity": "Kemonotonan",
+      "domainNone": "Tiada sekatan domain",
+      "rangeNone": "Tiada sekatan julat",
+      "xInterceptNone": "Tiada pintasan-x",
+      "yInterceptNone": "Tiada pintasan-y",
+      "minimaNone": "Tiada minimum",
+      "maximaNone": "Tiada maksima",
+      "inflectionNone": "Tiada titik bengkok",
+      "verticalAsymptotesNone": "Tiada asimtot menegak",
+      "horizontalAsymptotesNone": "Tiada asimtot mendatar",
+      "obliqueAsymptotesNone": "Tiada asimtot serong",
+      "parityUnknown": "Tidak diketahui",
+      "parityOdd": "ganjil",
+      "parityEven": "Malah",
+      "parityNeither": "Tidak juga",
+      "periodicityUnknown": "Tidak diketahui",
+      "periodicityNotPeriodic": "Tidak berkala",
+      "monotonicityConstant": "Malar",
+      "monotonicityIncreasing": "Meningkat",
+      "monotonicityDecreasing": "Menurun",
+      "monotonicityUnknown": "Tidak diketahui",
+      "monotonicityError": "Tidak dapat menentukan",
+      "featureTooComplexPlural": "Terlalu rumit untuk dianalisis",
+      "analysisCouldNotBePerformed": "Analisis tidak dapat dilakukan",
+      "analysisNotSupported": "Analisis tidak disokong",
+      "variableIsNotX": "Pembolehubah bukan x"
+    },
+    "plottingExpressions": "Memplot {count} ungkapan",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Maks",
+    "selectExpression": "Pilih ungkapan {index}",
+    "expressionIndex": "Ungkapan {index}",
+    "analyzeFunction": "Analisis fungsi",
+    "changeEquationStyle": "Tukar gaya persamaan",
+    "removeEquation": "Alih keluar persamaan",
+    "lineStyle": {
+      "solid": "Gaya garis padat",
+      "dash": "Gaya garisan sempang",
+      "dot": "Gaya garis titik"
+    }
+  },
+  "history": {
+    "empty": "Sejarah kosong",
+    "clearAll": "Kosongkan semua",
+    "clear": "Kosongkan sejarah",
+    "title": "Sejarah",
+    "andMemory": "Sejarah dan Memori",
+    "aria": {
+      "historyPanel": "Panel sejarah",
+      "historyAndMemoryPanel": "Panel Sejarah dan Memori"
+    },
+    "closeFlyout": "Tutup sejarah",
+    "openFlyout": "Buka sejarah"
+  },
+  "memory": {
+    "empty": "Memori kosong",
+    "clearItem": "Kosongkan item",
+    "addCurrentValue": "Tambahkan nilai semasa",
+    "subtractCurrentValue": "Tolak nilai semasa",
+    "clearAll": "Kosongkan semua",
+    "clear": "Kosongkan memori",
+    "title": "Memori",
+    "controls": "Kawalan memori",
+    "tooltips": {
+      "clearAll": "Kosongkan semua memori",
+      "recall": "Imbas kembali daripada ingatan",
+      "add": "Tambahkan pada ingatan",
+      "subtract": "Tolak daripada ingatan",
+      "store": "Simpan dalam ingatan"
+    },
+    "recallValue": "Imbas ingatan {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigasi",
+      "closeNavigation": "Tutup navigasi",
+      "openNavigation": "Buka navigasi"
+    },
+    "groups": {
+      "calculator": "Kalkulator",
+      "converter": "Penukar"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Panel selak bit",
+    "baseReadouts": "Bacaan asas",
+    "surfaceMode": "Mod permukaan",
+    "fullKeypad": "Pad kekunci penuh",
+    "showKeypad": "Tunjukkan pad kekunci",
+    "bitTogglingKeypad": "Pad kekunci togol bit",
+    "showBitView": "Tunjukkan paparan bit",
+    "wordSize": "Saiz perkataan",
+    "bitwise": "Bitwise",
+    "bitShift": "Anjakan bit"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometri",
+      "function": "Fungsi",
+      "functionsAria": "Fungsi",
+      "trigonometricFunctionsAria": "Fungsi trigonometri",
+      "angleUnit": "Unit sudut {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Penampilan",
+      "themeTitle": "Tema",
+      "themeDescription": "Pilih skema warna",
+      "light": "Cahaya",
+      "dark": "Gelap",
+      "blue": "Biru",
+      "green": "Hijau",
+      "system": "Sistem"
+    },
+    "language": {
+      "group": "Bahasa",
+      "title": "Bahasa",
+      "description": "Pilih bahasa pilihan anda"
+    },
+    "about": {
+      "group": "Perihal"
+    },
+    "feedback": "Hantar maklum balas",
+    "contribute": {
+      "prefix": "Sumbangkan pada",
+      "link": "GitHub",
+      "suffix": "untuk membantu memperbaik kalkulator ini"
+    },
+    "links": {
+      "repository": "Repositori projek",
+      "readme": "README",
+      "license": "Lesen MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standard",
+      "subtitle": "Penilaian segera klasik"
+    },
+    "scientific": {
+      "label": "Saintifik",
+      "subtitle": "Sokongan pengendali, fungsi dan ekspresi"
+    },
+    "graphing": {
+      "label": "Grafan",
+      "subtitle": "Plot ungkapan mudah pada satah cartesan"
+    },
+    "programmer": {
+      "label": "Pengaturcara",
+      "subtitle": "Matematik integer dengan penukaran asas"
+    },
+    "date": {
+      "label": "Pengiraan tarikh",
+      "subtitle": "Cari tempoh dan tarikh syif"
+    },
+    "currency": {
+      "label": "Mata wang",
+      "subtitle": "Tukar kadar pertukaran palsu"
+    },
+    "volume": {
+      "label": "Jumlah",
+      "subtitle": "Tukar ukuran volum"
+    },
+    "length": {
+      "label": "Panjang",
+      "subtitle": "Tukar unit jarak dan panjang"
+    },
+    "weight": {
+      "label": "Berat dan Jisim",
+      "subtitle": "Tukar berat dan unit jisim"
+    },
+    "temperature": {
+      "label": "Suhu",
+      "subtitle": "Tukar skala suhu"
+    },
+    "energy": {
+      "label": "Tenaga",
+      "subtitle": "Tukar ukuran tenaga"
+    },
+    "area": {
+      "label": "Kawasan",
+      "subtitle": "Tukar ukuran kawasan"
+    },
+    "speed": {
+      "label": "Kelajuan",
+      "subtitle": "Tukar ukuran kelajuan"
+    },
+    "time": {
+      "label": "Masa",
+      "subtitle": "Tukar ukuran masa"
+    },
+    "power": {
+      "label": "Kuasa",
+      "subtitle": "Tukar ukuran kuasa"
+    },
+    "data": {
+      "label": "Data",
+      "subtitle": "Tukar unit storan digital"
+    },
+    "pressure": {
+      "label": "Tekanan",
+      "subtitle": "Tukar unit tekanan"
+    },
+    "angle": {
+      "label": "Sudut",
+      "subtitle": "Tukar ukuran sudut"
+    },
+    "settings": {
+      "label": "Tetapan",
+      "subtitle": "Maklumat rupa dan apl"
+    }
+  },
+  "categories": {
+    "Currency": "Mata wang",
+    "Volume": "Jumlah",
+    "Length": "Panjang",
+    "Mass": "Mas",
+    "Temperature": "Suhu",
+    "Energy": "Tenaga",
+    "Area": "Kawasan",
+    "Speed": "Kelajuan",
+    "Time": "Masa",
+    "Power": "Kuasa",
+    "Data": "Data",
+    "Pressure": "Tekanan",
+    "Angle": "Sudut"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstrom",
+      "Nanometers": "Nanometer",
+      "Microns": "Mikron",
+      "Millimeters": "Millimeter",
+      "Centimeters": "Sentimeter",
+      "Meters": "Meter",
+      "Kilometers": "Kilometer",
+      "Inches": "Inci",
+      "Feet": "Kaki",
+      "Yards": "Ela",
+      "Miles": "Batu",
+      "Nautical miles": "Batu nautika",
+      "paperclips": "klip kertas",
+      "hands": "tangan",
+      "jumbo jets": "jet jumbo",
+      "Carats": "Karat",
+      "Milligrams": "Milligram",
+      "Centigrams": "Sentigram",
+      "Decigrams": "Desigram",
+      "Grams": "Gram",
+      "Dekagrams": "Dekagram",
+      "Hectograms": "Hektogram",
+      "Kilograms": "Kilogram",
+      "Metric tonnes": "Tan metrik",
+      "Ounces": "Auns",
+      "Pounds": "Paun",
+      "Stone": "Batu",
+      "Short tons (US)": "Tan pendek (AS)",
+      "Long tons (UK)": "Tan panjang (UK)",
+      "snowflakes": "kepingan salji",
+      "soccer balls": "bola bola sepak",
+      "elephants": "gajah",
+      "whales": "ikan paus",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mililiter",
+      "Cubic centimeters": "Sentimeter padu",
+      "Liters": "Liter",
+      "Cubic meters": "Meter padu",
+      "Teaspoons (US)": "Sudu teh (AS)",
+      "Tablespoons (US)": "Sudu besar (AS)",
+      "Fluid ounces (US)": "Auns cecair (AS)",
+      "Cups (US)": "Piala (AS)",
+      "Pints (US)": "Pint (AS)",
+      "Quarts (US)": "Kuart (AS)",
+      "Gallons (US)": "Gelen (AS)",
+      "Cubic inches": "Inci padu",
+      "Cubic feet": "Kaki padu",
+      "Cubic yards": "Ela padu",
+      "Teaspoons (UK)": "Sudu teh (UK)",
+      "Tablespoons (UK)": "Sudu besar (UK)",
+      "Fluid ounces (UK)": "Auns cecair (UK)",
+      "Pints (UK)": "Pint (UK)",
+      "Quarts (UK)": "Kuart (UK)",
+      "Gallons (UK)": "Gelen (UK)",
+      "coffee cups": "cawan kopi",
+      "bathtubs": "tab mandi",
+      "swimming pools": "kolam renang",
+      "Square millimeters": "Millimeter persegi",
+      "Square centimeters": "Sentimeter persegi",
+      "Square meters": "Meter persegi",
+      "Hectares": "Hektar",
+      "Square kilometers": "Kilometer persegi",
+      "Square inches": "Inci persegi",
+      "Square feet": "Kaki persegi",
+      "Square yards": "Ela persegi",
+      "Acres": "Ekar",
+      "Square miles": "Batu persegi",
+      "sheets of paper": "helaian kertas",
+      "soccer fields": "medan bola sepak",
+      "castles": "istana",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Sentimeter sesaat",
+      "Meters per second": "Meter sesaat",
+      "Kilometers per hour": "Kilometer sejam",
+      "Feet per second": "Kaki sesaat",
+      "Miles per hour": "Batu sejam",
+      "Knots": "Simpulan",
+      "Mach": "Mach",
+      "turtles": "penyu",
+      "horses": "kuda",
+      "jets": "jet",
+      "Watts": "Watt",
+      "Kilowatts": "Kilowatt",
+      "Horsepower (US)": "Kuasa kuda (AS)",
+      "Foot-pounds/minute": "Kaki paun/minit",
+      "BTUs/minute": "BTU/minit",
+      "light bulbs": "mentol lampu",
+      "train engines": "enjin kereta api",
+      "Thermal calories": "Kalori terma",
+      "Food calories": "Kalori makanan",
+      "British thermal units": "Unit terma British",
+      "Kilojoules": "Kilojoule",
+      "Kilowatt-hours": "Kilowatt-jam",
+      "Electron volts": "Vol elektron",
+      "Joules": "Joule",
+      "Foot-pounds": "Kaki paun",
+      "batteries": "bateri",
+      "bananas": "pisang",
+      "slices of cake": "hirisan kek",
+      "Bits": "Bit",
+      "Nibble": "Menggigit",
+      "Bytes": "Bait",
+      "Kilobits": "Kilobit",
+      "Kibibits": "Kibibit",
+      "Kilobytes": "Kilobait",
+      "Kibibytes": "Kibibait",
+      "Megabits": "Megabit",
+      "Mebibits": "Mebibits",
+      "Megabytes": "Megabait",
+      "Mebibytes": "Mebibait",
+      "Gigabits": "Gigabit",
+      "Gibibits": "Gibibit",
+      "Gigabytes": "Gigabait",
+      "Gibibytes": "Gibibait",
+      "Terabits": "Terbits",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabait",
+      "Tebibytes": "Tebibait",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabait",
+      "Pebibytes": "Pebibait",
+      "Exabits": "Exabits",
+      "Exbibits": "Exbibits",
+      "Exabytes": "Exabait",
+      "Exbibytes": "Exbibait",
+      "Zetabits": "Zetabit",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabait",
+      "Zebibytes": "Zebibait",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabait",
+      "Yobibytes": "Yobibait",
+      "floppy disks": "cakera liut",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "Suasana",
+      "Bars": "Bar",
+      "Kilopascals": "Kilopascal",
+      "Millimeters of mercury": "Millimeter merkuri",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Paun setiap inci persegi",
+      "Degrees": "Ijazah",
+      "Radians": "Radian",
+      "Gradians": "Gradian",
+      "Microseconds": "Mikrosaat",
+      "Milliseconds": "Millisaat",
+      "Seconds": "Saat",
+      "Minutes": "Minit",
+      "Hours": "Jam",
+      "Days": "Hari",
+      "Weeks": "Minggu",
+      "Years": "Tahun"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Dolar AS",
+      "Euro": "Euro",
+      "British Pound": "Pound British",
+      "Japanese Yen": "Yen Jepun",
+      "Canadian Dollar": "Dolar Kanada",
+      "Australian Dollar": "Dolar Australia",
+      "Brazilian Real": "Brazilian Real",
+      "Chilean Peso": "Peso Chile",
+      "Chinese Yuan": "Yuan China",
+      "Colombian Peso": "Peso Colombia",
+      "Danish Krone": "Krone Denmark",
+      "Egyptian Pound": "Paun Mesir",
+      "Hong Kong Dollar": "Dolar Hong Kong",
+      "Indian Rupee": "Rupee India",
+      "Kenyan Shilling": "Syiling Kenya",
+      "Mexican Peso": "Peso Mexico",
+      "Nigerian Naira": "Naira Nigeria",
+      "New Zealand Dollar": "Dolar New Zealand",
+      "Norwegian Krone": "Krone Norway",
+      "Philippine Piso": "Piso Filipina",
+      "Polish Zloty": "Zloty Poland",
+      "Qatari Riyal": "Riyal Qatar",
+      "Saudi Riyal": "Riyal Saudi",
+      "Singapore Dollar": "Dolar Singapura",
+      "South African Rand": "Rand Afrika Selatan",
+      "South Korean Won": "Wan Korea Selatan",
+      "Swedish Krona": "Krona Sweden",
+      "Swiss Franc": "Franc Swiss",
+      "Thai Baht": "Baht Thailand",
+      "Turkish Lira": "Lira Turki",
+      "Turkmenistani Manat": "Turkmenistani Manat",
+      "Ugandan Shilling": "Syiling Uganda",
+      "Ukrainian Hryvnia": "Hryvnia Ukraine",
+      "UAE Dirham": "Dirham UAE",
+      "Uruguayan Peso": "Peso Uruguay",
+      "Uzbekistani Som": "Uzbekistani Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuelan Bolívar Soberano",
+      "Vietnamese Dong": "Dong Vietnam",
+      "Yemeni Rial": "Rial Yaman"
+    },
+    "labels": {
+      "United States - Dollar": "Amerika Syarikat - Dolar",
+      "Europe - Euro": "Eropah - Euro",
+      "United Kingdom - Pound": "United Kingdom - Pound",
+      "Japan - Yen": "Jepun - Yen",
+      "Canada - Dollar": "Kanada - Dolar",
+      "Australia - Dollar": "Australia - Dolar",
+      "Brazil - Real": "Brazil - Real",
+      "Chile - Peso": "Chile - Peso",
+      "China - Yuan Renminbi": "China - Yuan Renminbi",
+      "Colombia - Peso": "Colombia - Peso",
+      "Denmark - Krone": "Denmark - Krone",
+      "Egypt - Pound": "Mesir - Pound",
+      "Hong Kong SAR - Dollar": "SAR Hong Kong - Dolar",
+      "India - Rupee": "India - Rupee",
+      "Kenya - Shilling": "Kenya - Shilling",
+      "Mexico - Peso": "Mexico - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "New Zealand - Dolar",
+      "Norway - Krone": "Norway - Krone",
+      "Philippines - Piso": "Filipina - Piso",
+      "Poland - Zloty": "Poland - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Arab Saudi - Riyal",
+      "Singapore - Dollar": "Singapura - Dolar",
+      "South Africa - Rand": "Afrika Selatan - Rand",
+      "South Korea - Won": "Korea Selatan - Menang",
+      "Sweden - Krona": "Sweden - Krona",
+      "Switzerland - Franc": "Switzerland - Franc",
+      "Thailand - Baht": "Thailand - Baht",
+      "Turkey - Lira": "Turki - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Shilling",
+      "Ukraine - Hryvnia": "Ukraine - Hryvnia",
+      "United Arab Emirates - Dirham": "Emiriah Arab Bersatu - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Uzbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yaman - Rial"
+    }
+  }
+}

@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Yupay ruwaq",
+    "name": "Yupay ruwaq"
+  },
+  "common": {
+    "back": "Kutiy",
+    "backspace": "Qhipaman",
+    "closeSidePanel": "Panel wichq'ay"
+  },
+  "converter": {
+    "unitConverter": "Unidad Tikraq",
+    "title": "Unidad tikraqkuna",
+    "builtInCollections": "Huñusqakuna ruwasqa",
+    "category": "Kategoria nisqa",
+    "from": "Kaymanta",
+    "to": "Chay",
+    "inputValue": "Tikranapaq chaniyuq",
+    "convertedValue": "Tikrasqa chanin",
+    "swapUnits": "Unidades de intercambio",
+    "keypad": "Tikraq teclado",
+    "unit": "unidad nisqa",
+    "unitOptions": "unidad akllanakuna",
+    "currency": {
+      "updatingRates": "Tarifakunata musuqyachispa...",
+      "updateRates": "Tarifakuna musuqyachiy",
+      "keypad": "Qolqe teclado",
+      "currency": "qullqi",
+      "options": "qullqi akllanakuna",
+      "updated": "Musuqchasqa {timestamp} .",
+      "status": {
+        "mockNote": "Sapanlla app demopaq tarifakuna referencia burlakuy.",
+        "fetching": "Qhipa USD referencia tarifakunata apamuspa...",
+        "liveRatesLoaded": "Kawsaq tarifakuna ExchangeRate-API kaqmanta kargasqa.",
+        "liveUpdateUnavailable": "Kawsaq musuqchayqa manam kanchu. Musuqyachisqa demo tarifakuna llaqtapi."
+      }
+    },
+    "aboutEqualTo": "Yaqa kaqlla"
+  },
+  "errors": {
+    "invalidInput": "Mana allin yaykuchiy",
+    "cannotDivideByZero": "Manam cerowan rakiyta atinchu",
+    "cannotModuloByZero": "Mana cerowan modulo ruwayta atinchu",
+    "invalidProgrammerOperation": "Mana allin llamkay",
+    "overflow": "Resultado ancha hatun"
+  },
+  "date": {
+    "calculationMode": "Yupay ruway",
+    "from": "Kaymanta",
+    "to": "Chay",
+    "results": {
+      "difference": "Huk chikan kaynin",
+      "sameDates": "Kikin p'unchawkuna",
+      "date": "Punchaw"
+    },
+    "calculationModeOptions": "Yupay modo akllanakuna",
+    "mode": {
+      "difference": "Huk chikan kaynin",
+      "shift": "Mayachiy"
+    },
+    "operation": "Operacin nisqa",
+    "add": "Yanapay",
+    "subtract": "Qhipay",
+    "years": "Watakuna",
+    "months": "Killakuna",
+    "days": "P'unchawkuna",
+    "chooseDate": "P'unchawta akllay",
+    "previousMonth": "Ñawpaq killa",
+    "nextMonth": "Qhipa killapi",
+    "duration": {
+      "year": {
+        "one": "{count} wata",
+        "other": "{count} watakuna"
+      },
+      "month": {
+        "one": "{count} killa",
+        "other": "{count} killakuna"
+      },
+      "week": {
+        "one": "{count} semanapi",
+        "other": "{count} semanakuna"
+      },
+      "day": {
+        "one": "{count} p'unchaw",
+        "other": "{count} p'unchawkuna"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from}wan {to}wan chikan kaynin",
+      "addTo": "{duration}ta yapay {date} nisqaman.",
+      "subtractFrom": "{duration} nisqamanta {date} nisqamanta qichuy."
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Resaltasqa rimayta qhaway",
+    "enterExpression": "Huk rimayta qillqay",
+    "canvas": "Gráfico nisqa lona",
+    "stopTracing": "Amaña qatipay",
+    "startTracing": "Qallariy qatipay",
+    "share": "Compartir",
+    "options": "Akllanakuna",
+    "zoomIn": "Aswan hatunyachiy",
+    "zoomInLabel": "Aswan hatunyachiy",
+    "zoomOut": "Aswan pisiyachiy",
+    "zoomOutLabel": "Aswan pisiyachiy",
+    "refreshViewAutomatically": "Kikinmanta qhawayta musuqyachiy",
+    "view": "Qhaway",
+    "expressions": "Expresiones nisqakuna",
+    "mobileView": "Kuyuchina qhaway",
+    "showGraph": "Qhawachiy grafico",
+    "showExpressions": "Expresiones nisqakunata rikuchiy",
+    "backToFunctionList": "Llamkana listaman kutiy",
+    "window": "Ventana",
+    "resetView": "Qhawayta kutichiy",
+    "units": "Unidades nisqakuna",
+    "radians": "Radiankuna",
+    "degrees": "Gradokuna",
+    "gradians": "Gradianokuna",
+    "lineThickness": "Chiru rakhu kaynin",
+    "theme": "Tema nisqamanta",
+    "alwaysLight": "Siempre k'anchay",
+    "matchAppTheme": "App nisqa temawan tupachiy",
+    "groups": {
+      "inequalities": "Mana kaqlla kayninkuna",
+      "trigonometry": "Trigonometría nisqa yachay",
+      "function": "Ruray"
+    },
+    "functions": "Ruraykuna",
+    "showEquation": "Ecuación nisqa rikuchiy",
+    "hideEquation": "Pakakuy ecuación",
+    "lineOptions": "Chiru akllanakuna",
+    "color": "Llimpi",
+    "style": "Estilo nisqa",
+    "analysis": {
+      "title": "T’aqwiy",
+      "domain": "Dominio nisqa",
+      "range": "Alcance nisqa",
+      "xIntercept": "x-intercepto nisqa",
+      "yIntercept": "y-intercepto nisqa",
+      "minima": "Minima nisqa",
+      "maxima": "Maxima nisqa",
+      "inflectionPoints": "Inflexión nisqa puntokuna",
+      "verticalAsymptotes": "Asintotas sayaq",
+      "horizontalAsymptotes": "Asintotos horizontales nisqa",
+      "obliqueAsymptotes": "Asintotos oblicuos nisqakuna",
+      "parity": "Parada nisqa",
+      "period": "Periodo nisqa",
+      "monotonicity": "Monotonicidad nisqa",
+      "domainNone": "Mana kamachiy harkaykuna",
+      "rangeNone": "Mana rango harkaykuna",
+      "xInterceptNone": "Mana x-interceptos nisqakunachu",
+      "yInterceptNone": "Mana y-interceptos",
+      "minimaNone": "Mana minimachu",
+      "maximaNone": "Mana maximayuqchu",
+      "inflectionNone": "Mana inflexión nisqa puntokuna",
+      "verticalAsymptotesNone": "Mana sayaq asintotakunayuq",
+      "horizontalAsymptotesNone": "Mana asintotos horizontales nisqayuqchu",
+      "obliqueAsymptotesNone": "Mana asintotos oblicuos nisqayuqchu",
+      "parityUnknown": "Mana riqsisqa",
+      "parityOdd": "Impar nisqa",
+      "parityEven": "Asta",
+      "parityNeither": "Manan mayqenpas",
+      "periodicityUnknown": "Mana riqsisqa",
+      "periodicityNotPeriodic": "Mana sapa kutichu",
+      "monotonicityConstant": "Sapa kuti",
+      "monotonicityIncreasing": "Yapakuq",
+      "monotonicityDecreasing": "Pisiyaq",
+      "monotonicityUnknown": "Mana riqsisqa",
+      "monotonicityError": "Manam atinchu determinayta",
+      "featureTooComplexPlural": "Ancha sasachakuyniyuq t'aqwinapaq",
+      "analysisCouldNotBePerformed": "Análisis nisqataqa manam ruwayta atirqakuchu",
+      "analysisNotSupported": "Análisis mana yanapasqachu",
+      "variableIsNotX": "Variableqa manam xchu"
+    },
+    "plottingExpressions": "{count} rimaykunata siq'ispa",
+    "xMin": "X-Min. nisqa",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Akllay rimayta {index} .",
+    "expressionIndex": "Rikuy {index} .",
+    "analyzeFunction": "Rurayta t'aqwiy",
+    "changeEquationStyle": "Ecuación estilota tikray",
+    "removeEquation": "Ecuación nisqamanta hurquy",
+    "lineStyle": {
+      "solid": "Salida chiru estilo",
+      "dash": "Chiru chiru estilo",
+      "dot": "Punto chiru estilo"
+    }
+  },
+  "history": {
+    "empty": "Historiaqa ch'usaqmi",
+    "clearAll": "Tukuy imata chuyanchay",
+    "clear": "Historiata ch'uyanchana",
+    "title": "Historiamanta willakuy",
+    "andMemory": "Historia y Yuyariy",
+    "aria": {
+      "historyPanel": "Historiamanta panel",
+      "historyAndMemoryPanel": "Historia y Yuyariy panel"
+    },
+    "closeFlyout": "Willakuy willakuy",
+    "openFlyout": "Kay willakuy"
+  },
+  "memory": {
+    "empty": "Yuyariyqa ch'usaqmi",
+    "clearItem": "Itemta chuyanchay",
+    "addCurrentValue": "Kunan chanin yapay",
+    "subtractCurrentValue": "Kunan chaninninta qichuy",
+    "clearAll": "Llapallanta chuyanchay",
+    "clear": "Uyariyta chuyanchay",
+    "title": "Yuyariy",
+    "controls": "Yuyariy kamachiqkuna",
+    "tooltips": {
+      "clearAll": "Llapa yuyarinata chuyanchay",
+      "recall": "Yuyariymanta yuyariy",
+      "add": "Yuyariyman yapay",
+      "subtract": "Yuyariymanta qichuy",
+      "store": "Yuyaypi waqaychay"
+    },
+    "recallValue": "Yuyariy yuyariy {value} ."
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigación nisqa",
+      "closeNavigation": "Wichqay puriyta",
+      "openNavigation": "Kay puriyta"
+    },
+    "groups": {
+      "calculator": "Yupay ruwaq",
+      "converter": "Tikraq"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit tikray panel",
+    "baseReadouts": "Base ñawiriykuna",
+    "surfaceMode": "Hawanmanta ruway",
+    "fullKeypad": "Hunt'asqa teclado",
+    "showKeypad": "Tecladota rikuchiy",
+    "bitTogglingKeypad": "Bit tikray teclado",
+    "showBitView": "Bit qhawayta rikuchiy",
+    "wordSize": "Simipa sayaynin",
+    "bitwise": "Bitwise nisqapi",
+    "bitShift": "Bit tikray"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometría nisqa yachay",
+      "function": "Ruray",
+      "functionsAria": "Ruraykuna",
+      "trigonometricFunctionsAria": "Trigonométrico nisqa ruwaykuna",
+      "angleUnit": "K'uchu unidad {value} ."
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Rikuy",
+      "themeTitle": "Tema nisqamanta",
+      "themeDescription": "Huk llimp'ikuna akllay",
+      "light": "K'anchay",
+      "dark": "Tutayaq",
+      "blue": "Azul nisqa",
+      "green": "Q'umir",
+      "system": "Sistema nisqa"
+    },
+    "language": {
+      "group": "Simi",
+      "title": "Simi",
+      "description": "Akllay munasqayki simita"
+    },
+    "about": {
+      "group": "Imamanta"
+    },
+    "feedback": "Qhawaykunata apachiy",
+    "contribute": {
+      "prefix": "Yanapakuy kaypi",
+      "link": "GitHub nisqapi",
+      "suffix": "kay yupayta allinchayta yanapanapaq"
+    },
+    "links": {
+      "repository": "Proyecto waqaychasqa",
+      "readme": "ÑAWINCHAY",
+      "license": "MIT nisqa licencia"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Estándar nisqa",
+      "subtitle": "Clásico chaylla chaninchay"
+    },
+    "scientific": {
+      "label": "Yachay yachay",
+      "subtitle": "Operadores, ruwanakuna, chaymanta expresion yanapakuy"
+    },
+    "graphing": {
+      "label": "Grafico ruway",
+      "subtitle": "Huk sanu rimayta huk plano cartesiano nisqapi siq'iy"
+    },
+    "programmer": {
+      "label": "Programador nisqa",
+      "subtitle": "Tukuy yupay yupaywan sapsi tikraywan"
+    },
+    "date": {
+      "label": "Punchaw yupay",
+      "subtitle": "Tariy unay pachakunata hinaspa turno punchawkunata"
+    },
+    "currency": {
+      "label": "Qolqe",
+      "subtitle": "Simulasqa qullqi tikray tasakunata tikray"
+    },
+    "volume": {
+      "label": "Volumen nisqa",
+      "subtitle": "Volumen tupuykunata tikray"
+    },
+    "length": {
+      "label": "Largo kaynin",
+      "subtitle": "Karu, suni unidadkunata tikray"
+    },
+    "weight": {
+      "label": "Llasaq hinaspa Masa",
+      "subtitle": "Llasaq hinaspa masa unidadkunata tikray"
+    },
+    "temperature": {
+      "label": "Q'uñi kaynin",
+      "subtitle": "Q'uñi kay escalakunata tikray"
+    },
+    "energy": {
+      "label": "Energía nisqamanta",
+      "subtitle": "Energía tupuykunata tikray"
+    },
+    "area": {
+      "label": "Área nisqa",
+      "subtitle": "Area tupuykunata tikray"
+    },
+    "speed": {
+      "label": "Utqaylla puriy",
+      "subtitle": "Utqaylla tupuykunata tikray"
+    },
+    "time": {
+      "label": "Tiempo",
+      "subtitle": "Tiempo tupuykunata tikray"
+    },
+    "power": {
+      "label": "Atiyniyuq",
+      "subtitle": "Atiy tupuykunata tikray"
+    },
+    "data": {
+      "label": "Datokuna",
+      "subtitle": "Digital waqaychay unidadkunata tikray"
+    },
+    "pressure": {
+      "label": "Presión nisqamanta",
+      "subtitle": "Unidades de presión nisqakunata tikray"
+    },
+    "angle": {
+      "label": "K’uchu",
+      "subtitle": "K'uchu tupuykunata tikray"
+    },
+    "settings": {
+      "label": "Ajustes nisqa",
+      "subtitle": "Rikuymanta hinaspa appmanta willakuy"
+    }
+  },
+  "categories": {
+    "Currency": "Qolqe",
+    "Volume": "Volumen nisqa",
+    "Length": "Largo kaynin",
+    "Mass": "Misa",
+    "Temperature": "Q'uñi kaynin",
+    "Energy": "Energía nisqamanta",
+    "Area": "Área nisqa",
+    "Speed": "Utqaylla puriy",
+    "Time": "Tiempo",
+    "Power": "Atiyniyuq",
+    "Data": "Willakuykuna",
+    "Pressure": "Presión nisqamanta",
+    "Angle": "K’uchu"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms nisqakuna",
+      "Nanometers": "Nanómetros nisqa",
+      "Microns": "Micronos nisqamanta",
+      "Millimeters": "Milímetros nisqa",
+      "Centimeters": "Centimetros nisqa",
+      "Meters": "Mitrukuna",
+      "Kilometers": "Kilómetros nisqa",
+      "Inches": "Pulgadas",
+      "Feet": "Chakikuna",
+      "Yards": "Yardakuna",
+      "Miles": "Millas nisqa",
+      "Nautical miles": "Millas náuticas nisqa",
+      "paperclips": "papelkuna",
+      "hands": "makikuna",
+      "jumbo jets": "jumbo jetkuna",
+      "Carats": "Kiratos nisqa",
+      "Milligrams": "Miligramos nisqa",
+      "Centigrams": "Centigramas nisqa",
+      "Decigrams": "Decigramas nisqa",
+      "Grams": "Gramos nisqa",
+      "Dekagrams": "Dekagramas nisqakuna",
+      "Hectograms": "Hectogramas nisqa",
+      "Kilograms": "Kilogramas nisqa",
+      "Metric tonnes": "Toneladas métricas nisqa",
+      "Ounces": "Onzakuna",
+      "Pounds": "Librakuna",
+      "Stone": "Rumimanta",
+      "Short tons (US)": "Pisi tonelada (EE.UU.) .",
+      "Long tons (UK)": "Unay tonelada (Reino Unido) .",
+      "snowflakes": "rit'i llimp'ikuna",
+      "soccer balls": "piluta hayt'ay pelotakuna",
+      "elephants": "elefantekuna",
+      "whales": "ballenas nisqakuna",
+      "Celsius": "Celsius sutiyuq runa",
+      "Fahrenheit": "Fahrenheit nisqamanta",
+      "Kelvin": "Kelvin sutiyuq runa",
+      "Milliliters": "Mililitras nisqa",
+      "Cubic centimeters": "Centimetros cúbicos nisqa",
+      "Liters": "Litrokuna",
+      "Cubic meters": "Metros cúbicos nisqa",
+      "Teaspoons (US)": "Cucharaditas (EE.UU.) .",
+      "Tablespoons (US)": "Cucharas (EE.UU.)",
+      "Fluid ounces (US)": "Onzakuna fluido (EE.UU.) .",
+      "Cups (US)": "Kupakuna (EE.UU.)",
+      "Pints (US)": "Pintakuna (EE.UU.)",
+      "Quarts (US)": "Quarts (EE.UU.)",
+      "Gallons (US)": "Galonkuna (EE.UU.)",
+      "Cubic inches": "Pulgadas cúbicas nisqa",
+      "Cubic feet": "Chaki kubik",
+      "Cubic yards": "Kubiku yardakuna",
+      "Teaspoons (UK)": "Cucharaditas (Reino Unido) .",
+      "Tablespoons (UK)": "Cucharas (Reino Unido) .",
+      "Fluid ounces (UK)": "Fluido onzas (Reino Unido) .",
+      "Pints (UK)": "Pints (Reino Unido)",
+      "Quarts (UK)": "Quarts (Reino Unido)",
+      "Gallons (UK)": "Galonkuna (Reino Unido)",
+      "coffee cups": "kaphiy tazakuna",
+      "bathtubs": "bañerakuna",
+      "swimming pools": "piscinakuna",
+      "Square millimeters": "Milímetros cuadrados nisqa",
+      "Square centimeters": "Centímetros cuadrados nisqa",
+      "Square meters": "Mitros cuadrados nisqa",
+      "Hectares": "Hectáreas nisqa",
+      "Square kilometers": "Kilumetro cuadrado",
+      "Square inches": "Pugadas cuadradas nisqa",
+      "Square feet": "Chaki kuadrata",
+      "Square yards": "Kuadrata yardakuna",
+      "Acres": "Acres nisqa",
+      "Square miles": "Millas cuadradas nisqa",
+      "sheets of paper": "raphikuna",
+      "soccer fields": "piluta hayt'ay pampakuna",
+      "castles": "kastillokuna",
+      "Pyeong": "Pyeong sutiyuq runa",
+      "Centimeters per second": "Centimetros sapa segundo",
+      "Meters per second": "Mitrukuna sapa segundo",
+      "Kilometers per hour": "Kilómetros sapa hora",
+      "Feet per second": "Chakikuna sapa segundo",
+      "Miles per hour": "Millas sapa hora",
+      "Knots": "Nudos nisqakuna",
+      "Mach": "Mach",
+      "turtles": "tortugakuna",
+      "horses": "kawallukuna",
+      "jets": "jet nisqakuna",
+      "Watts": "Watts nisqa",
+      "Kilowatts": "Kilowats nisqa",
+      "Horsepower (US)": "Kawallu kallpa (EE.UU.)",
+      "Foot-pounds/minute": "Chaki-libras/minuto",
+      "BTUs/minute": "BTUkuna/minuto",
+      "light bulbs": "k'anchaypa llimp'inkuna",
+      "train engines": "trenpa motorninkuna",
+      "Thermal calories": "Calorías térmicas nisqa",
+      "Food calories": "Mikhuy calorías nisqa",
+      "British thermal units": "Unidades térmicas británicas nisqakuna",
+      "Kilojoules": "Kilojoules nisqa",
+      "Kilowatt-hours": "Kilowatt-urakuna",
+      "Electron volts": "Electrón voltios nisqakuna",
+      "Joules": "Joules nisqa",
+      "Foot-pounds": "Chaki-kibrakuna",
+      "batteries": "pilakuna",
+      "bananas": "plátanos",
+      "slices of cake": "tortamanta phatmakuna",
+      "Bits": "Bits nisqakuna",
+      "Nibble": "Nibble sutiyuq runa",
+      "Bytes": "Bites nisqa",
+      "Kilobits": "Kilobitas nisqakuna",
+      "Kibibits": "Kibibits nisqa",
+      "Kilobytes": "Kilobyte nisqa",
+      "Kibibytes": "Kibibyte nisqa",
+      "Megabits": "Megabits nisqa",
+      "Mebibits": "Mebibits nisqamanta",
+      "Megabytes": "Megabytes nisqa",
+      "Mebibytes": "Mebibytes nisqa",
+      "Gigabits": "Gigabits nisqa",
+      "Gibibits": "Gibibits nisqa",
+      "Gigabytes": "Gigabytes nisqa",
+      "Gibibytes": "Gibibyte nisqa",
+      "Terabits": "Terabits nisqa",
+      "Tebibits": "Tebibits nisqamanta",
+      "Terabytes": "Terabytes nisqa",
+      "Tebibytes": "Tebibytes nisqa",
+      "Petabits": "Petabits nisqa",
+      "Pebibits": "Pebibits nisqa",
+      "Petabytes": "Petabytes nisqa",
+      "Pebibytes": "Pebibytes nisqa",
+      "Exabits": "Exabits nisqa",
+      "Exbibits": "Exbibits nisqa",
+      "Exabytes": "Exabytes nisqa",
+      "Exbibytes": "Exbibytes nisqa",
+      "Zetabits": "Zetabits nisqamanta",
+      "Zebibits": "Zebibits nisqa",
+      "Zetabytes": "Zetabytes nisqa",
+      "Zebibytes": "Zebibytes nisqa",
+      "Yottabits": "Yotabits nisqamanta",
+      "Yobibits": "Yobibits nisqamanta",
+      "Yottabytes": "Yotabytes nisqa",
+      "Yobibytes": "Yobibytes nisqa",
+      "floppy disks": "disquetekuna",
+      "CDs": "CD nisqakuna",
+      "DVDs": "DVD nisqakuna",
+      "Atmospheres": "Atmósferas nisqakuna",
+      "Bars": "Barrakuna",
+      "Kilopascals": "Kilopascalkuna",
+      "Millimeters of mercury": "Milímetros nisqa mercurio nisqa",
+      "Pascals": "Pascalkuna",
+      "Pounds per square inch": "Librakuna sapa pulgada cuadradapi",
+      "Degrees": "Gradokuna",
+      "Radians": "Radiankuna",
+      "Gradians": "Gradianokuna",
+      "Microseconds": "Microsegundokuna",
+      "Milliseconds": "Milisegundokuna",
+      "Seconds": "Iskay kaq",
+      "Minutes": "Minutos nisqa",
+      "Hours": "Horakuna",
+      "Days": "P'unchawkuna",
+      "Weeks": "Semanakuna",
+      "Years": "Watakuna"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Dollar EE.UU",
+      "Euro": "Euro nisqa",
+      "British Pound": "Libra Británica",
+      "Japanese Yen": "Japonmanta Yen",
+      "Canadian Dollar": "Kanadamanta Dólar",
+      "Australian Dollar": "Australiamanta Dólar",
+      "Brazilian Real": "Brasil Real nisqa",
+      "Chilean Peso": "Chilemanta Peso",
+      "Chinese Yuan": "China Yuan",
+      "Colombian Peso": "Colombiamanta Peso",
+      "Danish Krone": "Danés Krone sutiyuq runa",
+      "Egyptian Pound": "Egiptomanta Libra",
+      "Hong Kong Dollar": "Hong Kong qullqi",
+      "Indian Rupee": "Indio Rupia",
+      "Kenyan Shilling": "Keniamanta Shilling",
+      "Mexican Peso": "Mexicano Peso",
+      "Nigerian Naira": "Nigeriamanta Naira",
+      "New Zealand Dollar": "Musuq Silandamanta Dólar",
+      "Norwegian Krone": "Noruegamanta Krone",
+      "Philippine Piso": "Filipina Piso",
+      "Polish Zloty": "Polaco Zloty sutiyuq runa",
+      "Qatari Riyal": "Qatari Riyal sutiyuq runa",
+      "Saudi Riyal": "Rial Saudita",
+      "Singapore Dollar": "Singapur qullqi",
+      "South African Rand": "Sudáfrica suyumanta Rand",
+      "South Korean Won": "Sur Coreamanta Won",
+      "Swedish Krona": "Sueciamanta Crona",
+      "Swiss Franc": "Suizamanta Franco",
+      "Thai Baht": "Tailandiamanta Baht",
+      "Turkish Lira": "Tuku Lira",
+      "Turkmenistani Manat": "Turkmenistán suyumanta mana",
+      "Ugandan Shilling": "Ugandamanta Shilling",
+      "Ukrainian Hryvnia": "Ukranyamanta Hrivnia",
+      "UAE Dirham": "Emiratos Árabes Unidos Dirham",
+      "Uruguayan Peso": "Peso uruguayo",
+      "Uzbekistani Som": "Uzbekistán simipi Som",
+      "Vanuatu Vatu": "Vanuatu Vatu sutiyuq runa",
+      "Venezuelan Bolivar Soberano": "Venezuelamanta Bolívar Soberano sutiyuq runa",
+      "Vietnamese Dong": "Vietnammanta Dong",
+      "Yemeni Rial": "Yemen Rial"
+    },
+    "labels": {
+      "United States - Dollar": "Hukllachasqa Amirika Suyukuna - Dólar",
+      "Europe - Euro": "Iwrupa - Euro",
+      "United Kingdom - Pound": "Reino Unido - Libra",
+      "Japan - Yen": "Japón - Yen",
+      "Canada - Dollar": "Kanada - Dólar",
+      "Australia - Dollar": "Australia - Dólar",
+      "Brazil - Real": "Brasil - Chiqap",
+      "Chile - Peso": "Chili - Peso",
+      "China - Yuan Renminbi": "China - Yuan Renminbi",
+      "Colombia - Peso": "Colombia - Peso",
+      "Denmark - Krone": "Dinamarca - Krone",
+      "Egypt - Pound": "Egipto - Libra",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Dólar",
+      "India - Rupee": "India - Rupia",
+      "Kenya - Shilling": "Kenia - Shilling",
+      "Mexico - Peso": "México - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "Musuq Silanda - Dólar",
+      "Norway - Krone": "Noruega - Krone",
+      "Philippines - Piso": "Filipinas - Piso",
+      "Poland - Zloty": "Polonia - Zloty llaqtapi",
+      "Qatar - Riyal": "Qatar - Riyal llaqta",
+      "Saudi Arabia - Riyal": "Arabia Saudita - Riyal",
+      "Singapore - Dollar": "Singapur - Dólar",
+      "South Africa - Rand": "Urin Afrika - Rand",
+      "South Korea - Won": "Corea del Sur - Ganado",
+      "Sweden - Krona": "Suecia - Krona",
+      "Switzerland - Franc": "Suiza - Franco",
+      "Thailand - Baht": "Tailandia - Baht",
+      "Turkey - Lira": "Turquía - Lira",
+      "Turkmenistan - Manat": "Turkmenistán - Manat",
+      "Uganda - Shilling": "Uganda - Shilling",
+      "Ukraine - Hryvnia": "Ukranya - Rivnia",
+      "United Arab Emirates - Dirham": "Hukllachasqa Arabya mama llaqta - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Uzbekistán - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemen - Rial"
+    }
+  }
+}

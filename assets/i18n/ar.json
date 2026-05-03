@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "آلة حاسبة",
+    "name": "آلة حاسبة"
+  },
+  "common": {
+    "back": "رجوع",
+    "backspace": "مسافة للخلف",
+    "closeSidePanel": "إغلاق اللوحة"
+  },
+  "converter": {
+    "unitConverter": "محول الوحدات",
+    "title": "محولات الوحدات",
+    "builtInCollections": "المجموعات المضمنة",
+    "category": "الفئة",
+    "from": "من",
+    "to": "إلى",
+    "inputValue": "القيمة المطلوب تحويلها",
+    "convertedValue": "القيمة المحولة",
+    "swapUnits": "وحدات المبادلة",
+    "keypad": "لوحة مفاتيح المحول",
+    "unit": "الوحدة",
+    "unitOptions": "خيارات الوحدة",
+    "currency": {
+      "updatingRates": "جارٍ تحديث الأسعار…",
+      "updateRates": "تحديث الأسعار",
+      "keypad": "لوحة مفاتيح العملة",
+      "currency": "العملة",
+      "options": "خيارات العملة",
+      "updated": "تم التحديث {timestamp}",
+      "status": {
+        "mockNote": "أسعار مرجعية وهمية للعرض التوضيحي للتطبيق المستقل.",
+        "fetching": "جارٍ جلب أحدث الأسعار المرجعية للدولار الأمريكي...",
+        "liveRatesLoaded": "تم تحميل الأسعار المباشرة من ExchangeRate-API.",
+        "liveUpdateUnavailable": "التحديث المباشر غير متاح. تحديث الأسعار التجريبية محليًا."
+      }
+    },
+    "aboutEqualTo": "حوالي يساوي"
+  },
+  "errors": {
+    "invalidInput": "إدخال غير صالح",
+    "cannotDivideByZero": "لا يمكن القسمة على صفر",
+    "cannotModuloByZero": "لا يمكن تعديل القيمة بمقدار صفر",
+    "invalidProgrammerOperation": "عملية غير صالحة",
+    "overflow": "النتيجة كبيرة جدًا"
+  },
+  "date": {
+    "calculationMode": "وضع الحساب",
+    "from": "من",
+    "to": "إلى",
+    "results": {
+      "difference": "الفرق",
+      "sameDates": "نفس التواريخ",
+      "date": "التاريخ"
+    },
+    "calculationModeOptions": "خيارات وضع الحساب",
+    "mode": {
+      "difference": "الفرق",
+      "shift": "التحول"
+    },
+    "operation": "العملية",
+    "add": "إضافة",
+    "subtract": "طرح",
+    "years": "سنوات",
+    "months": "أشهر",
+    "days": "أيام",
+    "chooseDate": "اختر التاريخ",
+    "previousMonth": "الشهر السابق",
+    "nextMonth": "الشهر القادم",
+    "duration": {
+      "year": {
+        "one": "{count} سنة",
+        "other": "{count} سنة"
+      },
+      "month": {
+        "one": "{count} شهر",
+        "other": "{count} أشهر"
+      },
+      "week": {
+        "one": "{count} أسبوع",
+        "other": "{count} أسابيع"
+      },
+      "day": {
+        "one": "{count} يوم",
+        "other": "{count} يوم"
+      }
+    },
+    "history": {
+      "differenceBetween": "الفرق بين {from} و {to}",
+      "addTo": "أضف {duration} إلى {date}",
+      "subtractFrom": "طرح {duration} من {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "تحقق من التعبير المميز",
+    "enterExpression": "أدخل تعبيرًا",
+    "canvas": "لوحة الرسم البياني",
+    "stopTracing": "أوقف التتبع",
+    "startTracing": "بدء التتبع",
+    "share": "شارك",
+    "options": "الخيارات",
+    "zoomIn": "تكبير",
+    "zoomInLabel": "تكبير",
+    "zoomOut": "تصغير",
+    "zoomOutLabel": "تصغير",
+    "refreshViewAutomatically": "تحديث العرض تلقائيًا",
+    "view": "عرض",
+    "expressions": "التعبيرات",
+    "mobileView": "عرض الجوال",
+    "showGraph": "إظهار الرسم البياني",
+    "showExpressions": "إظهار التعبيرات",
+    "backToFunctionList": "العودة إلى قائمة الوظائف",
+    "window": "نافذة",
+    "resetView": "إعادة تعيين العرض",
+    "units": "الوحدات",
+    "radians": "راديان",
+    "degrees": "الدرجات",
+    "gradians": "الجراديون",
+    "lineThickness": "سمك الخط",
+    "theme": "الموضوع",
+    "alwaysLight": "خفيف دائمًا",
+    "matchAppTheme": "تطابق موضوع التطبيق",
+    "groups": {
+      "inequalities": "عدم المساواة",
+      "trigonometry": "علم المثلثات",
+      "function": "الوظيفة"
+    },
+    "functions": "الوظائف",
+    "showEquation": "إظهار المعادلة",
+    "hideEquation": "إخفاء المعادلة",
+    "lineOptions": "خيارات الخط",
+    "color": "اللون",
+    "style": "النمط",
+    "analysis": {
+      "title": "التحليل",
+      "domain": "المجال",
+      "range": "النطاق",
+      "xIntercept": "تقاطع x",
+      "yIntercept": "تقاطع y",
+      "minima": "الحد الأدنى",
+      "maxima": "الحد الأقصى",
+      "inflectionPoints": "نقاط انعطاف",
+      "verticalAsymptotes": "الخطوط المقاربة العمودية",
+      "horizontalAsymptotes": "الخطوط المقاربة الأفقية",
+      "obliqueAsymptotes": "الخطوط المقاربة المائلة",
+      "parity": "التكافؤ",
+      "period": "الفترة",
+      "monotonicity": "الرتابة",
+      "domainNone": "لا توجد قيود على المجال",
+      "rangeNone": "لا توجد قيود على النطاق",
+      "xInterceptNone": "لا توجد تقاطعات x",
+      "yInterceptNone": "لا توجد تقاطعات على شكل y",
+      "minimaNone": "لا يوجد حد أدنى",
+      "maximaNone": "لا يوجد حد أقصى",
+      "inflectionNone": "لا توجد نقاط انعطاف",
+      "verticalAsymptotesNone": "لا توجد خطوط تقارب رأسية",
+      "horizontalAsymptotesNone": "لا توجد خطوط مقاربة أفقية",
+      "obliqueAsymptotesNone": "لا توجد خطوط مقاربة مائلة",
+      "parityUnknown": "غير معروف",
+      "parityOdd": "غريب",
+      "parityEven": "حتى",
+      "parityNeither": "لا هذا ولا ذاك",
+      "periodicityUnknown": "غير معروف",
+      "periodicityNotPeriodic": "غير دورية",
+      "monotonicityConstant": "ثابت",
+      "monotonicityIncreasing": "تزايد",
+      "monotonicityDecreasing": "متناقص",
+      "monotonicityUnknown": "غير معروف",
+      "monotonicityError": "لا يمكن التحديد",
+      "featureTooComplexPlural": "معقد للغاية بحيث لا يمكن تحليله",
+      "analysisCouldNotBePerformed": "لا يمكن إجراء التحليل",
+      "analysisNotSupported": "التحليل غير مدعوم",
+      "variableIsNotX": "المتغير ليس x"
+    },
+    "plottingExpressions": "رسم {count} التعبيرات",
+    "xMin": "س-مين",
+    "xMax": "X-ماكس",
+    "yMin": "نعم-مين",
+    "yMax": "ص-ماكس",
+    "selectExpression": "حدد التعبير {index}",
+    "expressionIndex": "التعبير {index}",
+    "analyzeFunction": "وظيفة التحليل",
+    "changeEquationStyle": "تغيير نمط المعادلة",
+    "removeEquation": "إزالة المعادلة",
+    "lineStyle": {
+      "solid": "نمط الخط المتصل",
+      "dash": "نمط الخط المتقطع",
+      "dot": "نمط الخط المنقط"
+    }
+  },
+  "history": {
+    "empty": "السجل فارغ",
+    "clearAll": "مسح الكل",
+    "clear": "مسح السجل",
+    "title": "التاريخ",
+    "andMemory": "التاريخ والذاكرة",
+    "aria": {
+      "historyPanel": "لوحة التاريخ",
+      "historyAndMemoryPanel": "لوحة التاريخ والذاكرة"
+    },
+    "closeFlyout": "إغلاق السجل",
+    "openFlyout": "افتح السجل"
+  },
+  "memory": {
+    "empty": "الذاكرة فارغة",
+    "clearItem": "مسح العنصر",
+    "addCurrentValue": "أضف القيمة الحالية",
+    "subtractCurrentValue": "طرح القيمة الحالية",
+    "clearAll": "مسح الكل",
+    "clear": "مسح الذاكرة",
+    "title": "الذاكرة",
+    "controls": "عناصر التحكم في الذاكرة",
+    "tooltips": {
+      "clearAll": "مسح كل الذاكرة",
+      "recall": "استدعاء من الذاكرة",
+      "add": "إضافة إلى الذاكرة",
+      "subtract": "اطرح من الذاكرة",
+      "store": "مخزن في الذاكرة"
+    },
+    "recallValue": "ذاكرة الاستدعاء {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "الملاحة",
+      "closeNavigation": "إغلاق التنقل",
+      "openNavigation": "فتح التنقل"
+    },
+    "groups": {
+      "calculator": "آلة حاسبة",
+      "converter": "المحول"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "لوحة قلابة للبت",
+    "baseReadouts": "قراءات القاعدة",
+    "surfaceMode": "وضع السطح",
+    "fullKeypad": "لوحة مفاتيح كاملة",
+    "showKeypad": "إظهار لوحة المفاتيح",
+    "bitTogglingKeypad": "بت تبديل لوحة المفاتيح",
+    "showBitView": "إظهار عرض البت",
+    "wordSize": "حجم الكلمة",
+    "bitwise": "بطريقة البت",
+    "bitShift": "إزاحة البت"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "علم المثلثات",
+      "function": "الدالة",
+      "functionsAria": "الوظائف",
+      "trigonometricFunctionsAria": "الدوال المثلثية",
+      "angleUnit": "وحدة الزاوية {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "المظهر",
+      "themeTitle": "الموضوع",
+      "themeDescription": "اختر نظام ألوان",
+      "light": "الضوء",
+      "dark": "مظلم",
+      "blue": "الأزرق",
+      "green": "أخضر",
+      "system": "النظام"
+    },
+    "language": {
+      "group": "اللغة",
+      "title": "اللغة",
+      "description": "اختر لغتك المفضلة"
+    },
+    "about": {
+      "group": "حول"
+    },
+    "feedback": "أرسل تعليقات",
+    "contribute": {
+      "prefix": "ساهم في",
+      "link": "جيثب",
+      "suffix": "للمساعدة في تحسين هذه الآلة الحاسبة"
+    },
+    "links": {
+      "repository": "مستودع المشروع",
+      "readme": "اقرأني",
+      "license": "ترخيص معهد ماساتشوستس للتكنولوجيا"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "قياسي",
+      "subtitle": "التقييم الفوري الكلاسيكي"
+    },
+    "scientific": {
+      "label": "علمية",
+      "subtitle": "دعم العمليات والوظائف والتعبيرات"
+    },
+    "graphing": {
+      "label": "الرسوم البيانية",
+      "subtitle": "ارسم تعبيرًا بسيطًا على المستوى الديكارتي"
+    },
+    "programmer": {
+      "label": "مبرمج",
+      "subtitle": "حسابات عددية صحيحة مع تحويل أساسي"
+    },
+    "date": {
+      "label": "حساب التاريخ",
+      "subtitle": "البحث عن المدد وتواريخ المناوبة"
+    },
+    "currency": {
+      "label": "العملة",
+      "subtitle": "تحويل أسعار الصرف الوهمية"
+    },
+    "volume": {
+      "label": "الحجم",
+      "subtitle": "تحويل قياسات الحجم"
+    },
+    "length": {
+      "label": "الطول",
+      "subtitle": "تحويل وحدات المسافة والطول"
+    },
+    "weight": {
+      "label": "الوزن والكتلة",
+      "subtitle": "تحويل وحدات الوزن والكتلة"
+    },
+    "temperature": {
+      "label": "درجة الحرارة",
+      "subtitle": "تحويل موازين درجات الحرارة"
+    },
+    "energy": {
+      "label": "الطاقة",
+      "subtitle": "تحويل قياسات الطاقة"
+    },
+    "area": {
+      "label": "المنطقة",
+      "subtitle": "تحويل قياسات المنطقة"
+    },
+    "speed": {
+      "label": "السرعة",
+      "subtitle": "تحويل قياسات السرعة"
+    },
+    "time": {
+      "label": "الوقت",
+      "subtitle": "تحويل قياسات الوقت"
+    },
+    "power": {
+      "label": "القوة",
+      "subtitle": "تحويل قياسات الطاقة"
+    },
+    "data": {
+      "label": "البيانات",
+      "subtitle": "تحويل وحدات التخزين الرقمية"
+    },
+    "pressure": {
+      "label": "الضغط",
+      "subtitle": "تحويل وحدات الضغط"
+    },
+    "angle": {
+      "label": "الزاوية",
+      "subtitle": "تحويل قياسات الزوايا"
+    },
+    "settings": {
+      "label": "الإعدادات",
+      "subtitle": "معلومات المظهر والتطبيق"
+    }
+  },
+  "categories": {
+    "Currency": "العملة",
+    "Volume": "الحجم",
+    "Length": "الطول",
+    "Mass": "القداس",
+    "Temperature": "درجة الحرارة",
+    "Energy": "الطاقة",
+    "Area": "المنطقة",
+    "Speed": "السرعة",
+    "Time": "الوقت",
+    "Power": "القوة",
+    "Data": "البيانات",
+    "Pressure": "الضغط",
+    "Angle": "الزاوية"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "أنجستروم",
+      "Nanometers": "نانومتر",
+      "Microns": "ميكرون",
+      "Millimeters": "مليمتر",
+      "Centimeters": "سنتيمتر",
+      "Meters": "متر",
+      "Kilometers": "كيلومترات",
+      "Inches": "بوصة",
+      "Feet": "قدم",
+      "Yards": "ياردات",
+      "Miles": "الأميال",
+      "Nautical miles": "ميل بحري",
+      "paperclips": "مشابك الورق",
+      "hands": "الأيدي",
+      "jumbo jets": "طائرات جامبو",
+      "Carats": "قيراط",
+      "Milligrams": "مليجرام",
+      "Centigrams": "سنتيجرام",
+      "Decigrams": "ديسيجرام",
+      "Grams": "جرام",
+      "Dekagrams": "ديكاجرامز",
+      "Hectograms": "هيكتوجرام",
+      "Kilograms": "كيلوجرام",
+      "Metric tonnes": "طن متري",
+      "Ounces": "أوقية",
+      "Pounds": "جنيه",
+      "Stone": "حجر",
+      "Short tons (US)": "طن قصير (الولايات المتحدة)",
+      "Long tons (UK)": "طن طويل (المملكة المتحدة)",
+      "snowflakes": "رقاقات الثلج",
+      "soccer balls": "كرات كرة القدم",
+      "elephants": "الأفيال",
+      "whales": "الحيتان",
+      "Celsius": "مئوية",
+      "Fahrenheit": "فهرنهايت",
+      "Kelvin": "كلفن",
+      "Milliliters": "مليلتر",
+      "Cubic centimeters": "سنتيمتر مكعب",
+      "Liters": "لتر",
+      "Cubic meters": "متر مكعب",
+      "Teaspoons (US)": "ملعقة صغيرة (الولايات المتحدة)",
+      "Tablespoons (US)": "ملعقة كبيرة (الولايات المتحدة)",
+      "Fluid ounces (US)": "أوقية السوائل (الولايات المتحدة)",
+      "Cups (US)": "الكؤوس (الولايات المتحدة)",
+      "Pints (US)": "باينت (الولايات المتحدة)",
+      "Quarts (US)": "كوارت (الولايات المتحدة)",
+      "Gallons (US)": "جالون (الولايات المتحدة)",
+      "Cubic inches": "بوصة مكعبة",
+      "Cubic feet": "قدم مكعب",
+      "Cubic yards": "ياردات مكعبة",
+      "Teaspoons (UK)": "ملعقة صغيرة (المملكة المتحدة)",
+      "Tablespoons (UK)": "ملعقة كبيرة (المملكة المتحدة)",
+      "Fluid ounces (UK)": "أوقية السوائل (المملكة المتحدة)",
+      "Pints (UK)": "باينت (المملكة المتحدة)",
+      "Quarts (UK)": "كوارت (المملكة المتحدة)",
+      "Gallons (UK)": "جالون (المملكة المتحدة)",
+      "coffee cups": "أكواب القهوة",
+      "bathtubs": "أحواض الاستحمام",
+      "swimming pools": "حمامات السباحة",
+      "Square millimeters": "مليمتر مربع",
+      "Square centimeters": "سنتيمترات مربعة",
+      "Square meters": "متر مربع",
+      "Hectares": "هكتار",
+      "Square kilometers": "كيلومترات مربعة",
+      "Square inches": "بوصة مربعة",
+      "Square feet": "قدم مربع",
+      "Square yards": "ياردات مربعة",
+      "Acres": "فدان",
+      "Square miles": "ميل مربع",
+      "sheets of paper": "أوراق",
+      "soccer fields": "ملاعب كرة القدم",
+      "castles": "القلاع",
+      "Pyeong": "بيونغ",
+      "Centimeters per second": "سنتيمتر في الثانية",
+      "Meters per second": "متر في الثانية",
+      "Kilometers per hour": "كيلومتر في الساعة",
+      "Feet per second": "قدم في الثانية",
+      "Miles per hour": "ميل في الساعة",
+      "Knots": "عقدة",
+      "Mach": "ماخ",
+      "turtles": "السلاحف",
+      "horses": "الخيول",
+      "jets": "الطائرات",
+      "Watts": "واتس",
+      "Kilowatts": "كيلووات",
+      "Horsepower (US)": "القدرة بالحصان (الولايات المتحدة)",
+      "Foot-pounds/minute": "قدم رطل/دقيقة",
+      "BTUs/minute": "وحدة حرارية بريطانية/الدقيقة",
+      "light bulbs": "مصابيح كهربائية",
+      "train engines": "محركات القطار",
+      "Thermal calories": "السعرات الحرارية",
+      "Food calories": "السعرات الحرارية للطعام",
+      "British thermal units": "الوحدات الحرارية البريطانية",
+      "Kilojoules": "كيلوجول",
+      "Kilowatt-hours": "كيلووات/ساعة",
+      "Electron volts": "إلكترون فولت",
+      "Joules": "جول",
+      "Foot-pounds": "قدم رطل",
+      "batteries": "بطاريات",
+      "bananas": "الموز",
+      "slices of cake": "شرائح من الكعكة",
+      "Bits": "بت",
+      "Nibble": "عاب",
+      "Bytes": "بايت",
+      "Kilobits": "كيلوبت",
+      "Kibibits": "كيبيبت",
+      "Kilobytes": "كيلوبايت",
+      "Kibibytes": "كيبيبايت",
+      "Megabits": "ميجابت",
+      "Mebibits": "ميبيبت",
+      "Megabytes": "ميجابايت",
+      "Mebibytes": "ميبيبايت",
+      "Gigabits": "جيجابت",
+      "Gibibits": "جيبيتس",
+      "Gigabytes": "جيجابايت",
+      "Gibibytes": "غيبايت",
+      "Terabits": "تيرابت",
+      "Tebibits": "تيبيبت",
+      "Terabytes": "تيرابايت",
+      "Tebibytes": "تيبيبايت",
+      "Petabits": "بيتابت",
+      "Pebibits": "بيبيتس",
+      "Petabytes": "بيتابايت",
+      "Pebibytes": "بيبيبايت",
+      "Exabits": "إكسابيتس",
+      "Exbibits": "إكسيبيتس",
+      "Exabytes": "إكزا بايت",
+      "Exbibytes": "إكسبيبايت",
+      "Zetabits": "زيتابيتس",
+      "Zebibits": "الزيبيبيتس",
+      "Zetabytes": "زيتابايت",
+      "Zebibytes": "زيبيبايت",
+      "Yottabits": "يوتابتس",
+      "Yobibits": "اليوبيت",
+      "Yottabytes": "يوتابايت",
+      "Yobibytes": "يوبيبايت",
+      "floppy disks": "الأقراص المرنة",
+      "CDs": "الأقراص المدمجة",
+      "DVDs": "أقراص الفيديو الرقمية",
+      "Atmospheres": "الأجواء",
+      "Bars": "أشرطة",
+      "Kilopascals": "كيلوباسكال",
+      "Pascals": "باسكال",
+      "Pounds per square inch": "جنيه لكل بوصة مربعة",
+      "Degrees": "الدرجات",
+      "Radians": "راديان",
+      "Gradians": "الجراديون",
+      "Microseconds": "ميكروثانية",
+      "Milliseconds": "ملي ثانية",
+      "Seconds": "ثواني",
+      "Minutes": "دقائق",
+      "Hours": "ساعات",
+      "Days": "أيام",
+      "Weeks": "أسابيع",
+      "Years": "سنوات",
+      "Millimeters of mercury": "Millimeters of mercury"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "الدولار الأمريكي",
+      "Euro": "اليورو",
+      "British Pound": "الجنيه الاسترليني",
+      "Japanese Yen": "الين الياباني",
+      "Canadian Dollar": "الدولار الكندي",
+      "Australian Dollar": "الدولار الأسترالي",
+      "Brazilian Real": "الريال البرازيلي",
+      "Chilean Peso": "البيزو التشيلي",
+      "Chinese Yuan": "اليوان الصيني",
+      "Colombian Peso": "البيزو الكولومبي",
+      "Danish Krone": "الكرونة الدنماركية",
+      "Egyptian Pound": "الجنيه المصري",
+      "Hong Kong Dollar": "دولار هونج كونج",
+      "Indian Rupee": "روبية هندية",
+      "Kenyan Shilling": "شلن كيني",
+      "Mexican Peso": "البيزو المكسيكي",
+      "Nigerian Naira": "نايرا نيجيرية",
+      "New Zealand Dollar": "الدولار النيوزيلندي",
+      "Norwegian Krone": "الكرونة النرويجية",
+      "Philippine Piso": "البيزو الفلبيني",
+      "Polish Zloty": "الزلوتي البولندي",
+      "Qatari Riyal": "الريال القطري",
+      "Saudi Riyal": "ريال سعودي",
+      "Singapore Dollar": "دولار سنغافوري",
+      "South African Rand": "راند جنوب أفريقيا",
+      "South Korean Won": "وون كوريا الجنوبية",
+      "Swedish Krona": "الكرونا السويدية",
+      "Swiss Franc": "الفرنك السويسري",
+      "Thai Baht": "باهت تايلاندي",
+      "Turkish Lira": "الليرة التركية",
+      "Turkmenistani Manat": "مانات تركمانستان",
+      "Ugandan Shilling": "شلن أوغندي",
+      "Ukrainian Hryvnia": "الهريفنيا الأوكرانية",
+      "UAE Dirham": "درهم الإمارات",
+      "Uruguayan Peso": "البيزو الأوروغواي",
+      "Uzbekistani Som": "السوم الأوزبكي",
+      "Vanuatu Vatu": "فاتو فانواتو",
+      "Venezuelan Bolivar Soberano": "بوليفار سوبيرانو الفنزويلي",
+      "Vietnamese Dong": "دونغ الفيتنامي",
+      "Yemeni Rial": "ريال يمني"
+    },
+    "labels": {
+      "United States - Dollar": "الولايات المتحدة - دولار",
+      "Europe - Euro": "أوروبا - اليورو",
+      "United Kingdom - Pound": "المملكة المتحدة - جنيه استرليني",
+      "Japan - Yen": "اليابان - ين ياباني",
+      "Canada - Dollar": "كندا - الدولار",
+      "Australia - Dollar": "أستراليا - دولار",
+      "Brazil - Real": "البرازيل - الريال",
+      "Chile - Peso": "تشيلي - البيزو",
+      "China - Yuan Renminbi": "الصين - اليوان الرينمنبي",
+      "Colombia - Peso": "كولومبيا - البيزو",
+      "Denmark - Krone": "الدنمارك - الكرون",
+      "Egypt - Pound": "مصر - جنيه",
+      "Hong Kong SAR - Dollar": "منطقة هونج كونج الإدارية الخاصة - دولار",
+      "India - Rupee": "الهند - روبية",
+      "Kenya - Shilling": "كينيا - الشلن",
+      "Mexico - Peso": "المكسيك - البيزو",
+      "Nigeria - Naira": "نيجيريا - نايرا",
+      "New Zealand - Dollar": "نيوزيلندا - دولار",
+      "Norway - Krone": "النرويج - كرونة",
+      "Philippines - Piso": "الفلبين - بيزو",
+      "Poland - Zloty": "بولندا - زلوتي",
+      "Qatar - Riyal": "قطر - الريال",
+      "Saudi Arabia - Riyal": "المملكة العربية السعودية - ريال",
+      "Singapore - Dollar": "سنغافورة - دولار",
+      "South Africa - Rand": "جنوب أفريقيا - راند",
+      "South Korea - Won": "كوريا الجنوبية - وون",
+      "Sweden - Krona": "السويد - الكرونا",
+      "Switzerland - Franc": "سويسرا - الفرنك",
+      "Thailand - Baht": "تايلاند - باهت",
+      "Turkey - Lira": "تركيا - الليرة",
+      "Turkmenistan - Manat": "تركمانستان - مانات",
+      "Uganda - Shilling": "أوغندا - الشلن",
+      "Ukraine - Hryvnia": "أوكرانيا - الهريفنيا",
+      "United Arab Emirates - Dirham": "الإمارات العربية المتحدة - درهم",
+      "Uruguay - Peso": "الأوروغواي - البيزو",
+      "Uzbekistan - Som": "أوزبكستان - سوم",
+      "Vanuatu - Vatu": "فانواتو - فاتو",
+      "Venezuela - Bolívar Soberano": "فنزويلا - بوليفار سوبيرانو",
+      "Vietnam - Dong": "فيتنام - دونج",
+      "Yemen - Rial": "اليمن - الريال"
+    }
+  }
+}

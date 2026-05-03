@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Khalekhuleita",
+    "name": "Khalekhuleita"
+  },
+  "common": {
+    "back": "Morago",
+    "backspace": "Sebaka sa go boela morago",
+    "closeSidePanel": "Tswala phanele"
+  },
+  "converter": {
+    "unitConverter": "Sefetoledi sa Yuniti",
+    "title": "Diphetolelo tsa diyuniti",
+    "builtInCollections": "Dikokoanyo tse di ageletsweng",
+    "category": "Setlhopha",
+    "from": "Go tswa mo",
+    "to": "Go",
+    "inputValue": "Boleng jwa go fetola",
+    "convertedValue": "Boleng jo bo fetotsweng",
+    "swapUnits": "Ananya diyuniti",
+    "keypad": "Khipa ya sefetoledi",
+    "unit": "yuniti",
+    "unitOptions": "ditlhopho tsa yuniti",
+    "currency": {
+      "updatingRates": "Go tlhabolola ditlhwatlhwa...",
+      "updateRates": "Dikelo tsa ntšhwafatso",
+      "keypad": "Lefelo la dikonopo la madi",
+      "currency": "madi",
+      "options": "ditlhopho tsa madi",
+      "updated": "E tlhabolotswe {timestamp}",
+      "status": {
+        "mockNote": "Ditekanyetso tsa tshupiso tsa mock tsa pontsho ya tiriswa e e ikemetseng.",
+        "fetching": "Go tsaya ditlhwatlhwa tsa bosheng tsa USD...",
+        "liveRatesLoaded": "Ditlhwatlhwa tse di tshelang di laisitswe go tswa go API ya Tlhwatlhwa ya Phapantsho.",
+        "liveUpdateUnavailable": "Ntšhwafatso ya ka tlhamalalo ga e yo. Ditlhwatlhwa tsa pontsho tse di ntšhwafaditsweng mo lefelong la gaeno."
+      }
+    },
+    "aboutEqualTo": "E ka nna e lekana le"
+  },
+  "errors": {
+    "invalidInput": "Tsenyo e e sa direng",
+    "cannotDivideByZero": "Ga e kgone go arola ka lefela",
+    "cannotModuloByZero": "Ga e kgone go fetola ka lefela",
+    "invalidProgrammerOperation": "Tiro e e sa direng",
+    "overflow": "Dipholo di dikgolo thata"
+  },
+  "date": {
+    "calculationMode": "Mokgwa wa go balelela",
+    "from": "Go tswa mo",
+    "to": "Go",
+    "results": {
+      "difference": "Pharologano",
+      "sameDates": "Matlha a a tshwanang",
+      "date": "Letlha"
+    },
+    "calculationModeOptions": "Ditlhopho tsa mokgwa wa go balelela",
+    "mode": {
+      "difference": "Pharologano",
+      "shift": "Sutisa"
+    },
+    "operation": "Karo",
+    "add": "Oketsa",
+    "subtract": "Ntsha",
+    "years": "Dingwaga",
+    "months": "Dikgwedi",
+    "days": "Malatsi",
+    "chooseDate": "Tlhopha letlha",
+    "previousMonth": "Kgwedi e e fetileng",
+    "nextMonth": "Kgwedi e tlang",
+    "duration": {
+      "year": {
+        "one": "{count} ngwaga",
+        "other": "{count} dingwaga"
+      },
+      "month": {
+        "one": "{count} kgwedi",
+        "other": "{count} dikgwedi"
+      },
+      "week": {
+        "one": "{count} beke",
+        "other": "{count} dibeke"
+      },
+      "day": {
+        "one": "{count} letsatsi",
+        "other": "{count} malatsi"
+      }
+    },
+    "history": {
+      "differenceBetween": "Pharologano fa gare ga {from} le {to}",
+      "addTo": "Tsenya {duration} mo go {date}",
+      "subtractFrom": "Ntsha {duration} mo go {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Tlhola polelo e e tshwailweng",
+    "enterExpression": "Tsenya polelo",
+    "canvas": "Letsela la kerafo",
+    "stopTracing": "Emisa go latedisa",
+    "startTracing": "Simolola go latedisa",
+    "share": "Arolelana",
+    "options": "Ditlhopho",
+    "zoomIn": "Go atolosetsa",
+    "zoomInLabel": "Go atolosetsa",
+    "zoomOut": "Zoom fokotsega",
+    "zoomOutLabel": "Atolosa",
+    "refreshViewAutomatically": "Ntšhwafatsa tebo ka go itirisa",
+    "view": "Tebo",
+    "expressions": "Dipolelo",
+    "mobileView": "Tebo ya selulafouno",
+    "showGraph": "Bontsha kerafo",
+    "showExpressions": "Bontsha dipolelwana",
+    "backToFunctionList": "Boela kwa lenaaneng la ditiro",
+    "window": "Letlhaphefo",
+    "resetView": "Seta gape tebo",
+    "units": "Diyuniti",
+    "radians": "Diradiane",
+    "degrees": "Didikirii",
+    "gradians": "Dikgato",
+    "lineThickness": "Bokima jwa mola",
+    "theme": "Morero",
+    "alwaysLight": "Lesedi ka metlha",
+    "matchAppTheme": "Tshwantsha setlhogo sa tiriswa",
+    "groups": {
+      "inequalities": "Go tlhoka tekatekano",
+      "trigonometry": "Tharonometri",
+      "function": "Modiro"
+    },
+    "functions": "Ditiro",
+    "showEquation": "Bontsha ikhweišene",
+    "hideEquation": "Fitlha ikhweišene",
+    "lineOptions": "Ditlhopho tsa mela",
+    "color": "Mmala",
+    "style": "Setaele",
+    "analysis": {
+      "title": "Tshekatsheko",
+      "domain": "Lephata",
+      "range": "Tlhatlhamano",
+      "xIntercept": "x-kgaogano",
+      "yIntercept": "y-kgaogano",
+      "minima": "Bonnye",
+      "maxima": "Maksima",
+      "inflectionPoints": "Dintlha tsa phetogo",
+      "verticalAsymptotes": "Dipalopalo tse di tsepameng",
+      "horizontalAsymptotes": "Dipalopalo tse di rapaletseng",
+      "obliqueAsymptotes": "Dipalopalo tse di sekamelang",
+      "parity": "Tekatekano",
+      "period": "Nako",
+      "monotonicity": "Go nna selo se le sengwe",
+      "domainNone": "Ga go na dithibelo tsa kgolagano ya dikhomphiutha",
+      "rangeNone": "Ga go na dithibelo tsa selekanyo",
+      "xInterceptNone": "Ga go na dikganetso tsa x",
+      "yInterceptNone": "Ga go na dikganetso tsa y",
+      "minimaNone": "Ga go bonnye",
+      "maximaNone": "Ga go maksimamo",
+      "inflectionNone": "Ga go na dintlha tsa phetogo",
+      "verticalAsymptotesNone": "Ga go na dipalopalo tse di emeng",
+      "horizontalAsymptotesNone": "Ga go na dipalopalo tse di rapaletseng",
+      "obliqueAsymptotesNone": "Ga go na dipalopalo tse di sekamelang",
+      "parityUnknown": "Ga e itsege",
+      "parityOdd": "Setlholo",
+      "parityEven": "Borethe",
+      "parityNeither": "Epe",
+      "periodicityUnknown": "Ga e itsege",
+      "periodicityNotPeriodic": "E seng nako le nako",
+      "monotonicityConstant": "Sa fetogeng",
+      "monotonicityIncreasing": "Go oketsega",
+      "monotonicityDecreasing": "Go fokotsega",
+      "monotonicityUnknown": "Ga e itsiwe",
+      "monotonicityError": "Ga e kgone go tlhomamisa",
+      "featureTooComplexPlural": "E raraane thata go ka e sekaseka",
+      "analysisCouldNotBePerformed": "Tshekatsheko ga e a kgona go dirwa",
+      "analysisNotSupported": "Tshekatsheko ga e tshegediwe",
+      "variableIsNotX": "Se se fetogang ga se x"
+    },
+    "plottingExpressions": "Go dira polate ya dipolelwana tsa {count}",
+    "xMin": "X-Motsotso",
+    "xMax": "X-Max",
+    "yMin": "Y-Motsotso",
+    "yMax": "Y-Bogolo",
+    "selectExpression": "Tlhopha polelo {index}",
+    "expressionIndex": "Tlhagiso {index}",
+    "analyzeFunction": "Sekaseka tiro",
+    "changeEquationStyle": "Fetola setaele sa ikhweišene",
+    "removeEquation": "Tlosa ikhweišene",
+    "lineStyle": {
+      "solid": "Setaele sa mola o o tiileng",
+      "dash": "Setaele sa mola wa thaladi",
+      "dot": "Setaele sa mola wa marontho"
+    }
+  },
+  "history": {
+    "empty": "Hisitori ga e na sepe",
+    "clearAll": "Phimola tsotlhe",
+    "clear": "Phimola hisetori",
+    "title": "Hisetori",
+    "andMemory": "Hisetori le Kgopolo",
+    "aria": {
+      "historyPanel": "Phanele ya hisetori",
+      "historyAndMemoryPanel": "Phanele ya Hisitori le Memori"
+    },
+    "closeFlyout": "Tswala hisetori",
+    "openFlyout": "Bula hisetori"
+  },
+  "memory": {
+    "empty": "Memori ga e na sepe",
+    "clearItem": "Phimola ntlha",
+    "addCurrentValue": "Tsenya boleng jwa ga jaana",
+    "subtractCurrentValue": "Ntsha boleng jwa ga jaana",
+    "clearAll": "Phimola tsotlhe",
+    "clear": "Phimola memori",
+    "title": "Segopotso",
+    "controls": "Ditaolo tsa memori",
+    "tooltips": {
+      "clearAll": "Phimola memori otlhe",
+      "recall": "Go gakologelwa go tswa mo mogopolong",
+      "add": "Tsenya mo memoring",
+      "subtract": "Ntsha mo mogopolong",
+      "store": "Boloka mo memoring"
+    },
+    "recallValue": "Go gakologelwa {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Tsamaiso",
+      "closeNavigation": "Tswala go tsamaya",
+      "openNavigation": "Bula go tsamaya"
+    },
+    "groups": {
+      "calculator": "Khalekhuleita",
+      "converter": "Sefetoledi"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Phanele ya go fetola",
+    "baseReadouts": "Dipuiso tsa motheo",
+    "surfaceMode": "Mokgwa wa boalogodimo",
+    "fullKeypad": "Khipate e e tletseng",
+    "showKeypad": "Bontsha letlapa la dikonopo",
+    "bitTogglingKeypad": "Khipa ya go fetola dintlhanyana",
+    "showBitView": "Bontsha pono ya dintlhanyana",
+    "wordSize": "Bogolo jwa lefoko",
+    "bitwise": "Ka dintlhanyana",
+    "bitShift": "Phetogo ya dintlhanyana"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Terigonometeri",
+      "function": "Modiro",
+      "functionsAria": "Ditiro",
+      "trigonometricFunctionsAria": "Ditiro tsa tirigonometeri",
+      "angleUnit": "Yuniti ya enkele {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Tebego",
+      "themeTitle": "Morero",
+      "themeDescription": "Tlhopha sekema sa mmala",
+      "light": "Lesedi",
+      "dark": "Lefifi",
+      "blue": "Botala jwa legodimo",
+      "green": "Tala",
+      "system": "Thulaganyo"
+    },
+    "language": {
+      "group": "Puo",
+      "title": "Puo",
+      "description": "Tlhopha puo e o e ratang"
+    },
+    "about": {
+      "group": "Ka ga"
+    },
+    "feedback": "Romela pegelo",
+    "contribute": {
+      "prefix": "Tsenya letsogo mo",
+      "link": "GitHub",
+      "suffix": "go thusa go tokafatsa khalekhuleita eno"
+    },
+    "links": {
+      "repository": "Polokelo ya porojeke",
+      "readme": "NBUISA",
+      "license": "Laesense ya MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Tlwaelo",
+      "subtitle": "Tshekatsheko ya ka bonako ya tlwaelo"
+    },
+    "scientific": {
+      "label": "Bosaense",
+      "subtitle": "Badirisi, ditiro, le tshegetso ya tlhagiso"
+    },
+    "graphing": {
+      "label": "Go dira kerafo",
+      "subtitle": "Tlhama tlhaloso e e bonolo mo sefofaneng sa cartesian"
+    },
+    "programmer": {
+      "label": "Morulaganyi",
+      "subtitle": "Dipalo tse di feletseng tse di nang le phetolo ya motheo"
+    },
+    "date": {
+      "label": "Palelo ya letlha",
+      "subtitle": "Batla dipaka le matlha a dishifiti"
+    },
+    "currency": {
+      "label": "Madi",
+      "subtitle": "Fetola ditlhwatlhwa tsa thefosano"
+    },
+    "volume": {
+      "label": "Volumu",
+      "subtitle": "Fetola ditekanyo tsa bolumu"
+    },
+    "length": {
+      "label": "Boleele",
+      "subtitle": "Fetola diyuniti tsa sekgala le boleele"
+    },
+    "weight": {
+      "label": "Boima le Bokete",
+      "subtitle": "Fetola diyuniti tsa bokete le boima"
+    },
+    "temperature": {
+      "label": "Mogote",
+      "subtitle": "Fetola dikala tsa mogote"
+    },
+    "energy": {
+      "label": "Mafolofolo",
+      "subtitle": "Fetola ditekanyo tsa maatla"
+    },
+    "area": {
+      "label": "Kgaolo",
+      "subtitle": "Fetola dilekanyo tsa kgaolo"
+    },
+    "speed": {
+      "label": "Lobelo",
+      "subtitle": "Fetola ditekanyo tsa lobelo"
+    },
+    "time": {
+      "label": "Nako",
+      "subtitle": "Fetola ditekanyo tsa nako"
+    },
+    "power": {
+      "label": "Maatla",
+      "subtitle": "Fetola ditekanyo tsa maatla"
+    },
+    "data": {
+      "label": "Dinewane",
+      "subtitle": "Fetola diyuniti tsa polokelo tsa dijithale"
+    },
+    "pressure": {
+      "label": "Kgatelelo",
+      "subtitle": "Fetola diyuniti tsa kgatelelo"
+    },
+    "angle": {
+      "label": "Khutlo",
+      "subtitle": "Fetola ditekanyo tsa enkele"
+    },
+    "settings": {
+      "label": "Diseting",
+      "subtitle": "Ponagalo le tshedimosetso ya tiriswa"
+    }
+  },
+  "categories": {
+    "Currency": "Madi",
+    "Volume": "Volumu",
+    "Length": "Boleele",
+    "Mass": "Matšhwiti",
+    "Temperature": "Themperetšha",
+    "Energy": "Mafolofolo",
+    "Area": "Kgaolo",
+    "Speed": "Lebelo",
+    "Time": "Nako",
+    "Power": "Maatla",
+    "Data": "Dinewane",
+    "Pressure": "Kgatelelo",
+    "Angle": "Khutlo"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Di-Angstrom",
+      "Nanometers": "Dinanometara",
+      "Microns": "Dimaikrone",
+      "Millimeters": "Dimilimitara",
+      "Centimeters": "Disentimetara",
+      "Meters": "Dimitara",
+      "Kilometers": "Dikilometara",
+      "Inches": "Diintšhe",
+      "Feet": "Diano",
+      "Yards": "Dijarata",
+      "Miles": "Dimaele",
+      "Nautical miles": "Dimaele tsa lewatle",
+      "paperclips": "ditshwareledi tsa pampiri",
+      "hands": "diatla",
+      "jumbo jets": "difofane tsa jumbo",
+      "Carats": "Dikharate",
+      "Milligrams": "Dimiligerama",
+      "Centigrams": "Disentikeramo",
+      "Decigrams": "Didesikeramo",
+      "Grams": "Digerama",
+      "Dekagrams": "Didekakeramo",
+      "Hectograms": "Dihekekeramo",
+      "Kilograms": "Dikilogeramo",
+      "Metric tonnes": "Ditono tsa meteriki",
+      "Ounces": "Di-Ounse",
+      "Pounds": "Diponto",
+      "Stone": "Letlapa",
+      "Short tons (US)": "Ditone tse dikhutshwane (US)",
+      "Long tons (UK)": "Ditone tse ditelele (UK)",
+      "snowflakes": "dikaphuka tsa kapoko",
+      "soccer balls": "dibolo tsa kgwele ya dinao",
+      "elephants": "ditlou",
+      "whales": "maruarua",
+      "Celsius": "Selesiase",
+      "Fahrenheit": "Fereheite",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Dimililitara",
+      "Cubic centimeters": "Disentimetara tsa dikhubiki",
+      "Liters": "Dilitara",
+      "Cubic meters": "Dikhubikimitara",
+      "Teaspoons (US)": "Dikgaba (US)",
+      "Tablespoons (US)": "Dikgaba (US)",
+      "Fluid ounces (US)": "Di-ounce tsa seeledi (US)",
+      "Cups (US)": "Dikopi (US)",
+      "Pints (US)": "Dipinte (US)",
+      "Quarts (US)": "Dikotara (US)",
+      "Gallons (US)": "Dilitara (US)",
+      "Cubic inches": "Dikhubiki diintšhe",
+      "Cubic feet": "Maoto a dikhubiki",
+      "Cubic yards": "Dijarata tsa dikhubiki",
+      "Teaspoons (UK)": "Dikgaba (UK)",
+      "Tablespoons (UK)": "Dikgaba (UK)",
+      "Fluid ounces (UK)": "Di-ounce tsa seeledi (UK)",
+      "Pints (UK)": "Dipinte (UK)",
+      "Quarts (UK)": "Dikotara (UK)",
+      "Gallons (UK)": "Digalone (UK)",
+      "coffee cups": "dikopi tsa kofi",
+      "bathtubs": "dibate",
+      "swimming pools": "matangwana a go thuma",
+      "Square millimeters": "Dimilimitara tsa sekwere",
+      "Square centimeters": "Disentimetara tsa sekwere",
+      "Square meters": "Dimitara tsa disekwere",
+      "Hectares": "Diheketara",
+      "Square kilometers": "Dikhilometara tsa disekwere",
+      "Square inches": "Diintšhe tsa sekwere",
+      "Square feet": "Disekwere tsa maoto",
+      "Square yards": "Dijarata tsa sekwere",
+      "Acres": "Diheketara",
+      "Square miles": "Sekwere sa dimaele",
+      "sheets of paper": "matlhare a pampiri",
+      "soccer fields": "mabala a kgwele ya dinao",
+      "castles": "dikago tsa phemelo",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Disentimetara ka motsotswana",
+      "Meters per second": "Dimitara ka motsotswana",
+      "Kilometers per hour": "Dikilometara ka ura",
+      "Feet per second": "Maoto ka motsotswana",
+      "Miles per hour": "Dimaele ka ura",
+      "Knots": "Mafito",
+      "Mach": "Mach",
+      "turtles": "dikhudu",
+      "horses": "dipitse",
+      "jets": "dijete",
+      "Watts": "Diwate",
+      "Kilowatts": "Dikilowate",
+      "Horsepower (US)": "Maatla a Dipitse (US)",
+      "Foot-pounds/minute": "Diponto tsa maoto/motsotso",
+      "BTUs/minute": "Di-BTU/motsotso",
+      "light bulbs": "ditleloupu",
+      "train engines": "dienjene tsa terena",
+      "Thermal calories": "Dikhalori tsa mogote",
+      "Food calories": "Dikhalori tsa dijo",
+      "British thermal units": "Diyuniti tsa mogote tsa Borithane",
+      "Kilojoules": "Dikilojoule",
+      "Kilowatt-hours": "Diura tsa Kilowate",
+      "Electron volts": "Divolte tsa eleketerone",
+      "Joules": "Dijoule",
+      "Foot-pounds": "Diponto tsa maoto",
+      "batteries": "dibeteri",
+      "bananas": "dipanana",
+      "slices of cake": "diselaese tsa kuku",
+      "Bits": "Dikarolwana",
+      "Nibble": "Go loma",
+      "Bytes": "Dibaete",
+      "Kilobits": "Dikhilobite",
+      "Kibibits": "Dikibibiti",
+      "Kilobytes": "Dikhilobaete",
+      "Kibibytes": "Dikhibibaete",
+      "Megabits": "Dimegabiti",
+      "Mebibits": "Dimebibiti",
+      "Megabytes": "Dimegabaete",
+      "Mebibytes": "Dimebibaete",
+      "Gigabits": "Digigabiti",
+      "Gibibits": "Dibibiti",
+      "Gigabytes": "Digigabaete",
+      "Gibibytes": "Dikhibibaete",
+      "Terabits": "Diterabite",
+      "Tebibits": "Ditebibiti",
+      "Terabytes": "Diterabaete",
+      "Tebibytes": "Dithebibaete",
+      "Petabits": "Dipetabiti",
+      "Pebibits": "Dipebibiti",
+      "Petabytes": "Dipetabaete",
+      "Pebibytes": "Dipebibaete",
+      "Exabits": "Ditshupo",
+      "Exbibits": "Dipontsho",
+      "Exabytes": "Dieksabaete",
+      "Exbibytes": "Dipontsho",
+      "Zetabits": "Dizetabite",
+      "Zebibits": "Dizebibite",
+      "Zetabytes": "Dizetabaete",
+      "Zebibytes": "Dizebibaete",
+      "Yottabits": "Diyotabit",
+      "Yobibits": "Diyobibiti",
+      "Yottabytes": "Diyotabaete",
+      "Yobibytes": "Diyobibaete",
+      "floppy disks": "difolopi",
+      "CDs": "Di-CD",
+      "DVDs": "Di-DVD",
+      "Atmospheres": "Lefaufau",
+      "Bars": "Dibara",
+      "Kilopascals": "Dikhilophasekele",
+      "Millimeters of mercury": "Dimilimitara tsa merkhuri",
+      "Pascals": "Di-Pascal",
+      "Pounds per square inch": "Diponto ka sekwere sa intšhe",
+      "Degrees": "Didikirii",
+      "Radians": "Diradiane",
+      "Gradians": "Dikgato",
+      "Microseconds": "Dimaekerosekonde",
+      "Milliseconds": "Dimilimetsotswana",
+      "Seconds": "Metsotswana",
+      "Minutes": "Metsotso",
+      "Hours": "Diura",
+      "Days": "Malatsi",
+      "Weeks": "Dibeke",
+      "Years": "Dingwaga"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Dolara ya Amerika",
+      "Euro": "Yuro",
+      "British Pound": "Pound ya Borithane",
+      "Japanese Yen": "Yen ya Sejapane",
+      "Canadian Dollar": "Dolara ya Canada",
+      "Australian Dollar": "Dolara ya Australia",
+      "Brazilian Real": "Real ya Brazil",
+      "Chilean Peso": "Peso ya Chile",
+      "Chinese Yuan": "Yuan ya Setšhaena",
+      "Colombian Peso": "Peso ya Kolombia",
+      "Danish Krone": "Krone ya Denmark",
+      "Egyptian Pound": "Pound ya Egepeto",
+      "Hong Kong Dollar": "Dolara ya Hong Kong",
+      "Indian Rupee": "Rupi ya India",
+      "Kenyan Shilling": "Disheleng tsa Kenya",
+      "Mexican Peso": "Peso ya Mexico",
+      "Nigerian Naira": "Naira ya Nigeria",
+      "New Zealand Dollar": "Dolara ya New Zealand",
+      "Norwegian Krone": "Krone ya Norway",
+      "Philippine Piso": "Piso ya Philippines",
+      "Polish Zloty": "Zloty ya Se-Poland",
+      "Qatari Riyal": "Riyale ya Qatar",
+      "Saudi Riyal": "Riyale ya Saudi",
+      "Singapore Dollar": "Tolara ya Singapore",
+      "South African Rand": "Ranta ya Aforika Borwa",
+      "South Korean Won": "Won ya Korea Borwa",
+      "Swedish Krona": "Krona ya Sweden",
+      "Swiss Franc": "Dibanke tsa Switzerland",
+      "Thai Baht": "Baht ya Thai",
+      "Turkish Lira": "Lira ya Turkey",
+      "Turkmenistani Manat": "Manate wa Turkmenistan",
+      "Ugandan Shilling": "Disheleng tsa Uganda",
+      "Ukrainian Hryvnia": "Hryvnia ya kwa Yukraine",
+      "UAE Dirham": "Dirham ya UAE",
+      "Uruguayan Peso": "Peso ya Uruguay",
+      "Uzbekistani Som": "Som ya Uzbekistan",
+      "Vanuatu Vatu": "Vanuatu",
+      "Venezuelan Bolivar Soberano": "Bolivar Soberano wa kwa Venezuela",
+      "Vietnamese Dong": "Dong ya Se-Vietnam",
+      "Yemeni Rial": "Riale ya Yemena"
+    },
+    "labels": {
+      "United States - Dollar": "Dinaga tse di Kopaneng - Dolara",
+      "Europe - Euro": "Yuropa - Yuro",
+      "United Kingdom - Pound": "Bogosi jo bo Kopaneng - Pound",
+      "Japan - Yen": "Japane - Yen",
+      "Canada - Dollar": "Kanada - Dolara",
+      "Australia - Dollar": "Australia - Dolara",
+      "Brazil - Real": "Brazil - Tota",
+      "Chile - Peso": "Chile - Peso",
+      "China - Yuan Renminbi": "China - Yuan",
+      "Colombia - Peso": "Kolombia - Peso",
+      "Denmark - Krone": "Denmark - Krone",
+      "Egypt - Pound": "Egepeto - Ponto",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Dolara",
+      "India - Rupee": "India - Rupi",
+      "Kenya - Shilling": "Kenya - Disheleng",
+      "Mexico - Peso": "Mexico - Peso",
+      "Nigeria - Naira": "Naijeria - Naira",
+      "New Zealand - Dollar": "New Zealand - Dolara",
+      "Norway - Krone": "Norway - Krone",
+      "Philippines - Piso": "Difilipine - Piso",
+      "Poland - Zloty": "Poland - Setswana",
+      "Qatar - Riyal": "Qatar - Riyale",
+      "Saudi Arabia - Riyal": "Saudi Arabia - Riyale",
+      "Singapore - Dollar": "Singapore - Dolara",
+      "South Africa - Rand": "Aforika Borwa - Ranta",
+      "South Korea - Won": "Korea Borwa - Fenya",
+      "Sweden - Krona": "Sweden - Krona",
+      "Switzerland - Franc": "Switzerland - Foranke",
+      "Thailand - Baht": "Thailand - Baht",
+      "Turkey - Lira": "Turkey - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manate",
+      "Uganda - Shilling": "Uganda - Disheleng",
+      "Ukraine - Hryvnia": "Yukraine - Hryvnia",
+      "United Arab Emirates - Dirham": "Dinaga tse di Kopaneng tsa Maarabia - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Uzbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolivar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemene - Riale"
+    }
+  }
+}

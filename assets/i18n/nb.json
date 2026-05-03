@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kalkulator",
+    "name": "Kalkulator"
+  },
+  "common": {
+    "back": "Tilbake",
+    "backspace": "Tilbake",
+    "closeSidePanel": "Lukk panelet"
+  },
+  "converter": {
+    "unitConverter": "Enhetsomformer",
+    "title": "Enhetsomformere",
+    "builtInCollections": "Innebygde samlinger",
+    "category": "Kategori",
+    "from": "Fra",
+    "to": "Til",
+    "inputValue": "Verdi å konvertere",
+    "convertedValue": "Konvertert verdi",
+    "swapUnits": "Bytt enheter",
+    "keypad": "Konverteringstastatur",
+    "unit": "enhet",
+    "unitOptions": "enhetsalternativer",
+    "currency": {
+      "updatingRates": "Oppdaterer priser …",
+      "updateRates": "Oppdater prisene",
+      "keypad": "Valutatastatur",
+      "currency": "valuta",
+      "options": "valutaalternativer",
+      "updated": "Oppdatert {timestamp}",
+      "status": {
+        "mockNote": "Hånlige referansepriser for den frittstående appdemoen.",
+        "fetching": "Henter de siste referansekursene for USD...",
+        "liveRatesLoaded": "Livekurser lastet inn fra ExchangeRate-API.",
+        "liveUpdateUnavailable": "Liveoppdatering er utilgjengelig. Oppdaterte demopriser lokalt."
+      }
+    },
+    "aboutEqualTo": "Omtrent lik"
+  },
+  "errors": {
+    "invalidInput": "Ugyldig inndata",
+    "cannotDivideByZero": "Kan ikke dele på null",
+    "cannotModuloByZero": "Kan ikke modulere med null",
+    "invalidProgrammerOperation": "Ugyldig operasjon",
+    "overflow": "Resultatet er for stort"
+  },
+  "date": {
+    "calculationMode": "Beregningsmodus",
+    "from": "Fra",
+    "to": "Til",
+    "results": {
+      "difference": "Forskjellen",
+      "sameDates": "Samme datoer",
+      "date": "Dato"
+    },
+    "calculationModeOptions": "Alternativer for beregningsmodus",
+    "mode": {
+      "difference": "Forskjellen",
+      "shift": "Skift"
+    },
+    "operation": "Operasjon",
+    "add": "Legg til",
+    "subtract": "Strekk fra",
+    "years": "År",
+    "months": "Måneder",
+    "days": "Dager",
+    "chooseDate": "Velg dato",
+    "previousMonth": "Forrige måned",
+    "nextMonth": "Neste måned",
+    "duration": {
+      "year": {
+        "one": "{count} år",
+        "other": "{count} år"
+      },
+      "month": {
+        "one": "{count} måned",
+        "other": "{count} måneder"
+      },
+      "week": {
+        "one": "{count} uke",
+        "other": "{count} uker"
+      },
+      "day": {
+        "one": "{count} dag",
+        "other": "{count} dager"
+      }
+    },
+    "history": {
+      "differenceBetween": "Forskjellen mellom {from} og {to}",
+      "addTo": "Legg til {duration} til {date}",
+      "subtractFrom": "Trekk {duration} fra {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Sjekk det uthevede uttrykket",
+    "enterExpression": "Skriv inn et uttrykk",
+    "canvas": "Graphic canvas",
+    "stopTracing": "Stopp sporingen",
+    "startTracing": "Start sporing",
+    "share": "Del",
+    "options": "Alternativer",
+    "zoomIn": "Zoom inn",
+    "zoomInLabel": "Zoom inn",
+    "zoomOut": "Zoom ut",
+    "zoomOutLabel": "Zoom ut",
+    "refreshViewAutomatically": "Oppdater visningen automatisk",
+    "view": "Se",
+    "expressions": "Uttrykk",
+    "mobileView": "Mobilvisning",
+    "showGraph": "Vis graf",
+    "showExpressions": "Vis uttrykk",
+    "backToFunctionList": "Tilbake til funksjonslisten",
+    "window": "Vindu",
+    "resetView": "Tilbakestill visning",
+    "units": "Enheter",
+    "radians": "Radianer",
+    "degrees": "Grader",
+    "gradians": "Gradians",
+    "lineThickness": "Linjetykkelse",
+    "theme": "Tema",
+    "alwaysLight": "Alltid lys",
+    "matchAppTheme": "Samsvar app-tema",
+    "groups": {
+      "inequalities": "Ulikheter",
+      "trigonometry": "Trigonometri",
+      "function": "Funksjon"
+    },
+    "functions": "Funksjoner",
+    "showEquation": "Vis ligning",
+    "hideEquation": "Skjul ligningen",
+    "lineOptions": "Linjealternativer",
+    "color": "Farge",
+    "style": "Stil",
+    "analysis": {
+      "title": "Analyse",
+      "domain": "Domene",
+      "range": "Rekkevidde",
+      "xIntercept": "x-avskjæring",
+      "yIntercept": "y-avskjæring",
+      "minima": "Minima",
+      "maxima": "Maksima",
+      "inflectionPoints": "Bøyepunkter",
+      "verticalAsymptotes": "Vertikale asymptoter",
+      "horizontalAsymptotes": "Horisontale asymptoter",
+      "obliqueAsymptotes": "Skrå asymptoter",
+      "parity": "Paritet",
+      "period": "Periode",
+      "monotonicity": "Monotonisitet",
+      "domainNone": "Ingen domenebegrensninger",
+      "rangeNone": "Ingen rekkeviddebegrensninger",
+      "xInterceptNone": "Ingen x-avskjæringer",
+      "yInterceptNone": "Ingen y-avskjæringer",
+      "minimaNone": "Ingen minima",
+      "maximaNone": "Ingen maksimum",
+      "inflectionNone": "Ingen bøyningspunkter",
+      "verticalAsymptotesNone": "Ingen vertikale asymptoter",
+      "horizontalAsymptotesNone": "Ingen horisontale asymptoter",
+      "obliqueAsymptotesNone": "Ingen skrå asymptoter",
+      "parityUnknown": "Ukjent",
+      "parityOdd": "Unde",
+      "parityEven": "Til og med",
+      "parityNeither": "Ingen av delene",
+      "periodicityUnknown": "Ukjent",
+      "periodicityNotPeriodic": "Ikke periodisk",
+      "monotonicityConstant": "Konstant",
+      "monotonicityIncreasing": "Økende",
+      "monotonicityDecreasing": "Minsker",
+      "monotonicityUnknown": "Ukjent",
+      "monotonicityError": "Kan ikke fastslå",
+      "featureTooComplexPlural": "For komplisert å analysere",
+      "analysisCouldNotBePerformed": "Analysen kunne ikke utføres",
+      "analysisNotSupported": "Analyse støttes ikke",
+      "variableIsNotX": "Variabelen er ikke x"
+    },
+    "plottingExpressions": "Plotter {count} uttrykk",
+    "xMin": "X-min",
+    "xMax": "X-maks",
+    "yMin": "Å-min",
+    "yMax": "Y-Max",
+    "selectExpression": "Velg uttrykk {index}",
+    "expressionIndex": "Uttrykk {index}",
+    "analyzeFunction": "Analysefunksjon",
+    "changeEquationStyle": "Endre ligningsstil",
+    "removeEquation": "Fjern ligningen",
+    "lineStyle": {
+      "solid": "Helt linjestil",
+      "dash": "Stiglinjestil",
+      "dot": "Prikkelinjestil"
+    }
+  },
+  "history": {
+    "empty": "Loggen er tom",
+    "clearAll": "Slett alt",
+    "clear": "Slett loggen",
+    "title": "Historikk",
+    "andMemory": "Historie og minne",
+    "aria": {
+      "historyPanel": "Historikkpanel",
+      "historyAndMemoryPanel": "Historikk og minnepanel"
+    },
+    "closeFlyout": "Lukk loggen",
+    "openFlyout": "Åpne loggen"
+  },
+  "memory": {
+    "empty": "Minnet er tomt",
+    "clearItem": "Slett element",
+    "addCurrentValue": "Legg til gjeldende verdi",
+    "subtractCurrentValue": "Strekk fra gjeldende verdi",
+    "clearAll": "Slett alt",
+    "clear": "Tøm minnet",
+    "title": "Minne",
+    "controls": "Minnekontroller",
+    "tooltips": {
+      "clearAll": "Tøm alt minne",
+      "recall": "Tilkall fra minnet",
+      "add": "Legg til minnet",
+      "subtract": "Strekk fra minnet",
+      "store": "Lagre i minnet"
+    },
+    "recallValue": "Hent minne {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigasjon",
+      "closeNavigation": "Lukk navigasjonen",
+      "openNavigation": "Åpne navigasjonen"
+    },
+    "groups": {
+      "calculator": "Kalkulator",
+      "converter": "Konverter"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit vippepanel",
+    "baseReadouts": "Basisavlesninger",
+    "surfaceMode": "Overflatemodus",
+    "fullKeypad": "Fullt tastatur",
+    "showKeypad": "Vis tastaturet",
+    "bitTogglingKeypad": "Bit vekslende tastatur",
+    "showBitView": "Vis bitvisning",
+    "wordSize": "Ordstørrelse",
+    "bitwise": "Bitvis",
+    "bitShift": "Bitforskyvning"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometri",
+      "function": "Funksjon",
+      "functionsAria": "Funksjoner",
+      "trigonometricFunctionsAria": "Trigonometriske funksjoner",
+      "angleUnit": "Vinkelenhet {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Utseende",
+      "themeTitle": "Tema",
+      "themeDescription": "Velg et fargeskjema",
+      "light": "Lys",
+      "dark": "Mørkt",
+      "blue": "Blå",
+      "green": "Grønt",
+      "system": "System"
+    },
+    "language": {
+      "group": "Språk",
+      "title": "Språk",
+      "description": "Velg ditt foretrukne språk"
+    },
+    "about": {
+      "group": "Omtrent"
+    },
+    "feedback": "Send tilbakemelding",
+    "contribute": {
+      "prefix": "Bidra på",
+      "link": "GitHub",
+      "suffix": "for å forbedre denne kalkulatoren"
+    },
+    "links": {
+      "repository": "Prosjektlager",
+      "readme": "LESMEG",
+      "license": "MIT-lisens"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standard",
+      "subtitle": "Klassisk umiddelbar evaluering"
+    },
+    "scientific": {
+      "label": "Vitenskapelig",
+      "subtitle": "Operatorer, funksjoner og uttrykksstøtte"
+    },
+    "graphing": {
+      "label": "Grapper",
+      "subtitle": "Plott et enkelt uttrykk på et kartesisk plan"
+    },
+    "programmer": {
+      "label": "Programmer",
+      "subtitle": "Heltalsmatematikk med grunnkonvertering"
+    },
+    "date": {
+      "label": "Datoberegning",
+      "subtitle": "Finn varigheter og skiftdatoer"
+    },
+    "currency": {
+      "label": "Valuta",
+      "subtitle": "Konverter falske valutakurser"
+    },
+    "volume": {
+      "label": "Volum",
+      "subtitle": "Konverter volummålinger"
+    },
+    "length": {
+      "label": "Lengde",
+      "subtitle": "Konverter avstands- og lengdeenheter"
+    },
+    "weight": {
+      "label": "Vekt og masse",
+      "subtitle": "Konverter vekt- og masseenheter"
+    },
+    "temperature": {
+      "label": "Temperatur",
+      "subtitle": "Konverter temperaturskalaer"
+    },
+    "energy": {
+      "label": "Energi",
+      "subtitle": "Konverter energimålinger"
+    },
+    "area": {
+      "label": "Område",
+      "subtitle": "Konverter arealmålinger"
+    },
+    "speed": {
+      "label": "Hastighet",
+      "subtitle": "Konverter hastighetsmålinger"
+    },
+    "time": {
+      "label": "Tid",
+      "subtitle": "Konverter tidsmålinger"
+    },
+    "power": {
+      "label": "Strøm",
+      "subtitle": "Konverter effektmålinger"
+    },
+    "data": {
+      "label": "Data",
+      "subtitle": "Konverter digitale lagringsenheter"
+    },
+    "pressure": {
+      "label": "Trykk",
+      "subtitle": "Konverter trykkenheter"
+    },
+    "angle": {
+      "label": "Vinkel",
+      "subtitle": "Konverter vinkelmålinger"
+    },
+    "settings": {
+      "label": "Innstillinger",
+      "subtitle": "Utseende og appinformasjon"
+    }
+  },
+  "categories": {
+    "Currency": "Valuta",
+    "Volume": "Volum",
+    "Length": "Lengde",
+    "Mass": "Messe",
+    "Temperature": "Temperatur",
+    "Energy": "Energi",
+    "Area": "Område",
+    "Speed": "Hastighet",
+    "Time": "Tid",
+    "Power": "Strøm",
+    "Data": "Data",
+    "Pressure": "Trykk",
+    "Angle": "Vinkel"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Ångstrøm",
+      "Nanometers": "Nanometer",
+      "Microns": "Mikroner",
+      "Millimeters": "millimeter",
+      "Centimeters": "Centimeter",
+      "Meters": "Meter",
+      "Kilometers": "Kilometer",
+      "Inches": "Tommer",
+      "Feet": "Føtter",
+      "Yards": "Mål",
+      "Miles": "Mil",
+      "Nautical miles": "Nautiske mil",
+      "paperclips": "binders",
+      "hands": "hender",
+      "jumbo jets": "jumbojetfly",
+      "Carats": "Karat",
+      "Milligrams": "Milligram",
+      "Centigrams": "Centigram",
+      "Decigrams": "Desigrammer",
+      "Grams": "Gram",
+      "Dekagrams": "Dekagrammer",
+      "Hectograms": "Hektogrammer",
+      "Kilograms": "Kilogram",
+      "Metric tonnes": "Metriske tonn",
+      "Ounces": "Onse",
+      "Pounds": "Pund",
+      "Stone": "Sten",
+      "Short tons (US)": "Korte tonn (USA)",
+      "Long tons (UK)": "Lange tonn (Storbritannia)",
+      "snowflakes": "snøfnugg",
+      "soccer balls": "fotballer",
+      "elephants": "elefanter",
+      "whales": "hval",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Milliliter",
+      "Cubic centimeters": "Kubikkcentimeter",
+      "Liters": "Liter",
+      "Cubic meters": "Kubikkmeter",
+      "Teaspoons (US)": "Teskjeer (USA)",
+      "Tablespoons (US)": "Spiseskjeer (USA)",
+      "Fluid ounces (US)": "Væske unser (USA)",
+      "Cups (US)": "Kopp (USA)",
+      "Pints (US)": "Pints (USA)",
+      "Quarts (US)": "Quarts (USA)",
+      "Gallons (US)": "Gallons (USA)",
+      "Cubic inches": "Kubikktommer",
+      "Cubic feet": "Kubikkfot",
+      "Cubic yards": "Kubikkyard",
+      "Teaspoons (UK)": "Teskjeer (Storbritannia)",
+      "Tablespoons (UK)": "Spiseskjeer (Storbritannia)",
+      "Fluid ounces (UK)": "Væske unser (Storbritannia)",
+      "Pints (UK)": "Pints (Storbritannia)",
+      "Quarts (UK)": "Quarts (Storbritannia)",
+      "Gallons (UK)": "Gallons (Storbritannia)",
+      "coffee cups": "kaffekopper",
+      "bathtubs": "badekar",
+      "swimming pools": "svømmebassenger",
+      "Square millimeters": "Kvadratmillimeter",
+      "Square centimeters": "Kvadratcentimeter",
+      "Square meters": "Kvadratmeter",
+      "Hectares": "Hektar",
+      "Square kilometers": "Kvadratkilometer",
+      "Square inches": "Kvadrattommer",
+      "Square feet": "Kvadratfot",
+      "Square yards": "Kvadratmeter",
+      "Acres": "Dekar",
+      "Square miles": "Kvadratmil",
+      "sheets of paper": "ark",
+      "soccer fields": "fotballbaner",
+      "castles": "slott",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Centimeter per sekund",
+      "Meters per second": "Meter per sekund",
+      "Kilometers per hour": "Kilometer i timen",
+      "Feet per second": "Fot per sekund",
+      "Miles per hour": "Mil i timen",
+      "Knots": "Knuter",
+      "Mach": "Mach",
+      "turtles": "skilpadder",
+      "horses": "hester",
+      "jets": "jetfly",
+      "Watts": "Watt",
+      "Kilowatts": "Kilowatt",
+      "Horsepower (US)": "Hestekrefter (USA)",
+      "Foot-pounds/minute": "Foot-pounds/minutt",
+      "BTUs/minute": "BTU per minutt",
+      "light bulbs": "lyspærer",
+      "train engines": "togmotorer",
+      "Thermal calories": "Termiske kalorier",
+      "Food calories": "Kalorier i mat",
+      "British thermal units": "Britiske termiske enheter",
+      "Kilojoules": "Kilojoule",
+      "Kilowatt-hours": "Kilowatt-timer",
+      "Electron volts": "Elektronvolt",
+      "Joules": "Joule",
+      "Foot-pounds": "Foot-pounds",
+      "batteries": "batterier",
+      "bananas": "bananer",
+      "slices of cake": "kakeskiver",
+      "Bits": "Bits",
+      "Nibble": "Nipp",
+      "Bytes": "Byte",
+      "Kilobits": "Kilobit",
+      "Kibibits": "Kibibiter",
+      "Kilobytes": "Kilobyte",
+      "Kibibytes": "Kibibyte",
+      "Megabits": "Megabit",
+      "Mebibits": "Mebibiter",
+      "Megabytes": "Megabyte",
+      "Mebibytes": "Mebibyte",
+      "Gigabits": "Gigabit",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Gigabyte",
+      "Gibibytes": "Gibibyte",
+      "Terabits": "Terabit",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabyte",
+      "Tebibytes": "Tebibyte",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabyte",
+      "Pebibytes": "Pebibyte",
+      "Exabits": "Exabits",
+      "Exbibits": "Utstillinger",
+      "Exabytes": "Exabyte",
+      "Exbibytes": "Exbibyte",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Sebibiter",
+      "Zetabytes": "Zetabyte",
+      "Zebibytes": "Sebibyte",
+      "Yottabits": "Yotabits",
+      "Yobibits": "Yobibiter",
+      "Yottabytes": "Yottabyte",
+      "Yobibytes": "Yobibyte",
+      "floppy disks": "disketter",
+      "CDs": "CDer",
+      "DVDs": "DVD-er",
+      "Atmospheres": "Atmosfærer",
+      "Bars": "Søyler",
+      "Kilopascals": "Kilopascal",
+      "Millimeters of mercury": "Millimeter kvikksølv",
+      "Pascals": "Pascal",
+      "Pounds per square inch": "Pund per kvadrattomme",
+      "Degrees": "Grader",
+      "Radians": "Radianer",
+      "Gradians": "Gradians",
+      "Microseconds": "Mikrosekunder",
+      "Milliseconds": "Millisekunder",
+      "Seconds": "Sekunder",
+      "Minutes": "Minutter",
+      "Hours": "Timer",
+      "Days": "Dager",
+      "Weeks": "Uker",
+      "Years": "År"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "US Dollar",
+      "Euro": "Euro",
+      "British Pound": "Britisk pund",
+      "Japanese Yen": "Japansk yen",
+      "Canadian Dollar": "Canadiske dollar",
+      "Australian Dollar": "Australske dollar",
+      "Brazilian Real": "Brasiliansk Real",
+      "Chilean Peso": "Chileansk peso",
+      "Chinese Yuan": "Kinesisk yuan",
+      "Colombian Peso": "Colombiansk peso",
+      "Danish Krone": "Danske kroner",
+      "Egyptian Pound": "Egyptiske pund",
+      "Hong Kong Dollar": "Hongkong-dollar",
+      "Indian Rupee": "Indisk Rupee",
+      "Kenyan Shilling": "Kenyanske shilling",
+      "Mexican Peso": "Meksikansk peso",
+      "Nigerian Naira": "Nigeriansk Naira",
+      "New Zealand Dollar": "New Zealand Dollar",
+      "Norwegian Krone": "Norsk krone",
+      "Philippine Piso": "Filippinsk Piso",
+      "Polish Zloty": "Polske zloty",
+      "Qatari Riyal": "Qatari Riyal",
+      "Saudi Riyal": "Saudi Riyal",
+      "Singapore Dollar": "Singapore dollar",
+      "South African Rand": "Sørafrikansk rand",
+      "South Korean Won": "Sørkoreanske won",
+      "Swedish Krona": "Svenske kroner",
+      "Swiss Franc": "Sveitsiske franc",
+      "Thai Baht": "Thailandske baht",
+      "Turkish Lira": "Tyrkisk lira",
+      "Turkmenistani Manat": "Turkmenistansk manat",
+      "Ugandan Shilling": "Ugandisk shilling",
+      "Ukrainian Hryvnia": "Ukrainsk hryvnia",
+      "UAE Dirham": "UAE Dirham",
+      "Uruguayan Peso": "Uruguayansk peso",
+      "Uzbekistani Som": "Usbekisk som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuelanske Bolívar Soberano",
+      "Vietnamese Dong": "Vietnamesisk dong",
+      "Yemeni Rial": "Jemenittiske rial"
+    },
+    "labels": {
+      "United States - Dollar": "USA – dollar",
+      "Europe - Euro": "Europa – Euro",
+      "United Kingdom - Pound": "Storbritannia – pund",
+      "Japan - Yen": "Japan – Yen",
+      "Canada - Dollar": "Canada – dollar",
+      "Australia - Dollar": "Australia – dollar",
+      "Brazil - Real": "Brasil – ekte",
+      "Chile - Peso": "Chile – Peso",
+      "China - Yuan Renminbi": "Kina – Yuan Renminbi",
+      "Colombia - Peso": "Colombia – peso",
+      "Denmark - Krone": "Danmark – Krone",
+      "Egypt - Pound": "Egypt – pund",
+      "Hong Kong SAR - Dollar": "Hongkong SAR – dollar",
+      "India - Rupee": "India – Rupee",
+      "Kenya - Shilling": "Kenya – Shilling",
+      "Mexico - Peso": "Mexico – peso",
+      "Nigeria - Naira": "Nigeria – Naira",
+      "New Zealand - Dollar": "New Zealand – dollar",
+      "Norway - Krone": "Norge – Krone",
+      "Philippines - Piso": "Filippinene – Piso",
+      "Poland - Zloty": "Polen – Zloty",
+      "Qatar - Riyal": "Qatar – Riyal",
+      "Saudi Arabia - Riyal": "Saudi-Arabia – Riyal",
+      "Singapore - Dollar": "Singapore – dollar",
+      "South Africa - Rand": "Sør-Afrika – Rand",
+      "South Korea - Won": "Sør-Korea – vant",
+      "Sweden - Krona": "Sverige – Kroner",
+      "Switzerland - Franc": "Sveits – Franc",
+      "Thailand - Baht": "Thailand – Baht",
+      "Turkey - Lira": "Tyrkia – lire",
+      "Turkmenistan - Manat": "Turkmenistan – Manat",
+      "Uganda - Shilling": "Uganda – Shilling",
+      "Ukraine - Hryvnia": "Ukraina – Hryvnia",
+      "United Arab Emirates - Dirham": "De forente arabiske emirater – Dirham",
+      "Uruguay - Peso": "Uruguay – Peso",
+      "Uzbekistan - Som": "Usbekistan – Som",
+      "Vanuatu - Vatu": "Vanuatu – Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela – Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam – Dong",
+      "Yemen - Rial": "Jemen – Rial"
+    }
+  }
+}

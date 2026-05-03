@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kalkulaator",
+    "name": "Kalkulaator"
+  },
+  "common": {
+    "back": "Tagasi",
+    "backspace": "Tagasilükke",
+    "closeSidePanel": "Sule paneel"
+  },
+  "converter": {
+    "unitConverter": "Ühikute teisendaja",
+    "title": "Ühikute teisendajad",
+    "builtInCollections": "Sisseehitatud kogud",
+    "category": "Kategooria",
+    "from": "Alates",
+    "to": "Kuni",
+    "inputValue": "Konverteeritav väärtus",
+    "convertedValue": "Konverteeritud väärtus",
+    "swapUnits": "Vaheta üksused",
+    "keypad": "Konverteri klahvistik",
+    "unit": "üksus",
+    "unitOptions": "ühiku valikud",
+    "currency": {
+      "updatingRates": "Hinnade värskendamine…",
+      "updateRates": "Värskenda hindu",
+      "keypad": "Valuutaklahvistik",
+      "currency": "valuuta",
+      "options": "valuutavalikud",
+      "updated": "Värskendatud {timestamp}",
+      "status": {
+        "mockNote": "Iseloomuliku rakenduse demo viitemäärad.",
+        "fetching": "Viimaste USD viitekursside toomine...",
+        "liveRatesLoaded": "ExchangeRate-API-st laaditud reaalajas kursid.",
+        "liveUpdateUnavailable": "Reaalajas värskendus pole saadaval. Värskendatud demohinnad kohapeal."
+      }
+    },
+    "aboutEqualTo": "Umbes võrdne"
+  },
+  "errors": {
+    "invalidInput": "Vale sisend",
+    "cannotDivideByZero": "Ei saa nulliga jagada",
+    "cannotModuloByZero": "Ei saa nulliga moduleerida",
+    "invalidProgrammerOperation": "Sobimatu toiming",
+    "overflow": "Tulemus liiga suur"
+  },
+  "date": {
+    "calculationMode": "Arvutusrežiim",
+    "from": "Alates",
+    "to": "Kuni",
+    "results": {
+      "difference": "Erinevus",
+      "sameDates": "Samad kuupäevad",
+      "date": "Kuupäev"
+    },
+    "calculationModeOptions": "Arvutusrežiimi valikud",
+    "mode": {
+      "difference": "Erinevus",
+      "shift": "Tõstuvahetus"
+    },
+    "operation": "Operatsioon",
+    "add": "Lisa",
+    "subtract": "Lahutage",
+    "years": "Aastad",
+    "months": "Kuud",
+    "days": "Päevi",
+    "chooseDate": "Valige kuupäev",
+    "previousMonth": "Eelmine kuu",
+    "nextMonth": "Järgmine kuu",
+    "duration": {
+      "year": {
+        "one": "{count} aasta",
+        "other": "{count} aastat"
+      },
+      "month": {
+        "one": "{count} kuu",
+        "other": "{count} kuud"
+      },
+      "week": {
+        "one": "{count} nädal",
+        "other": "{count} nädalat"
+      },
+      "day": {
+        "one": "{count} päev",
+        "other": "{count} päeva"
+      }
+    },
+    "history": {
+      "differenceBetween": "Erinevus {from} ja {to} vahel",
+      "addTo": "Lisa {duration} loendisse {date}",
+      "subtractFrom": "Lahutage {duration} väärtusest {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Kontrollige esiletõstetud väljendit",
+    "enterExpression": "Sisestage avaldis",
+    "canvas": "Graafiku lõuend",
+    "stopTracing": "Lõpeta jälgimine",
+    "startTracing": "Alustage jälgimist",
+    "share": "Jaga",
+    "options": "Valikud",
+    "zoomIn": "Suumi sisse",
+    "zoomInLabel": "Suumi sisse",
+    "zoomOut": "Suumi välja",
+    "zoomOutLabel": "Suumi välja",
+    "refreshViewAutomatically": "Värskenda vaadet automaatselt",
+    "view": "Kuva",
+    "expressions": "Avaldised",
+    "mobileView": "Mobiilivaade",
+    "showGraph": "Kuva graafik",
+    "showExpressions": "Kuva väljendid",
+    "backToFunctionList": "Tagasi funktsioonide loendisse",
+    "window": "Aken",
+    "resetView": "Lähtesta vaade",
+    "units": "Ühikud",
+    "radians": "Radiaanid",
+    "degrees": "Kraadi",
+    "gradians": "Gradiaanid",
+    "lineThickness": "Jooni paksus",
+    "theme": "Teema",
+    "alwaysLight": "Alati kerge",
+    "matchAppTheme": "Sobitage rakenduse teema",
+    "groups": {
+      "inequalities": "Ebavõrdsus",
+      "trigonometry": "Trigonomeetria",
+      "function": "Funktsioon"
+    },
+    "functions": "Funktsioonid",
+    "showEquation": "Kuva võrrand",
+    "hideEquation": "Peida võrrand",
+    "lineOptions": "Rea valikud",
+    "color": "Värv",
+    "style": "Stiil",
+    "analysis": {
+      "title": "Analüüs",
+      "domain": "Domeen",
+      "range": "Vahemikus",
+      "xIntercept": "x-lõikamine",
+      "yIntercept": "y-lõikamine",
+      "minima": "Minimaalne",
+      "maxima": "Maksimaalne",
+      "inflectionPoints": "Käändepunktid",
+      "verticalAsymptotes": "Vertikaalsed asümptoodid",
+      "horizontalAsymptotes": "Horisontaalsed asümptoodid",
+      "obliqueAsymptotes": "Kaldused asümptoodid",
+      "parity": "Paarsus",
+      "period": "Periood",
+      "monotonicity": "Monotoonsus",
+      "domainNone": "Domeenipiirangud puuduvad",
+      "rangeNone": "Lõimupiirang puudub",
+      "xInterceptNone": "X-lõikeid pole",
+      "yInterceptNone": "Y-lõikeid pole",
+      "minimaNone": "Miinimumideta",
+      "maximaNone": "Maksimaadid puuduvad",
+      "inflectionNone": "Kindepunkte pole",
+      "verticalAsymptotesNone": "Vertikaalseid asümptoote pole",
+      "horizontalAsymptotesNone": "Risontaalseid asümptoote pole",
+      "obliqueAsymptotesNone": "Asümptoote pole kaldu",
+      "parityUnknown": "Teadmata",
+      "parityOdd": "Kummaline",
+      "parityEven": "Isegi",
+      "parityNeither": "Mitte kumbagi",
+      "periodicityUnknown": "Teadmata",
+      "periodicityNotPeriodic": "Mitte perioodiline",
+      "monotonicityConstant": "Pidev",
+      "monotonicityIncreasing": "Kasvab",
+      "monotonicityDecreasing": "Väheneb",
+      "monotonicityUnknown": "Teadmata",
+      "monotonicityError": "Ei saa kindlaks teha",
+      "featureTooComplexPlural": "Analüüsimiseks liiga keeruline",
+      "analysisCouldNotBePerformed": "Analüüsi ei saanud teha",
+      "analysisNotSupported": "Analüüsi ei toetata",
+      "variableIsNotX": "Muutuja ei ole x"
+    },
+    "plottingExpressions": "Avaldiste {count} joonistamine",
+    "xMin": "X-min",
+    "xMax": "X-Max",
+    "yMin": "Y-min",
+    "yMax": "Y-Max",
+    "selectExpression": "Valige avaldis {index}",
+    "expressionIndex": "Avaldis {index}",
+    "analyzeFunction": "Analüüsi funktsioon",
+    "changeEquationStyle": "Muutke võrrandi stiili",
+    "removeEquation": "Eemalda võrrand",
+    "lineStyle": {
+      "solid": "Pideva joone stiil",
+      "dash": "Kriipsjoone stiil",
+      "dot": "Punktjoone stiil"
+    }
+  },
+  "history": {
+    "empty": "Ajalugu on tühi",
+    "clearAll": "Kustuta kõik",
+    "clear": "Kustuta ajalugu",
+    "title": "Ajalugu",
+    "andMemory": "Ajalugu ja mälu",
+    "aria": {
+      "historyPanel": "Ajaloo paneel",
+      "historyAndMemoryPanel": "Ajaloo ja mälu paneel"
+    },
+    "closeFlyout": "Sule ajalugu",
+    "openFlyout": "Ava ajalugu"
+  },
+  "memory": {
+    "empty": "Mälu on tühi",
+    "clearItem": "Tühjenda üksus",
+    "addCurrentValue": "Lisage praegune väärtus",
+    "subtractCurrentValue": "Lahutage praegune väärtus",
+    "clearAll": "Kustuta kõik",
+    "clear": "Tühjendage mälu",
+    "title": "Mälu",
+    "controls": "Mälu juhtnupud",
+    "tooltips": {
+      "clearAll": "Tühjendage kogu mälu",
+      "recall": "Meenuta mälust",
+      "add": "Lisage mällu",
+      "subtract": "Lahutage mälust",
+      "store": "Salvesta mällu"
+    },
+    "recallValue": "Meenuta mälu {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigeerimine",
+      "closeNavigation": "Sule navigeerimine",
+      "openNavigation": "Ava navigeerimine"
+    },
+    "groups": {
+      "calculator": "Kalkulaator",
+      "converter": "Konverter"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bitiline klapppaneel",
+    "baseReadouts": "Alusnäidud",
+    "surfaceMode": "Pinnarežiim",
+    "fullKeypad": "Täisklahvistik",
+    "showKeypad": "Kuva klahvistik",
+    "bitTogglingKeypad": "Bitti vahetatav klahvistik",
+    "showBitView": "Kuva bitivaade",
+    "wordSize": "Sõna suurus",
+    "bitwise": "Bittide kaupa",
+    "bitShift": "Bitinihe"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonomeetria",
+      "function": "Funktsioon",
+      "functionsAria": "Funktsioonid",
+      "trigonometricFunctionsAria": "Trigonomeetrilised funktsioonid",
+      "angleUnit": "nurga ühik {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Välimus",
+      "themeTitle": "Teema",
+      "themeDescription": "Valige värviskeem",
+      "light": "Valgus",
+      "dark": "Tume",
+      "blue": "Sinine",
+      "green": "Roheline",
+      "system": "Süsteem"
+    },
+    "language": {
+      "group": "Keel",
+      "title": "Keel",
+      "description": "Valige eelistatud keel"
+    },
+    "about": {
+      "group": "Teave"
+    },
+    "feedback": "Saatke tagasisidet",
+    "contribute": {
+      "prefix": "Aidake kaasa",
+      "link": "GitHub",
+      "suffix": ", et aidata seda kalkulaatorit täiustada"
+    },
+    "links": {
+      "repository": "Projekti hoidla",
+      "readme": "LOE",
+      "license": "MIT-litsents"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standard",
+      "subtitle": "Klassikaline vahetu hindamine"
+    },
+    "scientific": {
+      "label": "Teaduslik",
+      "subtitle": "Operaatorite, funktsioonide ja väljendite tugi"
+    },
+    "graphing": {
+      "label": "Graafik",
+      "subtitle": "Joonistage lihtne avaldis Descartes'i tasapinnal"
+    },
+    "programmer": {
+      "label": "Programmeerija",
+      "subtitle": "Täisarvude matemaatika baasteisendusega"
+    },
+    "date": {
+      "label": "Kuupäeva arvutamine",
+      "subtitle": "Leidke kestusi ja vahetuste kuupäevi"
+    },
+    "currency": {
+      "label": "Valuuta",
+      "subtitle": "Teisenda valevahetuskursid"
+    },
+    "volume": {
+      "label": "Helitugevus",
+      "subtitle": "Teisenda helitugevuse mõõtmised"
+    },
+    "length": {
+      "label": "Pikkus",
+      "subtitle": "Teisenda kauguse ja pikkuse ühikud"
+    },
+    "weight": {
+      "label": "Kaal ja mass",
+      "subtitle": "Teisenda kaalu ja massi ühikud"
+    },
+    "temperature": {
+      "label": "Temperatuur",
+      "subtitle": "Teisenda temperatuuriskaalad"
+    },
+    "energy": {
+      "label": "Energia",
+      "subtitle": "Teisenda energiamõõtmised"
+    },
+    "area": {
+      "label": "Piirkond",
+      "subtitle": "Teisenda pindala mõõtmed"
+    },
+    "speed": {
+      "label": "Kiirus",
+      "subtitle": "Teisenda kiiruse mõõtmised"
+    },
+    "time": {
+      "label": "Aeg",
+      "subtitle": "Teisenda ajamõõtmised"
+    },
+    "power": {
+      "label": "Toide",
+      "subtitle": "Teisenda võimsuse mõõtmised"
+    },
+    "data": {
+      "label": "Andmed",
+      "subtitle": "Teisenda digitaalsed salvestusüksused"
+    },
+    "pressure": {
+      "label": "Rõhk",
+      "subtitle": "Teisenda rõhuühikud"
+    },
+    "angle": {
+      "label": "Nurk",
+      "subtitle": "Teisenda nurga mõõtmised"
+    },
+    "settings": {
+      "label": "Seaded",
+      "subtitle": "Välimus ja rakendusteave"
+    }
+  },
+  "categories": {
+    "Currency": "Valuuta",
+    "Volume": "Helitugevus",
+    "Length": "Pikkus",
+    "Mass": "Missa",
+    "Temperature": "Temperatuur",
+    "Energy": "Energia",
+    "Area": "Piirkond",
+    "Speed": "Kiirus",
+    "Time": "Aeg",
+    "Power": "Toide",
+    "Data": "Andmed",
+    "Pressure": "Rõhk",
+    "Angle": "Nurk"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angströmid",
+      "Nanometers": "Nanomeetrid",
+      "Microns": "Mikronit",
+      "Millimeters": "Millimeetrid",
+      "Centimeters": "Sentimeetrit",
+      "Meters": "Meetrid",
+      "Kilometers": "Kilomeetrit",
+      "Inches": "Toll",
+      "Feet": "Jalad",
+      "Yards": "Õued",
+      "Miles": "Miili",
+      "Nautical miles": "Meremiili",
+      "paperclips": "kirjaklambrid",
+      "hands": "käed",
+      "jumbo jets": "suurlennukid",
+      "Carats": "Karaadid",
+      "Milligrams": "Milligrammides",
+      "Centigrams": "Sentigrammi",
+      "Decigrams": "Detsigrammid",
+      "Grams": "Grammid",
+      "Dekagrams": "Dekagrammid",
+      "Hectograms": "Hektogrammid",
+      "Kilograms": "Kilogrammid",
+      "Metric tonnes": "tonnides",
+      "Ounces": "Untsid",
+      "Pounds": "Naelad",
+      "Stone": "Kivi",
+      "Short tons (US)": "Lühikesed tonnid (USA)",
+      "Long tons (UK)": "Pikad tonnid (Ühendkuningriik)",
+      "snowflakes": "lumehelbed",
+      "soccer balls": "jalgpallipallid",
+      "elephants": "elevandid",
+      "whales": "vaalad",
+      "Celsius": "Celsiuse järgi",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Milliliitrit",
+      "Cubic centimeters": "Kuupsentimeetrit",
+      "Liters": "Liitrit",
+      "Cubic meters": "Kuupmeetrit",
+      "Teaspoons (US)": "Telusikatäit (USA)",
+      "Tablespoons (US)": "Supilusikatäit (USA)",
+      "Fluid ounces (US)": "Vedeliku untsi (USA)",
+      "Cups (US)": "Karikas (USA)",
+      "Pints (US)": "Pint (USA)",
+      "Quarts (US)": "Kvartalid (USA)",
+      "Gallons (US)": "Gallonid (USA)",
+      "Cubic inches": "Kuuptolli",
+      "Cubic feet": "Kuupjalga",
+      "Cubic yards": "Kuupjardi",
+      "Teaspoons (UK)": "Teelusikatäit (Ühendkuningriik)",
+      "Tablespoons (UK)": "Supilusikatäit (Ühendkuningriik)",
+      "Fluid ounces (UK)": "Vedeliku untsi (Ühendkuningriik)",
+      "Pints (UK)": "Pint (Ühendkuningriik)",
+      "Quarts (UK)": "Kvartal (Ühendkuningriik)",
+      "Gallons (UK)": "Gallonid (Ühendkuningriik)",
+      "coffee cups": "kohvitassid",
+      "bathtubs": "vannid",
+      "swimming pools": "basseinid",
+      "Square millimeters": "Ruutmillimeetrid",
+      "Square centimeters": "Ruutsentimeetrid",
+      "Square meters": "Ruutmeetrit",
+      "Hectares": "Hektarit",
+      "Square kilometers": "Ruutkilomeetrit",
+      "Square inches": "Ruuttolli",
+      "Square feet": "Ruutjalga",
+      "Square yards": "Ruutjardi",
+      "Acres": "Aakrid",
+      "Square miles": "Ruutmiili",
+      "sheets of paper": "paberilehte",
+      "soccer fields": "jalgpalliväljakud",
+      "castles": "lossid",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Sentimeetrit sekundis",
+      "Meters per second": "Meetrit sekundis",
+      "Kilometers per hour": "Kilomeetrit tunnis",
+      "Feet per second": "jalga sekundis",
+      "Miles per hour": "Miili tunnis",
+      "Knots": "Sõlmed",
+      "Mach": "Mach",
+      "turtles": "kilpkonnad",
+      "horses": "hobused",
+      "jets": "lennukid",
+      "Watts": "Watt",
+      "Kilowatts": "Kilovatt",
+      "Horsepower (US)": "Hobujõud (USA)",
+      "Foot-pounds/minute": "jala-naelad minutis",
+      "BTUs/minute": "BTU-d minutis",
+      "light bulbs": "lambipirnid",
+      "train engines": "rongimootorid",
+      "Thermal calories": "Termilised kalorid",
+      "Food calories": "Toidu kalorid",
+      "British thermal units": "Briti soojusühikud",
+      "Kilojoules": "Kilodžaule",
+      "Kilowatt-hours": "Kilovatt-tundi",
+      "Electron volts": "Elektronvoldid",
+      "Joules": "Joule",
+      "Foot-pounds": "jala-naelad",
+      "batteries": "akud",
+      "bananas": "banaanid",
+      "slices of cake": "koogiviilud",
+      "Bits": "Bitid",
+      "Nibble": "Nibi",
+      "Bytes": "baiti",
+      "Kilobits": "Kilobitit",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "Kilobaiti",
+      "Kibibytes": "Kibibaiti",
+      "Megabits": "Megabitit",
+      "Mebibits": "Mebibit",
+      "Megabytes": "Megabaiti",
+      "Mebibytes": "Mebibaiti",
+      "Gigabits": "Gigabitti",
+      "Gibibits": "Gibibit",
+      "Gigabytes": "Gigabaiti",
+      "Gibibytes": "Gibibaiti",
+      "Terabits": "Terabits",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabaiti",
+      "Tebibytes": "Tebibaiti",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabaiti",
+      "Pebibytes": "Pebibaiti",
+      "Exabits": "Eksabits",
+      "Exbibits": "Näitused",
+      "Exabytes": "Eksabaiti",
+      "Exbibytes": "Exbibaiti",
+      "Zetabits": "Zetabiidid",
+      "Zebibits": "Sebibitid",
+      "Zetabytes": "Zetabaiti",
+      "Zebibytes": "Sebibaiti",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabaiti",
+      "Yobibytes": "Yobibaiti",
+      "floppy disks": "disketid",
+      "CDs": "CD-d",
+      "DVDs": "DVD-d",
+      "Atmospheres": "Atmosfäär",
+      "Bars": "Baarid",
+      "Kilopascals": "Kilopaskalit",
+      "Millimeters of mercury": "Elavhõbeda millimeetrid",
+      "Pascals": "Pascal",
+      "Pounds per square inch": "Naelad ruuttolli kohta",
+      "Degrees": "Kraadi",
+      "Radians": "Radiaanid",
+      "Gradians": "Gradiaanid",
+      "Microseconds": "Mikrosekundit",
+      "Milliseconds": "Millisekundit",
+      "Seconds": "Sekundid",
+      "Minutes": "Minutit",
+      "Hours": "Tuli",
+      "Days": "Päevi",
+      "Weeks": "Nädalad",
+      "Years": "Aastad"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "USA dollar",
+      "Euro": "eurot",
+      "British Pound": "Suurbritannia nael",
+      "Japanese Yen": "Jaapani jeen",
+      "Canadian Dollar": "Kanada dollar",
+      "Australian Dollar": "Austraalia dollar",
+      "Brazilian Real": "Brasiilia reaal",
+      "Chilean Peso": "Tšiili peeso",
+      "Chinese Yuan": "Hiina jüaan",
+      "Colombian Peso": "Kolumbia peeso",
+      "Danish Krone": "Taani kroon",
+      "Egyptian Pound": "Egiptuse nael",
+      "Hong Kong Dollar": "Hongkongi dollar",
+      "Indian Rupee": "India ruupia",
+      "Kenyan Shilling": "Keenia šilling",
+      "Mexican Peso": "Mehhiko peeso",
+      "Nigerian Naira": "Nigeeria Naira",
+      "New Zealand Dollar": "Uus-Meremaa dollar",
+      "Norwegian Krone": "Norra kroon",
+      "Philippine Piso": "Filipiinide Piso",
+      "Polish Zloty": "Poola zlott",
+      "Qatari Riyal": "Katari riaal",
+      "Saudi Riyal": "Saudi riaal",
+      "Singapore Dollar": "Singapuri dollar",
+      "South African Rand": "Lõuna-Aafrika rand",
+      "South Korean Won": "Lõuna-Korea vonn",
+      "Swedish Krona": "Rootsi kroon",
+      "Swiss Franc": "Šveitsi frank",
+      "Thai Baht": "Tai baht",
+      "Turkish Lira": "Türgi liir",
+      "Turkmenistani Manat": "Türkmenistani manat",
+      "Ugandan Shilling": "Uganda šilling",
+      "Ukrainian Hryvnia": "Ukraina grivna",
+      "UAE Dirham": "AÜE dirham",
+      "Uruguayan Peso": "Uruguay peeso",
+      "Uzbekistani Som": "Usbekistani Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuela Bolívar Soberano",
+      "Vietnamese Dong": "Vietnami Dong",
+      "Yemeni Rial": "Jeemeni riaal"
+    },
+    "labels": {
+      "United States - Dollar": "Ameerika Ühendriigid – dollar",
+      "Europe - Euro": "Euroopa – euro",
+      "United Kingdom - Pound": "Ühendkuningriik – nael",
+      "Japan - Yen": "Jaapan – jeen",
+      "Canada - Dollar": "Kanada – dollar",
+      "Australia - Dollar": "Austraalia – dollar",
+      "Brazil - Real": "Brasiilia – Real",
+      "Chile - Peso": "Tšiili – peeso",
+      "China - Yuan Renminbi": "Hiina – jüaani renminbi",
+      "Colombia - Peso": "Kolumbia – peeso",
+      "Denmark - Krone": "Taani – kroon",
+      "Egypt - Pound": "Egiptus – nael",
+      "Hong Kong SAR - Dollar": "Hongkongi erihalduspiirkond – dollar",
+      "India - Rupee": "India – ruupia",
+      "Kenya - Shilling": "Keenia – šilling",
+      "Mexico - Peso": "Mehhiko – peeso",
+      "Nigeria - Naira": "Nigeeria – Naira",
+      "New Zealand - Dollar": "Uus-Meremaa – dollar",
+      "Norway - Krone": "Norra – kroon",
+      "Philippines - Piso": "Filipiinid – Piso",
+      "Poland - Zloty": "Poola – zlott",
+      "Qatar - Riyal": "Katar – riaal",
+      "Saudi Arabia - Riyal": "Saudi Araabia – riaal",
+      "Singapore - Dollar": "Singapur – dollar",
+      "South Africa - Rand": "Lõuna-Aafrika – Rand",
+      "South Korea - Won": "Lõuna-Korea – võitis",
+      "Sweden - Krona": "Rootsi – kroon",
+      "Switzerland - Franc": "Šveits – frank",
+      "Thailand - Baht": "Tai – baht",
+      "Turkey - Lira": "Türgi – liir",
+      "Turkmenistan - Manat": "Türkmenistan – Manat",
+      "Uganda - Shilling": "Uganda – šilling",
+      "Ukraine - Hryvnia": "Ukraina – grivna",
+      "United Arab Emirates - Dirham": "Araabia Ühendemiraadid – dirham",
+      "Uruguay - Peso": "Uruguay – peeso",
+      "Uzbekistan - Som": "Usbekistan – Som",
+      "Vanuatu - Vatu": "Vanuatu – Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela – Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam – Dong",
+      "Yemen - Rial": "Jeemen – Rial"
+    }
+  }
+}

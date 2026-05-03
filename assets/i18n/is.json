@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Reiknivél",
+    "name": "Reiknivél"
+  },
+  "common": {
+    "back": "Til baka",
+    "backspace": "Backspace",
+    "closeSidePanel": "Loka spjaldið"
+  },
+  "converter": {
+    "unitConverter": "Einingabreytir",
+    "title": "Einingabreytir",
+    "builtInCollections": "Innbyggð söfn",
+    "category": "Flokkur",
+    "from": "Frá",
+    "to": "Til",
+    "inputValue": "Gildi til að umbreyta",
+    "convertedValue": "Umbreytt gildi",
+    "swapUnits": "Skiptu um einingar",
+    "keypad": "Takkaborð breytir",
+    "unit": "eining",
+    "unitOptions": "einingavalkostir",
+    "currency": {
+      "updatingRates": "Uppfærir verð...",
+      "updateRates": "Uppfærðu verð",
+      "keypad": "Takkaborð gjaldmiðils",
+      "currency": "gjaldmiðill",
+      "options": "gjaldmiðilsvalkostir",
+      "updated": "Uppfært {timestamp}",
+      "status": {
+        "mockNote": "Skemmtileg viðmiðunarhlutföll fyrir sjálfstæða forritasýninguna.",
+        "fetching": "Sækir nýjustu viðmiðunargengi Bandaríkjadala...",
+        "liveRatesLoaded": "Gengi í beinni hlaðið frá ExchangeRate-API.",
+        "liveUpdateUnavailable": "Bein uppfærsla ekki tiltæk. Uppfært kynningarverð á staðnum."
+      }
+    },
+    "aboutEqualTo": "Um það bil jafnt og"
+  },
+  "errors": {
+    "invalidInput": "Ógilt inntak",
+    "cannotDivideByZero": "Ekki er hægt að deila með núll",
+    "cannotModuloByZero": "Get ekki mótað um núll",
+    "invalidProgrammerOperation": "Ógild aðgerð",
+    "overflow": "Niðurstaða of stór"
+  },
+  "date": {
+    "calculationMode": "Útreikningshamur",
+    "from": "Frá",
+    "to": "Til",
+    "results": {
+      "difference": "Munur",
+      "sameDates": "Sömu dagsetningar",
+      "date": "Dagsetning"
+    },
+    "calculationModeOptions": "Möguleikar fyrir útreikningsham",
+    "mode": {
+      "difference": "Munur",
+      "shift": "Skift"
+    },
+    "operation": "Aðgerð",
+    "add": "Bæta við",
+    "subtract": "Dregið frá",
+    "years": "Ár",
+    "months": "Mánuður",
+    "days": "Dagar",
+    "chooseDate": "Veldu dagsetningu",
+    "previousMonth": "Fyrri mánuður",
+    "nextMonth": "Næsta mánuð",
+    "duration": {
+      "year": {
+        "one": "{count} ár",
+        "other": "{count} ár"
+      },
+      "month": {
+        "one": "{count} mánuður",
+        "other": "{count} mánuðir"
+      },
+      "week": {
+        "one": "{count} vika",
+        "other": "{count} vikur"
+      },
+      "day": {
+        "one": "{count} dagur",
+        "other": "{count} dagar"
+      }
+    },
+    "history": {
+      "differenceBetween": "Mismunur á milli {from} og {to}",
+      "addTo": "Bæta {duration} við {date}",
+      "subtractFrom": "Dregið {duration} frá {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Athugaðu auðkennda tjáningu",
+    "enterExpression": "Sláðu inn tjáningu",
+    "canvas": "Línurit striga",
+    "stopTracing": "Hættu að rekja",
+    "startTracing": "Byrjaðu að rekja",
+    "share": "Deila",
+    "options": "Valkostir",
+    "zoomIn": "Stækkaðu inn",
+    "zoomInLabel": "Stækkaðu",
+    "zoomOut": "Stækkaðu út",
+    "zoomOutLabel": "Stækkaðu út",
+    "refreshViewAutomatically": "Endurnýjaðu sýn sjálfkrafa",
+    "view": "Skoða",
+    "expressions": "Tjáning",
+    "mobileView": "Farsímasýn",
+    "showGraph": "Sýna línurit",
+    "showExpressions": "Sýna orðatiltæki",
+    "backToFunctionList": "Til baka í aðgerðarlista",
+    "window": "Gluggi",
+    "resetView": "Endurstilla yfirlit",
+    "units": "Einingar",
+    "radians": "Radians",
+    "degrees": "Gráður",
+    "gradians": "Gradians",
+    "lineThickness": "Línuþykkt",
+    "theme": "Þema",
+    "alwaysLight": "Alltaf ljós",
+    "matchAppTheme": "Passaðu forritsþema",
+    "groups": {
+      "inequalities": "Ójöfnuður",
+      "trigonometry": "Trigonometry",
+      "function": "Virka"
+    },
+    "functions": "Aðgerðir",
+    "showEquation": "Sýna jöfnu",
+    "hideEquation": "Fela jöfnu",
+    "lineOptions": "Línuvalkostir",
+    "color": "Litur",
+    "style": "Stíll",
+    "analysis": {
+      "title": "Greining",
+      "domain": "Lén",
+      "range": "Svið",
+      "xIntercept": "x-skurður",
+      "yIntercept": "y-skurður",
+      "minima": "Lágmark",
+      "maxima": "Maxima",
+      "inflectionPoints": "Beygingarpunktar",
+      "verticalAsymptotes": "Lóðrétt einkenni",
+      "horizontalAsymptotes": "Lárétt óeinkenni",
+      "obliqueAsymptotes": "Skápueinkenni",
+      "parity": "Jöfnuður",
+      "period": "Tímabil",
+      "monotonicity": "Einhæfni",
+      "domainNone": "Engar takmarkanir á léni",
+      "rangeNone": "Engar sviðstakmarkanir",
+      "xInterceptNone": "Engin x-hlerun",
+      "yInterceptNone": "Engir y-skurðir",
+      "minimaNone": "Engin lágmark",
+      "maximaNone": "Ekkert hámark",
+      "inflectionNone": "Engir beygingarpunktar",
+      "verticalAsymptotesNone": "Engin lóðrétt einkenni",
+      "horizontalAsymptotesNone": "Engin lárétt einkenni",
+      "obliqueAsymptotesNone": "Engin ská einkennismerki",
+      "parityUnknown": "Óþekkt",
+      "parityOdd": "Skrítið",
+      "parityEven": "Jafnvel",
+      "parityNeither": "Hvorki",
+      "periodicityUnknown": "Óþekkt",
+      "periodicityNotPeriodic": "Ekki reglulega",
+      "monotonicityConstant": "Stöðugt",
+      "monotonicityIncreasing": "Eykst",
+      "monotonicityDecreasing": "Fækkar",
+      "monotonicityUnknown": "Óþekkt",
+      "monotonicityError": "Get ekki ákvarðað",
+      "featureTooComplexPlural": "Of flókið til að greina",
+      "analysisCouldNotBePerformed": "Ekki var hægt að framkvæma greiningu",
+      "analysisNotSupported": "Greining ekki studd",
+      "variableIsNotX": "Breyta er ekki x"
+    },
+    "plottingExpressions": "Slotur {count} tjáning",
+    "xMin": "X-mín",
+    "xMax": "X-hámark",
+    "yMin": "Á-mín",
+    "yMax": "Y-hámark",
+    "selectExpression": "Veldu tjáningu {index}",
+    "expressionIndex": "Tjáning {index}",
+    "analyzeFunction": "Greiningu aðgerð",
+    "changeEquationStyle": "Breyttu jöfnustíl",
+    "removeEquation": "Fjarlægja jöfnuna",
+    "lineStyle": {
+      "solid": "Stíll í þéttri línu",
+      "dash": "Stíll strikalínu",
+      "dot": "Stíll punktalínu"
+    }
+  },
+  "history": {
+    "empty": "Sagan er tóm",
+    "clearAll": "Hreinsaðu allt",
+    "clear": "Hreinsa feril",
+    "title": "Sagan",
+    "andMemory": "Saga og minni",
+    "aria": {
+      "historyPanel": "Saga spjaldið",
+      "historyAndMemoryPanel": "Saga og minni spjaldið"
+    },
+    "closeFlyout": "Loka ferli",
+    "openFlyout": "Opna feril"
+  },
+  "memory": {
+    "empty": "Minni er tómt",
+    "clearItem": "Hreinsa atriði",
+    "addCurrentValue": "Bættu við núverandi gildi",
+    "subtractCurrentValue": "Dregið frá núverandi gildi",
+    "clearAll": "Hreinsaðu allt",
+    "clear": "Hreinsaðu minni",
+    "title": "Minni",
+    "controls": "Minnisstýringar",
+    "tooltips": {
+      "clearAll": "Hreinsaðu allt minni",
+      "recall": "Endurkallað úr minni",
+      "add": "Bæta við minni",
+      "subtract": "Dregið frá minni",
+      "store": "Geymdu í minni"
+    },
+    "recallValue": "Minnaðu minni {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Leiðsögn",
+      "closeNavigation": "Lokaðu leiðsögn",
+      "openNavigation": "Opna leiðsögn"
+    },
+    "groups": {
+      "calculator": "Reiknivél",
+      "converter": "Breytir"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bitaflippborð",
+    "baseReadouts": "Grunnútlestrar",
+    "surfaceMode": "Yfirborðsstilling",
+    "fullKeypad": "Fullt lyklaborð",
+    "showKeypad": "Sýna takkaborð",
+    "bitTogglingKeypad": "Takkaborð sem breytir smá",
+    "showBitView": "Sýna bitasýn",
+    "wordSize": "Orðstærð",
+    "bitwise": "Bittalega",
+    "bitShift": "Bitabreyting"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometry",
+      "function": "Virka",
+      "functionsAria": "Aðgerðir",
+      "trigonometricFunctionsAria": "Trigonometric aðgerðir",
+      "angleUnit": "Hynnaeining {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Útlit",
+      "themeTitle": "Þema",
+      "themeDescription": "Veldu litasamsetningu",
+      "light": "Ljós",
+      "dark": "Myrkur",
+      "blue": "Blár",
+      "green": "Grænt",
+      "system": "Kerfi"
+    },
+    "language": {
+      "group": "Tungumál",
+      "title": "Tungumál",
+      "description": "Veldu valið tungumál"
+    },
+    "about": {
+      "group": "Um"
+    },
+    "feedback": "Sendu ábendingu",
+    "contribute": {
+      "prefix": "Slagðu fram",
+      "link": "GitHub",
+      "suffix": "til að hjálpa til við að bæta þessa reiknivél"
+    },
+    "links": {
+      "repository": "Verkefnageymsla",
+      "readme": "LESIÐMIG",
+      "license": "MIT leyfi"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Staðlað",
+      "subtitle": "Klassískt tafarlaust mat"
+    },
+    "scientific": {
+      "label": "Vísindalegt",
+      "subtitle": "Stuðningur við rekstraraðila, aðgerðir og tjáningu"
+    },
+    "graphing": {
+      "label": "Línurit",
+      "subtitle": "Setjið einfalda tjáningu á kartesísku plani"
+    },
+    "programmer": {
+      "label": "Forritari",
+      "subtitle": "Heildarstærðfræði með grunnumreikningi"
+    },
+    "date": {
+      "label": "Dagsetningarútreikningur",
+      "subtitle": "Finndu tímalengd og vaktadagsetningar"
+    },
+    "currency": {
+      "label": "Gjaldmiðill",
+      "subtitle": "Umbreyttu sýndargengi"
+    },
+    "volume": {
+      "label": "Bind",
+      "subtitle": "Umbreyttu rúmmálsmælingum"
+    },
+    "length": {
+      "label": "Lengd",
+      "subtitle": "Umbreyttu fjarlægðar- og lengdareiningum"
+    },
+    "weight": {
+      "label": "Þyngd og massi",
+      "subtitle": "Umbreyttu þyngdar- og massaeiningum"
+    },
+    "temperature": {
+      "label": "Hitastig",
+      "subtitle": "Umbreyttu hitastigi"
+    },
+    "energy": {
+      "label": "Orka",
+      "subtitle": "Umbreyttu orkumælingum"
+    },
+    "area": {
+      "label": "Svæði",
+      "subtitle": "Umbreyttu svæðismælingum"
+    },
+    "speed": {
+      "label": "Hraði",
+      "subtitle": "Umbreyttu hraðamælingum"
+    },
+    "time": {
+      "label": "Tími",
+      "subtitle": "Umbreyttu tímamælingum"
+    },
+    "power": {
+      "label": "Afl",
+      "subtitle": "Umbreyta aflmælingum"
+    },
+    "data": {
+      "label": "Gögn",
+      "subtitle": "Breyttu stafrænum geymslueiningum"
+    },
+    "pressure": {
+      "label": "Þrýstingur",
+      "subtitle": "Umbreyttu þrýstieiningum"
+    },
+    "angle": {
+      "label": "Hálka",
+      "subtitle": "Umbreyttu hornmælingum"
+    },
+    "settings": {
+      "label": "Stillingar",
+      "subtitle": "Upplýsingar um útlit og forrit"
+    }
+  },
+  "categories": {
+    "Currency": "Gjaldmiðill",
+    "Volume": "Bind",
+    "Length": "Lengd",
+    "Mass": "Messa",
+    "Temperature": "Hitastig",
+    "Energy": "Orka",
+    "Area": "Svæði",
+    "Speed": "Hraði",
+    "Time": "Tími",
+    "Power": "Afl",
+    "Data": "Gögn",
+    "Pressure": "Þrýstingur",
+    "Angle": "Hálka"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstraums",
+      "Nanometers": "Nanómetrar",
+      "Microns": "Míkron",
+      "Millimeters": "Millimetrar",
+      "Centimeters": "Sentimetra",
+      "Meters": "Metrar",
+      "Kilometers": "Kílómetrar",
+      "Inches": "Tommur",
+      "Feet": "Fætur",
+      "Yards": "Maður",
+      "Miles": "Mílur",
+      "Nautical miles": "Sjómílur",
+      "paperclips": "pappírsklemmur",
+      "hands": "hendur",
+      "jumbo jets": "júmbo-þotur",
+      "Carats": "Karöt",
+      "Milligrams": "Milligrömm",
+      "Centigrams": "Miðskífur",
+      "Decigrams": "Tiggrömm",
+      "Grams": "Gramm",
+      "Dekagrams": "Dekagrams",
+      "Hectograms": "Hektógröf",
+      "Kilograms": "Kíló",
+      "Metric tonnes": "Tónn",
+      "Ounces": "Aura",
+      "Pounds": "Pund",
+      "Stone": "Steinn",
+      "Short tons (US)": "Stutt tonn (Bandaríkin)",
+      "Long tons (UK)": "Löng tonn (Bretland)",
+      "snowflakes": "snjókorn",
+      "soccer balls": "fótbolta",
+      "elephants": "fílar",
+      "whales": "hvalir",
+      "Celsius": "Celsíus",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Millilítra",
+      "Cubic centimeters": "Ringsentímetrar",
+      "Liters": "Lítrar",
+      "Cubic meters": "Rúningsmetrar",
+      "Teaspoons (US)": "Teskeiðar (Bandaríkin)",
+      "Tablespoons (US)": "Matskeiðar (Bandaríkin)",
+      "Fluid ounces (US)": "Vökvaaura (Bandaríkin)",
+      "Cups (US)": "Bikar (Bandaríkin)",
+      "Pints (US)": "Pints (Bandaríkin)",
+      "Quarts (US)": "Quarts (Bandaríkin)",
+      "Gallons (US)": "Gallons (Bandaríkin)",
+      "Cubic inches": "Kúbiktommur",
+      "Cubic feet": "Ringfet",
+      "Cubic yards": "Kúbíkir yardar",
+      "Teaspoons (UK)": "Teskeiðar (Bretland)",
+      "Tablespoons (UK)": "Matskeiðar (Bretland)",
+      "Fluid ounces (UK)": "Vökvaaura (Bretland)",
+      "Pints (UK)": "Pints (Bretland)",
+      "Quarts (UK)": "Quarts (Bretland)",
+      "Gallons (UK)": "Gallons (Bretland)",
+      "coffee cups": "kaffibollar",
+      "bathtubs": "baðker",
+      "swimming pools": "sundlaugar",
+      "Square millimeters": "Fermetrar millimetrar",
+      "Square centimeters": "Fersentímetrar",
+      "Square meters": "Fermetrar",
+      "Hectares": "Hektar",
+      "Square kilometers": "Ferkílómetrar",
+      "Square inches": "Fertommur",
+      "Square feet": "Fermetrar",
+      "Square yards": "Fermetrar",
+      "Acres": "Hektara",
+      "Square miles": "Ferkílómetrar",
+      "sheets of paper": "pappírsblöð",
+      "soccer fields": "fótboltavellir",
+      "castles": "kastala",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Sentimetra á sekúndu",
+      "Meters per second": "Metrar á sekúndu",
+      "Kilometers per hour": "Kílómetrar á klukkustund",
+      "Feet per second": "Fet á sekúndu",
+      "Miles per hour": "Mílur á klukkustund",
+      "Knots": "Hnútar",
+      "Mach": "Mak",
+      "turtles": "skjaldbökur",
+      "horses": "hestar",
+      "jets": "þotur",
+      "Watts": "Vött",
+      "Kilowatts": "Kílóvatt",
+      "Horsepower (US)": "Hestöfl (Bandaríkin)",
+      "Foot-pounds/minute": "Fótkíló/mínútu",
+      "BTUs/minute": "BTU/mínútu",
+      "light bulbs": "ljósaperur",
+      "train engines": "lestarhreyflar",
+      "Thermal calories": "Hitahitaeiningar",
+      "Food calories": "Kaloríur í mat",
+      "British thermal units": "Breskar varmaeiningar",
+      "Kilojoules": "Kílójól",
+      "Kilowatt-hours": "Kílóvattstundir",
+      "Electron volts": "Rafeindavolt",
+      "Joules": "Joule",
+      "Foot-pounds": "Fótkíló",
+      "batteries": "rafhlöður",
+      "bananas": "bananar",
+      "slices of cake": "kökusneiðar",
+      "Bits": "Bitar",
+      "Nibble": "Nippla",
+      "Bytes": "Bæti",
+      "Kilobits": "Kílóbítar",
+      "Kibibits": "Kibibitar",
+      "Kilobytes": "Kílóbæt",
+      "Kibibytes": "Kíbíbæti",
+      "Megabits": "Megabitar",
+      "Mebibits": "Mebibitar",
+      "Megabytes": "Megabæt",
+      "Mebibytes": "Membæti",
+      "Gigabits": "Gígabit",
+      "Gibibits": "Gíbibitar",
+      "Gigabytes": "Gígabæt",
+      "Gibibytes": "Gíbíbæti",
+      "Terabits": "Terabitar",
+      "Tebibits": "Tebibitar",
+      "Terabytes": "Terabæti",
+      "Tebibytes": "Tebíbæti",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabæt",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Frávik",
+      "Exbibits": "Sýningar",
+      "Exabytes": "Exabæt",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabita",
+      "Zebibits": "Zebibitar",
+      "Zetabytes": "Zetabæti",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibitar",
+      "Yottabytes": "Yottabæt",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "disklingar",
+      "CDs": "Geisladiskar",
+      "DVDs": "DVD",
+      "Atmospheres": "Andrúmsloft",
+      "Bars": "Slár",
+      "Kilopascals": "Kílópascals",
+      "Millimeters of mercury": "Millimetrar af kvikasilfri",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Pund á fertommu",
+      "Degrees": "Gráður",
+      "Radians": "Radians",
+      "Gradians": "Gradians",
+      "Microseconds": "Míkrósekúndur",
+      "Milliseconds": "Millisekúndur",
+      "Seconds": "Sekúndur",
+      "Minutes": "Mínútur",
+      "Hours": "Klukkustundir",
+      "Days": "Dagar",
+      "Weeks": "Vikur",
+      "Years": "Ár"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Bandaríkjadalur",
+      "Euro": "Evra",
+      "British Pound": "Breskt pund",
+      "Japanese Yen": "Japanskt jen",
+      "Canadian Dollar": "Kanadískur dalur",
+      "Australian Dollar": "Ástralskur dalur",
+      "Brazilian Real": "Brasilískt Real",
+      "Chilean Peso": "Chileskur pesi",
+      "Chinese Yuan": "Kínverskt Yuan",
+      "Colombian Peso": "Kólumbískur pesi",
+      "Danish Krone": "Dönsk króna",
+      "Egyptian Pound": "Egyptískt pund",
+      "Hong Kong Dollar": "Hong Kong dalur",
+      "Indian Rupee": "Indverskar rúpíur",
+      "Kenyan Shilling": "Kenískur skildingur",
+      "Mexican Peso": "Mexíkóskur pesi",
+      "Nigerian Naira": "Nígerísk Naira",
+      "New Zealand Dollar": "Nýsjálenskur dalur",
+      "Norwegian Krone": "Norsk króna",
+      "Philippine Piso": "Filippseyska Piso",
+      "Polish Zloty": "Pólskur zloty",
+      "Qatari Riyal": "Qatar Riyal",
+      "Saudi Riyal": "Saudi Riyal",
+      "Singapore Dollar": "Singapúrdalur",
+      "South African Rand": "Suður-afrískt rand",
+      "South Korean Won": "Suður-kóreskt won",
+      "Swedish Krona": "Sænsk króna",
+      "Swiss Franc": "Svissneskur franki",
+      "Thai Baht": "Taílenskt baht",
+      "Turkish Lira": "Tyrknesk líra",
+      "Turkmenistani Manat": "Turkmenistan Manat",
+      "Ugandan Shilling": "Úgandi skildingur",
+      "Ukrainian Hryvnia": "Úkraínsk hrinja",
+      "UAE Dirham": "UAE Dirham",
+      "Uruguayan Peso": "Úrúgvæskur pesi",
+      "Uzbekistani Som": "Úsbekistan Som",
+      "Vanuatu Vatu": "Vanúatú Vatu",
+      "Venezuelan Bolivar Soberano": "Bolívar Soberano frá Venesúela",
+      "Vietnamese Dong": "Dong í Víetnam",
+      "Yemeni Rial": "Jemenískt ríal"
+    },
+    "labels": {
+      "United States - Dollar": "Bandaríkin - Dollar",
+      "Europe - Euro": "Evrópa - Evrópa",
+      "United Kingdom - Pound": "Bretland – pund",
+      "Japan - Yen": "Japan – jen",
+      "Canada - Dollar": "Kanada - Dollar",
+      "Australia - Dollar": "Ástralía - Dollar",
+      "Brazil - Real": "Brasilía - Real",
+      "Chile - Peso": "Chile – Pesi",
+      "China - Yuan Renminbi": "Kína – Yuan Renminbi",
+      "Colombia - Peso": "Kólumbía – Pesi",
+      "Denmark - Krone": "Danmörk - króna",
+      "Egypt - Pound": "Egyptaland – pund",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Dollar",
+      "India - Rupee": "Indland – rúpíur",
+      "Kenya - Shilling": "Kenýa – skildingur",
+      "Mexico - Peso": "Mexíkó - Pesi",
+      "Nigeria - Naira": "Nígería - Naira",
+      "New Zealand - Dollar": "Nýja Sjáland - Dollar",
+      "Norway - Krone": "Noregur – króna",
+      "Philippines - Piso": "Filippseyjar - Piso",
+      "Poland - Zloty": "Pólland - Zloty",
+      "Qatar - Riyal": "Katar – Riyal",
+      "Saudi Arabia - Riyal": "Saudi Arabía – Riyal",
+      "Singapore - Dollar": "Singapúr - Dollar",
+      "South Africa - Rand": "Suður-Afríka - Rand",
+      "South Korea - Won": "Suður-Kórea - vann",
+      "Sweden - Krona": "Svíþjóð - króna",
+      "Switzerland - Franc": "Sviss - Franc",
+      "Thailand - Baht": "Taíland - baht",
+      "Turkey - Lira": "Tyrkland - líra",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Úganda - skildingur",
+      "Ukraine - Hryvnia": "Úkraína – hrinja",
+      "United Arab Emirates - Dirham": "Sameinuðu arabísku furstadæmin - Dirham",
+      "Uruguay - Peso": "Úrúgvæ - Pesi",
+      "Uzbekistan - Som": "Úsbekistan – Som",
+      "Vanuatu - Vatu": "Vanúatú - Vatu",
+      "Venezuela - Bolívar Soberano": "Venesúela - Bolívar Soberano",
+      "Vietnam - Dong": "Víetnam – Dong",
+      "Yemen - Rial": "Jemen - ríal"
+    }
+  }
+}

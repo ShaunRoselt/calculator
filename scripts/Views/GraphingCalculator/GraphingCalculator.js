@@ -1,5 +1,6 @@
 import { state } from '../../state.js';
 import { t } from '../../i18n.js';
+import { getGraphThemeInlineStyle, getThemeOptions } from '../../themes.js';
 import { escapeHtml, formatExpressionForDisplay } from '../../utils.js';
 import { renderToolbarIcon } from '../ViewIcons.js';
 
@@ -123,13 +124,13 @@ const GRAPHING_KEYPAD_ROWS = [
 
 export function renderGraphingCalculatorView() {
   const isCompact = window.innerWidth < 768;
-  const graphThemeClass = state.graphing.theme === 'match-app' ? 'graph-theme-match-app' : 'graph-theme-light';
+  const graphThemeStyle = getGraphThemeInlineStyle(state.graphing.theme, document.documentElement.dataset.theme);
   const analysisOpen = typeof state.graphing.analysisExpressionIndex === 'number'
     && !!state.graphing.analysisData
     && !!state.graphing.expressions[state.graphing.analysisExpressionIndex];
 
   return `
-    <div class="graphing-layout ${graphThemeClass} ${isCompact ? `mobile-view-${state.graphing.mobileView}` : 'desktop-view'}">
+    <div class="graphing-layout ${isCompact ? `mobile-view-${state.graphing.mobileView}` : 'desktop-view'}"${graphThemeStyle ? ` style="${escapeHtml(graphThemeStyle)}"` : ''}>
       <section class="graph-workspace">
         <div class="graph-surface">
           <canvas id="graph-canvas" class="graph-canvas" width="1200" height="720" aria-label="${t('graph.canvas')}"></canvas>
@@ -238,6 +239,7 @@ function renderFunctionAnalysisItem(item) {
 
 function renderGraphSettingsPanel() {
   const viewport = state.graphing.viewport;
+  const themes = getThemeOptions();
   return `
     <section class="graph-settings-panel" role="dialog" aria-label="${t('graph.options')}">
       <div class="graph-settings-header">
@@ -267,17 +269,13 @@ function renderGraphSettingsPanel() {
           ${[1, 2, 3, 4].map((value) => `<option value="${value}" ${Number(state.graphing.lineThickness) === value ? 'selected' : ''}>${value.toFixed(1)}</option>`).join('')}
         </select>
       </label>
-      <fieldset class="graph-settings-theme-group">
-        <legend>${t('graph.theme')}</legend>
-        <label class="graph-settings-radio-option">
-          <input type="radio" name="graph-theme" value="light" ${state.graphing.theme === 'light' ? 'checked' : ''} />
-          <span>${t('graph.alwaysLight')}</span>
-        </label>
-        <label class="graph-settings-radio-option">
-          <input type="radio" name="graph-theme" value="match-app" ${state.graphing.theme === 'match-app' ? 'checked' : ''} />
-          <span>${t('graph.matchAppTheme')}</span>
-        </label>
-      </fieldset>
+      <label class="graph-settings-select-label graph-settings-theme-select">
+        <span>${t('graph.theme')}</span>
+        <select class="graph-settings-select" name="graph-theme">
+          <option value="match-app" ${state.graphing.theme === 'match-app' ? 'selected' : ''}>${t('graph.matchAppTheme')}</option>
+          ${themes.map((theme) => `<option value="${theme.value}" ${state.graphing.theme === theme.value ? 'selected' : ''}>${escapeHtml(theme.label)}</option>`).join('')}
+        </select>
+      </label>
     </section>
   `;
 }

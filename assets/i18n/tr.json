@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Hesap makinesi",
+    "name": "Hesap makinesi"
+  },
+  "common": {
+    "back": "Geri",
+    "backspace": "Geri tuşu",
+    "closeSidePanel": "Paneli kapat"
+  },
+  "converter": {
+    "unitConverter": "Birim Dönüştürücü",
+    "title": "Birim dönüştürücüler",
+    "builtInCollections": "Yerleşik koleksiyonlar",
+    "category": "Kategori",
+    "from": "Gönderen",
+    "to": "Alıcı",
+    "inputValue": "Dönüştürülecek değer",
+    "convertedValue": "Dönüştürülen değer",
+    "swapUnits": "Birimleri değiştir",
+    "keypad": "Dönüştürücü tuş takımı",
+    "unit": "birim",
+    "unitOptions": "birim seçenekleri",
+    "currency": {
+      "updatingRates": "Ücretler güncelleniyor…",
+      "updateRates": "Güncelleme oranları",
+      "keypad": "Para birimi tuş takımı",
+      "currency": "para birimi",
+      "options": "para birimi seçenekleri",
+      "updated": "Güncellendi {timestamp}",
+      "status": {
+        "mockNote": "Bağımsız uygulama demosu için örnek referans oranları.",
+        "fetching": "En son USD referans oranları getiriliyor...",
+        "liveRatesLoaded": "Canlı oranlar ExchangeRate-API'den yüklendi.",
+        "liveUpdateUnavailable": "Canlı güncelleme kullanılamıyor. Demo oranları yerel olarak yenilendi."
+      }
+    },
+    "aboutEqualTo": "Yaklaşık olarak eşit"
+  },
+  "errors": {
+    "invalidInput": "Geçersiz giriş",
+    "cannotDivideByZero": "Sıfıra bölünemez",
+    "cannotModuloByZero": "Sıfırla modülo yapılamıyor",
+    "invalidProgrammerOperation": "Geçersiz işlem",
+    "overflow": "Sonuç çok büyük"
+  },
+  "date": {
+    "calculationMode": "Hesaplama modu",
+    "from": "Gönderen",
+    "to": "Kime",
+    "results": {
+      "difference": "Fark",
+      "sameDates": "Aynı tarihler",
+      "date": "Tarih"
+    },
+    "calculationModeOptions": "Hesaplama modu seçenekleri",
+    "mode": {
+      "difference": "Fark",
+      "shift": "Üst Karakter"
+    },
+    "operation": "İşlem",
+    "add": "Ekle",
+    "subtract": "Çıkar",
+    "years": "Yıl",
+    "months": "Ay",
+    "days": "Gün",
+    "chooseDate": "Tarih seçin",
+    "previousMonth": "Önceki ay",
+    "nextMonth": "Gelecek ay",
+    "duration": {
+      "year": {
+        "one": "{count} yıl",
+        "other": "{count} yıl"
+      },
+      "month": {
+        "one": "{count} ay",
+        "other": "{count} ay"
+      },
+      "week": {
+        "one": "{count} hafta",
+        "other": "{count} hafta"
+      },
+      "day": {
+        "one": "{count} gün",
+        "other": "{count} gün"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from} ile {to} arasındaki fark",
+      "addTo": "{duration}'i {date}'e ekle",
+      "subtractFrom": "{duration}'i {date}'den çıkarın"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Vurgulanan ifadeyi kontrol edin",
+    "enterExpression": "Bir ifade girin",
+    "canvas": "Grafik tuvali",
+    "stopTracing": "İzlemeyi durdur",
+    "startTracing": "İzlemeye başla",
+    "share": "Paylaş",
+    "options": "Seçenekler",
+    "zoomIn": "Yakınlaştır",
+    "zoomInLabel": "Yakınlaştır",
+    "zoomOut": "Uzaklaştır",
+    "zoomOutLabel": "Uzaklaştır",
+    "refreshViewAutomatically": "Görünümü otomatik olarak yenile",
+    "view": "Görüntüle",
+    "expressions": "İfadeler",
+    "mobileView": "Mobil görünüm",
+    "showGraph": "Grafiği göster",
+    "showExpressions": "İfadeleri göster",
+    "backToFunctionList": "İşlev listesine dön",
+    "window": "Pencere",
+    "resetView": "Görünümü sıfırla",
+    "units": "Birimler",
+    "radians": "Radyan",
+    "degrees": "Derece",
+    "gradians": "Gradyanlar",
+    "lineThickness": "Çizgi kalınlığı",
+    "theme": "Tema",
+    "alwaysLight": "Her zaman hafif",
+    "matchAppTheme": "Uygulama temasını eşleştir",
+    "groups": {
+      "inequalities": "Eşitsizlikler",
+      "trigonometry": "Trigonometri",
+      "function": "İşlev"
+    },
+    "functions": "İşlevler",
+    "showEquation": "Denklemleri göster",
+    "hideEquation": "Denklemleri gizle",
+    "lineOptions": "Hat seçenekleri",
+    "color": "Renk",
+    "style": "Stil",
+    "analysis": {
+      "title": "Analiz",
+      "domain": "Alan adı",
+      "range": "Aralık",
+      "xIntercept": "x-kesme noktası",
+      "yIntercept": "y-kesme noktası",
+      "minima": "Minimum",
+      "maxima": "Maksimum",
+      "inflectionPoints": "Büküm noktaları",
+      "verticalAsymptotes": "Dikey asimptotlar",
+      "horizontalAsymptotes": "Yatay asimptotlar",
+      "obliqueAsymptotes": "Eğik asimptotlar",
+      "parity": "Eşlik",
+      "period": "Dönem",
+      "monotonicity": "Tekdüzelik",
+      "domainNone": "Alan adı kısıtlaması yok",
+      "rangeNone": "Aralık kısıtlaması yok",
+      "xInterceptNone": "X kesişimi yok",
+      "yInterceptNone": "Y kesişimi yok",
+      "minimaNone": "Minimum yok",
+      "maximaNone": "Maksimum değer yok",
+      "inflectionNone": "Büküm noktası yok",
+      "verticalAsymptotesNone": "Dikey asimptot yok",
+      "horizontalAsymptotesNone": "Yatay asimptot yok",
+      "obliqueAsymptotesNone": "Eğik asimptot yok",
+      "parityUnknown": "Bilinmiyor",
+      "parityOdd": "Tek",
+      "parityEven": "Çift",
+      "parityNeither": "Hiçbiri",
+      "periodicityUnknown": "Bilinmiyor",
+      "periodicityNotPeriodic": "Periyodik değil",
+      "monotonicityConstant": "Sabit",
+      "monotonicityIncreasing": "Artıyor",
+      "monotonicityDecreasing": "Azalıyor",
+      "monotonicityUnknown": "Bilinmiyor",
+      "monotonicityError": "Belirlenemiyor",
+      "featureTooComplexPlural": "Analiz edilemeyecek kadar karmaşık",
+      "analysisCouldNotBePerformed": "Analiz gerçekleştirilemedi",
+      "analysisNotSupported": "Analiz desteklenmiyor",
+      "variableIsNotX": "Değişken x değil"
+    },
+    "plottingExpressions": "{count} ifadeleri çiziliyor",
+    "xMin": "X Dakika",
+    "xMax": "X-Max",
+    "yMin": "Y-Dakika",
+    "yMax": "Y-Maks",
+    "selectExpression": "{index} ifadesini seçin",
+    "expressionIndex": "İfade {index}",
+    "analyzeFunction": "Analiz işlevi",
+    "changeEquationStyle": "Denklem stilini değiştir",
+    "removeEquation": "Denklemleri kaldır",
+    "lineStyle": {
+      "solid": "Düz çizgi stili",
+      "dash": "Kesik çizgi stili",
+      "dot": "Nokta çizgi stili"
+    }
+  },
+  "history": {
+    "empty": "Geçmiş boş",
+    "clearAll": "Tümünü temizle",
+    "clear": "Geçmişi temizle",
+    "title": "Geçmiş",
+    "andMemory": "Geçmiş ve Bellek",
+    "aria": {
+      "historyPanel": "Geçmiş paneli",
+      "historyAndMemoryPanel": "Geçmiş ve Bellek paneli"
+    },
+    "closeFlyout": "Geçmişi kapat",
+    "openFlyout": "Geçmişi aç"
+  },
+  "memory": {
+    "empty": "Hafıza boş",
+    "clearItem": "Öğeyi temizle",
+    "addCurrentValue": "Geçerli değeri ekle",
+    "subtractCurrentValue": "Mevcut değeri çıkar",
+    "clearAll": "Tümünü temizle",
+    "clear": "Belleği temizle",
+    "title": "Bellek",
+    "controls": "Bellek kontrolleri",
+    "tooltips": {
+      "clearAll": "Tüm belleği temizle",
+      "recall": "Bellekten geri çağır",
+      "add": "Hafızaya ekle",
+      "subtract": "Bellekten çıkar",
+      "store": "Bellekte sakla"
+    },
+    "recallValue": "Hafızayı geri çağır {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigasyon",
+      "closeNavigation": "Gezinmeyi kapat",
+      "openNavigation": "Gezinmeyi aç"
+    },
+    "groups": {
+      "calculator": "Hesap makinesi",
+      "converter": "Dönüştürücü"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit çevirme paneli",
+    "baseReadouts": "Temel okumalar",
+    "surfaceMode": "Yüzey modu",
+    "fullKeypad": "Tam tuş takımı",
+    "showKeypad": "Tuş takımını göster",
+    "bitTogglingKeypad": "Bit değiştirme tuş takımı",
+    "showBitView": "Bit görünümünü göster",
+    "wordSize": "Kelime boyutu",
+    "bitwise": "Bitsel",
+    "bitShift": "Bit kaydırma"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometri",
+      "function": "İşlev",
+      "functionsAria": "İşlevler",
+      "trigonometricFunctionsAria": "Trigonometrik işlevler",
+      "angleUnit": "Açı birimi {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Görünüm",
+      "themeTitle": "Tema",
+      "themeDescription": "Bir renk şeması seçin",
+      "light": "Işık",
+      "dark": "Koyu",
+      "blue": "Mavi",
+      "green": "Yeşil",
+      "system": "Sistem"
+    },
+    "language": {
+      "group": "Dil",
+      "title": "Dil",
+      "description": "Tercih ettiğiniz dili seçin"
+    },
+    "about": {
+      "group": "Hakkında"
+    },
+    "feedback": "Geri bildirim gönder",
+    "contribute": {
+      "prefix": "Katkıda bulunun",
+      "link": "GitHub",
+      "suffix": "bu hesap makinesinin geliştirilmesine yardımcı olmak için"
+    },
+    "links": {
+      "repository": "Proje deposu",
+      "readme": "BENİOKU",
+      "license": "MIT lisansı"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standart",
+      "subtitle": "Klasik anında değerlendirme"
+    },
+    "scientific": {
+      "label": "Bilimsel",
+      "subtitle": "Operatörler, işlevler ve ifade desteği"
+    },
+    "graphing": {
+      "label": "Grafik Oluşturma",
+      "subtitle": "Kartezyen düzlemde basit bir ifade çizin"
+    },
+    "programmer": {
+      "label": "Programcı",
+      "subtitle": "Temel dönüşümle tamsayı matematiği"
+    },
+    "date": {
+      "label": "Tarih hesaplama",
+      "subtitle": "Süreleri ve vardiya tarihlerini bul"
+    },
+    "currency": {
+      "label": "Para birimi",
+      "subtitle": "Sahte döviz kurlarını dönüştürün"
+    },
+    "volume": {
+      "label": "Hacim",
+      "subtitle": "Hacim ölçümlerini dönüştür"
+    },
+    "length": {
+      "label": "Uzunluk",
+      "subtitle": "Uzaklık ve uzunluk birimlerini dönüştür"
+    },
+    "weight": {
+      "label": "Ağırlık ve Kütle",
+      "subtitle": "Ağırlık ve kütle birimlerini dönüştür"
+    },
+    "temperature": {
+      "label": "Sıcaklık",
+      "subtitle": "Sıcaklık ölçeklerini dönüştür"
+    },
+    "energy": {
+      "label": "Enerji",
+      "subtitle": "Enerji ölçümlerini dönüştürün"
+    },
+    "area": {
+      "label": "Alan",
+      "subtitle": "Alan ölçümlerini dönüştür"
+    },
+    "speed": {
+      "label": "Hız",
+      "subtitle": "Hız ölçümlerini dönüştürün"
+    },
+    "time": {
+      "label": "Zaman",
+      "subtitle": "Zaman ölçümlerini dönüştürün"
+    },
+    "power": {
+      "label": "Güç",
+      "subtitle": "Güç ölçümlerini dönüştürün"
+    },
+    "data": {
+      "label": "Veri",
+      "subtitle": "Dijital depolama birimlerini dönüştürün"
+    },
+    "pressure": {
+      "label": "Basınç",
+      "subtitle": "Basınç birimlerini dönüştür"
+    },
+    "angle": {
+      "label": "Açı",
+      "subtitle": "Açı ölçümlerini dönüştür"
+    },
+    "settings": {
+      "label": "Ayarlar",
+      "subtitle": "Görünüm ve uygulama bilgileri"
+    }
+  },
+  "categories": {
+    "Currency": "Para birimi",
+    "Volume": "Hacim",
+    "Length": "Uzunluk",
+    "Mass": "Kütle",
+    "Temperature": "Sıcaklık",
+    "Energy": "Enerji",
+    "Area": "Alan",
+    "Speed": "Hız",
+    "Time": "Zaman",
+    "Power": "Güç",
+    "Data": "Veri",
+    "Pressure": "Basınç",
+    "Angle": "Açı"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstromlar",
+      "Nanometers": "Nanometre",
+      "Microns": "Mikron",
+      "Millimeters": "Milimetre",
+      "Centimeters": "Santimetre",
+      "Meters": "Metre",
+      "Kilometers": "Kilometre",
+      "Inches": "İnç",
+      "Feet": "Ayaklar",
+      "Yards": "Yard",
+      "Miles": "Mil",
+      "Nautical miles": "Deniz mili",
+      "paperclips": "ataç",
+      "hands": "eller",
+      "jumbo jets": "jumbo jetler",
+      "Carats": "Karat",
+      "Milligrams": "Miligram",
+      "Centigrams": "Santigram",
+      "Decigrams": "Desigram",
+      "Grams": "Gram",
+      "Dekagrams": "Dekagram",
+      "Hectograms": "Hektogram",
+      "Kilograms": "Kilogram",
+      "Metric tonnes": "Metrik ton",
+      "Ounces": "Ons",
+      "Pounds": "Pound",
+      "Stone": "Taş",
+      "Short tons (US)": "Kısa ton (ABD)",
+      "Long tons (UK)": "Uzun tonlar (Birleşik Krallık)",
+      "snowflakes": "kar taneleri",
+      "soccer balls": "futbol topları",
+      "elephants": "filler",
+      "whales": "balinalar",
+      "Celsius": "Santigrat",
+      "Fahrenheit": "Fahrenhayt",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mililitre",
+      "Cubic centimeters": "Santimetreküp",
+      "Liters": "Litre",
+      "Cubic meters": "Metreküp",
+      "Teaspoons (US)": "Çay kaşığı (ABD)",
+      "Tablespoons (US)": "Yemek kaşığı (ABD)",
+      "Fluid ounces (US)": "Sıvı ons (ABD)",
+      "Cups (US)": "Kupalar (ABD)",
+      "Pints (US)": "Pint (ABD)",
+      "Quarts (US)": "Quart (ABD)",
+      "Gallons (US)": "Galon (ABD)",
+      "Cubic inches": "İnç küp",
+      "Cubic feet": "Feet küp",
+      "Cubic yards": "Yarda küp",
+      "Teaspoons (UK)": "Çay kaşığı (Birleşik Krallık)",
+      "Tablespoons (UK)": "Yemek kaşığı (İngiltere)",
+      "Fluid ounces (UK)": "Sıvı ons (İngiltere)",
+      "Pints (UK)": "Pint (Birleşik Krallık)",
+      "Quarts (UK)": "Quart (Birleşik Krallık)",
+      "Gallons (UK)": "Galon (Birleşik Krallık)",
+      "coffee cups": "kahve fincanları",
+      "bathtubs": "küvetler",
+      "swimming pools": "yüzme havuzları",
+      "Square millimeters": "Milimetrekare",
+      "Square centimeters": "Santimetrekare",
+      "Square meters": "Metrekare",
+      "Hectares": "Hektar",
+      "Square kilometers": "Kilometre kare",
+      "Square inches": "İnç kare",
+      "Square feet": "Fitkare",
+      "Square yards": "Yard kare",
+      "Acres": "Dönüm",
+      "Square miles": "mil kare",
+      "sheets of paper": "sayfa kağıt",
+      "soccer fields": "futbol sahaları",
+      "castles": "kaleler",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Santimetre/saniye",
+      "Meters per second": "Saniyede metre",
+      "Kilometers per hour": "Kilometre/saat",
+      "Feet per second": "Saniyede feet",
+      "Miles per hour": "Saat başına mil",
+      "Knots": "Düğüm",
+      "Mach": "Mach",
+      "turtles": "kaplumbağalar",
+      "horses": "atlar",
+      "jets": "jetler",
+      "Watts": "Watt",
+      "Kilowatts": "Kilovat",
+      "Horsepower (US)": "Beygir gücü (ABD)",
+      "Foot-pounds/minute": "Ayak-libre/dakika",
+      "BTUs/minute": "BTU/dakika",
+      "light bulbs": "ampuller",
+      "train engines": "tren motorları",
+      "Thermal calories": "Termal kaloriler",
+      "Food calories": "Gıda kalorileri",
+      "British thermal units": "İngiliz termal birimleri",
+      "Kilojoules": "Kilojul",
+      "Kilowatt-hours": "Kilovat-saat",
+      "Electron volts": "Elektron volt",
+      "Joules": "Joule",
+      "Foot-pounds": "Ayak-libre",
+      "batteries": "piller",
+      "bananas": "muz",
+      "slices of cake": "dilim pasta",
+      "Bits": "Bitler",
+      "Nibble": "Aşağı atla",
+      "Bytes": "Bayt",
+      "Kilobits": "Kilobit",
+      "Kibibits": "Kibibitler",
+      "Kilobytes": "Kilobayt",
+      "Kibibytes": "Kibibayt",
+      "Megabits": "Megabit",
+      "Mebibits": "Mebibitler",
+      "Megabytes": "Megabayt",
+      "Mebibytes": "Mebibayt",
+      "Gigabits": "Gigabit",
+      "Gibibits": "Gibibitler",
+      "Gigabytes": "Gigabayt",
+      "Gibibytes": "Gibibayt",
+      "Terabits": "Terabit",
+      "Tebibits": "Tebibit",
+      "Terabytes": "Terabayt",
+      "Tebibytes": "Tebibayt",
+      "Petabits": "Petabit",
+      "Pebibits": "Pebibitler",
+      "Petabytes": "Petabayt",
+      "Pebibytes": "Pebibayt",
+      "Exabits": "Exabit'ler",
+      "Exbibits": "Sergiler",
+      "Exabytes": "Eksabayt",
+      "Exbibytes": "Exbibitler",
+      "Zetabits": "Zetabit",
+      "Zebibits": "Zebibitler",
+      "Zetabytes": "Zetabayt",
+      "Zebibytes": "Zebibayt",
+      "Yottabits": "Yottabit",
+      "Yobibits": "Yobibitler",
+      "Yottabytes": "Yottabayt",
+      "Yobibytes": "Yobibayt",
+      "floppy disks": "disketler",
+      "CDs": "CD'ler",
+      "DVDs": "DVD'ler",
+      "Atmospheres": "Atmosferler",
+      "Bars": "Barlar",
+      "Kilopascals": "Kilopaskal",
+      "Pascals": "Pascal",
+      "Pounds per square inch": "İnç kare başına pound",
+      "Degrees": "Derece",
+      "Radians": "Radyan",
+      "Gradians": "Gradyanlar",
+      "Microseconds": "Mikrosaniye",
+      "Milliseconds": "Milisaniye",
+      "Seconds": "Saniye",
+      "Minutes": "Dakika",
+      "Hours": "Saat",
+      "Days": "Gün",
+      "Weeks": "Hafta",
+      "Years": "Yıl",
+      "Millimeters of mercury": "Millimeters of mercury"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "ABD Doları",
+      "Euro": "Avro",
+      "British Pound": "İngiliz Sterlini",
+      "Japanese Yen": "Japon Yeni",
+      "Canadian Dollar": "Kanada Doları",
+      "Australian Dollar": "Avustralya Doları",
+      "Brazilian Real": "Brezilya Reali",
+      "Chilean Peso": "Şili Pesosu",
+      "Chinese Yuan": "Çin Yuanı",
+      "Colombian Peso": "Kolombiya Pesosu",
+      "Danish Krone": "Danimarka Kronu",
+      "Egyptian Pound": "Mısır Poundu",
+      "Hong Kong Dollar": "Hong Kong Doları",
+      "Indian Rupee": "Hindistan Rupisi",
+      "Kenyan Shilling": "Kenya Şilini",
+      "Mexican Peso": "Meksika Pesosu",
+      "Nigerian Naira": "Nijerya Nairası",
+      "New Zealand Dollar": "Yeni Zelanda Doları",
+      "Norwegian Krone": "Norveç Kronu",
+      "Philippine Piso": "Filipin Pisosu",
+      "Polish Zloty": "Polonya Zlotisi",
+      "Qatari Riyal": "Katar Riyali",
+      "Saudi Riyal": "Suudi Arabistan Riyali",
+      "Singapore Dollar": "Singapur Doları",
+      "South African Rand": "Güney Afrika Randı",
+      "South Korean Won": "Güney Kore Wonu",
+      "Swedish Krona": "İsveç Kronu",
+      "Swiss Franc": "İsviçre Frangı",
+      "Thai Baht": "Tayland Bahtı",
+      "Turkish Lira": "Türk Lirası",
+      "Turkmenistani Manat": "Türkmenistan Manatı",
+      "Ugandan Shilling": "Uganda Şilini",
+      "Ukrainian Hryvnia": "Ukrayna Grivnası",
+      "UAE Dirham": "BAE Dirhemi",
+      "Uruguayan Peso": "Uruguay Pesosu",
+      "Uzbekistani Som": "Özbek Somu",
+      "Vanuatu Vatu": "Vanuatu Vatusu",
+      "Venezuelan Bolivar Soberano": "Venezüellalı Bolivar Soberano",
+      "Vietnamese Dong": "Vietnam Dongu",
+      "Yemeni Rial": "Yemen Riyali"
+    },
+    "labels": {
+      "United States - Dollar": "Amerika Birleşik Devletleri - Dolar",
+      "Europe - Euro": "Avrupa - Avro",
+      "United Kingdom - Pound": "Birleşik Krallık - Sterlin",
+      "Japan - Yen": "Japonya - Yen",
+      "Canada - Dollar": "Kanada - Dolar",
+      "Australia - Dollar": "Avustralya - Dolar",
+      "Brazil - Real": "Brezilya - Gerçek",
+      "Chile - Peso": "Şili - Pezosu",
+      "China - Yuan Renminbi": "Çin - Yuan Renminbi",
+      "Colombia - Peso": "Kolombiya - Pezosu",
+      "Denmark - Krone": "Danimarka - Kron",
+      "Egypt - Pound": "Mısır - Poundu",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Dolar",
+      "India - Rupee": "Hindistan - Rupi",
+      "Kenya - Shilling": "Kenya - Şilin",
+      "Mexico - Peso": "Meksika - Pezosu",
+      "Nigeria - Naira": "Nijerya - Naira",
+      "New Zealand - Dollar": "Yeni Zelanda - Dolar",
+      "Norway - Krone": "Norveç - Kron",
+      "Philippines - Piso": "Filipinler - Piso",
+      "Poland - Zloty": "Polonya - Zloti",
+      "Qatar - Riyal": "Katar - Riyal",
+      "Saudi Arabia - Riyal": "Suudi Arabistan - Riyal",
+      "Singapore - Dollar": "Singapur - Dolar",
+      "South Africa - Rand": "Güney Afrika - Rand",
+      "South Korea - Won": "Güney Kore - Kazandı",
+      "Sweden - Krona": "İsveç - Kronu",
+      "Switzerland - Franc": "İsviçre - Frank",
+      "Thailand - Baht": "Tayland - Baht",
+      "Turkey - Lira": "Türkiye - Lira",
+      "Turkmenistan - Manat": "Türkmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Şilin",
+      "Ukraine - Hryvnia": "Ukrayna - Grivnası",
+      "United Arab Emirates - Dirham": "Birleşik Arap Emirlikleri - Dirhem",
+      "Uruguay - Peso": "Uruguay - Pezosu",
+      "Uzbekistan - Som": "Özbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolivar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemen - Riyali"
+    }
+  }
+}

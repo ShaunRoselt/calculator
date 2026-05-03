@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Skaičiuoklė",
+    "name": "Skaičiuoklė"
+  },
+  "common": {
+    "back": "Atgal",
+    "backspace": "Backspace",
+    "closeSidePanel": "Uždaryti skydelį"
+  },
+  "converter": {
+    "unitConverter": "Vienetų keitiklis",
+    "title": "Vienetų keitikliai",
+    "builtInCollections": "Įtaisytosios kolekcijos",
+    "category": "Kategorija",
+    "from": "Nuo",
+    "to": "Kam",
+    "inputValue": "Konvertuojama vertė",
+    "convertedValue": "Konvertuota vertė",
+    "swapUnits": "Keisti vienetus",
+    "keypad": "Konverterio klaviatūra",
+    "unit": "vienetas",
+    "unitOptions": "vieneto parinktys",
+    "currency": {
+      "updatingRates": "Atnaujinami įkainiai…",
+      "updateRates": "Atnaujinti įkainius",
+      "keypad": "Valiutų klaviatūra",
+      "currency": "valiuta",
+      "options": "valiutos parinktys",
+      "updated": "Atnaujinta {timestamp}",
+      "status": {
+        "mockNote": "Apsimetinėti atskiros programos demonstracinės versijos orientaciniai kursai.",
+        "fetching": "Gaunami naujausi USD orientaciniai kursai...",
+        "liveRatesLoaded": "Tiesioginiai kursai įkelti iš „ExchangeRate-API“.",
+        "liveUpdateUnavailable": "Tiesioginis atnaujinimas nepasiekiamas. Atnaujinti demonstraciniai kursai vietoje."
+      }
+    },
+    "aboutEqualTo": "Maždaug lygus"
+  },
+  "errors": {
+    "invalidInput": "Netinkama įvestis",
+    "cannotDivideByZero": "Negalima padalyti iš nulio",
+    "cannotModuloByZero": "Negalima moduliuoti nuliu",
+    "invalidProgrammerOperation": "Netinkama operacija",
+    "overflow": "Rezultatas per didelis"
+  },
+  "date": {
+    "calculationMode": "Skaičiavimo režimas",
+    "from": "Nuo",
+    "to": "Kam",
+    "results": {
+      "difference": "Skirtumas",
+      "sameDates": "Tos pačios datos",
+      "date": "Data"
+    },
+    "calculationModeOptions": "Skaičiavimo režimo parinktys",
+    "mode": {
+      "difference": "Skirtumas",
+      "shift": "Shift"
+    },
+    "operation": "Operacija",
+    "add": "Pridėti",
+    "subtract": "Atimti",
+    "years": "Metai",
+    "months": "Mėnesiai",
+    "days": "Dienos",
+    "chooseDate": "Pasirinkite datą",
+    "previousMonth": "Ankstesnis mėnuo",
+    "nextMonth": "Kitą mėnesį",
+    "duration": {
+      "year": {
+        "one": "{count} metai",
+        "other": "{count} metų"
+      },
+      "month": {
+        "one": "{count} mėnuo",
+        "other": "{count} mėnesių"
+      },
+      "week": {
+        "one": "{count} savaitė",
+        "other": "{count} savaites"
+      },
+      "day": {
+        "one": "{count} diena",
+        "other": "{count} dienų"
+      }
+    },
+    "history": {
+      "differenceBetween": "Skirtumas tarp {from} ir {to}",
+      "addTo": "Pridėti {duration} prie {date}",
+      "subtractFrom": "Atimkite {duration} iš {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Patikrinkite paryškintą išraišką",
+    "enterExpression": "Įveskite išraišką",
+    "canvas": "Grafinė drobė",
+    "stopTracing": "Sustabdykite sekimą",
+    "startTracing": "Pradėkite sekti",
+    "share": "Bendrinti",
+    "options": "Parinktys",
+    "zoomIn": "Priartinti",
+    "zoomInLabel": "Priartinti",
+    "zoomOut": "Sumažinti",
+    "zoomOutLabel": "Nutolinti",
+    "refreshViewAutomatically": "Automatiškai atnaujinti rodinį",
+    "view": "Peržiūrėti",
+    "expressions": "Išraiškos",
+    "mobileView": "Rodinys mobiliesiems",
+    "showGraph": "Rodyti diagramą",
+    "showExpressions": "Rodyti išraiškas",
+    "backToFunctionList": "Grįžti į funkcijų sąrašą",
+    "window": "Langas",
+    "resetView": "Nustatyti rodinį iš naujo",
+    "units": "Vienetai",
+    "radians": "Radianai",
+    "degrees": "Laipsniai",
+    "gradians": "Gradianai",
+    "lineThickness": "Linijos storis",
+    "theme": "Tema",
+    "alwaysLight": "Visada šviesa",
+    "matchAppTheme": "Suderinkite programos temą",
+    "groups": {
+      "inequalities": "Nelygybės",
+      "trigonometry": "Trigonometrija",
+      "function": "Funkcija"
+    },
+    "functions": "Funkcijos",
+    "showEquation": "Rodyti lygtį",
+    "hideEquation": "Slėpti lygtį",
+    "lineOptions": "Linijos parinktys",
+    "color": "Spalva",
+    "style": "Stilius",
+    "analysis": {
+      "title": "Analizė",
+      "domain": "Domenas",
+      "range": "Diapazonas",
+      "xIntercept": "x pertrauka",
+      "yIntercept": "y pertrauka",
+      "minima": "Mažiausiai",
+      "maxima": "Maksima",
+      "inflectionPoints": "Posūkio taškai",
+      "verticalAsymptotes": "Vertikalios asimptotės",
+      "horizontalAsymptotes": "Horizontalios asimptotės",
+      "obliqueAsymptotes": "Įstrižos asimptotės",
+      "parity": "Paritetas",
+      "period": "Laikotarpis",
+      "monotonicity": "Monotoniškumas",
+      "domainNone": "Domeno apribojimų nėra",
+      "rangeNone": "Nėra diapazono apribojimų",
+      "xInterceptNone": "Jokių x pertraukimų",
+      "yInterceptNone": "Jokių y pertraukimų",
+      "minimaNone": "Jokių minimumų",
+      "maximaNone": "Nėra maksimumų",
+      "inflectionNone": "Nėra posūkio taškų",
+      "verticalAsymptotesNone": "Nėra vertikalių asimptočių",
+      "horizontalAsymptotesNone": "Nėra horizontalių asimptočių",
+      "obliqueAsymptotesNone": "Nėra įstrižų asimptočių",
+      "parityUnknown": "Nežinoma",
+      "parityOdd": "Keista",
+      "parityEven": "Net",
+      "parityNeither": "Nei",
+      "periodicityUnknown": "Nežinoma",
+      "periodicityNotPeriodic": "Ne periodiškai",
+      "monotonicityConstant": "Pastovus",
+      "monotonicityIncreasing": "Didėja",
+      "monotonicityDecreasing": "Mažėja",
+      "monotonicityUnknown": "Nežinoma",
+      "monotonicityError": "Negaliu nustatyti",
+      "featureTooComplexPlural": "Per sudėtinga analizuoti",
+      "analysisCouldNotBePerformed": "Nepavyko atlikti analizės",
+      "analysisNotSupported": "Analizė nepalaikoma",
+      "variableIsNotX": "Kintamasis nėra x"
+    },
+    "plottingExpressions": "Prašomas {count} išraiškos",
+    "xMin": "X min",
+    "xMax": "X-Max",
+    "yMin": "Y-min",
+    "yMax": "Y-maks",
+    "selectExpression": "Pasirinkite išraišką {index}",
+    "expressionIndex": "Išraiška {index}",
+    "analyzeFunction": "Analizuokite funkciją",
+    "changeEquationStyle": "Pakeiskite lygties stilių",
+    "removeEquation": "Pašalinti lygtį",
+    "lineStyle": {
+      "solid": "Tvirtas linijos stilius",
+      "dash": "Brūkšninės linijos stilius",
+      "dot": "Taškinės linijos stilius"
+    }
+  },
+  "history": {
+    "empty": "Istorija tuščia",
+    "clearAll": "Išvalyti viską",
+    "clear": "Išvalyti istoriją",
+    "title": "Istorija",
+    "andMemory": "Istorija ir atmintis",
+    "aria": {
+      "historyPanel": "Istorijos skydelis",
+      "historyAndMemoryPanel": "Istorijos ir atminties skydelis"
+    },
+    "closeFlyout": "Uždaryti istoriją",
+    "openFlyout": "Atidaryti istoriją"
+  },
+  "memory": {
+    "empty": "Atmintis tuščia",
+    "clearItem": "Išvalyti elementą",
+    "addCurrentValue": "Pridėkite dabartinę vertę",
+    "subtractCurrentValue": "Atimkite dabartinę vertę",
+    "clearAll": "Išvalyti viską",
+    "clear": "Išvalyti atmintį",
+    "title": "Atmintis",
+    "controls": "Atminties valdikliai",
+    "tooltips": {
+      "clearAll": "Išvalyti visą atmintį",
+      "recall": "Prisimink iš atminties",
+      "add": "Pridėti prie atminties",
+      "subtract": "Atimkite iš atminties",
+      "store": "Išsaugoti atmintyje"
+    },
+    "recallValue": "Prisiminti atmintį {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigacija",
+      "closeNavigation": "Uždaryti navigaciją",
+      "openNavigation": "Atidaryti navigaciją"
+    },
+    "groups": {
+      "calculator": "Skaičiuoklė",
+      "converter": "Konverteris"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit apverčiamas skydelis",
+    "baseReadouts": "Pagrindiniai rodmenys",
+    "surfaceMode": "Paviršiaus režimas",
+    "fullKeypad": "Visa klaviatūra",
+    "showKeypad": "Rodyti klaviatūrą",
+    "bitTogglingKeypad": "Bitomis perjungiama klaviatūra",
+    "showBitView": "Rodyti bitų rodinį",
+    "wordSize": "Žodžio dydis",
+    "bitwise": "Bitiškai",
+    "bitShift": "Bitų poslinkis"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometrija",
+      "function": "Funkcija",
+      "functionsAria": "Funkcijos",
+      "trigonometricFunctionsAria": "Trigonometrinės funkcijos",
+      "angleUnit": "Kampo vienetas {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Išvaizda",
+      "themeTitle": "Tema",
+      "themeDescription": "Pasirinkite spalvų schemą",
+      "light": "Šviesa",
+      "dark": "Tamsu",
+      "blue": "Mėlyna",
+      "green": "Žalia",
+      "system": "Sistema"
+    },
+    "language": {
+      "group": "Kalba",
+      "title": "Kalba",
+      "description": "Pasirinkite pageidaujamą kalbą"
+    },
+    "about": {
+      "group": "Apie"
+    },
+    "feedback": "Siųsti atsiliepimą",
+    "contribute": {
+      "prefix": "Prisidėti prie",
+      "link": "GitHub",
+      "suffix": ", kad padėtumėte patobulinti šį skaičiuotuvą"
+    },
+    "links": {
+      "repository": "Projekto saugykla",
+      "readme": "SKAITYTI",
+      "license": "MIT licencija"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standartinis",
+      "subtitle": "Klasikinis greitas įvertinimas"
+    },
+    "scientific": {
+      "label": "Mokslinis",
+      "subtitle": "Operatoriai, funkcijos ir išraiškos palaikymas"
+    },
+    "graphing": {
+      "label": "Grafavimas",
+      "subtitle": "Nubraižykite paprastą išraišką Dekarto plokštumoje"
+    },
+    "programmer": {
+      "label": "Programuotojas",
+      "subtitle": "Sveikų skaičių matematika su bazine konversija"
+    },
+    "date": {
+      "label": "Datos skaičiavimas",
+      "subtitle": "Rasti trukmę ir pamainų datas"
+    },
+    "currency": {
+      "label": "Valiuta",
+      "subtitle": "Konvertuokite netikrus valiutų kursus"
+    },
+    "volume": {
+      "label": "Garsumas",
+      "subtitle": "Konvertuokite garsumo matavimus"
+    },
+    "length": {
+      "label": "Ilgis",
+      "subtitle": "Konvertuokite atstumo ir ilgio vienetus"
+    },
+    "weight": {
+      "label": "Svoris ir masė",
+      "subtitle": "Konvertuokite svorio ir masės vienetus"
+    },
+    "temperature": {
+      "label": "Temperatūra",
+      "subtitle": "Konvertuokite temperatūros skales"
+    },
+    "energy": {
+      "label": "Energija",
+      "subtitle": "Konvertuokite energijos matavimus"
+    },
+    "area": {
+      "label": "Sritis",
+      "subtitle": "Konvertuokite ploto matavimus"
+    },
+    "speed": {
+      "label": "Greitis",
+      "subtitle": "Konvertuokite greičio matavimus"
+    },
+    "time": {
+      "label": "Laikas",
+      "subtitle": "Konvertuokite laiko matavimus"
+    },
+    "power": {
+      "label": "Galima",
+      "subtitle": "Konvertuokite galios matavimus"
+    },
+    "data": {
+      "label": "Duomenys",
+      "subtitle": "Konvertuokite skaitmeninius saugojimo įrenginius"
+    },
+    "pressure": {
+      "label": "Slėgis",
+      "subtitle": "Konvertuokite slėgio vienetus"
+    },
+    "angle": {
+      "label": "Kampas",
+      "subtitle": "Konvertuokite kampo matavimus"
+    },
+    "settings": {
+      "label": "Nustatymai",
+      "subtitle": "Išvaizda ir programos informacija"
+    }
+  },
+  "categories": {
+    "Currency": "Valiuta",
+    "Volume": "Garsumas",
+    "Length": "Ilgis",
+    "Mass": "Mišios",
+    "Temperature": "Temperatūra",
+    "Energy": "Energija",
+    "Area": "Sritis",
+    "Speed": "Greitis",
+    "Time": "Laikas",
+    "Power": "Galima",
+    "Data": "Duomenys",
+    "Pressure": "Slėgis",
+    "Angle": "Kampas"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstromas",
+      "Nanometers": "Nanometrai",
+      "Microns": "Mikronai",
+      "Millimeters": "Milimetrai",
+      "Centimeters": "centimetrai",
+      "Meters": "Metrai",
+      "Kilometers": "Kilometrai",
+      "Inches": "coliai",
+      "Feet": "Pėdos",
+      "Yards": "Kiemai",
+      "Miles": "mylių",
+      "Nautical miles": "Pūrinės mylios",
+      "paperclips": "sąvaržėlės",
+      "hands": "rankos",
+      "jumbo jets": "didieji lėktuvai",
+      "Carats": "Karatas",
+      "Milligrams": "Miligramai",
+      "Centigrams": "Centigramai",
+      "Decigrams": "Decigramai",
+      "Grams": "Gramai",
+      "Dekagrams": "Dekagramos",
+      "Hectograms": "Hektogramos",
+      "Kilograms": "Kilogramai",
+      "Metric tonnes": "metrinės tonos",
+      "Ounces": "Uncijos",
+      "Pounds": "Svarai",
+      "Stone": "Akmuo",
+      "Short tons (US)": "Trumpos tonos (JAV)",
+      "Long tons (UK)": "Ilgos tonos (JK)",
+      "snowflakes": "snaigės",
+      "soccer balls": "futbolo kamuoliai",
+      "elephants": "drambliai",
+      "whales": "banginiai",
+      "Celsius": "Celsijaus",
+      "Fahrenheit": "Farenheitas",
+      "Kelvin": "Kelvinas",
+      "Milliliters": "Militrai",
+      "Cubic centimeters": "Kubiniai centimetrai",
+      "Liters": "Litrai",
+      "Cubic meters": "Kubiniai metrai",
+      "Teaspoons (US)": "Šaukšteliai (JAV)",
+      "Tablespoons (US)": "Šaukštai (JAV)",
+      "Fluid ounces (US)": "Skysčio uncijos (JAV)",
+      "Cups (US)": "Taurės (JAV)",
+      "Pints (US)": "Pints (JAV)",
+      "Quarts (US)": "Kvartiniai (JAV)",
+      "Gallons (US)": "Galonai (JAV)",
+      "Cubic inches": "Kubiniai coliai",
+      "Cubic feet": "Kubinės pėdos",
+      "Cubic yards": "Kubiniai jardai",
+      "Teaspoons (UK)": "Šaukšteliai (JK)",
+      "Tablespoons (UK)": "Šaukštai (JK)",
+      "Fluid ounces (UK)": "Skysčio uncijos (JK)",
+      "Pints (UK)": "Pints (JK)",
+      "Quarts (UK)": "Kvartiniai (JK)",
+      "Gallons (UK)": "Galonai (JK)",
+      "coffee cups": "kavos puodeliai",
+      "bathtubs": "vonios",
+      "swimming pools": "plaukimo baseinai",
+      "Square millimeters": "Kvadratiniai milimetrai",
+      "Square centimeters": "Kvadratiniai centimetrai",
+      "Square meters": "Kvadratiniai metrai",
+      "Hectares": "Hektarai",
+      "Square kilometers": "Kvadratiniai kilometrai",
+      "Square inches": "Kvadratiniai coliai",
+      "Square feet": "Kvadratinės pėdos",
+      "Square yards": "Kvadratiniai jardai",
+      "Acres": "Akrai",
+      "Square miles": "Kvadratinės mylios",
+      "sheets of paper": "popieriaus lapų",
+      "soccer fields": "futbolo aikštelės",
+      "castles": "pilys",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "centimetrai per sekundę",
+      "Meters per second": "metrai per sekundę",
+      "Kilometers per hour": "Kilometrai per valandą",
+      "Feet per second": "Feet per second",
+      "Miles per hour": "Miles per hour",
+      "Knots": "Knots",
+      "Mach": "Mach",
+      "turtles": "turtles",
+      "horses": "horses",
+      "jets": "reaktyviniai lėktuvai",
+      "Watts": "Watts",
+      "Kilowatts": "Kilowatts",
+      "Horsepower (US)": "Arklio galios (JAV)",
+      "Foot-pounds/minute": "Svarai per minutę",
+      "BTUs/minute": "BTUs/minute",
+      "light bulbs": "light bulbs",
+      "train engines": "train engines",
+      "Thermal calories": "Šiluminės kalorijos",
+      "Food calories": "Food calories",
+      "British thermal units": "Britanijos šiluminiai vienetai",
+      "Kilojoules": "Kildžauliai",
+      "Kilowatt-hours": "Kilowatt-hours",
+      "Electron volts": "Elektronų voltai",
+      "Joules": "Džauliai",
+      "Foot-pounds": "Foot-pounds",
+      "batteries": "baterijos",
+      "bananas": "bananai",
+      "slices of cake": "torto griežinėliai",
+      "Bits": "Bits",
+      "Nibble": "Nibble",
+      "Bytes": "Bytes",
+      "Kilobits": "Kilobits",
+      "Kibibits": "Kibibitai",
+      "Kilobytes": "Kilobytes",
+      "Kibibytes": "Kibibytes",
+      "Megabits": "Megabits",
+      "Mebibits": "Mebibits",
+      "Megabytes": "Megabytes",
+      "Mebibytes": "Mebibaitai",
+      "Gigabits": "Gigabits",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Gigabytes",
+      "Gibibytes": "Gibibaitai",
+      "Terabits": "Terabitai",
+      "Tebibits": "Tebibitai",
+      "Terabytes": "Terabytes",
+      "Tebibytes": "Tebibaitai",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabytes",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Eksabitai",
+      "Exbibits": "Exbibits",
+      "Exabytes": "Eksabaitai",
+      "Exbibytes": "Eksbibaitai",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabaitai",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabaitai",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "floppy disks",
+      "CDs": "CDs",
+      "DVDs": "DVDs",
+      "Atmospheres": "Atmosfera",
+      "Bars": "Barai",
+      "Kilopascals": "Kilopaskaliai",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Svarai kvadratiniame colyje",
+      "Degrees": "Laipsniai",
+      "Radians": "Radianai",
+      "Gradians": "Gradianai",
+      "Microseconds": "Mikrosekundės",
+      "Milliseconds": "Milisekundės",
+      "Seconds": "Sekundės",
+      "Minutes": "Minutės",
+      "Hours": "Valandos",
+      "Days": "Dienos",
+      "Weeks": "Savaitės",
+      "Years": "Metai",
+      "Millimeters of mercury": "Millimeters of mercury"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "JAV doleris",
+      "Euro": "Eurų",
+      "British Pound": "Didžiosios Britanijos svaras",
+      "Japanese Yen": "Japonijos jena",
+      "Canadian Dollar": "Kanados doleris",
+      "Australian Dollar": "Australijos doleris",
+      "Brazilian Real": "Brazilijos realas",
+      "Chilean Peso": "Čilės pesas",
+      "Chinese Yuan": "Kinijos ženminbi",
+      "Colombian Peso": "Kolumbijos pesas",
+      "Danish Krone": "Danijos krona",
+      "Egyptian Pound": "Egipto svaras",
+      "Hong Kong Dollar": "Honkongo doleris",
+      "Indian Rupee": "Indijos rupija",
+      "Kenyan Shilling": "Kenijos šilingas",
+      "Mexican Peso": "Meksikos pesas",
+      "Nigerian Naira": "Nigerijos Naira",
+      "New Zealand Dollar": "Naujosios Zelandijos doleris",
+      "Norwegian Krone": "Norvegijos krona",
+      "Philippine Piso": "Filipinų Pisas",
+      "Polish Zloty": "Lenkijos zlotas",
+      "Qatari Riyal": "Kataro rialas",
+      "Saudi Riyal": "Saudo Arabijos rialas",
+      "Singapore Dollar": "Singapūro doleris",
+      "South African Rand": "Pietų Afrikos randas",
+      "South Korean Won": "Pietų Korėjos vonas",
+      "Swedish Krona": "Švedijos krona",
+      "Swiss Franc": "Šveicarijos frankas",
+      "Thai Baht": "Tailando batas",
+      "Turkish Lira": "Turkijos lira",
+      "Turkmenistani Manat": "Turkmėnijos manatas",
+      "Ugandan Shilling": "Ugandos šilingas",
+      "Ukrainian Hryvnia": "Ukrainos grivina",
+      "UAE Dirham": "JAE dirhamas",
+      "Uruguayan Peso": "Urugvajaus pesas",
+      "Uzbekistani Som": "Uzbekistano somas",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venesuelos Bolivaras Soberano",
+      "Vietnamese Dong": "Vietnamietis Dongas",
+      "Yemeni Rial": "Jemeno rialas"
+    },
+    "labels": {
+      "United States - Dollar": "Jungtinės Valstijos – doleris",
+      "Europe - Euro": "Europa – euras",
+      "United Kingdom - Pound": "Jungtinė Karalystė – svaras",
+      "Japan - Yen": "Japonija – jena",
+      "Canada - Dollar": "Kanada – doleris",
+      "Australia - Dollar": "Australija – doleris",
+      "Brazil - Real": "Brazilija – „Real“.",
+      "Chile - Peso": "Čilė – pesas",
+      "China - Yuan Renminbi": "Kinija – ženminbi juanis",
+      "Colombia - Peso": "Kolumbija – pesas",
+      "Denmark - Krone": "Danija – Krona",
+      "Egypt - Pound": "Egiptas – svaras",
+      "Hong Kong SAR - Dollar": "Honkongo SAR – doleris",
+      "India - Rupee": "Indija – rupija",
+      "Kenya - Shilling": "Kenija – šilingas",
+      "Mexico - Peso": "Meksika – pesas",
+      "Nigeria - Naira": "Nigerija – Naira",
+      "New Zealand - Dollar": "Naujoji Zelandija – doleris",
+      "Norway - Krone": "Norvegija – Krona",
+      "Philippines - Piso": "Filipinai – Piso",
+      "Poland - Zloty": "Lenkija – zlotas",
+      "Qatar - Riyal": "Kataras – rialas",
+      "Saudi Arabia - Riyal": "Saudo Arabija – rialas",
+      "Singapore - Dollar": "Singapūras – doleris",
+      "South Africa - Rand": "Pietų Afrika – Randas",
+      "South Korea - Won": "Pietų Korėja – laimėjo",
+      "Sweden - Krona": "Švedija – krona",
+      "Switzerland - Franc": "Šveicarija – frankas",
+      "Thailand - Baht": "Tailandas – batas",
+      "Turkey - Lira": "Turkija – lira",
+      "Turkmenistan - Manat": "Turkmėnija – Manatas",
+      "Uganda - Shilling": "Uganda – šilingas",
+      "Ukraine - Hryvnia": "Ukraina – grivina",
+      "United Arab Emirates - Dirham": "Jungtiniai Arabų Emyratai – Dirhamas",
+      "Uruguay - Peso": "Urugvajus – pesas",
+      "Uzbekistan - Som": "Uzbekistanas – Som",
+      "Vanuatu - Vatu": "Vanuatu – Vatu",
+      "Venezuela - Bolívar Soberano": "Venesuela – Bolívar Soberano",
+      "Vietnam - Dong": "Vietnamas – Dongas",
+      "Yemen - Rial": "Jemenas – Rialas"
+    }
+  }
+}

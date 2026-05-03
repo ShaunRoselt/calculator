@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kubara",
+    "name": "Kubara"
+  },
+  "common": {
+    "back": "Inyuma",
+    "backspace": "Umwanya winyuma",
+    "closeSidePanel": "Funga akanama"
+  },
+  "converter": {
+    "unitConverter": "Guhindura Igice",
+    "title": "Abahindura ibice",
+    "builtInCollections": "Yubatswe mu byegeranyo",
+    "category": "Icyiciro",
+    "from": "Kuva",
+    "to": "Kuri",
+    "inputValue": "Agaciro ko guhindura",
+    "convertedValue": "Guhindura agaciro",
+    "swapUnits": "Guhindura ibice",
+    "keypad": "Guhindura kanda",
+    "unit": "igice",
+    "unitOptions": "amahitamo yibice",
+    "currency": {
+      "updatingRates": "Kuvugurura ibiciro…",
+      "updateRates": "Kuvugurura ibiciro",
+      "keypad": "Kode y'ifaranga",
+      "currency": "ifaranga",
+      "options": "amahitamo y'ifaranga",
+      "updated": "Yavuguruwe {timestamp}",
+      "status": {
+        "mockNote": "Igipimo cyerekana urwenya kuri demo ya porogaramu yihariye.",
+        "fetching": "Kubona ibiciro bya USD biheruka ...",
+        "liveRatesLoaded": "Ibiciro bizima biva kuri ExchangeRate-API.",
+        "liveUpdateUnavailable": "Kuvugurura Live ntibishoboka. Igipimo cya demo cyavuguruwe mukarere."
+      }
+    },
+    "aboutEqualTo": "Bingana na"
+  },
+  "errors": {
+    "invalidInput": "Iyinjiza ritemewe",
+    "cannotDivideByZero": "Ntushobora kugabana na zeru",
+    "cannotModuloByZero": "Ntushobora modulo na zeru",
+    "invalidProgrammerOperation": "Igikorwa kitemewe",
+    "overflow": "Ibisubizo binini cyane"
+  },
+  "date": {
+    "calculationMode": "Uburyo bwo kubara",
+    "from": "Kuva",
+    "to": "Kuri",
+    "results": {
+      "difference": "Itandukaniro",
+      "sameDates": "Amatariki amwe",
+      "date": "Itariki"
+    },
+    "calculationModeOptions": "Uburyo bwo kubara",
+    "mode": {
+      "difference": "Itandukaniro",
+      "shift": "Kwimura"
+    },
+    "operation": "Igikorwa",
+    "add": "Ongeraho",
+    "subtract": "Gukuramo",
+    "years": "Imyaka",
+    "months": "Amezi",
+    "days": "Iminsi",
+    "chooseDate": "Hitamo itariki",
+    "previousMonth": "Ukwezi gushize",
+    "nextMonth": "Ukwezi gutaha",
+    "duration": {
+      "year": {
+        "one": "{count} umwaka",
+        "other": "{count} imyaka"
+      },
+      "month": {
+        "one": "{count} ukwezi",
+        "other": "{count} amezi"
+      },
+      "week": {
+        "one": "{count} icyumweru",
+        "other": "{count} ibyumweru"
+      },
+      "day": {
+        "one": "{count} umunsi",
+        "other": "{count} iminsi"
+      }
+    },
+    "history": {
+      "differenceBetween": "Itandukaniro hagati ya {from} na {to}",
+      "addTo": "Ongeraho {duration} kuri {date}",
+      "subtractFrom": "Gukuramo {duration} kuva {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Reba imvugo yagaragaye",
+    "enterExpression": "Andika imvugo",
+    "canvas": "Igishushanyo mbonera",
+    "stopTracing": "Hagarika gukurikirana",
+    "startTracing": "Tangira gushakisha",
+    "share": "Sangira",
+    "options": "Amahitamo",
+    "zoomIn": "Kwegera",
+    "zoomInLabel": "Kwegera",
+    "zoomOut": "Kwegera",
+    "zoomOutLabel": "Kwegera",
+    "refreshViewAutomatically": "Ongera urebe mu buryo bwikora",
+    "view": "Reba",
+    "expressions": "Imvugo",
+    "mobileView": "Reba mobile",
+    "showGraph": "Erekana igishushanyo",
+    "showExpressions": "Erekana imvugo",
+    "backToFunctionList": "Subira kurutonde rwibikorwa",
+    "window": "Idirishya",
+    "resetView": "Ongera urebe",
+    "units": "Ibice",
+    "radians": "Abanya Radiyani",
+    "degrees": "Impamyabumenyi",
+    "gradians": "Gradians",
+    "lineThickness": "Ubunini bwumurongo",
+    "theme": "Insanganyamatsiko",
+    "alwaysLight": "Buri gihe urumuri",
+    "matchAppTheme": "Huza insanganyamatsiko ya porogaramu",
+    "groups": {
+      "inequalities": "Ubusumbane",
+      "trigonometry": "Trigonometry",
+      "function": "Imikorere"
+    },
+    "functions": "Imikorere",
+    "showEquation": "Erekana ikigereranyo",
+    "hideEquation": "Hisha ikigereranyo",
+    "lineOptions": "Amahitamo y'umurongo",
+    "color": "Ibara",
+    "style": "Imiterere",
+    "analysis": {
+      "title": "Isesengura",
+      "domain": "Imiterere",
+      "range": "Urwego",
+      "xIntercept": "x-guhagarika",
+      "yIntercept": "y-guhagarika",
+      "minima": "Minima",
+      "maxima": "Maxima",
+      "inflectionPoints": "Ingingo zo guhinduranya",
+      "verticalAsymptotes": "Ibimenyetso simusiga",
+      "horizontalAsymptotes": "Ibimenyetso bitambitse",
+      "obliqueAsymptotes": "Ibimenyetso simusiga",
+      "parity": "Uburinganire",
+      "period": "Igihe",
+      "monotonicity": "Monotonicity",
+      "domainNone": "Nta mbogamizi zibuza",
+      "rangeNone": "Nta mbogamizi zigaragara",
+      "xInterceptNone": "Nta x-ihagarika",
+      "yInterceptNone": "Nta y-ihagarika",
+      "minimaNone": "Nta minima",
+      "maximaNone": "Nta maxima",
+      "inflectionNone": "Nta ngingo zifatika",
+      "verticalAsymptotesNone": "Nta asimptotike ihagaze",
+      "horizontalAsymptotesNone": "Nta asimptotike itambitse",
+      "obliqueAsymptotesNone": "Nta asimptote ya oblique",
+      "parityUnknown": "Ntazwi",
+      "parityOdd": "Odd",
+      "parityEven": "Ndetse",
+      "parityNeither": "Ntabwo",
+      "periodicityUnknown": "Ntazwi",
+      "periodicityNotPeriodic": "Ntabwo ari ibihe",
+      "monotonicityConstant": "Guhoraho",
+      "monotonicityIncreasing": "Kwiyongera",
+      "monotonicityDecreasing": "Kugabanuka",
+      "monotonicityUnknown": "Ntazwi",
+      "monotonicityError": "Ntushobora kumenya",
+      "featureTooComplexPlural": "Biragoye cyane gusesengura",
+      "analysisCouldNotBePerformed": "Isesengura ntirishobora gukorwa",
+      "analysisNotSupported": "Isesengura ntabwo rishyigikiwe",
+      "variableIsNotX": "Ibihinduka ntabwo ari x"
+    },
+    "plottingExpressions": "Gutegura {count} imvugo",
+    "xMin": "X-Min",
+    "xMax": "X-Mak",
+    "yMin": "Y-Min",
+    "yMax": "Y-Mak",
+    "selectExpression": "Hitamo imvugo {index}",
+    "expressionIndex": "Imvugo {index}",
+    "analyzeFunction": "Gusesengura imikorere",
+    "changeEquationStyle": "Hindura uburyo bwo kugereranya",
+    "removeEquation": "Kuraho ikigereranyo",
+    "lineStyle": {
+      "solid": "Imiterere yumurongo ukomeye",
+      "dash": "Imiterere yumurongo",
+      "dot": "Imiterere yumurongo"
+    }
+  },
+  "history": {
+    "empty": "Amateka arimo ubusa",
+    "clearAll": "Kuraho byose",
+    "clear": "Sobanura amateka",
+    "title": "Amateka",
+    "andMemory": "Amateka no Kwibuka",
+    "aria": {
+      "historyPanel": "Ikibaho cyamateka",
+      "historyAndMemoryPanel": "Amateka hamwe na Memory panel"
+    },
+    "closeFlyout": "Gufunga amateka",
+    "openFlyout": "Gufungura amateka"
+  },
+  "memory": {
+    "empty": "Kwibuka ni ubusa",
+    "clearItem": "Ikintu gisobanutse",
+    "addCurrentValue": "Ongeraho agaciro",
+    "subtractCurrentValue": "Gukuramo agaciro kagezweho",
+    "clearAll": "Kuraho byose",
+    "clear": "Sobanura neza",
+    "title": "Kwibuka",
+    "controls": "Igenzura ryo kwibuka",
+    "tooltips": {
+      "clearAll": "Kuraho ububiko bwose",
+      "recall": "Ibuka kuva mumutwe",
+      "add": "Ongera mububiko",
+      "subtract": "Gukuramo mumutwe",
+      "store": "Ubike mu mutwe"
+    },
+    "recallValue": "Ibuka kwibuka {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Kugenda",
+      "closeNavigation": "Funga inzira",
+      "openNavigation": "Gufungura inzira"
+    },
+    "groups": {
+      "calculator": "Kubara",
+      "converter": "Guhindura"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Ikibaho cya flip",
+    "baseReadouts": "Gusoma shingiro",
+    "surfaceMode": "Uburyo bwubuso",
+    "fullKeypad": "Keypad yuzuye",
+    "showKeypad": "Erekana kanda",
+    "bitTogglingKeypad": "Kanda ya kanda",
+    "showBitView": "Erekana biti",
+    "wordSize": "Ingano yijambo",
+    "bitwise": "Bitwise",
+    "bitShift": "Guhindura bito"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometry",
+      "function": "Imikorere",
+      "functionsAria": "Imikorere",
+      "trigonometricFunctionsAria": "Imikorere ya Trigonometric",
+      "angleUnit": "Igice cy'inguni {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Kugaragara",
+      "themeTitle": "Insanganyamatsiko",
+      "themeDescription": "Hitamo ibara",
+      "light": "Umucyo",
+      "dark": "Umwijima",
+      "blue": "Ubururu",
+      "green": "Icyatsi",
+      "system": "Sisitemu"
+    },
+    "language": {
+      "group": "Ururimi",
+      "title": "Ururimi",
+      "description": "Hitamo ururimi ukunda"
+    },
+    "about": {
+      "group": "Ibyerekeye"
+    },
+    "feedback": "Ohereza ibitekerezo",
+    "contribute": {
+      "prefix": "Tanga umusanzu kuri",
+      "link": "GitHub",
+      "suffix": "kugirango ifashe kunoza iyi calculatrice"
+    },
+    "links": {
+      "repository": "Ububiko bwumushinga",
+      "readme": "GUSOMA",
+      "license": "Uruhushya rwa MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Ibisanzwe",
+      "subtitle": "Isuzuma ryihuse"
+    },
+    "scientific": {
+      "label": "Ubuhanga",
+      "subtitle": "Abakoresha, imikorere, hamwe no gushyigikira imvugo"
+    },
+    "graphing": {
+      "label": "Graphing",
+      "subtitle": "Tegura imvugo yoroshye mu ndege ya karitsiye"
+    },
+    "programmer": {
+      "label": "Porogaramu",
+      "subtitle": "Imibare yuzuye hamwe no guhindura ishingiro"
+    },
+    "date": {
+      "label": "Kubara Itariki",
+      "subtitle": "Shakisha igihe n'amatariki yo guhindura"
+    },
+    "currency": {
+      "label": "Ifaranga",
+      "subtitle": "Hindura igipimo cyo kuvunja urw'agashinyaguro"
+    },
+    "volume": {
+      "label": "Umubumbe",
+      "subtitle": "Hindura ibipimo by'ijwi"
+    },
+    "length": {
+      "label": "Uburebure",
+      "subtitle": "Hindura intera n'uburebure"
+    },
+    "weight": {
+      "label": "Uburemere na Misa",
+      "subtitle": "Hindura uburemere hamwe nibice byinshi"
+    },
+    "temperature": {
+      "label": "Ubushyuhe",
+      "subtitle": "Hindura umunzani w'ubushyuhe"
+    },
+    "energy": {
+      "label": "Ingufu",
+      "subtitle": "Hindura ibipimo byingufu"
+    },
+    "area": {
+      "label": "Agace",
+      "subtitle": "Hindura ibipimo by'akarere"
+    },
+    "speed": {
+      "label": "Umuvuduko",
+      "subtitle": "Hindura ibipimo byihuta"
+    },
+    "time": {
+      "label": "Igihe",
+      "subtitle": "Hindura ibipimo byigihe"
+    },
+    "power": {
+      "label": "Imbaraga",
+      "subtitle": "Hindura ibipimo byimbaraga"
+    },
+    "data": {
+      "label": "Amakuru",
+      "subtitle": "Hindura ibice byabitswe"
+    },
+    "pressure": {
+      "label": "Umuvuduko",
+      "subtitle": "Hindura ibice byingutu"
+    },
+    "angle": {
+      "label": "Inguni",
+      "subtitle": "Hindura ibipimo by'inguni"
+    },
+    "settings": {
+      "label": "Igenamiterere",
+      "subtitle": "Kugaragara namakuru ya porogaramu"
+    }
+  },
+  "categories": {
+    "Currency": "Ifaranga",
+    "Volume": "Umubumbe",
+    "Length": "Uburebure",
+    "Mass": "Misa",
+    "Temperature": "Ubushyuhe",
+    "Energy": "Ingufu",
+    "Area": "Agace",
+    "Speed": "Umuvuduko",
+    "Time": "Igihe",
+    "Power": "Imbaraga",
+    "Data": "Amakuru",
+    "Pressure": "Umuvuduko",
+    "Angle": "Inguni"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanometero",
+      "Microns": "Microns",
+      "Millimeters": "Milimetero",
+      "Centimeters": "Santimetero",
+      "Meters": "Ibipimo",
+      "Kilometers": "Kilometero",
+      "Inches": "Inch",
+      "Feet": "Ibirenge",
+      "Yards": "Ikibuga",
+      "Miles": "Ibirometero",
+      "Nautical miles": "Ibirometero bidasanzwe",
+      "paperclips": "impapuro",
+      "hands": "amaboko",
+      "jumbo jets": "indege ya jumbo",
+      "Carats": "Carat",
+      "Milligrams": "Milligarama",
+      "Centigrams": "Centigrams",
+      "Decigrams": "Inyandiko",
+      "Grams": "Ikibonezamvugo",
+      "Dekagrams": "Igishushanyo",
+      "Hectograms": "Hectogrammes",
+      "Kilograms": "Kilogramu",
+      "Metric tonnes": "Toni ya metero",
+      "Ounces": "Amahirwe",
+      "Pounds": "Ibiro",
+      "Stone": "Ibuye",
+      "Short tons (US)": "Toni ngufi (US)",
+      "Long tons (UK)": "Toni ndende (UK)",
+      "snowflakes": "urubura",
+      "soccer balls": "imipira yumupira wamaguru",
+      "elephants": "inzovu",
+      "whales": "balale",
+      "Celsius": "selisiyusi",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mililitiro",
+      "Cubic centimeters": "Uburebure bwa santimetero",
+      "Liters": "Imirongo",
+      "Cubic meters": "Metero Cubic",
+      "Teaspoons (US)": "Ikiyiko (US)",
+      "Tablespoons (US)": "Ibiyiko (US)",
+      "Fluid ounces (US)": "Amazi meza (US)",
+      "Cups (US)": "Igikombe (US)",
+      "Pints (US)": "Ibipapuro (US)",
+      "Quarts (US)": "Ibice (US)",
+      "Gallons (US)": "Gallons (US)",
+      "Cubic inches": "Ububiko bwa Cubic",
+      "Cubic feet": "Ibirenge bya Cubic",
+      "Cubic yards": "Kubik",
+      "Teaspoons (UK)": "Ikiyiko (UK)",
+      "Tablespoons (UK)": "Ibiyiko (UK)",
+      "Fluid ounces (UK)": "Amazi meza (UK)",
+      "Pints (UK)": "Ibipapuro (UK)",
+      "Quarts (UK)": "Ibice (UK)",
+      "Gallons (UK)": "Gallons (UK)",
+      "coffee cups": "ibikombe bya kawa",
+      "bathtubs": "ubwogero",
+      "swimming pools": "ibidengeri byo koga",
+      "Square millimeters": "Milimetero kare",
+      "Square centimeters": "Uburebure bwa santimetero",
+      "Square meters": "Metero kare",
+      "Hectares": "Hegitari",
+      "Square kilometers": "Ibirometero kare",
+      "Square inches": "Uburebure bwa kare",
+      "Square feet": "Ibirenge bya kare",
+      "Square yards": "Ikibuga cya kare",
+      "Acres": "Acres",
+      "Square miles": "Ibirometero kare",
+      "sheets of paper": "impapuro",
+      "soccer fields": "ikibuga cyumupira wamaguru",
+      "castles": "ibigo",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Santimetero ku isegonda",
+      "Meters per second": "Ibipimo ku isegonda",
+      "Kilometers per hour": "Kilometero ku isaha",
+      "Feet per second": "Ibirenge ku isegonda",
+      "Miles per hour": "Ibirometero ku isaha",
+      "Knots": "Amapfundo",
+      "Mach": "Imashini",
+      "turtles": "inyenzi",
+      "horses": "amafarasi",
+      "jets": "indege",
+      "Watts": "Watts",
+      "Kilowatts": "Kilowatts",
+      "Horsepower (US)": "Imbaraga zifarashi (US)",
+      "Foot-pounds/minute": "Ibirenge-pound / umunota",
+      "BTUs/minute": "BTUs / umunota",
+      "light bulbs": "amatara",
+      "train engines": "moteri ya gari ya moshi",
+      "Thermal calories": "Kalori yubushyuhe",
+      "Food calories": "Ibiryo bya karori",
+      "British thermal units": "Amashanyarazi yubwongereza",
+      "Kilojoules": "Kilojoules",
+      "Kilowatt-hours": "Kilowatt-amasaha",
+      "Electron volts": "Electron volt",
+      "Joules": "Joules",
+      "Foot-pounds": "Ibirenge",
+      "batteries": "bateri",
+      "bananas": "ibitoki",
+      "slices of cake": "uduce twa cake",
+      "Bits": "Bits",
+      "Nibble": "Nibble",
+      "Bytes": "Bytes",
+      "Kilobits": "Kilobits",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "Kilobytes",
+      "Kibibytes": "Kibibytes",
+      "Megabits": "Megabits",
+      "Mebibits": "Mebibits",
+      "Megabytes": "Megabytes",
+      "Mebibytes": "Mebibytes",
+      "Gigabits": "Gigabits",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Gigabytes",
+      "Gibibytes": "Gibibytes",
+      "Terabits": "Terabits",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabytes",
+      "Tebibytes": "Tebibytes",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabytes",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Gusohoka",
+      "Exbibits": "Ibisobanuro",
+      "Exabytes": "Exabytes",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabytes",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabytes",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "disiki ya disiki",
+      "CDs": "CD",
+      "DVDs": "DVD",
+      "Atmospheres": "Ikirere",
+      "Bars": "Utubari",
+      "Kilopascals": "Kilopascals",
+      "Millimeters of mercury": "Milimetero za mercure",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Ibiro kuri santimetero kare",
+      "Degrees": "Impamyabumenyi",
+      "Radians": "Abanya Radiyani",
+      "Gradians": "Gradians",
+      "Microseconds": "Microseconds",
+      "Milliseconds": "Milliseconds",
+      "Seconds": "Amasegonda",
+      "Minutes": "Inyandikomvugo",
+      "Hours": "Amasaha",
+      "Days": "Iminsi",
+      "Weeks": "Ibyumweru",
+      "Years": "Imyaka"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Amadorari y'Amerika",
+      "Euro": "Euro",
+      "British Pound": "Pound yo mu Bwongereza",
+      "Japanese Yen": "Yapani Yen",
+      "Canadian Dollar": "Amadolari y'Abanyakanada",
+      "Australian Dollar": "Amadolari ya Ositarariya",
+      "Brazilian Real": "Ukuri muri Berezile",
+      "Chilean Peso": "Peso wo muri Chili",
+      "Chinese Yuan": "Igishinwa Yuan",
+      "Colombian Peso": "Peso wo muri Kolombiya",
+      "Danish Krone": "Danemark Krone",
+      "Egyptian Pound": "Pound yo mu Misiri",
+      "Hong Kong Dollar": "Amadolari ya Hong Kong",
+      "Indian Rupee": "Amafaranga y'Abahinde",
+      "Kenyan Shilling": "Shilingi yo muri Kenya",
+      "Mexican Peso": "Peso wo muri Mexico",
+      "Nigerian Naira": "Nigeriya Naira",
+      "New Zealand Dollar": "Amadolari ya Nouvelle-Zélande",
+      "Norwegian Krone": "Krone yo muri Noruveje",
+      "Philippine Piso": "Philippine Piso",
+      "Polish Zloty": "Zloty yo muri Polonye",
+      "Qatari Riyal": "Qatari Riyal",
+      "Saudi Riyal": "Riyal yo muri Arabiya Sawudite",
+      "Singapore Dollar": "Amadolari ya Singapore",
+      "South African Rand": "Rand yo muri Afrika yepfo",
+      "South Korean Won": "Koreya yepfo Yatsinze",
+      "Swedish Krona": "Igisuwede Krona",
+      "Swiss Franc": "Igifaransa",
+      "Thai Baht": "Baht yo muri Tayilande",
+      "Turkish Lira": "Lira yo muri Turukiya",
+      "Turkmenistani Manat": "Manat ya Turukimenisitani",
+      "Ugandan Shilling": "Shilingi ya Uganda",
+      "Ukrainian Hryvnia": "Hryvnia yo muri Ukraine",
+      "UAE Dirham": "UAE Dirham",
+      "Uruguayan Peso": "Uruguay Peso",
+      "Uzbekistani Som": "Uzbekistani Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuela Bolívar Soberano",
+      "Vietnamese Dong": "Dong Vietnam",
+      "Yemeni Rial": "Yemeni Rial"
+    },
+    "labels": {
+      "United States - Dollar": "Amerika - Amadolari",
+      "Europe - Euro": "Uburayi - Euro",
+      "United Kingdom - Pound": "Ubwongereza - Pound",
+      "Japan - Yen": "Ubuyapani - Yen",
+      "Canada - Dollar": "Kanada - Amadolari",
+      "Australia - Dollar": "Ositaraliya - Amadolari",
+      "Brazil - Real": "Burezili - Nukuri",
+      "Chile - Peso": "Chili - Peso",
+      "China - Yuan Renminbi": "Ubushinwa - Yuan Renminbi",
+      "Colombia - Peso": "Kolombiya - Peso",
+      "Denmark - Krone": "Danemark - Krone",
+      "Egypt - Pound": "Misiri - Pound",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Amadolari",
+      "India - Rupee": "Ubuhinde - Rupee",
+      "Kenya - Shilling": "Kenya - Shiring",
+      "Mexico - Peso": "Mexico - Peso",
+      "Nigeria - Naira": "Nijeriya - Naira",
+      "New Zealand - Dollar": "Nouvelle-Zélande - Amadolari",
+      "Norway - Krone": "Noruveje - Krone",
+      "Philippines - Piso": "Philippines - Piso",
+      "Poland - Zloty": "Polonye - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Arabiya Sawudite - Riyal",
+      "Singapore - Dollar": "Singapore - Amadolari",
+      "South Africa - Rand": "Afurika y'Epfo - Rand",
+      "South Korea - Won": "Koreya y'Epfo - Yatsinze",
+      "Sweden - Krona": "Suwede - Krona",
+      "Switzerland - Franc": "Ubusuwisi - Igifaransa",
+      "Thailand - Baht": "Tayilande - Baht",
+      "Turkey - Lira": "Turukiya - Lira",
+      "Turkmenistan - Manat": "Turukimenisitani - Manat",
+      "Uganda - Shilling": "Uganda - Shiring",
+      "Ukraine - Hryvnia": "Ukraine - Hryvnia",
+      "United Arab Emirates - Dirham": "United Arab Emirates - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Uzubekisitani - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuwela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemeni - Rial"
+    }
+  }
+}

@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kalkulyator",
+    "name": "Kalkulyator"
+  },
+  "common": {
+    "back": "Orqaga",
+    "backspace": "Backspace",
+    "closeSidePanel": "Panelni yopish"
+  },
+  "converter": {
+    "unitConverter": "Birlik konvertori",
+    "title": "Birlik konvertorlari",
+    "builtInCollections": "Oʻrnatilgan toʻplamlar",
+    "category": "Kategoriya",
+    "from": "Kimdan",
+    "to": "Kimga",
+    "inputValue": "Konvertatsiya qilinadigan qiymat",
+    "convertedValue": "Konvertatsiya qilingan qiymat",
+    "swapUnits": "Birliklarni almashtirish",
+    "keypad": "Konverter klaviaturasi",
+    "unit": "birlik",
+    "unitOptions": "birlik parametrlari",
+    "currency": {
+      "updatingRates": "Tariflar yangilanmoqda…",
+      "updateRates": "Yangilanish stavkalari",
+      "keypad": "Valyuta klaviaturasi",
+      "currency": "valyuta",
+      "options": "valyuta opsiyalari",
+      "updated": "Yangilangan {timestamp}",
+      "status": {
+        "mockNote": "Mustaqil ilova demosi uchun soxta maʼlumot stavkalari.",
+        "fetching": "AQSh dollarining oxirgi maʼlumot kurslari olinmoqda...",
+        "liveRatesLoaded": "ExchangeRate-API dan yuklangan jonli tariflar.",
+        "liveUpdateUnavailable": "Jonli yangilanish mavjud emas. Mahalliy demo stavkalari yangilandi."
+      }
+    },
+    "aboutEqualTo": "Taxminan teng"
+  },
+  "errors": {
+    "invalidInput": "Yaroqsiz kiritildi",
+    "cannotDivideByZero": "Nolga boʻlinib boʻlmaydi",
+    "cannotModuloByZero": "Moduli nolga tenglashtirib bo‘lmaydi",
+    "invalidProgrammerOperation": "Yaroqsiz operatsiya",
+    "overflow": "Natija juda katta"
+  },
+  "date": {
+    "calculationMode": "Hisoblash rejimi",
+    "from": "Kimdan",
+    "to": "Kimga",
+    "results": {
+      "difference": "Farq",
+      "sameDates": "Bir xil sanalar",
+      "date": "Sana"
+    },
+    "calculationModeOptions": "Hisoblash rejimi opsiyalari",
+    "mode": {
+      "difference": "Farq",
+      "shift": "Shift"
+    },
+    "operation": "Operatsiya",
+    "add": "Qoʻshish",
+    "subtract": "ayirish",
+    "years": "Yillar",
+    "months": "Oylar",
+    "days": "Kunlar",
+    "chooseDate": "Sanani tanlang",
+    "previousMonth": "Oldingi oy",
+    "nextMonth": "Keyingi oy",
+    "duration": {
+      "year": {
+        "one": "{count} yil",
+        "other": "{count} yil"
+      },
+      "month": {
+        "one": "{count} oy",
+        "other": "{count} oy"
+      },
+      "week": {
+        "one": "{count} hafta",
+        "other": "{count} hafta"
+      },
+      "day": {
+        "one": "{count} kun",
+        "other": "{count} kun"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from} va {to} oʻrtasidagi farq",
+      "addTo": "{duration} qo‘shing {date}",
+      "subtractFrom": "{duration}ni {date}dan ayirish"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Ajratilgan ifodani tekshiring",
+    "enterExpression": "Ifodani kiriting",
+    "canvas": "Grafik tuval",
+    "stopTracing": "Kuzatishni to'xtating",
+    "startTracing": "Kuzatishni boshlang",
+    "share": "Ulashish",
+    "options": "Variantlar",
+    "zoomIn": "Yaqinlashtiring",
+    "zoomInLabel": "Yaqinlashtiring",
+    "zoomOut": "Kichinlashtiring",
+    "zoomOutLabel": "Kichinlashtirish",
+    "refreshViewAutomatically": "Ko‘rinishni avtomatik yangilash",
+    "view": "Ko‘rish",
+    "expressions": "Ifodalar",
+    "mobileView": "Mobil koʻrish",
+    "showGraph": "Grafikni ko'rsatish",
+    "showExpressions": "Ifodalarni ko‘rsatish",
+    "backToFunctionList": "Funksiyalar roʻyxatiga qaytish",
+    "window": "Oyna",
+    "resetView": "Ko‘rinishni tiklash",
+    "units": "Birliklar",
+    "radians": "Radianlar",
+    "degrees": "Darajalar",
+    "gradians": "Gradianlar",
+    "lineThickness": "Chiziq qalinligi",
+    "theme": "Mavzu",
+    "alwaysLight": "Har doim yorug‘",
+    "matchAppTheme": "Ilova mavzusini moslang",
+    "groups": {
+      "inequalities": "Tengsizliklar",
+      "trigonometry": "Trigonometriya",
+      "function": "Funktsiya"
+    },
+    "functions": "Funksiyalar",
+    "showEquation": "Tenglamani ko‘rsatish",
+    "hideEquation": "Tenglamani yashirish",
+    "lineOptions": "Qator parametrlari",
+    "color": "Rang",
+    "style": "Uslub",
+    "analysis": {
+      "title": "Tahlil",
+      "domain": "Domen",
+      "range": "Diapazon",
+      "xIntercept": "x-kesish",
+      "yIntercept": "y-kesish",
+      "minima": "Minimum",
+      "maxima": "Maksima",
+      "inflectionPoints": "Egish nuqtalari",
+      "verticalAsymptotes": "Vertikal asimptotlar",
+      "horizontalAsymptotes": "Gorizontal asimptotlar",
+      "obliqueAsymptotes": "Qiyb asimptotlar",
+      "parity": "Parite",
+      "period": "Davr",
+      "monotonicity": "Monotonlik",
+      "domainNone": "Domen cheklovlari yoʻq",
+      "rangeNone": "Har qanday cheklovlarsiz",
+      "xInterceptNone": "X-kesishlari yo‘q",
+      "yInterceptNone": "Y-kesish yo‘q",
+      "minimaNone": "Minimum yo‘q",
+      "maximaNone": "Maksimum yo‘q",
+      "inflectionNone": "Egish nuqtalari yo‘q",
+      "verticalAsymptotesNone": "Vertikal asimptotlar yoʻq",
+      "horizontalAsymptotesNone": "Gorizontal asimptotlar yo‘q",
+      "obliqueAsymptotesNone": "Qiyshiq asimptotlar yo‘q",
+      "parityUnknown": "Noma'lum",
+      "parityOdd": "Toq",
+      "parityEven": "Hatto",
+      "parityNeither": "Yo‘q",
+      "periodicityUnknown": "Noma'lum",
+      "periodicityNotPeriodic": "Davriy emas",
+      "monotonicityConstant": "Doimiy",
+      "monotonicityIncreasing": "O'sish",
+      "monotonicityDecreasing": "Kamaymoqda",
+      "monotonicityUnknown": "Noma'lum",
+      "monotonicityError": "Aniqlab bo‘lmadi",
+      "featureTooComplexPlural": "Tahlil qilish uchun juda murakkab",
+      "analysisCouldNotBePerformed": "Tahlilni amalga oshirib bo‘lmadi",
+      "analysisNotSupported": "Tahlil qo‘llab-quvvatlanmaydi",
+      "variableIsNotX": "O‘zgaruvchi x emas"
+    },
+    "plottingExpressions": "{count} ifodalar chizmasini tuzish",
+    "xMin": "X-daq",
+    "xMax": "X-Maks",
+    "yMin": "Y-daq",
+    "yMax": "Y-Maks",
+    "selectExpression": "Ifodani tanlang {index}",
+    "expressionIndex": "Ifoda {index}",
+    "analyzeFunction": "Funksiyani tahlil qilish",
+    "changeEquationStyle": "Tenglama uslubini oʻzgartirish",
+    "removeEquation": "Tenglamani olib tashlang",
+    "lineStyle": {
+      "solid": "Qattiq chiziq uslubi",
+      "dash": "Chiziq chizigʻi uslubi",
+      "dot": "Nuqta chiziq uslubi"
+    }
+  },
+  "history": {
+    "empty": "Tarix boʻsh",
+    "clearAll": "Hammasini tozalash",
+    "clear": "Tarixni tozalash",
+    "title": "Tarix",
+    "andMemory": "Tarix va xotira",
+    "aria": {
+      "historyPanel": "Tarix paneli",
+      "historyAndMemoryPanel": "Tarix va xotira paneli"
+    },
+    "closeFlyout": "Tarixni yopish",
+    "openFlyout": "Tarixni ochish"
+  },
+  "memory": {
+    "empty": "Xotira bo‘sh",
+    "clearItem": "Elementni tozalash",
+    "addCurrentValue": "Joriy qiymat qo‘shing",
+    "subtractCurrentValue": "Joriy qiymatni ayirish",
+    "clearAll": "Hammasini tozalash",
+    "clear": "Xotirani tozalash",
+    "title": "Xotira",
+    "controls": "Xotira boshqaruvlari",
+    "tooltips": {
+      "clearAll": "Barcha xotirani tozalash",
+      "recall": "Xotiradan chaqirish",
+      "add": "Xotiraga qo‘shish",
+      "subtract": "Xotiradan ayirish",
+      "store": "Xotirada saqlang"
+    },
+    "recallValue": "Xotirani esga olish {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigatsiya",
+      "closeNavigation": "Navigatsiyani yoping",
+      "openNavigation": "Navigatsiyani oching"
+    },
+    "groups": {
+      "calculator": "Kalkulyator",
+      "converter": "Konverter"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit burilish paneli",
+    "baseReadouts": "Asosiy koʻrsatkichlar",
+    "surfaceMode": "Yuzaki rejim",
+    "fullKeypad": "Toʻliq klaviatura",
+    "showKeypad": "Klaviaturani ko‘rsatish",
+    "bitTogglingKeypad": "Bit almashish klaviaturasi",
+    "showBitView": "Bit koʻrinishini koʻrsatish",
+    "wordSize": "Soʻz hajmi",
+    "bitwise": "Bitta",
+    "bitShift": "Bit siljishi"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometriya",
+      "function": "Funktsiya",
+      "functionsAria": "Funksiyalar",
+      "trigonometricFunctionsAria": "Trigonometrik funksiyalar",
+      "angleUnit": "Burchak birligi {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Tashqi koʻrinish",
+      "themeTitle": "Mavzu",
+      "themeDescription": "Rang sxemasini tanlang",
+      "light": "Nur",
+      "dark": "Qorongʻi",
+      "blue": "Moviy",
+      "green": "Yashil",
+      "system": "Tizim"
+    },
+    "language": {
+      "group": "Til",
+      "title": "Til",
+      "description": "Oʻzingizga qulay tilni tanlang"
+    },
+    "about": {
+      "group": "Haqida"
+    },
+    "feedback": "Fikr-mulohaza yuborish",
+    "contribute": {
+      "prefix": "Hissa qo‘shing",
+      "link": "GitHub",
+      "suffix": "bu kalkulyatorni yaxshilash uchun"
+    },
+    "links": {
+      "repository": "Loyihalar ombori",
+      "readme": "README",
+      "license": "MIT litsenziyasi"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standart",
+      "subtitle": "Klassik tezkor baholash"
+    },
+    "scientific": {
+      "label": "Ilmiy",
+      "subtitle": "Operatorlar, funksiyalar va ifodani qo‘llab-quvvatlash"
+    },
+    "graphing": {
+      "label": "Grafiklash",
+      "subtitle": "Dekart tekisligida oddiy ifodani chizing"
+    },
+    "programmer": {
+      "label": "Dasturchi",
+      "subtitle": "Asosiy konvertatsiya bilan butun son matematika"
+    },
+    "date": {
+      "label": "Sana hisobi",
+      "subtitle": "Davomlik va siljish sanalarini toping"
+    },
+    "currency": {
+      "label": "Valyuta",
+      "subtitle": "Soxta valyuta kurslarini konvertatsiya qilish"
+    },
+    "volume": {
+      "label": "Ovoz balandligi",
+      "subtitle": "Ovoz balandligi oʻlchovlarini aylantirish"
+    },
+    "length": {
+      "label": "Uzunlik",
+      "subtitle": "Masofa va uzunlik birliklarini aylantirish"
+    },
+    "weight": {
+      "label": "Og'irligi va massasi",
+      "subtitle": "Og‘irlik va massa birliklarini o‘zgartiring"
+    },
+    "temperature": {
+      "label": "Harorat",
+      "subtitle": "Harorat shkalalarini aylantirish"
+    },
+    "energy": {
+      "label": "Energetika",
+      "subtitle": "Energiya oʻlchovlarini oʻzgartiring"
+    },
+    "area": {
+      "label": "Hudud",
+      "subtitle": "Hudud oʻlchovlarini oʻzgartiring"
+    },
+    "speed": {
+      "label": "Tezlik",
+      "subtitle": "Tezlik oʻlchovlarini aylantirish"
+    },
+    "time": {
+      "label": "Vaqt",
+      "subtitle": "Vaqt oʻlchovlarini aylantirish"
+    },
+    "power": {
+      "label": "Quvvat",
+      "subtitle": "Quvvat oʻlchovlarini oʻzgartiring"
+    },
+    "data": {
+      "label": "Maʼlumotlar",
+      "subtitle": "Raqamli xotira birliklarini aylantirish"
+    },
+    "pressure": {
+      "label": "Bosim",
+      "subtitle": "Bosim birliklarini aylantirish"
+    },
+    "angle": {
+      "label": "Burchak",
+      "subtitle": "Burchak oʻlchovlarini oʻzgartirish"
+    },
+    "settings": {
+      "label": "Sozlamalar",
+      "subtitle": "Tashqi koʻrinish va ilova haqida maʼlumot"
+    }
+  },
+  "categories": {
+    "Currency": "Valyuta",
+    "Volume": "Ovoz balandligi",
+    "Length": "Uzunlik",
+    "Mass": "Mass",
+    "Temperature": "Harorat",
+    "Energy": "Energetika",
+    "Area": "Hudud",
+    "Speed": "Tezlik",
+    "Time": "Vaqt",
+    "Power": "Quvvat",
+    "Data": "Maʼlumotlar",
+    "Pressure": "Bosim",
+    "Angle": "Burchak"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstromlar",
+      "Nanometers": "Nanometrlar",
+      "Microns": "Mikronlar",
+      "Millimeters": "Milimetr",
+      "Centimeters": "Santimetr",
+      "Meters": "Metr",
+      "Kilometers": "Kilometr",
+      "Inches": "Dyuym",
+      "Feet": "Oyoqlar",
+      "Yards": "Yard",
+      "Miles": "Mill",
+      "Nautical miles": "Dengiz millari",
+      "paperclips": "kliplar",
+      "hands": "qo‘llar",
+      "jumbo jets": "jumbo samolyotlar",
+      "Carats": "Karat",
+      "Milligrams": "Milligramm",
+      "Centigrams": "Santigramm",
+      "Decigrams": "Desigramlar",
+      "Grams": "Gram",
+      "Dekagrams": "Dekagramlar",
+      "Hectograms": "Gektogramlar",
+      "Kilograms": "Kilogramm",
+      "Metric tonnes": "Metrik tonna",
+      "Ounces": "Ounces",
+      "Pounds": "Pounds",
+      "Stone": "Stone",
+      "Short tons (US)": "Short tons (US)",
+      "Long tons (UK)": "Long tons (UK)",
+      "snowflakes": "snowflakes",
+      "soccer balls": "soccer balls",
+      "elephants": "elephants",
+      "whales": "whales",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Milliliters",
+      "Cubic centimeters": "Cubic centimeters",
+      "Liters": "Liters",
+      "Cubic meters": "Cubic meters",
+      "Teaspoons (US)": "Teaspoons (US)",
+      "Tablespoons (US)": "Tablespoons (US)",
+      "Fluid ounces (US)": "Fluid ounces (US)",
+      "Cups (US)": "Cups (US)",
+      "Pints (US)": "Pints ​​(US)",
+      "Quarts (US)": "Quarts (US)",
+      "Gallons (US)": "Gallons (US)",
+      "Cubic inches": "Cubic inches",
+      "Cubic feet": "Kub fut",
+      "Cubic yards": "Kubik yard",
+      "Teaspoons (UK)": "Choy qoshiqlari (Buyuk Britaniya)",
+      "Tablespoons (UK)": "osh qoshiq (Buyuk Britaniya)",
+      "Fluid ounces (UK)": "Suyuqlik untsiyasi (Buyuk Britaniya)",
+      "Pints (UK)": "Pint (Buyuk Britaniya)",
+      "Quarts (UK)": "Kvarts (Buyuk Britaniya)",
+      "Gallons (UK)": "Gallon (Buyuk Britaniya)",
+      "coffee cups": "kofe stakanlari",
+      "bathtubs": "vannalar",
+      "swimming pools": "suzish havzalari",
+      "Square millimeters": "Kvadrat millimetr",
+      "Square centimeters": "Kvadrat santimetr",
+      "Square meters": "Kvadrat metr",
+      "Hectares": "Gktar",
+      "Square kilometers": "Kvadrat kilometr",
+      "Square inches": "Kvadrat dyuym",
+      "Square feet": "Kvadrat fut",
+      "Square yards": "Kvadrat yard",
+      "Acres": "Akrlar",
+      "Square miles": "Kvadrat mil",
+      "sheets of paper": "qog'oz varaqlari",
+      "soccer fields": "futbol maydonlari",
+      "castles": "qal'alar",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Santit/soniya",
+      "Meters per second": "Suniyada metr",
+      "Kilometers per hour": "Kilometr/soat",
+      "Feet per second": "Fut/soniya",
+      "Miles per hour": "Soatiga mil",
+      "Knots": "Tuzaklar",
+      "Mach": "Mak",
+      "turtles": "toshbaqalar",
+      "horses": "otlar",
+      "jets": "jetlar",
+      "Watts": "Vatts",
+      "Kilowatts": "KVt",
+      "Horsepower (US)": "Ot kuchi (AQSh)",
+      "Foot-pounds/minute": "Fut-fut/daqiqa",
+      "BTUs/minute": "BTUs/daqiqa",
+      "light bulbs": "lampalar",
+      "train engines": "poyezd dvigatellari",
+      "Thermal calories": "Termal kaloriyalar",
+      "Food calories": "Oziq-ovqat kaloriyalari",
+      "British thermal units": "Britaniya termal birliklari",
+      "Kilojoules": "Kilodjoul",
+      "Kilowatt-hours": "Kilovat-soat",
+      "Electron volts": "Elektron volt",
+      "Joules": "Joule",
+      "Foot-pounds": "Fut funt",
+      "batteries": "batareyalar",
+      "bananas": "banan",
+      "slices of cake": "tort bo'laklari",
+      "Bits": "Bitlar",
+      "Nibble": "Nibble",
+      "Bytes": "Bayt",
+      "Kilobits": "Kilobit",
+      "Kibibits": "Kibibitlar",
+      "Kilobytes": "Kilobayt",
+      "Kibibytes": "Kibayt",
+      "Megabits": "Megabit",
+      "Mebibits": "Mebibits",
+      "Megabytes": "Megabayt",
+      "Mebibytes": "Mebibaytlar",
+      "Gigabits": "Gigabit",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Gigabayt",
+      "Gibibytes": "Gibbaytlar",
+      "Terabits": "Terabitlar",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabayt",
+      "Tebibytes": "Tebibayt",
+      "Petabits": "Petbitlar",
+      "Pebibits": "Pebibitlar",
+      "Petabytes": "Petabayt",
+      "Pebibytes": "Pebibaytlar",
+      "Exabits": "Chiqish",
+      "Exbibits": "Exbibits",
+      "Exabytes": "Ekzabaytlar",
+      "Exbibytes": "Eksbibaytlar",
+      "Zetabits": "Zetabitlar",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabayt",
+      "Zebibytes": "Zebibaytlar",
+      "Yottabits": "Yottabitlar",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabayt",
+      "Yobibytes": "Yobbaytlar",
+      "floppy disks": "floppi disklar",
+      "CDs": "CDlar",
+      "DVDs": "DVDlar",
+      "Atmospheres": "Atmosferalar",
+      "Bars": "Barchalar",
+      "Kilopascals": "Kilopaskal",
+      "Millimeters of mercury": "Milimetr simob",
+      "Pascals": "Paskal",
+      "Pounds per square inch": "Kvadrat dyuym uchun funt",
+      "Degrees": "Darajalar",
+      "Radians": "Radianlar",
+      "Gradians": "Gradianlar",
+      "Microseconds": "Mikrosoniyalar",
+      "Milliseconds": "Millisoniyalar",
+      "Seconds": "soniya",
+      "Minutes": "Daqiqalar",
+      "Hours": "Soat",
+      "Days": "Kunlar",
+      "Weeks": "Haftalar",
+      "Years": "Yillar"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "AQSH dollari",
+      "Euro": "Evro",
+      "British Pound": "Britaniya funti",
+      "Japanese Yen": "Yapon iyeni",
+      "Canadian Dollar": "Kanada dollari",
+      "Australian Dollar": "Avstraliya dollari",
+      "Brazilian Real": "Braziliya Reali",
+      "Chilean Peso": "Chili pesosi",
+      "Chinese Yuan": "Xitoy yuani",
+      "Colombian Peso": "Kolumbiya pesosi",
+      "Danish Krone": "Daniya kroni",
+      "Egyptian Pound": "Misr funti",
+      "Hong Kong Dollar": "Gongkong dollari",
+      "Indian Rupee": "Hindiston rupisi",
+      "Kenyan Shilling": "Keniya shillingi",
+      "Mexican Peso": "Meksika pesosi",
+      "Nigerian Naira": "Nigeriya Nairasi",
+      "New Zealand Dollar": "Yangi Zelandiya dollari",
+      "Norwegian Krone": "Norvegiya kronasi",
+      "Philippine Piso": "Filippin Piso",
+      "Polish Zloty": "Polsha zlotisi",
+      "Qatari Riyal": "Qatar riyali",
+      "Saudi Riyal": "Saudiya riyali",
+      "Singapore Dollar": "Singapur dollari",
+      "South African Rand": "Janubiy Afrika Randi",
+      "South Korean Won": "Janubiy Koreya Vonu",
+      "Swedish Krona": "Shved kronasi",
+      "Swiss Franc": "Shveytsariya franki",
+      "Thai Baht": "Tailand bati",
+      "Turkish Lira": "Turk lirasi",
+      "Turkmenistani Manat": "Turkmaniston manati",
+      "Ugandan Shilling": "Uganda shillingi",
+      "Ukrainian Hryvnia": "Ukraina grivnasi",
+      "UAE Dirham": "BAA dirhami",
+      "Uruguayan Peso": "Urugvay pesosi",
+      "Uzbekistani Som": "O‘zbekiston so‘mi",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venesuela bolivari Soberano",
+      "Vietnamese Dong": "Vyetnam dongi",
+      "Yemeni Rial": "Yaman riali"
+    },
+    "labels": {
+      "United States - Dollar": "AQSh - Dollar",
+      "Europe - Euro": "Yevropa - Evro",
+      "United Kingdom - Pound": "Birlashgan Qirollik - Funt",
+      "Japan - Yen": "Yaponiya - Yen",
+      "Canada - Dollar": "Kanada - Dollar",
+      "Australia - Dollar": "Avstraliya - Dollar",
+      "Brazil - Real": "Braziliya - Real",
+      "Chile - Peso": "Chili - Peso",
+      "China - Yuan Renminbi": "Xitoy – Yuan renminbi",
+      "Colombia - Peso": "Kolumbiya - Peso",
+      "Denmark - Krone": "Daniya - Kron",
+      "Egypt - Pound": "Misr - funt",
+      "Hong Kong SAR - Dollar": "Gongkong SAR - Dollar",
+      "India - Rupee": "Hindiston - Rupi",
+      "Kenya - Shilling": "Keniya - Shilling",
+      "Mexico - Peso": "Meksika - Peso",
+      "Nigeria - Naira": "Nigeriya - Naira",
+      "New Zealand - Dollar": "Yangi Zelandiya - Dollar",
+      "Norway - Krone": "Norvegiya - Kron",
+      "Philippines - Piso": "Filippin - Piso",
+      "Poland - Zloty": "Polsha – Zlotiya",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Saudiya Arabistoni - Riyal",
+      "Singapore - Dollar": "Singapur - Dollar",
+      "South Africa - Rand": "Janubiy Afrika - Rand",
+      "South Korea - Won": "Janubiy Koreya – G‘alaba",
+      "Sweden - Krona": "Shvetsiya - Kron",
+      "Switzerland - Franc": "Shveytsariya - Frank",
+      "Thailand - Baht": "Tailand - Baht",
+      "Turkey - Lira": "Turkiya - Lira",
+      "Turkmenistan - Manat": "Turkmaniston - Manat",
+      "Uganda - Shilling": "Uganda - Shilling",
+      "Ukraine - Hryvnia": "Ukraina - Grivna",
+      "United Arab Emirates - Dirham": "Birlashgan Arab Amirliklari - Dirham",
+      "Uruguay - Peso": "Urugvay - Peso",
+      "Uzbekistan - Som": "O‘zbekiston - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venesuela - Bolivar Soberano",
+      "Vietnam - Dong": "Vyetnam - Dong",
+      "Yemen - Rial": "Yaman - Rial"
+    }
+  }
+}

@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "ቋንቋ",
+    "name": "ካልኩሌተር"
+  },
+  "common": {
+    "back": "ንምምላስ",
+    "backspace": "ድሕሪት ቦታ",
+    "closeSidePanel": "ፓነል ምዕጻው"
+  },
+  "converter": {
+    "unitConverter": "ኣሃዱ ቀያሪ",
+    "title": "ቋንቋ",
+    "builtInCollections": "ኣብ ውሽጢ ዝተሃንጹ እኩባት",
+    "category": "ምድብ",
+    "from": "ካብ...",
+    "to": "ናብ...",
+    "inputValue": "ዋጋ ንምቕያር",
+    "convertedValue": "ዝተቐየረ ዋጋ",
+    "swapUnits": "ኣሃዱታት ምልውዋጥ",
+    "keypad": "ናይ ባጤራ መፍትሕ",
+    "unit": "ኣሃዱ",
+    "unitOptions": "ኣማራጺታት ኣሃዱ",
+    "currency": {
+      "updatingRates": "ምዕባይ ደረጃታት...",
+      "updateRates": "ደረጃታት ምዕባለ",
+      "keypad": "ናይ ባጤራ መፍትሕ",
+      "currency": "ባጤራ",
+      "options": "ናይ ባጤራ ኣማራጺታት",
+      "updated": "ዝተመሓየሸ {timestamp}",
+      "status": {
+        "mockNote": "ናይ ላግጺ መወከሲ ደረጃታት ናይቲ ንበይኑ ዝሰርሕ ኣፕ ዲሞ።",
+        "fetching": "እዋናዊ መወከሲ ዋጋታት USD ምምጻእ...",
+        "liveRatesLoaded": "ካብ ExchangeRate-API ዝተጻዕኑ ቀጥታዊ ደረጃታት።",
+        "liveUpdateUnavailable": "ቀጥታዊ ምዕባለ ኣይርከብን። ኣብ ውሽጢ ዓዲ ዝተሓደሰ ናይ ዲሞ ደረጃታት።"
+      }
+    },
+    "aboutEqualTo": "ኣስታት ማዕረ..."
+  },
+  "errors": {
+    "invalidInput": "Invalid input",
+    "cannotDivideByZero": "Cannot divide by zero",
+    "cannotModuloByZero": "Cannot modulo by zero",
+    "invalidProgrammerOperation": "Invalid operation",
+    "overflow": "Result too large"
+  },
+  "date": {
+    "calculationMode": "Calculation mode",
+    "from": "From",
+    "to": "To",
+    "results": {
+      "difference": "Difference",
+      "sameDates": "Same dates",
+      "date": "Date"
+    },
+    "calculationModeOptions": "Calculation mode options",
+    "mode": {
+      "difference": "Difference",
+      "shift": "Shift"
+    },
+    "operation": "Operation",
+    "add": "Add",
+    "subtract": "Subtract",
+    "years": "Years",
+    "months": "Months",
+    "days": "Days",
+    "chooseDate": "Choose date",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "duration": {
+      "year": {
+        "one": "{count} year",
+        "other": "{count} years"
+      },
+      "month": {
+        "one": "{count} month",
+        "other": "{count} months"
+      },
+      "week": {
+        "one": "{count} week",
+        "other": "{count} weeks"
+      },
+      "day": {
+        "one": "{count} day",
+        "other": "{count} days"
+      }
+    },
+    "history": {
+      "differenceBetween": "Difference between {from} and {to}",
+      "addTo": "Add {duration} to {date}",
+      "subtractFrom": "Subtract {duration} from {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Check the highlighted expression",
+    "enterExpression": "Enter an expression",
+    "canvas": "Graph canvas",
+    "stopTracing": "Stop tracing",
+    "startTracing": "Start tracing",
+    "share": "Share",
+    "options": "Options",
+    "zoomIn": "Zoom in",
+    "zoomInLabel": "Zoom in",
+    "zoomOut": "Zoom out",
+    "zoomOutLabel": "Zoom out",
+    "refreshViewAutomatically": "Refresh view automatically",
+    "view": "View",
+    "expressions": "Expressions",
+    "mobileView": "Mobile view",
+    "showGraph": "Show graph",
+    "showExpressions": "Show expressions",
+    "backToFunctionList": "Back to function list",
+    "window": "Window",
+    "resetView": "Reset view",
+    "units": "Units",
+    "radians": "Radians",
+    "degrees": "Degrees",
+    "gradians": "Gradians",
+    "lineThickness": "Line thickness",
+    "theme": "Theme",
+    "alwaysLight": "Always light",
+    "matchAppTheme": "Match app theme",
+    "groups": {
+      "inequalities": "Inequalities",
+      "trigonometry": "Trigonometry",
+      "function": "Function"
+    },
+    "functions": "Functions",
+    "showEquation": "Show equation",
+    "hideEquation": "Hide equation",
+    "lineOptions": "Line options",
+    "color": "Color",
+    "style": "Style",
+    "analysis": {
+      "title": "Analysis",
+      "domain": "Domain",
+      "range": "Range",
+      "xIntercept": "x-intercept",
+      "yIntercept": "y-intercept",
+      "minima": "Minima",
+      "maxima": "Maxima",
+      "inflectionPoints": "Inflection points",
+      "verticalAsymptotes": "Vertical asymptotes",
+      "horizontalAsymptotes": "Horizontal asymptotes",
+      "obliqueAsymptotes": "Oblique asymptotes",
+      "parity": "Parity",
+      "period": "Period",
+      "monotonicity": "Monotonicity",
+      "domainNone": "No domain restrictions",
+      "rangeNone": "No range restrictions",
+      "xInterceptNone": "No x-intercepts",
+      "yInterceptNone": "No y-intercepts",
+      "minimaNone": "No minima",
+      "maximaNone": "No maxima",
+      "inflectionNone": "No inflection points",
+      "verticalAsymptotesNone": "No vertical asymptotes",
+      "horizontalAsymptotesNone": "No horizontal asymptotes",
+      "obliqueAsymptotesNone": "No oblique asymptotes",
+      "parityUnknown": "Unknown",
+      "parityOdd": "Odd",
+      "parityEven": "Even",
+      "parityNeither": "Neither",
+      "periodicityUnknown": "Unknown",
+      "periodicityNotPeriodic": "Not periodic",
+      "monotonicityConstant": "Constant",
+      "monotonicityIncreasing": "Increasing",
+      "monotonicityDecreasing": "Decreasing",
+      "monotonicityUnknown": "Unknown",
+      "monotonicityError": "Cannot determine",
+      "featureTooComplexPlural": "Too complex to analyze",
+      "analysisCouldNotBePerformed": "Analysis could not be performed",
+      "analysisNotSupported": "Analysis not supported",
+      "variableIsNotX": "Variable is not x"
+    },
+    "plottingExpressions": "Plotting {count} expressions",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Select expression {index}",
+    "expressionIndex": "Expression {index}",
+    "analyzeFunction": "Analyze function",
+    "changeEquationStyle": "Change equation style",
+    "removeEquation": "Remove equation",
+    "lineStyle": {
+      "solid": "Solid line style",
+      "dash": "Dash line style",
+      "dot": "Dot line style"
+    }
+  },
+  "history": {
+    "empty": "ዝኽሪ ባዶ እዩ።",
+    "clearAll": "ኩሉ መዘክር ኣጽርዮ",
+    "clear": "ዝኽሪ ምጽራይ",
+    "title": "ቋንቋ",
+    "andMemory": "ታሪኽን ዝኽርን እዩ።",
+    "aria": {
+      "historyPanel": "ፓነል ታሪኽ",
+      "historyAndMemoryPanel": "ታሪኽን ዝኽርን ፓነል"
+    },
+    "closeFlyout": "ዕጹው ታሪኽ",
+    "openFlyout": "ክፉት ታሪኽ"
+  },
+  "memory": {
+    "empty": "ዝኽሪ ባዶ እዩ።",
+    "clearItem": "ኣጽሪ ኣቕሓ",
+    "addCurrentValue": "ናይ ሕጂ ዋጋ ምውሳኽ",
+    "subtractCurrentValue": "ናይ ሕጂ ዋጋ ምጉዳል",
+    "clearAll": "ኩሉ መዘክር ኣጽርዮ",
+    "clear": "ዝኽሪ ምጽራይ",
+    "title": "ቋንቋ",
+    "controls": "መቆጻጸሪታት ዝኽሪ",
+    "tooltips": {
+      "clearAll": "ኩሉ መዘክር ኣጽርዮ",
+      "recall": "ካብ ዝኽሪ ምዝካር",
+      "add": "ናብ መዘክር ምውሳኽ",
+      "subtract": "ካብ መዘክር ምጉዳል",
+      "store": "ኣብ መዘክር ምዕቃብ"
+    },
+    "recallValue": "መዘከርታ ምዝካር {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "ምጉዓዝ",
+      "closeNavigation": "ምጉዓዝ ምዕጻው",
+      "openNavigation": "ክፉት ምድህሳስ"
+    },
+    "groups": {
+      "calculator": "ካልኩሌተር",
+      "converter": "ቀያሪ"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "ቢት ፍሊፕ ፓነል",
+    "baseReadouts": "መሰረት ንባባት",
+    "surfaceMode": "ናይ ገጽ ሞድ",
+    "fullKeypad": "ምሉእ ቁልፊ መፍትሕ",
+    "showKeypad": "መፍትሕ ኣርእዩ",
+    "bitTogglingKeypad": "ቢት ቶግሊንግ መፍትሕ",
+    "showBitView": "ርእይቶ ቢት ምርኣይ",
+    "wordSize": "ዓቐን ቃል",
+    "bitwise": "ቢትዋይዝ",
+    "bitShift": "ቢት ሺፍት"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "ትሪጎኖሜትሪ",
+      "function": "ተግባር",
+      "functionsAria": "ተግባራት",
+      "trigonometricFunctionsAria": "ትሪጎኖሜትሪክ ተግባራት",
+      "angleUnit": "ኣሃዱ ኩርናዕ {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "ብዛዕባ...",
+      "themeTitle": "ቴማ",
+      "themeDescription": "ሕብራዊ ስኬም ምረጽ",
+      "light": "ብርሃን",
+      "dark": "ጸልማት",
+      "blue": "ሰማያዊ",
+      "green": "ቀጠልያ",
+      "system": "ስርዓት"
+    },
+    "language": {
+      "group": "ብዛዕባ...",
+      "title": "ቋንቋ",
+      "description": "ዝመረጽካዮ ቋንቋ ምረጽ"
+    },
+    "about": {
+      "group": "ብዛዕባ..."
+    },
+    "feedback": "ርእይቶ ስደዱ",
+    "contribute": {
+      "prefix": "ኣብ ኣበርክቶ",
+      "link": "ጊትሃብ",
+      "suffix": "ነዚ ካልኩሌተር ንምምሕያሽ ንምሕጋዝ"
+    },
+    "links": {
+      "repository": "መኽዘን ፕሮጀክት",
+      "readme": "README ዝብል ቃል ንባብ",
+      "license": "ናይ ሚት ፍቓድ"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "scientific": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "graphing": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "programmer": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "date": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "currency": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "volume": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "length": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "weight": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "temperature": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "energy": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "area": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "speed": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "time": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "power": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "data": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "pressure": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "angle": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    },
+    "settings": {
+      "label": "ቅጥዕታት",
+      "subtitle": "መልክዕን ኣፕን ሓበሬታ"
+    }
+  },
+  "categories": {
+    "Currency": "ባጤራ",
+    "Volume": "ጥራዝ",
+    "Length": "ንውሓት",
+    "Mass": "ቅዳሴ",
+    "Temperature": "ሙቐት",
+    "Energy": "ጸዓት",
+    "Area": "ከባቢ",
+    "Speed": "ፍጥነት",
+    "Time": "ግዜ",
+    "Power": "ሓይሊ",
+    "Data": "ዳታ",
+    "Pressure": "ጸቕጢ",
+    "Angle": "ኩርናዕ"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "ኣንግስትሮምስ",
+      "Nanometers": "ናኖሜተር",
+      "Microns": "ማይክሮናት",
+      "Millimeters": "ሚሊሜተር",
+      "Centimeters": "ሴንቲሜተር",
+      "Meters": "ሜትሮታት",
+      "Kilometers": "ኪሎሜተር",
+      "Inches": "ኢንች",
+      "Feet": "እግሪ",
+      "Yards": "ያርድ",
+      "Miles": "ማይልስ",
+      "Nautical miles": "ናይ ባሕሪ ማይልስ",
+      "paperclips": "መቐመጢ ወረቐት",
+      "hands": "ኣእዳው",
+      "jumbo jets": "ጃምቦ ጀትስ",
+      "Carats": "ካራት",
+      "Milligrams": "ሚሊግራም",
+      "Centigrams": "ሴንቲግራም",
+      "Decigrams": "ዲሲግራም",
+      "Grams": "ግራም",
+      "Dekagrams": "ዴካግራማት",
+      "Hectograms": "ሄክቶግራማት",
+      "Kilograms": "ኪሎግራም",
+      "Metric tonnes": "ሜትሪክ ቶን።",
+      "Ounces": "ኦውንስ",
+      "Pounds": "ፓውንድ",
+      "Stone": "እምኒ",
+      "Short tons (US)": "ሓጸርቲ ቶናት (ኣሜሪካ)",
+      "Long tons (UK)": "ነዊሕ ቶን (ዓባይ ብሪጣንያ)",
+      "snowflakes": "ናይ በረድ ንጣብ",
+      "soccer balls": "ኩዕሶ እግሪ",
+      "elephants": "ኣዛብእ",
+      "whales": "ዓሳ ነባሪ",
+      "Celsius": "ሴልሲየስ",
+      "Fahrenheit": "ፋራናይት።",
+      "Kelvin": "ኬልቪን",
+      "Milliliters": "ሚሊሊተር",
+      "Cubic centimeters": "ኪዩቢክ ሴንቲ ሜተር",
+      "Liters": "ሊትሮ",
+      "Cubic meters": "ኪዩቢክ ሜትሮ",
+      "Teaspoons (US)": "ማንካ ሻሂ (ኣሜሪካ)",
+      "Tablespoons (US)": "ማንካ (ኣሜሪካ)",
+      "Fluid ounces (US)": "ፈሳሲ ኦውንስ (ኣሜሪካ)",
+      "Cups (US)": "ዋንጫታት (ኣሜሪካ)",
+      "Pints (US)": "ፒንት (ኣሜሪካ)",
+      "Quarts (US)": "ኳርትስ (ኣሜሪካ)",
+      "Gallons (US)": "ጋሎን (ኣሜሪካ)",
+      "Cubic inches": "ኪዩቢክ ኢንች",
+      "Cubic feet": "ኪዩቢክ እግሪ",
+      "Cubic yards": "ኪዩቢክ ያርድ",
+      "Teaspoons (UK)": "ማንካ ሻሂ (ዓባይ ብሪጣንያ)",
+      "Tablespoons (UK)": "ማንካ (ዓባይ ብሪጣንያ)",
+      "Fluid ounces (UK)": "ፈሳሲ ኦውንስ (ዓባይ ብሪጣንያ)",
+      "Pints (UK)": "ፒንትስ (ዓባይ ብሪጣንያ)",
+      "Quarts (UK)": "ኳርትስ (ዓባይ ብሪጣንያ)",
+      "Gallons (UK)": "ጋሎን (ዓባይ ብሪጣንያ)",
+      "coffee cups": "ናይ ቡን ኩባያታት",
+      "bathtubs": "ባኞታት",
+      "swimming pools": "መሐንበሲታት",
+      "Square millimeters": "ትርብዒት ሚሊሜተር",
+      "Square centimeters": "ትርብዒት ሴንቲ ሜተር",
+      "Square meters": "ትርብዒት ሜትሮ",
+      "Hectares": "ሄክታር",
+      "Square kilometers": "ትርብዒት ኪሎ ሜተር",
+      "Square inches": "ትርብዒት ኢንች",
+      "Square feet": "ትርብዒት ጫማታት",
+      "Square yards": "ስኩዌር ያርድ",
+      "Acres": "ኤከር",
+      "Square miles": "ትርብዒት ማይልስ",
+      "sheets of paper": "ወረቐታዊ ጽሑፋት",
+      "soccer fields": "ሜዳታት ኩዕሶ እግሪ",
+      "castles": "ካስትላት",
+      "Pyeong": "ፒዮንግ",
+      "Centimeters per second": "ሴንቲሜተር ኣብ ካልኢት",
+      "Meters per second": "ሜትሮታት ኣብ ካልኢት",
+      "Kilometers per hour": "ኪሎሜተር ኣብ ሰዓት",
+      "Feet per second": "እግሪ ኣብ ካልኢት",
+      "Miles per hour": "ማይልስ ኣብ ሰዓት",
+      "Knots": "ዕንጨይቲ",
+      "Mach": "ማክ",
+      "turtles": "ዕንቅርቢታት",
+      "horses": "ኣፍራስ እዩ።",
+      "jets": "ጀት ዝበሃሉ ጀትታት",
+      "Watts": "ዋት",
+      "Kilowatts": "ኪሎዋት",
+      "Horsepower (US)": "ሓይሊ ፈረስ (ኣሜሪካ)",
+      "Foot-pounds/minute": "እግሪ-ፓውንድ/ደቒቕ",
+      "BTUs/minute": "BTUs/ደቒቕ",
+      "light bulbs": "ኣምፑላት",
+      "train engines": "ሞተር ባቡር",
+      "Thermal calories": "ናይ ሙቐት ካሎሪ",
+      "Food calories": "ካሎሪ መግቢ",
+      "British thermal units": "ብሪጣንያውያን ኣሃዱታት ሙቐት",
+      "Kilojoules": "ኪሎጆውልስ",
+      "Kilowatt-hours": "ኪሎዋት-ሰዓታት",
+      "Electron volts": "ኤሌክትሮን ቮልትስ",
+      "Joules": "ጆውልስ",
+      "Foot-pounds": "እግሪ-ፓውንድ",
+      "batteries": "ባትሪታት",
+      "bananas": "ባናና እዩ።",
+      "slices of cake": "ቁራጽ ኬክ",
+      "Bits": "ቢትስ",
+      "Nibble": "ኒብል",
+      "Bytes": "ባይትስ",
+      "Kilobits": "ኪሎቢትስ",
+      "Kibibits": "ኪቢቢትስ",
+      "Kilobytes": "ኪሎባይት።",
+      "Kibibytes": "ኪቢባይት።",
+      "Megabits": "ሜጋቢትስ",
+      "Mebibits": "መቢቢትስ",
+      "Megabytes": "ሜጋባይት።",
+      "Mebibytes": "ሜቢባይት።",
+      "Gigabits": "ጊጋቢትስ",
+      "Gibibits": "ጊቢቢትስ",
+      "Gigabytes": "ጊጋባይት።",
+      "Gibibytes": "ጊቢባይት።",
+      "Terabits": "ቴራቢትስ",
+      "Tebibits": "ተቢቢትስ",
+      "Terabytes": "ቴራባይት።",
+      "Tebibytes": "ቴቢባይት።",
+      "Petabits": "ፔታቢትስ",
+      "Pebibits": "ፔቢቢትስ",
+      "Petabytes": "ፔታባይት።",
+      "Pebibytes": "ፔቢባይት።",
+      "Exabits": "ኤክሳቢትስ",
+      "Exbibits": "ኤክስቢቢትስ",
+      "Exabytes": "ኤክሳባይት።",
+      "Exbibytes": "ኤክስቢባይት።",
+      "Zetabits": "ዜታቢትስ",
+      "Zebibits": "ዘቢቢትስ",
+      "Zetabytes": "ዜታባይት።",
+      "Zebibytes": "ዘቢባይት።",
+      "Yottabits": "ዮታቢትስ",
+      "Yobibits": "ዮቢቢትስ",
+      "Yottabytes": "ዮታባይት።",
+      "Yobibytes": "ዮቢባይት።",
+      "floppy disks": "ፍሎፒ ዲስክታት",
+      "CDs": "ሲዲታት",
+      "DVDs": "ዲቪዲታት",
+      "Atmospheres": "ሃዋህው",
+      "Bars": "ባርስ",
+      "Kilopascals": "ኪሎፓስካልስ",
+      "Millimeters of mercury": "Millimeters of mercury",
+      "Pascals": "ፓስካልስ",
+      "Pounds per square inch": "ፓውንድ ኣብ ሓደ ትርብዒት ኢንች",
+      "Degrees": "ዲግሪታት",
+      "Radians": "ራድያውያን",
+      "Gradians": "ደረጃታት",
+      "Microseconds": "ማይክሮ ሰከንድ",
+      "Milliseconds": "ሚሊሰከንድ",
+      "Seconds": "ካልኢት",
+      "Minutes": "ደቓይቕ",
+      "Hours": "ሰዓታት",
+      "Days": "መዓልታት",
+      "Weeks": "ሰሙናት",
+      "Years": "ዓመታት"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "ዶላር ኣሜሪካ",
+      "Euro": "ዩሮ",
+      "British Pound": "ብሪጣንያዊ ፓውንድ",
+      "Japanese Yen": "ጃፓናዊ የን",
+      "Canadian Dollar": "ካናዳዊ ዶላር",
+      "Australian Dollar": "ዶላር ኣውስትራልያ",
+      "Brazilian Real": "ብራዚላዊ ሪል",
+      "Chilean Peso": "ቺለዊ ፔሶ",
+      "Chinese Yuan": "ቻይናዊ ዩዋን",
+      "Colombian Peso": "ኮሎምብያዊ ፔሶ",
+      "Danish Krone": "ዴንማርክ ክሮነ",
+      "Egyptian Pound": "ግብጻዊ ፓውንድ",
+      "Hong Kong Dollar": "ዶላር ሆንግ ኮንግ",
+      "Indian Rupee": "ህንዳዊ ሩፒ",
+      "Kenyan Shilling": "ናይ ኬንያ ሽሊንግ",
+      "Mexican Peso": "ሜክሲካዊ ፔሶ",
+      "Nigerian Naira": "ናይጀርያዊ ናቕፋ",
+      "New Zealand Dollar": "ዶላር ኒውዚላንድ",
+      "Norwegian Krone": "ኖርወጃዊ ክሮነ",
+      "Philippine Piso": "ፊሊፒንስ ፒሶ",
+      "Polish Zloty": "ፖላንዳዊ ዝሎቲ",
+      "Qatari Riyal": "ቀጠራዊ ሪያል",
+      "Saudi Riyal": "ስዑዲ ዓረብ ሪያል",
+      "Singapore Dollar": "ሲንጋፖር ዶላር",
+      "South African Rand": "ናይ ደቡብ ኣፍሪካ ራንድ",
+      "South Korean Won": "ደቡብ ኮርያዊ ወን",
+      "Swedish Krona": "ሽወደን ክሮና",
+      "Swiss Franc": "ስዊዘርላንድ - ፍራንክ",
+      "Thai Baht": "ታይላንድ - ባት",
+      "Turkish Lira": "ቱርኪ - ሊራ",
+      "Turkmenistani Manat": "ቱርክመኒስታኒ - ማናት",
+      "Ugandan Shilling": "ዩጋንዳ - ሽሊንግ",
+      "Ukrainian Hryvnia": "ዩክሬን - ህሪቭንያ",
+      "UAE Dirham": "ሕቡራት ኢማራት ዓረብ - ዲርሃም",
+      "Uruguayan Peso": "ኡራጋይ - ፔሶ",
+      "Uzbekistani Som": "ኡዝቤኪስታን - ሶም",
+      "Vanuatu Vatu": "ቫኑዋቱ - ቫቱ",
+      "Venezuelan Bolivar Soberano": "ቬነዝዌላ - ቦሊቫር ሶቤራኖ",
+      "Vietnamese Dong": "ቬትናም - ዶንግ",
+      "Yemeni Rial": "የመን - ሪያል"
+    },
+    "labels": {
+      "United States - Dollar": "ኣመሪካ - ዶላር",
+      "Europe - Euro": "ኣውሮጳ - ዩሮ",
+      "United Kingdom - Pound": "ዓባይ ብሪጣንያ - ፓውንድ",
+      "Japan - Yen": "ጃፓን - የን",
+      "Canada - Dollar": "ካናዳ - ዶላር",
+      "Australia - Dollar": "ኣውስትራልያ - ዶላር",
+      "Brazil - Real": "ብራዚል - ሪል",
+      "Chile - Peso": "ቺለ - ፔሶ",
+      "China - Yuan Renminbi": "ቻይና - ዩዋን ረንሚንቢ",
+      "Colombia - Peso": "ኮሎምብያ - ፔሶ",
+      "Denmark - Krone": "ዴንማርክ - ክሮነ",
+      "Egypt - Pound": "ግብጺ - ፓውንድ",
+      "Hong Kong SAR - Dollar": "ሆንግ ኮንግ SAR - ዶላር",
+      "India - Rupee": "ህንዲ - ሩፒ",
+      "Kenya - Shilling": "ኬንያ - ሽሊንግ",
+      "Mexico - Peso": "ሜክሲኮ - ፔሶ",
+      "Nigeria - Naira": "ናይጀርያ - ናይራ",
+      "New Zealand - Dollar": "ኒውዚላንድ - ዶላር",
+      "Norway - Krone": "ኖርወይ - ክሮነ",
+      "Philippines - Piso": "ፊሊፒንስ - ፒሶ",
+      "Poland - Zloty": "ፖላንድ - ዝሎቲ",
+      "Qatar - Riyal": "ቀጠር - ሪያል",
+      "Saudi Arabia - Riyal": "ስዑዲ ዓረብ - ሪያል",
+      "Singapore - Dollar": "ሲንጋፖር - ዶላር",
+      "South Africa - Rand": "ደቡብ ኣፍሪካ - ራንድ",
+      "South Korea - Won": "ደቡብ ኮርያ - ወን",
+      "Sweden - Krona": "ሽወደን - ክሮና",
+      "Switzerland - Franc": "ስዊዘርላንድ - ፍራንክ",
+      "Thailand - Baht": "ታይላንድ - ባት",
+      "Turkey - Lira": "ቱርኪ - ሊራ",
+      "Turkmenistan - Manat": "ቱርክመኒስታን - ማናት",
+      "Uganda - Shilling": "ዩጋንዳ - ሽሊንግ",
+      "Ukraine - Hryvnia": "ዩክሬን - ህሪቭንያ",
+      "United Arab Emirates - Dirham": "ሕቡራት ኢማራት ዓረብ - ዲርሃም",
+      "Uruguay - Peso": "ኡራጋይ - ፔሶ",
+      "Uzbekistan - Som": "ኡዝቤኪስታን - ሶም",
+      "Vanuatu - Vatu": "ቫኑዋቱ - ቫቱ",
+      "Venezuela - Bolívar Soberano": "ቬነዝዌላ - ቦሊቫር ሶቤራኖ",
+      "Vietnam - Dong": "ቬትናም - ዶንግ",
+      "Yemen - Rial": "የመን - ሪያል"
+    }
+  }
+}

@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "เครื่องคิดเลข",
+    "name": "เครื่องคิดเลข"
+  },
+  "common": {
+    "back": "กลับ",
+    "backspace": "ย้อนกลับ",
+    "closeSidePanel": "ปิดแผง"
+  },
+  "converter": {
+    "unitConverter": "ตัวแปลงหน่วย",
+    "title": "ตัวแปลงหน่วย",
+    "builtInCollections": "คอลเลกชันในตัว",
+    "category": "หมวดหมู่",
+    "from": "จาก",
+    "to": "ถึง",
+    "inputValue": "มูลค่าที่จะแปลง",
+    "convertedValue": "ค่าที่แปลงแล้ว",
+    "swapUnits": "สลับหน่วย",
+    "keypad": "แผงปุ่มกดตัวแปลง",
+    "unit": "หน่วย",
+    "unitOptions": "ตัวเลือกหน่วย",
+    "currency": {
+      "updatingRates": "กำลังอัปเดตราคา...",
+      "updateRates": "อัปเดตราคา",
+      "keypad": "ปุ่มกดสกุลเงิน",
+      "currency": "สกุลเงิน",
+      "options": "ตัวเลือกสกุลเงิน",
+      "updated": "อัปเดต {timestamp}",
+      "status": {
+        "mockNote": "จำลองอัตราอ้างอิงสำหรับการสาธิตแอปแบบสแตนด์อโลน",
+        "fetching": "กำลังดึงข้อมูลอัตราอ้างอิง USD ล่าสุด...",
+        "liveRatesLoaded": "โหลดอัตราสดจาก ExchangeRate-API",
+        "liveUpdateUnavailable": "การอัปเดตสดไม่พร้อมใช้งาน รีเฟรชอัตราการสาธิตในพื้นที่"
+      }
+    },
+    "aboutEqualTo": "ประมาณเท่ากับ"
+  },
+  "errors": {
+    "invalidInput": "อินพุตไม่ถูกต้อง",
+    "cannotDivideByZero": "ไม่สามารถหารด้วยศูนย์ได้",
+    "cannotModuloByZero": "ไม่สามารถโมดูโลเป็นศูนย์ได้",
+    "invalidProgrammerOperation": "การดำเนินการไม่ถูกต้อง",
+    "overflow": "ผลลัพธ์ใหญ่เกินไป"
+  },
+  "date": {
+    "calculationMode": "โหมดการคำนวณ",
+    "from": "จาก",
+    "to": "ถึง",
+    "results": {
+      "difference": "ความแตกต่าง",
+      "sameDates": "วันเดียวกัน",
+      "date": "วันที่"
+    },
+    "calculationModeOptions": "ตัวเลือกโหมดการคำนวณ",
+    "mode": {
+      "difference": "ความแตกต่าง",
+      "shift": "กะ"
+    },
+    "operation": "การทำงาน",
+    "add": "เพิ่ม",
+    "subtract": "ลบ",
+    "years": "ปี",
+    "months": "เดือน",
+    "days": "วัน",
+    "chooseDate": "เลือกวันที่",
+    "previousMonth": "เดือนที่แล้ว",
+    "nextMonth": "เดือนหน้า",
+    "duration": {
+      "year": {
+        "one": "{count} ปี",
+        "other": "{count} ปี"
+      },
+      "month": {
+        "one": "{count} เดือน",
+        "other": "{count} เดือน"
+      },
+      "week": {
+        "one": "{count} สัปดาห์",
+        "other": "{count} สัปดาห์"
+      },
+      "day": {
+        "one": "{count} วัน",
+        "other": "{count} วัน"
+      }
+    },
+    "history": {
+      "differenceBetween": "ความแตกต่างระหว่าง {from} และ {to}",
+      "addTo": "เพิ่ม {duration} ไปที่ {date}",
+      "subtractFrom": "ลบ {duration} จาก {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "ตรวจสอบนิพจน์ที่ไฮไลต์",
+    "enterExpression": "ป้อนนิพจน์",
+    "canvas": "กราฟแคนวาส",
+    "stopTracing": "หยุดการติดตาม",
+    "startTracing": "เริ่มการติดตาม",
+    "share": "แชร์",
+    "options": "ตัวเลือก",
+    "zoomIn": "ซูมเข้า",
+    "zoomInLabel": "ซูมเข้า",
+    "zoomOut": "ซูมออก",
+    "zoomOutLabel": "ซูมออก",
+    "refreshViewAutomatically": "รีเฟรชมุมมองโดยอัตโนมัติ",
+    "view": "ดู",
+    "expressions": "นิพจน์",
+    "mobileView": "มุมมองบนมือถือ",
+    "showGraph": "แสดงกราฟ",
+    "showExpressions": "แสดงสำนวน",
+    "backToFunctionList": "กลับไปที่รายการฟังก์ชัน",
+    "window": "หน้าต่าง",
+    "resetView": "รีเซ็ตมุมมอง",
+    "units": "หน่วย",
+    "radians": "เรเดียน",
+    "degrees": "องศา",
+    "gradians": "ไล่ระดับ",
+    "lineThickness": "ความหนาของเส้น",
+    "theme": "ธีม",
+    "alwaysLight": "สว่างเสมอ",
+    "matchAppTheme": "ตรงกับธีมของแอป",
+    "groups": {
+      "inequalities": "ความไม่เท่าเทียมกัน",
+      "trigonometry": "ตรีโกณมิติ",
+      "function": "ฟังก์ชัน"
+    },
+    "functions": "ฟังก์ชัน",
+    "showEquation": "แสดงสมการ",
+    "hideEquation": "ซ่อนสมการ",
+    "lineOptions": "ตัวเลือกบรรทัด",
+    "color": "สี",
+    "style": "สไตล์",
+    "analysis": {
+      "title": "การวิเคราะห์",
+      "domain": "โดเมน",
+      "range": "พิสัย",
+      "xIntercept": "x-จุดตัด",
+      "yIntercept": "y-จุดตัด",
+      "minima": "ขั้นต่ำ",
+      "maxima": "สูงสุด",
+      "inflectionPoints": "จุดเปลี่ยนเว้า",
+      "verticalAsymptotes": "เส้นกำกับแนวตั้ง",
+      "horizontalAsymptotes": "เส้นกำกับแนวนอน",
+      "obliqueAsymptotes": "เส้นกำกับแบบเฉียง",
+      "parity": "ความเท่าเทียมกัน",
+      "period": "ระยะเวลา",
+      "monotonicity": "ความซ้ำซากจำเจ",
+      "domainNone": "ไม่มีข้อจำกัดโดเมน",
+      "rangeNone": "ไม่มีข้อจำกัดช่วง",
+      "xInterceptNone": "ไม่มีจุดตัดแกน x",
+      "yInterceptNone": "ไม่มีจุดตัดแกน y",
+      "minimaNone": "ไม่มีขั้นต่ำ",
+      "maximaNone": "ไม่มีจุดสูงสุด",
+      "inflectionNone": "ไม่มีจุดเปลี่ยน",
+      "verticalAsymptotesNone": "ไม่มีเส้นกำกับแนวตั้ง",
+      "horizontalAsymptotesNone": "ไม่มีเส้นกำกับแนวนอน",
+      "obliqueAsymptotesNone": "ไม่มีเส้นกำกับแบบเฉียง",
+      "parityUnknown": "ไม่ทราบ",
+      "parityOdd": "คี่",
+      "parityEven": "เท่ากัน",
+      "parityNeither": "ทั้งสองอย่าง",
+      "periodicityUnknown": "ไม่ทราบ",
+      "periodicityNotPeriodic": "ไม่ใช่เป็นระยะๆ",
+      "monotonicityConstant": "คงที่",
+      "monotonicityIncreasing": "เพิ่มขึ้น",
+      "monotonicityDecreasing": "กำลังลดลง",
+      "monotonicityUnknown": "ไม่ทราบ",
+      "monotonicityError": "ไม่สามารถระบุได้",
+      "featureTooComplexPlural": "ซับซ้อนเกินกว่าจะวิเคราะห์",
+      "analysisCouldNotBePerformed": "ไม่สามารถดำเนินการวิเคราะห์ได้",
+      "analysisNotSupported": "ไม่รองรับการวิเคราะห์",
+      "variableIsNotX": "ตัวแปรไม่ใช่ x"
+    },
+    "plottingExpressions": "กำลังพล็อตนิพจน์ {count}",
+    "xMin": "เอ็กซ์-นาที",
+    "xMax": "เอ็กซ์-แม็กซ์",
+    "yMin": "อี-มิน",
+    "yMax": "Y-สูงสุด",
+    "selectExpression": "เลือกนิพจน์ {index}",
+    "expressionIndex": "การแสดงออก {index}",
+    "analyzeFunction": "วิเคราะห์ฟังก์ชัน",
+    "changeEquationStyle": "เปลี่ยนรูปแบบสมการ",
+    "removeEquation": "ลบสมการ",
+    "lineStyle": {
+      "solid": "รูปแบบเส้นทึบ",
+      "dash": "สไตล์เส้นประ",
+      "dot": "รูปแบบเส้นจุด"
+    }
+  },
+  "history": {
+    "empty": "ประวัติว่างเปล่า",
+    "clearAll": "ล้างทั้งหมด",
+    "clear": "ล้างประวัติ",
+    "title": "ประวัติศาสตร์",
+    "andMemory": "ประวัติศาสตร์และความทรงจำ",
+    "aria": {
+      "historyPanel": "แผงประวัติ",
+      "historyAndMemoryPanel": "แผงประวัติและความทรงจำ"
+    },
+    "closeFlyout": "ปิดประวัติ",
+    "openFlyout": "เปิดประวัติ"
+  },
+  "memory": {
+    "empty": "หน่วยความจำว่างเปล่า",
+    "clearItem": "ล้างรายการ",
+    "addCurrentValue": "เพิ่มค่าปัจจุบัน",
+    "subtractCurrentValue": "ลบค่าปัจจุบัน",
+    "clearAll": "ล้างทั้งหมด",
+    "clear": "ล้างหน่วยความจำ",
+    "title": "หน่วยความจำ",
+    "controls": "การควบคุมหน่วยความจำ",
+    "tooltips": {
+      "clearAll": "ล้างหน่วยความจำทั้งหมด",
+      "recall": "เรียกคืนจากความทรงจำ",
+      "add": "เพิ่มในหน่วยความจำ",
+      "subtract": "ลบออกจากหน่วยความจำ",
+      "store": "เก็บไว้ในหน่วยความจำ"
+    },
+    "recallValue": "เรียกคืนหน่วยความจำ {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "การนำทาง",
+      "closeNavigation": "ปิดการนำทาง",
+      "openNavigation": "เปิดการนำทาง"
+    },
+    "groups": {
+      "calculator": "เครื่องคิดเลข",
+      "converter": "ตัวแปลง"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "แผงพลิกบิต",
+    "baseReadouts": "การอ่านค่าพื้นฐาน",
+    "surfaceMode": "โหมดพื้นผิว",
+    "fullKeypad": "ปุ่มกดแบบเต็ม",
+    "showKeypad": "แสดงปุ่มกด",
+    "bitTogglingKeypad": "ปุ่มกดสลับบิต",
+    "showBitView": "แสดงมุมมองบิต",
+    "wordSize": "ขนาดคำ",
+    "bitwise": "ตามระดับบิต",
+    "bitShift": "การเปลี่ยนบิต"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "ตรีโกณมิติ",
+      "function": "ฟังก์ชัน",
+      "functionsAria": "ฟังก์ชัน",
+      "trigonometricFunctionsAria": "ฟังก์ชันตรีโกณมิติ",
+      "angleUnit": "หน่วยมุม {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "รูปลักษณ์ภายนอก",
+      "themeTitle": "ธีม",
+      "themeDescription": "เลือกรูปแบบสี",
+      "light": "สว่าง",
+      "dark": "มืด",
+      "blue": "สีน้ำเงิน",
+      "green": "สีเขียว",
+      "system": "ระบบ"
+    },
+    "language": {
+      "group": "ภาษา",
+      "title": "ภาษา",
+      "description": "เลือกภาษาที่คุณต้องการ"
+    },
+    "about": {
+      "group": "เกี่ยวกับ"
+    },
+    "feedback": "ส่งความคิดเห็น",
+    "contribute": {
+      "prefix": "ร่วมให้ข้อมูลใน",
+      "link": "GitHub",
+      "suffix": "เพื่อช่วยปรับปรุงเครื่องคิดเลขนี้"
+    },
+    "links": {
+      "repository": "พื้นที่เก็บข้อมูลโปรเจ็กต์",
+      "readme": "README",
+      "license": "ใบอนุญาต MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "มาตรฐาน",
+      "subtitle": "การประเมินทันทีแบบคลาสสิก"
+    },
+    "scientific": {
+      "label": "วิทยาศาสตร์",
+      "subtitle": "ตัวดำเนินการ ฟังก์ชัน และการสนับสนุนนิพจน์"
+    },
+    "graphing": {
+      "label": "การสร้างกราฟ",
+      "subtitle": "พล็อตนิพจน์ง่ายๆ บนระนาบคาร์ทีเซียน"
+    },
+    "programmer": {
+      "label": "โปรแกรมเมอร์",
+      "subtitle": "คณิตศาสตร์จำนวนเต็มพร้อมการแปลงฐาน"
+    },
+    "date": {
+      "label": "การคำนวณวันที่",
+      "subtitle": "ค้นหาระยะเวลาและวันที่กะ"
+    },
+    "currency": {
+      "label": "สกุลเงิน",
+      "subtitle": "แปลงอัตราแลกเปลี่ยนจำลอง"
+    },
+    "volume": {
+      "label": "ระดับเสียง",
+      "subtitle": "แปลงการวัดปริมาตร"
+    },
+    "length": {
+      "label": "ความยาว",
+      "subtitle": "แปลงหน่วยระยะทางและความยาว"
+    },
+    "weight": {
+      "label": "น้ำหนักและมวล",
+      "subtitle": "แปลงหน่วยน้ำหนักและมวล"
+    },
+    "temperature": {
+      "label": "อุณหภูมิ",
+      "subtitle": "แปลงสเกลอุณหภูมิ"
+    },
+    "energy": {
+      "label": "พลังงาน",
+      "subtitle": "แปลงการวัดพลังงาน"
+    },
+    "area": {
+      "label": "พื้นที่",
+      "subtitle": "แปลงการวัดพื้นที่"
+    },
+    "speed": {
+      "label": "ความเร็ว",
+      "subtitle": "แปลงการวัดความเร็ว"
+    },
+    "time": {
+      "label": "เวลา",
+      "subtitle": "แปลงหน่วยวัดเวลา"
+    },
+    "power": {
+      "label": "พลัง",
+      "subtitle": "แปลงการวัดกำลัง"
+    },
+    "data": {
+      "label": "ข้อมูล",
+      "subtitle": "แปลงหน่วยจัดเก็บข้อมูลดิจิทัล"
+    },
+    "pressure": {
+      "label": "แรงกดดัน",
+      "subtitle": "แปลงหน่วยความดัน"
+    },
+    "angle": {
+      "label": "มุม",
+      "subtitle": "แปลงการวัดมุม"
+    },
+    "settings": {
+      "label": "การตั้งค่า",
+      "subtitle": "ลักษณะที่ปรากฏและข้อมูลแอป"
+    }
+  },
+  "categories": {
+    "Currency": "สกุลเงิน",
+    "Volume": "ระดับเสียง",
+    "Length": "ความยาว",
+    "Mass": "พิธีมิสซา",
+    "Temperature": "อุณหภูมิ",
+    "Energy": "พลังงาน",
+    "Area": "พื้นที่",
+    "Speed": "ความเร็ว",
+    "Time": "เวลา",
+    "Power": "พลัง",
+    "Data": "ข้อมูล",
+    "Pressure": "แรงกดดัน",
+    "Angle": "มุม"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "อังสตรอม",
+      "Nanometers": "นาโนเมตร",
+      "Microns": "ไมครอน",
+      "Millimeters": "มิลลิเมตร",
+      "Centimeters": "เซนติเมตร",
+      "Meters": "เมตร",
+      "Kilometers": "กิโลเมตร",
+      "Inches": "นิ้ว",
+      "Feet": "เท้า",
+      "Yards": "หลา",
+      "Miles": "ไมล์",
+      "Nautical miles": "ไมล์ทะเล",
+      "paperclips": "คลิปหนีบกระดาษ",
+      "hands": "มือ",
+      "jumbo jets": "เครื่องบินจัมโบ้เจ็ท",
+      "Carats": "กะรัต",
+      "Milligrams": "มิลลิกรัม",
+      "Centigrams": "เซนติกรัม",
+      "Decigrams": "เดซิกรัม",
+      "Grams": "กรัม",
+      "Dekagrams": "เดคาแกรม",
+      "Hectograms": "เฮกโตกรัม",
+      "Kilograms": "กิโลกรัม",
+      "Metric tonnes": "เมตริกตัน",
+      "Ounces": "ออนซ์",
+      "Pounds": "ปอนด์",
+      "Stone": "สโตน",
+      "Short tons (US)": "ตันระยะสั้น (US)",
+      "Long tons (UK)": "ลองตัน (สหราชอาณาจักร)",
+      "snowflakes": "เกล็ดหิมะ",
+      "soccer balls": "ลูกฟุตบอล",
+      "elephants": "ช้าง",
+      "whales": "วาฬ",
+      "Celsius": "เซลเซียส",
+      "Fahrenheit": "ฟาเรนไฮต์",
+      "Kelvin": "เคลวิน",
+      "Milliliters": "มิลลิลิตร",
+      "Cubic centimeters": "ลูกบาศก์เซนติเมตร",
+      "Liters": "ลิตร",
+      "Cubic meters": "ลูกบาศก์เมตร",
+      "Teaspoons (US)": "ช้อนชา (สหรัฐฯ)",
+      "Tablespoons (US)": "ช้อนโต๊ะ (สหรัฐฯ)",
+      "Fluid ounces (US)": "ออนซ์ของเหลว (US)",
+      "Cups (US)": "คัพ (สหรัฐอเมริกา)",
+      "Pints (US)": "ไพนต์ (US)",
+      "Quarts (US)": "ควอร์ต (สหรัฐอเมริกา)",
+      "Gallons (US)": "แกลลอน (US)",
+      "Cubic inches": "ลูกบาศก์นิ้ว",
+      "Cubic feet": "ลูกบาศก์ฟุต",
+      "Cubic yards": "ลูกบาศก์หลา",
+      "Teaspoons (UK)": "ช้อนชา (อังกฤษ)",
+      "Tablespoons (UK)": "ช้อนโต๊ะ (อังกฤษ)",
+      "Fluid ounces (UK)": "ออนซ์ของเหลว (UK)",
+      "Pints (UK)": "ไพนต์ (สหราชอาณาจักร)",
+      "Quarts (UK)": "ควอร์ต (สหราชอาณาจักร)",
+      "Gallons (UK)": "แกลลอน (UK)",
+      "coffee cups": "ถ้วยกาแฟ",
+      "bathtubs": "อ่างอาบน้ำ",
+      "swimming pools": "สระว่ายน้ำ",
+      "Square millimeters": "ตารางมิลลิเมตร",
+      "Square centimeters": "ตารางเซนติเมตร",
+      "Square meters": "ตารางเมตร",
+      "Hectares": "เฮกตาร์",
+      "Square kilometers": "ตารางกิโลเมตร",
+      "Square inches": "ตารางนิ้ว",
+      "Square feet": "ตารางฟุต",
+      "Square yards": "ตารางหลา",
+      "Acres": "เอเคอร์",
+      "Square miles": "ตารางไมล์",
+      "sheets of paper": "แผ่นกระดาษ",
+      "soccer fields": "สนามฟุตบอล",
+      "castles": "ปราสาท",
+      "Pyeong": "พย็อง",
+      "Centimeters per second": "เซนติเมตรต่อวินาที",
+      "Meters per second": "เมตรต่อวินาที",
+      "Kilometers per hour": "กิโลเมตรต่อชั่วโมง",
+      "Feet per second": "ฟุตต่อวินาที",
+      "Miles per hour": "ไมล์ต่อชั่วโมง",
+      "Knots": "นอต",
+      "Mach": "มัค",
+      "turtles": "เต่า",
+      "horses": "ม้า",
+      "jets": "เครื่องบินไอพ่น",
+      "Watts": "วัตต์",
+      "Kilowatts": "กิโลวัตต์",
+      "Horsepower (US)": "แรงม้า (สหรัฐอเมริกา)",
+      "Foot-pounds/minute": "ฟุต-ปอนด์/นาที",
+      "BTUs/minute": "บีทียู/นาที",
+      "light bulbs": "หลอดไฟ",
+      "train engines": "เครื่องยนต์รถไฟ",
+      "Thermal calories": "แคลอรี่ความร้อน",
+      "Food calories": "แคลอรี่อาหาร",
+      "British thermal units": "หน่วยความร้อนของอังกฤษ",
+      "Kilojoules": "กิโลจูล",
+      "Kilowatt-hours": "กิโลวัตต์-ชั่วโมง",
+      "Electron volts": "อิเล็กตรอนโวลต์",
+      "Joules": "จูล",
+      "Foot-pounds": "ฟุต-ปอนด์",
+      "batteries": "แบตเตอรี่",
+      "bananas": "กล้วย",
+      "slices of cake": "เค้กชิ้น",
+      "Bits": "บิต",
+      "Nibble": "ตอด",
+      "Bytes": "ไบต์",
+      "Kilobits": "กิโลบิต",
+      "Kibibits": "คิบิบิต",
+      "Kilobytes": "กิโลไบต์",
+      "Kibibytes": "กิโลไบต์",
+      "Megabits": "เมกะบิต",
+      "Mebibits": "เมบิบิต",
+      "Megabytes": "เมกะไบต์",
+      "Mebibytes": "เมบิไบต์",
+      "Gigabits": "กิกะบิต",
+      "Gibibits": "กิบิบิต",
+      "Gigabytes": "กิกะไบต์",
+      "Gibibytes": "กิกะไบต์",
+      "Terabits": "เทราบิต",
+      "Tebibits": "เทบิบิต",
+      "Terabytes": "เทราไบต์",
+      "Tebibytes": "เทบิไบต์",
+      "Petabits": "เพตะบิต",
+      "Pebibits": "เพบิบิต",
+      "Petabytes": "เพตาไบต์",
+      "Pebibytes": "เพบิไบต์",
+      "Exabits": "Exabs",
+      "Exbibits": "การจัดแสดง",
+      "Exabytes": "เอ็กซาไบต์",
+      "Exbibytes": "เอ็กบิไบต์",
+      "Zetabits": "ซีตาบิต",
+      "Zebibits": "เซบิบิต",
+      "Zetabytes": "ซีตาไบต์",
+      "Zebibytes": "เซบิไบต์",
+      "Yottabits": "ยอตตาบิต",
+      "Yobibits": "โยบิบิต",
+      "Yottabytes": "ยอตตะไบต์",
+      "Yobibytes": "โยบิไบต์",
+      "floppy disks": "ฟล็อปปี้ดิสก์",
+      "CDs": "ซีดี",
+      "DVDs": "ดีวีดี",
+      "Atmospheres": "บรรยากาศ",
+      "Bars": "บาร์",
+      "Kilopascals": "กิโลปาสคาล",
+      "Millimeters of mercury": "มิลลิเมตรปรอท",
+      "Pascals": "ปาสกาล",
+      "Pounds per square inch": "ปอนด์ต่อตารางนิ้ว",
+      "Degrees": "องศา",
+      "Radians": "เรเดียน",
+      "Gradians": "ไล่ระดับ",
+      "Microseconds": "ไมโครวินาที",
+      "Milliseconds": "มิลลิวินาที",
+      "Seconds": "วินาที",
+      "Minutes": "นาที",
+      "Hours": "ชั่วโมง",
+      "Days": "วัน",
+      "Weeks": "สัปดาห์",
+      "Years": "ปี"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "ดอลลาร์สหรัฐ",
+      "Euro": "ยูโร",
+      "British Pound": "ปอนด์อังกฤษ",
+      "Japanese Yen": "เยนญี่ปุ่น",
+      "Canadian Dollar": "ดอลลาร์แคนาดา",
+      "Australian Dollar": "ดอลลาร์ออสเตรเลีย",
+      "Brazilian Real": "เรียลบราซิล",
+      "Chilean Peso": "เปโซชิลี",
+      "Chinese Yuan": "หยวนจีน",
+      "Colombian Peso": "เปโซโคลอมเบีย",
+      "Danish Krone": "โครนเดนมาร์ก",
+      "Egyptian Pound": "ปอนด์อียิปต์",
+      "Hong Kong Dollar": "ดอลลาร์ฮ่องกง",
+      "Indian Rupee": "รูปีอินเดีย",
+      "Kenyan Shilling": "ชิลลิงเคนยา",
+      "Mexican Peso": "เปโซเม็กซิโก",
+      "Nigerian Naira": "ไนราไนจีเรีย",
+      "New Zealand Dollar": "ดอลลาร์นิวซีแลนด์",
+      "Norwegian Krone": "โครนนอร์เวย์",
+      "Philippine Piso": "ปิโซฟิลิปปินส์",
+      "Polish Zloty": "ซโลตีโปแลนด์",
+      "Qatari Riyal": "ริยาลกาตาร์",
+      "Saudi Riyal": "ริยาลซาอุดีอาระเบีย",
+      "Singapore Dollar": "ดอลลาร์สิงคโปร์",
+      "South African Rand": "แรนด์แอฟริกาใต้",
+      "South Korean Won": "วอนเกาหลีใต้",
+      "Swedish Krona": "โครนาสวีเดน",
+      "Swiss Franc": "ฟรังก์สวิส",
+      "Thai Baht": "บาทไทย",
+      "Turkish Lira": "ลีราตุรกี",
+      "Turkmenistani Manat": "เติร์กเมนิสถาน มานัส",
+      "Ugandan Shilling": "ชิลลิงยูกันดา",
+      "Ukrainian Hryvnia": "ฮรีฟเนียยูเครน",
+      "UAE Dirham": "เดอร์แฮมสหรัฐอาหรับเอมิเรตส์",
+      "Uruguayan Peso": "เปโซอุรุกวัย",
+      "Uzbekistani Som": "ซอมอุซเบกิสถาน",
+      "Vanuatu Vatu": "วานูอาตู วาตู",
+      "Venezuelan Bolivar Soberano": "โบลิวาร์ โซเบราโนชาวเวเนซุเอลา",
+      "Vietnamese Dong": "ดองเวียดนาม",
+      "Yemeni Rial": "เรียลเยเมน"
+    },
+    "labels": {
+      "United States - Dollar": "สหรัฐอเมริกา - ดอลลาร์",
+      "Europe - Euro": "ยุโรป - ยูโร",
+      "United Kingdom - Pound": "สหราชอาณาจักร - ปอนด์",
+      "Japan - Yen": "ญี่ปุ่น - เยน",
+      "Canada - Dollar": "แคนาดา - ดอลลาร์",
+      "Australia - Dollar": "ออสเตรเลีย - ดอลลาร์",
+      "Brazil - Real": "บราซิล - เรียล",
+      "Chile - Peso": "ชิลี - เปโซ",
+      "China - Yuan Renminbi": "จีน - หยวน เหรินหมินปี้",
+      "Colombia - Peso": "โคลอมเบีย - เปโซ",
+      "Denmark - Krone": "เดนมาร์ก - โครน",
+      "Egypt - Pound": "อียิปต์ - ปอนด์",
+      "Hong Kong SAR - Dollar": "เขตบริหารพิเศษฮ่องกง - ดอลลาร์",
+      "India - Rupee": "อินเดีย - รูปี",
+      "Kenya - Shilling": "เคนยา - ชิลลิง",
+      "Mexico - Peso": "เม็กซิโก - เปโซ",
+      "Nigeria - Naira": "ไนจีเรีย - ไนรา",
+      "New Zealand - Dollar": "นิวซีแลนด์ - ดอลลาร์",
+      "Norway - Krone": "นอร์เวย์ - โครน",
+      "Philippines - Piso": "ฟิลิปปินส์ - ปิโซ",
+      "Poland - Zloty": "โปแลนด์ - ซโลตี",
+      "Qatar - Riyal": "กาตาร์ - ริยาล",
+      "Saudi Arabia - Riyal": "ซาอุดีอาระเบีย - ริยาล",
+      "Singapore - Dollar": "สิงคโปร์ - ดอลลาร์",
+      "South Africa - Rand": "แอฟริกาใต้ - แรนด์",
+      "South Korea - Won": "เกาหลีใต้ - ชนะ",
+      "Sweden - Krona": "สวีเดน - โครนา",
+      "Switzerland - Franc": "สวิตเซอร์แลนด์ - ฟรังก์",
+      "Thailand - Baht": "ไทย - บาท",
+      "Turkey - Lira": "ตุรกี - ลีรา",
+      "Turkmenistan - Manat": "เติร์กเมนิสถาน - มานัส",
+      "Uganda - Shilling": "ยูกันดา - ชิลลิง",
+      "Ukraine - Hryvnia": "ยูเครน - ฮรีฟเนีย",
+      "United Arab Emirates - Dirham": "สหรัฐอาหรับเอมิเรตส์ - เดอร์แฮม",
+      "Uruguay - Peso": "อุรุกวัย - เปโซ",
+      "Uzbekistan - Som": "อุซเบกิสถาน - ซอม",
+      "Vanuatu - Vatu": "วานูอาตู - วาตู",
+      "Venezuela - Bolívar Soberano": "เวเนซุเอลา - โบลิวาร์ โซเบราโน",
+      "Vietnam - Dong": "เวียดนาม - ดอง",
+      "Yemen - Rial": "เยเมน - เรียล"
+    }
+  }
+}

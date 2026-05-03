@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Cyfrifiannell",
+    "name": "Cyfrifiannell"
+  },
+  "common": {
+    "back": "Yn ôl",
+    "backspace": "Bod yn ôl",
+    "closeSidePanel": "Cau'r panel"
+  },
+  "converter": {
+    "unitConverter": "Trawsnewidydd Unedau",
+    "title": "Trwswyr uned",
+    "builtInCollections": "Casgliadau wedi'u hymgorffori",
+    "category": "Categori",
+    "from": "Gan",
+    "to": "I",
+    "inputValue": "Gwerth i drosi",
+    "convertedValue": "Gwerth wedi'i drosi",
+    "swapUnits": "Cyfnewid unedau",
+    "keypad": "Bysellbad trawsnewidydd",
+    "unit": "uned",
+    "unitOptions": "dewisiadau uned",
+    "currency": {
+      "updatingRates": "Cyfraddau diweddaru…",
+      "updateRates": "Cyfraddau diweddaru",
+      "keypad": "Bysellbad arian cyfred",
+      "currency": "arian cyfred",
+      "options": "dewisiadau arian cyfred",
+      "updated": "Diweddarwyd {timestamp}",
+      "status": {
+        "mockNote": "Cyfraddau cyfeirio ffug ar gyfer y demo ap annibynnol.",
+        "fetching": "Wrth nôl y cyfraddau cyfeirio USD diweddaraf...",
+        "liveRatesLoaded": "Cyfraddau byw wedi'u llwytho o ExchangeRate-API.",
+        "liveUpdateUnavailable": "Nid yw diweddariad byw ar gael. Cyfraddau demo wedi'u diweddaru'n lleol."
+      }
+    },
+    "aboutEqualTo": "Tua hafal i"
+  },
+  "errors": {
+    "invalidInput": "Mewnbwn annilys",
+    "cannotDivideByZero": "Methu rhannu â sero",
+    "cannotModuloByZero": "Methu modwlo gan sero",
+    "invalidProgrammerOperation": "Gweithrediad annilys",
+    "overflow": "Canlyniad rhy fawr"
+  },
+  "date": {
+    "calculationMode": "Modd cyfrifo",
+    "from": "Gan",
+    "to": "I",
+    "results": {
+      "difference": "Gwahaniaeth",
+      "sameDates": "Yr un dyddiadau",
+      "date": "Dyddiad"
+    },
+    "calculationModeOptions": "Dewisiadau modd cyfrifo",
+    "mode": {
+      "difference": "Gwahaniaeth",
+      "shift": "Shift"
+    },
+    "operation": "Gweithrediad",
+    "add": "Ychwanegu",
+    "subtract": "Tynnu",
+    "years": "Blynyddoedd",
+    "months": "Misoedd",
+    "days": "Diwrnodau",
+    "chooseDate": "Dewis dyddiad",
+    "previousMonth": "Mis blaenorol",
+    "nextMonth": "Mis nesaf",
+    "duration": {
+      "year": {
+        "one": "{count} blwyddyn",
+        "other": "{count} mlynedd"
+      },
+      "month": {
+        "one": "{count} mis",
+        "other": "{count} mis"
+      },
+      "week": {
+        "one": "{count} wythnos",
+        "other": "{count} wythnos"
+      },
+      "day": {
+        "one": "{count} diwrnod",
+        "other": "{count} diwrnod"
+      }
+    },
+    "history": {
+      "differenceBetween": "Gwahaniaeth rhwng {from} a {to}",
+      "addTo": "Ychwanegu {duration} i {date}",
+      "subtractFrom": "Tynnu {duration} o {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Gwiriwch y mynegiant sydd wedi'i amlygu",
+    "enterExpression": "Rhowch fynegiad",
+    "canvas": "Cynfas graff",
+    "stopTracing": "Rhowch y gorau i olrhain",
+    "startTracing": "Dechrau olrhain",
+    "share": "Rhannu",
+    "options": "Dewisiadau",
+    "zoomIn": "Chwyddo i mewn",
+    "zoomInLabel": "Chwyddo i mewn",
+    "zoomOut": "Chwyddo allan",
+    "zoomOutLabel": "Chwyddo allan",
+    "refreshViewAutomatically": "Adnewyddu gwedd yn awtomatig",
+    "view": "Gweld",
+    "expressions": "Mynegiadau",
+    "mobileView": "Gwedd symudol",
+    "showGraph": "Dangos graff",
+    "showExpressions": "Dangos ymadroddion",
+    "backToFunctionList": "Yn ôl i'r rhestr swyddogaethau",
+    "window": "ffenestr",
+    "resetView": "Ailosod gwedd",
+    "units": "Unedau",
+    "radians": "Radiaid",
+    "degrees": "Graddau",
+    "gradians": "Graddiaid",
+    "lineThickness": "Trwch llinell",
+    "theme": "Thema",
+    "alwaysLight": "Bob amser yn ysgafn",
+    "matchAppTheme": "Thema ap cyfatebol",
+    "groups": {
+      "inequalities": "Anghydraddoldeb",
+      "trigonometry": "Trigonometreg",
+      "function": "Swyddogaeth"
+    },
+    "functions": "Swyddogaethau",
+    "showEquation": "Dangos yr hafaliad",
+    "hideEquation": "Cuddio'r hafaliad",
+    "lineOptions": "Dewisiadau llinell",
+    "color": "Lliw",
+    "style": "Arddull",
+    "analysis": {
+      "title": "Dadansoddiad",
+      "domain": "Parth",
+      "range": "Ystod",
+      "xIntercept": "x-rhyng-gipio",
+      "yIntercept": "y-rhyng-gipio",
+      "minima": "Isafswm",
+      "maxima": "Uchafswm",
+      "inflectionPoints": "Pwyntiau ffurfdro",
+      "verticalAsymptotes": "Asymptotes fertigol",
+      "horizontalAsymptotes": "Asymptotes llorweddol",
+      "obliqueAsymptotes": "Asymptotes lletraws",
+      "parity": "Paredd",
+      "period": "Cyfnod",
+      "monotonicity": "Undonedd",
+      "domainNone": "Dim cyfyngiadau parth",
+      "rangeNone": "Dim cyfyngiadau ystod",
+      "xInterceptNone": "Dim x-rhyng-gipio",
+      "yInterceptNone": "Dim y-ryng-gipio",
+      "minimaNone": "Dim lleiafswm",
+      "maximaNone": "Dim uchafsymiau",
+      "inflectionNone": "Dim pwyntiau ffurfdroi",
+      "verticalAsymptotesNone": "Dim asymptotes fertigol",
+      "horizontalAsymptotesNone": "Dim asymptotes llorweddol",
+      "obliqueAsymptotesNone": "Dim asymptotes lletraws",
+      "parityUnknown": "Anhysbys",
+      "parityOdd": "Od",
+      "parityEven": "Hyd yn oed",
+      "parityNeither": "Na chwaith",
+      "periodicityUnknown": "Anhysbys",
+      "periodicityNotPeriodic": "Ddim yn gyfnodol",
+      "monotonicityConstant": "Cyson",
+      "monotonicityIncreasing": "Cynyddu",
+      "monotonicityDecreasing": "Yn lleihau",
+      "monotonicityUnknown": "Anhysbys",
+      "monotonicityError": "Methu penderfynu",
+      "featureTooComplexPlural": "Rhy gymhleth i'w ddadansoddi",
+      "analysisCouldNotBePerformed": "Ni fu modd cynnal y dadansoddiad",
+      "analysisNotSupported": "Ni chefnogir y dadansoddiad",
+      "variableIsNotX": "Nid yw newidyn yn x"
+    },
+    "plottingExpressions": "Plotio {count} ymadroddion",
+    "xMin": "X-munud",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Dewiswch fynegiad {index}",
+    "expressionIndex": "Mynegiad {index}",
+    "analyzeFunction": "Dadansoddi ffwythiant",
+    "changeEquationStyle": "Newid arddull yr hafaliad",
+    "removeEquation": "Dileu hafaliad",
+    "lineStyle": {
+      "solid": "Arddull llinell solet",
+      "dash": "Arddull llinell dash",
+      "dot": "Arddull llinell dot"
+    }
+  },
+  "history": {
+    "empty": "Mae hanes yn wag",
+    "clearAll": "Clirio popeth",
+    "clear": "Dileu hanes",
+    "title": "Hanes",
+    "andMemory": "Hanes a Chof",
+    "aria": {
+      "historyPanel": "Panel hanes",
+      "historyAndMemoryPanel": "Panel Hanes ac Cof"
+    },
+    "closeFlyout": "Hanes cau",
+    "openFlyout": "Hanes agored"
+  },
+  "memory": {
+    "empty": "Cof yn wag",
+    "clearItem": "Clirio'r eitem",
+    "addCurrentValue": "Ychwanegu gwerth cyfredol",
+    "subtractCurrentValue": "Tynnu gwerth cyfredol",
+    "clearAll": "Clirio popeth",
+    "clear": "Cof clir",
+    "title": "Cof",
+    "controls": "Rheolyddion cof",
+    "tooltips": {
+      "clearAll": "Clirio pob cof",
+      "recall": "Adalw o'r cof",
+      "add": "Ychwanegu at y cof",
+      "subtract": "Tynnu o'r cof",
+      "store": "Siop yn y cof"
+    },
+    "recallValue": "Cof cofio {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Mordwyo",
+      "closeNavigation": "Cau llywio",
+      "openNavigation": "Agor llywio"
+    },
+    "groups": {
+      "calculator": "Cyfrifiannell",
+      "converter": "Tröydd"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Panel fflip did",
+    "baseReadouts": "Darlleniadau sylfaenol",
+    "surfaceMode": "Modd arwyneb",
+    "fullKeypad": "Bysellbad llawn",
+    "showKeypad": "Dangos y bysellbad",
+    "bitTogglingKeypad": "Byellbad toglo ychydig",
+    "showBitView": "Dangos gwedd did",
+    "wordSize": "Maint geiriau",
+    "bitwise": "Ychydig yn ddoeth",
+    "bitShift": "Sifftiau did"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometreg",
+      "function": "Swyddogaeth",
+      "functionsAria": "Swyddogaethau",
+      "trigonometricFunctionsAria": "Ffensiynau trigonometrig",
+      "angleUnit": "Uned ongl {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Golwg",
+      "themeTitle": "Thema",
+      "themeDescription": "Dewiswch gynllun lliwiau",
+      "light": "Golau",
+      "dark": "Tywyll",
+      "blue": "Glas",
+      "green": "Gwyrdd",
+      "system": "System"
+    },
+    "language": {
+      "group": "Iaith",
+      "title": "Iaith",
+      "description": "Dewiswch eich dewis iaith"
+    },
+    "about": {
+      "group": "Ynghylch"
+    },
+    "feedback": "Anfon adborth",
+    "contribute": {
+      "prefix": "Cyfrannu ymlaen",
+      "link": "GitHub",
+      "suffix": "i helpu i wella'r gyfrifiannell hon"
+    },
+    "links": {
+      "repository": "Ystorfa prosiect",
+      "readme": "README",
+      "license": "Trwydded MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Safonol",
+      "subtitle": "Gwerthusiad ar unwaith clasurol"
+    },
+    "scientific": {
+      "label": "Gwyddonol",
+      "subtitle": "Gweithredwyr, swyddogaethau, a chymorth mynegiant"
+    },
+    "graphing": {
+      "label": "Graffio",
+      "subtitle": "Plotiwch fynegiad syml ar awyren cartesaidd"
+    },
+    "programmer": {
+      "label": "Rhaglennydd",
+      "subtitle": "Mathemateg cyfanrif gyda throsi sylfaen"
+    },
+    "date": {
+      "label": "Cyfrifiad dyddiad",
+      "subtitle": "Dod o hyd i hyd a dyddiadau sifft"
+    },
+    "currency": {
+      "label": "Arian cyfred",
+      "subtitle": "Trosi cyfraddau cyfnewid ffug"
+    },
+    "volume": {
+      "label": "Cyfrol",
+      "subtitle": "Trosi mesuriadau cyfaint"
+    },
+    "length": {
+      "label": "Hyd",
+      "subtitle": "Trosi unedau pellter a hyd"
+    },
+    "weight": {
+      "label": "Pwysau a Màs",
+      "subtitle": "Trosi unedau pwysau a màs"
+    },
+    "temperature": {
+      "label": "Tymheredd",
+      "subtitle": "Trosi graddfeydd tymheredd"
+    },
+    "energy": {
+      "label": "Ynni",
+      "subtitle": "Trosi mesuriadau ynni"
+    },
+    "area": {
+      "label": "Ardal",
+      "subtitle": "Trosi mesuriadau arwynebedd"
+    },
+    "speed": {
+      "label": "Cyflymder",
+      "subtitle": "Trosi mesuriadau cyflymder"
+    },
+    "time": {
+      "label": "Amser",
+      "subtitle": "Trosi mesuriadau amser"
+    },
+    "power": {
+      "label": "Pŵer",
+      "subtitle": "Trosi mesuriadau pŵer"
+    },
+    "data": {
+      "label": "Data",
+      "subtitle": "Trosi unedau storio digidol"
+    },
+    "pressure": {
+      "label": "Pwysau",
+      "subtitle": "Trosi unedau pwysau"
+    },
+    "angle": {
+      "label": "Ongl",
+      "subtitle": "Trosi mesuriadau ongl"
+    },
+    "settings": {
+      "label": "Gosodiadau",
+      "subtitle": "Gwybodaeth ymddangosiad ac ap"
+    }
+  },
+  "categories": {
+    "Currency": "Arian cyfred",
+    "Volume": "Cyfrol",
+    "Length": "Hyd",
+    "Mass": "Torfol",
+    "Temperature": "Tymheredd",
+    "Energy": "Ynni",
+    "Area": "Ardal",
+    "Speed": "Cyflymder",
+    "Time": "Amser",
+    "Power": "Pŵer",
+    "Data": "Data",
+    "Pressure": "Pwysau",
+    "Angle": "Ongl"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanometrau",
+      "Microns": "Meicronau",
+      "Millimeters": "Milimetrau",
+      "Centimeters": "Centimetrau",
+      "Meters": "Mesuryddion",
+      "Kilometers": "Cilomedrau",
+      "Inches": "modfeddi",
+      "Feet": "Traedfedd",
+      "Yards": "llathenni",
+      "Miles": "Milltir",
+      "Nautical miles": "Milltiroedd morol",
+      "paperclips": "clipiau papur",
+      "hands": "dwylo",
+      "jumbo jets": "jetiau jumbo",
+      "Carats": "Carats",
+      "Milligrams": "Miligramau",
+      "Centigrams": "Centigram",
+      "Decigrams": "Degigramau",
+      "Grams": "Gramiau",
+      "Dekagrams": "Dekagramau",
+      "Hectograms": "Hectogramau",
+      "Kilograms": "Cilogramau",
+      "Metric tonnes": "Tunelli metrig",
+      "Ounces": "Onsiau",
+      "Pounds": "Punnoedd",
+      "Stone": "Carreg",
+      "Short tons (US)": "Tunnell fer (UDA)",
+      "Long tons (UK)": "Tunnell hir (DU)",
+      "snowflakes": "plu eira",
+      "soccer balls": "peli pêl-droed",
+      "elephants": "eliffantod",
+      "whales": "morfilod",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mililitr",
+      "Cubic centimeters": "Centimetrau ciwbig",
+      "Liters": "Litrau",
+      "Cubic meters": "Mesuryddion ciwbig",
+      "Teaspoons (US)": "Llwyau te (UDA)",
+      "Tablespoons (US)": "Llwy fwrdd (UDA)",
+      "Fluid ounces (US)": "owns hylif (UD)",
+      "Cups (US)": "Cwpanau (UDA)",
+      "Pints (US)": "Peintiau (UD)",
+      "Quarts (US)": "Chwartiau (UD)",
+      "Gallons (US)": "Galwyni (UD)",
+      "Cubic inches": "modfeddi ciwbig",
+      "Cubic feet": "Traed ciwbig",
+      "Cubic yards": "Ierdydd ciwbig",
+      "Teaspoons (UK)": "Llwyau te (DU)",
+      "Tablespoons (UK)": "Llwy fwrdd (DU)",
+      "Fluid ounces (UK)": "owns hylif (DU)",
+      "Pints (UK)": "Peintiau (DU)",
+      "Quarts (UK)": "Chwartiau (DU)",
+      "Gallons (UK)": "galons (DU)",
+      "coffee cups": "cwpanau coffi",
+      "bathtubs": "tybiau ymolchi",
+      "swimming pools": "pyllau nofio",
+      "Square millimeters": "Milimetrau sgwâr",
+      "Square centimeters": "Centimetrau sgwâr",
+      "Square meters": "Mesuryddion sgwâr",
+      "Hectares": "Hectarau",
+      "Square kilometers": "Cilomedrau sgwâr",
+      "Square inches": "Mofeddi sgwâr",
+      "Square feet": "Traedfedd sgwâr",
+      "Square yards": "Iardenni sgwâr",
+      "Acres": "Erw",
+      "Square miles": "Milltir sgwâr",
+      "sheets of paper": "dalen o bapur",
+      "soccer fields": "meysydd pêl-droed",
+      "castles": "cestyll",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Centimetrau yr eiliad",
+      "Meters per second": "Mesuryddion yr eiliad",
+      "Kilometers per hour": "Cilomedrau yr awr",
+      "Feet per second": "Traed yr eiliad",
+      "Miles per hour": "Milltir yr awr",
+      "Knots": "Clymau",
+      "Mach": "Mach",
+      "turtles": "crwbanod",
+      "horses": "ceffylau",
+      "jets": "jet",
+      "Watts": "Watt",
+      "Kilowatts": "Cilowat",
+      "Horsepower (US)": "Marchnerth (UD)",
+      "Foot-pounds/minute": "Puntiau troed/munud",
+      "BTUs/minute": "BTUs/munud",
+      "light bulbs": "bylbiau golau",
+      "train engines": "peiriannau trên",
+      "Thermal calories": "Calorïau thermol",
+      "Food calories": "Calorïau bwyd",
+      "British thermal units": "Unedau thermol Prydeinig",
+      "Kilojoules": "Cilojoules",
+      "Kilowatt-hours": "Cilowat-oriau",
+      "Electron volts": "Foltiau electron",
+      "Joules": "Joules",
+      "Foot-pounds": "Puntiau troed",
+      "batteries": "batris",
+      "bananas": "bananas",
+      "slices of cake": "dafelli o gacen",
+      "Bits": "Didiau",
+      "Nibble": "Debynnu",
+      "Bytes": "Beit",
+      "Kilobits": "Cilobitau",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "Cilobytes",
+      "Kibibytes": "Cibibeit",
+      "Megabits": "Megabitau",
+      "Mebibits": "Mebibits",
+      "Megabytes": "Megabeit",
+      "Mebibytes": "Mebibytes",
+      "Gigabits": "Gigabits",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Gigabeit",
+      "Gibibytes": "Gibibeit",
+      "Terabits": "Terabitau",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabytes",
+      "Tebibytes": "Tebibytes",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibit",
+      "Petabytes": "Petabeit",
+      "Pebibytes": "Pibytes",
+      "Exabits": "Esgyniadau",
+      "Exbibits": "Arddangosion",
+      "Exabytes": "Exabytes",
+      "Exbibytes": "Arddangosfa",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebibit",
+      "Zetabytes": "Zetabytes",
+      "Zebibytes": "Zebibit",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibit",
+      "Yottabytes": "Yottabytes",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "disgiau hyblyg",
+      "CDs": "CDs",
+      "DVDs": "DVDs",
+      "Atmospheres": "Awyrgylchoedd",
+      "Bars": "Bariau",
+      "Kilopascals": "Cilopascals",
+      "Millimeters of mercury": "Millimeters of mercury",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Punnoedd y fodfedd sgwâr",
+      "Degrees": "Graddau",
+      "Radians": "Radiaid",
+      "Gradians": "Graddiaid",
+      "Microseconds": "Microsecondau",
+      "Milliseconds": "Milieiliadau",
+      "Seconds": "Eiliadau",
+      "Minutes": "Cofnodion",
+      "Hours": "Oriau",
+      "Days": "Diwrnodau",
+      "Weeks": "Wythnosau",
+      "Years": "Blynyddoedd"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Doler yr Unol Daleithiau",
+      "Euro": "Ewro",
+      "British Pound": "Punt Brydeinig",
+      "Japanese Yen": "Yen Japaneaidd",
+      "Canadian Dollar": "Doler Canada",
+      "Australian Dollar": "Doler Awstralia",
+      "Brazilian Real": "Brasil Real",
+      "Chilean Peso": "Peso Chile",
+      "Chinese Yuan": "Yuan Tsieineaidd",
+      "Colombian Peso": "Peso Colombia",
+      "Danish Krone": "Crone Denmarc",
+      "Egyptian Pound": "Punt Aifft",
+      "Hong Kong Dollar": "Doler Hong Kong",
+      "Indian Rupee": "Rwpi Indiaidd",
+      "Kenyan Shilling": "Swllt Kenya",
+      "Mexican Peso": "Peso Mecsicanaidd",
+      "Nigerian Naira": "Naira Nigeria",
+      "New Zealand Dollar": "Doler Seland Newydd",
+      "Norwegian Krone": "Cronog Norwy",
+      "Philippine Piso": "Piso Philipinaidd",
+      "Polish Zloty": "Pwyleg Zloty",
+      "Qatari Riyal": "Qatari Riyal",
+      "Saudi Riyal": "Saudi Riyal",
+      "Singapore Dollar": "Doler Singapôr",
+      "South African Rand": "Rand De Affrica",
+      "South Korean Won": "Won De Corea",
+      "Swedish Krona": "Crona Sweden",
+      "Swiss Franc": "Ffranc y Swistir",
+      "Thai Baht": "Baht Thai",
+      "Turkish Lira": "Lira Twrcaidd",
+      "Turkmenistani Manat": "Manat Tyrcmenistan",
+      "Ugandan Shilling": "Swllt Uganda",
+      "Ukrainian Hryvnia": "Hryvnia Wcreineg",
+      "UAE Dirham": "UAE Dirham",
+      "Uruguayan Peso": "Peso Uruguayan",
+      "Uzbekistani Som": "Som Uzbekistani",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Bolívar Soberano o Feniselaidd",
+      "Vietnamese Dong": "Fietnameg Dong",
+      "Yemeni Rial": "Rheol Yemen"
+    },
+    "labels": {
+      "United States - Dollar": "Unol Daleithiau - Doler",
+      "Europe - Euro": "Ewrop - Ewro",
+      "United Kingdom - Pound": "Deyrnas Unedig - Punt",
+      "Japan - Yen": "Japan - Yen",
+      "Canada - Dollar": "Canada - Doler",
+      "Australia - Dollar": "Awstralia - Doler",
+      "Brazil - Real": "Brasil - Go iawn",
+      "Chile - Peso": "Chile - Peso",
+      "China - Yuan Renminbi": "Tsieina - Yuan Renminbi",
+      "Colombia - Peso": "Colombia - Peso",
+      "Denmark - Krone": "Denmarc - Krone",
+      "Egypt - Pound": "Yr Aifft - Bunt",
+      "Hong Kong SAR - Dollar": "SAR Hong Kong - Doler",
+      "India - Rupee": "India - Rwpi",
+      "Kenya - Shilling": "Cenya - Swllt",
+      "Mexico - Peso": "Mecsico - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "Seland Newydd - Doler",
+      "Norway - Krone": "Norwy - Krone",
+      "Philippines - Piso": "Philipinas - Piso",
+      "Poland - Zloty": "Gwlad Pwyl - Zloty",
+      "Qatar - Riyal": "Catar - Riyal",
+      "Saudi Arabia - Riyal": "Saudi Arabia - Riyal",
+      "Singapore - Dollar": "Singapôr - Doler",
+      "South Africa - Rand": "De Affrica - Rand",
+      "South Korea - Won": "De Corea - Wedi ennill",
+      "Sweden - Krona": "Sweden - Krona",
+      "Switzerland - Franc": "Y Swistir - Ffranc",
+      "Thailand - Baht": "Gwlad Thai - Baht",
+      "Turkey - Lira": "Twrci - Lira",
+      "Turkmenistan - Manat": "Twrcmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Swllt",
+      "Ukraine - Hryvnia": "Wcráin - Hryvnia",
+      "United Arab Emirates - Dirham": "Emiradau Arabaidd Unedig - Dirham",
+      "Uruguay - Peso": "Urwgwai - Peso",
+      "Uzbekistan - Som": "Wsbecistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Fietnam - Dong",
+      "Yemen - Rial": "Yemen - Rial"
+    }
+  }
+}

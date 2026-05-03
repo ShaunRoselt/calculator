@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Calculator",
+    "name": "Calculator"
+  },
+  "common": {
+    "back": "Înapoi",
+    "backspace": "Backspace",
+    "closeSidePanel": "Închide panoul"
+  },
+  "converter": {
+    "unitConverter": "Convertor de unități",
+    "title": "Convertoare de unități",
+    "builtInCollections": "Colecții încorporate",
+    "category": "Categorie",
+    "from": "De la",
+    "to": "Către",
+    "inputValue": "Valoare de convertit",
+    "convertedValue": "Valoare convertită",
+    "swapUnits": "Schimbați unitățile",
+    "keypad": "Tastatura convertorului",
+    "unit": "unitate",
+    "unitOptions": "opțiuni de unitate",
+    "currency": {
+      "updatingRates": "Se actualizează tarifele...",
+      "updateRates": "Actualizează tarife",
+      "keypad": "Tastatură valutară",
+      "currency": "monedă",
+      "options": "opțiuni de monedă",
+      "updated": "Actualizat {timestamp}",
+      "status": {
+        "mockNote": "Rate de referință simulate pentru demonstrația aplicației autonome.",
+        "fetching": "Se preiau cele mai recente rate de referință USD...",
+        "liveRatesLoaded": "Rate live încărcate din ExchangeRate-API.",
+        "liveUpdateUnavailable": "Actualizare live indisponibilă. Tarife demo actualizate la nivel local."
+      }
+    },
+    "aboutEqualTo": "Aproximativ egal cu"
+  },
+  "errors": {
+    "invalidInput": "Intrare nevalidă",
+    "cannotDivideByZero": "Nu se poate împărți la zero",
+    "cannotModuloByZero": "Nu se poate modula cu zero",
+    "invalidProgrammerOperation": "Operațiune nevalidă",
+    "overflow": "Rezultatul prea mare"
+  },
+  "date": {
+    "calculationMode": "Mod de calcul",
+    "from": "De la",
+    "to": "Către",
+    "results": {
+      "difference": "Diferență",
+      "sameDates": "Aceleași date",
+      "date": "Data"
+    },
+    "calculationModeOptions": "Opțiuni pentru modul de calcul",
+    "mode": {
+      "difference": "Diferență",
+      "shift": "Shift"
+    },
+    "operation": "Operare",
+    "add": "Adăugați",
+    "subtract": "Scăderea",
+    "years": "ani",
+    "months": "Luni",
+    "days": "Zile",
+    "chooseDate": "Alegeți data",
+    "previousMonth": "Luna anterioară",
+    "nextMonth": "Luna viitoare",
+    "duration": {
+      "year": {
+        "one": "{count} an",
+        "other": "{count} ani"
+      },
+      "month": {
+        "one": "{count} lună",
+        "other": "{count} luni"
+      },
+      "week": {
+        "one": "{count} săptămână",
+        "other": "{count} săptămâni"
+      },
+      "day": {
+        "one": "{count} zi",
+        "other": "{count} zile"
+      }
+    },
+    "history": {
+      "differenceBetween": "Diferența dintre {from} și {to}",
+      "addTo": "Adaugă {duration} la {date}",
+      "subtractFrom": "Scădeți {duration} din {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Verificați expresia evidențiată",
+    "enterExpression": "Introduceți o expresie",
+    "canvas": "Pânză grafică",
+    "stopTracing": "Opriți urmărirea",
+    "startTracing": "Începeți urmărirea",
+    "share": "Distribuie",
+    "options": "Opțiuni",
+    "zoomIn": "Măriți",
+    "zoomInLabel": "Măriți",
+    "zoomOut": "Reduceți",
+    "zoomOutLabel": "Reduceți",
+    "refreshViewAutomatically": "Actualizează automat vizualizarea",
+    "view": "Vizualizare",
+    "expressions": "Expresii",
+    "mobileView": "Vizualizare mobil",
+    "showGraph": "Afișează graficul",
+    "showExpressions": "Afișați expresiile",
+    "backToFunctionList": "Înapoi la lista de funcții",
+    "window": "Fereastră",
+    "resetView": "Resetați vizualizarea",
+    "units": "Unități",
+    "radians": "Radiani",
+    "degrees": "Grade",
+    "gradians": "Gradiani",
+    "lineThickness": "Grosimea liniei",
+    "theme": "Temă",
+    "alwaysLight": "Întotdeauna ușor",
+    "matchAppTheme": "Potriviți tema aplicației",
+    "groups": {
+      "inequalities": "Inegalități",
+      "trigonometry": "Trigonometrie",
+      "function": "Funcție"
+    },
+    "functions": "Funcții",
+    "showEquation": "Afișați ecuația",
+    "hideEquation": "Ascunde ecuația",
+    "lineOptions": "Opțiuni de linie",
+    "color": "Culoare",
+    "style": "Stil",
+    "analysis": {
+      "title": "Analiză",
+      "domain": "Domeniu",
+      "range": "Interval",
+      "xIntercept": "interceptarea x",
+      "yIntercept": "y-intercept",
+      "minima": "Minim",
+      "maxima": "Maxima",
+      "inflectionPoints": "Puncte de inflexiune",
+      "verticalAsymptotes": "Asimptote verticale",
+      "horizontalAsymptotes": "Asimptote orizontale",
+      "obliqueAsymptotes": "Asimptote oblice",
+      "parity": "Paritate",
+      "period": "Perioada",
+      "monotonicity": "Monotonitate",
+      "domainNone": "Fără restricții de domeniu",
+      "rangeNone": "Fără restricții de interval",
+      "xInterceptNone": "Fără interceptări x",
+      "yInterceptNone": "Fără interceptări Y",
+      "minimaNone": "Fără minime",
+      "maximaNone": "Fără maxime",
+      "inflectionNone": "Fără puncte de inflexiune",
+      "verticalAsymptotesNone": "Fără asimptote verticale",
+      "horizontalAsymptotesNone": "Fără asimptote orizontale",
+      "obliqueAsymptotesNone": "Fără asimptote oblice",
+      "parityUnknown": "Necunoscut",
+      "parityOdd": "Impar",
+      "parityEven": "Chiar",
+      "parityNeither": "Nici unul",
+      "periodicityUnknown": "Necunoscut",
+      "periodicityNotPeriodic": "Nu periodic",
+      "monotonicityConstant": "Constant",
+      "monotonicityIncreasing": "În creștere",
+      "monotonicityDecreasing": "În scădere",
+      "monotonicityUnknown": "Necunoscut",
+      "monotonicityError": "Nu se poate determina",
+      "featureTooComplexPlural": "Prea complex pentru a fi analizat",
+      "analysisCouldNotBePerformed": "Analiza nu a putut fi efectuată",
+      "analysisNotSupported": "Analiza nu este acceptată",
+      "variableIsNotX": "Variabila nu este x"
+    },
+    "plottingExpressions": "Plotarea expresiilor {count}",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Selectați expresia {index}",
+    "expressionIndex": "Expresie {index}",
+    "analyzeFunction": "Analizați funcția",
+    "changeEquationStyle": "Schimbați stilul ecuației",
+    "removeEquation": "Eliminați ecuația",
+    "lineStyle": {
+      "solid": "Stil de linie continuă",
+      "dash": "Stil de linie întreruptă",
+      "dot": "Stil de linie cu puncte"
+    }
+  },
+  "history": {
+    "empty": "Istoricul este gol",
+    "clearAll": "Ștergeți tot",
+    "clear": "Ștergeți istoricul",
+    "title": "Istoric",
+    "andMemory": "Istoric și memorie",
+    "aria": {
+      "historyPanel": "Panou Istoric",
+      "historyAndMemoryPanel": "Panou Istoric și memorie"
+    },
+    "closeFlyout": "Închideți istoricul",
+    "openFlyout": "Deschideți istoricul"
+  },
+  "memory": {
+    "empty": "Memoria este goală",
+    "clearItem": "Șterge elementul",
+    "addCurrentValue": "Adăugați valoarea curentă",
+    "subtractCurrentValue": "Scădeți valoarea curentă",
+    "clearAll": "Ștergeți totul",
+    "clear": "Ștergeți memoria",
+    "title": "Memorie",
+    "controls": "Comenzi de memorie",
+    "tooltips": {
+      "clearAll": "Șterge toată memoria",
+      "recall": "Rechemare din memorie",
+      "add": "Adaugă la memorie",
+      "subtract": "Scădeți din memorie",
+      "store": "Pastrați în memorie"
+    },
+    "recallValue": "Rechemare memorie {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigație",
+      "closeNavigation": "Închideți navigarea",
+      "openNavigation": "Deschideți navigarea"
+    },
+    "groups": {
+      "calculator": "Calculator",
+      "converter": "Convertor"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit flip panel",
+    "baseReadouts": "Citirile de bază",
+    "surfaceMode": "Mod suprafață",
+    "fullKeypad": "Tastatură completă",
+    "showKeypad": "Afișează tastatura",
+    "bitTogglingKeypad": "Tastatură cu comutare de biți",
+    "showBitView": "Afișează vizualizarea biților",
+    "wordSize": "Dimensiunea cuvântului",
+    "bitwise": "Pe bit",
+    "bitShift": "Deplasare biți"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometrie",
+      "function": "Funcție",
+      "functionsAria": "Funcții",
+      "trigonometricFunctionsAria": "Funcții trigonometrice",
+      "angleUnit": "Unitate unghiulară {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Aspect",
+      "themeTitle": "Temă",
+      "themeDescription": "Alegeți o schemă de culori",
+      "light": "Lumină",
+      "dark": "Întuneric",
+      "blue": "Albastru",
+      "green": "Verde",
+      "system": "Sistem"
+    },
+    "language": {
+      "group": "Limba",
+      "title": "Limba",
+      "description": "Alegeți limba preferată"
+    },
+    "about": {
+      "group": "Despre"
+    },
+    "feedback": "Trimite feedback",
+    "contribute": {
+      "prefix": "Contribuiți la",
+      "link": "GitHub",
+      "suffix": "pentru a ajuta la îmbunătățirea acestui calculator"
+    },
+    "links": {
+      "repository": "Arhivă de proiect",
+      "readme": "CITIȚI-MĂ",
+      "license": "Licență MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standard",
+      "subtitle": "Evaluare imediată clasică"
+    },
+    "scientific": {
+      "label": "științific",
+      "subtitle": "Compatibilitate cu operatori, funcții și expresii"
+    },
+    "graphing": {
+      "label": "Reprezentare grafică",
+      "subtitle": "Tratați o expresie simplă pe un plan cartezian"
+    },
+    "programmer": {
+      "label": "Programator",
+      "subtitle": "Matematică întreg cu conversie de bază"
+    },
+    "date": {
+      "label": "Calcul datei",
+      "subtitle": "Găsiți duratele și datele schimburilor"
+    },
+    "currency": {
+      "label": "Moneda",
+      "subtitle": "Convertiți ratele de schimb simulate"
+    },
+    "volume": {
+      "label": "Volum",
+      "subtitle": "Convertiți măsurătorile de volum"
+    },
+    "length": {
+      "label": "Lungime",
+      "subtitle": "Conversie unități de distanță și lungime"
+    },
+    "weight": {
+      "label": "Greutate și masă",
+      "subtitle": "Convertiți unitățile de greutate și de masă"
+    },
+    "temperature": {
+      "label": "Temperatura",
+      "subtitle": "Convertiți scalele de temperatură"
+    },
+    "energy": {
+      "label": "Energie",
+      "subtitle": "Convertiți măsurătorile de energie"
+    },
+    "area": {
+      "label": "Zona",
+      "subtitle": "Convertiți măsurătorile suprafeței"
+    },
+    "speed": {
+      "label": "Viteză",
+      "subtitle": "Convertiți măsurătorile vitezei"
+    },
+    "time": {
+      "label": "Ora",
+      "subtitle": "Convertiți măsurătorile de timp"
+    },
+    "power": {
+      "label": "Putere",
+      "subtitle": "Convertiți măsurătorile de putere"
+    },
+    "data": {
+      "label": "Date",
+      "subtitle": "Conversie unități de stocare digitală"
+    },
+    "pressure": {
+      "label": "Presiune",
+      "subtitle": "Convertiți unitățile de presiune"
+    },
+    "angle": {
+      "label": "Unghi",
+      "subtitle": "Convertiți măsurătorile unghiului"
+    },
+    "settings": {
+      "label": "Setări",
+      "subtitle": "Aspect și informații despre aplicație"
+    }
+  },
+  "categories": {
+    "Currency": "Monedă",
+    "Volume": "Volum",
+    "Length": "Lungime",
+    "Mass": "Lisa",
+    "Temperature": "Temperatura",
+    "Energy": "Energie",
+    "Area": "Zona",
+    "Speed": "Viteză",
+    "Time": "Ora",
+    "Power": "Putere",
+    "Data": "Date",
+    "Pressure": "Presiune",
+    "Angle": "Unghi"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanometre",
+      "Microns": "Microni",
+      "Millimeters": "Milimetri",
+      "Centimeters": "centimetri",
+      "Meters": "Metri",
+      "Kilometers": "Kilometri",
+      "Inches": "inchi",
+      "Feet": "Picioare",
+      "Yards": "yarzi",
+      "Miles": "Mile",
+      "Nautical miles": "Mile marine",
+      "paperclips": "cleme de hârtie",
+      "hands": "mâini",
+      "jumbo jets": "avioane jumbo",
+      "Carats": "Carate",
+      "Milligrams": "Miligrame",
+      "Centigrams": "Centigrame",
+      "Decigrams": "Decigrame",
+      "Grams": "grame",
+      "Dekagrams": "Dekagrame",
+      "Hectograms": "Hectograme",
+      "Kilograms": "kilograme",
+      "Metric tonnes": "tone metrice",
+      "Ounces": "Uncii",
+      "Pounds": "lire",
+      "Stone": "Piatră",
+      "Short tons (US)": "Tone scurte (SUA)",
+      "Long tons (UK)": "tone lungi (Marea Britanie)",
+      "snowflakes": "fulgi de zăpadă",
+      "soccer balls": "mingi de fotbal",
+      "elephants": "elefanți",
+      "whales": "balenele",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mililitri",
+      "Cubic centimeters": "centimetri cubi",
+      "Liters": "Litri",
+      "Cubic meters": "Metri cubi",
+      "Teaspoons (US)": "Lingurițe (SUA)",
+      "Tablespoons (US)": "Linguri (SUA)",
+      "Fluid ounces (US)": "Uncii fluide (SUA)",
+      "Cups (US)": "Cupe (SUA)",
+      "Pints (US)": "Calte (SUA)",
+      "Quarts (US)": "Strituri (SUA)",
+      "Gallons (US)": "galoane (SUA)",
+      "Cubic inches": "Inci cubi",
+      "Cubic feet": "Picioare cubice",
+      "Cubic yards": "Yarzi cubi",
+      "Teaspoons (UK)": "Lingurițe (Marea Britanie)",
+      "Tablespoons (UK)": "linguri (Marea Britanie)",
+      "Fluid ounces (UK)": "Uncii lichide (Marea Britanie)",
+      "Pints (UK)": "Pants (Marea Britanie)",
+      "Quarts (UK)": "Quarts (Marea Britanie)",
+      "Gallons (UK)": "Galoane (Marea Britanie)",
+      "coffee cups": "cești de cafea",
+      "bathtubs": "căzi",
+      "swimming pools": "piscine",
+      "Square millimeters": "Milimetri pătrați",
+      "Square centimeters": "centimetri pătrați",
+      "Square meters": "Metri pătrați",
+      "Hectares": "Hectare",
+      "Square kilometers": "Kilometri pătrați",
+      "Square inches": "inchi pătrați",
+      "Square feet": "Picioare pătrate",
+      "Square yards": "Yarzi pătrate",
+      "Acres": "Acri",
+      "Square miles": "mile pătrate",
+      "sheets of paper": "coli de hârtie",
+      "soccer fields": "terenuri de fotbal",
+      "castles": "castele",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "centimetri pe secundă",
+      "Meters per second": "Metri pe secundă",
+      "Kilometers per hour": "Kilometri pe oră",
+      "Feet per second": "Picioare pe secundă",
+      "Miles per hour": "mile pe oră",
+      "Knots": "Noduri",
+      "Mach": "Mach",
+      "turtles": "broaște țestoase",
+      "horses": "cai",
+      "jets": "avioane",
+      "Watts": "Wați",
+      "Kilowatts": "Kilowați",
+      "Horsepower (US)": "Cai putere (SUA)",
+      "Foot-pounds/minute": "picior-lire/minut",
+      "BTUs/minute": "BTU/minut",
+      "light bulbs": "becuri",
+      "train engines": "motoare de tren",
+      "Thermal calories": "calorii termice",
+      "Food calories": "Calorii din alimente",
+      "British thermal units": "Unități termice britanice",
+      "Kilojoules": "Kilojoule",
+      "Kilowatt-hours": "Kilowați-oră",
+      "Electron volts": "Electron volți",
+      "Joules": "Jouli",
+      "Foot-pounds": "picior-lire",
+      "batteries": "baterii",
+      "bananas": "banane",
+      "slices of cake": "felii de tort",
+      "Bits": "Biți",
+      "Nibble": "Ront",
+      "Bytes": "octeți",
+      "Kilobits": "kilobiți",
+      "Kibibits": "Kibibiți",
+      "Kilobytes": "Kiloocteți",
+      "Kibibytes": "Kibibytes",
+      "Megabits": "Megabiți",
+      "Mebibits": "Mebibits",
+      "Megabytes": "Megaocteți",
+      "Mebibytes": "Mebibytes",
+      "Gigabits": "Gigabiți",
+      "Gibibits": "Gibibiți",
+      "Gigabytes": "Gigaocteți",
+      "Gibibytes": "Gibibytes",
+      "Terabits": "Terabiți",
+      "Tebibits": "Tebibiți",
+      "Terabytes": "Teraocteți",
+      "Tebibytes": "Tebibytes",
+      "Petabits": "Petabiți",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petaocteți",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Exabits",
+      "Exbibits": "Expoziții",
+      "Exabytes": "Exaocteți",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabiți",
+      "Zebibits": "Zebibiți",
+      "Zetabytes": "Zetaocteți",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottaocteți",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "dischete",
+      "CDs": "CD-uri",
+      "DVDs": "DVD-uri",
+      "Atmospheres": "Atmosfere",
+      "Bars": "Baruri",
+      "Kilopascals": "kilopascali",
+      "Millimeters of mercury": "Millimeters of mercury",
+      "Pascals": "Pascali",
+      "Pounds per square inch": "lire pe inch pătrat",
+      "Degrees": "Grade",
+      "Radians": "Radiani",
+      "Gradians": "Gradiani",
+      "Microseconds": "Microsecunde",
+      "Milliseconds": "Milisecunde",
+      "Seconds": "Secunde",
+      "Minutes": "Minute",
+      "Hours": "Ore",
+      "Days": "Zile",
+      "Weeks": "Săptămâni",
+      "Years": "ani"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "dolar american",
+      "Euro": "Euro",
+      "British Pound": "liră sterlină",
+      "Japanese Yen": "Yenul japonez",
+      "Canadian Dollar": "Dolar canadian",
+      "Australian Dollar": "Dolar australian",
+      "Brazilian Real": "Real brazilian",
+      "Chilean Peso": "Peso chilian",
+      "Chinese Yuan": "Yuan chinezesc",
+      "Colombian Peso": "Peso columbian",
+      "Danish Krone": "Coroa daneză",
+      "Egyptian Pound": "liră egipteană",
+      "Hong Kong Dollar": "Dolar din Hong Kong",
+      "Indian Rupee": "Rupia indiană",
+      "Kenyan Shilling": "Șling kenyan",
+      "Mexican Peso": "Peso mexican",
+      "Nigerian Naira": "Naira nigeriană",
+      "New Zealand Dollar": "Dolar neozeelandez",
+      "Norwegian Krone": "Coroană norvegiană",
+      "Philippine Piso": "Filippine Piso",
+      "Polish Zloty": "Zloty polonez",
+      "Qatari Riyal": "Rialul Qatari",
+      "Saudi Riyal": "Rial saudit",
+      "Singapore Dollar": "Dolar din Singapore",
+      "South African Rand": "Rand sud-african",
+      "South Korean Won": "Won sud-coreean",
+      "Swedish Krona": "Coroană suedeză",
+      "Swiss Franc": "Franc elvețian",
+      "Thai Baht": "Baht thailandez",
+      "Turkish Lira": "liră turcească",
+      "Turkmenistani Manat": "Manat turkmenistan",
+      "Ugandan Shilling": "Șling ugandez",
+      "Ukrainian Hryvnia": "Hryvnia ucraineană",
+      "UAE Dirham": "Dirham din Emiratele Arabe Unite",
+      "Uruguayan Peso": "Peso uruguayan",
+      "Uzbekistani Som": "Uzbekistani Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezuelanul Bolívar Soberano",
+      "Vietnamese Dong": "dong vietnamez",
+      "Yemeni Rial": "Rial yemenit"
+    },
+    "labels": {
+      "United States - Dollar": "Statele Unite ale Americii - Dolar",
+      "Europe - Euro": "Europa - Euro",
+      "United Kingdom - Pound": "Regatul Unit - Liră",
+      "Japan - Yen": "Japonia - Yen",
+      "Canada - Dollar": "Canada - Dolar",
+      "Australia - Dollar": "Australia - dolar",
+      "Brazil - Real": "Brazilia - Real",
+      "Chile - Peso": "Chile - Peso",
+      "China - Yuan Renminbi": "China - Yuan Renminbi",
+      "Colombia - Peso": "Colombia - Peso",
+      "Denmark - Krone": "Danemarca - Krone",
+      "Egypt - Pound": "Egipt - Liră",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - dolar",
+      "India - Rupee": "India - Rupie",
+      "Kenya - Shilling": "Kenia - șiling",
+      "Mexico - Peso": "Mexic - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "Noua Zeelandă - dolar",
+      "Norway - Krone": "Norvegia - Krone",
+      "Philippines - Piso": "Filipine - Piso",
+      "Poland - Zloty": "Polonia - Zloți",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Arabia Saudită - Riyal",
+      "Singapore - Dollar": "Singapor - dolar",
+      "South Africa - Rand": "Africa de Sud - Rand",
+      "South Korea - Won": "Coreea de Sud - A câștigat",
+      "Sweden - Krona": "Suedia - Coroană",
+      "Switzerland - Franc": "Elveția - Franc",
+      "Thailand - Baht": "Thailanda - Baht",
+      "Turkey - Lira": "Turcia - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Shilling",
+      "Ukraine - Hryvnia": "Ucraina - Hryvnia",
+      "United Arab Emirates - Dirham": "Emiratele Arabe Unite - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Uzbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemen - Rial"
+    }
+  }
+}

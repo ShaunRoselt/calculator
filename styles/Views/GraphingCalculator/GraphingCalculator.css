@@ -114,27 +114,8 @@
   margin-top: 16px;
 }
 
-.graph-settings-theme-group {
-  margin: 16px 0 0;
-  padding: 0;
-  border: 0;
-}
-
-.graph-settings-theme-group legend {
-  margin-bottom: 8px;
-  font-size: 0.86rem;
-  color: var(--text);
-}
-
-.graph-settings-radio-option {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-.graph-settings-radio-option input {
-  accent-color: var(--accent);
+.graph-settings-theme-select {
+  margin-top: 16px;
 }
 
 .graph-canvas {

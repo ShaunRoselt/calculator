@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kalkolatur",
+    "name": "Kalkolatur"
+  },
+  "common": {
+    "back": "Lura",
+    "backspace": "Backspace",
+    "closeSidePanel": "Agħlaq il-pannell"
+  },
+  "converter": {
+    "unitConverter": "Konvertitur tal-Unità",
+    "title": "Konvertituri tal-unitajiet",
+    "builtInCollections": "Kollezzjonijiet inkorporati",
+    "category": "Kategorija",
+    "from": "Minn",
+    "to": "Li",
+    "inputValue": "Valur li trid tikkonverti",
+    "convertedValue": "Valur konvertit",
+    "swapUnits": "Ibdel l-unitajiet",
+    "keypad": "Tastiera tal-konvertitur",
+    "unit": "unità",
+    "unitOptions": "għażliet tal-unità",
+    "currency": {
+      "updatingRates": "Rati taġġorna...",
+      "updateRates": "Rati ta' aġġornament",
+      "keypad": "Tastiera tal-munita",
+      "currency": "munita",
+      "options": "għażliet tal-munita",
+      "updated": "Aġġornat {timestamp}",
+      "status": {
+        "mockNote": "Rati ta' referenza finta għad-demo tal-app waħedha.",
+        "fetching": "Niġbru l-aħħar rati ta' referenza ta' USD...",
+        "liveRatesLoaded": "Rati ħajjin mgħobbija minn ExchangeRate-API.",
+        "liveUpdateUnavailable": "Aġġornament dirett mhux disponibbli. Rati demo aggornati lokalment."
+      }
+    },
+    "aboutEqualTo": "Madwar ugwali għal"
+  },
+  "errors": {
+    "invalidInput": "Input mhux validu",
+    "cannotDivideByZero": "Ma tistax taqsam b'żero",
+    "cannotModuloByZero": "Ma jistax modulo b'żero",
+    "invalidProgrammerOperation": "Operazzjoni mhux valida",
+    "overflow": "Riżultat kbir wisq"
+  },
+  "date": {
+    "calculationMode": "Modalità ta' kalkolu",
+    "from": "Minn",
+    "to": "Li",
+    "results": {
+      "difference": "Differenza",
+      "sameDates": "L-istess dati",
+      "date": "Data"
+    },
+    "calculationModeOptions": "Għażliet tal-modalità ta' kalkolu",
+    "mode": {
+      "difference": "Differenza",
+      "shift": "Shift"
+    },
+    "operation": "Operazzjoni",
+    "add": "Żid",
+    "subtract": "Naqqas",
+    "years": "Snin",
+    "months": "Xhur",
+    "days": "Ġranet",
+    "chooseDate": "Agħżel data",
+    "previousMonth": "Xahar ta' qabel",
+    "nextMonth": "Ix-xahar li ġej",
+    "duration": {
+      "year": {
+        "one": "{count} sena",
+        "other": "{count} snin"
+      },
+      "month": {
+        "one": "{count} xahar",
+        "other": "{count} xhur"
+      },
+      "week": {
+        "one": "{count} ġimgħa",
+        "other": "{count} ġimgħat"
+      },
+      "day": {
+        "one": "{count} jum",
+        "other": "{count} ijiem"
+      }
+    },
+    "history": {
+      "differenceBetween": "Differenza bejn {from} u {to}",
+      "addTo": "Żid {duration} ma' {date}",
+      "subtractFrom": "Naqqas {duration} minn {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Iċċekkja l-espressjoni enfasizzata",
+    "enterExpression": "Daħħal espressjoni",
+    "canvas": "Graff kanvas",
+    "stopTracing": "Waqqaf it-traċċar",
+    "startTracing": "Ibda t-traċċar",
+    "share": "Aqsam",
+    "options": "Għażliet",
+    "zoomIn": "Zum 'il ġewwa",
+    "zoomInLabel": "Zum 'il ġewwa",
+    "zoomOut": "Iżżom barra",
+    "zoomOutLabel": "Iżżom barra",
+    "refreshViewAutomatically": "Aġġorna l-vista awtomatikament",
+    "view": "Ara",
+    "expressions": "Espressjonijiet",
+    "mobileView": "Dehra mobbli",
+    "showGraph": "Uri graff",
+    "showExpressions": "Uri espressjonijiet",
+    "backToFunctionList": "Lura għal-lista tal-funzjonijiet",
+    "window": "Tieqa",
+    "resetView": "Irrisettja l-vista",
+    "units": "Unitajiet",
+    "radians": "Radjani",
+    "degrees": "Gradi",
+    "gradians": "Gradians",
+    "lineThickness": "Ħxuna tal-linja",
+    "theme": "Tema",
+    "alwaysLight": "Dejjem ħafif",
+    "matchAppTheme": "Tqabbel it-tema tal-app",
+    "groups": {
+      "inequalities": "Inugwaljanzi",
+      "trigonometry": "Trigonometrija",
+      "function": "Funzjoni"
+    },
+    "functions": "Funzjonijiet",
+    "showEquation": "Uri l-ekwazzjoni",
+    "hideEquation": "Aħbi l-ekwazzjoni",
+    "lineOptions": "Għażliet tal-linja",
+    "color": "Kulur",
+    "style": "Stil",
+    "analysis": {
+      "title": "Analiżi",
+      "domain": "Dominju",
+      "range": "Medda",
+      "xIntercept": "x-interċettazzjoni",
+      "yIntercept": "y-interċettazzjoni",
+      "minima": "Minimu",
+      "maxima": "Maxima",
+      "inflectionPoints": "Punti ta' inflessjoni",
+      "verticalAsymptotes": "Asintoti vertikali",
+      "horizontalAsymptotes": "Asintoti orizzontali",
+      "obliqueAsymptotes": "Asintoti oblikwi",
+      "parity": "Parità",
+      "period": "Perjodu",
+      "monotonicity": "Monotoniċità",
+      "domainNone": "L-ebda restrizzjoni tad-dominju",
+      "rangeNone": "L-ebda restrizzjoni tal-firxa",
+      "xInterceptNone": "L-ebda interċettazzjoni x",
+      "yInterceptNone": "L-ebda interċettazzjoni y",
+      "minimaNone": "L-ebda minimu",
+      "maximaNone": "Ebda massimi",
+      "inflectionNone": "L-ebda punt ta' inflessjoni",
+      "verticalAsymptotesNone": "L-ebda asintoti vertikali",
+      "horizontalAsymptotesNone": "L-ebda asintoti orizzontali",
+      "obliqueAsymptotesNone": "L-ebda asintoti oblikwu",
+      "parityUnknown": "Mhux magħruf",
+      "parityOdd": "Fard",
+      "parityEven": "Anke",
+      "parityNeither": "La",
+      "periodicityUnknown": "Mhux magħruf",
+      "periodicityNotPeriodic": "Mhux perjodiku",
+      "monotonicityConstant": "Kostanti",
+      "monotonicityIncreasing": "Jiżdied",
+      "monotonicityDecreasing": "Tnaqqas",
+      "monotonicityUnknown": "Mhux magħruf",
+      "monotonicityError": "Ma tistax tiddetermina",
+      "featureTooComplexPlural": "Kumplikata wisq biex tiġi analizzata",
+      "analysisCouldNotBePerformed": "Analiżi ma setgħetx issir",
+      "analysisNotSupported": "Analiżi mhux appoġġjata",
+      "variableIsNotX": "Varjabbli mhix x"
+    },
+    "plottingExpressions": "Plotting {count} espressjonijiet",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Agħżel l-espressjoni {index}",
+    "expressionIndex": "Espressjoni {index}",
+    "analyzeFunction": "Analizza l-funzjoni",
+    "changeEquationStyle": "Ibdel l-istil tal-ekwazzjoni",
+    "removeEquation": "Neħħi l-ekwazzjoni",
+    "lineStyle": {
+      "solid": "Stil ta' linja solida",
+      "dash": "Stil ta' linja dash",
+      "dot": "Stil ta' linja ta' tikek"
+    }
+  },
+  "history": {
+    "empty": "L-istorja hija vojta",
+    "clearAll": "Aħbar kollox",
+    "clear": "Kara l-istorja",
+    "title": "Storja",
+    "andMemory": "Storja u Memorja",
+    "aria": {
+      "historyPanel": "Panew tal-istorja",
+      "historyAndMemoryPanel": "Panew ta' Storja u Memorja"
+    },
+    "closeFlyout": "Agħlaq l-istorja",
+    "openFlyout": "Istorja miftuħa"
+  },
+  "memory": {
+    "empty": "Il-memorja hija vojta",
+    "clearItem": "Kara l-oġġett",
+    "addCurrentValue": "Żid il-valur kurrenti",
+    "subtractCurrentValue": "Naqqas il-valur kurrenti",
+    "clearAll": "Aħbar kollox",
+    "clear": "Kara l-memorja",
+    "title": "Memorja",
+    "controls": "Kontrolli tal-memorja",
+    "tooltips": {
+      "clearAll": "Ħadda l-memorja kollha",
+      "recall": "Fakkar mill-memorja",
+      "add": "Żid mal-memorja",
+      "subtract": "Naqqas mill-memorja",
+      "store": "Aħżen fil-memorja"
+    },
+    "recallValue": "Fakkar memorja {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Navigazzjoni",
+      "closeNavigation": "Agħlaq in-navigazzjoni",
+      "openNavigation": "Navigazzjoni miftuħa"
+    },
+    "groups": {
+      "calculator": "Kalkolatur",
+      "converter": "Konvertitur"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit flip panel",
+    "baseReadouts": "Qari bażi",
+    "surfaceMode": "Modalità tal-wiċċ",
+    "fullKeypad": "Tastiera sħiħa",
+    "showKeypad": "Uri tastiera",
+    "bitTogglingKeypad": "Tastiera ta' bit toggling",
+    "showBitView": "Uri dehra tal-bit",
+    "wordSize": "Daqs tal-kelma",
+    "bitwise": "Bitwise",
+    "bitShift": "Bit shift"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometrija",
+      "function": "Funzjoni",
+      "functionsAria": "Funzjonijiet",
+      "trigonometricFunctionsAria": "Funzjonijiet trigonometriċi",
+      "angleUnit": "Unità tal-angolu {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Dehra",
+      "themeTitle": "Tema",
+      "themeDescription": "Agħżel skema ta' kuluri",
+      "light": "Dawl",
+      "dark": "Dlam",
+      "blue": "Blu",
+      "green": "Aħdar",
+      "system": "Sistema"
+    },
+    "language": {
+      "group": "Lingwa",
+      "title": "Lingwa",
+      "description": "Agħżel il-lingwa preferuta tiegħek"
+    },
+    "about": {
+      "group": "Dwar"
+    },
+    "feedback": "Ibgħat feedback",
+    "contribute": {
+      "prefix": "Ikkontribwixxi fuq",
+      "link": "GitHub",
+      "suffix": "biex tgħin ittejjeb dan il-kalkulatur"
+    },
+    "links": {
+      "repository": "Repożitorju tal-proġett",
+      "readme": "AQRAMI",
+      "license": "Liċenzja MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standard",
+      "subtitle": "Evalwazzjoni immedjata klassika"
+    },
+    "scientific": {
+      "label": "Xjentifiku",
+      "subtitle": "Operaturi, funzjonijiet, u appoġġ għall-espressjoni"
+    },
+    "graphing": {
+      "label": "Graphing",
+      "subtitle": "Plott espressjoni sempliċi fuq pjan kartesjan"
+    },
+    "programmer": {
+      "label": "Programmatur",
+      "subtitle": "Matematika numru sħiħ b'konverżjoni bażi"
+    },
+    "date": {
+      "label": "Kalkolazzjoni tad-data",
+      "subtitle": "Sib it-tul ta' żmien u d-dati tax-xift"
+    },
+    "currency": {
+      "label": "Munita",
+      "subtitle": "Ikkonverti rati tal-kambju finti"
+    },
+    "volume": {
+      "label": "Volum",
+      "subtitle": "Ikkonverti l-kejl tal-volum"
+    },
+    "length": {
+      "label": "Tul",
+      "subtitle": "Ikkonverti l-unitajiet tad-distanza u t-tul"
+    },
+    "weight": {
+      "label": "Piż u Massa",
+      "subtitle": "Ikkonverti unitajiet ta' piż u massa"
+    },
+    "temperature": {
+      "label": "Temperatura",
+      "subtitle": "Ikkonverti l-iskali tat-temperatura"
+    },
+    "energy": {
+      "label": "Enerġija",
+      "subtitle": "Ikkonverti l-kejl tal-enerġija"
+    },
+    "area": {
+      "label": "Żona",
+      "subtitle": "Ikkonverti l-kejl taż-żona"
+    },
+    "speed": {
+      "label": "Veloċità",
+      "subtitle": "Ikkonverti l-kejl tal-veloċità"
+    },
+    "time": {
+      "label": "Ħin",
+      "subtitle": "Ikkonverti l-kejl tal-ħin"
+    },
+    "power": {
+      "label": "Qawwa",
+      "subtitle": "Ikkonverti l-kejl tal-enerġija"
+    },
+    "data": {
+      "label": "Dejta",
+      "subtitle": "Ikkonverti unitajiet ta' ħażna diġitali"
+    },
+    "pressure": {
+      "label": "Pressjoni",
+      "subtitle": "Ikkonverti l-unitajiet tal-pressjoni"
+    },
+    "angle": {
+      "label": "Angolu",
+      "subtitle": "Ikkonverti l-kejl tal-angoli"
+    },
+    "settings": {
+      "label": "Settings",
+      "subtitle": "Dehra u informazzjoni dwar l-app"
+    }
+  },
+  "categories": {
+    "Currency": "Munita",
+    "Volume": "Volum",
+    "Length": "Tul",
+    "Mass": "Quddiesa",
+    "Temperature": "Temperatura",
+    "Energy": "Enerġija",
+    "Area": "Żona",
+    "Speed": "Veloċità",
+    "Time": "Ħin",
+    "Power": "Qawwa",
+    "Data": "Dejta",
+    "Pressure": "Pressjoni",
+    "Angle": "Angolu"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstroms",
+      "Nanometers": "Nanometri",
+      "Microns": "Mikroni",
+      "Millimeters": "Millimetri",
+      "Centimeters": "Ċentimetri",
+      "Meters": "Meters",
+      "Kilometers": "kilometri",
+      "Inches": "pulzier",
+      "Feet": "Saqajn",
+      "Yards": "Barzni",
+      "Miles": "Mili",
+      "Nautical miles": "Mili nawtiċi",
+      "paperclips": "klipps tal-karti",
+      "hands": "idejn",
+      "jumbo jets": "ġettijiet jumbo",
+      "Carats": "Karat",
+      "Milligrams": "Milligrammi",
+      "Centigrams": "Ċentigrammi",
+      "Decigrams": "Deċigrammi",
+      "Grams": "Grammi",
+      "Dekagrams": "Dekagrammi",
+      "Hectograms": "Ettogrammi",
+      "Kilograms": "Kilogrammi",
+      "Metric tonnes": "tunnellati metriċi",
+      "Ounces": "Uqija",
+      "Pounds": "Liri",
+      "Stone": "Ġebla",
+      "Short tons (US)": "tunnellati qosra (US)",
+      "Long tons (UK)": "tunnellati twal (UK)",
+      "snowflakes": "snowflakes",
+      "soccer balls": "blalen tal-futbol",
+      "elephants": "iljunfanti",
+      "whales": "balieni",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "millilitri",
+      "Cubic centimeters": "Ċentimetri kubi",
+      "Liters": "Litri",
+      "Cubic meters": "Metri kubi",
+      "Teaspoons (US)": "kuċċarini (US)",
+      "Tablespoons (US)": "Imgħaref (US)",
+      "Fluid ounces (US)": "Uqija fluwida (US)",
+      "Cups (US)": "Tazzi (US)",
+      "Pints (US)": "Pints (US)",
+      "Quarts (US)": "Quarts (US)",
+      "Gallons (US)": "gallun (US)",
+      "Cubic inches": "pulzier kubi",
+      "Cubic feet": "Pied kubi",
+      "Cubic yards": "Barzni kubi",
+      "Teaspoons (UK)": "kuċċarini (UK)",
+      "Tablespoons (UK)": "Imgħaref (UK)",
+      "Fluid ounces (UK)": "Uqija fluwida (UK)",
+      "Pints (UK)": "Pints (UK)",
+      "Quarts (UK)": "Quarts (UK)",
+      "Gallons (UK)": "gallun (UK)",
+      "coffee cups": "kikkri tal-kafè",
+      "bathtubs": "banju",
+      "swimming pools": "pixxini",
+      "Square millimeters": "Milimetri kwadri",
+      "Square centimeters": "Ċentimetri kwadri",
+      "Square meters": "Metri kwadri",
+      "Hectares": "ettari",
+      "Square kilometers": "kilometri kwadri",
+      "Square inches": "pulzier kwadru",
+      "Square feet": "Pied kwadri",
+      "Square yards": "Barzni kwadri",
+      "Acres": "Acres",
+      "Square miles": "Mili kwadri",
+      "sheets of paper": "folji tal-karti",
+      "soccer fields": "kampijiet tal-futbol",
+      "castles": "kastelli",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Ċentimetri kull sekonda",
+      "Meters per second": "Metri kull sekonda",
+      "Kilometers per hour": "kilometri fis-siegħa",
+      "Feet per second": "Pied kull sekonda",
+      "Miles per hour": "Mili fis-siegħa",
+      "Knots": "Ingroppi",
+      "Mach": "Mach",
+      "turtles": "fkieren",
+      "horses": "żwiemel",
+      "jets": "ġettijiet",
+      "Watts": "Watts",
+      "Kilowatts": "Kilowatts",
+      "Horsepower (US)": "Horsepower (US)",
+      "Foot-pounds/minute": "Foot-libbra/minuta",
+      "BTUs/minute": "BTUs/minuta",
+      "light bulbs": "bozoz tad-dawl",
+      "train engines": "magni tal-ferrovija",
+      "Thermal calories": "Kaloriji termali",
+      "Food calories": "kaloriji tal-ikel",
+      "British thermal units": "Unitajiet termali Brittaniċi",
+      "Kilojoules": "Kilojoules",
+      "Kilowatt-hours": "Kilowatt-siegħa",
+      "Electron volts": "Volts tal-elettron",
+      "Joules": "Joules",
+      "Foot-pounds": "Liri saqajn",
+      "batteries": "batteriji",
+      "bananas": "banana",
+      "slices of cake": "flieli kejk",
+      "Bits": "Bits",
+      "Nibble": "Nibble",
+      "Bytes": "Bytes",
+      "Kilobits": "Kilobits",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "Kilobytes",
+      "Kibibytes": "Kibibytes",
+      "Megabits": "Megabits",
+      "Mebibits": "Mebibits",
+      "Megabytes": "Megabytes",
+      "Mebibytes": "Mebibytes",
+      "Gigabits": "Gigabits",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Gigabytes",
+      "Gibibytes": "Gibibytes",
+      "Terabits": "Terabits",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabytes",
+      "Tebibytes": "Tebibytes",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabytes",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Eżabiti",
+      "Exbibits": "Esibiti",
+      "Exabytes": "Exabytes",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabytes",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "Yobibits",
+      "Yottabytes": "Yottabytes",
+      "Yobibytes": "Yobibytes",
+      "floppy disks": "floppy disks",
+      "CDs": "CDs",
+      "DVDs": "DVDs",
+      "Atmospheres": "Atmosferi",
+      "Bars": "Bars",
+      "Kilopascals": "Kilopascals",
+      "Millimeters of mercury": "Millimetri ta' merkurju",
+      "Pascals": "Pascals",
+      "Pounds per square inch": "Liri kull pulzier kwadru",
+      "Degrees": "Gradi",
+      "Radians": "Radjani",
+      "Gradians": "Gradians",
+      "Microseconds": "Mikrosekondi",
+      "Milliseconds": "Millisekonda",
+      "Seconds": "Sekondi",
+      "Minutes": "Minuti",
+      "Hours": "Sigħat",
+      "Days": "Ġranet",
+      "Weeks": "Ġimgħat",
+      "Years": "Snin"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Dollaru Amerikan",
+      "Euro": "Euro",
+      "British Pound": "Lira Ingliża",
+      "Japanese Yen": "Yen Ġappuniż",
+      "Canadian Dollar": "Dollaru Kanadiż",
+      "Australian Dollar": "Dollaru Awstraljan",
+      "Brazilian Real": "Real Brażiljan",
+      "Chilean Peso": "Peso Ċileni",
+      "Chinese Yuan": "Yuan Ċiniż",
+      "Colombian Peso": "Peso Kolombjan",
+      "Danish Krone": "Krona Daniża",
+      "Egyptian Pound": "Lira Eġizzjana",
+      "Hong Kong Dollar": "Dollaru ta' Ħong Kong",
+      "Indian Rupee": "Rupee Indjana",
+      "Kenyan Shilling": "Xiling Kenjan",
+      "Mexican Peso": "Peso Messikan",
+      "Nigerian Naira": "Naira tan-Niġerja",
+      "New Zealand Dollar": "Dollaru ta' New Zealand",
+      "Norwegian Krone": "Krona Norveġiża",
+      "Philippine Piso": "Filippin Piso",
+      "Polish Zloty": "Zloty Pollakk",
+      "Qatari Riyal": "Qatari Riyal",
+      "Saudi Riyal": "Sawdi Riyal",
+      "Singapore Dollar": "Dollaru ta' Singapor",
+      "South African Rand": "Rand tal-Afrika t'Isfel",
+      "South Korean Won": "Won tal-Korea t'Isfel",
+      "Swedish Krona": "Krona Svediża",
+      "Swiss Franc": "Frank Żvizzeru",
+      "Thai Baht": "Baht Tajlandiż",
+      "Turkish Lira": "Lira Torka",
+      "Turkmenistani Manat": "Turkmenistani Manat",
+      "Ugandan Shilling": "Xiling Ugandan",
+      "Ukrainian Hryvnia": "Hryvnia Ukraina",
+      "UAE Dirham": "Dirham tal-UAE",
+      "Uruguayan Peso": "Peso Urugwajan",
+      "Uzbekistani Som": "Użbekistani Som",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Venezwelan Bolívar Soberano",
+      "Vietnamese Dong": "Dong Vjetnamiż",
+      "Yemeni Rial": "Rial tal-Jemen"
+    },
+    "labels": {
+      "United States - Dollar": "Stati Uniti - Dollaru",
+      "Europe - Euro": "Ewropa - Ewro",
+      "United Kingdom - Pound": "Renju Unit - Lira",
+      "Japan - Yen": "Ġappun - Yen",
+      "Canada - Dollar": "Kanada - Dollaru",
+      "Australia - Dollar": "Awstralja - Dollaru",
+      "Brazil - Real": "Brażil - Real",
+      "Chile - Peso": "Ċilì - Peso",
+      "China - Yuan Renminbi": "Iċ-Ċina - Yuan Renminbi",
+      "Colombia - Peso": "Kolombja - Peso",
+      "Denmark - Krone": "Danimarka - Krone",
+      "Egypt - Pound": "Eġittu - Lira",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Dollaru",
+      "India - Rupee": "Indja - Rupee",
+      "Kenya - Shilling": "Kenja - Xilling",
+      "Mexico - Peso": "Messiku - Peso",
+      "Nigeria - Naira": "Niġerja - Naira",
+      "New Zealand - Dollar": "New Zealand - Dollaru",
+      "Norway - Krone": "Norveġja - Krone",
+      "Philippines - Piso": "Filippini - Piso",
+      "Poland - Zloty": "Polonja - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Arabja Sawdija - Riyal",
+      "Singapore - Dollar": "Singapor - Dollaru",
+      "South Africa - Rand": "Afrika t'Isfel - Rand",
+      "South Korea - Won": "Korea t'Isfel - Rebħ",
+      "Sweden - Krona": "Isvezja - Krona",
+      "Switzerland - Franc": "Isvizzera - Franc",
+      "Thailand - Baht": "Tajlandja - Baht",
+      "Turkey - Lira": "Turkija - Lira",
+      "Turkmenistan - Manat": "Turkmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Xilling",
+      "Ukraine - Hryvnia": "Ukrajna - Hryvnia",
+      "United Arab Emirates - Dirham": "Emirati Għarab Magħquda - Dirham",
+      "Uruguay - Peso": "Urugwaj - Peso",
+      "Uzbekistan - Som": "Użbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "Vjetnam - Dong",
+      "Yemen - Rial": "Jemen - Rial"
+    }
+  }
+}

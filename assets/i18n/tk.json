@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kalkulýator",
+    "name": "Kalkulýator"
+  },
+  "common": {
+    "back": "Yzyna",
+    "backspace": "Yzky giňişlik",
+    "closeSidePanel": "Paneli ýapyň"
+  },
+  "converter": {
+    "unitConverter": "Bölüm öwrüji",
+    "title": "Bölüm öwrüjileri",
+    "builtInCollections": "Gurlan ýygyndylar",
+    "category": "Kategoriýa",
+    "from": "Kimden",
+    "to": "Kime",
+    "inputValue": "Öwürmek üçin baha",
+    "convertedValue": "Öwürilen baha",
+    "swapUnits": "Çalyşmak bölümleri",
+    "keypad": "Öwrüji klawiatura",
+    "unit": "birligi",
+    "unitOptions": "birlik opsiýalary",
+    "currency": {
+      "updatingRates": "Täzelenme nyrhlary…",
+      "updateRates": "Bahalary täzeläň",
+      "keypad": "Walýuta klawiaturasy",
+      "currency": "walýuta",
+      "options": "walýuta opsiýalary",
+      "updated": "{timestamp} täzelendi",
+      "status": {
+        "mockNote": "Özbaşdak programma demo üçin masgaralama nyrhlary.",
+        "fetching": "Iň soňky USD salgylanma nyrhlaryny almak ...",
+        "liveRatesLoaded": "ExchangeRate-API-den ýüklenen göni nyrhlar.",
+        "liveUpdateUnavailable": "Göni täzelenme elýeterli däl. Locallyerli derejede täzelenen demo nyrhlary."
+      }
+    },
+    "aboutEqualTo": "Deňdir"
+  },
+  "errors": {
+    "invalidInput": "Nädogry giriş",
+    "cannotDivideByZero": "Nula bölüp bolmaz",
+    "cannotModuloByZero": "Moduly nola öwrüp bolmaýar",
+    "invalidProgrammerOperation": "Nädogry amal",
+    "overflow": "Netije gaty uly"
+  },
+  "date": {
+    "calculationMode": "Hasaplama tertibi",
+    "from": "Kimden",
+    "to": "Kime",
+    "results": {
+      "difference": "Tapawut",
+      "sameDates": "Birmeňzeş seneler",
+      "date": "Sene"
+    },
+    "calculationModeOptions": "Hasaplama tertibi opsiýalary",
+    "mode": {
+      "difference": "Tapawut",
+      "shift": "çalşyk"
+    },
+    "operation": "Amal",
+    "add": "Goş",
+    "subtract": "Aýyrmak",
+    "years": ".yllar",
+    "months": "Aýlar",
+    "days": "Günler",
+    "chooseDate": "Sene saýlaň",
+    "previousMonth": "Öňki aý",
+    "nextMonth": "Geljek aý",
+    "duration": {
+      "year": {
+        "one": "{count} ýyl",
+        "other": "{count} ýyl"
+      },
+      "month": {
+        "one": "{count} aý",
+        "other": "{count} aý"
+      },
+      "week": {
+        "one": "{count} hepde",
+        "other": "{count} hepde"
+      },
+      "day": {
+        "one": "{count} gün",
+        "other": "{count} gün"
+      }
+    },
+    "history": {
+      "differenceBetween": "{from} bilen {to} arasyndaky tapawut",
+      "addTo": "{date} üçin {duration} goşuň",
+      "subtractFrom": "{date}-den {duration} aýyryň"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Aýratynlandyrylan aňlatmany barlaň",
+    "enterExpression": "Bir aňlatma giriziň",
+    "canvas": "Grafiki surat",
+    "stopTracing": "Gözlemegi bes ediň",
+    "startTracing": "Gözläp başlaň",
+    "share": "Paýlaş",
+    "options": "Görnüş",
+    "zoomIn": "ulaltmak",
+    "zoomInLabel": "ulaltmak",
+    "zoomOut": "ulaltmak",
+    "zoomOutLabel": "ulaltmak",
+    "refreshViewAutomatically": "Görnüşi awtomatiki täzeläň",
+    "view": "Gör",
+    "expressions": "aňlatmalar",
+    "mobileView": "Jübi görnüşi",
+    "showGraph": "Grafik görkez",
+    "showExpressions": "Aňlatmalary görkeziň",
+    "backToFunctionList": "Funksiýa sanawyna dolan",
+    "window": "Penjire",
+    "resetView": "Görnüşi täzeden düzmek",
+    "units": "Bölümler",
+    "radians": "Radiýalylar",
+    "degrees": "Derejeler",
+    "gradians": "Gradiýalylar",
+    "lineThickness": "Çyzygyň galyňlygy",
+    "theme": "Mowzuk",
+    "alwaysLight": "Elmydama ýeňil",
+    "matchAppTheme": "Programma mowzugyna gabat geliň",
+    "groups": {
+      "inequalities": "Deňsizlikler",
+      "trigonometry": "Trigonometriýa",
+      "function": "Funksiýa"
+    },
+    "functions": "Funksiýalar",
+    "showEquation": "Deňligi görkez",
+    "hideEquation": "Deňligi gizläň",
+    "lineOptions": "Setir görnüşleri",
+    "color": "Reňk",
+    "style": "Stil",
+    "analysis": {
+      "title": "Derňew",
+      "domain": "Domen",
+      "range": "Aralyk",
+      "xIntercept": "x-saklamak",
+      "yIntercept": "y-saklamak",
+      "minima": "Minima",
+      "maxima": "Maksima",
+      "inflectionPoints": "Inflýasiýa nokatlary",
+      "verticalAsymptotes": "Dik asimptotlar",
+      "horizontalAsymptotes": "Gorizontal asimptotlar",
+      "obliqueAsymptotes": "Obli asimptotlar",
+      "parity": "Deňlik",
+      "period": "Döwür",
+      "monotonicity": "Monotonlyk",
+      "domainNone": "Domen çäklendirmeleri ýok",
+      "rangeNone": "Aralyk çäklendirmeler ýok",
+      "xInterceptNone": "X-päsgelçilik ýok",
+      "yInterceptNone": "yok",
+      "minimaNone": "Minima ýok",
+      "maximaNone": "Maksima ýok",
+      "inflectionNone": "inflýasiýa nokatlary ýok",
+      "verticalAsymptotesNone": "Wertikal asimptotlar ýok",
+      "horizontalAsymptotesNone": "Gorizontal asimptotlar ýok",
+      "obliqueAsymptotesNone": "Obli asimptotlar ýok",
+      "parityUnknown": "Näbelli",
+      "parityOdd": "Täsin",
+      "parityEven": "Hatda",
+      "parityNeither": "Şeýle hem",
+      "periodicityUnknown": "Näbelli",
+      "periodicityNotPeriodic": "Döwürleýin däl",
+      "monotonicityConstant": "Dowamly",
+      "monotonicityIncreasing": "köpelýär",
+      "monotonicityDecreasing": "azalýar",
+      "monotonicityUnknown": "Näbelli",
+      "monotonicityError": "Kesgitläp bolmaýar",
+      "featureTooComplexPlural": "Analiz etmek gaty çylşyrymly",
+      "analysisCouldNotBePerformed": "Derňew geçirilip bilinmedi",
+      "analysisNotSupported": "Analiz goldanylmaýar",
+      "variableIsNotX": "Üýtgeýji x däl"
+    },
+    "plottingExpressions": "{count} aňlatmalary düzmek",
+    "xMin": "X-Min",
+    "xMax": "X-Maks",
+    "yMin": "Y-Min",
+    "yMax": "Maks",
+    "selectExpression": "{index} aňlatmasyny saýlaň",
+    "expressionIndex": "Aňlatma {index}",
+    "analyzeFunction": "Funksiýany derňäň",
+    "changeEquationStyle": "Deňlik stilini üýtgediň",
+    "removeEquation": "Deňligi aýyryň",
+    "lineStyle": {
+      "solid": "Gaty çyzyk stili",
+      "dash": "Çyzyk çyzygynyň stili",
+      "dot": "Nokat setir stili"
+    }
+  },
+  "history": {
+    "empty": "Taryh boş",
+    "clearAll": "Hemmesini arassala",
+    "clear": "Taryhy aýdyň",
+    "title": "Taryh",
+    "andMemory": "Taryh we ýat",
+    "aria": {
+      "historyPanel": "Taryh paneli",
+      "historyAndMemoryPanel": "Taryh we ýat paneli"
+    },
+    "closeFlyout": "Taryhy ýapyň",
+    "openFlyout": "Açyk taryh"
+  },
+  "memory": {
+    "empty": "oryat boş",
+    "clearItem": "Önümi arassala",
+    "addCurrentValue": "Häzirki bahany goşuň",
+    "subtractCurrentValue": "Häzirki bahany aýyryň",
+    "clearAll": "Hemmesini arassala",
+    "clear": "memoryady arassala",
+    "title": "oryat",
+    "controls": "oryat dolandyryşlary",
+    "tooltips": {
+      "clearAll": "memoryady arassalaň",
+      "recall": "memoryatdan ýada salyň",
+      "add": "memoryadyňyza goşuň",
+      "subtract": "memoryatdan aýyrmak",
+      "store": "memoryatda saklaň"
+    },
+    "recallValue": "Ýat {value} ýada salyň"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Nawigasiýa",
+      "closeNavigation": "Nawigasiýa ýapyň",
+      "openNavigation": "Açyk nawigasiýa"
+    },
+    "groups": {
+      "calculator": "Kalkulýator",
+      "converter": "Öwüriji"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Bit flip paneli",
+    "baseReadouts": "Esasy okalmalar",
+    "surfaceMode": "faceerüsti re modeim",
+    "fullKeypad": "Doly klawiatura",
+    "showKeypad": "Klawiaturany görkeziň",
+    "bitTogglingKeypad": "Bit açar düwmeleri",
+    "showBitView": "Biraz görnüşi görkeziň",
+    "wordSize": "Sözüň ululygy",
+    "bitwise": "Bitwise",
+    "bitShift": "Bit çalşygy"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometriýa",
+      "function": "Funksiýa",
+      "functionsAria": "Funksiýalar",
+      "trigonometricFunctionsAria": "Trigonometrik funksiýalar",
+      "angleUnit": "Burç birligi {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Daş görnüşi",
+      "themeTitle": "Mowzuk",
+      "themeDescription": "Reňk shemasyny saýlaň",
+      "light": "Lightagtylyk",
+      "dark": "Garaňky",
+      "blue": "Gök",
+      "green": "Greenaşyl",
+      "system": "Ulgam"
+    },
+    "language": {
+      "group": "Dil",
+      "title": "Dil",
+      "description": "Halaýan diliňizi saýlaň"
+    },
+    "about": {
+      "group": "hakda"
+    },
+    "feedback": "Ters jogap iberiň",
+    "contribute": {
+      "prefix": "Goşant goşuň",
+      "link": "GitHub",
+      "suffix": "bu kalkulýatory gowulandyrmaga kömek etmek"
+    },
+    "links": {
+      "repository": "Taslamanyň ammary",
+      "readme": "Oka",
+      "license": "MIT ygtyýarnamasy"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Standart",
+      "subtitle": "Klassiki derrew baha bermek"
+    },
+    "scientific": {
+      "label": "Ylmy",
+      "subtitle": "Operatorlar, funksiýalar we aňlatma goldawy"
+    },
+    "graphing": {
+      "label": "Grafika",
+      "subtitle": "Kartezian tekizliginde ýönekeý aňlatma ýerleşdiriň"
+    },
+    "programmer": {
+      "label": "Programmist",
+      "subtitle": "Esasy öwrülişi bilen bitewi matematika"
+    },
+    "date": {
+      "label": "Sene hasaplamasy",
+      "subtitle": "Dowamlylygy we çalşyk senelerini tapyň"
+    },
+    "currency": {
+      "label": "Walýuta",
+      "subtitle": "Möhüm alyş-çalyş hümmetini öwüriň"
+    },
+    "volume": {
+      "label": "Tom",
+      "subtitle": "Ses ölçeglerini öwüriň"
+    },
+    "length": {
+      "label": "Uzynlyk",
+      "subtitle": "Aralygy we uzynlyk birliklerini öwüriň"
+    },
+    "weight": {
+      "label": "Agram we massa",
+      "subtitle": "Agramy we köpçülik birliklerini öwüriň"
+    },
+    "temperature": {
+      "label": "Temperatura",
+      "subtitle": "Temperatura terezisini öwüriň"
+    },
+    "energy": {
+      "label": "Energetika",
+      "subtitle": "Energiýa ölçeglerini öwüriň"
+    },
+    "area": {
+      "label": "Sebit",
+      "subtitle": "Meýdanyň ölçeglerini öwüriň"
+    },
+    "speed": {
+      "label": "Tizlik",
+      "subtitle": "Tizlik ölçeglerini öwüriň"
+    },
+    "time": {
+      "label": "Wagt",
+      "subtitle": "Wagt ölçeglerini öwüriň"
+    },
+    "power": {
+      "label": "Kuwwat",
+      "subtitle": "Kuwwat ölçeglerini öwüriň"
+    },
+    "data": {
+      "label": "Maglumatlar",
+      "subtitle": "Sanly saklaýyş bölümlerini öwüriň"
+    },
+    "pressure": {
+      "label": "Basyş",
+      "subtitle": "Basyş birliklerini öwüriň"
+    },
+    "angle": {
+      "label": "Burç",
+      "subtitle": "Burç ölçeglerini öwüriň"
+    },
+    "settings": {
+      "label": "Sazlamalar",
+      "subtitle": "Daş görnüşi we programma maglumatlary"
+    }
+  },
+  "categories": {
+    "Currency": "Walýuta",
+    "Volume": "Tom",
+    "Length": "Uzynlyk",
+    "Mass": "Köpçülik",
+    "Temperature": "Temperatura",
+    "Energy": "Energetika",
+    "Area": "Sebit",
+    "Speed": "Tizlik",
+    "Time": "Wagt",
+    "Power": "Kuwwat",
+    "Data": "Maglumatlar",
+    "Pressure": "Basyş",
+    "Angle": "Burç"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstromlar",
+      "Nanometers": "Nanometrler",
+      "Microns": "Mikronlar",
+      "Millimeters": "Millimetr",
+      "Centimeters": "santimetr",
+      "Meters": "Metrler",
+      "Kilometers": "Kilometr",
+      "Inches": "Inçler",
+      "Feet": "Aýak",
+      "Yards": "Howlular",
+      "Miles": "Mil",
+      "Nautical miles": "Deňiz ýollary",
+      "paperclips": "kagyz ýazgylary",
+      "hands": "eller",
+      "jumbo jets": "uçar uçarlary",
+      "Carats": "Karatlar",
+      "Milligrams": "Milligramlar",
+      "Centigrams": "Centigramlar",
+      "Decigrams": "Dekigrammalar",
+      "Grams": "Gramlar",
+      "Dekagrams": "Dekagramlar",
+      "Hectograms": "Gektogrammalar",
+      "Kilograms": "Kilogram",
+      "Metric tonnes": "Metrik tonna",
+      "Ounces": "Ounces",
+      "Pounds": "Funt",
+      "Stone": "Daş",
+      "Short tons (US)": "Gysga tonna (ABŞ)",
+      "Long tons (UK)": "Uzyn tonna (Angliýa)",
+      "snowflakes": "gar garlary",
+      "soccer balls": "futbol toplary",
+      "elephants": "piller",
+      "whales": "kitler",
+      "Celsius": "Selsiý",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelwin",
+      "Milliliters": "Millilitrler",
+      "Cubic centimeters": "Kub santimetr",
+      "Liters": "litrler",
+      "Cubic meters": "Kub metrler",
+      "Teaspoons (US)": "Çaý çemçeleri (ABŞ)",
+      "Tablespoons (US)": "Çemçe çemçe (ABŞ)",
+      "Fluid ounces (US)": "Suwuk unsiýa (ABŞ)",
+      "Cups (US)": "Kuboklar (ABŞ)",
+      "Pints (US)": "Nokatlar (ABŞ)",
+      "Quarts (US)": "Kwartal (ABŞ)",
+      "Gallons (US)": "Galonlar (ABŞ)",
+      "Cubic inches": "Kub dýuým",
+      "Cubic feet": "Kub aýaklary",
+      "Cubic yards": "Kub howlulary",
+      "Teaspoons (UK)": "Çaý çemçeleri (Angliýa)",
+      "Tablespoons (UK)": "Çemçe çemçe (Angliýa)",
+      "Fluid ounces (UK)": "Suwuk unsiýa (Angliýa)",
+      "Pints (UK)": "Nokatlar (Angliýa)",
+      "Quarts (UK)": "Kwartal (Angliýa)",
+      "Gallons (UK)": "Galonlar (Angliýa)",
+      "coffee cups": "kofe käseleri",
+      "bathtubs": "hammam",
+      "swimming pools": "howuzlar",
+      "Square millimeters": "Kwadrat millimetr",
+      "Square centimeters": "Kwadrat santimetr",
+      "Square meters": "Kwadrat metr",
+      "Hectares": "Gektar",
+      "Square kilometers": "Kwadrat kilometr",
+      "Square inches": "Kwadrat dýuým",
+      "Square feet": "Kwadrat aýak",
+      "Square yards": "Kwadrat howlular",
+      "Acres": "Akrlar",
+      "Square miles": "Kwadrat mil",
+      "sheets of paper": "kagyz kagyzlary",
+      "soccer fields": "futbol meýdançalary",
+      "castles": "galalar",
+      "Pyeong": "Phen",
+      "Centimeters per second": "Sekuntda santimetr",
+      "Meters per second": "Sekuntda ölçegler",
+      "Kilometers per hour": "Sagatda kilometr",
+      "Feet per second": "Sekuntda aýak",
+      "Miles per hour": "Sagatda mil",
+      "Knots": "düwünler",
+      "Mach": "Mach",
+      "turtles": "pyşbagalar",
+      "horses": "atlar",
+      "jets": "uçarlar",
+      "Watts": "Watt",
+      "Kilowatts": "Kilowatts",
+      "Horsepower (US)": "At güýji (ABŞ)",
+      "Foot-pounds/minute": "Aýak-funt / minut",
+      "BTUs/minute": "BTU / minut",
+      "light bulbs": "lampalar",
+      "train engines": "otly hereketlendirijileri",
+      "Thermal calories": "malylylyk kaloriýasy",
+      "Food calories": "Iýmit kaloriýasy",
+      "British thermal units": "Iňlis ýylylyk birlikleri",
+      "Kilojoules": "Kilojoules",
+      "Kilowatt-hours": "Kilowatt-sagat",
+      "Electron volts": "Elektron wolt",
+      "Joules": "Joul",
+      "Foot-pounds": "Aýak funt",
+      "batteries": "batareýalary",
+      "bananas": "banan",
+      "slices of cake": "tort bölekleri",
+      "Bits": "Bitler",
+      "Nibble": "Düwürtik",
+      "Bytes": "Baýt",
+      "Kilobits": "Kilobits",
+      "Kibibits": "Kibibits",
+      "Kilobytes": "Kilobaýtlar",
+      "Kibibytes": "Kibibytes",
+      "Megabits": "Megabitler",
+      "Mebibits": "Mebibits",
+      "Megabytes": "Megabaýt",
+      "Mebibytes": "Mebibaýtlar",
+      "Gigabits": "Gigabitler",
+      "Gibibits": "Gibibits",
+      "Gigabytes": "Gigabaýt",
+      "Gibibytes": "Gibibytes",
+      "Terabits": "Terabits",
+      "Tebibits": "Tebibits",
+      "Terabytes": "Terabaýtlar",
+      "Tebibytes": "Tebibytes",
+      "Petabits": "Petabits",
+      "Pebibits": "Pebibits",
+      "Petabytes": "Petabaýt",
+      "Pebibytes": "Pebibytes",
+      "Exabits": "Çykyşlar",
+      "Exbibits": "Çykyşlar",
+      "Exabytes": "Exabaýt",
+      "Exbibytes": "Exbibytes",
+      "Zetabits": "Zetabits",
+      "Zebibits": "Zebibits",
+      "Zetabytes": "Zetabaýt",
+      "Zebibytes": "Zebibytes",
+      "Yottabits": "Yottabits",
+      "Yobibits": "obobibits",
+      "Yottabytes": "otottabaýt",
+      "Yobibytes": "obobibaýtlar",
+      "floppy disks": "disketler",
+      "CDs": "CDler",
+      "DVDs": "DVD",
+      "Atmospheres": "Atmosferalar",
+      "Bars": "Barlar",
+      "Kilopascals": "Kilopaskallar",
+      "Millimeters of mercury": "Millimetr simap",
+      "Pascals": "Paskallar",
+      "Pounds per square inch": "Her inedördül dýuým üçin funt",
+      "Degrees": "derejeler",
+      "Radians": "Radiýalylar",
+      "Gradians": "Gradiýalylar",
+      "Microseconds": "Mikrosekuntlar",
+      "Milliseconds": "Millisekunt",
+      "Seconds": "Sekuntlar",
+      "Minutes": "Minutlar",
+      "Hours": "Sagatlar",
+      "Days": "Günler",
+      "Weeks": "Hepdeler",
+      "Years": ".yllar"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "ABŞ-nyň dollary",
+      "Euro": "Euroewro",
+      "British Pound": "Iňlis funty",
+      "Japanese Yen": "Japaneseapon Yenen",
+      "Canadian Dollar": "Kanada dollary",
+      "Australian Dollar": "Awstraliýa dollary",
+      "Brazilian Real": "Braziliýa Real",
+      "Chilean Peso": "Çili Peso",
+      "Chinese Yuan": "Hytaý ýuany",
+      "Colombian Peso": "Kolumbiýaly Peso",
+      "Danish Krone": "Daniýaly Krone",
+      "Egyptian Pound": "Müsür funty",
+      "Hong Kong Dollar": "Gonkong dollary",
+      "Indian Rupee": "Hindi rupisi",
+      "Kenyan Shilling": "Keniýaly Şilling",
+      "Mexican Peso": "Meksikaly Peso",
+      "Nigerian Naira": "Nigeriýaly Naira",
+      "New Zealand Dollar": "Täze Zelandiýa dollary",
+      "Norwegian Krone": "Norwegiýaly Krone",
+      "Philippine Piso": "Filippin Piso",
+      "Polish Zloty": "Polýak Zloty",
+      "Qatari Riyal": "Katar Riýal",
+      "Saudi Riyal": "Saud Riýal",
+      "Singapore Dollar": "Singapur dollary",
+      "South African Rand": "Günorta Afrika Rand",
+      "South Korean Won": "Günorta Koreýa ýeňiji boldy",
+      "Swedish Krona": "Şwesiýaly Krona",
+      "Swiss Franc": "Şweýsariýa franky",
+      "Thai Baht": "Taý Baht",
+      "Turkish Lira": "Türk Lira",
+      "Turkmenistani Manat": "Türkmenistani Manat",
+      "Ugandan Shilling": "Uganda Şillingi",
+      "Ukrainian Hryvnia": "Ukrain Grywniýa",
+      "UAE Dirham": "BAE Dirham",
+      "Uruguayan Peso": "Urugwaý Peso",
+      "Uzbekistani Som": "Özbekistanly Som",
+      "Vanuatu Vatu": "Wanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Wenesuelaly Boliwar Soberano",
+      "Vietnamese Dong": "Wýetnam Dong",
+      "Yemeni Rial": "ememen Rial"
+    },
+    "labels": {
+      "United States - Dollar": "ABŞ - Dollar",
+      "Europe - Euro": "Europeewropa - Euroewro",
+      "United Kingdom - Pound": "Angliýa - funt",
+      "Japan - Yen": "Japanaponiýa - Yenen",
+      "Canada - Dollar": "Kanada - Dollar",
+      "Australia - Dollar": "Awstraliýa - Dollar",
+      "Brazil - Real": "Braziliýa - Hakyky",
+      "Chile - Peso": "Çili - Peso",
+      "China - Yuan Renminbi": "Hytaý - uanuan Renminbi",
+      "Colombia - Peso": "Kolumbiýa - Peso",
+      "Denmark - Krone": "Daniýa - Krone",
+      "Egypt - Pound": "Müsür - funt",
+      "Hong Kong SAR - Dollar": "Gonkong SAR - Dollar",
+      "India - Rupee": "Hindistan - Rupiýa",
+      "Kenya - Shilling": "Keniýa - Şilling",
+      "Mexico - Peso": "Meksika - Peso",
+      "Nigeria - Naira": "Nigeriýa - Naira",
+      "New Zealand - Dollar": "Täze Zelandiýa - Dollar",
+      "Norway - Krone": "Norwegiýa - Krone",
+      "Philippines - Piso": "Filippinler - Piso",
+      "Poland - Zloty": "Polşa - Zloty",
+      "Qatar - Riyal": "Katar - Riýal",
+      "Saudi Arabia - Riyal": "Saud Arabystany - Riýal",
+      "Singapore - Dollar": "Singapur - Dollar",
+      "South Africa - Rand": "Günorta Afrika - Rand",
+      "South Korea - Won": "Günorta Koreýa - Woneňdi",
+      "Sweden - Krona": "Şwesiýa - Krona",
+      "Switzerland - Franc": "Şweýsariýa - Frans",
+      "Thailand - Baht": "Taýland - Baht",
+      "Turkey - Lira": "Türkiýe - Lira",
+      "Turkmenistan - Manat": "Türkmenistan - Manat",
+      "Uganda - Shilling": "Uganda - Şilling",
+      "Ukraine - Hryvnia": "Ukraina - Grywniýa",
+      "United Arab Emirates - Dirham": "Birleşen Arap Emirlikleri - Dirham",
+      "Uruguay - Peso": "Urugwaý - Peso",
+      "Uzbekistan - Som": "Özbegistan - Som",
+      "Vanuatu - Vatu": "Wanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Wenesuela - Boliwar Soberano",
+      "Vietnam - Dong": "Wýetnam - Dong",
+      "Yemen - Rial": "Yemenemen - Rial"
+    }
+  }
+}

@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "Kalkulatër",
+    "name": "Kalkulatër"
+  },
+  "common": {
+    "back": "Dellu",
+    "backspace": "Dellu ginaaw",
+    "closeSidePanel": "Tëj paaneel bi"
+  },
+  "converter": {
+    "unitConverter": "Soppikatu benn jumtukaay",
+    "title": "Soppikat yi",
+    "builtInCollections": "Dajale yiñ tabax ci biir",
+    "category": "Xeet",
+    "from": "Ci",
+    "to": "Ci",
+    "inputValue": "Njariñu soppi",
+    "convertedValue": "Valër biñ soppi",
+    "swapUnits": "Weccoo benn jumtukaay",
+    "keypad": "Klawieru soppi",
+    "unit": "pàcc",
+    "unitOptions": "tànneefi benn jumtukaay",
+    "currency": {
+      "updatingRates": "Yeesal njëg yi...",
+      "updateRates": "Njëg yu yeesal",
+      "keypad": "Klaatu xaalis",
+      "currency": "devise",
+      "options": "tànneefi xaalis",
+      "updated": "Yeesal {timestamp}",
+      "status": {
+        "mockNote": "Tolluwaayu royuwaay yu ñaaw ngir demo aplikaasioŋ bi nekk boppam.",
+        "fetching": "Dañuy jël njëgu royuwaay bi mujjee ci USD...",
+        "liveRatesLoaded": "Njëg yiy dundu ñu ngi ko jëlee ci API-Njëg weccoo.",
+        "liveUpdateUnavailable": "Amul yeesal ci saasi. Yeesal njëgu demo ci dëkk bi."
+      }
+    },
+    "aboutEqualTo": "Lu tollu ci"
+  },
+  "errors": {
+    "invalidInput": "Dugal bi baaxul",
+    "cannotDivideByZero": "Mënul xaaj ak amul",
+    "cannotModuloByZero": "Mënul soppiku ci nul",
+    "invalidProgrammerOperation": "Liggéey bu baaxul",
+    "overflow": "Resultaa bi dafa yaatu lool"
+  },
+  "date": {
+    "calculationMode": "Modu xayma",
+    "from": "Ci",
+    "to": "Ci",
+    "results": {
+      "difference": "wuute gi",
+      "sameDates": "Bis yooyu",
+      "date": "Bis"
+    },
+    "calculationModeOptions": "Tànneefi anam xayma",
+    "mode": {
+      "difference": "wuute gi",
+      "shift": "Trans"
+    },
+    "operation": "Liggéey",
+    "add": "Yokk",
+    "subtract": "Dindi",
+    "years": "Ay at",
+    "months": "Weer yi",
+    "days": "Ay fan",
+    "chooseDate": "Tànnal bis bi",
+    "previousMonth": "Weer wi weesu",
+    "nextMonth": "Weer wii di ñëw",
+    "duration": {
+      "year": {
+        "one": "{count} at",
+        "other": "{count} at"
+      },
+      "month": {
+        "one": "{count} weer",
+        "other": "{count} ay weer"
+      },
+      "week": {
+        "one": "{count} ayu-bis bi",
+        "other": "{count} ayu-bis yi"
+      },
+      "day": {
+        "one": "{count} bis",
+        "other": "{count} fan"
+      }
+    },
+    "history": {
+      "differenceBetween": "wuute gi am ci digganté {from} ak {to}",
+      "addTo": "Yokk {duration} ci {date}",
+      "subtractFrom": "Dindi {duration} ci {date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Xool liñu teral",
+    "enterExpression": "Dugalal ab kàddu",
+    "canvas": "Toile graphique",
+    "stopTracing": "Taxawal topp",
+    "startTracing": "Tàmbalil toppu",
+    "share": "Séddoo",
+    "options": "Tànneef",
+    "zoomIn": "Yootal",
+    "zoomInLabel": "Yootal",
+    "zoomOut": "Nga wàññi ko",
+    "zoomOutLabel": "Géñal",
+    "refreshViewAutomatically": "Yeesal gis-gis bi ci saasi",
+    "view": "Xool",
+    "expressions": "Baatu",
+    "mobileView": "Gis-gis mobile",
+    "showGraph": "Wone graafik bi",
+    "showExpressions": "Wone ay mbind",
+    "backToFunctionList": "Dellu ci limu fonction yi",
+    "window": "Palanteer",
+    "resetView": "Delloosi gis-gis bi",
+    "units": "Yàlla",
+    "radians": "Radian yi",
+    "degrees": "Diplôme",
+    "gradians": "Gradien yi",
+    "lineThickness": "Yaatuwaayu liiñ bi",
+    "theme": "Tomb",
+    "alwaysLight": "Leer saa yu nekk",
+    "matchAppTheme": "Tema aplikaasioŋ bu méngoo",
+    "groups": {
+      "inequalities": "Ñàkka yamale",
+      "trigonometry": "Trigonometrie",
+      "function": "Dóor ndam"
+    },
+    "functions": "Liggéey",
+    "showEquation": "Wone équation",
+    "hideEquation": "Nëbb ekwaasioŋ bi",
+    "lineOptions": "Tànneefi liiñ",
+    "color": "Kulòor",
+    "style": "Stil",
+    "analysis": {
+      "title": "Càmbar",
+      "domain": "Dëkkuwaay",
+      "range": "Xeet toppalante",
+      "xIntercept": "x-dagg",
+      "yIntercept": "y-dagg",
+      "minima": "Lu gëna ndaw",
+      "maxima": "Maksima",
+      "inflectionPoints": "Tolluwaayu coppite",
+      "verticalAsymptotes": "Asimptot yu taxaw",
+      "horizontalAsymptotes": "Asimptot yu tëdd",
+      "obliqueAsymptotes": "Asimptot yu sëgg",
+      "parity": "Yamale",
+      "period": "Waxtu mbaax",
+      "monotonicity": "Monotoni",
+      "domainNone": "Amul ay tënk ci domen bi",
+      "rangeNone": "Amul ay tënk",
+      "xInterceptNone": "Amul x-x",
+      "yInterceptNone": "Amul benn y buy dakkal",
+      "minimaNone": "Amul lu gëna ndaw",
+      "maximaNone": "Amul lu ëpp",
+      "inflectionNone": "Amul benn poñ buy soppiku",
+      "verticalAsymptotesNone": "Amul asimptot bu taxaw",
+      "horizontalAsymptotesNone": "Amul asimptot bu tëdd",
+      "obliqueAsymptotesNone": "Amul asimptot bu sëgg",
+      "parityUnknown": "Xamu ñu",
+      "parityOdd": "Jarul",
+      "parityEven": "Ba ci",
+      "parityNeither": "Benn",
+      "periodicityUnknown": "Xamu ñu",
+      "periodicityNotPeriodic": "Du jamono",
+      "monotonicityConstant": "Fàww",
+      "monotonicityIncreasing": "Yokk",
+      "monotonicityDecreasing": "Di wàññeeku",
+      "monotonicityUnknown": "Xamu ñu",
+      "monotonicityError": "Mënul xam",
+      "featureTooComplexPlural": "Dafa jafe lool ngir jàngat",
+      "analysisCouldNotBePerformed": "Mënu ñu def jàngat",
+      "analysisNotSupported": "Jàngat bi nanguwul",
+      "variableIsNotX": "Soppiku du x"
+    },
+    "plottingExpressions": "Tracé {count}",
+    "xMin": "Simili X",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "Tannal kàddu {index}",
+    "expressionIndex": "Baatu {index}",
+    "analyzeFunction": "Jàngat liggéey bi",
+    "changeEquationStyle": "Soppi stilu ekwaasioŋ",
+    "removeEquation": "Dindil équation bi",
+    "lineStyle": {
+      "solid": "Stil liiñ bu dëgër",
+      "dash": "Stil liiñ bu tiire",
+      "dot": "Stil liiñ bu am poñ"
+    }
+  },
+  "history": {
+    "empty": "Taarix bi amul dara",
+    "clearAll": "Far lépp",
+    "clear": "Far jaar-jaar bi",
+    "title": "Taarix",
+    "andMemory": "Taarix ak fàttaliku",
+    "aria": {
+      "historyPanel": "Panelu jaar-jaar",
+      "historyAndMemoryPanel": "Taarix ak Panelu fàttaliku"
+    },
+    "closeFlyout": "Tëj jaar-jaar",
+    "openFlyout": "Ubbi jaar-jaar bi"
+  },
+  "memory": {
+    "empty": "Memoire bi amul dara",
+    "clearItem": "Far mbir mi",
+    "addCurrentValue": "Yokk valeur bi fi nekk",
+    "subtractCurrentValue": "Dindi valeur bi fi nekk",
+    "clearAll": "Far lépp",
+    "clear": "Fàttaliku",
+    "title": "Fàttaliku",
+    "controls": "Kontrolu mémoire",
+    "tooltips": {
+      "clearAll": "Far bépp mémoire",
+      "recall": "Fàttaliku ci fàttaliku",
+      "add": "Yokk ci mémoire bi",
+      "subtract": "Dindi ci mémoire",
+      "store": "Denc ci mémoire"
+    },
+    "recallValue": "Rappel mémoire {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Jàppale",
+      "closeNavigation": "Tëj jubluwaay bi",
+      "openNavigation": "Ubbi seet bi"
+    },
+    "groups": {
+      "calculator": "Kalkulatër",
+      "converter": "Soppikat"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Panelu flip bit",
+    "baseReadouts": "Liggéeyukaay yu njëkk",
+    "surfaceMode": "Modu kaw gi",
+    "fullKeypad": "Klawieer bu mat",
+    "showKeypad": "Wone klawieer bi",
+    "bitTogglingKeypad": "Klaweer biy baaxal ay bit",
+    "showBitView": "Waneel bit bi",
+    "wordSize": "Dayo baat bi",
+    "bitwise": "Ci wàllu bit",
+    "bitShift": "Toppi bit"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "Trigonometrie",
+      "function": "Dóor ndam",
+      "functionsAria": "Liggéey",
+      "trigonometricFunctionsAria": "Fonction trigonometrik",
+      "angleUnit": "Benn wàll {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Melokaan",
+      "themeTitle": "Tema",
+      "themeDescription": "Tannal melo",
+      "light": "Leer",
+      "dark": "Lëmësu",
+      "blue": "Baxa",
+      "green": "Nëtëx",
+      "system": "Sistem"
+    },
+    "language": {
+      "group": "làkk wi",
+      "title": "làkk wi",
+      "description": "Tànn làkk wi la gënal"
+    },
+    "about": {
+      "group": "Ci"
+    },
+    "feedback": "Yonnee sa xalaat",
+    "contribute": {
+      "prefix": "jàppale ci",
+      "link": "GitHub",
+      "suffix": "ngir jàppale ci gëna suqali kalkulatër bii"
+    },
+    "links": {
+      "repository": "Depo projet",
+      "readme": "JANGAL MA",
+      "license": "Liseñsu MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Yaakaar",
+      "subtitle": "Njàngat bu yàgg"
+    },
+    "scientific": {
+      "label": "gëstukat",
+      "subtitle": "Operatër yi, fonction yi, ak ndimbalu fësal"
+    },
+    "graphing": {
+      "label": "Graafiku",
+      "subtitle": "Defar benn exprseioŋ bu yomb ci kaw ab plan kartesien"
+    },
+    "programmer": {
+      "label": "Prograamkat",
+      "subtitle": "Math bu mat ak soppi baas"
+    },
+    "date": {
+      "label": "Xayma bis bi",
+      "subtitle": "Gëstu guddaay yi ak bisu coppite yi"
+    },
+    "currency": {
+      "label": "Devise",
+      "subtitle": "Soppi njëgu weccoo xaalis"
+    },
+    "volume": {
+      "label": "Tolluwaay",
+      "subtitle": "Soppi natt volume"
+    },
+    "length": {
+      "label": "Gudd",
+      "subtitle": "Soppi distance ak guddaay"
+    },
+    "weight": {
+      "label": "Diisaay ak mass",
+      "subtitle": "Soppi diisaay bi ak masse bi"
+    },
+    "temperature": {
+      "label": "Tàngoor",
+      "subtitle": "Soppi balansu tàngoor"
+    },
+    "energy": {
+      "label": "Energie",
+      "subtitle": "Soppi natt energie"
+    },
+    "area": {
+      "label": "Barab",
+      "subtitle": "Soppi natt barab"
+    },
+    "speed": {
+      "label": "Gaawaay",
+      "subtitle": "Soppi natt gaawaay"
+    },
+    "time": {
+      "label": "Waxtu",
+      "subtitle": "Soppi natt waxtu"
+    },
+    "power": {
+      "label": "Kàttan",
+      "subtitle": "Soppi natt doole"
+    },
+    "data": {
+      "label": "Done",
+      "subtitle": "Soppi dencukaay numérik"
+    },
+    "pressure": {
+      "label": "Presioŋ",
+      "subtitle": "Soppi benn xeetu doole"
+    },
+    "angle": {
+      "label": "Angle",
+      "subtitle": "Soppi natt wàll"
+    },
+    "settings": {
+      "label": "Jekkal",
+      "subtitle": "Melokaan ak leerali aplikaasioŋ"
+    }
+  },
+  "categories": {
+    "Currency": "Devise",
+    "Volume": "Tolluwaay",
+    "Length": "Gudd",
+    "Mass": "Mbooloo",
+    "Temperature": "Tàngoor",
+    "Energy": "Energie",
+    "Area": "Barab",
+    "Speed": "Gaawaay",
+    "Time": "Waxtu",
+    "Power": "Kàttan",
+    "Data": "Done",
+    "Pressure": "Presioŋ",
+    "Angle": "Angle"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Angstrom",
+      "Nanometers": "nanometre",
+      "Microns": "Mikron",
+      "Millimeters": "Milimet",
+      "Centimeters": "Santimet",
+      "Meters": "Metre",
+      "Kilometers": "Kilometre",
+      "Inches": "pouces",
+      "Feet": "Ay tànk",
+      "Yards": "Yard",
+      "Miles": "Kilomeetar",
+      "Nautical miles": "Kilometre nautique",
+      "paperclips": "clips",
+      "hands": "loxo",
+      "jumbo jets": "jet jumbo",
+      "Carats": "Karat",
+      "Milligrams": "Miligaraam",
+      "Centigrams": "santigram",
+      "Decigrams": "Desigram yi",
+      "Grams": "Gram",
+      "Dekagrams": "Dekagram",
+      "Hectograms": "Hektogram",
+      "Kilograms": "Kilo",
+      "Metric tonnes": "Tonne metrik",
+      "Ounces": "Ons",
+      "Pounds": "Livre",
+      "Stone": "Xeer",
+      "Short tons (US)": "Tonne yu gàtt (US)",
+      "Long tons (UK)": "Tonne yu gudd (UK)",
+      "snowflakes": "flocon de neige",
+      "soccer balls": "balon futbal",
+      "elephants": "ñay",
+      "whales": "baleine",
+      "Celsius": "Selsius",
+      "Fahrenheit": "Farenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Mililitre",
+      "Cubic centimeters": "Santimetru kib",
+      "Liters": "Litir",
+      "Cubic meters": "Metre kib",
+      "Teaspoons (US)": "Kuddu kafe (US)",
+      "Tablespoons (US)": "Kuddu yu mag (US)",
+      "Fluid ounces (US)": "Onsu ndox (US)",
+      "Cups (US)": "Kopp yi (US)",
+      "Pints (US)": "Pints (US)",
+      "Quarts (US)": "Quarts (US)",
+      "Gallons (US)": "galon (US)",
+      "Cubic inches": "pouce kib",
+      "Cubic feet": "Pied cube",
+      "Cubic yards": "Yard kib",
+      "Teaspoons (UK)": "Kuddu kafe (UK)",
+      "Tablespoons (UK)": "Kuddu yu mag (UK)",
+      "Fluid ounces (UK)": "Onsu ndox (UK)",
+      "Pints (UK)": "Pints (Royaume-Uni)",
+      "Quarts (UK)": "Quarts (Royaume-Uni)",
+      "Gallons (UK)": "Galon (UK)",
+      "coffee cups": "koppu kafe",
+      "bathtubs": "bain",
+      "swimming pools": "piscine",
+      "Square millimeters": "Milimetre kaare",
+      "Square centimeters": "Santimetr kaare",
+      "Square meters": "Meetr kaare",
+      "Hectares": "Hektar",
+      "Square kilometers": "Kilometre kaare",
+      "Square inches": "pouce kaare",
+      "Square feet": "Pied carré",
+      "Square yards": "Yard kaare",
+      "Acres": "Acres",
+      "Square miles": "Kilometre kaare",
+      "sheets of paper": "këyit",
+      "soccer fields": "terrain football",
+      "castles": "chateau",
+      "Pyeong": "Pyeong",
+      "Centimeters per second": "Santimetr ci segond bu nekk",
+      "Meters per second": "Metre ci seconde",
+      "Kilometers per hour": "Kilometre ci waxtu",
+      "Feet per second": "Tànk ci segond bu nekk",
+      "Miles per hour": "Kilometre ci waxtu",
+      "Knots": "Nouds",
+      "Mach": "Mach",
+      "turtles": "mbonaat",
+      "horses": "fas",
+      "jets": "jets",
+      "Watts": "watt",
+      "Kilowatts": "Kilowat",
+      "Horsepower (US)": "Fas (US)",
+      "Foot-pounds/minute": "Pied-livre/simili",
+      "BTUs/minute": "BTUs/simili",
+      "light bulbs": "ampoule",
+      "train engines": "motëri saxaar",
+      "Thermal calories": "Kalori yu tàng",
+      "Food calories": "kalori ñam",
+      "British thermal units": "Unité thermique britanik",
+      "Kilojoules": "Kilojoul",
+      "Kilowatt-hours": "Waxtu kilowatt",
+      "Electron volts": "Wolt elektronik",
+      "Joules": "Joul",
+      "Foot-pounds": "Livre-tànk",
+      "batteries": "batëri",
+      "bananas": "banaan",
+      "slices of cake": "daggitu gato",
+      "Bits": "Bits",
+      "Nibble": "Xam",
+      "Bytes": "Bait",
+      "Kilobits": "Kilobit",
+      "Kibibits": "Kibibit",
+      "Kilobytes": "Kilobyt",
+      "Kibibytes": "Kibibit",
+      "Megabits": "Megabit",
+      "Mebibits": "Mebibit",
+      "Megabytes": "Megabyte",
+      "Mebibytes": "Mebibit",
+      "Gigabits": "Gigabit",
+      "Gibibits": "Gibibit",
+      "Gigabytes": "Gigabyte",
+      "Gibibytes": "Gibibit",
+      "Terabits": "Terabit",
+      "Tebibits": "Tebibit",
+      "Terabytes": "Terabyte",
+      "Tebibytes": "Tebibit",
+      "Petabits": "Petabit",
+      "Pebibits": "Pebibit",
+      "Petabytes": "Petabyte",
+      "Pebibytes": "Pebibit",
+      "Exabits": "firnde",
+      "Exbibits": "Exposé",
+      "Exabytes": "Eksabyt",
+      "Exbibytes": "Exbibyte",
+      "Zetabits": "Zetabit",
+      "Zebibits": "Zebibit",
+      "Zetabytes": "Zetabyte",
+      "Zebibytes": "Zebibit",
+      "Yottabits": "Yotabit",
+      "Yobibits": "Yobibit",
+      "Yottabytes": "Yottabyte",
+      "Yobibytes": "Yobibit",
+      "floppy disks": "diskette",
+      "CDs": "CD yi",
+      "DVDs": "DVD",
+      "Atmospheres": "jawwu ji",
+      "Bars": "Bar",
+      "Kilopascals": "Kilopaskal",
+      "Millimeters of mercury": "Milimetru merkuri",
+      "Pascals": "Pascal",
+      "Pounds per square inch": "Livre ci puus kaare bu nekk",
+      "Degrees": "Diplôme",
+      "Radians": "Radian yi",
+      "Gradians": "Gradien yi",
+      "Microseconds": "Mikrosegond",
+      "Milliseconds": "Milisegond",
+      "Seconds": "Segond",
+      "Minutes": "Simili",
+      "Hours": "Waxtu yi",
+      "Days": "Fis yi",
+      "Weeks": "Ayu-bis yi",
+      "Years": "Ay at"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Dollar americain",
+      "Euro": "Euro",
+      "British Pound": "Livre britanik",
+      "Japanese Yen": "Yen japonais",
+      "Canadian Dollar": "Dollar canadien",
+      "Australian Dollar": "Dollar australien",
+      "Brazilian Real": "Real bu Bresil",
+      "Chilean Peso": "Peso bu Sili",
+      "Chinese Yuan": "Yuan chinois",
+      "Colombian Peso": "Peso Kolombi",
+      "Danish Krone": "Koronu Danemark",
+      "Egyptian Pound": "Livre Egyptien",
+      "Hong Kong Dollar": "Dollar bu Hong Kong",
+      "Indian Rupee": "Rupie indienne",
+      "Kenyan Shilling": "Shilling kenyaan",
+      "Mexican Peso": "Peso Mexik",
+      "Nigerian Naira": "Naira Nigeria",
+      "New Zealand Dollar": "Dollar bu Nouvelle-Zélande",
+      "Norwegian Krone": "Koronu Norvège",
+      "Philippine Piso": "Piso filipin",
+      "Polish Zloty": "Zloty polonais",
+      "Qatari Riyal": "Riyal Qatari",
+      "Saudi Riyal": "Riyal Saoudite",
+      "Singapore Dollar": "Dolar Singapuur",
+      "South African Rand": "Rand bu Afrique du Sud",
+      "South Korean Won": "Won bu Kore bu bët Saalum",
+      "Swedish Krona": "Corona suédois",
+      "Swiss Franc": "Franc suisse",
+      "Thai Baht": "baht thaï",
+      "Turkish Lira": "Lira turc",
+      "Turkmenistani Manat": "Turkmenistan",
+      "Ugandan Shilling": "Shilling ugandaan",
+      "Ukrainian Hryvnia": "Hryvnia ukraine",
+      "UAE Dirham": "Dirham UAE",
+      "Uruguayan Peso": "Peso uruguay",
+      "Uzbekistani Som": "Som uzbékistan",
+      "Vanuatu Vatu": "Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "Bolivar Soberano",
+      "Vietnamese Dong": "Dong vietnamien",
+      "Yemeni Rial": "Rial Yemen"
+    },
+    "labels": {
+      "United States - Dollar": "Etats Unis - Dollar",
+      "Europe - Euro": "Orop - Euro",
+      "United Kingdom - Pound": "Royaume-Uni - Livre",
+      "Japan - Yen": "Japon - Yen",
+      "Canada - Dollar": "Kanada - Dollar",
+      "Australia - Dollar": "Australie - Dollar",
+      "Brazil - Real": "Bresil - Réal",
+      "Chile - Peso": "Sili - Peso",
+      "China - Yuan Renminbi": "Chine - Yuan renminbi",
+      "Colombia - Peso": "Kolombi - peso",
+      "Denmark - Krone": "Danemark - Korone",
+      "Egypt - Pound": "Egypt - Livre",
+      "Hong Kong SAR - Dollar": "Hong Kong SAR - Dollar",
+      "India - Rupee": "Inde - Rupie",
+      "Kenya - Shilling": "Kenya - Shilling",
+      "Mexico - Peso": "Mexico - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "Nouvelle-Zélande - Dollar",
+      "Norway - Krone": "Norvège - Korone",
+      "Philippines - Piso": "Piso",
+      "Poland - Zloty": "Pologne - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "Arabie Saoudite - Riyal",
+      "Singapore - Dollar": "Singapuur - Dollar",
+      "South Africa - Rand": "Afrique du Sud - Rand",
+      "South Korea - Won": "Corée du Sud - Won",
+      "Sweden - Krona": "Suède - Korona",
+      "Switzerland - Franc": "Suisse - Franc",
+      "Thailand - Baht": "Thaïlande - Baht",
+      "Turkey - Lira": "Turquie - Lira",
+      "Turkmenistan - Manat": "Turkménistan - manat",
+      "Uganda - Shilling": "Uganda - Shilling",
+      "Ukraine - Hryvnia": "Ukraine - Hryvnia",
+      "United Arab Emirates - Dirham": "Emirats Arabes Unis - Dirham",
+      "Uruguay - Peso": "Uruguay - Peso",
+      "Uzbekistan - Som": "Uzbekistan - Som",
+      "Vanuatu - Vatu": "Vanuatu - Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolivar Soberano",
+      "Vietnam - Dong": "Vietnam - Dong",
+      "Yemen - Rial": "Yemen - Rial"
+    }
+  }
+}

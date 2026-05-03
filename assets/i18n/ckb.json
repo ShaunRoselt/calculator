@@ -1,0 +1,624 @@
+{
+  "app": {
+    "title": "حاسیبە",
+    "name": "حاسیبە"
+  },
+  "common": {
+    "back": "گەڕانەوە",
+    "backspace": "بۆشایی پشتەوە",
+    "closeSidePanel": "پانێڵی دابخە"
+  },
+  "converter": {
+    "unitConverter": "گۆڕینی یەکە",
+    "title": "گۆڕینی یەکە",
+    "builtInCollections": "کۆکردنەوە بنیات نراوەکان",
+    "category": "پۆل",
+    "from": "لە",
+    "to": "بۆ",
+    "inputValue": "بەها بۆ گۆڕین",
+    "convertedValue": "بەهای گۆڕاو",
+    "swapUnits": "یەکەکانی گۆڕینەوە",
+    "keypad": "کیپادی گۆڕین",
+    "unit": "یەکە",
+    "unitOptions": "هەڵبژاردەکانی یەکە",
+    "currency": {
+      "updatingRates": "نوێکردنەوەی ڕێژەی...",
+      "updateRates": "ڕێژەکانی نوێکردنەوە",
+      "keypad": "کیپادی دراو",
+      "currency": "دراو",
+      "options": "هەڵبژاردەکانی دراو",
+      "updated": "نوێکرایەوە {timestamp}",
+      "status": {
+        "mockNote": "ڕێژەی ئاماژەی گاڵتەجاڕی بۆ دیمۆی ئەپی سەربەخۆ.",
+        "fetching": "وەرگرتنی نوێترین ڕێژەی ئاماژەی USD...",
+        "liveRatesLoaded": "ڕێژەی ڕاستەوخۆ لە ExchangeRate-API بارکراوە.",
+        "liveUpdateUnavailable": "نوێکردنەوەی ڕاستەوخۆ بەردەست نییە. ڕێژەی دیمۆ نوێکراوەتەوە لە ناوخۆدا."
+      }
+    },
+    "aboutEqualTo": "نزیکەی یەکسانە بە"
+  },
+  "errors": {
+    "invalidInput": "هاتنە ژوورەوەی نادروست",
+    "cannotDivideByZero": "ناتوانرێت دابەش بکرێت بەسەر سفردا",
+    "cannotModuloByZero": "ناتوانرێت بە سفر مۆدیۆلۆ بکات",
+    "invalidProgrammerOperation": "کارپێکردنی نادروست",
+    "overflow": "ئەنجامی زۆر گەورە"
+  },
+  "date": {
+    "calculationMode": "دۆخی حیسابکردن",
+    "from": "لە",
+    "to": "بۆ",
+    "results": {
+      "difference": "جیاوازی",
+      "sameDates": "هەمان بەروارەکان",
+      "date": "بەروار"
+    },
+    "calculationModeOptions": "هەڵبژاردەکانی دۆخی حیسابکردن",
+    "mode": {
+      "difference": "جیاوازی",
+      "shift": "گۆڕانکاری"
+    },
+    "operation": "ئۆپەراسیۆن",
+    "add": "زیادکردن",
+    "subtract": "کەمکردنەوە",
+    "years": "ساڵان",
+    "months": "مانگەکان",
+    "days": "ڕۆژەکان",
+    "chooseDate": "بەروار هەڵبژێرە",
+    "previousMonth": "مانگی پێشوو",
+    "nextMonth": "مانگی داهاتوو",
+    "duration": {
+      "year": {
+        "one": "{count} ساڵ",
+        "other": "{count} ساڵ"
+      },
+      "month": {
+        "one": "{count} مانگ",
+        "other": "{count} مانگ"
+      },
+      "week": {
+        "one": "{count} هەفتە",
+        "other": "{count} هەفتە"
+      },
+      "day": {
+        "one": "{count} ڕۆژ",
+        "other": "{count} ڕۆژ"
+      }
+    },
+    "history": {
+      "differenceBetween": "جیاوازی نێوان {from} و {to}",
+      "addTo": "زیادکردنی {duration} بۆ {date}",
+      "subtractFrom": "{duration} لە {date} کەم بکەرەوە"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "دەربڕینی تیشک خراو بپشکنە",
+    "enterExpression": "دەربڕینێک دابنێ",
+    "canvas": "کانڤاسی گرافیک",
+    "stopTracing": "وازهێنان لە شوێنپێهەڵگرتن",
+    "startTracing": "دەستپێکردنی شوێنپێهەڵگرتن",
+    "share": "بەشداری بکە",
+    "options": "هەڵبژاردنەکان",
+    "zoomIn": "زووم بکە",
+    "zoomInLabel": "زووم بکە",
+    "zoomOut": "زۆر کەم بکەرەوە",
+    "zoomOutLabel": "زۆر کەم بکەرەوە",
+    "refreshViewAutomatically": "دیمەنەکە بە شێوەیەکی ئۆتۆماتیکی نوێ بکەرەوە",
+    "view": "بینین",
+    "expressions": "دەربڕینەکان",
+    "mobileView": "دیمەنی مۆبایل",
+    "showGraph": "گرافیک پیشان بدە",
+    "showExpressions": "دەربڕینەکان پیشان بدە",
+    "backToFunctionList": "گەڕانەوە بۆ لیستی فەنکشنەکان",
+    "window": "پەنجەرە",
+    "resetView": "ڕێست دیمەن",
+    "units": "یەکەکان",
+    "radians": "ڕادیەکان",
+    "degrees": "پلە",
+    "gradians": "گرادیانەکان",
+    "lineThickness": "ئەستووری هێڵ",
+    "theme": "تەوەرە",
+    "alwaysLight": "هەمیشە سووک",
+    "matchAppTheme": "هاوتاکردنی تەوەرەی ئەپەکە",
+    "groups": {
+      "inequalities": "نایەکسانی",
+      "trigonometry": "سێگۆشەیی",
+      "function": "کارکرد"
+    },
+    "functions": "کارەکان",
+    "showEquation": "هاوکێشە پیشان بدە",
+    "hideEquation": "هاوکێشە بشارەوە",
+    "lineOptions": "هەڵبژاردەکانی هێڵ",
+    "color": "ڕەنگ",
+    "style": "ستایل",
+    "analysis": {
+      "title": "شیکاری",
+      "domain": "دۆمەین",
+      "range": "مەودا",
+      "xIntercept": "x-بڕبڕین",
+      "yIntercept": "y-بڕبڕین",
+      "minima": "کەمترین",
+      "maxima": "ماکسیما",
+      "inflectionPoints": "خاڵەکانی وەرچەرخان",
+      "verticalAsymptotes": "ئەسیمپتۆتی ڕاست",
+      "horizontalAsymptotes": "ئاسۆیی نیشانە",
+      "obliqueAsymptotes": "ئەسیمپتۆتە مەیلەکان",
+      "parity": "یەکسانی",
+      "period": "ماوە",
+      "monotonicity": "یەکدەنگی",
+      "domainNone": "هیچ سنووردارکردنی دۆمەین نییە",
+      "rangeNone": "هیچ سنووردارکردنی مەودا نییە",
+      "xInterceptNone": "هیچ x-intercepts نییە",
+      "yInterceptNone": "هیچ y-intercepts نییە",
+      "minimaNone": "هیچ کەمترین شت نییە",
+      "maximaNone": "هیچ ماکسیما نییە",
+      "inflectionNone": "هیچ خاڵێکی وەرچەرخان نییە",
+      "verticalAsymptotesNone": "هیچ نیشانەیەکی ڕاست نییە",
+      "horizontalAsymptotesNone": "هیچ نیشانەیەکی ئاسۆیی نییە",
+      "obliqueAsymptotesNone": "هیچ نیشانەیەکی مەیل نییە",
+      "parityUnknown": "نازانرێت",
+      "parityOdd": "نامۆ",
+      "parityEven": "تەنانەت",
+      "parityNeither": "هیچ کامیان",
+      "periodicityUnknown": "نازانرێت",
+      "periodicityNotPeriodic": "وەرزی نییە",
+      "monotonicityConstant": "نەگۆڕ",
+      "monotonicityIncreasing": "زیادبوونە",
+      "monotonicityDecreasing": "کەمبوونەوە",
+      "monotonicityUnknown": "نازانرێت",
+      "monotonicityError": "ناتوانرێت دیاری بکات",
+      "featureTooComplexPlural": "زۆر ئاڵۆزە بۆ شیکردنەوە",
+      "analysisCouldNotBePerformed": "شیکاری نەتوانرا ئەنجام بدرێت",
+      "analysisNotSupported": "شیکاری پشتگیری ناکرێت",
+      "variableIsNotX": "گۆڕاوە x نییە"
+    },
+    "plottingExpressions": "پلۆتکردنی دەربڕینەکانی {count}",
+    "xMin": "X-Min",
+    "xMax": "X-Max",
+    "yMin": "Y-Min",
+    "yMax": "Y-Max",
+    "selectExpression": "دەربڕین {index} هەڵبژێرە",
+    "expressionIndex": "دەربڕین {index}",
+    "analyzeFunction": "شیکاری فەنکشن",
+    "changeEquationStyle": "شێوازی هاوکێشە بگۆڕە",
+    "removeEquation": "هاوکێشە لاببە",
+    "lineStyle": {
+      "solid": "ستایلی هێڵی ڕەق",
+      "dash": "ستایلی هێڵی داش",
+      "dot": "شێوازی هێڵی خاڵ"
+    }
+  },
+  "history": {
+    "empty": "مێژوو بەتاڵە",
+    "clearAll": "هەموویان پاک بکەرەوە",
+    "clear": "مێژوو پاک بکەرەوە",
+    "title": "مێژوو",
+    "andMemory": "مێژوو و یادەوەری",
+    "aria": {
+      "historyPanel": "پانێڵی مێژوو",
+      "historyAndMemoryPanel": "پانێڵی مێژوو و بیرەوەری"
+    },
+    "closeFlyout": "مێژوو دابخە",
+    "openFlyout": "مێژوو بکەرەوە"
+  },
+  "memory": {
+    "empty": "بیرەوەری بەتاڵە",
+    "clearItem": "بابەتی پاک بکەرەوە",
+    "addCurrentValue": "بەهای ئێستا زیاد بکە",
+    "subtractCurrentValue": "بەهای ئێستا کەم بکەرەوە",
+    "clearAll": "هەموویان پاک بکەرەوە",
+    "clear": "بیرگە پاک بکەرەوە",
+    "title": "بیرەوەری",
+    "controls": "کۆنتڕۆڵەکانی بیرگە",
+    "tooltips": {
+      "clearAll": "هەموو بیرگەیەک پاک بکەرەوە",
+      "recall": "وەبیرهێنانەوە لە بیرگە",
+      "add": "زیادکردن بۆ بیرگە",
+      "subtract": "کەمکردنەوە لە بیرگە",
+      "store": "لە بیرگەدا هەڵبگرە"
+    },
+    "recallValue": "بیرهێنانەوەی بیرگە {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "گەشتکردن",
+      "closeNavigation": "گەشتکردن دابخە",
+      "openNavigation": "گەشتکردن بکەرەوە"
+    },
+    "groups": {
+      "calculator": "حاسیبە",
+      "converter": "گۆڕانکاری"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "پانێڵی فلیپی بیت",
+    "baseReadouts": "خوێندنەوەی بنەڕەتی",
+    "surfaceMode": "دۆخی ڕووکار",
+    "fullKeypad": "کیپادی تەواو",
+    "showKeypad": "کیپاد پیشان بدە",
+    "bitTogglingKeypad": "کیپادی گۆڕینی بیت",
+    "showBitView": "دیمەنی بیت پیشان بدە",
+    "wordSize": "قەبارەی وشە",
+    "bitwise": "بە شێوەیەکی بچووک",
+    "bitShift": "گۆڕینی بیت"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "سێگۆشەیی",
+      "function": "کارکرد",
+      "functionsAria": "کارەکان",
+      "trigonometricFunctionsAria": "فەنکشنەکانی سێگۆشەیی",
+      "angleUnit": "یەکەیەکی گۆشە {value}"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "دەرکەوتن",
+      "themeTitle": "تەوەرە",
+      "themeDescription": "ڕەنگێک هەڵبژێرە",
+      "light": "ڕووناکی",
+      "dark": "تاریک",
+      "blue": "شین",
+      "green": "سەوز",
+      "system": "سیستەم"
+    },
+    "language": {
+      "group": "زمان",
+      "title": "زمان",
+      "description": "زمانی دڵخوازی خۆت هەڵبژێرە"
+    },
+    "about": {
+      "group": "دەربارەی"
+    },
+    "feedback": "فیدباک بنێرە",
+    "contribute": {
+      "prefix": "بەشداریکردن لەسەر",
+      "link": "گیت هاب",
+      "suffix": "بۆ یارمەتیدان لە باشترکردنی ئەم حاسیبە"
+    },
+    "links": {
+      "repository": "کۆگای پڕۆژە",
+      "readme": "README",
+      "license": "مۆڵەتی MIT"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "ستاندارد",
+      "subtitle": "هەڵسەنگاندنی دەستبەجێی کلاسیک"
+    },
+    "scientific": {
+      "label": "زانستی",
+      "subtitle": "ئۆپەراتۆرەکان، فەنکشنەکان، و پشتگیری دەربڕین"
+    },
+    "graphing": {
+      "label": "گرافیککردن",
+      "subtitle": "دەربڕینێکی سادە لەسەر فڕۆکەیەکی کارتێزی نیشان بدە"
+    },
+    "programmer": {
+      "label": "پرۆگرامەر",
+      "subtitle": "بیرکاری ژمارە تەواو لەگەڵ گۆڕینی بنەڕەتی"
+    },
+    "date": {
+      "label": "حیسابکردنی بەروار",
+      "subtitle": "ماوە و بەرواری شۆفتەکان بدۆزەرەوە"
+    },
+    "currency": {
+      "label": "دراو",
+      "subtitle": "گۆڕینی نرخی ئاڵوگۆڕی ساختە"
+    },
+    "volume": {
+      "label": "بەرگی",
+      "subtitle": "گۆڕینی پێوانەکانی قەبارە"
+    },
+    "length": {
+      "label": "درێژی",
+      "subtitle": "گۆڕینی یەکەکانی مەودا و درێژی"
+    },
+    "weight": {
+      "label": "کێش و بارستە",
+      "subtitle": "گۆڕینی یەکەکانی کێش و بارستە"
+    },
+    "temperature": {
+      "label": "پلەی گەرمی",
+      "subtitle": "گۆڕینی پێوەرەکانی پلەی گەرمی"
+    },
+    "energy": {
+      "label": "وزە",
+      "subtitle": "گۆڕینی پێوانەکانی وزە"
+    },
+    "area": {
+      "label": "ناوچە",
+      "subtitle": "گۆڕینی پێوانەکانی ڕووبەر"
+    },
+    "speed": {
+      "label": "خێرایی",
+      "subtitle": "گۆڕینی پێوانەکانی خێرایی"
+    },
+    "time": {
+      "label": "کات",
+      "subtitle": "گۆڕینی پێوانەکانی کات"
+    },
+    "power": {
+      "label": "دەسەڵات",
+      "subtitle": "گۆڕینی پێوانەکانی هێز"
+    },
+    "data": {
+      "label": "داتا",
+      "subtitle": "گۆڕینی یەکەکانی هەڵگرتنی دیجیتاڵی"
+    },
+    "pressure": {
+      "label": "فشار",
+      "subtitle": "گۆڕینی یەکەکانی پەستان"
+    },
+    "angle": {
+      "label": "گۆشە",
+      "subtitle": "گۆڕینی پێوانەکانی گۆشە"
+    },
+    "settings": {
+      "label": "ڕێکخستنەکان",
+      "subtitle": "زانیاری دەرکەوتن و ئەپ"
+    }
+  },
+  "categories": {
+    "Currency": "دراو",
+    "Volume": "بەرگی",
+    "Length": "درێژی",
+    "Mass": "بارستە",
+    "Temperature": "پلەی گەرمی",
+    "Energy": "وزە",
+    "Area": "ناوچە",
+    "Speed": "خێرایی",
+    "Time": "کات",
+    "Power": "دەسەڵات",
+    "Data": "داتا",
+    "Pressure": "فشار",
+    "Angle": "گۆشە"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "ئەنگسترۆمس",
+      "Nanometers": "نانۆمەترەکان",
+      "Microns": "مایکرۆنەکان",
+      "Millimeters": "ملیمەتر",
+      "Centimeters": "سانتیمەتر",
+      "Meters": "مەترەکان",
+      "Kilometers": "کیلۆمەتر",
+      "Inches": "ئینج",
+      "Feet": "پێ",
+      "Yards": "یاردەکان",
+      "Miles": "مایل",
+      "Nautical miles": "میلە دەریاییەکان",
+      "paperclips": "کلیپی کاغەز",
+      "hands": "دەستەکان",
+      "jumbo jets": "جامبۆ جێتەکان",
+      "Carats": "قەرات",
+      "Milligrams": "میلیگرام",
+      "Centigrams": "سانتیگرامەکان",
+      "Decigrams": "دەسیگرامەکان",
+      "Grams": "گرام",
+      "Dekagrams": "دێکاگرامەکان",
+      "Hectograms": "هێکتۆگرامەکان",
+      "Kilograms": "کیلۆگرامەکان",
+      "Metric tonnes": "تۆنی مەتری",
+      "Ounces": "ئۆنسە",
+      "Pounds": "پاوند",
+      "Stone": "بەرد",
+      "Short tons (US)": "تۆنی کورت (ئەمریکی)",
+      "Long tons (UK)": "تۆن درێژ (بەریتانیا)",
+      "snowflakes": "دەنکە بەفر",
+      "soccer balls": "تۆپی تۆپی پێ",
+      "elephants": "فیلەکان",
+      "whales": "نەهەنگەکان",
+      "Celsius": "سێلسیۆس",
+      "Fahrenheit": "فارنهایت",
+      "Kelvin": "کێلڤین",
+      "Milliliters": "ملیلیتر",
+      "Cubic centimeters": "سانتیمەتر سێجا",
+      "Liters": "لیتر",
+      "Cubic meters": "مەتر سێجا",
+      "Teaspoons (US)": "کەوچکی چا (ئەمریکی)",
+      "Tablespoons (US)": "کەوچکی چێشت (ئەمریکی)",
+      "Fluid ounces (US)": "ئۆنسەی شلە (ئەمریکی)",
+      "Cups (US)": "کوپەکان (ئەمریکی)",
+      "Pints (US)": "پینت (ئەمریکی)",
+      "Quarts (US)": "کوارت (ئەمریکی)",
+      "Gallons (US)": "گالۆن (ئەمریکی)",
+      "Cubic inches": "ئینج سێجا",
+      "Cubic feet": "پێ سێجا",
+      "Cubic yards": "یاردی سێگۆشە",
+      "Teaspoons (UK)": "کەوچکی چا (بەریتانیا)",
+      "Tablespoons (UK)": "کەوچکی چێشت (بەریتانیا)",
+      "Fluid ounces (UK)": "ئۆنسەی شلە (بەریتانیا)",
+      "Pints (UK)": "پینت (بەریتانیا)",
+      "Quarts (UK)": "کوارتس (بەریتانیا)",
+      "Gallons (UK)": "گالۆن (بەریتانیا)",
+      "coffee cups": "کوپەکانی قاوە",
+      "bathtubs": "بانیۆ",
+      "swimming pools": "مەلەوانگە",
+      "Square millimeters": "ملیمەتر چوارگۆشە",
+      "Square centimeters": "سانتیمەتر چوارگۆشە",
+      "Square meters": "مەتر چوارگۆشە",
+      "Hectares": "هێکتار",
+      "Square kilometers": "کیلۆمەتر چوارگۆشە",
+      "Square inches": "ئینج چوارگۆشە",
+      "Square feet": "پێی چوارگۆشە",
+      "Square yards": "یاردی چوارگۆشە",
+      "Acres": "دۆنم",
+      "Square miles": "میلی چوارگۆشە",
+      "sheets of paper": "لاپەڕەکانی کاغەز",
+      "soccer fields": "یاریگاکانی تۆپی پێ",
+      "castles": "قەڵاکان",
+      "Pyeong": "پیۆنگ",
+      "Centimeters per second": "سانتیمەتر لە چرکەیەکدا",
+      "Meters per second": "مەتر لە چرکەیەکدا",
+      "Kilometers per hour": "کیلۆمەتر لە کاتژمێرێکدا",
+      "Feet per second": "پێ لە چرکەیەکدا",
+      "Miles per hour": "مایل لە کاتژمێرێکدا",
+      "Knots": "گرێکان",
+      "Mach": "ماخ",
+      "turtles": "کیسەڵەکان",
+      "horses": "ئەسپەکان",
+      "jets": "جێتەکان",
+      "Watts": "وات",
+      "Kilowatts": "کیلۆوات",
+      "Horsepower (US)": "هێزی ئەسپ (ئەمریکی)",
+      "Foot-pounds/minute": "پێ-پاوند/خولەک",
+      "BTUs/minute": "BTUs/خولەک",
+      "light bulbs": "گڵۆپی ڕووناکی",
+      "train engines": "بزوێنەری شەمەندەفەر",
+      "Thermal calories": "کالۆری گەرمی",
+      "Food calories": "کالۆری خۆراک",
+      "British thermal units": "یەکەکانی گەرمی بەریتانی",
+      "Kilojoules": "کیلۆجۆلز",
+      "Kilowatt-hours": "کاتژمێرەکانی کیلۆوات",
+      "Electron volts": "ڤۆڵتی ئەلیکترۆنی",
+      "Joules": "جولز",
+      "Foot-pounds": "پێ-پاوند",
+      "batteries": "پاترییەکان",
+      "bananas": "مۆز",
+      "slices of cake": "پاشەکانی کێک",
+      "Bits": "بیتەکان",
+      "Nibble": "نیبل",
+      "Bytes": "بایت",
+      "Kilobits": "کیلۆبیتس",
+      "Kibibits": "کیبیبیتەکان",
+      "Kilobytes": "کیلۆبایت",
+      "Kibibytes": "کیبیبایت",
+      "Megabits": "مێگابیت",
+      "Mebibits": "مێبیبیتس",
+      "Megabytes": "مێگابایت",
+      "Mebibytes": "مێبیبایت",
+      "Gigabits": "گیگابیتس",
+      "Gibibits": "گیبیبیتس",
+      "Gigabytes": "گیگابایت",
+      "Gibibytes": "گیبی بایت",
+      "Terabits": "تێرابیتس",
+      "Tebibits": "تێبیبیتەکان",
+      "Terabytes": "تێرابایت",
+      "Tebibytes": "تێبیبایت",
+      "Petabits": "پێتابیتس",
+      "Pebibits": "پێبیبیتەکان",
+      "Petabytes": "پێتابایت",
+      "Pebibytes": "پێبیبایت",
+      "Exabits": "Exabits",
+      "Exbibits": "ئێکسبیبیتس",
+      "Exabytes": "ئێگزابایت",
+      "Exbibytes": "ئێکسبیبایت",
+      "Zetabits": "زیتابیتەکان",
+      "Zebibits": "زێبیبیتس",
+      "Zetabytes": "زیتابایت",
+      "Zebibytes": "زێبی بایت",
+      "Yottabits": "یۆتابیتس",
+      "Yobibits": "یۆبیبیتس",
+      "Yottabytes": "یۆتابایت",
+      "Yobibytes": "یۆبیبایت",
+      "floppy disks": "فلاپی دیسکەکان",
+      "CDs": "سی دیەکان",
+      "DVDs": "دیڤیدیەکان",
+      "Atmospheres": "کەش و هەواکان",
+      "Bars": "بارەکان",
+      "Kilopascals": "کیلۆپاسکاڵس",
+      "Millimeters of mercury": "ملیمەتر جیوە",
+      "Pascals": "پاسکاڵس",
+      "Pounds per square inch": "پاوند بۆ هەر ئینجێکی چوارگۆشە",
+      "Degrees": "پلە",
+      "Radians": "ڕادیەکان",
+      "Gradians": "گرادیانەکان",
+      "Microseconds": "مایکرۆ چرکە",
+      "Milliseconds": "میلی چرکە",
+      "Seconds": "چرکە",
+      "Minutes": "خولەک",
+      "Hours": "کاتژمێرەکان",
+      "Days": "ڕۆژەکان",
+      "Weeks": "هەفتەکان",
+      "Years": "ساڵان"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "دۆلاری ئەمریکی",
+      "Euro": "یۆرۆ",
+      "British Pound": "پاوەندی بەریتانی",
+      "Japanese Yen": "یێنی ژاپۆنی",
+      "Canadian Dollar": "دۆلاری کەنەدی",
+      "Australian Dollar": "دۆلاری ئوسترالی",
+      "Brazilian Real": "ڕیاڵ بەڕازیلی",
+      "Chilean Peso": "پێسۆی شیلی",
+      "Chinese Yuan": "یوانی چینی",
+      "Colombian Peso": "پێسۆی کۆڵۆمبیا",
+      "Danish Krone": "دانیمارکی کرۆن",
+      "Egyptian Pound": "پاوەندی میسری",
+      "Hong Kong Dollar": "دۆلاری هۆنگ کۆنگ",
+      "Indian Rupee": "روپی هیندی",
+      "Kenyan Shilling": "شیلینگی کینیا",
+      "Mexican Peso": "پێسۆی مەکسیکی",
+      "Nigerian Naira": "نایرای نەیجیری",
+      "New Zealand Dollar": "دۆلاری نیوزلەندا",
+      "Norwegian Krone": "کرۆنی نەرویجی",
+      "Philippine Piso": "فیلیپین پیسۆ",
+      "Polish Zloty": "زلۆتی پۆڵەندی",
+      "Qatari Riyal": "قەتەری ڕیال",
+      "Saudi Riyal": "ڕیاڵی سعودیە",
+      "Singapore Dollar": "دۆلاری سەنگافورە",
+      "South African Rand": "ڕاندی ئەفریقای باشوور",
+      "South Korean Won": "کۆریای باشوور وۆن",
+      "Swedish Krona": "کرۆنای سویدی",
+      "Swiss Franc": "فرانکی سویسری",
+      "Thai Baht": "باتی تایلەندی",
+      "Turkish Lira": "لیرەی تورکی",
+      "Turkmenistani Manat": "تورکمەنستانی مانات",
+      "Ugandan Shilling": "شیلینگی ئۆگاندا",
+      "Ukrainian Hryvnia": "هریڤنیای ئۆکراینی",
+      "UAE Dirham": "ئیمارات درهەم",
+      "Uruguayan Peso": "پێسۆی ئۆرۆگوای",
+      "Uzbekistani Som": "ئۆزبەکستانی سۆم",
+      "Vanuatu Vatu": "ڤانواتو ڤاتو",
+      "Venezuelan Bolivar Soberano": "ڤەنزوێلا بۆلیڤار سۆبێرانۆ",
+      "Vietnamese Dong": "دۆنگی ڤێتنامیی",
+      "Yemeni Rial": "ڕیالی یەمەن"
+    },
+    "labels": {
+      "United States - Dollar": "ئەمریکا - دۆلار",
+      "Europe - Euro": "ئەوروپا - یۆرۆ",
+      "United Kingdom - Pound": "شانشینی یەکگرتوو - پاوەند",
+      "Japan - Yen": "ژاپۆن - یێن",
+      "Canada - Dollar": "کەنەدا - دۆلار",
+      "Australia - Dollar": "ئۆسترالیا - دۆلار",
+      "Brazil - Real": "بەڕازیل - ڕیاڵ",
+      "Chile - Peso": "شیلی - پێسۆ",
+      "China - Yuan Renminbi": "چین - یوان ڕێنمینبی",
+      "Colombia - Peso": "کۆلۆمبیا - پێسۆ",
+      "Denmark - Krone": "دانیمارک - کرۆن",
+      "Egypt - Pound": "میسر - پاوەند",
+      "Hong Kong SAR - Dollar": "هۆنگ کۆنگ SAR - دۆلار",
+      "India - Rupee": "هیندستان - ڕوپیە",
+      "Kenya - Shilling": "کینیا - شیلین",
+      "Mexico - Peso": "مەکسیک - پێسۆ",
+      "Nigeria - Naira": "نەیجیریا - نایرا",
+      "New Zealand - Dollar": "نیوزلەندا - دۆلار",
+      "Norway - Krone": "نەرویج - کرۆن",
+      "Philippines - Piso": "فیلیپین - پیسۆ",
+      "Poland - Zloty": "پۆڵەندا - زلۆتی",
+      "Qatar - Riyal": "قەتەر - ڕیال",
+      "Saudi Arabia - Riyal": "سعودیە - ڕیال",
+      "Singapore - Dollar": "سەنگافورە - دۆلار",
+      "South Africa - Rand": "ئەفریقای باشوور - ڕاند",
+      "South Korea - Won": "کۆریای باشوور - بردەوە",
+      "Sweden - Krona": "سوید - کرۆنا",
+      "Switzerland - Franc": "سویسرا - فرانک",
+      "Thailand - Baht": "تایلەند - بات",
+      "Turkey - Lira": "تورکیا - لیرە",
+      "Turkmenistan - Manat": "تورکمەنستان - مانات",
+      "Uganda - Shilling": "ئۆگاندا - شیلین",
+      "Ukraine - Hryvnia": "ئۆکراین - هریڤنیا",
+      "United Arab Emirates - Dirham": "ئیماراتی یەکگرتووی عەرەبی - درهەم",
+      "Uruguay - Peso": "ئۆرۆگوای - پێسۆ",
+      "Uzbekistan - Som": "ئۆزبەکستان - سۆم",
+      "Vanuatu - Vatu": "ڤانواتو - ڤاتو",
+      "Venezuela - Bolívar Soberano": "ڤەنزوێلا - بۆلیڤار سۆبێرانۆ",
+      "Vietnam - Dong": "ڤێتنام - دۆنگ",
+      "Yemen - Rial": "یەمەن - ڕیال"
+    }
+  }
+}

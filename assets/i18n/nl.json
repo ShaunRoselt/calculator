@@ -258,7 +258,9 @@
       "themeDescription": "Kies een kleurenschema",
       "light": "Licht",
       "dark": "Donker",
-      "system": "Systeem"
+      "system": "Systeem",
+      "blue": "Blauw",
+      "green": "Groen"
     },
     "language": {
       "group": "Taal",
@@ -517,7 +519,7 @@
       "Atmospheres": "Atmosfeer",
       "Bars": "Bar",
       "Kilopascals": "Kilopascal",
-      "Millimeters of mercury ": "Millimeter kwik",
+      "Millimeters of mercury": "Millimeter kwik",
       "Pascals": "Pascal",
       "Pounds per square inch": "Pond per vierkante inch",
       "Degrees": "Graden",

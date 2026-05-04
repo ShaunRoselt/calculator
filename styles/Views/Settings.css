@@ -41,8 +41,14 @@
   align-items: center;
   gap: 14px;
   padding: 16px 18px;
+  border-radius: inherit;
   cursor: pointer;
   list-style: none;
+}
+
+.settings-expander[open] .settings-expander-summary {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .settings-expander-summary::-webkit-details-marker {

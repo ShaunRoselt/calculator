@@ -28,7 +28,9 @@
   top: 54px;
   right: 12px;
   z-index: 5;
-  width: min(280px, calc(100% - 24px));
+  box-sizing: border-box;
+  width: min(404px, calc(100% - 24px));
+  max-width: calc(100% - 24px);
   max-height: calc(100% - 66px);
   overflow-x: hidden;
   overflow-y: auto;
@@ -107,13 +109,14 @@
 .graph-settings-choice {
   min-width: 0;
   min-height: 36px;
-  padding: 0 0.45rem;
+  padding: 0 0.75rem;
   border-radius: 4px;
   border: 1px solid var(--border-subtle);
   background: var(--surface-hover);
   color: inherit;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .graph-settings-choice.active {
@@ -907,7 +910,7 @@
     top: 46px;
     right: 8px;
     bottom: 8px;
-    width: min(280px, calc(100% - 16px));
+    width: min(404px, calc(100% - 16px));
     max-height: calc(100% - 54px);
   }
 

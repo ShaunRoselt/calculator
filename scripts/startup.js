@@ -1,9 +1,9 @@
 const NERDAMER_LOCAL_URL = new URL('../assets/vendor/nerdamer/all.min.js', import.meta.url).href;
 const SERVICE_WORKER_URL = new URL('../service-worker.js', import.meta.url).href;
-const LANGUAGE_STORAGE_KEY = 'calculator-language';
 
+import { STORAGE_KEYS } from './config.js';
 import { initI18n } from './i18n.js';
-import { initThemes } from './themes.js';
+import { prepareThemesForLaunch } from './themes.js';
 import { getUrlPreferenceOverrides } from './urlParams.js';
 
 async function loadScript(sourceUrl, errorMessage) {
@@ -40,8 +40,18 @@ async function registerServiceWorker() {
   }
 }
 
+function getSystemThemeId() {
+  return typeof window.matchMedia === 'function' && window.matchMedia('(prefers-color-scheme: light)').matches
+    ? 'light'
+    : 'dark';
+}
+
+const urlPreferenceOverrides = getUrlPreferenceOverrides();
+const themePreference = urlPreferenceOverrides.theme || localStorage.getItem(STORAGE_KEYS.theme) || 'system';
+const languagePreference = urlPreferenceOverrides.language || localStorage.getItem(STORAGE_KEYS.language) || 'en';
+
 await loadNerdamer();
-await initThemes();
-await initI18n(getUrlPreferenceOverrides().language || localStorage.getItem(LANGUAGE_STORAGE_KEY) || 'en');
+await prepareThemesForLaunch(themePreference, getSystemThemeId());
+await initI18n(languagePreference);
 void registerServiceWorker();
 await import('./app.js');

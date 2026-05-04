@@ -54,7 +54,8 @@ import {
   applyThemeToElement,
   getResolvedAppThemeId,
   isSupportedTheme,
-  normalizeGraphThemeSetting
+  normalizeGraphThemeSetting,
+  preloadAllThemes
 } from './themes.js';
 import { getUrlPreferenceOverrides } from './urlParams.js';
 
@@ -89,6 +90,7 @@ computeDateResults();
 syncConverterValues('from');
 render();
 installTooltipHandling();
+void preloadRemainingThemes();
 
 document.addEventListener('click', handleClick);
 document.addEventListener('change', handleChange);
@@ -104,6 +106,21 @@ systemThemeMedia?.addEventListener?.('change', () => {
     render();
   }
 });
+
+async function preloadRemainingThemes() {
+  try {
+    await preloadAllThemes();
+    if (shouldRefreshForThemeCatalog()) {
+      render();
+    }
+  } catch (error) {
+    console.warn('Unable to preload the full theme catalog.', error);
+  }
+}
+
+function shouldRefreshForThemeCatalog() {
+  return state.mode === 'settings' || (state.mode === 'graphing' && state.graphing.settingsOpen);
+}
 
 function getSystemTheme() {
   return systemThemeMedia?.matches === true ? 'light' : 'dark';

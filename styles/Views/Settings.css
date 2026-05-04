@@ -37,6 +37,8 @@
 }
 
 .settings-expander-summary {
+  position: relative;
+  isolation: isolate;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -44,6 +46,22 @@
   border-radius: inherit;
   cursor: pointer;
   list-style: none;
+}
+
+.settings-expander-summary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: transparent;
+  pointer-events: none;
+  transition: background 120ms ease;
+  z-index: 0;
+}
+
+.settings-expander-summary > * {
+  position: relative;
+  z-index: 1;
 }
 
 .settings-expander[open] .settings-expander-summary {
@@ -57,6 +75,11 @@
 
 .settings-expander-summary:hover,
 .settings-expander-summary:focus-visible {
+  background: transparent;
+}
+
+.settings-expander-summary:hover::before,
+.settings-expander-summary:focus-visible::before {
   background: var(--surface-hover);
 }
 

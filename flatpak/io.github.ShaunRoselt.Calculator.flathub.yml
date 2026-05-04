@@ -1,10 +1,11 @@
 app-id: io.github.ShaunRoselt.Calculator
+branch: stable
 runtime: org.freedesktop.Platform
 runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
 base-version: '25.08'
-command: run.sh
+command: io.github.ShaunRoselt.Calculator
 separate-locales: false
 finish-args:
   - --share=ipc
@@ -19,8 +20,8 @@ modules:
     buildsystem: simple
     build-commands:
       - install -d /app/main
-      - cp -a app.html assets electron index.html manifest.json pages scripts sections service-worker.js styles themes.html package.json NOTICE.txt LICENSE /app/main/
-      - install -Dm755 run.sh /app/bin/run.sh
+      - cp -a app.html assets electron index.html manifest.json scripts service-worker.js styles themes.html package.json NOTICE.txt LICENSE /app/main/
+      - install -Dm755 run.sh /app/bin/io.github.ShaunRoselt.Calculator
       - install -Dm644 flatpak/io.github.ShaunRoselt.Calculator.desktop /app/share/applications/io.github.ShaunRoselt.Calculator.desktop
       - install -Dm644 flatpak/io.github.ShaunRoselt.Calculator.metainfo.xml /app/share/metainfo/io.github.ShaunRoselt.Calculator.metainfo.xml
       - install -Dm644 assets/pwa/icon-512.png /app/share/icons/hicolor/64x64/apps/io.github.ShaunRoselt.Calculator.png
@@ -30,7 +31,7 @@ modules:
       - install -Dm644 assets/logos/logo-dark-square.svg /app/share/icons/hicolor/scalable/apps/io.github.ShaunRoselt.Calculator.svg
     sources:
       - type: archive
-        url: https://codeload.github.com/ShaunRoselt/calculator/tar.gz/184a1c0f51bba798d2fdcfa0624dc76b66c8b1bc
+        url: https://github.com/ShaunRoselt/calculator/archive/184a1c0f51bba798d2fdcfa0624dc76b66c8b1bc.tar.gz
         sha256: ecb95abc5d7c9dd0f15b2e409daa13964fd1150dba6cbce294a98815f2d2b6c9
         strip-components: 1
       - type: script

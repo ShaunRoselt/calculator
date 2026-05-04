@@ -1,4 +1,3 @@
-const NERDAMER_CDN_URL = 'https://cdn.jsdelivr.net/npm/nerdamer@1.1.13/all.min.js';
 const NERDAMER_LOCAL_URL = new URL('../node_modules/nerdamer/all.min.js', import.meta.url).href;
 const SERVICE_WORKER_URL = new URL('../service-worker.js', import.meta.url).href;
 const LANGUAGE_STORAGE_KEY = 'calculator-language';
@@ -22,11 +21,7 @@ async function loadNerdamer() {
     return;
   }
 
-  try {
-    await loadScript(NERDAMER_LOCAL_URL, 'Unable to load nerdamer from the local package.');
-  } catch {
-    await loadScript(NERDAMER_CDN_URL, 'Unable to load nerdamer from CDN.');
-  }
+  await loadScript(NERDAMER_LOCAL_URL, 'Unable to load nerdamer from the local package.');
 }
 
 async function registerServiceWorker() {

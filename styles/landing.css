@@ -1,3 +1,30 @@
+@font-face {
+  font-family: 'Calculator UI';
+  src: url('../assets/fonts/Selawik/selawk.woff2') format('woff2'),
+       url('../assets/fonts/Selawik/selawk.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Calculator UI';
+  src: url('../assets/fonts/Selawik/selawksb.woff2') format('woff2'),
+       url('../assets/fonts/Selawik/selawksb.woff') format('woff');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Calculator UI';
+  src: url('../assets/fonts/Selawik/selawkb.woff2') format('woff2'),
+       url('../assets/fonts/Selawik/selawkb.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   color-scheme: dark;
   --page-bg: #09111f;
@@ -31,7 +58,7 @@ html {
 body.landing-body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Calculator UI', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--page-text);
   background:
     radial-gradient(circle at top left, rgba(103, 180, 255, 0.24), transparent 32%),
@@ -133,7 +160,7 @@ main,
 .section-heading h2,
 .cta-section h2,
 .install-panel h2 {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Calculator UI', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .brand strong {

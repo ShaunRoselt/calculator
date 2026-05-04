@@ -1,5 +1,5 @@
 import { APP_INFO, getAppName } from '../config.js';
-import { getCurrentLanguage, getSupportedLanguages, t } from '../i18n.js';
+import { getCurrentLanguage, getCurrentLocale, getSupportedLanguages, t } from '../i18n.js';
 import { getResolvedAppThemeId, getThemeLogoPath, getThemeOptions } from '../themes.js';
 import { buildAppUrl } from '../urlParams.js';
 import { escapeHtml } from '../utils.js';
@@ -23,6 +23,19 @@ const SETTINGS_LINKS = [
   }
 ];
 
+const ENGLISH_LANGUAGE_DISPLAY_NAMES = typeof Intl?.DisplayNames === 'function'
+  ? new Intl.DisplayNames(['en'], { type: 'language' })
+  : null;
+const LANGUAGE_DISPLAY_NAMES_CACHE = new Map();
+
+function isKlingonLanguage(languageCode) {
+  return languageCode === 'tlh-Latn' || languageCode === 'tlh-Piqd';
+}
+
+function isUnhelpfulLocalizedLanguageName(languageCode, localizedName) {
+  return localizedName.localeCompare(languageCode, undefined, { sensitivity: 'base' }) === 0;
+}
+
 function getSystemTheme() {
   if (typeof window.matchMedia !== 'function') {
     return 'dark';
@@ -41,6 +54,84 @@ function getSettingsAppIconPath() {
 
 function getLanguageOptionLabel(language) {
   return `${language.label}${language.isFallbackOnly ? ' (English fallback)' : ''}`;
+}
+
+function getLanguageDisplayNames(locale) {
+  if (typeof Intl?.DisplayNames !== 'function') {
+    return null;
+  }
+
+  if (LANGUAGE_DISPLAY_NAMES_CACHE.has(locale)) {
+    return LANGUAGE_DISPLAY_NAMES_CACHE.get(locale);
+  }
+
+  try {
+    const displayNames = new Intl.DisplayNames([locale], { type: 'language' });
+    LANGUAGE_DISPLAY_NAMES_CACHE.set(locale, displayNames);
+    return displayNames;
+  } catch {
+    LANGUAGE_DISPLAY_NAMES_CACHE.set(locale, null);
+    return null;
+  }
+}
+
+function getLocalizedLanguageName(languageCode, locale) {
+  const displayNames = getLanguageDisplayNames(locale);
+  if (!displayNames) {
+    return '';
+  }
+
+  try {
+    return displayNames.of(languageCode) ?? '';
+  } catch {
+    return '';
+  }
+}
+
+function getVisibleLanguageLabel(language, locale) {
+  const localizedName = isKlingonLanguage(language.value)
+    ? ''
+    : getLocalizedLanguageName(language.value, locale).trim();
+  const baseLabel = !localizedName || isUnhelpfulLocalizedLanguageName(language.value, localizedName)
+    ? language.label
+    : localizedName;
+  return `${baseLabel}${language.isFallbackOnly ? ' (English fallback)' : ''}`;
+}
+
+function getLanguageSearchText(language, locale) {
+  const englishAlias = getLanguageEnglishAlias(language.value, language.label);
+  return [
+    language.value,
+    language.label,
+    getLanguageOptionLabel(language),
+    getVisibleLanguageLabel(language, locale),
+    englishAlias
+  ]
+    .filter(Boolean)
+    .join(' ');
+}
+
+function getLanguageEnglishName(languageCode) {
+  if (!ENGLISH_LANGUAGE_DISPLAY_NAMES) {
+    return '';
+  }
+
+  try {
+    return ENGLISH_LANGUAGE_DISPLAY_NAMES.of(languageCode) ?? '';
+  } catch {
+    return '';
+  }
+}
+
+function getLanguageEnglishAlias(languageCode, nativeLabel) {
+  const englishName = getLanguageEnglishName(languageCode).trim();
+  if (!englishName) {
+    return '';
+  }
+
+  return englishName.localeCompare(nativeLabel, undefined, { sensitivity: 'base' }) === 0
+    ? ''
+    : englishName;
 }
 
 function renderSettingsMenuOption(menu, option, selected) {
@@ -108,7 +199,16 @@ export function renderSettingsView() {
   const languages = getSupportedLanguages();
   const themes = getThemeOptions();
   const currentLanguage = getCurrentLanguage();
-  const currentLanguageOption = languages.find((language) => language.value === currentLanguage) ?? languages[0];
+  const currentLocale = getCurrentLocale();
+  const languageSorter = new Intl.Collator(currentLocale, { sensitivity: 'base', numeric: true });
+  const languageOptions = languages
+    .map((language) => ({
+      value: language.value,
+      label: getVisibleLanguageLabel(language, currentLocale),
+      searchText: getLanguageSearchText(language, currentLocale)
+    }))
+    .sort((left, right) => languageSorter.compare(left.label, right.label));
+  const currentLanguageOption = languageOptions.find((language) => language.value === currentLanguage) ?? languageOptions[0];
   const systemThemeId = getResolvedAppThemeId('system', getSystemTheme());
   const systemThemeLabel = themes.find((theme) => theme.value === systemThemeId)?.label ?? systemThemeId;
   const themeOptions = [
@@ -150,7 +250,6 @@ export function renderSettingsView() {
           </summary>
           <div class="settings-expander-body">
             <label class="settings-select-label">
-              <span>${t('settings.appearance.themeTitle')}</span>
               ${renderSettingsMenu('theme', t('settings.appearance.themeTitle'), currentTheme.label, themeOptions)}
             </label>
           </div>
@@ -168,12 +267,7 @@ export function renderSettingsView() {
           </summary>
           <div class="settings-expander-body">
             <label class="settings-select-label">
-              <span>${t('settings.language.title')}</span>
-              ${renderSettingsMenu('language', t('settings.language.title'), getLanguageOptionLabel(currentLanguageOption), languages.map((language) => ({
-                value: language.value,
-                label: getLanguageOptionLabel(language),
-                searchText: [language.value, language.label, getLanguageOptionLabel(language)].filter(Boolean).join(' ')
-              })))}
+              ${renderSettingsMenu('language', t('settings.language.title'), currentLanguageOption.label, languageOptions)}
             </label>
           </div>
         </details>

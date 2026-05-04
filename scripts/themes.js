@@ -1,4 +1,4 @@
-const THEME_INDEX_URL = new URL('../assets/themes/index.json', import.meta.url);
+const THEME_INDEX_URL = new URL('../assets/themes/data/index.json', import.meta.url);
 
 const FALLBACK_GRAPH_DARK = {
   background: '#1b1c20',
@@ -21,6 +21,10 @@ const themeVariableKeys = new Set();
 
 let themeOrder = [];
 let defaultThemeId = 'dark';
+
+function getCanonicalThemeLogoPath(themeId) {
+  return `assets/logos/${themeId}.svg`;
+}
 
 function isPlainObject(value) {
   return value != null && typeof value === 'object' && !Array.isArray(value);
@@ -87,7 +91,7 @@ async function loadThemeDefinition(themeId, manifestById, loading = new Set()) {
   }
 
   loading.add(themeId);
-  const themeUrl = new URL(`../assets/themes/${manifestEntry.file}`, import.meta.url);
+  const themeUrl = new URL(`../assets/themes/data/${manifestEntry.file}`, import.meta.url);
   const rawTheme = await fetchJson(themeUrl);
   let resolvedTheme = isPlainObject(rawTheme) ? rawTheme : {};
 
@@ -102,7 +106,7 @@ async function loadThemeDefinition(themeId, manifestById, loading = new Set()) {
     label: typeof resolvedTheme.label === 'string' && resolvedTheme.label ? resolvedTheme.label : themeId,
     colorScheme: resolvedTheme.colorScheme === 'light' ? 'light' : 'dark',
     metaColor: typeof resolvedTheme.metaColor === 'string' && resolvedTheme.metaColor ? resolvedTheme.metaColor : '#1f2025',
-    logoPath: typeof resolvedTheme.logoPath === 'string' && resolvedTheme.logoPath ? resolvedTheme.logoPath : 'assets/logo-dark.svg',
+    logoPath: getCanonicalThemeLogoPath(themeId),
     tokens: isPlainObject(resolvedTheme.tokens) ? resolvedTheme.tokens : {},
     graphPalette: isPlainObject(resolvedTheme.graphPalette) ? resolvedTheme.graphPalette : {}
   };
@@ -189,7 +193,7 @@ function getThemeStyleString(themeId) {
 }
 
 export function getThemeLogoPath(themeId) {
-  return getTheme(themeId)?.logoPath ?? 'assets/logo-dark.svg';
+  return getTheme(themeId)?.logoPath ?? getCanonicalThemeLogoPath(defaultThemeId);
 }
 
 export function getGraphThemeInlineStyle(themeSetting, appThemeId) {
@@ -206,7 +210,7 @@ export function applyThemeToElement(element, themeId) {
     return getTheme(defaultThemeId) ?? {
       id: defaultThemeId,
       metaColor: '#1f2025',
-      logoPath: 'assets/logo-dark.svg',
+      logoPath: getCanonicalThemeLogoPath(defaultThemeId),
       colorScheme: 'dark',
       tokens: {},
       graphPalette: FALLBACK_GRAPH_DARK

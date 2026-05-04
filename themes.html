@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse every Roselt Calculator theme with live previews and see the full supported language list." />
+    <meta name="theme-color" content="#10192b" />
+    <title>Roselt Calculator Themes &amp; Languages</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logos/dark.svg" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/landing.css" />
+    <link rel="stylesheet" href="styles/themes-showcase.css" />
+  </head>
+  <body class="landing-body showcase-body">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="landing-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Roselt Calculator home">
+          <img src="assets/logos/dark.svg" alt="Roselt Calculator icon" width="48" height="48" />
+          <span>
+            <strong>Roselt Calculator</strong>
+            <span>Themes &amp; languages</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="#themes">Themes</a>
+          <a href="#languages">Languages</a>
+          <a href="app.html?page=standard" class="nav-cta">Launch app</a>
+        </nav>
+      </header>
+
+      <main id="main-content">
+        <section class="hero hero-compact" id="top">
+          <div class="hero-copy">
+            <p class="eyebrow">Live showcase</p>
+            <h1>Inspect every Roselt Calculator theme and all supported languages from one public page.</h1>
+            <p class="hero-text">
+              This page uses the same theme and language sources as the app itself. Theme previews are rendered from
+              the real calculator shell in read-only mode, and the language index is generated from the current
+              supported translation list.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#themes">Browse themes</a>
+              <a class="button button-secondary" href="#languages">See supported languages</a>
+            </div>
+            <dl class="hero-metrics" aria-label="Showcase highlights">
+              <div>
+                <dt data-showcase-theme-count>...</dt>
+                <dd>live theme previews</dd>
+              </div>
+              <div>
+                <dt data-showcase-language-count>...</dt>
+                <dd>supported interface languages</dd>
+              </div>
+              <div>
+                <dt>Read-only</dt>
+                <dd>preview shells rendered from the actual app</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="showcase-summary-card" aria-label="Showcase summary">
+            <p class="eyebrow">What this page includes</p>
+            <h2>Live previews, theme-tinted app logos, and the full language index.</h2>
+            <ul class="showcase-summary-list">
+              <li>Every theme gets its own Roselt Calculator logo variant using the same mark.</li>
+              <li>Preview cards launch the same calculator shell you use in the main app.</li>
+              <li>The language section stays synced with the canonical translation source.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="showcase-section" id="themes" aria-labelledby="themes-title">
+          <div class="section-heading split-heading showcase-heading">
+            <div>
+              <p class="eyebrow">Themes</p>
+              <h2 id="themes-title">Every available theme, rendered from the real calculator.</h2>
+            </div>
+            <p class="section-copy">Use these live previews to compare palettes, calculator chrome, and theme-specific accents before launching the app in that theme.</p>
+          </div>
+          <div class="theme-gallery" data-theme-gallery>
+            <p class="showcase-status">Loading theme previews…</p>
+          </div>
+        </section>
+
+        <section class="language-section" id="languages" aria-labelledby="languages-title">
+          <div class="section-heading split-heading showcase-heading">
+            <div>
+              <p class="eyebrow">Languages</p>
+              <h2 id="languages-title">Supported interface languages.</h2>
+            </div>
+            <p class="section-copy">This list is generated from the app's supported language registry, so it stays aligned with the current translation surface.</p>
+          </div>
+          <div class="language-panel">
+            <ul class="language-list" data-language-list aria-label="Supported languages">
+              <li class="showcase-status">Loading languages…</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="showcase-cta-title">
+          <p class="eyebrow">Ready to jump in</p>
+          <h2 id="showcase-cta-title">Open the calculator and keep the theme you like.</h2>
+          <p>
+            Once you find a theme you want, launch the app and switch it permanently from settings, or use the URL theme parameter directly.
+          </p>
+          <div class="hero-actions centered-actions">
+            <a class="button button-primary" href="app.html?page=standard">Launch Roselt Calculator</a>
+            <a class="button button-secondary" href="index.html">Back to the main site</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Roselt Calculator is an independent installable calculator app for the web.</p>
+        <div class="site-footer-links">
+          <a href="index.html">Public home</a>
+          <a href="https://github.com/ShaunRoselt/calculator">View source on GitHub</a>
+        </div>
+      </footer>
+    </div>
+    <noscript>
+      <div class="noscript-card">
+        <h1>Roselt Calculator</h1>
+        <p>This showcase page needs JavaScript to load the live theme previews and generated language list.</p>
+      </div>
+    </noscript>
+    <script type="module" src="scripts/landing.js"></script>
+    <script type="module" src="scripts/showcase.js"></script>
+  </body>
+</html>

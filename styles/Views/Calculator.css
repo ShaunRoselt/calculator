@@ -4,6 +4,22 @@
   gap: 2px;
   height: 100%;
   min-height: 0;
+  position: relative;
+  isolation: isolate;
+}
+
+.calculator-layout::after {
+  content: "";
+  position: absolute;
+  top: var(--theme-mascot-top);
+  right: var(--theme-mascot-right);
+  width: var(--theme-mascot-width);
+  height: var(--theme-mascot-height);
+  background: var(--theme-mascot-image) center / contain no-repeat;
+  opacity: var(--theme-mascot-opacity);
+  filter: var(--theme-mascot-filter);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .calculator-toolbar {
@@ -24,6 +40,29 @@
   align-items: flex-end;
   min-height: clamp(126px, 24vh, 236px);
   overflow: hidden;
+  position: relative;
+  background: var(--theme-display-background);
+  border: var(--theme-display-border);
+  border-radius: var(--theme-display-radius);
+  box-shadow: var(--theme-display-shadow);
+}
+
+.display-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: var(--theme-display-overlay);
+  background-size: var(--theme-display-overlay-size);
+  background-position: var(--theme-display-overlay-position);
+  opacity: var(--theme-display-overlay-opacity);
+  border-radius: inherit;
+}
+
+.display-expression,
+.display-value {
+  position: relative;
+  z-index: 1;
 }
 
 .programmer-toolbar,
@@ -197,6 +236,18 @@
   overflow-wrap: anywhere;
 }
 
+.display-value.display-error {
+  min-height: 0;
+  font-size: clamp(1.5rem, 6.2vw, 2.6rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.06;
+  text-overflow: clip;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .display-expression.compact {
   font-size: 0.78rem;
 }
@@ -218,6 +269,13 @@
 .display-value.ultra-dense {
   font-size: clamp(1.65rem, 3.8vw, 2.6rem);
   letter-spacing: -0.015em;
+}
+
+@media (max-height: 460px) {
+  .main-panel {
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+  }
 }
 
 .mode-banner,
@@ -291,14 +349,14 @@
 .calc-button {
   min-height: 0;
   height: 100%;
-  border-radius: 3px;
+  border-radius: var(--theme-button-radius);
   border: 1px solid var(--border-faint);
   background: var(--button-default-bg);
   color: var(--text);
   font-size: 0.96rem;
   font-weight: 400;
   transition: background 100ms ease, transform 100ms ease;
-  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--text) 5%, transparent);
+  box-shadow: var(--theme-button-shadow);
 }
 
 .calc-button:hover,

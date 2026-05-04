@@ -45,5 +45,5 @@ modules:
         path: ../assets/pwa/icon-512.png
         dest-filename: io.github.ShaunRoselt.Calculator.png
       - type: file
-        path: ../assets/logo-dark-square.svg
+        path: ../assets/logos/logo-dark-square.svg
         dest-filename: io.github.ShaunRoselt.Calculator.svg

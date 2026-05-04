@@ -475,6 +475,14 @@ main {
   text-decoration: none;
 }
 
+.site-footer-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
 .site-footer a:hover,
 .site-footer a:focus-visible {
   text-decoration: underline;
@@ -543,6 +551,10 @@ main {
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .site-footer-links {
+    justify-content: flex-start;
   }
 
   .site-nav {

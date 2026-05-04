@@ -64,6 +64,7 @@ const SCIENTIFIC_EXTRA_FUNCTIONS = [
 
 export function renderCalculatorView(mode) {
   const calc = state[mode];
+  const displayStateClass = calc.error ? 'display-error' : '';
   const buttons = mode === 'standard'
     ? STANDARD_BUTTONS
     : mode === 'scientific'
@@ -92,7 +93,7 @@ export function renderCalculatorView(mode) {
     <div class="calculator-layout ${mode}">
       <div class="display-panel">
         <div class="display-expression ${expressionSizeClass}">${formatExpressionForDisplay(calc.expression) || '&nbsp;'}</div>
-        <div class="display-value ${displaySizeClass}">${escapeHtml(calc.display)}</div>
+        <div class="display-value ${displaySizeClass} ${displayStateClass}">${escapeHtml(calc.display)}</div>
       </div>
       ${mode === 'scientific' ? `<div class="calculator-toolbar scientific-toolbar">${renderScientificAngleButtons()}</div>` : ''}
       <div class="memory-toolbar" aria-label="${t('memory.controls')}">

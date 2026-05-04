@@ -14,7 +14,10 @@
   min-height: 100%;
   --chrome-inline-padding: 14px;
   --chrome-top-padding: 10px;
-  background: var(--window-bg);
+  background-color: var(--window-bg);
+  background-image: var(--theme-shell-background);
+  background-size: var(--theme-shell-background-size);
+  background-position: var(--theme-shell-background-position);
   border: 0;
   border-radius: 0;
   box-shadow: none;
@@ -22,6 +25,24 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  isolation: isolate;
+}
+
+.app-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: var(--theme-shell-overlay);
+  background-size: var(--theme-shell-overlay-size);
+  background-position: var(--theme-shell-overlay-position);
+  opacity: var(--theme-shell-overlay-opacity);
+  z-index: 0;
+}
+
+.app-shell > * {
+  position: relative;
+  z-index: 1;
 }
 
 .window-body {

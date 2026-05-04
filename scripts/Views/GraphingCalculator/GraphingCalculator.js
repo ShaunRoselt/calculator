@@ -70,6 +70,8 @@ const GRAPH_LINE_STYLES = [
   { value: 'dot', labelKey: 'graph.lineStyle.dot', label: 'Dot line style' }
 ];
 
+const GRAPH_SHORT_HEIGHT_BREAKPOINT = 760;
+
 const GRAPHING_KEYPAD_ROWS = [
   [
     { label: '2ⁿᵈ', tone: 'function' },
@@ -124,13 +126,21 @@ const GRAPHING_KEYPAD_ROWS = [
 
 export function renderGraphingCalculatorView() {
   const isCompact = window.innerWidth < 768;
+  const isShortHeight = window.innerHeight < GRAPH_SHORT_HEIGHT_BREAKPOINT;
   const graphThemeStyle = getGraphThemeInlineStyle(state.graphing.theme, document.documentElement.dataset.theme);
   const analysisOpen = typeof state.graphing.analysisExpressionIndex === 'number'
     && !!state.graphing.analysisData
     && !!state.graphing.expressions[state.graphing.analysisExpressionIndex];
+  const compactEditorView = state.graphing.compactEditorView === 'keypad' ? 'keypad' : 'expressions';
+  const layoutClasses = [
+    'graphing-layout',
+    isCompact ? `mobile-view-${state.graphing.mobileView}` : 'desktop-view',
+    isShortHeight ? 'short-height-layout' : '',
+    isShortHeight ? `compact-editor-${compactEditorView}` : ''
+  ].filter(Boolean).join(' ');
 
   return `
-    <div class="graphing-layout ${isCompact ? `mobile-view-${state.graphing.mobileView}` : 'desktop-view'}"${graphThemeStyle ? ` style="${escapeHtml(graphThemeStyle)}"` : ''}>
+    <div class="${layoutClasses}"${graphThemeStyle ? ` style="${escapeHtml(graphThemeStyle)}"` : ''}>
       <section class="graph-workspace">
         <div class="graph-surface">
           <canvas id="graph-canvas" class="graph-canvas" width="1200" height="720" aria-label="${t('graph.canvas')}"></canvas>
@@ -151,26 +161,62 @@ export function renderGraphingCalculatorView() {
       </section>
 
       <section class="graph-editor-panel ${analysisOpen ? 'graph-analysis-open' : ''}">
-        ${analysisOpen ? renderFunctionAnalysisPanel() : `
-          <div class="graph-expression-list" aria-label="${t('graph.expressions')}">
-            ${state.graphing.expressions.map((expression, index) => renderExpressionRow(expression, index)).join('')}
-          </div>
-          <div class="graph-editor-stage" aria-hidden="true"></div>
-          <div class="graph-keypad-shell">
-            <div class="graph-keypad-menu-area">
-              ${renderGraphingMenu()}
-              <div class="graph-keypad-groups">
-                ${GRAPHING_TOOL_GROUPS.map((group) => renderGraphingGroupButton(group)).join('')}
-              </div>
-            </div>
-            <div class="graph-keypad-grid">
-              ${GRAPHING_KEYPAD_ROWS.flat().map((button) => renderKeypadButton(button)).join('')}
-            </div>
-          </div>
-        `}
+        ${analysisOpen ? renderFunctionAnalysisPanel() : renderGraphingEditorPanel(isShortHeight, compactEditorView)}
       </section>
     </div>
   `;
+}
+
+function renderGraphingEditorPanel(isShortHeight, compactEditorView) {
+  return `
+    ${isShortHeight ? renderGraphingCompactEditorSwitcher(compactEditorView) : ''}
+    <div class="graph-expression-pane">
+      <div class="graph-expression-list" aria-label="${t('graph.expressions')}">
+        ${state.graphing.expressions.map((expression, index) => renderExpressionRow(expression, index)).join('')}
+      </div>
+    </div>
+    <div class="graph-keypad-pane">
+      <div class="graph-editor-stage" aria-hidden="true"></div>
+      <div class="graph-keypad-shell">
+        <div class="graph-keypad-menu-area">
+          ${renderGraphingMenu()}
+          <div class="graph-keypad-groups">
+            ${GRAPHING_TOOL_GROUPS.map((group) => renderGraphingGroupButton(group)).join('')}
+          </div>
+        </div>
+        <div class="graph-keypad-grid">
+          ${GRAPHING_KEYPAD_ROWS.flat().map((button) => renderKeypadButton(button)).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderGraphingCompactEditorSwitcher(currentView) {
+  const expressionsLabel = getGraphingLabel('graph.expressions', 'Expressions');
+  const keypadLabel = getGraphingLabel('graph.showKeypad', 'Keypad');
+
+  return `
+    <div class="graph-compact-editor-switcher" role="group" aria-label="${getGraphingLabel('graph.mobileView', 'Editor sections')}">
+      <button
+        class="graph-compact-editor-button ${currentView === 'expressions' ? 'active' : ''}"
+        type="button"
+        data-graph-compact-view="expressions"
+        aria-pressed="${currentView === 'expressions' ? 'true' : 'false'}"
+      >${escapeHtml(expressionsLabel)}</button>
+      <button
+        class="graph-compact-editor-button ${currentView === 'keypad' ? 'active' : ''}"
+        type="button"
+        data-graph-compact-view="keypad"
+        aria-pressed="${currentView === 'keypad' ? 'true' : 'false'}"
+      >${escapeHtml(keypadLabel)}</button>
+    </div>
+  `;
+}
+
+function getGraphingLabel(key, fallback) {
+  const translated = t(key);
+  return translated === key ? fallback : translated;
 }
 
 function renderFunctionAnalysisPanel() {

@@ -29,6 +29,11 @@
   right: 12px;
   z-index: 5;
   width: min(280px, calc(100% - 24px));
+  max-height: calc(100% - 66px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   padding: 16px;
   border-radius: 10px;
   background: var(--graph-panel-bg);
@@ -69,12 +74,14 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px 10px;
+  min-width: 0;
 }
 
 .graph-settings-field,
 .graph-settings-select-label {
   display: grid;
   gap: 4px;
+  min-width: 0;
   font-size: 0.83rem;
   color: var(--text-soft);
 }
@@ -91,17 +98,22 @@
 }
 
 .graph-settings-choice-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 4px;
+  min-width: 0;
 }
 
 .graph-settings-choice {
-  flex: 1;
+  min-width: 0;
   min-height: 36px;
+  padding: 0 0.45rem;
   border-radius: 4px;
   border: 1px solid var(--border-subtle);
   background: var(--surface-hover);
   color: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .graph-settings-choice.active {
@@ -321,6 +333,55 @@
   text-align: right;
 }
 
+.graph-compact-editor-switcher {
+  display: flex;
+  gap: 6px;
+  margin: 6px 8px 2px;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--graph-input-bg);
+  border: 1px solid var(--border-subtle);
+}
+
+.graph-compact-editor-button {
+  flex: 1;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+}
+
+.graph-compact-editor-button:hover,
+.graph-compact-editor-button:focus-visible {
+  background: var(--surface-hover);
+  color: var(--text);
+  outline: none;
+}
+
+.graph-compact-editor-button.active {
+  background: var(--accent);
+  color: var(--button-equals-text);
+}
+
+.graph-expression-pane,
+.graph-keypad-pane {
+  min-height: 0;
+}
+
+.graph-expression-pane {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.graph-keypad-pane {
+  display: flex;
+  flex-direction: column;
+}
+
 .graph-expression-list {
   padding: 8px 0 0;
 }
@@ -403,7 +464,7 @@
   opacity: 1;
 }
 
-.graph-expression-input {
+.graph-expression-field > .graph-expression-input[type="text"] {
   width: 100%;
   height: 40px;
   padding: 0 12px;
@@ -713,6 +774,66 @@
   color: var(--button-equals-text);
 }
 
+@media (max-height: 760px) {
+  .graphing-layout.short-height-layout .graph-editor-panel {
+    min-height: 0;
+  }
+
+  .graphing-layout.short-height-layout .graph-expression-pane,
+  .graphing-layout.short-height-layout .graph-keypad-pane {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .graphing-layout.short-height-layout.compact-editor-expressions .graph-keypad-pane {
+    display: none;
+  }
+
+  .graphing-layout.short-height-layout.compact-editor-keypad .graph-expression-pane {
+    display: none;
+  }
+
+  .graphing-layout.short-height-layout .graph-expression-list {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    padding-top: 4px;
+  }
+
+  .graphing-layout.short-height-layout .graph-editor-stage {
+    min-height: 24px;
+  }
+
+  .graphing-layout.short-height-layout .graph-keypad-shell {
+    margin-top: 0;
+  }
+
+  .graphing-layout.short-height-layout .graph-keypad-groups {
+    gap: 0.55rem;
+    min-height: 34px;
+    padding: 0 8px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .graphing-layout.short-height-layout .graph-keypad-group {
+    flex: 0 0 auto;
+    min-height: 28px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .graphing-layout.short-height-layout .graphing-menu-toggle,
+  .graphing-layout.short-height-layout .graphing-menu-item {
+    min-height: 38px;
+  }
+
+  .graphing-layout.short-height-layout .graph-keypad-grid .calc-button {
+    height: 36px;
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 1023px) {
   .graphing-layout {
     grid-template-columns: minmax(0, 1fr) 376px;
@@ -734,7 +855,34 @@
   }
 
   .graph-editor-panel {
+    min-height: 0;
     border-left: 0;
+  }
+
+  .graph-expression-list {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+  }
+
+  .graph-editor-stage {
+    display: none;
+  }
+
+  .graph-keypad-shell {
+    margin-top: 0;
+    flex: 0 0 auto;
+  }
+
+  .graph-keypad-groups {
+    gap: 0.7rem;
+    min-height: 34px;
+    padding: 0 8px;
+  }
+
+  .graph-keypad-group {
+    min-height: 28px;
+    font-size: 0.8rem;
   }
 
   .graph-expression-row {
@@ -746,8 +894,8 @@
   }
 
   .graph-keypad-grid .calc-button {
-    height: 44px;
-    font-size: 0.95rem;
+    height: 41px;
+    font-size: 0.92rem;
   }
 
   .graph-surface-tools {
@@ -758,7 +906,9 @@
   .graph-settings-panel {
     top: 46px;
     right: 8px;
+    bottom: 8px;
     width: min(280px, calc(100% - 16px));
+    max-height: calc(100% - 54px);
   }
 
   .graph-zoom-controls {

@@ -8,6 +8,7 @@ const PROGRAMMER_BASE_OPTIONS = ['HEX', 'DEC', 'OCT', 'BIN'];
 
 export function renderProgrammerDisplayPanel({ displaySizeClass = '', expressionSizeClass = '', showMemoryToggle = true } = {}) {
   const value = getProgrammerCurrentValue();
+  const displayStateClass = state.programmer.error ? 'display-error' : '';
   const reads = {
     HEX: formatBigInt(value, 'HEX'),
     DEC: formatBigInt(value, 'DEC'),
@@ -28,7 +29,7 @@ export function renderProgrammerDisplayPanel({ displaySizeClass = '', expression
           `).join('')}
         </div>
         <div class="programmer-display-column">
-          <div class="programmer-display-value display-value ${displaySizeClass}">${escapeHtml(state.programmer.display)}</div>
+          <div class="programmer-display-value display-value ${displaySizeClass} ${displayStateClass}">${escapeHtml(state.programmer.display)}</div>
         </div>
       </div>
       <div class="programmer-meta-row">

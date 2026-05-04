@@ -119,6 +119,7 @@ function createGraphingState() {
     theme: 'match-app',
     isManualAdjustment: false,
     tracingEnabled: false,
+    compactEditorView: 'expressions',
     mobileView: 'graph',
     viewport: createDefaultGraphViewport(),
     status: 'Enter an expression'

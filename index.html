@@ -6,7 +6,7 @@
     <meta name="description" content="Roselt Calculator is an installable calculator app heavily inspired by Windows Calculator and built to go further with graphing, programmer tools, conversions, and a more polished cross-device experience." />
     <meta name="theme-color" content="#10192b" />
     <title>Roselt Calculator | A polished all-in-one calculator for the web</title>
-    <link rel="icon" type="image/svg+xml" href="assets/logo-dark.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/logos/dark.svg" />
     <link rel="manifest" href="manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +18,7 @@
     <div class="landing-shell">
       <header class="site-header">
         <a class="brand" href="#top" aria-label="Roselt Calculator home">
-          <img src="assets/logo-dark.svg" alt="Roselt Calculator icon" width="48" height="48" />
+          <img src="assets/logos/dark.svg" alt="Roselt Calculator icon" width="48" height="48" />
           <span>
             <strong>Roselt Calculator</strong>
             <span>Web Edition</span>
@@ -27,6 +27,7 @@
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="#features">Features</a>
           <a href="#modes">Modes</a>
+          <a href="themes.html">Themes &amp; languages</a>
           <a href="#install">Install</a>
           <a href="app.html?page=standard" class="nav-cta">Launch app</a>
         </nav>
@@ -143,6 +144,38 @@
           </div>
         </section>
 
+        <section class="install-section" id="themes-languages" aria-labelledby="themes-languages-title">
+          <div class="install-panel">
+            <div>
+              <p class="eyebrow">Themes and languages</p>
+              <h2 id="themes-languages-title">Browse the live theme gallery and the full supported language list.</h2>
+              <p>
+                Roselt Calculator supports a broad set of interface languages and a growing collection of themes,
+                including more expressive styles like Aurora, Terminal, and Unicorn. The public showcase page uses
+                live calculator previews so you can inspect each theme before opening the app.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="themes.html">Browse themes &amp; languages</a>
+                <a class="button button-secondary" href="app.html?page=settings">Open settings in the app</a>
+              </div>
+            </div>
+            <div class="install-points" aria-label="Themes and languages highlights">
+              <div>
+                <strong>Live previews</strong>
+                <span>Every theme card is rendered from the actual calculator shell in read-only mode.</span>
+              </div>
+              <div>
+                <strong>Theme-specific branding</strong>
+                <span>Each theme now keeps the same Roselt Calculator mark while tinting it with that theme's palette.</span>
+              </div>
+              <div>
+                <strong>Full language index</strong>
+                <span>The public showcase lists every currently supported interface language in one place.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="cta-section" aria-labelledby="cta-title">
           <p class="eyebrow">Ready to try it</p>
           <h2 id="cta-title">Start with the standard calculator and explore from there.</h2>
@@ -158,7 +191,10 @@
 
       <footer class="site-footer">
         <p>Roselt Calculator is an independent installable calculator app for the web.</p>
-        <a href="https://github.com/ShaunRoselt/calculator">View source on GitHub</a>
+        <div class="site-footer-links">
+          <a href="themes.html">Themes &amp; languages</a>
+          <a href="https://github.com/ShaunRoselt/calculator">View source on GitHub</a>
+        </div>
       </footer>
     </div>
     <noscript>

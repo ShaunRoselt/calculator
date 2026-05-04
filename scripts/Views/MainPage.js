@@ -101,8 +101,8 @@ function renderHeader() {
   const graphingActions = isGraphingCompact
     ? `
       <div class="graph-view-toggle-group" role="group" aria-label="${t('graph.mobileView')}">
-        <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'graph' ? 'active' : ''}" data-graph-view="graph" aria-label="${t('graph.showGraph')}">${renderToolbarIcon('graph-view')}</button>
-        <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'editor' ? 'active' : ''}" data-graph-view="editor" aria-label="${t('graph.showExpressions')}">${renderToolbarIcon('expressions-view')}</button>
+        <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'graph' ? 'active' : ''}" data-graph-view="graph" data-tooltip="${t('graph.showGraph')}" aria-label="${t('graph.showGraph')}">${renderToolbarIcon('graph-view')}</button>
+        <button class="icon-button graph-view-toggle ${state.graphing.mobileView === 'editor' ? 'active' : ''}" data-graph-view="editor" data-tooltip="${t('graph.showExpressions')}" aria-label="${t('graph.showExpressions')}">${renderToolbarIcon('expressions-view')}</button>
       </div>
     `
     : '';

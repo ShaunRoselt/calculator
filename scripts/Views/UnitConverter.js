@@ -20,6 +20,9 @@ const GENERIC_CONVERTER_KEYPAD = [
   [{ label: '+/-', action: 'toggle-sign' }, { label: '0', action: 'digit', value: '0' }, { label: ',', action: 'decimal' }]
 ];
 
+const CONVERTER_SHORT_HEIGHT_BREAKPOINT = 520;
+const CONVERTER_SIDE_KEYPAD_MIN_WIDTH = 380;
+
 export function renderUnitConverterView() {
   const units = getUnitsForCategory(state.converter.category);
   const dedicatedCategoryMode = isConverterMode(state.mode);
@@ -77,9 +80,10 @@ function renderNativeConverterView(units, title) {
   const fromUnit = units.find((item) => item.name === state.converter.fromUnit) || units[0];
   const toUnit = units.find((item) => item.name === state.converter.toUnit) || units[1] || units[0];
   const aboutEqual = renderConverterReferenceLine(units);
+  const layoutClasses = getConverterLayoutClasses('converter-native-layout');
 
   return `
-    <div class="converter-native-layout" data-converter-title="${escapeHtml(title)}">
+    <div class="${layoutClasses}" data-converter-title="${escapeHtml(title)}">
       <section class="converter-native-panel">
         <div class="converter-native-values">
           ${renderConverterField('from', fromUnit, getConverterDisplayValue('from'))}
@@ -103,9 +107,10 @@ function renderCurrencyView(units, title) {
   const toDisplay = getConverterDisplayValue('to');
   const rateLine = renderCurrencyRateLine(units, fromMeta, toMeta);
   const updateButtonLabel = state.converter.isUpdatingRates ? t('converter.currency.updatingRates') : t('converter.currency.updateRates');
+  const layoutClasses = getConverterLayoutClasses('currency-layout');
 
   return `
-    <div class="currency-layout">
+    <div class="${layoutClasses}">
       <section class="currency-panel">
         <div class="currency-values">
           ${renderCurrencyField('from', fromMeta, fromDisplay)}
@@ -235,6 +240,16 @@ function renderCurrencyKey(button) {
     return '<div class="currency-keypad-spacer" aria-hidden="true"></div>';
   }
   return renderConverterKey(button, 'currency-key', 'data-currency-action');
+}
+
+function getConverterLayoutClasses(baseClass) {
+  const isShortHeight = window.innerHeight < CONVERTER_SHORT_HEIGHT_BREAKPOINT;
+  const hasSideKeypadSpace = window.innerWidth >= CONVERTER_SIDE_KEYPAD_MIN_WIDTH;
+  return [
+    baseClass,
+    isShortHeight ? 'converter-short-height' : '',
+    isShortHeight && hasSideKeypadSpace ? 'converter-side-keypad' : ''
+  ].filter(Boolean).join(' ');
 }
 
 function renderConverterKey(button, extraClass = 'converter-native-key', actionAttribute = 'data-converter-action') {

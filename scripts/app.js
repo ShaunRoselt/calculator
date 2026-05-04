@@ -69,6 +69,17 @@ const urlPreferences = getUrlPreferenceOverrides();
 let converterTypeaheadBuffer = '';
 let converterTypeaheadTimestamp = 0;
 
+function setGraphCompactEditorView(view) {
+  state.graphing.compactEditorView = view === 'keypad' ? 'keypad' : 'expressions';
+
+  if (state.graphing.compactEditorView === 'expressions') {
+    state.graphing.openMenu = null;
+    return;
+  }
+
+  state.graphing.stylePanelExpressionIndex = null;
+}
+
 hydrateState();
 applyUrlPreferences();
 applyRuntimeAttributes();
@@ -104,6 +115,20 @@ function applyUrlPreferences() {
   }
 
   state.settings.language = getCurrentLanguage();
+}
+
+function clearUrlPreferenceOverride(paramName) {
+  if (typeof paramName !== 'string' || !paramName) {
+    return;
+  }
+
+  const nextUrl = new URL(window.location.href);
+  if (!nextUrl.searchParams.has(paramName)) {
+    return;
+  }
+
+  nextUrl.searchParams.delete(paramName);
+  window.history.replaceState(window.history.state, '', nextUrl);
 }
 
 function applyRuntimeAttributes() {
@@ -197,9 +222,24 @@ function applyTheme() {
   document.querySelector('#app-favicon')?.setAttribute('href', appliedTheme.logoPath ?? 'assets/logo-dark.svg');
 }
 
+function applyThemeSetting(theme) {
+  state.settings.theme = theme === 'system' || isSupportedTheme(theme)
+    ? theme
+    : 'system';
+  persistTheme();
+
+  // A manual settings change should stop any stale URL override from winning on refresh.
+  clearUrlPreferenceOverride('theme');
+  applyTheme();
+  render();
+}
+
 async function applyLanguageChange(language) {
   state.settings.language = language;
   persistLanguage();
+
+  // Language set from settings should persist via storage rather than a one-off URL override.
+  clearUrlPreferenceOverride('language');
   await setLanguage(language);
   computeDateResults();
   render();
@@ -425,12 +465,7 @@ function handleClick(event) {
     state.settings.openMenu = null;
 
     if (menu === 'theme') {
-      state.settings.theme = value === 'system' || isSupportedTheme(value)
-        ? value
-        : 'system';
-      persistTheme();
-      applyTheme();
-      render();
+      applyThemeSetting(value);
       return;
     }
 
@@ -538,12 +573,14 @@ function handleClick(event) {
   if (target.dataset.graphSelect) {
     state.graphing.openMenu = null;
     state.graphing.settingsOpen = false;
+    setGraphCompactEditorView('expressions');
     selectGraphExpression(Number(target.dataset.graphSelect));
     render();
     return;
   }
 
   if (target.dataset.graphExpressionVisibility) {
+    setGraphCompactEditorView('expressions');
     toggleGraphExpressionVisibility(Number(target.dataset.graphExpressionVisibility));
     drawGraph();
     render();
@@ -551,6 +588,7 @@ function handleClick(event) {
   }
 
   if (target.dataset.graphExpressionRemove) {
+    setGraphCompactEditorView('expressions');
     removeGraphExpression(Number(target.dataset.graphExpressionRemove));
     updateGraph();
     render();
@@ -559,12 +597,14 @@ function handleClick(event) {
 
   if (target.dataset.graphExpressionStyle) {
     const index = Number(target.dataset.graphExpressionStyle);
+    setGraphCompactEditorView('expressions');
     state.graphing.stylePanelExpressionIndex = state.graphing.stylePanelExpressionIndex === index ? null : index;
     render();
     return;
   }
 
   if (target.dataset.graphExpressionColor) {
+    setGraphCompactEditorView('expressions');
     setGraphExpressionColor(Number(target.dataset.graphExpressionColor), target.dataset.colorValue || '');
     drawGraph();
     render();
@@ -573,6 +613,7 @@ function handleClick(event) {
 
   if (target.dataset.graphExpressionAnalyze) {
     const index = Number(target.dataset.graphExpressionAnalyze);
+    setGraphCompactEditorView('expressions');
     commitGraphExpression(index);
     updateGraph();
     openGraphExpressionAnalysis(index);
@@ -581,7 +622,14 @@ function handleClick(event) {
   }
 
   if (target.dataset.graphAnalysisClose) {
+    setGraphCompactEditorView('expressions');
     closeGraphExpressionAnalysis();
+    render();
+    return;
+  }
+
+  if (target.dataset.graphCompactView) {
+    setGraphCompactEditorView(target.dataset.graphCompactView);
     render();
     return;
   }
@@ -633,6 +681,7 @@ function handleClick(event) {
 
   if (target.dataset.graphMenuToggle) {
     const nextMenu = target.dataset.graphMenuToggle;
+    setGraphCompactEditorView('keypad');
     state.graphing.openMenu = state.graphing.openMenu === nextMenu ? null : nextMenu;
     state.graphing.settingsOpen = false;
     if (state.graphing.openMenu !== 'trig') {
@@ -644,6 +693,7 @@ function handleClick(event) {
   }
 
   if (target.dataset.graphMenuAction) {
+    setGraphCompactEditorView('keypad');
     if (target.dataset.graphMenuAction === 'toggle-trig-shift') {
       state.graphing.trigShifted = !state.graphing.trigShifted;
     }
@@ -667,6 +717,7 @@ function handleClick(event) {
   }
 
   if (target.dataset.graphEditAction) {
+    setGraphCompactEditorView('keypad');
     state.graphing.openMenu = null;
     state.graphing.settingsOpen = false;
     if (target.dataset.graphEditAction === 'clear') {
@@ -684,6 +735,7 @@ function handleClick(event) {
   }
 
   if (target.dataset.graphInsert) {
+    setGraphCompactEditorView('keypad');
     state.graphing.openMenu = null;
     state.graphing.settingsOpen = false;
     insertGraphToken(target.dataset.graphInsert);
@@ -808,12 +860,7 @@ function handleChange(event) {
   }
 
   if (target.name === 'settings-theme') {
-    state.settings.theme = target.value === 'system' || isSupportedTheme(target.value)
-      ? target.value
-      : 'system';
-    persistTheme();
-    applyTheme();
-    render();
+    applyThemeSetting(target.value);
     return;
   }
 

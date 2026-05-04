@@ -2,28 +2,59 @@
 <component type="desktop-application">
   <id>io.github.ShaunRoselt.Calculator</id>
   <name>Roselt Calculator</name>
-  <summary>Installable calculator with standard, scientific, programmer, graphing, date, and conversion modes</summary>
+  <summary>Calculator with scientific, graphing, programmer, and conversion modes</summary>
   <metadata_license>MIT</metadata_license>
   <project_license>MIT</project_license>
-  <developer id="io.github.ShaunRoselt">
+  <update_contact>Me@ShaunRoselt.com</update_contact>
+  <developer id="io.github.shaunroselt">
     <name>Shaun Roselt</name>
   </developer>
-  <icon type="cached">io.github.ShaunRoselt.Calculator</icon>
   <launchable type="desktop-id">io.github.ShaunRoselt.Calculator.desktop</launchable>
   <description>
     <p>
       Roselt Calculator is an installable desktop calculator with standard, scientific, programmer,
       graphing, date calculation, history, memory, and unit conversion workflows.
     </p>
+    <p>
+      It is designed for fast keyboard and touch workflows, ships with multiple themes, supports a wide
+      range of interface languages, and includes an offline-friendly interface for everyday and advanced math.
+    </p>
+    <ul>
+      <li>Switch between standard, scientific, programmer, graphing, date, and converter modes.</li>
+      <li>Use history, memory, and graph tools in the same app shell.</li>
+      <li>Customize the interface with theme and language settings.</li>
+    </ul>
   </description>
   <categories>
     <category>Utility</category>
-    <category>Education</category>
   </categories>
   <url type="homepage">https://github.com/ShaunRoselt/calculator</url>
   <url type="bugtracker">https://github.com/ShaunRoselt/calculator/issues</url>
+  <url type="vcs-browser">https://github.com/ShaunRoselt/calculator</url>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Standard mode with history and memory access.</caption>
+      <image>https://raw.githubusercontent.com/ShaunRoselt/calculator/f118dedb3d4ff2fb2f51f1e3d4281d2c2714d9e9/marketing/steam/screenshot-assets/desktop/01_standard_workflow.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Scientific functions in the desktop layout.</caption>
+      <image>https://raw.githubusercontent.com/ShaunRoselt/calculator/f118dedb3d4ff2fb2f51f1e3d4281d2c2714d9e9/marketing/steam/screenshot-assets/desktop/02_scientific_functions.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Graphing mode with an expression plotted in real time.</caption>
+      <image>https://raw.githubusercontent.com/ShaunRoselt/calculator/f118dedb3d4ff2fb2f51f1e3d4281d2c2714d9e9/marketing/steam/screenshot-assets/desktop/04_graphing_expression.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Unit conversion workflows including currency conversion.</caption>
+      <image>https://raw.githubusercontent.com/ShaunRoselt/calculator/f118dedb3d4ff2fb2f51f1e3d4281d2c2714d9e9/marketing/steam/screenshot-assets/desktop/06_currency_conversion.png</image>
+    </screenshot>
+  </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
-    <release version="12.0.0" date="2026-04-12" />
+    <release version="12.0.0" date="2026-04-12">
+      <description>
+        <p>Introduces the Roselt Calculator branding, expanded language support, new themes, and the live themes showcase page.</p>
+      </description>
+    </release>
   </releases>
 </component>

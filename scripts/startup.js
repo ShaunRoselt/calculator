@@ -1,4 +1,4 @@
-const NERDAMER_LOCAL_URL = new URL('../node_modules/nerdamer/all.min.js', import.meta.url).href;
+const NERDAMER_LOCAL_URL = new URL('../assets/vendor/nerdamer/all.min.js', import.meta.url).href;
 const SERVICE_WORKER_URL = new URL('../service-worker.js', import.meta.url).href;
 const LANGUAGE_STORAGE_KEY = 'calculator-language';
 

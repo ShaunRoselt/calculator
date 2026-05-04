@@ -10,5 +10,5 @@ Nerdamer
 The MIT License (MIT)
 Copyright (c) Martin Donk
 
-Calculator depends on Nerdamer, which is distributed under the MIT License.
-See `node_modules/nerdamer` for the package contents and accompanying license details.
+Calculator vendors Nerdamer for runtime use, and Nerdamer is distributed under the MIT License.
+See `assets/vendor/nerdamer/all.min.js` and `node_modules/nerdamer` for the package contents and accompanying license details.

@@ -30,12 +30,12 @@ It keeps the feature set broad without turning the interface into a maze. The go
 
 Roselt Calculator runs in the browser and can be installed as a progressive web app. Platform-specific development, packaging, validation, and contribution details live in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Browse the live public [themes and languages showcase](https://calculator.shaunroselt.com/themes.html) to preview every available theme and see the full supported language list.
+Browse the live public [themes and languages showcase](https://calculator.apps.shaunroselt.com/themes.html) to preview every available theme and see the full supported language list.
 
 ## Project Links
 
 - [Project repository](https://github.com/ShaunRoselt/calculator)
-- [Themes and languages showcase](https://calculator.shaunroselt.com/themes.html)
+- [Themes and languages showcase](https://calculator.apps.shaunroselt.com/themes.html)
 - [Issue tracker](https://github.com/ShaunRoselt/calculator/issues)
 - [Security policy](SECURITY.md)
 - [License](LICENSE)

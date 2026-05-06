@@ -266,6 +266,21 @@
   display: flex;
   gap: 0.35rem;
   align-items: center;
+  position: relative;
+}
+
+.app-shell[data-mascot-placement='toolbar'] .calculator-topbar .topbar-actions::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 6px);
+  transform: translateY(-50%);
+  width: clamp(24px, calc(var(--theme-mascot-width) * 0.42), 40px);
+  height: clamp(24px, calc(var(--theme-mascot-height) * 0.42), 40px);
+  background: var(--theme-mascot-image) center / contain no-repeat;
+  opacity: var(--theme-mascot-opacity);
+  filter: var(--theme-mascot-filter);
+  pointer-events: none;
 }
 
 .graph-view-toggle-group {

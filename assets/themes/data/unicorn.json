@@ -103,6 +103,10 @@
     "--theme-mascot-height": "106px",
     "--theme-mascot-top": "-14px",
     "--theme-mascot-right": "8px",
+    "--theme-mascot-hit-inset-top": "8px",
+    "--theme-mascot-hit-inset-right": "10px",
+    "--theme-mascot-hit-inset-bottom": "16px",
+    "--theme-mascot-hit-inset-left": "10px",
     "--theme-mascot-opacity": "1",
     "--theme-mascot-filter": "drop-shadow(0 12px 22px rgba(233, 178, 255, 0.32))"
   }

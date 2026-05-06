@@ -1,0 +1,47 @@
+<svg width="1440" height="640" viewBox="0 0 1440 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rainA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6fff8" stop-opacity="0.98"/>
+      <stop offset="0.08" stop-color="#a7ffae" stop-opacity="0.95"/>
+      <stop offset="0.28" stop-color="#66ff72" stop-opacity="0.88"/>
+      <stop offset="0.62" stop-color="#35d84e" stop-opacity="0.46"/>
+      <stop offset="1" stop-color="#0a2a11" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glowA" x="-40%" y="-12%" width="180%" height="124%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3.6" flood-color="#7fff88" flood-opacity="0.9"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#61ff76" flood-opacity="0.42"/>
+    </filter>
+    <style>
+      .col {
+        fill: url(#rainA);
+        font-family: "Noto Sans Mono CJK JP", "Noto Sans JP", "MS Gothic", monospace;
+        font-weight: 700;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        letter-spacing: 2px;
+      }
+    </style>
+  </defs>
+  <g filter="url(#glowA)">
+    <text class="col" x="22" y="-186" font-size="26" opacity="0.94">ﾈｦﾃﾔ|+ﾊﾖﾁｳ*ｦﾓﾗﾅ=ﾂﾋｷ＞ﾐﾒ｢ﾘｴﾈｦﾃﾔ|+ﾊﾖﾁｳ*ｦﾓﾗﾅ=ﾂﾋｷ＞ﾐﾒ｢ﾘｴﾈｦﾃﾔ|+ﾊﾖﾁｳ*ｦﾓﾗﾅ=ﾂﾋｷ＞ﾐﾒ｢ﾘｴ</text>
+    <text class="col" x="86" y="-38" font-size="18" opacity="0.78">ｹﾅﾂ＜ﾔﾌﾑ+ﾎﾁﾜ-ﾚﾕﾃ/ﾏﾘｿ=ﾈﾖｹﾅﾂ＜ﾔﾌﾑ+ﾎﾁﾜ-ﾚﾕﾃ/ﾏﾘｿ=ﾈﾖｹﾅﾂ＜ﾔﾌﾑ+ﾎﾁﾜ-ﾚﾕﾃ/ﾏﾘｿ=ﾈﾖ</text>
+    <text class="col" x="124" y="-212" font-size="22" opacity="0.82">ﾓﾊﾗﾂ*ﾅﾔｵ|ﾐﾚﾕ+ﾌﾖﾁ=ﾜﾂﾈ/ﾘﾓﾊﾗﾂ*ﾅﾔｵ|ﾐﾚﾕ+ﾌﾖﾁ=ﾜﾂﾈ/ﾘﾓﾊﾗﾂ*ﾅﾔｵ|ﾐﾚﾕ+ﾌﾖﾁ=ﾜﾂﾈ/ﾘ</text>
+    <text class="col" x="176" y="-84" font-size="24" opacity="0.88">ｱﾌﾕ+ﾈﾓﾘ*ﾂｵﾁ|ﾚﾔﾅ=ﾐﾖﾃ-ﾊｱﾌﾕ+ﾈﾓﾘ*ﾂｵﾁ|ﾚﾔﾅ=ﾐﾖﾃ-ﾊｱﾌﾕ+ﾈﾓﾘ*ﾂｵﾁ|ﾚﾔﾅ=ﾐﾖﾃ-ﾊ</text>
+    <text class="col" x="238" y="-246" font-size="30" opacity="0.98">ﾎﾜﾃ|ﾘﾅﾁ+ﾕﾌﾏ*ｦﾚﾖ=ﾂﾊﾐ/ﾗﾈﾎﾜﾃ|ﾘﾅﾁ+ﾕﾌﾏ*ｦﾚﾖ=ﾂﾊﾐ/ﾗﾈﾎﾜﾃ|ﾘﾅﾁ+ﾕﾌﾏ*ｦﾚﾖ=ﾂﾊﾐ/ﾗﾈ</text>
+    <text class="col" x="308" y="-68" font-size="20" opacity="0.76">ﾁﾏﾕ=ﾜﾈﾂ-ﾔﾌﾘ|ﾚﾎﾅ+ﾖｱﾓ*ﾁﾏﾕ=ﾜﾈﾂ-ﾔﾌﾘ|ﾚﾎﾅ+ﾖｱﾓ*ﾁﾏﾕ=ﾜﾈﾂ-ﾔﾌﾘ|ﾚﾎﾅ+ﾖｱﾓ*</text>
+    <text class="col" x="364" y="-174" font-size="26" opacity="0.92">ﾂﾘﾎ*ﾏﾈｵ|ﾌﾕﾗ+ﾜﾁﾐ=ﾚﾖﾅ/ﾊﾂﾘﾎ*ﾏﾈｵ|ﾌﾕﾗ+ﾜﾁﾐ=ﾚﾖﾅ/ﾊﾂﾘﾎ*ﾏﾈｵ|ﾌﾕﾗ+ﾜﾁﾐ=ﾚﾖﾅ/ﾊ</text>
+    <text class="col" x="432" y="-28" font-size="18" opacity="0.7">ﾚﾅﾖ|ﾂﾐﾌ+ﾎﾜﾃ-ﾔﾘﾈ=ｱﾏﾓﾚﾅﾖ|ﾂﾐﾌ+ﾎﾜﾃ-ﾔﾘﾈ=ｱﾏﾓﾚﾅﾖ|ﾂﾐﾌ+ﾎﾜﾃ-ﾔﾘﾈ=ｱﾏﾓ</text>
+    <text class="col" x="486" y="-262" font-size="28" opacity="0.96">ﾕﾁｦ*ﾚﾏﾈ|ﾎﾂﾖ+ﾌﾜﾘ=ﾓﾅﾔ/ﾐﾕﾁｦ*ﾚﾏﾈ|ﾎﾂﾖ+ﾌﾜﾘ=ﾓﾅﾔ/ﾐﾕﾁｦ*ﾚﾏﾈ|ﾎﾂﾖ+ﾌﾜﾘ=ﾓﾅﾔ/ﾐ</text>
+    <text class="col" x="558" y="-102" font-size="20" opacity="0.74">ﾖﾌﾘ+ﾅﾓﾜ|ﾃﾏﾕ*ﾂﾚﾎ=ｵﾔﾈ-ﾖﾌﾘ+ﾅﾓﾜ|ﾃﾏﾕ*ﾂﾚﾎ=ｵﾔﾈ-ﾖﾌﾘ+ﾅﾓﾜ|ﾃﾏﾕ*ﾂﾚﾎ=ｵﾔﾈ-</text>
+    <text class="col" x="624" y="-220" font-size="32" opacity="0.98">ﾈﾜﾂ|ﾕﾌﾏ+ﾘﾁｦ*ﾚﾖﾅ=ﾎﾐﾔ/ﾗﾈﾜﾂ|ﾕﾌﾏ+ﾘﾁｦ*ﾚﾖﾅ=ﾎﾐﾔ/ﾗﾈﾜﾂ|ﾕﾌﾏ+ﾘﾁｦ*ﾚﾖﾅ=ﾎﾐﾔ/ﾗ</text>
+    <text class="col" x="702" y="-44" font-size="22" opacity="0.82">ﾏﾁﾂ*ﾘﾜﾈ|ﾌﾖﾊ+ﾔﾓﾚ=ｱﾅﾐ/ﾏﾁﾂ*ﾘﾜﾈ|ﾌﾖﾊ+ﾔﾓﾚ=ｱﾅﾐ/ﾏﾁﾂ*ﾘﾜﾈ|ﾌﾖﾊ+ﾔﾓﾚ=ｱﾅﾐ/</text>
+    <text class="col" x="786" y="-196" font-size="28" opacity="0.95">ﾎﾚﾕ+ﾂﾅﾖ|ﾏﾜﾁ*ﾌﾘﾐ=ﾔｵﾈ/ﾗﾎﾚﾕ+ﾂﾅﾖ|ﾏﾜﾁ*ﾌﾘﾐ=ﾔｵﾈ/ﾗﾎﾚﾕ+ﾂﾅﾖ|ﾏﾜﾁ*ﾌﾘﾐ=ﾔｵﾈ/ﾗ</text>
+    <text class="col" x="866" y="-58" font-size="18" opacity="0.7">ﾜﾂﾖ|ﾏﾚﾈ+ﾁﾌﾘ*ﾔﾓﾅ=ﾎｱﾕﾜﾂﾖ|ﾏﾚﾈ+ﾁﾌﾘ*ﾔﾓﾅ=ﾎｱﾕﾜﾂﾖ|ﾏﾚﾈ+ﾁﾌﾘ*ﾔﾓﾅ=ﾎｱﾕ</text>
+    <text class="col" x="934" y="-238" font-size="30" opacity="1">ﾐﾘﾂ*ﾈﾜﾖ|ﾁｭﾌ+ﾚﾏﾅ=ﾎﾔｵ/ﾗﾐﾘﾂ*ﾈﾜﾖ|ﾁｭﾌ+ﾚﾏﾅ=ﾎﾔｵ/ﾗﾐﾘﾂ*ﾈﾜﾖ|ﾁｭﾌ+ﾚﾏﾅ=ﾎﾔｵ/ﾗ</text>
+    <text class="col" x="1014" y="-88" font-size="24" opacity="0.84">ﾖﾁﾏ+ﾜﾈﾂ|ﾌﾘﾓ*ﾔﾎﾅ=ﾚｱﾕ/ﾖﾁﾏ+ﾜﾈﾂ|ﾌﾘﾓ*ﾔﾎﾅ=ﾚｱﾕ/ﾖﾁﾏ+ﾜﾈﾂ|ﾌﾘﾓ*ﾔﾎﾅ=ﾚｱﾕ/</text>
+    <text class="col" x="1102" y="-210" font-size="26" opacity="0.9">ﾂﾎﾘ|ﾅﾏﾜ+ﾚﾌﾖ*ﾁﾔﾐ=ｵﾈﾗ/ﾕﾂﾎﾘ|ﾅﾏﾜ+ﾚﾌﾖ*ﾁﾔﾐ=ｵﾈﾗ/ﾕﾂﾎﾘ|ﾅﾏﾜ+ﾚﾌﾖ*ﾁﾔﾐ=ｵﾈﾗ/ﾕ</text>
+    <text class="col" x="1186" y="-54" font-size="22" opacity="0.8">ﾌﾕﾜ*ﾈﾘﾓ|ﾔﾂﾏ+ﾎﾅﾚ=ﾁｱﾖ/ﾌﾕﾜ*ﾈﾘﾓ|ﾔﾂﾏ+ﾎﾅﾚ=ﾁｱﾖ/ﾌﾕﾜ*ﾈﾘﾓ|ﾔﾂﾏ+ﾎﾅﾚ=ﾁｱﾖ/</text>
+    <text class="col" x="1262" y="-248" font-size="30" opacity="1">ﾚﾂﾎ|ﾏﾅﾖ+ﾜﾌﾘ*ﾔﾐﾈ=ﾁｵﾗ/ﾕﾚﾂﾎ|ﾏﾅﾖ+ﾜﾌﾘ*ﾔﾐﾈ=ﾁｵﾗ/ﾕﾚﾂﾎ|ﾏﾅﾖ+ﾜﾌﾘ*ﾔﾐﾈ=ﾁｵﾗ/ﾕ</text>
+    <text class="col" x="1340" y="-110" font-size="24" opacity="0.86">ﾖﾜﾌ+ﾘﾈﾂ|ﾏﾎﾅ*ﾚﾁﾕ=ｱﾓﾔ/ﾖﾜﾌ+ﾘﾈﾂ|ﾏﾎﾅ*ﾚﾁﾕ=ｱﾓﾔ/ﾖﾜﾌ+ﾘﾈﾂ|ﾏﾎﾅ*ﾚﾁﾕ=ｱﾓﾔ/</text>
+  </g>
+</svg>

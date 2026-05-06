@@ -6,6 +6,7 @@
     { "id": "silver", "file": "silver.json" },
     { "id": "aurora", "file": "aurora.json" },
     { "id": "terminal", "file": "terminal.json" },
+    { "id": "matrix-rain", "file": "matrix-rain.json" },
     { "id": "unicorn", "file": "unicorn.json" },
     { "id": "blue", "file": "blue.json" },
     { "id": "aqua", "file": "aqua.json" },

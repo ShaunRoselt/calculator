@@ -35,16 +35,83 @@
 .currency-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 450px;
+  grid-template-rows: minmax(0, 1fr);
   gap: 0;
   width: 100%;
   height: 100%;
   min-height: 0;
 }
 
+.main-panel > .converter-native-layout:not(.converter-side-keypad),
+.main-panel > .currency-layout:not(.converter-side-keypad) {
+  min-height: 100%;
+  height: 100%;
+  grid-template-rows: auto minmax(0, 1fr);
+  align-content: stretch;
+}
+
+@media (max-height: 700px) {
+  .converter-native-layout:not(.converter-side-keypad),
+  .currency-layout:not(.converter-side-keypad) {
+    gap: 4px;
+  }
+
+  .converter-native-layout:not(.converter-side-keypad) .converter-native-panel,
+  .currency-layout:not(.converter-side-keypad) .currency-panel {
+    padding: 0 8px 4px;
+    gap: 0.45rem;
+  }
+
+  .converter-native-layout:not(.converter-side-keypad) .converter-native-values,
+  .currency-layout:not(.converter-side-keypad) .currency-values {
+    gap: 0.7rem;
+  }
+
+  .converter-native-layout:not(.converter-side-keypad) .converter-native-field,
+  .currency-layout:not(.converter-side-keypad) .currency-field {
+    gap: 0.28rem;
+    padding: 0.55rem 0.75rem;
+  }
+
+  .converter-native-layout:not(.converter-side-keypad) .converter-native-amount,
+  .currency-layout:not(.converter-side-keypad) .currency-amount {
+    font-size: clamp(1.9rem, 7vw, 2.55rem);
+  }
+
+  .converter-native-layout:not(.converter-side-keypad) .converter-native-meta,
+  .currency-layout:not(.converter-side-keypad) .currency-meta {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.68rem;
+  }
+
+  .converter-native-layout:not(.converter-side-keypad) .converter-native-meta-value {
+    font-size: 0.82rem;
+  }
+
+  .converter-native-layout:not(.converter-side-keypad) .converter-select-button,
+  .currency-layout:not(.converter-side-keypad) .converter-select-button,
+  .currency-layout:not(.converter-side-keypad) .currency-update-button {
+    min-height: 28px;
+    padding: 0.12rem 0.45rem;
+  }
+
+  .converter-native-layout:not(.converter-side-keypad) .converter-native-keypad,
+  .currency-layout:not(.converter-side-keypad) .currency-keypad {
+    grid-template-rows: repeat(5, minmax(46px, 1fr));
+    gap: 1px;
+    padding-bottom: 0;
+    min-height: 0;
+    height: 100%;
+    align-self: stretch;
+  }
+}
+
 .converter-native-panel,
 .currency-panel {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.75rem;
   min-height: 0;
   padding: 0 14px 10px;
   min-width: 0;
@@ -53,8 +120,9 @@
 .converter-native-values,
 .currency-values {
   display: grid;
-  margin-top: auto;
-  margin-bottom: auto;
+  align-content: start;
+  margin-top: 0;
+  margin-bottom: 0;
   min-width: 0;
 }
 
@@ -221,7 +289,7 @@
 }
 
 .converter-native-meta {
-  margin-top: auto;
+  margin-top: 0;
   padding-top: 1rem;
   color: var(--text-faint);
   font-size: 0.82rem;
@@ -241,7 +309,7 @@
 }
 
 .currency-meta {
-  margin-top: auto;
+  margin-top: 0;
   padding-top: 1rem;
   color: var(--text-faint);
   font-size: 0.78rem;
@@ -304,7 +372,7 @@
   .converter-native-layout,
   .currency-layout {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: auto minmax(0, 1fr);
     height: auto;
   }
 
@@ -328,7 +396,7 @@
 
   .converter-native-keypad,
   .currency-keypad {
-    min-height: max-content;
+    min-height: 0;
     grid-template-rows: repeat(5, minmax(56px, 1fr));
   }
 }
@@ -349,7 +417,7 @@
 .converter-native-layout.converter-side-keypad .converter-native-values,
 .currency-layout.converter-side-keypad .currency-values {
   align-content: start;
-  margin-top: 0.35rem;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -368,7 +436,7 @@
 
 .converter-native-layout.converter-side-keypad .converter-native-meta,
 .currency-layout.converter-side-keypad .currency-meta {
-  margin-top: auto;
+  margin-top: 0;
   padding-top: 0.6rem;
   font-size: 0.72rem;
 }
@@ -429,7 +497,7 @@
 
   .converter-native-layout.converter-side-keypad .converter-native-values,
   .currency-layout.converter-side-keypad .currency-values {
-    margin-top: 0.15rem;
+    margin-top: 0;
   }
 
   .converter-native-layout.converter-side-keypad .converter-native-values {

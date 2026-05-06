@@ -183,7 +183,7 @@ function renderSettingsMenu(menu, label, selectedLabel, options) {
       ${isOpen ? `
         <div class="date-native-mode-menu settings-select-menu ${isThemeMenu ? 'settings-select-menu-theme' : ''}">
           <div class="settings-select-search-row">
-            <input type="search" class="settings-select-search-input" data-settings-menu-search="${menu}" placeholder="${escapeHtml(searchPlaceholder)}" aria-label="${escapeHtml(searchPlaceholder)}" autocomplete="off" spellcheck="false" autofocus />
+            <input type="search" class="settings-select-search-input" data-settings-menu-search="${menu}" placeholder="${escapeHtml(searchPlaceholder)}" aria-label="${escapeHtml(searchPlaceholder)}" autocomplete="off" spellcheck="false" />
           </div>
           <div class="settings-select-menu-options ${isThemeMenu ? 'settings-select-menu-options-theme' : ''}" role="listbox" aria-label="${escapeHtml(label)}">
             ${options.map((option) => renderSettingsMenuOption(menu, option, option.value === (menu === 'theme' ? state.settings.theme : getCurrentLanguage()))).join('')}

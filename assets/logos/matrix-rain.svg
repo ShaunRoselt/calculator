@@ -1,0 +1,60 @@
+<svg width="499" height="667" viewBox="0 0 499 667" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Roselt Calculator matrix rain theme logo">
+  <defs>
+    <linearGradient id="shellGradient" x1="24" y1="18" x2="475" y2="649" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#020704"/>
+      <stop offset="1" stop-color="#07180c"/>
+    </linearGradient>
+    <linearGradient id="displayGradient" x1="56" y1="54" x2="444" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07140a"/>
+      <stop offset="1" stop-color="#0b2110"/>
+    </linearGradient>
+    <linearGradient id="buttonGradient" x1="55" y1="239" x2="444" y2="603" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0c2312"/>
+      <stop offset="1" stop-color="#051109"/>
+    </linearGradient>
+    <linearGradient id="equalsGradient" x1="335" y1="366" x2="444" y2="603" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#96ff73"/>
+      <stop offset="1" stop-color="#38b74b"/>
+    </linearGradient>
+    <filter id="softShadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="greenGlow" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#72ff90" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+  <rect x="1.5" y="1.5" width="496" height="664" rx="24.5" fill="url(#shellGradient)" stroke="#16331c" stroke-width="3"/>
+  <g opacity="0.62" font-family="'Courier New', monospace" font-size="21" fill="#8cff9a" filter="url(#greenGlow)">
+    <text x="64" y="70">101001</text>
+    <text x="176" y="98">010110</text>
+    <text x="290" y="74">011001</text>
+    <text x="384" y="108">110010</text>
+    <text x="96" y="152">001011</text>
+    <text x="326" y="154">100101</text>
+  </g>
+  <g filter="url(#softShadow)">
+    <rect x="55" y="54" width="389" height="125" rx="14" fill="url(#displayGradient)"/>
+  </g>
+  <g opacity="0.9" filter="url(#greenGlow)">
+    <rect x="88" y="93" width="214" height="12" rx="6" fill="#d7ffe0"/>
+    <rect x="88" y="120" width="164" height="12" rx="6" fill="#8dff9f" opacity="0.65"/>
+    <rect x="318" y="88" width="78" height="58" rx="10" fill="#08180d" stroke="#3dc15b" stroke-opacity="0.5"/>
+    <text x="333" y="126" font-family="'Courier New', monospace" font-size="32" fill="#96ff73">01</text>
+  </g>
+  <g opacity="0.5">
+    <rect x="74" y="214" width="4" height="150" rx="2" fill="#67ff87"/>
+    <rect x="128" y="198" width="4" height="180" rx="2" fill="#52e16d"/>
+    <rect x="206" y="218" width="4" height="138" rx="2" fill="#93ff78"/>
+    <rect x="287" y="194" width="4" height="188" rx="2" fill="#72ff90"/>
+    <rect x="362" y="210" width="4" height="164" rx="2" fill="#48c85e"/>
+    <rect x="418" y="230" width="4" height="126" rx="2" fill="#96ff73"/>
+  </g>
+  <g filter="url(#softShadow)"><rect x="55" y="239" width="109" height="110" rx="17" fill="url(#buttonGradient)"/></g>
+  <g filter="url(#softShadow)"><rect x="195" y="239" width="109" height="110" rx="17" fill="url(#buttonGradient)"/></g>
+  <g filter="url(#softShadow)"><rect x="335" y="239" width="109" height="110" rx="17" fill="url(#buttonGradient)"/></g>
+  <g filter="url(#softShadow)"><rect x="55" y="366" width="109" height="110" rx="17" fill="url(#buttonGradient)"/></g>
+  <g filter="url(#softShadow)"><rect x="195" y="366" width="109" height="110" rx="17" fill="url(#buttonGradient)"/></g>
+  <g filter="url(#softShadow)"><rect x="55" y="493" width="109" height="110" rx="17" fill="url(#buttonGradient)"/></g>
+  <g filter="url(#softShadow)"><rect x="195" y="493" width="109" height="110" rx="17" fill="url(#buttonGradient)"/></g>
+  <g filter="url(#softShadow)"><rect x="335" y="366" width="109" height="237" rx="17" fill="url(#equalsGradient)"/></g>
+</svg>

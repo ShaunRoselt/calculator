@@ -37,8 +37,158 @@ export function render() {
     </div>
   `;
   prepareTooltipTargets(appRoot);
+  syncCalculatorMascotPlacement();
   syncConverterMenuScroll();
   drawGraph();
+}
+
+function syncCalculatorMascotPlacement() {
+  requestAnimationFrame(() => {
+    const appShell = appRoot.querySelector('.app-shell');
+    const calculatorLayout = appRoot.querySelector('.calculator-layout');
+    const displayPanel = calculatorLayout?.querySelector('.display-panel');
+    const displayExpression = displayPanel?.querySelector('.display-expression');
+    const displayValue = displayPanel?.querySelector('.display-value');
+
+    if (!(appShell instanceof HTMLElement) || !(calculatorLayout instanceof HTMLElement)) {
+      return;
+    }
+
+    if (!(displayPanel instanceof HTMLElement) || !(displayExpression instanceof HTMLElement) || !(displayValue instanceof HTMLElement)) {
+      appShell.removeAttribute('data-mascot-placement');
+      return;
+    }
+
+    const mascotMetrics = getMascotMetrics(calculatorLayout);
+    if (!mascotMetrics) {
+      appShell.removeAttribute('data-mascot-placement');
+      return;
+    }
+
+    const textRects = [displayExpression, displayValue]
+      .map(getVisibleTextRect)
+      .filter(Boolean);
+
+    if (textRects.length === 0) {
+      appShell.dataset.mascotPlacement = 'right';
+      return;
+    }
+
+    const rightMascotRect = getMascotRect(calculatorLayout.getBoundingClientRect(), mascotMetrics, 'right');
+    if (!textRects.some((textRect) => rectsOverlap(textRect, rightMascotRect, 6))) {
+      appShell.dataset.mascotPlacement = 'right';
+      return;
+    }
+
+    const leftMascotRect = getMascotRect(calculatorLayout.getBoundingClientRect(), mascotMetrics, 'left');
+    appShell.dataset.mascotPlacement = textRects.some((textRect) => rectsOverlap(textRect, leftMascotRect, 6))
+      ? 'toolbar'
+      : 'left';
+  });
+}
+
+function getMascotMetrics(calculatorLayout) {
+  const styles = getComputedStyle(calculatorLayout);
+  const width = parseFloat(styles.getPropertyValue('--theme-mascot-width'));
+  const height = parseFloat(styles.getPropertyValue('--theme-mascot-height'));
+  const top = parseFloat(styles.getPropertyValue('--theme-mascot-top'));
+  const right = parseFloat(styles.getPropertyValue('--theme-mascot-right'));
+  const opacity = parseFloat(styles.getPropertyValue('--theme-mascot-opacity'));
+  const image = styles.getPropertyValue('--theme-mascot-image').trim();
+  const hitInsetTop = parseFloat(styles.getPropertyValue('--theme-mascot-hit-inset-top'));
+  const hitInsetRight = parseFloat(styles.getPropertyValue('--theme-mascot-hit-inset-right'));
+  const hitInsetBottom = parseFloat(styles.getPropertyValue('--theme-mascot-hit-inset-bottom'));
+  const hitInsetLeft = parseFloat(styles.getPropertyValue('--theme-mascot-hit-inset-left'));
+
+  if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+    return null;
+  }
+
+  if (!Number.isFinite(opacity) || opacity <= 0 || image === 'none' || image === '') {
+    return null;
+  }
+
+  return {
+    width,
+    height,
+    top: Number.isFinite(top) ? top : 0,
+    sideInset: Number.isFinite(right) ? right : 0,
+    hitInsets: {
+      top: Number.isFinite(hitInsetTop) ? hitInsetTop : 0,
+      right: Number.isFinite(hitInsetRight) ? hitInsetRight : 0,
+      bottom: Number.isFinite(hitInsetBottom) ? hitInsetBottom : 0,
+      left: Number.isFinite(hitInsetLeft) ? hitInsetLeft : 0
+    }
+  };
+}
+
+function getVisibleTextRect(element) {
+  if (!(element instanceof HTMLElement)) {
+    return null;
+  }
+
+  const rawText = element.textContent?.replace(/\u00a0/g, ' ').trim() ?? '';
+  if (!rawText) {
+    return null;
+  }
+
+  const elementRect = element.getBoundingClientRect();
+  if (elementRect.width <= 0 || elementRect.height <= 0) {
+    return null;
+  }
+
+  const range = document.createRange();
+  range.selectNodeContents(element);
+  const textRect = range.getBoundingClientRect();
+  range.detach?.();
+
+  if (textRect.width <= 0 || textRect.height <= 0) {
+    return null;
+  }
+
+  const left = Math.max(elementRect.left, textRect.left);
+  const right = Math.min(elementRect.right, textRect.right);
+  const top = Math.max(elementRect.top, textRect.top);
+  const bottom = Math.min(elementRect.bottom, textRect.bottom);
+
+  if (right <= left || bottom <= top) {
+    return null;
+  }
+
+  return {
+    left,
+    right,
+    top,
+    bottom
+  };
+}
+
+function getMascotRect(layoutRect, mascotMetrics, placement) {
+  const outerLeft = placement === 'left'
+    ? layoutRect.left + mascotMetrics.sideInset
+    : layoutRect.right - mascotMetrics.sideInset - mascotMetrics.width;
+  const outerTop = layoutRect.top + mascotMetrics.top;
+  const hitInsets = mascotMetrics.hitInsets;
+  const left = outerLeft + hitInsets.left;
+  const top = outerTop + hitInsets.top;
+  const right = outerLeft + mascotMetrics.width - hitInsets.right;
+  const bottom = outerTop + mascotMetrics.height - hitInsets.bottom;
+
+  return {
+    left,
+    right,
+    top,
+    bottom
+  };
+}
+
+function rectsOverlap(firstRect, secondRect, padding = 0) {
+  return !(
+    firstRect.right <= secondRect.left + padding
+    || firstRect.left >= secondRect.right - padding
+    || firstRect.bottom <= secondRect.top + padding
+    || firstRect.top >= secondRect.bottom - padding
+  );
 }
 
 function syncConverterMenuScroll() {

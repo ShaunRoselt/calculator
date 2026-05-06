@@ -21,7 +21,8 @@ const GENERIC_CONVERTER_KEYPAD = [
 ];
 
 const CONVERTER_SHORT_HEIGHT_BREAKPOINT = 520;
-const CONVERTER_SIDE_KEYPAD_MIN_WIDTH = 380;
+const CONVERTER_SIDE_KEYPAD_MIN_WIDTH = 720;
+const CONVERTER_SIDE_KEYPAD_MIN_HEIGHT = 420;
 
 export function renderUnitConverterView() {
   const units = getUnitsForCategory(state.converter.category);
@@ -244,7 +245,7 @@ function renderCurrencyKey(button) {
 
 function getConverterLayoutClasses(baseClass) {
   const isShortHeight = window.innerHeight < CONVERTER_SHORT_HEIGHT_BREAKPOINT;
-  const hasSideKeypadSpace = window.innerWidth >= CONVERTER_SIDE_KEYPAD_MIN_WIDTH;
+  const hasSideKeypadSpace = window.innerWidth >= CONVERTER_SIDE_KEYPAD_MIN_WIDTH && window.innerHeight >= CONVERTER_SIDE_KEYPAD_MIN_HEIGHT;
   return [
     baseClass,
     isShortHeight ? 'converter-short-height' : '',

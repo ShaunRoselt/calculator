@@ -566,7 +566,7 @@
   }
 
   .calculator-layout.scientific .calc-button {
-    font-size: 0.84rem;
+    font-size: 0.9rem;
   }
 
   .memory-toolbar button {
@@ -580,7 +580,7 @@
 
   .calc-button {
     min-height: 0;
-    font-size: 0.98rem;
+    font-size: 1.06rem;
     border-radius: 3px;
   }
 }

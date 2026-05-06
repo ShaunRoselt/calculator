@@ -69,6 +69,8 @@ const urlPreferences = getUrlPreferenceOverrides();
 
 let converterTypeaheadBuffer = '';
 let converterTypeaheadTimestamp = 0;
+let lastViewportWidth = window.innerWidth;
+let lastViewportHeight = window.innerHeight;
 
 function setGraphCompactEditorView(view) {
   state.graphing.compactEditorView = view === 'keypad' ? 'keypad' : 'expressions';
@@ -263,7 +265,42 @@ async function applyLanguageChange(language) {
 }
 
 function handleResize() {
+  const nextViewportWidth = window.innerWidth;
+  const nextViewportHeight = window.innerHeight;
+  const widthChanged = Math.abs(nextViewportWidth - lastViewportWidth) > 2;
+  const heightChanged = Math.abs(nextViewportHeight - lastViewportHeight) > 2;
+
+  lastViewportWidth = nextViewportWidth;
+  lastViewportHeight = nextViewportHeight;
+
+  if (!widthChanged && heightChanged && isTextEntryElement(document.activeElement)) {
+    return;
+  }
+
   render();
+}
+
+function isTextEntryElement(element) {
+  if (element instanceof HTMLTextAreaElement) {
+    return true;
+  }
+
+  if (!(element instanceof HTMLInputElement)) {
+    return element instanceof HTMLElement && element.isContentEditable;
+  }
+
+  return ![
+    'button',
+    'checkbox',
+    'color',
+    'file',
+    'hidden',
+    'image',
+    'radio',
+    'range',
+    'reset',
+    'submit'
+  ].includes(element.type);
 }
 
 function handlePopState() {

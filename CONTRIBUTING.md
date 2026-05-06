@@ -125,11 +125,25 @@ Build the Linux x64 Electron bundle:
 npm run package:linux
 ```
 
+Build the Linux x64 AppImage:
+
+```bash
+npm run package:linux:appimage
+```
+
 Build the Flatpak bundle:
 
 ```bash
 npm run package:flatpak
 ```
+
+Build the Android package from the hosted PWA with PWABuilder:
+
+1. Open `https://www.pwabuilder.com/`
+2. Package `https://calculator.apps.shaunroselt.com/`
+3. Choose Android and download the generated package archive
+
+The PWABuilder download includes at least an `.apk`, an `.aab`, and `assetlinks.json`.
 
 Launch the installed Flatpak:
 

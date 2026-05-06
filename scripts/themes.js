@@ -1,4 +1,6 @@
 const THEME_INDEX_URL = new URL('../assets/themes/data/index.json', import.meta.url);
+const THEME_CSS_BASE_URL = new URL('../assets/themes/css/', import.meta.url);
+const ACTIVE_THEME_STYLESHEET_ID = 'active-theme-stylesheet';
 
 const FALLBACK_GRAPH_DARK = {
   background: '#1b1c20',
@@ -28,6 +30,34 @@ let allThemesPromise = null;
 
 function getCanonicalThemeLogoPath(themeId) {
   return `assets/logos/${themeId}.svg`;
+}
+
+function getThemeStylesheetUrl(themeId) {
+  const manifestEntry = manifestById.get(themeId);
+  return manifestEntry?.file ? new URL(manifestEntry.file, THEME_CSS_BASE_URL).href : '';
+}
+
+function syncActiveThemeStylesheet(themeId) {
+  if (typeof document === 'undefined') {
+    return;
+  }
+
+  const stylesheetUrl = getThemeStylesheetUrl(themeId);
+  if (!stylesheetUrl) {
+    return;
+  }
+
+  let stylesheet = document.getElementById(ACTIVE_THEME_STYLESHEET_ID);
+  if (!(stylesheet instanceof HTMLLinkElement)) {
+    stylesheet = document.createElement('link');
+    stylesheet.id = ACTIVE_THEME_STYLESHEET_ID;
+    stylesheet.rel = 'stylesheet';
+    document.head.append(stylesheet);
+  }
+
+  if (stylesheet.href !== stylesheetUrl) {
+    stylesheet.href = stylesheetUrl;
+  }
 }
 
 function isPlainObject(value) {
@@ -80,6 +110,29 @@ async function fetchJson(url) {
   return response.json();
 }
 
+async function fetchText(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Unable to load theme CSS from ${url}`);
+  }
+
+  return response.text();
+}
+
+function parseThemeTokens(cssText) {
+  const tokens = {};
+  const tokenPattern = /(^|[\s{;])(--[a-z0-9-_]+)\s*:\s*([^;]+);/gim;
+
+  for (const match of cssText.matchAll(tokenPattern)) {
+    const [, , tokenName, tokenValue] = match;
+    if (tokenName && tokenValue) {
+      tokens[tokenName.trim()] = tokenValue.trim();
+    }
+  }
+
+  return tokens;
+}
+
 async function ensureThemeManifestLoaded() {
   if (themeOrder.length > 0 && manifestById.size > 0) {
     return;
@@ -124,9 +177,10 @@ async function loadThemeDefinition(themeId, loading = new Set()) {
 
   loading.add(themeId);
   const themePromise = (async () => {
-    const themeUrl = new URL(`../assets/themes/data/${manifestEntry.file}`, import.meta.url);
-    const rawTheme = await fetchJson(themeUrl);
-    let resolvedTheme = isPlainObject(rawTheme) ? rawTheme : {};
+    const themeUrl = new URL(manifestEntry.file, THEME_CSS_BASE_URL);
+    const rawCss = await fetchText(themeUrl);
+    let resolvedTheme = isPlainObject(manifestEntry) ? { ...manifestEntry } : {};
+    resolvedTheme.tokens = parseThemeTokens(rawCss);
 
     if (typeof resolvedTheme.extends === 'string' && resolvedTheme.extends) {
       const baseTheme = await loadThemeDefinition(resolvedTheme.extends, loading);
@@ -185,6 +239,10 @@ export async function prepareThemesForLaunch(themeSetting = 'system', systemThem
     ensureTheme(defaultThemeId),
     ensureTheme(initialThemeId)
   ]);
+
+  if (typeof document !== 'undefined') {
+    applyThemeToElement(document.documentElement, initialThemeId);
+  }
 
   return initialThemeId;
 }
@@ -282,6 +340,8 @@ export function applyThemeToElement(element, themeId) {
       graphPalette: FALLBACK_GRAPH_DARK
     };
   }
+
+  syncActiveThemeStylesheet(theme.id);
 
   for (const tokenName of themeVariableKeys) {
     element.style.removeProperty(tokenName);

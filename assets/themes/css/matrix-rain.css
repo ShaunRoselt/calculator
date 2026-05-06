@@ -1,0 +1,427 @@
+:root[data-theme="matrix-rain"] {
+  --ui-font-family: "Courier New", "Liberation Mono", monospace;
+  --bg: #010302;
+  --shell-bg: #020704;
+  --window-bg: rgba(4, 12, 7, 0.9);
+  --window-bg-alt: rgba(5, 16, 9, 0.93);
+  --panel: rgba(6, 18, 10, 0.88);
+  --panel-alt: rgba(8, 23, 13, 0.9);
+  --panel-soft: rgba(12, 34, 20, 0.92);
+  --panel-strong: rgba(20, 54, 31, 0.94);
+  --text: #f2fff5;
+  --text-soft: #bbf8c8;
+  --text-faint: #4ca966;
+  --accent: #72ff90;
+  --accent-strong: #a8ff63;
+  --operator: rgba(15, 55, 25, 0.92);
+  --danger: #ff7e7e;
+  --surface-hover: rgba(110, 255, 142, 0.08);
+  --surface-active: rgba(110, 255, 142, 0.13);
+  --border-subtle: rgba(116, 255, 150, 0.18);
+  --border-faint: rgba(116, 255, 150, 0.1);
+  --focus-ring: rgba(116, 255, 150, 0.72);
+  --focus-border: rgba(116, 255, 150, 0.62);
+  --focus-glow: rgba(116, 255, 150, 0.22);
+  --shadow: 0 40px 100px rgba(0, 0, 0, 0.72);
+  --shadow-menu: 0 22px 44px rgba(0, 0, 0, 0.5);
+  --tooltip-bg: rgba(7, 22, 11, 0.96);
+  --tooltip-text: #d7ffe0;
+  --tooltip-shadow: 0 10px 20px rgba(0, 0, 0, 0.38);
+  --noscript-bg: rgba(5, 16, 8, 0.96);
+  --accent-surface: rgba(114, 255, 144, 0.1);
+  --accent-border: rgba(114, 255, 144, 0.18);
+  --scrollbar-thumb: rgba(114, 255, 144, 0.28);
+  --scrollbar-color: rgba(114, 255, 144, 0.36) transparent;
+  --toggle-group-bg: rgba(3, 14, 8, 0.94);
+  --toggle-group-ring: rgba(114, 255, 144, 0.24);
+  --toggle-group-text: rgba(225, 255, 230, 0.94);
+  --toggle-active-bg: #7eff94;
+  --toggle-active-hover-bg: #96ffa7;
+  --toggle-active-text: #021b07;
+  --graph-panel-bg: #0a140d;
+  --graph-panel-hover-bg: #102114;
+  --graph-panel-active-bg: #16311d;
+  --graph-editor-bg: #071008;
+  --graph-input-bg: #0c1d11;
+  --graph-input-focus-bg: #09170d;
+  --graph-style-panel-bg: #08150c;
+  --graph-style-select-bg: #11301a;
+  --converter-menu-bg: linear-gradient(180deg, rgba(8, 26, 13, 0.94) 0%, rgba(5, 14, 8, 0.95) 100%);
+  --button-default-bg: linear-gradient(180deg, rgba(9, 24, 12, 0.9) 0%, rgba(4, 12, 7, 0.95) 100%);
+  --button-default-hover-bg: linear-gradient(180deg, rgba(14, 38, 18, 0.94) 0%, rgba(8, 18, 11, 0.97) 100%);
+  --button-function-bg: linear-gradient(180deg, rgba(11, 30, 15, 0.91) 0%, rgba(6, 16, 9, 0.96) 100%);
+  --button-function-hover-bg: linear-gradient(180deg, rgba(16, 40, 20, 0.95) 0%, rgba(8, 20, 11, 0.97) 100%);
+  --button-digit-bg: linear-gradient(180deg, rgba(5, 14, 8, 0.88) 0%, rgba(2, 8, 4, 0.94) 100%);
+  --button-digit-hover-bg: linear-gradient(180deg, rgba(10, 24, 14, 0.92) 0%, rgba(5, 12, 7, 0.96) 100%);
+  --button-operator-bg: linear-gradient(180deg, rgba(17, 61, 28, 0.9) 0%, rgba(8, 24, 12, 0.95) 100%);
+  --button-operator-hover-bg: linear-gradient(180deg, rgba(23, 84, 37, 0.96) 0%, rgba(11, 34, 16, 0.98) 100%);
+  --button-equals-bg-start: #96ff73;
+  --button-equals-bg-end: #38b74b;
+  --button-equals-hover-bg-start: #a9ff85;
+  --button-equals-hover-bg-end: #49c95c;
+  --button-equals-text: #031a07;
+  --theme-shell-background: radial-gradient(circle at 50% -18%, rgba(92, 255, 128, 0.16) 0%, transparent 38%), linear-gradient(180deg, rgba(2, 9, 5, 0.98) 0%, rgba(1, 5, 3, 0.99) 100%);
+  --theme-shell-overlay: linear-gradient(180deg, rgba(95, 255, 137, 0.06) 0%, rgba(95, 255, 137, 0.01) 46%, rgba(0, 0, 0, 0) 100%), repeating-linear-gradient(90deg, rgba(109, 255, 141, 0.09) 0 1px, transparent 1px 24px);
+  --theme-shell-overlay-size: 100% 100%, 24px 24px;
+  --theme-shell-overlay-opacity: 0.92;
+  --theme-display-background: linear-gradient(180deg, rgba(4, 18, 8, 0.92) 0%, rgba(3, 12, 6, 0.96) 100%);
+  --theme-display-border: 1px solid rgba(114, 255, 144, 0.24);
+  --theme-display-radius: 10px;
+  --theme-display-shadow: inset 0 0 32px rgba(83, 255, 118, 0.09), 0 0 0 1px rgba(114, 255, 144, 0.1), 0 0 28px rgba(18, 70, 32, 0.2);
+  --theme-display-overlay: linear-gradient(180deg, rgba(122, 255, 150, 0.12) 0 1px, transparent 1px 5px), radial-gradient(circle at 80% 20%, rgba(131, 255, 158, 0.12) 0%, transparent 28%);
+  --theme-display-overlay-size: 100% 6px, auto;
+  --theme-display-overlay-opacity: 0.62;
+  --theme-button-radius: 6px;
+  --theme-button-shadow: inset 0 1px 0 rgba(167, 255, 184, 0.06), 0 0 0 1px rgba(73, 168, 92, 0.3), 0 10px 20px rgba(0, 0, 0, 0.28);
+}
+
+@keyframes matrix-rain-fall {
+  from {
+    background-position: center 0, center -180px, center 0;
+  }
+
+  to {
+    background-position: center 640px, center 332px, center 0;
+  }
+}
+
+@keyframes matrix-rain-fall-deep {
+  from {
+    background-position: center 0, center -240px, center 0, center 0;
+  }
+
+  to {
+    background-position: center 640px, center 528px, center 0, center 0;
+  }
+}
+
+@keyframes matrix-rain-scan {
+  from {
+    background-position: center -120px, center 0;
+    opacity: 0.34;
+  }
+
+  50% {
+    opacity: 0.52;
+  }
+
+  to {
+    background-position: center 120px, center 0;
+    opacity: 0.34;
+  }
+}
+
+@keyframes matrix-rain-flicker {
+  0%, 17%, 22%, 100% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.72;
+  }
+
+  20% {
+    opacity: 0.98;
+  }
+
+  68% {
+    opacity: 0.84;
+  }
+
+  69% {
+    opacity: 0.94;
+  }
+}
+
+:root[data-theme="matrix-rain"] .app-shell::before {
+  background-image:
+    url("../images/matrix-rain-layer-a.svg"),
+    url("../images/matrix-rain-layer-a.svg"),
+    linear-gradient(180deg, rgba(198, 255, 207, 0.1) 0%, rgba(10, 20, 12, 0) 28%, rgba(0, 0, 0, 0.52) 100%);
+  background-size: 100% 640px, 104% 512px, 100% 100%;
+  background-repeat: repeat-y, repeat-y, no-repeat;
+  background-position: center 0, center -180px, center;
+  opacity: 0.9;
+  animation: matrix-rain-fall 11s linear infinite, matrix-rain-flicker 4.2s steps(12) infinite;
+  filter: saturate(126%);
+}
+
+:root[data-theme="matrix-rain"] .app-shell > * {
+  z-index: 2;
+}
+
+:root[data-theme="matrix-rain"] .app-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image:
+    url("../images/matrix-rain-layer-b.svg"),
+    url("../images/matrix-rain-layer-b.svg"),
+    radial-gradient(circle at 50% -10%, rgba(205, 255, 212, 0.2) 0%, rgba(3, 11, 6, 0) 34%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.42) 100%);
+  background-size: 100% 640px, 102% 768px, 100% 100%, 100% 100%;
+  background-repeat: repeat-y, repeat-y, no-repeat, no-repeat;
+  background-position: center 0, center -240px, center, center;
+  mix-blend-mode: screen;
+  opacity: 0.12;
+  animation: matrix-rain-fall-deep 16s linear infinite;
+}
+
+:root[data-theme="matrix-rain"] .topbar,
+:root[data-theme="matrix-rain"] .display-panel,
+:root[data-theme="matrix-rain"] .memory-toolbar,
+:root[data-theme="matrix-rain"] .calc-button,
+:root[data-theme="matrix-rain"] .side-panel,
+:root[data-theme="matrix-rain"] .settings-card,
+:root[data-theme="matrix-rain"] .settings-select-menu,
+:root[data-theme="matrix-rain"] .converter-panel,
+:root[data-theme="matrix-rain"] .scientific-operator-menu {
+  backdrop-filter: blur(2px);
+}
+
+:root[data-theme="matrix-rain"] .display-panel::before {
+  background-image:
+    linear-gradient(180deg, rgba(224, 255, 230, 0.08) 0%, rgba(0, 0, 0, 0) 34%),
+    url("../images/matrix-rain-display.svg"),
+    linear-gradient(180deg, rgba(110, 255, 138, 0.08) 0 1px, transparent 1px 4px);
+  background-size: 100% 100%, cover, 100% 4px;
+  background-repeat: no-repeat;
+  background-position: center 0, center 0, center 0;
+  animation: matrix-rain-scan 8s linear infinite;
+}
+
+:root[data-theme="matrix-rain"] .display-expression,
+:root[data-theme="matrix-rain"] .display-value {
+  text-shadow: 0 0 14px rgba(114, 255, 144, 0.22), 0 0 3px rgba(255, 255, 255, 0.12);
+}
+
+:root[data-theme="matrix-rain"] .calc-button,
+:root[data-theme="matrix-rain"] .memory-toolbar button,
+:root[data-theme="matrix-rain"] .memory-row,
+:root[data-theme="matrix-rain"] .memory-toolbar,
+:root[data-theme="matrix-rain"] .display-expression,
+:root[data-theme="matrix-rain"] .topbar,
+:root[data-theme="matrix-rain"] .side-panel,
+:root[data-theme="matrix-rain"] .settings-card,
+:root[data-theme="matrix-rain"] .settings-group-heading,
+:root[data-theme="matrix-rain"] .settings-select-menu,
+:root[data-theme="matrix-rain"] .converter-panel {
+  color: var(--text);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.72), 0 0 8px rgba(114, 255, 144, 0.06);
+}
+
+:root[data-theme="matrix-rain"] .scientific-toolbar,
+:root[data-theme="matrix-rain"] .memory-toolbar,
+:root[data-theme="matrix-rain"] .scientific-operator-strip {
+  background: linear-gradient(180deg, rgba(6, 18, 10, 0.84) 0%, rgba(3, 11, 6, 0.9) 100%);
+}
+
+:root[data-theme="matrix-rain"] .scientific-angle-operators button,
+:root[data-theme="matrix-rain"] .memory-toolbar button,
+:root[data-theme="matrix-rain"] .scientific-operator-button {
+  border: 1px solid rgba(114, 255, 144, 0.26);
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(10, 28, 14, 0.92) 0%, rgba(4, 12, 7, 0.96) 100%);
+  box-shadow: inset 0 1px 0 rgba(220, 255, 228, 0.06), 0 0 0 1px rgba(16, 51, 24, 0.35);
+  color: var(--text);
+  font-weight: 600;
+}
+
+:root[data-theme="matrix-rain"] .scientific-angle-operators button {
+  min-height: 28px;
+  padding: 0 0.45rem;
+  color: #eaffee;
+}
+
+:root[data-theme="matrix-rain"] .memory-toolbar button {
+  min-height: 30px;
+  padding: 0.2rem 0.42rem;
+}
+
+:root[data-theme="matrix-rain"] .scientific-operator-button {
+  min-height: 38px;
+  padding: 0.25rem 0.6rem;
+}
+
+:root[data-theme="matrix-rain"] .scientific-angle-operators button:hover,
+:root[data-theme="matrix-rain"] .scientific-angle-operators button:focus-visible,
+:root[data-theme="matrix-rain"] .scientific-angle-operators button.active,
+:root[data-theme="matrix-rain"] .memory-toolbar button:hover,
+:root[data-theme="matrix-rain"] .memory-toolbar button:focus-visible,
+:root[data-theme="matrix-rain"] .scientific-operator-button:hover,
+:root[data-theme="matrix-rain"] .scientific-operator-button:focus-visible,
+:root[data-theme="matrix-rain"] .scientific-operator-button.active {
+  background: linear-gradient(180deg, rgba(15, 42, 20, 0.96) 0%, rgba(7, 18, 10, 0.98) 100%);
+  border-color: rgba(157, 255, 177, 0.38);
+}
+
+:root[data-theme="matrix-rain"] .memory-toolbar button.disabled,
+:root[data-theme="matrix-rain"] .memory-toolbar button:disabled {
+  color: #9bc9a6;
+  background: linear-gradient(180deg, rgba(8, 20, 11, 0.82) 0%, rgba(4, 10, 6, 0.88) 100%);
+  border-color: rgba(114, 255, 144, 0.14);
+}
+
+:root[data-theme="matrix-rain"] .scientific-operator-caret,
+:root[data-theme="matrix-rain"] .scientific-operator-icon {
+  color: #dffff0;
+}
+
+:root[data-theme="matrix-rain"] .programmer-display-panel,
+:root[data-theme="matrix-rain"] .programmer-operator-groups,
+:root[data-theme="matrix-rain"] .programmer-meta-row {
+  background: linear-gradient(180deg, rgba(6, 18, 10, 0.84) 0%, rgba(3, 11, 6, 0.9) 100%);
+}
+
+:root[data-theme="matrix-rain"] .programmer-readout,
+:root[data-theme="matrix-rain"] .programmer-icon-toggle,
+:root[data-theme="matrix-rain"] .programmer-memory-button,
+:root[data-theme="matrix-rain"] .programmer-group-button,
+:root[data-theme="matrix-rain"] .programmer-word-size-button {
+  border: 1px solid rgba(114, 255, 144, 0.24);
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(10, 28, 14, 0.9) 0%, rgba(4, 12, 7, 0.96) 100%);
+  box-shadow: inset 0 1px 0 rgba(220, 255, 228, 0.05), 0 0 0 1px rgba(16, 51, 24, 0.32);
+  color: #effff3;
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.76), 0 0 8px rgba(114, 255, 144, 0.05);
+}
+
+:root[data-theme="matrix-rain"] .programmer-readout {
+  padding: 0.15rem 0.45rem 0.15rem 0.3rem;
+}
+
+:root[data-theme="matrix-rain"] .programmer-readout.active,
+:root[data-theme="matrix-rain"] .programmer-icon-toggle.active,
+:root[data-theme="matrix-rain"] .programmer-memory-button:hover,
+:root[data-theme="matrix-rain"] .programmer-memory-button:focus-visible,
+:root[data-theme="matrix-rain"] .programmer-icon-toggle:hover,
+:root[data-theme="matrix-rain"] .programmer-icon-toggle:focus-visible,
+:root[data-theme="matrix-rain"] .programmer-group-button:hover,
+:root[data-theme="matrix-rain"] .programmer-group-button:focus-visible,
+:root[data-theme="matrix-rain"] .programmer-word-size-button:hover,
+:root[data-theme="matrix-rain"] .programmer-word-size-button:focus-visible {
+  background: linear-gradient(180deg, rgba(15, 42, 20, 0.96) 0%, rgba(7, 18, 10, 0.98) 100%);
+  color: #f4fff7;
+  border-color: rgba(157, 255, 177, 0.38);
+}
+
+:root[data-theme="matrix-rain"] .programmer-readout:disabled {
+  color: #9bc9a6;
+  background: linear-gradient(180deg, rgba(8, 20, 11, 0.82) 0%, rgba(4, 10, 6, 0.88) 100%);
+  border-color: rgba(114, 255, 144, 0.12);
+}
+
+:root[data-theme="matrix-rain"] .programmer-readout-base,
+:root[data-theme="matrix-rain"] .programmer-readout-value,
+:root[data-theme="matrix-rain"] .programmer-group-caret,
+:root[data-theme="matrix-rain"] .programmer-group-button svg {
+  color: inherit;
+}
+
+:root[data-theme="matrix-rain"] .programmer-expression {
+  color: #c3f7cf;
+}
+
+:root[data-theme="matrix-rain"] .converter-native-panel,
+:root[data-theme="matrix-rain"] .currency-panel,
+:root[data-theme="matrix-rain"] .converter-native-field,
+:root[data-theme="matrix-rain"] .currency-field,
+:root[data-theme="matrix-rain"] .converter-native-meta,
+:root[data-theme="matrix-rain"] .currency-meta {
+  color: var(--text);
+}
+
+:root[data-theme="matrix-rain"] .converter-native-field,
+:root[data-theme="matrix-rain"] .currency-field,
+:root[data-theme="matrix-rain"] .converter-native-meta,
+:root[data-theme="matrix-rain"] .currency-meta {
+  width: 100%;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid rgba(114, 255, 144, 0.22);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(6, 18, 10, 0.9) 0%, rgba(3, 11, 6, 0.96) 100%);
+  box-shadow: inset 0 1px 0 rgba(220, 255, 228, 0.05), 0 0 0 1px rgba(16, 51, 24, 0.26);
+}
+
+:root[data-theme="matrix-rain"] .converter-native-field.active,
+:root[data-theme="matrix-rain"] .currency-field.active {
+  border-color: rgba(157, 255, 177, 0.36);
+  background: linear-gradient(180deg, rgba(10, 28, 14, 0.94) 0%, rgba(4, 12, 7, 0.98) 100%);
+}
+
+:root[data-theme="matrix-rain"] .converter-native-amount,
+:root[data-theme="matrix-rain"] .currency-amount,
+:root[data-theme="matrix-rain"] .currency-symbol,
+:root[data-theme="matrix-rain"] .converter-native-meta-value,
+:root[data-theme="matrix-rain"] .currency-meta-line,
+:root[data-theme="matrix-rain"] .converter-select-label,
+:root[data-theme="matrix-rain"] .converter-select-caret {
+  color: #f0fff4;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.78), 0 0 10px rgba(114, 255, 144, 0.06);
+}
+
+:root[data-theme="matrix-rain"] .settings-group-heading {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(114, 255, 144, 0.18);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(4, 16, 8, 0.88) 0%, rgba(2, 10, 5, 0.94) 100%);
+  box-shadow: inset 0 1px 0 rgba(220, 255, 228, 0.05), 0 0 0 1px rgba(14, 44, 22, 0.3);
+  color: #f4fff6;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.85), 0 0 10px rgba(114, 255, 144, 0.08);
+  letter-spacing: 0.01em;
+}
+
+:root[data-theme="matrix-rain"] .settings-feedback-button,
+:root[data-theme="matrix-rain"] .settings-contribute,
+:root[data-theme="matrix-rain"] .settings-contribute a,
+:root[data-theme="matrix-rain"] .settings-link {
+  color: #eefef1;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.82), 0 0 10px rgba(114, 255, 144, 0.08);
+}
+
+:root[data-theme="matrix-rain"] .settings-feedback-button {
+  padding: 0.35rem 0.75rem;
+  margin-top: 12px;
+  border: 1px solid rgba(114, 255, 144, 0.16);
+  border-radius: 999px;
+  background: rgba(4, 14, 8, 0.7);
+  box-shadow: inset 0 1px 0 rgba(220, 255, 228, 0.04);
+}
+
+:root[data-theme="matrix-rain"] .settings-contribute {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid rgba(114, 255, 144, 0.14);
+  border-radius: 14px;
+  background: rgba(4, 14, 8, 0.56);
+  box-shadow: inset 0 1px 0 rgba(220, 255, 228, 0.04);
+}
+
+:root[data-theme="matrix-rain"] .converter-native-meta,
+:root[data-theme="matrix-rain"] .currency-meta {
+  color: #c0f4cb;
+}
+
+:root[data-theme="matrix-rain"] .converter-select-button,
+:root[data-theme="matrix-rain"] .currency-update-button {
+  min-height: 32px;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid rgba(114, 255, 144, 0.22);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(10, 28, 14, 0.88) 0%, rgba(4, 12, 7, 0.94) 100%);
+}
+
+:root[data-theme="matrix-rain"] .converter-select-button.active,
+:root[data-theme="matrix-rain"] .converter-select-button:hover,
+:root[data-theme="matrix-rain"] .converter-select-button:focus-visible,
+:root[data-theme="matrix-rain"] .currency-update-button:hover,
+:root[data-theme="matrix-rain"] .currency-update-button:focus-visible {
+  border-color: rgba(157, 255, 177, 0.36);
+  background: linear-gradient(180deg, rgba(15, 42, 20, 0.94) 0%, rgba(7, 18, 10, 0.98) 100%);
+}

@@ -1,32 +1,383 @@
 {
   "defaultTheme": "dark",
   "themes": [
-    { "id": "dark", "file": "dark.json" },
-    { "id": "light", "file": "light.json" },
-    { "id": "silver", "file": "silver.json" },
-    { "id": "aurora", "file": "aurora.json" },
-    { "id": "terminal", "file": "terminal.json" },
-    { "id": "matrix-rain", "file": "matrix-rain.json" },
-    { "id": "unicorn", "file": "unicorn.json" },
-    { "id": "blue", "file": "blue.json" },
-    { "id": "aqua", "file": "aqua.json" },
-    { "id": "green", "file": "green.json" },
-    { "id": "red", "file": "red.json" },
-    { "id": "pink", "file": "pink.json" },
-    { "id": "purple", "file": "purple.json" },
-    { "id": "yellow", "file": "yellow.json" },
-    { "id": "orange", "file": "orange.json" },
-    { "id": "brown", "file": "brown.json" },
-    { "id": "gold", "file": "gold.json" },
-    { "id": "black", "file": "black.json" },
-    { "id": "maroon", "file": "maroon.json" },
-    { "id": "lgbtq", "file": "lgbtq.json" },
-    { "id": "aromantic", "file": "aromantic.json" },
-    { "id": "asexual", "file": "asexual.json" },
-    { "id": "bisexual", "file": "bisexual.json" },
-    { "id": "lesbian", "file": "lesbian.json" },
-    { "id": "non-binary", "file": "non-binary.json" },
-    { "id": "pansexual", "file": "pansexual.json" },
-    { "id": "transgender", "file": "transgender.json" }
+    {
+      "id": "dark",
+      "file": "dark.css",
+      "label": "Dark",
+      "colorScheme": "dark",
+      "metaColor": "#1f2025",
+      "graphPalette": {
+        "background": "#1b1c20",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#c6cad2",
+        "label": "#eef0f3"
+      }
+    },
+    {
+      "id": "light",
+      "file": "light.css",
+      "label": "Light",
+      "colorScheme": "light",
+      "metaColor": "#ececec",
+      "graphPalette": {
+        "background": "#f8f7f6",
+        "gridMajor": "rgba(124, 124, 124, 0.28)",
+        "gridMinor": "rgba(124, 124, 124, 0.12)",
+        "axis": "#666666",
+        "label": "#5b5b5b"
+      }
+    },
+    {
+      "id": "silver",
+      "file": "silver.css",
+      "label": "Silver",
+      "extends": "light",
+      "metaColor": "#c5d0dc",
+      "graphPalette": {
+        "background": "#edf2f7",
+        "gridMajor": "rgba(86, 104, 122, 0.26)",
+        "gridMinor": "rgba(86, 104, 122, 0.11)",
+        "axis": "#4e6276",
+        "label": "#314050"
+      }
+    },
+    {
+      "id": "aurora",
+      "file": "aurora.css",
+      "label": "Aurora",
+      "extends": "dark",
+      "metaColor": "#11263d",
+      "graphPalette": {
+        "background": "#0f1630",
+        "gridMajor": "rgba(176, 241, 255, 0.16)",
+        "gridMinor": "rgba(176, 241, 255, 0.08)",
+        "axis": "#d9f7ff",
+        "label": "#f5fbff"
+      }
+    },
+    {
+      "id": "terminal",
+      "file": "terminal.css",
+      "label": "Terminal",
+      "extends": "dark",
+      "metaColor": "#071108",
+      "graphPalette": {
+        "background": "#061107",
+        "gridMajor": "rgba(115, 255, 148, 0.18)",
+        "gridMinor": "rgba(115, 255, 148, 0.08)",
+        "axis": "#9bffb5",
+        "label": "#d8ffe1"
+      }
+    },
+    {
+      "id": "matrix-rain",
+      "file": "matrix-rain.css",
+      "label": "Matrix Rain",
+      "extends": "terminal",
+      "metaColor": "#020704",
+      "graphPalette": {
+        "background": "#020704",
+        "gridMajor": "rgba(120, 255, 148, 0.18)",
+        "gridMinor": "rgba(120, 255, 148, 0.08)",
+        "axis": "#8dff9f",
+        "label": "#ddffe3"
+      }
+    },
+    {
+      "id": "unicorn",
+      "file": "unicorn.css",
+      "label": "Unicorn",
+      "extends": "light",
+      "metaColor": "#f4d8fb",
+      "graphPalette": {
+        "background": "#fff9fd",
+        "gridMajor": "rgba(196, 169, 255, 0.22)",
+        "gridMinor": "rgba(196, 169, 255, 0.1)",
+        "axis": "#9b74cc",
+        "label": "#9b74cc"
+      }
+    },
+    {
+      "id": "blue",
+      "file": "blue.css",
+      "label": "Blue",
+      "extends": "dark",
+      "metaColor": "#15212d",
+      "graphPalette": {
+        "background": "#18202b",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#cfe0f3",
+        "label": "#f3f8ff"
+      }
+    },
+    {
+      "id": "aqua",
+      "file": "aqua.css",
+      "label": "Aqua",
+      "extends": "dark",
+      "metaColor": "#123136",
+      "graphPalette": {
+        "background": "#112a2f",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#cef7f8",
+        "label": "#f2ffff"
+      }
+    },
+    {
+      "id": "green",
+      "file": "green.css",
+      "label": "Green",
+      "extends": "dark",
+      "metaColor": "#15231c",
+      "graphPalette": {
+        "background": "#17201a",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#cfe5d8",
+        "label": "#f1fbf5"
+      }
+    },
+    {
+      "id": "red",
+      "file": "red.css",
+      "label": "Red",
+      "extends": "dark",
+      "metaColor": "#241517",
+      "graphPalette": {
+        "background": "#201617",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#ebcfd3",
+        "label": "#fff1f3"
+      }
+    },
+    {
+      "id": "pink",
+      "file": "pink.css",
+      "label": "Pink",
+      "extends": "dark",
+      "metaColor": "#241723",
+      "graphPalette": {
+        "background": "#1f1820",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#ebd5ea",
+        "label": "#fff4ff"
+      }
+    },
+    {
+      "id": "purple",
+      "file": "purple.css",
+      "label": "Purple",
+      "extends": "dark",
+      "metaColor": "#1e1830",
+      "graphPalette": {
+        "background": "#181725",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#ddd7f3",
+        "label": "#f7f5ff"
+      }
+    },
+    {
+      "id": "yellow",
+      "file": "yellow.css",
+      "label": "Yellow",
+      "extends": "dark",
+      "metaColor": "#272012",
+      "graphPalette": {
+        "background": "#231f16",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#f2e4ba",
+        "label": "#fff8e4"
+      }
+    },
+    {
+      "id": "orange",
+      "file": "orange.css",
+      "label": "Orange",
+      "extends": "dark",
+      "metaColor": "#26190f",
+      "graphPalette": {
+        "background": "#211813",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#f0d7c5",
+        "label": "#fff4ee"
+      }
+    },
+    {
+      "id": "brown",
+      "file": "brown.css",
+      "label": "Brown",
+      "extends": "dark",
+      "metaColor": "#221915",
+      "graphPalette": {
+        "background": "#1d1715",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#e6d6ce",
+        "label": "#fff6f2"
+      }
+    },
+    {
+      "id": "gold",
+      "file": "gold.css",
+      "label": "Gold",
+      "extends": "dark",
+      "metaColor": "#2a1f10",
+      "graphPalette": {
+        "background": "#231d14",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#f0dfaa",
+        "label": "#fff8df"
+      }
+    },
+    {
+      "id": "black",
+      "file": "black.css",
+      "label": "Black",
+      "extends": "dark",
+      "metaColor": "#0b0b0d",
+      "graphPalette": {
+        "background": "#0f1013",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#d7dce4",
+        "label": "#f7f8fb"
+      }
+    },
+    {
+      "id": "maroon",
+      "file": "maroon.css",
+      "label": "Maroon",
+      "extends": "dark",
+      "metaColor": "#231217",
+      "graphPalette": {
+        "background": "#1f1518",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#ecd2dc",
+        "label": "#fff1f6"
+      }
+    },
+    {
+      "id": "lgbtq",
+      "file": "lgbtq.css",
+      "label": "LGBTQ",
+      "extends": "dark",
+      "metaColor": "#24132c",
+      "graphPalette": {
+        "background": "#22182c",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#efdff5",
+        "label": "#fff5ff"
+      }
+    },
+    {
+      "id": "aromantic",
+      "file": "aromantic.css",
+      "label": "Aromantic",
+      "extends": "dark",
+      "metaColor": "#16241a",
+      "graphPalette": {
+        "background": "#152118",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#e5efe2",
+        "label": "#f7fbf6"
+      }
+    },
+    {
+      "id": "asexual",
+      "file": "asexual.css",
+      "label": "Asexual",
+      "extends": "dark",
+      "metaColor": "#18131d",
+      "graphPalette": {
+        "background": "#16131d",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#ebe6f3",
+        "label": "#fff9ff"
+      }
+    },
+    {
+      "id": "bisexual",
+      "file": "bisexual.css",
+      "label": "Bisexual",
+      "extends": "dark",
+      "metaColor": "#23102a",
+      "graphPalette": {
+        "background": "#1f1427",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#f0def8",
+        "label": "#fff6ff"
+      }
+    },
+    {
+      "id": "lesbian",
+      "file": "lesbian.css",
+      "label": "Lesbian",
+      "extends": "dark",
+      "metaColor": "#2a1712",
+      "graphPalette": {
+        "background": "#261712",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#f6e1d7",
+        "label": "#fff6f3"
+      }
+    },
+    {
+      "id": "non-binary",
+      "file": "non-binary.css",
+      "label": "Non-binary",
+      "extends": "dark",
+      "metaColor": "#17151d",
+      "graphPalette": {
+        "background": "#15141b",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#f0ead7",
+        "label": "#fffdf6"
+      }
+    },
+    {
+      "id": "pansexual",
+      "file": "pansexual.css",
+      "label": "Pansexual",
+      "extends": "dark",
+      "metaColor": "#1b1530",
+      "graphPalette": {
+        "background": "#181525",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#efe6fb",
+        "label": "#fff8ff"
+      }
+    },
+    {
+      "id": "transgender",
+      "file": "transgender.css",
+      "label": "Transgender",
+      "extends": "dark",
+      "metaColor": "#172431",
+      "graphPalette": {
+        "background": "#16202a",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#e6f4fb",
+        "label": "#f8fdff"
+      }
+    }
   ]
 }

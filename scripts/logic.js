@@ -1,4 +1,5 @@
 import { CURRENCY_DETAILS, CURRENCY_OPTIONS, DEFAULT_CURRENCY_RATES, UNIT_CATEGORIES, getModeMeta, getUnitLabel, isConverterMode } from './config.js';
+import { getDefaultCurrencyUnits } from './currencyLocale.js';
 import { getCurrentLocale, t } from './i18n.js';
 import {
   createProgrammerState,
@@ -1736,8 +1737,19 @@ function getCurrencyRate(name) {
 
 export function resetConverterUnits() {
   const units = getUnitsForCategory(state.converter.category);
-  state.converter.fromUnit = units[0].name;
-  state.converter.toUnit = units[Math.min(1, units.length - 1)].name;
+  if (state.converter.category === 'Currency') {
+    const unitNames = new Set(units.map((unit) => unit.name));
+    const { fromUnit, toUnit } = getDefaultCurrencyUnits();
+    const fallbackFromUnit = units[0]?.name || '';
+    const fallbackToUnit = units[Math.min(1, units.length - 1)]?.name || fallbackFromUnit;
+
+    state.converter.fromUnit = unitNames.has(fromUnit) ? fromUnit : fallbackFromUnit;
+    state.converter.toUnit = unitNames.has(toUnit) ? toUnit : fallbackToUnit;
+  } else {
+    state.converter.fromUnit = units[0].name;
+    state.converter.toUnit = units[Math.min(1, units.length - 1)].name;
+  }
+
   state.converter.fromValue = state.converter.category === 'Currency' ? '0' : '1';
   state.converter.toValue = '';
   state.converter.lastEdited = 'from';

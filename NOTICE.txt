@@ -12,3 +12,11 @@ Copyright (c) Martin Donk
 
 Calculator vendors Nerdamer for runtime use, and Nerdamer is distributed under the MIT License.
 See `assets/vendor/nerdamer/all.min.js` and `node_modules/nerdamer` for the package contents and accompanying license details.
+
+---
+
+locale-currency
+
+Calculator vendors locale-currency for offline locale-to-currency detection in the currency converter.
+The upstream package metadata declares the BSD-2-Clause license.
+See `scripts/vendor/localeCurrency.js` for the vendored source and `https://github.com/tadeegan/locale-currency` for the upstream project.

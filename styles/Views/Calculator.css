@@ -391,6 +391,10 @@
   background: var(--button-digit-bg);
 }
 
+.calc-button.digit {
+  color: var(--button-digit-text, var(--text));
+}
+
 .calc-button.digit:hover,
 .calc-button.digit:focus-visible {
   background: var(--button-digit-hover-bg);

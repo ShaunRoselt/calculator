@@ -50,6 +50,7 @@
   --button-equals-hover-bg-start: #98fbff;
   --button-equals-hover-bg-end: #73a1ff;
   --button-equals-text: #08233a;
+  --button-digit-text: #08233a;
   --theme-shell-background: radial-gradient(circle at 18% 18%, rgba(110, 255, 229, 0.2) 0%, transparent 26%), radial-gradient(circle at 82% 14%, rgba(255, 140, 240, 0.22) 0%, transparent 24%), linear-gradient(155deg, #091224 0%, #16324e 38%, #2a1b52 68%, #102035 100%);
   --theme-shell-overlay: linear-gradient(120deg, transparent 12%, rgba(120, 255, 232, 0.18) 28%, transparent 42%), linear-gradient(150deg, transparent 30%, rgba(225, 138, 255, 0.16) 48%, transparent 66%), radial-gradient(circle at 24% 10%, rgba(255, 255, 255, 0.16) 0 1px, transparent 2px), radial-gradient(circle at 74% 18%, rgba(255, 255, 255, 0.14) 0 1px, transparent 2px), radial-gradient(circle at 66% 36%, rgba(255, 255, 255, 0.12) 0 1px, transparent 2px);
   --theme-shell-overlay-size: auto, auto, 180px 180px, 210px 210px, 240px 240px;

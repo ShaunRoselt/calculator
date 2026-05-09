@@ -6,7 +6,9 @@
   "common": {
     "back": "گەڕانەوە",
     "backspace": "بۆشایی پشتەوە",
-    "closeSidePanel": "پانێڵی دابخە"
+    "closeSidePanel": "پانێڵی دابخە",
+    "clear": "پاککردنەوە",
+    "clearEntry": "هاتنە ژوورەوە پاک بکەرەوە"
   },
   "converter": {
     "unitConverter": "گۆڕینی یەکە",
@@ -248,7 +250,8 @@
       "function": "کارکرد",
       "functionsAria": "کارەکان",
       "trigonometricFunctionsAria": "فەنکشنەکانی سێگۆشەیی",
-      "angleUnit": "یەکەیەکی گۆشە {value}"
+      "angleUnit": "یەکەیەکی گۆشە {value}",
+      "exponentialFormat": "گۆڕینی فۆرماتێکی ڕیزبەندی"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "کۆگای پڕۆژە",
       "readme": "README",
       "license": "مۆڵەتی MIT"
+    },
+    "calculation": {
+      "group": "حیسابکردن",
+      "repeatEqualsTitle": "کۆتا کارکردن لەسەر یەکسانە یەک لە دوای یەکەکان دووبارە بکەرەوە",
+      "repeatEqualsDescription": "لە دۆخی ستاندارد، زانستی و پرۆگرامەردا، فشاردان لەسەر = دووبارە ئۆپەراتۆر و ئۆپەراندەکەی پێشوو بەکاردەهێنێتەوە.",
+      "enabled": "چالاک کراوە",
+      "disabled": "ناچالاک کراوە"
+    },
+    "window": {
+      "group": "پەنجەرە",
+      "fullscreenTitle": "شاشەی تەواو (F11)",
+      "fullscreenDescription": "هەڵیبژێرە کە ئایا دەتەوێت ئەپەکە FullScreen بێت یان نا",
+      "fullscreenEnabled": "فولسکرین",
+      "fullscreenDisabled": "ئاسایی"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

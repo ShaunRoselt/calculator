@@ -6,7 +6,9 @@
   "common": {
     "back": "ਵਾਪਸ",
     "backspace": "ਬੈਕਸਪੇਸ",
-    "closeSidePanel": "ਪੈਨਲ ਬੰਦ ਕਰੋ"
+    "closeSidePanel": "ਪੈਨਲ ਬੰਦ ਕਰੋ",
+    "clear": "ਸਾਫ਼",
+    "clearEntry": "ਐਂਟਰੀ ਸਾਫ਼ ਕਰੋ"
   },
   "converter": {
     "unitConverter": "ਯੂਨਿਟ ਪਰਿਵਰਤਕ",
@@ -248,7 +250,8 @@
       "function": "ਫੰਕਸ਼ਨ",
       "functionsAria": "ਫੰਕਸ਼ਨ",
       "trigonometricFunctionsAria": "ਤਿਕੋਣਮਿਤੀ ਫੰਕਸ਼ਨ",
-      "angleUnit": "ਕੋਣ ਇਕਾਈ {value}"
+      "angleUnit": "ਕੋਣ ਇਕਾਈ {value}",
+      "exponentialFormat": "ਘਾਤ ਅੰਕੀ ਫਾਰਮੈਟ ਨੂੰ ਟੌਗਲ ਕਰੋ"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "ਪ੍ਰੋਜੈਕਟ ਭੰਡਾਰ",
       "readme": "ਪੜ੍ਹੋ",
       "license": "MIT ਲਾਇਸੰਸ"
+    },
+    "calculation": {
+      "group": "ਗਣਨਾ",
+      "repeatEqualsTitle": "ਪਿਛਲੀ ਕਾਰਵਾਈ ਨੂੰ ਲਗਾਤਾਰ ਬਰਾਬਰਾਂ 'ਤੇ ਦੁਹਰਾਓ",
+      "repeatEqualsDescription": "ਮਿਆਰੀ, ਵਿਗਿਆਨਕ, ਅਤੇ ਪ੍ਰੋਗਰਾਮਰ ਮੋਡਾਂ ਵਿੱਚ, = ਦਬਾਉਣ ਨਾਲ ਪਿਛਲੇ ਆਪਰੇਟਰ ਅਤੇ ਓਪਰੇਟਰ ਨੂੰ ਮੁੜ ਲਾਗੂ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।",
+      "enabled": "ਸਮਰੱਥ",
+      "disabled": "ਅਯੋਗ ਬਣਾਇਆ ਗਿਆ"
+    },
+    "window": {
+      "group": "ਵਿੰਡੋ",
+      "fullscreenTitle": "ਪੂਰੀ ਸਕਰੀਨ (F11)",
+      "fullscreenDescription": "ਚੁਣੋ ਕਿ ਕੀ ਤੁਸੀਂ ਐਪ ਨੂੰ ਪੂਰੀ ਸਕ੍ਰੀਨ ਬਣਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਨਹੀਂ",
+      "fullscreenEnabled": "ਪੂਰੀ ਸਕਰੀਨ",
+      "fullscreenDisabled": "ਆਮ"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

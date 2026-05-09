@@ -6,7 +6,9 @@
   "common": {
     "back": "Pada",
     "backspace": "Apahin",
-    "closeSidePanel": "Pa nronu"
+    "closeSidePanel": "Pa nronu",
+    "clear": "Ko o",
+    "clearEntry": "Pa titẹ sii"
   },
   "converter": {
     "unitConverter": "Ayipada kuro",
@@ -248,7 +250,8 @@
       "function": "Iṣẹ",
       "functionsAria": "Awọn iṣẹ",
       "trigonometricFunctionsAria": "Awọn iṣẹ trigonometric",
-      "angleUnit": "Ẹyọ igun {value}"
+      "angleUnit": "Ẹyọ igun {value}",
+      "exponentialFormat": "Yipada ọna kika alapin"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Ibi ipamọ ise agbese",
       "readme": "README",
       "license": "MIT iwe-ašẹ"
+    },
+    "calculation": {
+      "group": "Iṣiro",
+      "repeatEqualsTitle": "Tun iṣẹ ṣiṣe to kẹhin ṣe lori awọn dọgba itẹlera",
+      "repeatEqualsDescription": "Ni Standard, Scientific, and Programmer modes, titẹ = lẹẹkansi tun kan oniṣẹ ẹrọ tẹlẹ ati operand.",
+      "enabled": "Ti ṣiṣẹ",
+      "disabled": "Alaabo"
+    },
+    "window": {
+      "group": "Ferese",
+      "fullscreenTitle": "Iboju ni kikun (F11)",
+      "fullscreenDescription": "Yan boya o fẹ ki app naa jẹ Iboju Kikun tabi rara",
+      "fullscreenEnabled": "Iboju ni kikun",
+      "fullscreenDisabled": "Deede"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

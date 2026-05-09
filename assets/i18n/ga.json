@@ -9,7 +9,8 @@
       "function": "Feidhm",
       "functionsAria": "Feidhmeanna",
       "trigonometricFunctionsAria": "Feidhmeanna triantánachta",
-      "trigonometry": "Tréineachas"
+      "trigonometry": "Tréineachas",
+      "exponentialFormat": "Scoránaigh formáid easpónantúil"
     }
   },
   "categories": {
@@ -30,7 +31,9 @@
   "common": {
     "back": "Ar ais",
     "backspace": "Cúlspás",
-    "closeSidePanel": "Dún an painéal"
+    "closeSidePanel": "Dún an painéal",
+    "clear": "Glan",
+    "clearEntry": "Iontráil soiléir"
   },
   "converter": {
     "aboutEqualTo": "Maidir le",
@@ -459,6 +462,40 @@
       "license": "Ceadúnas MIT",
       "readme": "LÉIGHINN",
       "repository": "Stór tionscadail"
+    },
+    "calculation": {
+      "group": "Ríomh",
+      "repeatEqualsTitle": "Déan an oibríocht dheireanach arís ar na coibhéisí comhleanúnacha",
+      "repeatEqualsDescription": "I modhanna Caighdeánacha, Eolaíochta agus Ríomhchláraitheoir, cuireann brúigh = an t-oibreoir roimhe seo i bhfeidhm arís agus operand.",
+      "enabled": "Cumasaithe",
+      "disabled": "Díchumasaithe"
+    },
+    "window": {
+      "group": "Fuinneog",
+      "fullscreenTitle": "Scáileán Lán (F11)",
+      "fullscreenDescription": "Roghnaigh cé acu an mian leat go mbeadh an aip lánscáileáin nó nach bhfuil",
+      "fullscreenEnabled": "Scáileán Lán",
+      "fullscreenDisabled": "Gnáth"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "units": {

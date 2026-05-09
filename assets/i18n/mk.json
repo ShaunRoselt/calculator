@@ -6,7 +6,9 @@
   "common": {
     "back": "Назад",
     "backspace": "Backspace",
-    "closeSidePanel": "Затворете го панелот"
+    "closeSidePanel": "Затворете го панелот",
+    "clear": "Исчисти",
+    "clearEntry": "Исчисти го записот"
   },
   "converter": {
     "unitConverter": "Конвертер на единици",
@@ -248,7 +250,8 @@
       "function": "Функција",
       "functionsAria": "Функции",
       "trigonometricFunctionsAria": "Тригонометриски функции",
-      "angleUnit": "Аголна единица {value}"
+      "angleUnit": "Аголна единица {value}",
+      "exponentialFormat": "Премести експоненцијален формат"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Репозиториум на проектот",
       "readme": "ПРОЧИТАЈТЕ",
       "license": "МИТ лиценца"
+    },
+    "calculation": {
+      "group": "Пресметка",
+      "repeatEqualsTitle": "Повторете ја последната операција на последователни еднакви",
+      "repeatEqualsDescription": "Во режимите Стандарден, Научен и Програмер, притискањето = повторно ги применува претходниот оператор и операнд.",
+      "enabled": "Овозможено",
+      "disabled": "Оневозможено"
+    },
+    "window": {
+      "group": "Прозорец",
+      "fullscreenTitle": "Цел екран (F11)",
+      "fullscreenDescription": "Изберете дали сакате апликацијата да биде со цел екран или не",
+      "fullscreenEnabled": "Цел екран",
+      "fullscreenDisabled": "Нормално"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

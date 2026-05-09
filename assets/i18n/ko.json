@@ -6,7 +6,9 @@
   "common": {
     "back": "뒤로",
     "backspace": "백스페이스",
-    "closeSidePanel": "패널 닫기"
+    "closeSidePanel": "패널 닫기",
+    "clear": "지우기",
+    "clearEntry": "항목 지우기"
   },
   "converter": {
     "unitConverter": "단위 변환기",
@@ -248,7 +250,8 @@
       "function": "기능",
       "functionsAria": "기능",
       "trigonometricFunctionsAria": "삼각함수",
-      "angleUnit": "각도 단위 {value}"
+      "angleUnit": "각도 단위 {value}",
+      "exponentialFormat": "지수 형식 전환"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "프로젝트 저장소",
       "readme": "읽어보기",
       "license": "MIT 라이센스"
+    },
+    "calculation": {
+      "group": "계산",
+      "repeatEqualsTitle": "연속된 같음에 대해 마지막 작업을 반복합니다.",
+      "repeatEqualsDescription": "표준, 과학 및 프로그래머 모드에서 =를 다시 누르면 이전 연산자와 피연산자가 다시 적용됩니다.",
+      "enabled": "활성화됨",
+      "disabled": "비활성화됨"
+    },
+    "window": {
+      "group": "창",
+      "fullscreenTitle": "전체화면(F11)",
+      "fullscreenDescription": "앱을 전체화면으로 설정할지 여부를 선택하세요.",
+      "fullscreenEnabled": "전체화면",
+      "fullscreenDisabled": "보통"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

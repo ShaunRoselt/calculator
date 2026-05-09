@@ -71,6 +71,10 @@ const GRAPH_LINE_STYLES = [
 ];
 
 const GRAPH_SHORT_HEIGHT_BREAKPOINT = 760;
+const GRAPH_KEYPAD_MIN_HEIGHT = 332;
+const GRAPH_COMPACT_EDITOR_BASE_OVERHEAD = 86;
+const GRAPH_EXPRESSION_ROW_ESTIMATE = 44;
+const GRAPH_EXPRESSION_STYLE_PANEL_ESTIMATE = 220;
 
 const GRAPHING_KEYPAD_ROWS = [
   [
@@ -127,6 +131,7 @@ const GRAPHING_KEYPAD_ROWS = [
 export function renderGraphingCalculatorView() {
   const isCompact = window.innerWidth < 768;
   const isShortHeight = window.innerHeight < GRAPH_SHORT_HEIGHT_BREAKPOINT;
+  const useCompactEditorTabs = shouldUseCompactEditorTabs(isCompact, isShortHeight);
   const graphThemeStyle = getGraphThemeInlineStyle(state.graphing.theme, document.documentElement.dataset.theme);
   const analysisOpen = typeof state.graphing.analysisExpressionIndex === 'number'
     && !!state.graphing.analysisData
@@ -136,7 +141,7 @@ export function renderGraphingCalculatorView() {
     'graphing-layout',
     isCompact ? `mobile-view-${state.graphing.mobileView}` : 'desktop-view',
     isShortHeight ? 'short-height-layout' : '',
-    isShortHeight ? `compact-editor-${compactEditorView}` : ''
+    useCompactEditorTabs ? `compact-editor-${compactEditorView}` : ''
   ].filter(Boolean).join(' ');
 
   return `
@@ -161,15 +166,33 @@ export function renderGraphingCalculatorView() {
       </section>
 
       <section class="graph-editor-panel ${analysisOpen ? 'graph-analysis-open' : ''}">
-        ${analysisOpen ? renderFunctionAnalysisPanel() : renderGraphingEditorPanel(isShortHeight, compactEditorView)}
+        ${analysisOpen ? renderFunctionAnalysisPanel() : renderGraphingEditorPanel(useCompactEditorTabs, compactEditorView)}
       </section>
     </div>
   `;
 }
 
-function renderGraphingEditorPanel(isShortHeight, compactEditorView) {
+function shouldUseCompactEditorTabs(isCompact, isShortHeight) {
+  if (!isShortHeight) {
+    return false;
+  }
+
+  if (isCompact) {
+    return true;
+  }
+
+  const filledExpressions = state.graphing.expressions.filter((expression) => expression.value.trim() || expression.plottedValue.trim()).length;
+  const visibleExpressionRows = Math.max(1, Math.min(filledExpressions + 1, 4));
+  const expressionPaneEstimate = GRAPH_COMPACT_EDITOR_BASE_OVERHEAD
+    + (visibleExpressionRows * GRAPH_EXPRESSION_ROW_ESTIMATE)
+    + (state.graphing.stylePanelExpressionIndex != null ? GRAPH_EXPRESSION_STYLE_PANEL_ESTIMATE : 0);
+  const availableEditorHeight = Math.max(0, window.innerHeight - 52);
+  return availableEditorHeight < (expressionPaneEstimate + GRAPH_KEYPAD_MIN_HEIGHT);
+}
+
+function renderGraphingEditorPanel(useCompactEditorTabs, compactEditorView) {
   return `
-    ${isShortHeight ? renderGraphingCompactEditorSwitcher(compactEditorView) : ''}
+    ${useCompactEditorTabs ? renderGraphingCompactEditorSwitcher(compactEditorView) : ''}
     <div class="graph-expression-pane">
       <div class="graph-expression-list" aria-label="${t('graph.expressions')}">
         ${state.graphing.expressions.map((expression, index) => renderExpressionRow(expression, index)).join('')}

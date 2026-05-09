@@ -6,7 +6,9 @@
   "common": {
     "back": "Terug",
     "backspace": "Terugspasieer",
-    "closeSidePanel": "Sluit paneel"
+    "closeSidePanel": "Sluit paneel",
+    "clear": "Vee uit",
+    "clearEntry": "Maak inskrywing skoon"
   },
   "converter": {
     "unitConverter": "Eenheidskonversie",
@@ -248,7 +250,8 @@
       "function": "Funksie",
       "functionsAria": "Funksies",
       "trigonometricFunctionsAria": "Trigonometriese funksies",
-      "angleUnit": "Hoekeenheid {value}"
+      "angleUnit": "Hoekeenheid {value}",
+      "exponentialFormat": "Wissel eksponensiële formaat"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Projekbewaarplek",
       "readme": "README",
       "license": "MIT-lisensie"
+    },
+    "calculation": {
+      "group": "Berekening",
+      "repeatEqualsTitle": "Herhaal laaste bewerking op opeenvolgende gelykes",
+      "repeatEqualsDescription": "In Standaard-, Wetenskaplike- en Programmeerdermodusse, druk op = weer die vorige operateur en operand toe.",
+      "enabled": "Geaktiveer",
+      "disabled": "Gedeaktiveer"
+    },
+    "window": {
+      "group": "Venster",
+      "fullscreenTitle": "Volskerm (F11)",
+      "fullscreenDescription": "Kies of jy wil hê die program moet Volskerm wees of nie",
+      "fullscreenEnabled": "Volskerm",
+      "fullscreenDisabled": "Normaal"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

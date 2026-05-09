@@ -6,6 +6,8 @@
   "common": {
     "back": "Gae back",
     "backspace": "Backspace",
+    "clear": "Clear",
+    "clearEntry": "Clear entry",
     "closeSidePanel": "Close paneil"
   },
   "converter": {
@@ -248,7 +250,8 @@
       "function": "Function",
       "functionsAria": "Functions",
       "trigonometricFunctionsAria": "Trigonometric functions",
-      "angleUnit": "Angle unit {value}"
+      "angleUnit": "Angle unit {value}",
+      "exponentialFormat": "Toggle exponential format"
     }
   },
   "settings": {
@@ -267,6 +270,20 @@
       "title": "Language",
       "description": "Choose yer preferred language"
     },
+    "window": {
+      "group": "Windae",
+      "fullscreenTitle": "FullScreen (F11)",
+      "fullscreenDescription": "Choose gin ye want the app tae be FullScreen or no",
+      "fullscreenEnabled": "FullScreen",
+      "fullscreenDisabled": "Normal"
+    },
+    "calculation": {
+      "group": "Calculation",
+      "repeatEqualsTitle": "Repeat the last operation on consecutive equals",
+      "repeatEqualsDescription": "In Standard, Scientific, an Programmer modes, pressin = again reapplies the previous operator an operand.",
+      "enabled": "Enabled",
+      "disabled": "Disabled"
+    },
     "about": {
       "group": "About"
     },
@@ -280,6 +297,26 @@
       "repository": "Project repository",
       "readme": "README",
       "license": "MIT license"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

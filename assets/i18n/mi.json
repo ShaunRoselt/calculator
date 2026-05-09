@@ -6,7 +6,9 @@
   "common": {
     "back": "Hoki",
     "backspace": "Mokowāmuri",
-    "closeSidePanel": "Katia te panui"
+    "closeSidePanel": "Katia te panui",
+    "clear": "Marama",
+    "clearEntry": "Ūkuia te tāurunga"
   },
   "converter": {
     "unitConverter": "Kaitahuri Wae",
@@ -248,7 +250,8 @@
       "function": "Taumahi",
       "functionsAria": "Nga Mahi",
       "trigonometricFunctionsAria": "Taumahi tapatoru",
-      "angleUnit": "Waeine koki {value}"
+      "angleUnit": "Waeine koki {value}",
+      "exponentialFormat": "Tahurihia te hōputu taupūtanga"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Putaka kaupapa",
       "readme": "PĀNUITIA",
       "license": "Raihana MIT"
+    },
+    "calculation": {
+      "group": "Tatauranga",
+      "repeatEqualsTitle": "Tuaruatia te mahi whakamutunga ki nga taurite karapīpiti",
+      "repeatEqualsDescription": "I roto i nga tikanga Paerewa, Putaiao, Papatono hoki, ko te pehi = ka tukuna ano te kaiwhakahaere me te operand o mua.",
+      "enabled": "Kua Whakahohea",
+      "disabled": "Kua monoa"
+    },
+    "window": {
+      "group": "Matapihi",
+      "fullscreenTitle": "Mata Katoa (F11)",
+      "fullscreenDescription": "Tīpakohia mena kei te pirangi koe kia Maa Mata Katoa te taupānga, kaore ranei",
+      "fullscreenEnabled": "Mata Katoa",
+      "fullscreenDisabled": "Maori"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

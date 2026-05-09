@@ -6,6 +6,8 @@
   "common": {
     "back": "Back",
     "backspace": "Backspace",
+    "clear": "Clear",
+    "clearEntry": "Clear entry",
     "closeSidePanel": "Close panel"
   },
   "converter": {
@@ -248,24 +250,63 @@
       "function": "Function",
       "functionsAria": "Functions",
       "trigonometricFunctionsAria": "Trigonometric functions",
-      "angleUnit": "Angle unit {value}"
+      "angleUnit": "Angle unit {value}",
+      "exponentialFormat": "Toggle exponential format"
     }
   },
   "settings": {
     "appearance": {
       "group": "Appearance",
       "themeTitle": "Theme",
-      "themeDescription": "Choose a color scheme",
+      "themeDescription": "Pick the look of the app",
       "light": "Light",
       "dark": "Dark",
       "blue": "Blue",
       "green": "Green",
       "system": "System"
     },
+    "preferences": {
+      "group": "Preferences",
+      "description": "Choose the theme, language, and key app behavior settings"
+    },
     "language": {
       "group": "Language",
       "title": "Language",
-      "description": "Choose your preferred language"
+      "description": "Choose the language used across the app"
+    },
+    "window": {
+      "group": "Window",
+      "fullscreenTitle": "Fullscreen",
+      "fullscreenDescription": "Open the calculator in fullscreen mode when you want a larger workspace",
+      "fullscreenEnabled": "Fullscreen",
+      "fullscreenDisabled": "Windowed"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "Keyboard shortcuts",
+      "description": "Change the key combinations used across the app",
+      "helper": "Select a shortcut and press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "calculation": {
+      "group": "Calculation",
+      "repeatEqualsTitle": "Repeat the last operation",
+      "repeatEqualsDescription": "In Standard, Scientific, and Programmer modes, pressing = again repeats the previous operator and value.",
+      "enabled": "Enabled",
+      "disabled": "Disabled"
     },
     "about": {
       "group": "About"

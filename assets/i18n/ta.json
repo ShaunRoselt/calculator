@@ -6,7 +6,9 @@
   "common": {
     "back": "திரும்பவும்",
     "backspace": "பேக்ஸ்பேஸ்",
-    "closeSidePanel": "பேனலை மூடு"
+    "closeSidePanel": "பேனலை மூடு",
+    "clear": "அழி",
+    "clearEntry": "பதிவை அழிக்கவும்"
   },
   "converter": {
     "unitConverter": "அலகு மாற்றி",
@@ -248,7 +250,8 @@
       "function": "செயல்பாடு",
       "functionsAria": "செயல்பாடுகள்",
       "trigonometricFunctionsAria": "முக்கோணவியல் செயல்பாடுகள்",
-      "angleUnit": "கோண அலகு {value}"
+      "angleUnit": "கோண அலகு {value}",
+      "exponentialFormat": "அதிவேக வடிவமைப்பை நிலைமாற்று"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "திட்ட களஞ்சியம்",
       "readme": "படிக்க",
       "license": "எம்ஐடி உரிமம்"
+    },
+    "calculation": {
+      "group": "கணக்கீடு",
+      "repeatEqualsTitle": "தொடர்ச்சியான சமங்களில் கடைசி செயல்பாட்டை மீண்டும் செய்யவும்",
+      "repeatEqualsDescription": "ஸ்டாண்டர்ட், சயின்டிஃபிக் மற்றும் புரோகிராமர் முறைகளில், = என்பதை அழுத்தினால், முந்தைய ஆபரேட்டர் மற்றும் ஓபராண்ட் மீண்டும் பயன்படுத்தப்படும்.",
+      "enabled": "இயக்கப்பட்டது",
+      "disabled": "முடக்கப்பட்டது"
+    },
+    "window": {
+      "group": "சாளரம்",
+      "fullscreenTitle": "முழுத்திரை (F11)",
+      "fullscreenDescription": "பயன்பாடு முழுத்திரையாக வேண்டுமா வேண்டாமா என்பதைத் தேர்ந்தெடுக்கவும்",
+      "fullscreenEnabled": "முழுத்திரை",
+      "fullscreenDisabled": "இயல்பானது"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

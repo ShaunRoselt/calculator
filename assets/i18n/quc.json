@@ -6,6 +6,8 @@
   "common": {
     "back": "Tzalij",
     "backspace": "Chup tijox",
+    "clear": "Tijosq'ij",
+    "clearEntry": "Tijosq'ij ri cholanïk",
     "closeSidePanel": "Tz'apij ch'ich'"
   },
   "converter": {
@@ -248,7 +250,8 @@
       "function": "Chak (Function)",
       "functionsAria": "Chakib' (Functions)",
       "trigonometricFunctionsAria": "Samaj rech trigonometría",
-      "angleUnit": "Rucholajil ángulo {value}"
+      "angleUnit": "Rucholajil ángulo {value}",
+      "exponentialFormat": "Tijalwachïx ri rub'anikil exponencial"
     }
   },
   "settings": {
@@ -267,6 +270,20 @@
       "title": "Ch'ab'al",
       "description": "Cha' ri ch'ab'al"
     },
+    "window": {
+      "group": "Tzuwäch",
+      "fullscreenTitle": "Chuq'axan wachaj (F11)",
+      "fullscreenDescription": "Cha' we nawajo' chi ri chokoy chikop ri wachaj ronojel o manäq.",
+      "fullscreenEnabled": "Chuq'axan wachaj",
+      "fullscreenDisabled": "Normal"
+    },
+    "calculation": {
+      "group": "Ajilanïk",
+      "repeatEqualsTitle": "Kamulisaj ri k'isb'äl samaj pa taq = ri junam",
+      "repeatEqualsDescription": "Pa Standard, Scientific, chuqa' Programmer, toq nipitz' chik ri =, nikamulïx chik ri nab'e operator rachi'l ri operand.",
+      "enabled": "Tzijon",
+      "disabled": "Chupun"
+    },
     "about": {
       "group": "Puwuj"
     },
@@ -280,6 +297,26 @@
       "repository": "Rupam ri proyecto",
       "readme": "README",
       "license": "Licencia MIT"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

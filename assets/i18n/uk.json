@@ -6,7 +6,9 @@
   "common": {
     "back": "Назад",
     "backspace": "Backspace",
-    "closeSidePanel": "Закрити панель"
+    "closeSidePanel": "Закрити панель",
+    "clear": "Очистити",
+    "clearEntry": "Очистити запис"
   },
   "converter": {
     "unitConverter": "Конвертер одиниць",
@@ -248,7 +250,8 @@
       "function": "Функція",
       "functionsAria": "Функції",
       "trigonometricFunctionsAria": "Тригонометричні функції",
-      "angleUnit": "Одиниця кута {value}"
+      "angleUnit": "Одиниця кута {value}",
+      "exponentialFormat": "Увімкнути експоненціальний формат"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Сховище проектів",
       "readme": "README",
       "license": "Ліцензія MIT"
+    },
+    "calculation": {
+      "group": "Розрахунок",
+      "repeatEqualsTitle": "Повторити останню операцію для послідовних дорівнює",
+      "repeatEqualsDescription": "У режимах Standard, Scientific і Programmer повторне натискання = знову застосовує попередній оператор і операнд.",
+      "enabled": "Увімкнено",
+      "disabled": "Вимкнено"
+    },
+    "window": {
+      "group": "Вікно",
+      "fullscreenTitle": "Повноекранний режим (F11)",
+      "fullscreenDescription": "Виберіть, чи потрібно, щоб програма була повноекранною",
+      "fullscreenEnabled": "Повноекранний режим",
+      "fullscreenDisabled": "Нормально"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

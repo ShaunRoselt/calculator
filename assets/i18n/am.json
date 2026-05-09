@@ -6,7 +6,9 @@
   "common": {
     "back": "ተመለስ",
     "backspace": "የኋላ ቦታ",
-    "closeSidePanel": "ፓነልን ዝጋ"
+    "closeSidePanel": "ፓነልን ዝጋ",
+    "clear": "አጽዳ",
+    "clearEntry": "ግቤትን አጽዳ"
   },
   "converter": {
     "unitConverter": "ክፍል መቀየሪያ",
@@ -248,7 +250,8 @@
       "function": "ተግባር",
       "functionsAria": "ተግባራት",
       "trigonometricFunctionsAria": "ትሪግኖሜትሪክ ተግባራት",
-      "angleUnit": "የማዕዘን አሃድ {value}"
+      "angleUnit": "የማዕዘን አሃድ {value}",
+      "exponentialFormat": "ገላጭ ቅርጸትን ቀያይር"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "የፕሮጀክት ማከማቻ",
       "readme": "አንብብ",
       "license": "MIT ፈቃድ"
+    },
+    "calculation": {
+      "group": "ስሌት",
+      "repeatEqualsTitle": "የመጨረሻውን ቀዶ ጥገና በተከታታይ እኩል ይድገሙት",
+      "repeatEqualsDescription": "በስታንዳርድ፣ ሳይንቲፊክ እና ፕሮግራመር ሁነታዎች = እንደገና መጫን የቀድሞውን ኦፕሬተር እና ኦፕሬተርን እንደገና ይተገበራል።",
+      "enabled": "ነቅቷል",
+      "disabled": "ተሰናክሏል።"
+    },
+    "window": {
+      "group": "መስኮት",
+      "fullscreenTitle": "ሙሉ ማያ ገጽ (F11)",
+      "fullscreenDescription": "መተግበሪያው ሙሉ ማያ ገጽ እንዲሆን ይፈልጉ እንደሆነ ይምረጡ",
+      "fullscreenEnabled": "ሙሉ ማያ",
+      "fullscreenDisabled": "መደበኛ"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

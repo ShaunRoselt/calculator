@@ -6,7 +6,9 @@
   "common": {
     "back": "Bumalik",
     "backspace": "Backspace",
-    "closeSidePanel": "Isara ang panel"
+    "closeSidePanel": "Isara ang panel",
+    "clear": "I-clear",
+    "clearEntry": "I-clear ang entry"
   },
   "converter": {
     "unitConverter": "Konverter ng Unit",
@@ -248,7 +250,8 @@
       "function": "Pag-andar",
       "functionsAria": "Mga Pag-andar",
       "trigonometricFunctionsAria": "Mga function na trigonometriko",
-      "angleUnit": "Angle unit {value}"
+      "angleUnit": "Angle unit {value}",
+      "exponentialFormat": "I-toggle ang exponential na format"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Repository ng proyekto",
       "readme": "README",
       "license": "Lisensya ng MIT"
+    },
+    "calculation": {
+      "group": "Pagkalkula",
+      "repeatEqualsTitle": "Ulitin ang huling operasyon sa magkakasunod na katumbas",
+      "repeatEqualsDescription": "Sa mga mode na Standard, Scientific, at Programmer, muling ilalapat ang pagpindot sa = sa nakaraang operator at operand.",
+      "enabled": "Naka-enable",
+      "disabled": "Naka-disable"
+    },
+    "window": {
+      "group": "Bintana",
+      "fullscreenTitle": "FullScreen (F11)",
+      "fullscreenDescription": "Piliin kung gusto mong maging FullScreen ang app o hindi",
+      "fullscreenEnabled": "FullScreen",
+      "fullscreenDisabled": "Normal"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

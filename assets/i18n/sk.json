@@ -6,7 +6,9 @@
   "common": {
     "back": "Späť",
     "backspace": "Backspace",
-    "closeSidePanel": "Zavrieť panel"
+    "closeSidePanel": "Zavrieť panel",
+    "clear": "Vymazať",
+    "clearEntry": "Vymazať záznam"
   },
   "converter": {
     "unitConverter": "Konvertor jednotiek",
@@ -248,7 +250,8 @@
       "function": "Funkcia",
       "functionsAria": "Funkcie",
       "trigonometricFunctionsAria": "Trigonometrické funkcie",
-      "angleUnit": "Jednotka uhla {value}"
+      "angleUnit": "Jednotka uhla {value}",
+      "exponentialFormat": "Prepnúť exponenciálny formát"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Úložisko projektov",
       "readme": "README",
       "license": "Licencia MIT"
+    },
+    "calculation": {
+      "group": "Výpočet",
+      "repeatEqualsTitle": "Zopakujte poslednú operáciu na po sebe idúcich rovnakých číslach",
+      "repeatEqualsDescription": "V štandardnom, vedeckom a programátorskom režime opätovným stlačením = znova použijete predchádzajúci operátor a operand.",
+      "enabled": "Povolené",
+      "disabled": "Zakázané"
+    },
+    "window": {
+      "group": "Okno",
+      "fullscreenTitle": "Celá obrazovka (F11)",
+      "fullscreenDescription": "Vyberte, či chcete, aby bola aplikácia na celú obrazovku alebo nie",
+      "fullscreenEnabled": "Celá obrazovka",
+      "fullscreenDisabled": "Normálne"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

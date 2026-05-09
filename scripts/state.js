@@ -1,4 +1,11 @@
-import { CONVERTER_MODE_TO_CATEGORY, DEFAULT_CURRENCY_RATES, MOCK_CURRENCY_UPDATED_AT, STORAGE_KEYS } from './config.js';
+import {
+  CONVERTER_MODE_TO_CATEGORY,
+  DEFAULT_CURRENCY_RATES,
+  MOCK_CURRENCY_UPDATED_AT,
+  STORAGE_KEYS,
+  createDefaultShortcutBindings,
+  normalizeShortcutBindings
+} from './config.js';
 import { isSupportedLanguage } from './i18n.js';
 import { toDateInputValue } from './utils.js';
 
@@ -107,6 +114,8 @@ function createGraphingState() {
   return {
     expressions: createGraphingExpressions(),
     activeExpressionIndex: 0,
+    activeExpressionSelectionStart: 0,
+    activeExpressionSelectionEnd: 0,
     analysisExpressionIndex: null,
     analysisData: null,
     openMenu: null,
@@ -138,6 +147,11 @@ function createInitialState() {
     settings: {
       theme: 'system',
       language: 'en',
+      repeatEquals: true,
+      isFullscreen: false,
+      shortcuts: createDefaultShortcutBindings(),
+      activeShortcutId: null,
+      shortcutError: '',
       openMenu: null
     },
     standard: createStandardState(),
@@ -183,6 +197,8 @@ export function createStandardState() {
     operator: null,
     waitingForOperand: false,
     lastOperand: null,
+    lastOperator: null,
+    pendingPercentValue: null,
     error: false,
     justEvaluated: false
   };
@@ -197,6 +213,8 @@ export function createScientificState() {
     isShifted: false,
     isHyperbolic: false,
     openMenu: null,
+    lastOperand: null,
+    lastOperator: null,
     error: false,
     justEvaluated: false
   };
@@ -209,6 +227,8 @@ export function createProgrammerState() {
     accumulator: null,
     operator: null,
     waitingForOperand: false,
+    lastOperand: null,
+    lastOperator: null,
     error: false,
     base: 'DEC',
     wordSize: 'QWORD',
@@ -224,6 +244,8 @@ export function hydrateState() {
     const nav = JSON.parse(localStorage.getItem(STORAGE_KEYS.nav) || 'null');
     const theme = localStorage.getItem(STORAGE_KEYS.theme);
     const language = localStorage.getItem(STORAGE_KEYS.language);
+    const repeatEquals = JSON.parse(localStorage.getItem(STORAGE_KEYS.repeatEquals) || 'true');
+    const shortcuts = JSON.parse(localStorage.getItem(STORAGE_KEYS.shortcuts) || 'null');
     state.collections = Array.isArray(history)
       ? migrateLegacyHistory(history)
       : normalizeCollectionsByMode(history, 'history');
@@ -245,6 +267,11 @@ export function hydrateState() {
     if (isSupportedLanguage(language)) {
       state.settings.language = language;
     }
+    if (typeof repeatEquals === 'boolean') {
+      state.settings.repeatEquals = repeatEquals;
+    }
+
+    state.settings.shortcuts = normalizeShortcutBindings(shortcuts);
   } catch {
     // ignore broken local storage
   }
@@ -287,6 +314,14 @@ export function persistTheme() {
 
 export function persistLanguage() {
   localStorage.setItem(STORAGE_KEYS.language, state.settings.language);
+}
+
+export function persistRepeatEquals() {
+  localStorage.setItem(STORAGE_KEYS.repeatEquals, JSON.stringify(state.settings.repeatEquals));
+}
+
+export function persistShortcuts() {
+  localStorage.setItem(STORAGE_KEYS.shortcuts, JSON.stringify(normalizeShortcutBindings(state.settings.shortcuts)));
 }
 
 export const state = createInitialState();

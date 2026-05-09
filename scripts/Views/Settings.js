@@ -1,4 +1,4 @@
-import { APP_INFO, getAppName } from '../config.js';
+import { APP_INFO, APP_SHORTCUT_DEFINITIONS, APP_SHORTCUT_DEFAULTS, getAppName } from '../config.js';
 import { getCurrentLanguage, getCurrentLocale, getSupportedLanguages, t } from '../i18n.js';
 import { getResolvedAppThemeId, getThemeLogoPath, getThemeOptions } from '../themes.js';
 import { buildAppUrl } from '../urlParams.js';
@@ -173,7 +173,7 @@ function renderThemeMenuOption(option, selected) {
 function renderSettingsMenu(menu, label, selectedLabel, options) {
   const isOpen = state.settings.openMenu === menu;
   const isThemeMenu = menu === 'theme';
-  const searchPlaceholder = `Search ${label.toLowerCase()}`;
+  const searchPlaceholder = isThemeMenu ? t('settings.appearance.searchThemes') : t('settings.language.search');
   return `
     <span class="date-native-select-wrap settings-select-wrap settings-select-menu-wrap ${isThemeMenu ? 'settings-select-wrap-theme' : ''}">
       <button type="button" class="date-native-select-button settings-select-button ${isOpen ? 'active' : ''}" data-settings-menu-toggle="${menu}" aria-haspopup="listbox" aria-expanded="${isOpen ? 'true' : 'false'}" aria-label="${escapeHtml(label)}">
@@ -192,6 +192,60 @@ function renderSettingsMenu(menu, label, selectedLabel, options) {
         </div>
       ` : ''}
     </span>
+  `;
+}
+
+function renderSettingsPreferenceItem(title, description, controlMarkup, icon = '•') {
+  return `
+    <div class="settings-preference-item">
+      <span class="settings-preference-icon" aria-hidden="true">${escapeHtml(icon)}</span>
+      <div class="settings-preference-content">
+        <span class="settings-preference-copy">
+          <span class="settings-preference-title">${escapeHtml(title)}</span>
+          <span class="settings-preference-description">${escapeHtml(description)}</span>
+        </span>
+        <div class="settings-preference-control">
+          ${controlMarkup}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderSettingsToggleControl(setting, title, enabled, labels = {}) {
+  const statusLabel = enabled
+    ? (labels.enabled ?? t('settings.calculation.enabled'))
+    : (labels.disabled ?? t('settings.calculation.disabled'));
+  return `
+    <div class="settings-toggle-row">
+      <button type="button" class="settings-toggle-button ${enabled ? 'active' : ''}" data-settings-toggle="${escapeHtml(setting)}" aria-pressed="${enabled ? 'true' : 'false'}" aria-label="${escapeHtml(title)}">
+        <span class="settings-toggle-track" aria-hidden="true">
+          <span class="settings-toggle-thumb"></span>
+        </span>
+        <span class="settings-toggle-status">${escapeHtml(statusLabel)}</span>
+      </button>
+    </div>
+  `;
+}
+
+function renderShortcutRow(definition) {
+  const isCapturing = state.settings.activeShortcutId === definition.id;
+  const currentBinding = state.settings.shortcuts[definition.id] ?? APP_SHORTCUT_DEFAULTS[definition.id] ?? definition.defaultBinding;
+  const desc = t(definition.descriptionKey);
+  return `
+    <div class="settings-shortcut-row">
+      <span class="settings-shortcut-copy">
+        <span class="settings-shortcut-title">${escapeHtml(t(definition.labelKey))}</span>
+      </span>
+      <span class="settings-shortcut-actions">
+        <button type="button" class="settings-shortcut-button ${isCapturing ? 'active' : ''}" data-settings-shortcut-capture="${escapeHtml(definition.id)}" aria-pressed="${isCapturing ? 'true' : 'false'}" title="${escapeHtml(desc)}" aria-label="${escapeHtml(t(definition.labelKey) + ' - ' + desc)}">
+          ${escapeHtml(isCapturing ? t('settings.shortcuts.recording') : currentBinding)}
+        </button>
+        <button type="button" class="settings-shortcut-reset" data-settings-shortcut-reset="${escapeHtml(definition.id)}">
+          ${escapeHtml(t('settings.shortcuts.reset'))}
+        </button>
+      </span>
+    </div>
   `;
 }
 
@@ -238,37 +292,52 @@ export function renderSettingsView() {
   return `
     <section class="settings-page">
       <div class="settings-scroll">
-        <div class="settings-group-heading">${t('settings.appearance.group')}</div>
-        <details class="settings-expander" open>
+        <details class="settings-expander">
           <summary class="settings-expander-summary">
-            <span class="settings-expander-icon" aria-hidden="true">◐</span>
+            <span class="settings-expander-icon" aria-hidden="true">⚙</span>
             <span class="settings-expander-copy">
-              <span class="settings-expander-title">${t('settings.appearance.themeTitle')}</span>
-              <span class="settings-expander-description">${t('settings.appearance.themeDescription')}</span>
+              <span class="settings-expander-title">${t('settings.preferences.group')}</span>
+              <span class="settings-expander-description">${t('settings.preferences.description')}</span>
             </span>
             <span class="settings-expander-arrow" aria-hidden="true"></span>
           </summary>
           <div class="settings-expander-body">
-            <label class="settings-select-label">
-              ${renderSettingsMenu('theme', t('settings.appearance.themeTitle'), currentTheme.label, themeOptions)}
-            </label>
+            ${renderSettingsPreferenceItem(
+              t('settings.appearance.themeTitle'),
+              t('settings.appearance.themeDescription'),
+              `<div class="settings-select-label">${renderSettingsMenu('theme', t('settings.appearance.themeTitle'), currentTheme.label, themeOptions)}</div>`,
+              '◐'
+            )}
+            ${renderSettingsPreferenceItem(
+              t('settings.language.title'),
+              t('settings.language.description'),
+              `<div class="settings-select-label">${renderSettingsMenu('language', t('settings.language.title'), currentLanguageOption.label, languageOptions)}</div>`,
+              'A'
+            )}
+            ${renderSettingsPreferenceItem(
+              t('settings.calculation.repeatEqualsTitle'),
+              t('settings.calculation.repeatEqualsDescription'),
+              renderSettingsToggleControl('repeatEquals', t('settings.calculation.repeatEqualsTitle'), state.settings.repeatEquals),
+              '='
+            )}
           </div>
         </details>
 
-        <div class="settings-group-heading">${t('settings.language.group')}</div>
-        <details class="settings-expander" open>
+        <details class="settings-expander">
           <summary class="settings-expander-summary">
-            <span class="settings-expander-icon" aria-hidden="true">A</span>
+            <span class="settings-expander-icon" aria-hidden="true">⌘</span>
             <span class="settings-expander-copy">
-              <span class="settings-expander-title">${t('settings.language.title')}</span>
-              <span class="settings-expander-description">${t('settings.language.description')}</span>
+              <span class="settings-expander-title">${t('settings.shortcuts.title')}</span>
+              <span class="settings-expander-description">${t('settings.shortcuts.description')}</span>
             </span>
             <span class="settings-expander-arrow" aria-hidden="true"></span>
           </summary>
           <div class="settings-expander-body">
-            <label class="settings-select-label">
-              ${renderSettingsMenu('language', t('settings.language.title'), currentLanguageOption.label, languageOptions)}
-            </label>
+            <p class="settings-shortcut-helper">${escapeHtml(t('settings.shortcuts.helper'))}</p>
+            ${state.settings.shortcutError ? `<p class="settings-shortcut-feedback" role="status">${escapeHtml(state.settings.shortcutError)}</p>` : ''}
+            <div class="settings-shortcut-list">
+              ${APP_SHORTCUT_DEFINITIONS.map((definition) => renderShortcutRow(definition)).join('')}
+            </div>
           </div>
         </details>
 

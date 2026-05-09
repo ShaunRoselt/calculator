@@ -6,7 +6,9 @@
   "common": {
     "back": "Tilbage",
     "backspace": "Tilbage",
-    "closeSidePanel": "Luk panelet"
+    "closeSidePanel": "Luk panelet",
+    "clear": "Ryd",
+    "clearEntry": "Ryd indtastning"
   },
   "converter": {
     "unitConverter": "Enhedskonverter",
@@ -248,7 +250,8 @@
       "function": "Funktion",
       "functionsAria": "Funktioner",
       "trigonometricFunctionsAria": "Trigonometriske funktioner",
-      "angleUnit": "Vinkelenhed {value}"
+      "angleUnit": "Vinkelenhed {value}",
+      "exponentialFormat": "Skift eksponentielt format"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Projektlager",
       "readme": "LÆS MIG",
       "license": "MIT-licens"
+    },
+    "calculation": {
+      "group": "Beregning",
+      "repeatEqualsTitle": "Gentag sidste handling på fortløbende lig",
+      "repeatEqualsDescription": "I standard-, videnskabelig- og programmeringstilstand, tryk på = igen genanvender den forrige operator og operand.",
+      "enabled": "Aktiveret",
+      "disabled": "Deaktiveret"
+    },
+    "window": {
+      "group": "Vindue",
+      "fullscreenTitle": "Fuld skærm (F11)",
+      "fullscreenDescription": "Vælg, om appen skal være fuldskærm eller ej",
+      "fullscreenEnabled": "Fuld skærm",
+      "fullscreenDisabled": "Normal"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

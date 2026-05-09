@@ -14,6 +14,7 @@ import { renderNavIcon, renderToolbarIcon } from './ViewIcons.js';
 import { renderUnitConverterView } from './UnitConverter.js';
 
 export function render() {
+  const settingsExpanderStates = captureSettingsExpanderStates();
   const layoutMode = getLayoutMode();
   const sidePanelVisible = isSidePanelVisible();
   appRoot.innerHTML = `
@@ -36,10 +37,35 @@ export function render() {
       </div>
     </div>
   `;
+  restoreSettingsExpanderStates(settingsExpanderStates);
   prepareTooltipTargets(appRoot);
   syncCalculatorMascotPlacement();
   syncConverterMenuScroll();
   drawGraph();
+}
+
+function captureSettingsExpanderStates() {
+  const expanders = appRoot.querySelectorAll('.settings-page .settings-expander');
+  if (!expanders.length) {
+    return null;
+  }
+
+  return Array.from(expanders, (expander) => expander instanceof HTMLDetailsElement ? expander.open : false);
+}
+
+function restoreSettingsExpanderStates(expanderStates) {
+  if (!Array.isArray(expanderStates) || !expanderStates.length) {
+    return;
+  }
+
+  const expanders = appRoot.querySelectorAll('.settings-page .settings-expander');
+  expanders.forEach((expander, index) => {
+    if (!(expander instanceof HTMLDetailsElement)) {
+      return;
+    }
+
+    expander.open = expanderStates[index] ?? expander.open;
+  });
 }
 
 function syncCalculatorMascotPlacement() {

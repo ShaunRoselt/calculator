@@ -6,7 +6,9 @@
   "common": {
     "back": "Quay lại",
     "backspace": "Xóa lùi",
-    "closeSidePanel": "Đóng bảng điều khiển"
+    "closeSidePanel": "Đóng bảng điều khiển",
+    "clear": "Xóa",
+    "clearEntry": "Xóa mục nhập"
   },
   "converter": {
     "unitConverter": "Bộ chuyển đổi đơn vị",
@@ -248,7 +250,8 @@
       "function": "Chức năng",
       "functionsAria": "Chức năng",
       "trigonometricFunctionsAria": "Hàm lượng giác",
-      "angleUnit": "Đơn vị góc {value}"
+      "angleUnit": "Đơn vị góc {value}",
+      "exponentialFormat": "Chuyển đổi định dạng hàm mũ"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Kho lưu trữ dự án",
       "readme": "README",
       "license": "Giấy phép MIT"
+    },
+    "calculation": {
+      "group": "Tính toán",
+      "repeatEqualsTitle": "Lặp lại thao tác cuối cùng trên các giá trị bằng liên tiếp",
+      "repeatEqualsDescription": "Ở chế độ Tiêu chuẩn, Khoa học và Lập trình viên, việc nhấn lại = sẽ áp dụng lại toán tử và toán hạng trước đó.",
+      "enabled": "Đã bật",
+      "disabled": "Đã tắt"
+    },
+    "window": {
+      "group": "Cửa sổ",
+      "fullscreenTitle": "Toàn màn hình (F11)",
+      "fullscreenDescription": "Chọn xem bạn có muốn ứng dụng ở chế độ Toàn màn hình hay không",
+      "fullscreenEnabled": "Toàn màn hình",
+      "fullscreenDisabled": "Bình thường"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

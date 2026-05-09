@@ -268,6 +268,34 @@
       }
     },
     {
+      "id": "south-africa",
+      "file": "south-africa.css",
+      "label": "South Africa",
+      "extends": "dark",
+      "metaColor": "#132c2b",
+      "graphPalette": {
+        "background": "#102122",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#e8f2e9",
+        "label": "#fffdf5"
+      }
+    },
+    {
+      "id": "germany",
+      "file": "germany.css",
+      "label": "Germany",
+      "extends": "dark",
+      "metaColor": "#1a1a1c",
+      "graphPalette": {
+        "background": "#161618",
+        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "gridMinor": "rgba(255, 255, 255, 0.07)",
+        "axis": "#f3e4b0",
+        "label": "#fff8de"
+      }
+    },
+    {
       "id": "lgbtq",
       "file": "lgbtq.css",
       "label": "LGBTQ",

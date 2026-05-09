@@ -6,7 +6,9 @@
   "common": {
     "back": "Бозгашт",
     "backspace": "Backspace",
-    "closeSidePanel": "Панелро пӯшед"
+    "closeSidePanel": "Панелро пӯшед",
+    "clear": "Тоза",
+    "clearEntry": "Вурудро тоза кунед"
   },
   "converter": {
     "unitConverter": "Табдилдиҳандаи воҳид",
@@ -248,7 +250,8 @@
       "function": "Функсия",
       "functionsAria": "Функсияҳо",
       "trigonometricFunctionsAria": "Функсияҳои тригонометрӣ",
-      "angleUnit": "Воҳиди кунҷӣ {value}"
+      "angleUnit": "Воҳиди кунҷӣ {value}",
+      "exponentialFormat": "Иваз кардани формати экспоненсиалӣ"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Анбори лоиҳа",
       "readme": "ХОНЕД",
       "license": "Иҷозатномаи MIT"
+    },
+    "calculation": {
+      "group": "Ҳисобкунӣ",
+      "repeatEqualsTitle": "Амалиёти охиринро дар баробариҳои пайдарпай такрор кунед",
+      "repeatEqualsDescription": "Дар шеваҳои стандартӣ, илмӣ ва барномасоз, бори дигар пахш кардани = оператор ва операнди қаблиро истифода мебарад.",
+      "enabled": "Фаъол",
+      "disabled": "Маъюб"
+    },
+    "window": {
+      "group": "Равзана",
+      "fullscreenTitle": "Экрани пурра (F11)",
+      "fullscreenDescription": "Интихоб кунед, ки оё шумо мехоҳед, ки барнома FullScreen бошад ё не",
+      "fullscreenEnabled": "Экрани пурра",
+      "fullscreenDisabled": "Муқаррарӣ"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

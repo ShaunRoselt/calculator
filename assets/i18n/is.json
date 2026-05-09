@@ -6,7 +6,9 @@
   "common": {
     "back": "Til baka",
     "backspace": "Backspace",
-    "closeSidePanel": "Loka spjaldið"
+    "closeSidePanel": "Loka spjaldið",
+    "clear": "Hreinsa",
+    "clearEntry": "Hreinsa færslu"
   },
   "converter": {
     "unitConverter": "Einingabreytir",
@@ -248,7 +250,8 @@
       "function": "Virka",
       "functionsAria": "Aðgerðir",
       "trigonometricFunctionsAria": "Trigonometric aðgerðir",
-      "angleUnit": "Hynnaeining {value}"
+      "angleUnit": "Hynnaeining {value}",
+      "exponentialFormat": "Slökkva á veldisvísissniði"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Verkefnageymsla",
       "readme": "LESIÐMIG",
       "license": "MIT leyfi"
+    },
+    "calculation": {
+      "group": "Útreikningur",
+      "repeatEqualsTitle": "Endurtaktu síðustu aðgerð á jafningjum í röð",
+      "repeatEqualsDescription": "Í stöðluðum, vísindalegum og forritunarstillingum, með því að ýta á = aftur, er fyrri stjórnandi og operand notaður aftur.",
+      "enabled": "Virkt",
+      "disabled": "Óvirkt"
+    },
+    "window": {
+      "group": "Gluggi",
+      "fullscreenTitle": "Fullskjár (F11)",
+      "fullscreenDescription": "Veldu hvort þú vilt að appið sé á fullum skjá eða ekki",
+      "fullscreenEnabled": "Allur skjár",
+      "fullscreenDisabled": "Venjulegt"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

@@ -6,7 +6,9 @@
   "common": {
     "back": "Артқа",
     "backspace": "Backspace",
-    "closeSidePanel": "Панельді жабу"
+    "closeSidePanel": "Панельді жабу",
+    "clear": "Таза",
+    "clearEntry": "Жазбаны өшіру"
   },
   "converter": {
     "unitConverter": "Бірлік түрлендіргіші",
@@ -248,7 +250,8 @@
       "function": "Функция",
       "functionsAria": "Функциялар",
       "trigonometricFunctionsAria": "Тригонометриялық функциялар",
-      "angleUnit": "Бұрыш бірлігі {value}"
+      "angleUnit": "Бұрыш бірлігі {value}",
+      "exponentialFormat": "Экспоненциалды пішімін ауыстыру"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Жоба репозиторийі",
       "readme": "README",
       "license": "MIT лицензиясы"
+    },
+    "calculation": {
+      "group": "Есептеу",
+      "repeatEqualsTitle": "Соңғы әрекетті дәйекті теңдіктерде қайталау",
+      "repeatEqualsDescription": "Стандартты, ғылыми және бағдарламашы режимдерінде = түймесін қайтадан басу алдыңғы оператор мен операндты қайта қолданады.",
+      "enabled": "Қосылған",
+      "disabled": "Өшірілген"
+    },
+    "window": {
+      "group": "Терезе",
+      "fullscreenTitle": "Толық экран (F11)",
+      "fullscreenDescription": "Қолданбаның толық экран болуын немесе жоқтығын таңдаңыз",
+      "fullscreenEnabled": "Толық экран",
+      "fullscreenDisabled": "Қалыпты"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

@@ -6,7 +6,9 @@
   "common": {
     "back": "Emva",
     "backspace": "Cima unobumba",
-    "closeSidePanel": "Vala iphaneli"
+    "closeSidePanel": "Vala iphaneli",
+    "clear": "Cacileyo",
+    "clearEntry": "Sula ukungena"
   },
   "converter": {
     "unitConverter": "Isiguquli seemayunithi",
@@ -248,7 +250,8 @@
       "function": "Umsebenzi",
       "functionsAria": "Imisebenzi",
       "trigonometricFunctionsAria": "Imisebenzi ye-trigonometry",
-      "angleUnit": "Iyunithi ye-engile {value}"
+      "angleUnit": "Iyunithi ye-engile {value}",
+      "exponentialFormat": "Guqula ifomati yophawu"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Indawo yeprojekthi",
       "readme": "README",
       "license": "Ilayisensi ye-MIT"
+    },
+    "calculation": {
+      "group": "Ukubala",
+      "repeatEqualsTitle": "Phinda umsebenzi wokugqibela ngokulinganayo ngokulandelelana",
+      "repeatEqualsDescription": "KwimiGangatho, iNzululwazi, kunye neendlela zeProgram, ukucinezela = kwakhona kusebenzisa umqhubi wangaphambili kunye ne-operand.",
+      "enabled": "Ivuliwe",
+      "disabled": "Kukhubazekile"
+    },
+    "window": {
+      "group": "Ifestile",
+      "fullscreenTitle": "iSkrini esipheleleyo (F11)",
+      "fullscreenDescription": "Khetha ukuba ufuna ukuba usetyenziso lube yiFullScreen okanye hayi",
+      "fullscreenEnabled": "Isikrini esiphelele",
+      "fullscreenDisabled": "Okuqhelekileyo"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

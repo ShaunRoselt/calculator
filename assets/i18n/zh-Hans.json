@@ -6,7 +6,9 @@
   "common": {
     "back": "Back",
     "backspace": "Backspace",
-    "closeSidePanel": "Close panel"
+    "closeSidePanel": "Close panel",
+    "clear": "清除",
+    "clearEntry": "清除条目"
   },
   "converter": {
     "unitConverter": "Unit Converter",
@@ -248,7 +250,8 @@
       "function": "Function",
       "functionsAria": "Functions",
       "trigonometricFunctionsAria": "Trigonometric functions",
-      "angleUnit": "Angle unit {value}"
+      "angleUnit": "Angle unit {value}",
+      "exponentialFormat": "切换指数格式"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Project repository",
       "readme": "README",
       "license": "MIT license"
+    },
+    "calculation": {
+      "group": "计算",
+      "repeatEqualsTitle": "对连续等于重复上一个操作",
+      "repeatEqualsDescription": "在标准、科学和程序员模式下，再次按 = 将重新应用之前的运算符和操作数。",
+      "enabled": "已启用",
+      "disabled": "已禁用"
+    },
+    "window": {
+      "group": "窗口",
+      "fullscreenTitle": "全屏 (F11)",
+      "fullscreenDescription": "选择是否希望应用全屏显示",
+      "fullscreenEnabled": "全屏",
+      "fullscreenDisabled": "正常"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

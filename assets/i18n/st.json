@@ -6,7 +6,9 @@
   "common": {
     "back": "Morao",
     "backspace": "Backspace",
-    "closeSidePanel": "Koala phanele"
+    "closeSidePanel": "Koala phanele",
+    "clear": "E hlakile",
+    "clearEntry": "Hlakola keno"
   },
   "converter": {
     "unitConverter": "Unit Converter",
@@ -248,7 +250,8 @@
       "function": "Mosebetsi",
       "functionsAria": "Mesebetsi",
       "trigonometricFunctionsAria": "Mesebetsi ea trigonometric",
-      "angleUnit": "Angle unit {value}"
+      "angleUnit": "Angle unit {value}",
+      "exponentialFormat": "Fetosa sebopeho sa exponential"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Bobolokelo ba morero",
       "readme": "BALA",
       "license": "MIT laesense"
+    },
+    "calculation": {
+      "group": "Palo",
+      "repeatEqualsTitle": "Pheta tšebetso ea ho qetela ho tse lekanang tse latellanang",
+      "repeatEqualsDescription": "Ka mekhoa e Tloaelehileng, Saense, le Programmer, ho tobetsa = hape ho sebelisa opereishene ea pele le tšebetso.",
+      "enabled": "E lumelletsoe",
+      "disabled": "E holofetse"
+    },
+    "window": {
+      "group": "Fesetere",
+      "fullscreenTitle": "FullScreen (F11)",
+      "fullscreenDescription": "Khetha hore na u batla hore sesebelisoa e be FullScreen kapa che",
+      "fullscreenEnabled": "FullScreen",
+      "fullscreenDisabled": "E tlwaelehileng"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

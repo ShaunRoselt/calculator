@@ -6,7 +6,9 @@
   "common": {
     "back": "Geri",
     "backspace": "Backspace",
-    "closeSidePanel": "Panolu bağlayın"
+    "closeSidePanel": "Panolu bağlayın",
+    "clear": "Təmizləyin",
+    "clearEntry": "Girişi silin"
   },
   "converter": {
     "unitConverter": "Vahid çevirici",
@@ -248,7 +250,8 @@
       "function": "Funksiya",
       "functionsAria": "Funksiyalar",
       "trigonometricFunctionsAria": "Triqonometrik funksiyalar",
-      "angleUnit": "Bucaq vahidi {value}"
+      "angleUnit": "Bucaq vahidi {value}",
+      "exponentialFormat": "Eksponensial formatı dəyişdirin"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Layihə deposu",
       "readme": "OXUYU",
       "license": "MIT lisenziyası"
+    },
+    "calculation": {
+      "group": "Hesablama",
+      "repeatEqualsTitle": "Ardıcıl bərabərliklərdə son əməliyyatı təkrarlayın",
+      "repeatEqualsDescription": "Standart, Elmi və Proqramçı rejimlərində = düyməsini yenidən sıxmaq əvvəlki operatoru və operandı yenidən tətbiq edir.",
+      "enabled": "Aktivdir",
+      "disabled": "Deaktiv edilib"
+    },
+    "window": {
+      "group": "Pəncərə",
+      "fullscreenTitle": "Tam Ekran (F11)",
+      "fullscreenDescription": "Tətbiqin Tam Ekran olmasını istəyib-istəmədiyinizi seçin",
+      "fullscreenEnabled": "Tam Ekran",
+      "fullscreenDisabled": "Normal"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

@@ -6,7 +6,9 @@
   "common": {
     "back": "واپس",
     "backspace": "بيڪ اسپيس",
-    "closeSidePanel": "بند ڪريو پينل"
+    "closeSidePanel": "بند ڪريو پينل",
+    "clear": "صاف",
+    "clearEntry": "انڪري صاف ڪريو"
   },
   "converter": {
     "unitConverter": "يونٽ ڪنورٽر",
@@ -248,7 +250,8 @@
       "function": "فنڪشن",
       "functionsAria": "ڪم",
       "trigonometricFunctionsAria": "Trigonometric فنڪشن",
-      "angleUnit": "زاويه يونٽ {value}"
+      "angleUnit": "زاويه يونٽ {value}",
+      "exponentialFormat": "تفصيل واري فارميٽ کي ٽوگل ڪريو"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "پروجيڪٽ ريپوزٽري",
       "readme": "README",
       "license": "MIT لائسنس"
+    },
+    "calculation": {
+      "group": "حساب",
+      "repeatEqualsTitle": "گذريل برابر تي آخري عمل ورجايو",
+      "repeatEqualsDescription": "معياري، سائنسي، ۽ پروگرامر موڊس ۾، دٻائڻ = ٻيهر لاڳو ٿئي ٿو پوئين آپريٽر ۽ آپرينڊ.",
+      "enabled": "فعال",
+      "disabled": "بند ٿيل"
+    },
+    "window": {
+      "group": "ونڊو",
+      "fullscreenTitle": "فل اسڪرين (F11)",
+      "fullscreenDescription": "منتخب ڪريو ته ڇا توھان چاھيو ٿا ته ائپ فل اسڪرين هجي يا نه",
+      "fullscreenEnabled": "فل اسڪرين",
+      "fullscreenDisabled": "عام"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

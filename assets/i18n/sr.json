@@ -6,7 +6,9 @@
   "common": {
     "back": "Назад",
     "backspace": "Бацкспаце",
-    "closeSidePanel": "Затворите панел"
+    "closeSidePanel": "Затворите панел",
+    "clear": "Јасно",
+    "clearEntry": "Очисти унос"
   },
   "converter": {
     "unitConverter": "Унит Цонвертер",
@@ -248,7 +250,8 @@
       "function": "Функција",
       "functionsAria": "Функције",
       "trigonometricFunctionsAria": "Тригонометријске функције",
-      "angleUnit": "Јединица за угао {value}"
+      "angleUnit": "Јединица за угао {value}",
+      "exponentialFormat": "Укључите експоненцијални формат"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Репозиторијум пројекта",
       "readme": "РЕАДМЕ",
       "license": "МИТ лиценца"
+    },
+    "calculation": {
+      "group": "Калкулација",
+      "repeatEqualsTitle": "Поновите последњу операцију на узастопним једнаким",
+      "repeatEqualsDescription": "У стандардним, научним и програмерским режимима, поновним притиском = поново се примењује претходни оператор и операнд.",
+      "enabled": "Омогућено",
+      "disabled": "Онемогућено"
+    },
+    "window": {
+      "group": "Прозор",
+      "fullscreenTitle": "Цео екран (Ф11)",
+      "fullscreenDescription": "Изаберите да ли желите да апликација буде на целом екрану или не",
+      "fullscreenEnabled": "ФуллСцреен",
+      "fullscreenDisabled": "Нормално"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

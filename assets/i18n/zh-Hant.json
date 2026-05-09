@@ -6,7 +6,9 @@
   "common": {
     "back": "返回",
     "backspace": "退格鍵",
-    "closeSidePanel": "關閉面板"
+    "closeSidePanel": "關閉面板",
+    "clear": "清除",
+    "clearEntry": "清除條目"
   },
   "converter": {
     "unitConverter": "單位轉換器",
@@ -248,7 +250,8 @@
       "function": "函數",
       "functionsAria": "功能",
       "trigonometricFunctionsAria": "三角函數",
-      "angleUnit": "角度單位{value}"
+      "angleUnit": "角度單位{value}",
+      "exponentialFormat": "切換指數格式"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "專案儲存庫",
       "readme": "自述文件",
       "license": "麻省理工學院許可證"
+    },
+    "calculation": {
+      "group": "計算",
+      "repeatEqualsTitle": "對連續等於重複上一個操作",
+      "repeatEqualsDescription": "在標準、科學和程式設計師模式下，再次按 = 將重新套用先前的運算子和運算元。",
+      "enabled": "已啟用",
+      "disabled": "已停用"
+    },
+    "window": {
+      "group": "視窗",
+      "fullscreenTitle": "全螢幕 (F11)",
+      "fullscreenDescription": "選擇是否希望套用全螢幕顯示",
+      "fullscreenEnabled": "全螢幕",
+      "fullscreenDisabled": "正常"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

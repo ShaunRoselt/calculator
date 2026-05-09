@@ -6,7 +6,9 @@
   "common": {
     "back": "Tagasi",
     "backspace": "Tagasilükke",
-    "closeSidePanel": "Sule paneel"
+    "closeSidePanel": "Sule paneel",
+    "clear": "Tühjenda",
+    "clearEntry": "Tühjenda sisestus"
   },
   "converter": {
     "unitConverter": "Ühikute teisendaja",
@@ -248,7 +250,8 @@
       "function": "Funktsioon",
       "functionsAria": "Funktsioonid",
       "trigonometricFunctionsAria": "Trigonomeetrilised funktsioonid",
-      "angleUnit": "nurga ühik {value}"
+      "angleUnit": "nurga ühik {value}",
+      "exponentialFormat": "Lülita eksponentsiaalset vormingut"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Projekti hoidla",
       "readme": "LOE",
       "license": "MIT-litsents"
+    },
+    "calculation": {
+      "group": "Arvutamine",
+      "repeatEqualsTitle": "Korrake viimast toimingut järjestikuste võrdsetega",
+      "repeatEqualsDescription": "Standard-, teadus- ja programmeerijarežiimis rakendab = uuesti vajutamine eelmise operaatori ja operandi uuesti.",
+      "enabled": "Lubatud",
+      "disabled": "Keelatud"
+    },
+    "window": {
+      "group": "Aken",
+      "fullscreenTitle": "Täisekraan (F11)",
+      "fullscreenDescription": "Valige, kas soovite, et rakendus oleks täisekraanil või mitte",
+      "fullscreenEnabled": "Täisekraan",
+      "fullscreenDisabled": "Tavaline"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

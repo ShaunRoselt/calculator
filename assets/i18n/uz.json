@@ -6,7 +6,9 @@
   "common": {
     "back": "Orqaga",
     "backspace": "Backspace",
-    "closeSidePanel": "Panelni yopish"
+    "closeSidePanel": "Panelni yopish",
+    "clear": "Tozalash",
+    "clearEntry": "Yozuvni tozalash"
   },
   "converter": {
     "unitConverter": "Birlik konvertori",
@@ -248,7 +250,8 @@
       "function": "Funktsiya",
       "functionsAria": "Funksiyalar",
       "trigonometricFunctionsAria": "Trigonometrik funksiyalar",
-      "angleUnit": "Burchak birligi {value}"
+      "angleUnit": "Burchak birligi {value}",
+      "exponentialFormat": "Eksponensial formatni almashtirish"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Loyihalar ombori",
       "readme": "README",
       "license": "MIT litsenziyasi"
+    },
+    "calculation": {
+      "group": "Hisoblash",
+      "repeatEqualsTitle": "Oxirgi amalni ketma-ket tenglarda takrorlang",
+      "repeatEqualsDescription": "Standart, Ilmiy va Dasturchi rejimlarida = tugmasini yana bosish avvalgi operator va operandni qaytadan qo‘llaydi.",
+      "enabled": "Yoqilgan",
+      "disabled": "O'chirilgan"
+    },
+    "window": {
+      "group": "Oyna",
+      "fullscreenTitle": "Toʻliq ekran (F11)",
+      "fullscreenDescription": "Ilova toʻliq ekran boʻlishini xohlaysizmi yoki yoʻqligini tanlang",
+      "fullscreenEnabled": "Toʻliq ekran",
+      "fullscreenDisabled": "Oddiy"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

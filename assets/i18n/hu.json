@@ -6,7 +6,9 @@
   "common": {
     "back": "Vissza",
     "backspace": "Backspace",
-    "closeSidePanel": "Zárja be a panelt"
+    "closeSidePanel": "Zárja be a panelt",
+    "clear": "Törlés",
+    "clearEntry": "Bejegyzés törlése"
   },
   "converter": {
     "unitConverter": "Mértékegység-átalakító",
@@ -248,7 +250,8 @@
       "function": "Funkció",
       "functionsAria": "Funkciók",
       "trigonometricFunctionsAria": "Trigonometrikus függvények",
-      "angleUnit": "Szög mértékegysége {value}"
+      "angleUnit": "Szög mértékegysége {value}",
+      "exponentialFormat": "Az exponenciális formátum be- és kikapcsolása"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Projekttár",
       "readme": "OLVASÁS",
       "license": "MIT-licenc"
+    },
+    "calculation": {
+      "group": "Számítás",
+      "repeatEqualsTitle": "Az utolsó művelet megismétlése egymást követő egyenlőkkel",
+      "repeatEqualsDescription": "Szabványos, Tudományos és Programozói módban a = ismételt megnyomása újra alkalmazza az előző operátort és operandust.",
+      "enabled": "Engedélyezve",
+      "disabled": "Letiltva"
+    },
+    "window": {
+      "group": "Ablak",
+      "fullscreenTitle": "Teljes képernyő (F11)",
+      "fullscreenDescription": "Válassza ki, hogy teljes képernyős legyen-e az alkalmazás",
+      "fullscreenEnabled": "Teljes képernyő",
+      "fullscreenDisabled": "Normál"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

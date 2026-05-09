@@ -788,6 +788,15 @@
     min-height: 0;
   }
 
+  .graphing-layout.short-height-layout:not(.compact-editor-expressions):not(.compact-editor-keypad) .graph-expression-pane {
+    flex: 0 1 auto;
+  }
+
+  .graphing-layout.short-height-layout:not(.compact-editor-expressions):not(.compact-editor-keypad) .graph-keypad-pane {
+    flex: 1 1 auto;
+    overflow-y: auto;
+  }
+
   .graphing-layout.short-height-layout.compact-editor-expressions .graph-keypad-pane {
     display: none;
   }
@@ -801,6 +810,11 @@
     min-height: 0;
     overflow: auto;
     padding-top: 4px;
+  }
+
+  .graphing-layout.short-height-layout:not(.compact-editor-expressions):not(.compact-editor-keypad) .graph-expression-list {
+    flex: 0 1 auto;
+    max-height: min(220px, 42vh);
   }
 
   .graphing-layout.short-height-layout .graph-editor-stage {

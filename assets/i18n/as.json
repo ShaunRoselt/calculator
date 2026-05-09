@@ -6,7 +6,9 @@
   "common": {
     "back": "পিছলৈ",
     "backspace": "বেকস্পেচ",
-    "closeSidePanel": "পেনেল বন্ধ কৰক"
+    "closeSidePanel": "পেনেল বন্ধ কৰক",
+    "clear": "স্পষ্ট কৰক",
+    "clearEntry": "প্ৰৱেশ পৰিষ্কাৰ কৰক"
   },
   "converter": {
     "unitConverter": "ইউনিট ৰূপান্তৰক",
@@ -248,7 +250,8 @@
       "function": "কাৰ্য্য",
       "functionsAria": "কাৰ্য্যসমূহ",
       "trigonometricFunctionsAria": "ত্ৰিকোণমেট্ৰিক ফাংচনসমূহ",
-      "angleUnit": "কোণ একক {value}"
+      "angleUnit": "কোণ একক {value}",
+      "exponentialFormat": "ঘাতীয় বিন্যাস টগল কৰক"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "প্ৰকল্প ভঁৰাল",
       "readme": "README",
       "license": "MIT অনুজ্ঞাপত্ৰ"
+    },
+    "calculation": {
+      "group": "গণনা",
+      "repeatEqualsTitle": "ক্ৰমিক সমানত শেষ কাৰ্য্য পুনৰাবৃত্তি কৰক",
+      "repeatEqualsDescription": "মানক, বৈজ্ঞানিক, আৰু প্ৰগ্ৰেমাৰ ধৰণত, = টিপিলে পুনৰায় পূৰ্বৰ অপাৰেটৰ আৰু অপাৰেণ্ড পুনৰ প্ৰয়োগ কৰা হয়।",
+      "enabled": "সামৰ্থবান কৰা হৈছে",
+      "disabled": "অক্ষম কৰা হৈছে"
+    },
+    "window": {
+      "group": "উইণ্ডো",
+      "fullscreenTitle": "সম্পূৰ্ণ পৰ্দা (F11)",
+      "fullscreenDescription": "আপুনি এপটো FullScreen হ'ব বিচাৰে নে নাই নিৰ্বাচন কৰক",
+      "fullscreenEnabled": "সম্পূৰ্ণ পৰ্দা",
+      "fullscreenDisabled": "সাধাৰণ"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

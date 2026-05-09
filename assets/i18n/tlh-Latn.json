@@ -6,6 +6,8 @@
   "common": {
     "back": "Hech",
     "backspace": "bachmeH tlhej",
+    "clear": "teQ",
+    "clearEntry": "mey teQ",
     "closeSidePanel": "qeg vIghaj"
   },
   "converter": {
@@ -248,7 +250,8 @@
       "function": "mIw",
       "functionsAria": "mIwHom",
       "trigonometricFunctionsAria": "triqon mIwHom",
-      "angleUnit": "nang vaj {value}"
+      "angleUnit": "nang vaj {value}",
+      "exponentialFormat": "exponential mIw choH"
     }
   },
   "settings": {
@@ -267,6 +270,20 @@
       "title": "Hol",
       "description": "SoH chu' Hol"
     },
+    "window": {
+      "group": "'el",
+      "fullscreenTitle": "FullScreen (F11)",
+      "fullscreenDescription": "chutaH FullScreen Daq app DaneH'a' ghobe' je yIwIv.",
+      "fullscreenEnabled": "FullScreen",
+      "fullscreenDisabled": "motlh"
+    },
+    "calculation": {
+      "group": "vum",
+      "repeatEqualsTitle": "rur = HochDaH mIwqa'",
+      "repeatEqualsDescription": "Standard, Scientific, Programmer jeDaq, = Da'u'qa'chugh vaj mIw motlh je mI' motlh je lI'qa'.",
+      "enabled": "chu'",
+      "disabled": "Qot"
+    },
     "about": {
       "group": "pagh"
     },
@@ -280,6 +297,26 @@
       "repository": "project Daq",
       "readme": "README",
       "license": "MIT license"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

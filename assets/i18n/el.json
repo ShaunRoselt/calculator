@@ -6,7 +6,9 @@
   "common": {
     "back": "Επιστροφή",
     "backspace": "Backspace",
-    "closeSidePanel": "Κλείστε το πλαίσιο"
+    "closeSidePanel": "Κλείστε το πλαίσιο",
+    "clear": "Διαγραφή",
+    "clearEntry": "Διαγραφή καταχώρισης"
   },
   "converter": {
     "unitConverter": "Μετατροπέας μονάδων",
@@ -248,7 +250,8 @@
       "function": "Λειτουργία",
       "functionsAria": "Λειτουργίες",
       "trigonometricFunctionsAria": "Τριγωνομετρικές συναρτήσεις",
-      "angleUnit": "Μονάδα γωνίας {value}"
+      "angleUnit": "Μονάδα γωνίας {value}",
+      "exponentialFormat": "Εναλλαγή εκθετικής μορφής"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Αποθήκη έργου",
       "readme": "ΔΙΑΒΑΣΤΕ",
       "license": "Άδεια MIT"
+    },
+    "calculation": {
+      "group": "Υπολογισμός",
+      "repeatEqualsTitle": "Επαναλάβετε την τελευταία λειτουργία σε συνεχόμενα ίσα",
+      "repeatEqualsDescription": "Στις λειτουργίες Standard, Scientific και Programmer, το πάτημα = ξανά εφαρμόζει ξανά τον προηγούμενο τελεστή και τελεστή.",
+      "enabled": "Ενεργοποιημένο",
+      "disabled": "Απενεργοποιημένο"
+    },
+    "window": {
+      "group": "Παράθυρο",
+      "fullscreenTitle": "Πλήρης οθόνη (F11)",
+      "fullscreenDescription": "Επιλέξτε εάν θέλετε η εφαρμογή να είναι Πλήρης Οθόνη ή όχι",
+      "fullscreenEnabled": "Πλήρης οθόνη",
+      "fullscreenDisabled": "Κανονικό"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

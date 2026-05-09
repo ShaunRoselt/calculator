@@ -6,7 +6,9 @@
   "common": {
     "back": "Back",
     "backspace": "Backspace",
-    "closeSidePanel": "Close panel"
+    "closeSidePanel": "Close panel",
+    "clear": "ସଫା କରନ୍ତୁ |",
+    "clearEntry": "ଏଣ୍ଟ୍ରି ସଫା କରନ୍ତୁ |"
   },
   "converter": {
     "unitConverter": "Unit Converter",
@@ -248,7 +250,8 @@
       "function": "Function",
       "functionsAria": "Functions",
       "trigonometricFunctionsAria": "Trigonometric functions",
-      "angleUnit": "Angle unit {value}"
+      "angleUnit": "Angle unit {value}",
+      "exponentialFormat": "ଏକ୍ସପୋନ୍ସେନାଲ୍ ଫର୍ମାଟ୍ ଟୋଗଲ୍ କରନ୍ତୁ |"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Project repository",
       "readme": "README",
       "license": "MIT license"
+    },
+    "calculation": {
+      "group": "ଗଣନା |",
+      "repeatEqualsTitle": "କ୍ରମାଗତ ସମାନ ଉପରେ ଶେଷ ଅପରେସନ୍ ପୁନରାବୃତ୍ତି କରନ୍ତୁ |",
+      "repeatEqualsDescription": "ଷ୍ଟାଣ୍ଡାର୍ଡ, ବ Scientific ଜ୍ଞାନିକ, ଏବଂ ପ୍ରୋଗ୍ରାମର୍ ମୋଡ୍ ରେ, ଦବାଇବା = ପୁନର୍ବାର ପୂର୍ବ ଅପରେଟର ଏବଂ ଅପରେଣ୍ଡକୁ ପୁନ app ପ୍ରୟୋଗ କରେ |",
+      "enabled": "ସକ୍ଷମ |",
+      "disabled": "ଅକ୍ଷମ |"
+    },
+    "window": {
+      "group": "ୱିଣ୍ଡୋ |",
+      "fullscreenTitle": "ଫୁଲ୍ ସ୍କ୍ରିନ୍ (F11)",
+      "fullscreenDescription": "ଆପଣ ଆପ୍ ଫୁଲ୍ ସ୍କ୍ରିନ୍ ହେବାକୁ ଚାହୁଁଛନ୍ତି କି ନାହିଁ ଚୟନ କରନ୍ତୁ |",
+      "fullscreenEnabled": "ଫୁଲ୍ ସ୍କ୍ରିନ୍ |",
+      "fullscreenDisabled": "ସାଧାରଣ |"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

@@ -6,7 +6,9 @@
   "common": {
     "back": "Takaisin",
     "backspace": "Askelpalautin",
-    "closeSidePanel": "Sulje paneeli"
+    "closeSidePanel": "Sulje paneeli",
+    "clear": "Tyhjennä",
+    "clearEntry": "Tyhjennä merkintä"
   },
   "converter": {
     "unitConverter": "Yksikkömuunnin",
@@ -248,7 +250,8 @@
       "function": "Toiminto",
       "functionsAria": "Toiminnot",
       "trigonometricFunctionsAria": "Trigonometriset funktiot",
-      "angleUnit": "Kulman yksikkö {value}"
+      "angleUnit": "Kulman yksikkö {value}",
+      "exponentialFormat": "Ota eksponentiaalinen muoto käyttöön"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Projektin arkisto",
       "readme": "LUE",
       "license": "MIT-lisenssi"
+    },
+    "calculation": {
+      "group": "Laskelma",
+      "repeatEqualsTitle": "Toista viimeinen toiminto peräkkäisillä yhtälöillä",
+      "repeatEqualsDescription": "Vakio-, tieteellinen- ja ohjelmointitiloissa =-painikkeen painaminen uudelleen käyttää edellistä operaattoria ja operandia.",
+      "enabled": "Käytössä",
+      "disabled": "Poistettu käytöstä"
+    },
+    "window": {
+      "group": "Ikkuna",
+      "fullscreenTitle": "Koko näyttö (F11)",
+      "fullscreenDescription": "Valitse, haluatko sovelluksen olevan koko näytön tilassa vai ei",
+      "fullscreenEnabled": "Koko näyttö",
+      "fullscreenDisabled": "Normaali"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

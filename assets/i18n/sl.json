@@ -6,7 +6,9 @@
   "common": {
     "back": "Nazaj",
     "backspace": "Vračalka",
-    "closeSidePanel": "Zapri ploščo"
+    "closeSidePanel": "Zapri ploščo",
+    "clear": "Počisti",
+    "clearEntry": "Počisti vnos"
   },
   "converter": {
     "unitConverter": "Pretvornik enot",
@@ -248,7 +250,8 @@
       "function": "Funkcija",
       "functionsAria": "Funkcije",
       "trigonometricFunctionsAria": "Trigonometrične funkcije",
-      "angleUnit": "Enota kota {value}"
+      "angleUnit": "Enota kota {value}",
+      "exponentialFormat": "Preklopi eksponentno obliko"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Repozitorij projektov",
       "readme": "PREBERI ME",
       "license": "Licenca MIT"
+    },
+    "calculation": {
+      "group": "Izračun",
+      "repeatEqualsTitle": "Ponovi zadnjo operacijo pri zaporednih enačbah",
+      "repeatEqualsDescription": "V standardnem, znanstvenem in programerskem načinu ponoven pritisk = ponovno uporabi prejšnji operator in operand.",
+      "enabled": "Omogočeno",
+      "disabled": "Onemogočeno"
+    },
+    "window": {
+      "group": "Okno",
+      "fullscreenTitle": "Celozaslonski (F11)",
+      "fullscreenDescription": "Izberite, ali želite, da je aplikacija celozaslonska ali ne",
+      "fullscreenEnabled": "Celozaslonski način",
+      "fullscreenDisabled": "Normalno"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

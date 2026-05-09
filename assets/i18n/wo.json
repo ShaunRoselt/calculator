@@ -6,7 +6,9 @@
   "common": {
     "back": "Dellu",
     "backspace": "Dellu ginaaw",
-    "closeSidePanel": "Tëj paaneel bi"
+    "closeSidePanel": "Tëj paaneel bi",
+    "clear": "Leer",
+    "clearEntry": "Far duggal bi"
   },
   "converter": {
     "unitConverter": "Soppikatu benn jumtukaay",
@@ -248,7 +250,8 @@
       "function": "Dóor ndam",
       "functionsAria": "Liggéey",
       "trigonometricFunctionsAria": "Fonction trigonometrik",
-      "angleUnit": "Benn wàll {value}"
+      "angleUnit": "Benn wàll {value}",
+      "exponentialFormat": "Bayi formaa eksponensiyel"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Depo projet",
       "readme": "JANGAL MA",
       "license": "Liseñsu MIT"
+    },
+    "calculation": {
+      "group": "Xayma",
+      "repeatEqualsTitle": "Baamtu jëf ju mujj ci equal yu toppalante",
+      "repeatEqualsDescription": "Ci mode Standard, Scientifik, ak Prograam, soo bësee = dafay delloosi operatër bi ak operand bi njëkk.",
+      "enabled": "Defna",
+      "disabled": "Defatul"
+    },
+    "window": {
+      "group": "Palanteer",
+      "fullscreenTitle": "Ekraŋ bu mat (F11)",
+      "fullscreenDescription": "Tannal ndax bëgg nga aplikaasioŋ bi nekk Ekraŋ bu mat wala deet",
+      "fullscreenEnabled": "Ekraŋ bu mat",
+      "fullscreenDisabled": "Lu jaadu"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

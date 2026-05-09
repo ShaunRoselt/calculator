@@ -6,7 +6,9 @@
   "common": {
     "back": "戻る",
     "backspace": "バックスペース",
-    "closeSidePanel": "パネルを閉じる"
+    "closeSidePanel": "パネルを閉じる",
+    "clear": "クリア",
+    "clearEntry": "エントリをクリア"
   },
   "converter": {
     "unitConverter": "単位変換器",
@@ -248,7 +250,8 @@
       "function": "関数",
       "functionsAria": "関数",
       "trigonometricFunctionsAria": "三角関数",
-      "angleUnit": "角度単位 {value}"
+      "angleUnit": "角度単位 {value}",
+      "exponentialFormat": "指数形式の切り替え"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "プロジェクトリポジトリ",
       "readme": "README",
       "license": "MIT ライセンス"
+    },
+    "calculation": {
+      "group": "計算",
+      "repeatEqualsTitle": "連続した等しい場合に最後の操作を繰り返す",
+      "repeatEqualsDescription": "標準モード、サイエンティフィック モード、およびプログラマ モードでは、= を再度押すと、前の演算子とオペランドが再適用されます。",
+      "enabled": "有効",
+      "disabled": "無効"
+    },
+    "window": {
+      "group": "ウィンドウ",
+      "fullscreenTitle": "フルスクリーン (F11)",
+      "fullscreenDescription": "アプリをフルスクリーンにするかどうかを選択してください",
+      "fullscreenEnabled": "全画面",
+      "fullscreenDisabled": "通常"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

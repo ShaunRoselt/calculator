@@ -6,7 +6,9 @@
   "common": {
     "back": "رجوع",
     "backspace": "مسافة للخلف",
-    "closeSidePanel": "إغلاق اللوحة"
+    "closeSidePanel": "إغلاق اللوحة",
+    "clear": "واضح",
+    "clearEntry": "مسح الإدخال"
   },
   "converter": {
     "unitConverter": "محول الوحدات",
@@ -248,7 +250,8 @@
       "function": "الدالة",
       "functionsAria": "الوظائف",
       "trigonometricFunctionsAria": "الدوال المثلثية",
-      "angleUnit": "وحدة الزاوية {value}"
+      "angleUnit": "وحدة الزاوية {value}",
+      "exponentialFormat": "تبديل التنسيق الأسي"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "مستودع المشروع",
       "readme": "اقرأني",
       "license": "ترخيص معهد ماساتشوستس للتكنولوجيا"
+    },
+    "calculation": {
+      "group": "الحساب",
+      "repeatEqualsTitle": "كرر العملية الأخيرة على قدم المساواة على التوالي",
+      "repeatEqualsDescription": "في الأوضاع القياسية والعلمية والمبرمجة، يؤدي الضغط على = مرة أخرى إلى إعادة تطبيق عامل التشغيل والمعامل السابق.",
+      "enabled": "ممكّن",
+      "disabled": "معطل"
+    },
+    "window": {
+      "group": "نافذة",
+      "fullscreenTitle": "ملء الشاشة (F11)",
+      "fullscreenDescription": "حدد ما إذا كنت تريد أن يكون التطبيق بملء الشاشة أم لا",
+      "fullscreenEnabled": "ملء الشاشة",
+      "fullscreenDisabled": "عادي"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

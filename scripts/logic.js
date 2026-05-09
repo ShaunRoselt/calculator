@@ -111,6 +111,10 @@ function handleStandardAction(action, value) {
 function inputStandardDigit(digit) {
   const calc = state.standard;
   if (calc.waitingForOperand || calc.justEvaluated) {
+    if (calc.justEvaluated && !calc.operator) {
+      resetStandardReplay(calc);
+    }
+    clearStandardPendingPercent(calc);
     calc.display = digit;
     calc.waitingForOperand = false;
     calc.justEvaluated = false;
@@ -122,6 +126,10 @@ function inputStandardDigit(digit) {
 function inputStandardDecimal() {
   const calc = state.standard;
   if (calc.waitingForOperand || calc.justEvaluated) {
+    if (calc.justEvaluated && !calc.operator) {
+      resetStandardReplay(calc);
+    }
+    clearStandardPendingPercent(calc);
     calc.display = '0.';
     calc.waitingForOperand = false;
     calc.justEvaluated = false;
@@ -135,8 +143,9 @@ function inputStandardDecimal() {
 function queueStandardOperator(operator) {
   const calc = state.standard;
   const inputValue = parseDisplayNumber(calc.display);
-  if (calc.operator && !calc.waitingForOperand) {
-    const result = computeStandardBinary(calc.accumulator ?? 0, inputValue, calc.operator);
+  if (calc.operator && (!calc.waitingForOperand || calc.pendingPercentValue != null)) {
+    const operand = getStandardOperand(calc);
+    const result = computeStandardBinary(calc.accumulator ?? 0, operand, calc.operator);
     if (result == null) {
       return;
     }
@@ -147,6 +156,9 @@ function queueStandardOperator(operator) {
   }
   calc.operator = operator;
   calc.expression = `${formatNumber(calc.accumulator)} ${operatorLabel(operator)}`;
+  calc.lastOperand = null;
+  calc.lastOperator = null;
+  clearStandardPendingPercent(calc);
   calc.waitingForOperand = true;
   calc.justEvaluated = false;
 }
@@ -154,19 +166,43 @@ function queueStandardOperator(operator) {
 function evaluateStandardEquals() {
   const calc = state.standard;
   if (!calc.operator || calc.accumulator == null) {
+    if (!state.settings.repeatEquals || !calc.justEvaluated || !calc.lastOperator || calc.lastOperand == null) {
+      return;
+    }
+
+    const left = parseDisplayNumber(calc.display);
+    const result = computeStandardBinary(left, calc.lastOperand, calc.lastOperator);
+    if (result == null) {
+      return;
+    }
+
+    pushHistory(`${formatNumber(left)} ${operatorLabel(calc.lastOperator)} ${formatNumber(calc.lastOperand)}`, formatNumber(result), 'standard');
+    calc.display = formatNumber(result);
+    calc.expression = `${formatNumber(left)} ${operatorLabel(calc.lastOperator)} ${formatNumber(calc.lastOperand)}`;
+    calc.accumulator = result;
+    clearStandardPendingPercent(calc);
+    calc.waitingForOperand = true;
+    calc.justEvaluated = true;
     return;
   }
-  const operand = calc.waitingForOperand ? (calc.lastOperand ?? parseDisplayNumber(calc.display)) : parseDisplayNumber(calc.display);
+
+  const operand = getStandardOperand(calc);
+  const rawPercentValue = calc.pendingPercentValue;
   const result = computeStandardBinary(calc.accumulator, operand, calc.operator);
   if (result == null) {
     return;
   }
-  pushHistory(`${formatNumber(calc.accumulator)} ${operatorLabel(calc.operator)} ${formatNumber(operand)}`, formatNumber(result), 'standard');
+  const expression = rawPercentValue != null
+    ? `${formatNumber(calc.accumulator)} ${operatorLabel(calc.operator)} ${formatNumber(rawPercentValue)}%`
+    : `${formatNumber(calc.accumulator)} ${operatorLabel(calc.operator)} ${formatNumber(operand)}`;
+  pushHistory(expression, formatNumber(result), 'standard');
   calc.display = formatNumber(result);
-  calc.expression = `${formatNumber(calc.accumulator)} ${operatorLabel(calc.operator)} ${formatNumber(operand)}`;
+  calc.expression = expression;
   calc.accumulator = result;
   calc.lastOperand = operand;
+  calc.lastOperator = calc.operator;
   calc.operator = null;
+  clearStandardPendingPercent(calc);
   calc.waitingForOperand = true;
   calc.justEvaluated = true;
 }
@@ -176,20 +212,32 @@ function negateStandard() {
   if (calc.display === '0') {
     return;
   }
+  if (calc.justEvaluated && !calc.operator) {
+    resetStandardReplay(calc);
+  }
+  clearStandardPendingPercent(calc);
   calc.display = calc.display.startsWith('-') ? calc.display.slice(1) : `-${calc.display}`;
 }
 
 function applyStandardPercent() {
   const calc = state.standard;
-  if (calc.accumulator == null) {
+  if (calc.accumulator == null || !calc.operator) {
     return;
   }
-  const current = parseDisplayNumber(calc.display);
-  calc.display = formatNumber((calc.accumulator * current) / 100);
+  calc.pendingPercentValue = parseDisplayNumber(calc.display);
+  calc.expression = `${formatNumber(calc.accumulator)} ${operatorLabel(calc.operator)} ${formatNumber(calc.pendingPercentValue)}%`;
+  calc.waitingForOperand = true;
+  calc.justEvaluated = false;
+  calc.lastOperand = null;
+  calc.lastOperator = null;
 }
 
 function applyStandardUnary(action) {
   const calc = state.standard;
+  if (calc.justEvaluated && !calc.operator) {
+    resetStandardReplay(calc);
+  }
+  clearStandardPendingPercent(calc);
   const current = parseDisplayNumber(calc.display);
   let result;
   let expression;
@@ -231,6 +279,9 @@ function backspaceStandard() {
 function clearEntryStandard() {
   state.standard.display = '0';
   state.standard.waitingForOperand = false;
+  state.standard.lastOperand = null;
+  state.standard.lastOperator = null;
+  clearStandardPendingPercent(state.standard);
 }
 
 function setStandardError(message) {
@@ -238,7 +289,39 @@ function setStandardError(message) {
   state.standard.error = true;
   state.standard.operator = null;
   state.standard.accumulator = null;
+  state.standard.lastOperand = null;
+  state.standard.lastOperator = null;
+  clearStandardPendingPercent(state.standard);
   state.standard.waitingForOperand = false;
+}
+
+function resetStandardReplay(calc) {
+  calc.expression = '';
+  calc.accumulator = null;
+  calc.lastOperand = null;
+  calc.lastOperator = null;
+  calc.operator = null;
+  clearStandardPendingPercent(calc);
+}
+
+function clearStandardPendingPercent(calc) {
+  calc.pendingPercentValue = null;
+}
+
+function getStandardOperand(calc) {
+  const value = calc.waitingForOperand
+    ? (calc.pendingPercentValue ?? calc.lastOperand ?? parseDisplayNumber(calc.display))
+    : parseDisplayNumber(calc.display);
+
+  if (calc.pendingPercentValue == null) {
+    return value;
+  }
+
+  if (calc.operator === '*' || calc.operator === '/') {
+    return value / 100;
+  }
+
+  return ((calc.accumulator ?? 0) * value) / 100;
 }
 
 function computeStandardBinary(left, right, operator) {
@@ -351,6 +434,7 @@ function appendScientificDigit(digit) {
   const calc = state.scientific;
   if (calc.justEvaluated) {
     calc.expression = '';
+    clearScientificReplay(calc);
     calc.justEvaluated = false;
   }
   if (needsImplicitMultiplyBeforeScientificNumericToken(calc.expression)) {
@@ -365,6 +449,7 @@ function clearEntryScientific() {
   calc.display = '0';
   calc.expression = '';
   calc.error = false;
+  clearScientificReplay(calc);
   calc.justEvaluated = false;
 }
 
@@ -372,6 +457,7 @@ function appendScientificDecimal() {
   const calc = state.scientific;
   if (calc.justEvaluated) {
     calc.expression = '';
+    clearScientificReplay(calc);
     calc.justEvaluated = false;
   }
   const token = lastScientificToken(calc.expression);
@@ -388,6 +474,7 @@ function appendScientificDecimal() {
 function appendScientificOperator(operator) {
   const calc = state.scientific;
   calc.justEvaluated = false;
+  clearScientificReplay(calc);
   const trimmed = calc.expression.trim();
   if (!trimmed && operator === '-') {
     calc.expression = '-';
@@ -404,6 +491,7 @@ function appendScientificParen(paren) {
   const calc = state.scientific;
   if (calc.justEvaluated && paren === '(') {
     calc.expression = '';
+    clearScientificReplay(calc);
     calc.justEvaluated = false;
   }
   if (paren === '(') {
@@ -420,6 +508,7 @@ function appendScientificConstant(name) {
   const calc = state.scientific;
   if (calc.justEvaluated) {
     calc.expression = '';
+    clearScientificReplay(calc);
     calc.justEvaluated = false;
   }
   if (needsImplicitMultiply(calc.expression)) {
@@ -431,6 +520,7 @@ function appendScientificConstant(name) {
 
 function applyScientificUnary(action) {
   const calc = state.scientific;
+  clearScientificReplay(calc);
   const current = parseDisplayNumber(calc.display === '-' ? '0' : calc.display);
   let result;
   try {
@@ -452,6 +542,7 @@ function scientificBackspace() {
   if (calc.justEvaluated) {
     calc.expression = '';
     calc.display = '0';
+    clearScientificReplay(calc);
     calc.justEvaluated = false;
     return;
   }
@@ -467,17 +558,51 @@ function scientificBackspace() {
 
 function evaluateScientificEquals() {
   const calc = state.scientific;
+  if (state.settings.repeatEquals && calc.justEvaluated && calc.lastOperator && calc.lastOperand != null) {
+    const left = parseDisplayNumber(calc.display);
+
+    try {
+      const result = computeScientificBinary(left, calc.lastOperand, calc.lastOperator);
+      const expression = `${formatScientificDisplay(left)} ${operatorLabel(calc.lastOperator)} ${formatScientificDisplay(calc.lastOperand)}`;
+      calc.display = formatScientificDisplay(result);
+      calc.expression = expression;
+      calc.justEvaluated = true;
+      pushHistory(expression, calc.display, 'scientific');
+    } catch (error) {
+      calc.display = localizeRuntimeErrorMessage(error.message);
+      calc.error = true;
+    }
+    return;
+  }
+
   const expression = calc.expression.trim() || calc.display;
   try {
     const result = evaluateScientificExpression(expression, { angle: calc.angle });
     calc.display = formatScientificDisplay(result);
     calc.expression = expression;
+    applyScientificReplayState(calc, expression);
     calc.justEvaluated = true;
     pushHistory(expression, calc.display, 'scientific');
   } catch (error) {
     calc.display = localizeRuntimeErrorMessage(error.message);
     calc.error = true;
   }
+}
+
+function clearScientificReplay(calc) {
+  calc.lastOperand = null;
+  calc.lastOperator = null;
+}
+
+function applyScientificReplayState(calc, expression) {
+  const replay = extractScientificReplayOperation(expression, calc.angle);
+  if (!replay) {
+    clearScientificReplay(calc);
+    return;
+  }
+
+  calc.lastOperator = replay.operator;
+  calc.lastOperand = replay.operand;
 }
 
 function handleProgrammerAction(action, value) {
@@ -546,6 +671,7 @@ function clearEntryProgrammer() {
   calc.error = false;
   calc.waitingForOperand = false;
   calc.justEvaluated = false;
+  clearProgrammerReplay(calc);
   if (!calc.operator) {
     calc.expression = '';
   }
@@ -557,6 +683,9 @@ function inputProgrammerDigit(digit) {
     return;
   }
   if (calc.waitingForOperand || calc.justEvaluated) {
+    if (calc.justEvaluated && !calc.operator) {
+      clearProgrammerReplay(calc);
+    }
     calc.display = normalizeProgrammerDisplay(digit);
     calc.waitingForOperand = false;
     calc.justEvaluated = false;
@@ -580,6 +709,7 @@ function queueProgrammerOperator(operator) {
   }
   calc.operator = operator;
   calc.expression = `${formatBigInt(calc.accumulator, calc.base)} ${operatorLabel(operator)}`;
+  clearProgrammerReplay(calc);
   calc.waitingForOperand = true;
   calc.justEvaluated = false;
 }
@@ -589,6 +719,7 @@ function applyProgrammerUnary(action) {
     return;
   }
   const calc = state.programmer;
+  clearProgrammerReplay(calc);
   const value = getProgrammerCurrentValue();
   const result = normalizeProgrammerValue(~value);
   calc.display = formatBigInt(result, calc.base);
@@ -599,6 +730,9 @@ function applyProgrammerUnary(action) {
 
 function negateProgrammer() {
   const calc = state.programmer;
+  if (calc.justEvaluated && !calc.operator) {
+    clearProgrammerReplay(calc);
+  }
   const value = getProgrammerCurrentValue();
   calc.display = formatBigInt(normalizeProgrammerValue(-value), calc.base);
 }
@@ -617,6 +751,23 @@ function backspaceProgrammer() {
 function evaluateProgrammerEquals() {
   const calc = state.programmer;
   if (!calc.operator || calc.accumulator == null) {
+    if (!state.settings.repeatEquals || !calc.justEvaluated || !calc.lastOperator || calc.lastOperand == null) {
+      return;
+    }
+
+    const left = getProgrammerCurrentValue();
+    const result = computeProgrammerBinary(left, calc.lastOperand, calc.lastOperator);
+    if (result == null) {
+      return;
+    }
+
+    const expression = `${formatBigInt(left, calc.base)} ${operatorLabel(calc.lastOperator)} ${formatBigInt(calc.lastOperand, calc.base)} =`;
+    pushHistory(expression, formatBigInt(result, calc.base), 'programmer');
+    calc.display = formatBigInt(normalizeProgrammerValue(result), calc.base);
+    calc.expression = expression;
+    calc.accumulator = normalizeProgrammerValue(result);
+    calc.waitingForOperand = true;
+    calc.justEvaluated = true;
     return;
   }
   const right = getProgrammerCurrentValue();
@@ -629,9 +780,16 @@ function evaluateProgrammerEquals() {
   calc.display = formatBigInt(normalizeProgrammerValue(result), calc.base);
   calc.expression = expression;
   calc.accumulator = normalizeProgrammerValue(result);
+  calc.lastOperand = right;
+  calc.lastOperator = calc.operator;
   calc.operator = null;
   calc.waitingForOperand = true;
   calc.justEvaluated = true;
+}
+
+function clearProgrammerReplay(calc) {
+  calc.lastOperand = null;
+  calc.lastOperator = null;
 }
 
 function computeProgrammerBinary(left, right, operator) {
@@ -703,6 +861,7 @@ function setProgrammerError(message) {
   state.programmer.error = true;
   state.programmer.accumulator = null;
   state.programmer.operator = null;
+  clearProgrammerReplay(state.programmer);
 }
 
 export function handleMemoryOperation(operation) {
@@ -1145,6 +1304,85 @@ function canCloseScientificParen(expression) {
   const opens = (expression.match(/\(/g) || []).length;
   const closes = (expression.match(/\)/g) || []).length;
   return opens > closes && !/[+\-*/^(\s]$/.test(expression.trim());
+}
+
+function isScientificReplayBinaryOperator(token, previousToken) {
+  if (!token) {
+    return false;
+  }
+
+  if (token.value === 'mod') {
+    return true;
+  }
+
+  if (!['+', '-', '*', '/', '^'].includes(token.value)) {
+    return false;
+  }
+
+  if (!previousToken) {
+    return false;
+  }
+
+  return !['(', '+', '-', '*', '/', '^', 'mod'].includes(previousToken.value);
+}
+
+function tokensToScientificExpression(tokens) {
+  return tokens.map((token) => token.value).join(' ');
+}
+
+function extractScientificReplayOperation(expression, angle) {
+  const tokens = tokenize(expression);
+  let depth = 0;
+  let operatorIndex = -1;
+
+  for (let index = 0; index < tokens.length; index += 1) {
+    const token = tokens[index];
+    if (token.value === '(') {
+      depth += 1;
+      continue;
+    }
+    if (token.value === ')') {
+      depth = Math.max(0, depth - 1);
+      continue;
+    }
+    if (depth === 0 && isScientificReplayBinaryOperator(token, tokens[index - 1])) {
+      operatorIndex = index;
+    }
+  }
+
+  if (operatorIndex <= 0 || operatorIndex >= tokens.length - 1) {
+    return null;
+  }
+
+  const operandExpression = tokensToScientificExpression(tokens.slice(operatorIndex + 1));
+  if (!operandExpression) {
+    return null;
+  }
+
+  return {
+    operator: tokens[operatorIndex].value,
+    operand: evaluateScientificExpression(operandExpression, { angle })
+  };
+}
+
+function computeScientificBinary(left, right, operator) {
+  switch (operator) {
+    case '+': return left + right;
+    case '-': return left - right;
+    case '*': return left * right;
+    case '/':
+      if (right === 0) {
+        throw new Error('Cannot divide by zero');
+      }
+      return left / right;
+    case '^': return left ** right;
+    case 'mod':
+      if (right === 0) {
+        throw new Error('Cannot divide by zero');
+      }
+      return left % right;
+    default: return right;
+  }
 }
 
 function evaluateScientificExpression(expression, context = {}) {
@@ -1935,12 +2173,28 @@ export function setGraphExpression(index, value) {
   state.graphing.activeExpressionIndex = index;
 }
 
+function getActiveGraphExpressionSelection(expression) {
+  const start = Number.isInteger(state.graphing.activeExpressionSelectionStart)
+    ? state.graphing.activeExpressionSelectionStart
+    : expression.value.length;
+  const end = Number.isInteger(state.graphing.activeExpressionSelectionEnd)
+    ? state.graphing.activeExpressionSelectionEnd
+    : start;
+  const boundedStart = Math.max(0, Math.min(start, expression.value.length));
+  const boundedEnd = Math.max(boundedStart, Math.min(end, expression.value.length));
+  return { start: boundedStart, end: boundedEnd };
+}
+
 export function insertGraphToken(token) {
   const expression = state.graphing.expressions[state.graphing.activeExpressionIndex] || state.graphing.expressions[0];
   if (!expression) {
     return;
   }
-  expression.value = `${expression.value}${token}`;
+  const { start, end } = getActiveGraphExpressionSelection(expression);
+  expression.value = `${expression.value.slice(0, start)}${token}${expression.value.slice(end)}`;
+  const nextCursor = start + token.length;
+  state.graphing.activeExpressionSelectionStart = nextCursor;
+  state.graphing.activeExpressionSelectionEnd = nextCursor;
   expression.error = false;
 }
 
@@ -1949,7 +2203,17 @@ export function backspaceGraphExpression() {
   if (!expression) {
     return;
   }
-  expression.value = expression.value.slice(0, -1);
+  const { start, end } = getActiveGraphExpressionSelection(expression);
+  if (start !== end) {
+    expression.value = `${expression.value.slice(0, start)}${expression.value.slice(end)}`;
+    state.graphing.activeExpressionSelectionStart = start;
+    state.graphing.activeExpressionSelectionEnd = start;
+  } else if (start > 0) {
+    const nextCursor = start - 1;
+    expression.value = `${expression.value.slice(0, nextCursor)}${expression.value.slice(end)}`;
+    state.graphing.activeExpressionSelectionStart = nextCursor;
+    state.graphing.activeExpressionSelectionEnd = nextCursor;
+  }
   expression.error = false;
 }
 
@@ -1959,6 +2223,8 @@ export function clearGraphExpression() {
     return;
   }
   expression.value = '';
+  state.graphing.activeExpressionSelectionStart = 0;
+  state.graphing.activeExpressionSelectionEnd = 0;
   expression.error = false;
 }
 

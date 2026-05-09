@@ -6,7 +6,9 @@
   "common": {
     "back": "Nyuma",
     "backspace": "Nyuma",
-    "closeSidePanel": "Funga paneli"
+    "closeSidePanel": "Funga paneli",
+    "clear": "Safi",
+    "clearEntry": "Futa ingizo"
   },
   "converter": {
     "unitConverter": "Kibadilishaji Kitengo",
@@ -248,7 +250,8 @@
       "function": "Kazi",
       "functionsAria": "Kazi",
       "trigonometricFunctionsAria": "Vitendaji vya Trigonometric",
-      "angleUnit": "Kipimo cha pembe {value}"
+      "angleUnit": "Kipimo cha pembe {value}",
+      "exponentialFormat": "Geuza umbizo la kielelezo"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Hazina ya mradi",
       "readme": "SOMA",
       "license": "Leseni ya MIT"
+    },
+    "calculation": {
+      "group": "Hesabu",
+      "repeatEqualsTitle": "Rudia operesheni ya mwisho kwa usawa mfululizo",
+      "repeatEqualsDescription": "Katika hali za Kawaida, Kisayansi, na Kipanga programu, kubonyeza = tena kutatumia opereta na uendeshaji wa awali.",
+      "enabled": "Imewashwa",
+      "disabled": "Imezimwa"
+    },
+    "window": {
+      "group": "Dirisha",
+      "fullscreenTitle": "Skrini Kamili (F11)",
+      "fullscreenDescription": "Chagua kama ungependa programu iwe Skrini Kamili au la",
+      "fullscreenEnabled": "Skrini Kamili",
+      "fullscreenDisabled": "Kawaida"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

@@ -37,6 +37,9 @@
   margin-top: 8px;
 }
 
+.settings-scroll > .settings-expander:first-child {
+  margin-top: 14px;
+}
 .settings-expander-summary {
   position: relative;
   isolation: isolate;
@@ -132,8 +135,69 @@
 
 .settings-expander-body {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   padding: 18px 18px 18px;
+}
+
+.settings-preference-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--window-bg-alt) 54%, transparent), color-mix(in srgb, var(--window-bg) 92%, transparent));
+}
+
+.settings-preference-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  color: var(--text);
+  background: color-mix(in srgb, var(--panel-soft) 76%, transparent);
+  font-size: 0.98rem;
+}
+
+.settings-preference-content {
+  display: grid;
+  gap: 10px;
+}
+
+.settings-preference-copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.settings-preference-title {
+  color: var(--text);
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.settings-preference-description {
+  color: var(--text-soft);
+  font-size: 0.88rem;
+}
+
+.settings-preference-control {
+  display: flex;
+  min-width: 0;
+}
+
+.settings-preference-control .settings-select-wrap {
+  width: 100%;
+  min-width: 0;
+}
+
+.settings-preference-control .settings-select-button {
+  width: 100%;
 }
 
 .settings-select-label {
@@ -200,8 +264,8 @@
 }
 
 .settings-select-menu-theme {
-  left: auto;
-  right: 0;
+  left: 0;
+  right: auto;
   width: min(980px, calc(100vw - 56px));
   min-width: min(980px, calc(100vw - 56px));
   max-width: min(980px, calc(100vw - 56px));
@@ -261,6 +325,158 @@
 
 .settings-select-menu .date-native-mode-option[hidden] {
   display: none;
+}
+
+.settings-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.settings-toggle-button {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  margin-top: 1px;
+  padding: 0;
+  background: transparent;
+  color: var(--text);
+}
+
+.settings-toggle-button:hover,
+.settings-toggle-button:focus-visible {
+  background: transparent;
+  color: var(--text);
+}
+
+.settings-toggle-track {
+  position: relative;
+  flex: 0 0 auto;
+  width: 48px;
+  height: 28px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--text-soft) 28%, var(--panel));
+  box-shadow: inset 0 0 0 1px var(--border-subtle);
+  transition: background 140ms ease, box-shadow 140ms ease;
+}
+
+.settings-toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--panel);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22);
+  transition: transform 140ms ease, background 140ms ease;
+}
+
+.settings-toggle-button.active .settings-toggle-track {
+  background: color-mix(in srgb, var(--accent) 78%, var(--panel));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 68%, var(--border-subtle));
+}
+
+.settings-toggle-button.active .settings-toggle-thumb {
+  transform: translateX(20px);
+  background: color-mix(in srgb, white 86%, var(--accent));
+}
+
+.settings-toggle-status {
+  min-width: 76px;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface-active) 72%, transparent);
+  color: var(--text-soft);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.settings-toggle-button.active .settings-toggle-status {
+  color: var(--text);
+}
+
+.settings-shortcut-helper,
+.settings-shortcut-feedback {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.settings-shortcut-feedback {
+  color: var(--danger, #d13438);
+}
+
+.settings-shortcut-list {
+  display: grid;
+  gap: 10px;
+}
+
+.settings-shortcut-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--window-bg-alt) 62%, transparent);
+}
+
+.settings-shortcut-copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.settings-shortcut-title {
+  color: var(--text);
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.settings-shortcut-description {
+  color: var(--text-soft);
+  font-size: 0.86rem;
+}
+
+.settings-shortcut-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.settings-shortcut-button,
+.settings-shortcut-reset {
+  min-height: 38px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.settings-shortcut-button {
+  min-width: 132px;
+}
+
+.settings-shortcut-button.active {
+  border-color: var(--focus-border);
+  box-shadow: 0 0 0 3px var(--focus-glow);
+}
+
+.settings-shortcut-button:hover,
+.settings-shortcut-button:focus-visible,
+.settings-shortcut-reset:hover,
+.settings-shortcut-reset:focus-visible {
+  background: var(--surface-hover);
+  border-color: var(--accent-border);
 }
 
 .settings-theme-card {
@@ -433,9 +649,44 @@
     min-width: 0;
   }
 
+  .settings-shortcut-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .settings-shortcut-actions {
+    width: 100%;
+  }
+
+  .settings-shortcut-button,
+  .settings-shortcut-reset {
+    flex: 1 1 0;
+  }
+
+  .settings-preference-item {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .settings-preference-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+  }
+
   .settings-select-menu {
     min-width: min(100%, calc(100vw - 32px));
     max-width: calc(100vw - 32px);
+  }
+
+  .settings-toggle-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .settings-toggle-button {
+    justify-content: space-between;
+    width: 100%;
   }
 
   .settings-select-menu-theme {

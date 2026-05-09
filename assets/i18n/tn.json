@@ -6,7 +6,9 @@
   "common": {
     "back": "Morago",
     "backspace": "Sebaka sa go boela morago",
-    "closeSidePanel": "Tswala phanele"
+    "closeSidePanel": "Tswala phanele",
+    "clear": "Phepa",
+    "clearEntry": "Phimola tsenyo"
   },
   "converter": {
     "unitConverter": "Sefetoledi sa Yuniti",
@@ -248,7 +250,8 @@
       "function": "Modiro",
       "functionsAria": "Ditiro",
       "trigonometricFunctionsAria": "Ditiro tsa tirigonometeri",
-      "angleUnit": "Yuniti ya enkele {value}"
+      "angleUnit": "Yuniti ya enkele {value}",
+      "exponentialFormat": "Fetola fomete ya eksponente"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Polokelo ya porojeke",
       "readme": "NBUISA",
       "license": "Laesense ya MIT"
+    },
+    "calculation": {
+      "group": "Palelo",
+      "repeatEqualsTitle": "Boeletsa tiro ya bofelo mo dilekanong tse di latelanang",
+      "repeatEqualsDescription": "Mo mekgweng ya Tlwaelo, ya Saense, le ya Moporokeramo, go tobetsa = gape go dirisa gape modirisi le modirisiwa yo o fetileng.",
+      "enabled": "E kgontshitswe",
+      "disabled": "Na le bogwele"
+    },
+    "window": {
+      "group": "Letlhaphefo",
+      "fullscreenTitle": "Sekerini se se Tletseng (F11)",
+      "fullscreenDescription": "Tlhopha gore a o batla gore tiriswa eno e nne FullScreen kgotsa nnyaa",
+      "fullscreenEnabled": "Sekerini se se Tletseng",
+      "fullscreenDisabled": "Tlealegileng"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

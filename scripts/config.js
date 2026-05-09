@@ -17,8 +17,194 @@ export const STORAGE_KEYS = {
   memory: 'calculator-memory',
   nav: 'calculator-nav',
   theme: 'calculator-theme',
-  language: 'calculator-language'
+  language: 'calculator-language',
+  repeatEquals: 'calculator-repeat-equals',
+  shortcuts: 'calculator-shortcuts'
 };
+
+export const APP_SHORTCUT_DEFINITIONS = [
+  {
+    id: 'undo',
+    labelKey: 'settings.shortcuts.undoTitle',
+    descriptionKey: 'settings.shortcuts.undoDescription',
+    defaultBinding: 'Ctrl+Z'
+  },
+  {
+    id: 'redo',
+    labelKey: 'settings.shortcuts.redoTitle',
+    descriptionKey: 'settings.shortcuts.redoDescription',
+    defaultBinding: 'Ctrl+Shift+Z'
+  },
+  {
+    id: 'copy',
+    labelKey: 'settings.shortcuts.copyTitle',
+    descriptionKey: 'settings.shortcuts.copyDescription',
+    defaultBinding: 'Ctrl+C'
+  },
+  {
+    id: 'paste',
+    labelKey: 'settings.shortcuts.pasteTitle',
+    descriptionKey: 'settings.shortcuts.pasteDescription',
+    defaultBinding: 'Ctrl+V'
+  },
+  {
+    id: 'fullscreen',
+    labelKey: 'settings.shortcuts.fullscreenTitle',
+    descriptionKey: 'settings.shortcuts.fullscreenDescription',
+    defaultBinding: 'F11',
+    allowInEditable: true
+  }
+];
+
+export const APP_SHORTCUT_DEFAULTS = Object.fromEntries(
+  APP_SHORTCUT_DEFINITIONS.map((shortcut) => [shortcut.id, shortcut.defaultBinding])
+);
+
+const SHORTCUT_MODIFIER_ALIASES = new Map([
+  ['ctrl', 'Ctrl'],
+  ['control', 'Ctrl'],
+  ['cmdorctrl', 'Ctrl'],
+  ['commandorcontrol', 'Ctrl'],
+  ['alt', 'Alt'],
+  ['option', 'Alt'],
+  ['shift', 'Shift'],
+  ['meta', 'Meta'],
+  ['cmd', 'Meta'],
+  ['command', 'Meta'],
+  ['super', 'Meta'],
+  ['win', 'Meta'],
+  ['windows', 'Meta']
+]);
+
+const SHORTCUT_SPECIAL_KEYS = new Map([
+  ['esc', 'Escape'],
+  ['escape', 'Escape'],
+  ['enter', 'Enter'],
+  ['return', 'Enter'],
+  ['space', 'Space'],
+  ['spacebar', 'Space'],
+  ['tab', 'Tab'],
+  ['backspace', 'Backspace'],
+  ['delete', 'Delete'],
+  ['del', 'Delete'],
+  ['home', 'Home'],
+  ['end', 'End'],
+  ['pageup', 'PageUp'],
+  ['pagedown', 'PageDown'],
+  ['up', 'ArrowUp'],
+  ['arrowup', 'ArrowUp'],
+  ['down', 'ArrowDown'],
+  ['arrowdown', 'ArrowDown'],
+  ['left', 'ArrowLeft'],
+  ['arrowleft', 'ArrowLeft'],
+  ['right', 'ArrowRight'],
+  ['arrowright', 'ArrowRight'],
+  ['=', '='],
+  ['equals', '='],
+  ['minus', '-'],
+  ['hyphen', '-']
+]);
+
+const SHORTCUT_MODIFIER_ORDER = ['Ctrl', 'Alt', 'Shift', 'Meta'];
+const STANDALONE_SHORTCUT_KEYS = new Set([
+  'Escape',
+  'Enter',
+  'Space',
+  'Tab',
+  'Backspace',
+  'Delete',
+  'Home',
+  'End',
+  'PageUp',
+  'PageDown',
+  'ArrowUp',
+  'ArrowDown',
+  'ArrowLeft',
+  'ArrowRight'
+]);
+
+function canonicalizeShortcutKey(token) {
+  const normalizedToken = String(token || '').trim();
+  if (!normalizedToken) {
+    return null;
+  }
+
+  const lowered = normalizedToken.toLowerCase();
+  if (SHORTCUT_SPECIAL_KEYS.has(lowered)) {
+    return SHORTCUT_SPECIAL_KEYS.get(lowered);
+  }
+
+  const uppered = normalizedToken.toUpperCase();
+  if (/^F(?:[1-9]|1\d|2[0-4])$/.test(uppered)) {
+    return uppered;
+  }
+
+  if (normalizedToken.length === 1) {
+    return normalizedToken === ' '
+      ? 'Space'
+      : uppered;
+  }
+
+  return null;
+}
+
+function isStandaloneShortcutKey(key) {
+  return STANDALONE_SHORTCUT_KEYS.has(key) || /^F(?:[1-9]|1\d|2[0-4])$/.test(key);
+}
+
+export function canonicalizeShortcutBinding(binding) {
+  if (typeof binding !== 'string') {
+    return null;
+  }
+
+  const tokens = binding.split('+').map((token) => token.trim()).filter(Boolean);
+  if (!tokens.length) {
+    return null;
+  }
+
+  const modifiers = new Set();
+  let key = null;
+
+  for (const token of tokens) {
+    const modifier = SHORTCUT_MODIFIER_ALIASES.get(token.toLowerCase());
+    if (modifier) {
+      modifiers.add(modifier);
+      continue;
+    }
+
+    if (key !== null) {
+      return null;
+    }
+
+    key = canonicalizeShortcutKey(token);
+  }
+
+  if (!key || (modifiers.size === 0 && !isStandaloneShortcutKey(key))) {
+    return null;
+  }
+
+  return [...SHORTCUT_MODIFIER_ORDER.filter((modifier) => modifiers.has(modifier)), key].join('+');
+}
+
+export function createDefaultShortcutBindings() {
+  return { ...APP_SHORTCUT_DEFAULTS };
+}
+
+export function normalizeShortcutBindings(value) {
+  const shortcuts = createDefaultShortcutBindings();
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return shortcuts;
+  }
+
+  for (const definition of APP_SHORTCUT_DEFINITIONS) {
+    const normalizedBinding = canonicalizeShortcutBinding(value[definition.id]);
+    if (normalizedBinding) {
+      shortcuts[definition.id] = normalizedBinding;
+    }
+  }
+
+  return shortcuts;
+}
 
 export const DEFAULT_MODE = 'standard';
 

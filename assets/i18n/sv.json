@@ -6,7 +6,9 @@
   "common": {
     "back": "Tillbaka",
     "backspace": "Backsteg",
-    "closeSidePanel": "Stäng panelen"
+    "closeSidePanel": "Stäng panelen",
+    "clear": "Rensa",
+    "clearEntry": "Rensa posten"
   },
   "converter": {
     "unitConverter": "Enhetsomvandlare",
@@ -248,7 +250,8 @@
       "function": "Funktion",
       "functionsAria": "Funktioner",
       "trigonometricFunctionsAria": "Trigonometriska funktioner",
-      "angleUnit": "Vinkelenhet {value}"
+      "angleUnit": "Vinkelenhet {value}",
+      "exponentialFormat": "Växla exponentiellt format"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Projektförråd",
       "readme": "LÄS MIG",
       "license": "MIT-licens"
+    },
+    "calculation": {
+      "group": "Beräkning",
+      "repeatEqualsTitle": "Upprepa den senaste operationen på på varandra följande lika",
+      "repeatEqualsDescription": "I standardläge, vetenskapligt och programmeringsläge, om du trycker på = igen tillämpas föregående operator och operand igen.",
+      "enabled": "Aktiverad",
+      "disabled": "Inaktiverad"
+    },
+    "window": {
+      "group": "Fönster",
+      "fullscreenTitle": "Helskärm (F11)",
+      "fullscreenDescription": "Välj om du vill att appen ska vara fullskärm eller inte",
+      "fullscreenEnabled": "Helskärm",
+      "fullscreenDisabled": "Normal"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

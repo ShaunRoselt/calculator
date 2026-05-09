@@ -1,17 +1,35 @@
-import { CONVERTER_MODE_TO_CATEGORY, CURRENCY_CODE_TO_NAME, DEFAULT_CURRENCY_RATES, DEFAULT_MODE, getCurrencyDetails, getCurrencyOptions, getUnitLabel, isConverterMode, isMode } from './config.js';
+import {
+  APP_SHORTCUT_DEFAULTS,
+  APP_SHORTCUT_DEFINITIONS,
+  CONVERTER_MODE_TO_CATEGORY,
+  CURRENCY_CODE_TO_NAME,
+  DEFAULT_CURRENCY_RATES,
+  DEFAULT_MODE,
+  canonicalizeShortcutBinding,
+  getCurrencyDetails,
+  getCurrencyOptions,
+  getUnitLabel,
+  isConverterMode,
+  isMode
+} from './config.js';
 import { appRoot } from './dom.js';
 import {
+  createProgrammerState,
+  createScientificState,
+  createStandardState,
   getMemoryCollection,
   hydrateState,
   persistCollections,
   persistLanguage,
   persistNav,
+  persistRepeatEquals,
+  persistShortcuts,
   persistTheme,
   replaceHistoryCollection,
   replaceMemoryCollection,
   state
 } from './state.js';
-import { getCurrentLanguage, setLanguage } from './i18n.js';
+import { getCurrentLanguage, setLanguage, t } from './i18n.js';
 import { installTooltipHandling } from './tooltip.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
 import {
@@ -71,6 +89,221 @@ let converterTypeaheadBuffer = '';
 let converterTypeaheadTimestamp = 0;
 let lastViewportWidth = window.innerWidth;
 let lastViewportHeight = window.innerHeight;
+const calculatorUndoStack = [];
+const calculatorRedoStack = [];
+const MAX_CALCULATOR_HISTORY = 100;
+
+const fullscreenBridge = typeof window.appWindow === 'object' && window.appWindow !== null
+  ? window.appWindow
+  : null;
+const MODIFIER_KEYS = new Set(['Control', 'Shift', 'Alt', 'Meta']);
+
+function isEditableTarget(target) {
+  return target instanceof HTMLInputElement
+    || target instanceof HTMLTextAreaElement
+    || target instanceof HTMLSelectElement
+    || (target instanceof HTMLElement && target.isContentEditable);
+}
+
+function getShortcutDefinition(shortcutId) {
+  return APP_SHORTCUT_DEFINITIONS.find((shortcut) => shortcut.id === shortcutId) ?? null;
+}
+
+function getShortcutBinding(shortcutId) {
+  return canonicalizeShortcutBinding(state.settings.shortcuts[shortcutId])
+    ?? APP_SHORTCUT_DEFAULTS[shortcutId]
+    ?? null;
+}
+
+function canonicalizeEventShortcutKey(key) {
+  if (typeof key !== 'string' || !key || MODIFIER_KEYS.has(key)) {
+    return null;
+  }
+
+  if (key === ' ') {
+    return 'Space';
+  }
+
+  if (key.length === 1) {
+    return key.toUpperCase();
+  }
+
+  return key === 'Esc' ? 'Escape' : key;
+}
+
+function serializeShortcutEvent(event) {
+  const key = canonicalizeEventShortcutKey(event.key);
+  if (!key) {
+    return null;
+  }
+
+  const modifiers = [];
+  if (event.ctrlKey) {
+    modifiers.push('Ctrl');
+  }
+  if (event.altKey) {
+    modifiers.push('Alt');
+  }
+  if (event.shiftKey) {
+    modifiers.push('Shift');
+  }
+  if (event.metaKey && !event.ctrlKey) {
+    modifiers.push('Meta');
+  }
+
+  return canonicalizeShortcutBinding([...modifiers, key].join('+'));
+}
+
+function matchesShortcut(event, binding) {
+  const normalizedBinding = canonicalizeShortcutBinding(binding);
+  if (!normalizedBinding) {
+    return false;
+  }
+
+  const parts = normalizedBinding.split('+');
+  const key = parts.at(-1);
+  const modifiers = new Set(parts.slice(0, -1));
+  if (canonicalizeEventShortcutKey(event.key) !== key) {
+    return false;
+  }
+
+  if (modifiers.has('Ctrl')) {
+    if (!(event.ctrlKey || event.metaKey)) {
+      return false;
+    }
+  } else if (modifiers.has('Meta')) {
+    if (!event.metaKey || event.ctrlKey) {
+      return false;
+    }
+  } else if (event.ctrlKey || event.metaKey) {
+    return false;
+  }
+
+  if (modifiers.has('Alt') !== event.altKey) {
+    return false;
+  }
+
+  if (modifiers.has('Shift') !== event.shiftKey) {
+    return false;
+  }
+
+  return true;
+}
+
+function clearShortcutCapture() {
+  state.settings.activeShortcutId = null;
+  state.settings.shortcutError = '';
+}
+
+function setShortcutBinding(shortcutId, binding) {
+  state.settings.shortcuts[shortcutId] = binding;
+  persistShortcuts();
+}
+
+function getShortcutConflict(shortcutId, binding) {
+  return APP_SHORTCUT_DEFINITIONS.find((shortcut) => shortcut.id !== shortcutId && getShortcutBinding(shortcut.id) === binding) ?? null;
+}
+
+function beginShortcutCapture(shortcutId) {
+  if (!getShortcutDefinition(shortcutId)) {
+    return;
+  }
+
+  state.settings.activeShortcutId = state.settings.activeShortcutId === shortcutId ? null : shortcutId;
+  state.settings.shortcutError = '';
+  render();
+}
+
+function handleShortcutCapture(event) {
+  const shortcutId = state.settings.activeShortcutId;
+  if (!shortcutId) {
+    return false;
+  }
+
+  if (event.key === 'Tab') {
+    return false;
+  }
+
+  event.preventDefault();
+
+  if (!event.ctrlKey && !event.altKey && !event.shiftKey && !event.metaKey && event.key === 'Escape') {
+    clearShortcutCapture();
+    render();
+    return true;
+  }
+
+  const binding = serializeShortcutEvent(event);
+  if (!binding) {
+    state.settings.shortcutError = t('settings.shortcuts.invalid');
+    render();
+    return true;
+  }
+
+  const conflictingShortcut = getShortcutConflict(shortcutId, binding);
+  if (conflictingShortcut) {
+    state.settings.shortcutError = t('settings.shortcuts.conflict', {
+      shortcut: t(conflictingShortcut.labelKey)
+    });
+    render();
+    return true;
+  }
+
+  setShortcutBinding(shortcutId, binding);
+  clearShortcutCapture();
+  render();
+  return true;
+}
+
+function handleConfiguredShortcut(event) {
+  for (const shortcut of APP_SHORTCUT_DEFINITIONS) {
+    if (!matchesShortcut(event, getShortcutBinding(shortcut.id))) {
+      continue;
+    }
+
+    if (!shortcut.allowInEditable && isEditableTarget(event.target)) {
+      return false;
+    }
+
+    event.preventDefault();
+
+    if (shortcut.id === 'undo') {
+      const restored = restorePreviousCalculatorSnapshot();
+      if (restored) {
+        render();
+      }
+      return true;
+    }
+
+    if (shortcut.id === 'redo') {
+      const restored = restoreNextCalculatorSnapshot();
+      if (restored) {
+        render();
+      }
+      return true;
+    }
+
+    if (shortcut.id === 'copy') {
+      void copyCalculatorValue();
+      return true;
+    }
+
+    if (shortcut.id === 'paste') {
+      void pasteCalculatorValue().then((pasted) => {
+        if (pasted) {
+          render();
+        }
+      });
+      return true;
+    }
+
+    if (shortcut.id === 'fullscreen') {
+      void applyFullscreenSetting(!state.settings.isFullscreen);
+      return true;
+    }
+  }
+
+  return false;
+}
 
 function setGraphCompactEditorView(view) {
   state.graphing.compactEditorView = view === 'keypad' ? 'keypad' : 'expressions';
@@ -83,11 +316,91 @@ function setGraphCompactEditorView(view) {
   state.graphing.stylePanelExpressionIndex = null;
 }
 
+function syncGraphExpressionSelection(input) {
+  if (!(input instanceof HTMLInputElement) || !input.name?.startsWith('graph-expression-')) {
+    return;
+  }
+
+  const index = Number(input.name.replace('graph-expression-', ''));
+  if (!Number.isInteger(index) || index < 0) {
+    return;
+  }
+
+  state.graphing.activeExpressionIndex = index;
+  state.graphing.activeExpressionSelectionStart = input.selectionStart ?? input.value.length;
+  state.graphing.activeExpressionSelectionEnd = input.selectionEnd ?? state.graphing.activeExpressionSelectionStart;
+}
+
+function restoreGraphExpressionSelection() {
+  const applySelection = () => {
+    const input = document.querySelector(`input[name="graph-expression-${state.graphing.activeExpressionIndex}"]`);
+    if (!(input instanceof HTMLInputElement)) {
+      return false;
+    }
+
+    if (input.offsetParent === null) {
+      return false;
+    }
+
+    input.focus();
+    input.setSelectionRange(
+      state.graphing.activeExpressionSelectionStart ?? input.value.length,
+      state.graphing.activeExpressionSelectionEnd ?? input.value.length
+    );
+    return true;
+  };
+
+  if (applySelection()) {
+    return;
+  }
+
+  requestAnimationFrame(() => {
+    applySelection();
+  });
+}
+
+function patchActiveGraphExpressionInput() {
+  const input = document.querySelector(`input[name="graph-expression-${state.graphing.activeExpressionIndex}"]`);
+  const expression = state.graphing.expressions[state.graphing.activeExpressionIndex];
+  if (!(input instanceof HTMLInputElement) || !expression) {
+    return false;
+  }
+
+  input.value = expression.value;
+  input.focus();
+  input.setSelectionRange(
+    state.graphing.activeExpressionSelectionStart ?? input.value.length,
+    state.graphing.activeExpressionSelectionEnd ?? input.value.length
+  );
+  return true;
+}
+
+function canPatchActiveGraphExpressionInput() {
+  const pane = document.querySelector('.graph-expression-pane');
+  return pane instanceof HTMLElement && pane.offsetParent !== null && state.graphing.openMenu === null && !state.graphing.settingsOpen;
+}
+
+function handleMouseDown(event) {
+  if (state.mode !== 'graphing') {
+    return;
+  }
+
+  const target = event.target instanceof Element
+    ? event.target.closest('button[data-graph-insert], button[data-graph-edit-action]')
+    : null;
+  if (!target) {
+    return;
+  }
+
+  event.preventDefault();
+}
+
 hydrateState();
 applyUrlPreferences();
 applyRuntimeAttributes();
 applyUrlMode({ replaceHistory: true, renderView: false });
 applyTheme();
+initFullscreenState();
 computeDateResults();
 syncConverterValues('from');
 render();
@@ -95,10 +408,14 @@ installTooltipHandling();
 void preloadRemainingThemes();
 
 document.addEventListener('click', handleClick);
+document.addEventListener('mousedown', handleMouseDown);
 document.addEventListener('change', handleChange);
 document.addEventListener('input', handleInput);
 document.addEventListener('focusin', handleFocusIn);
 document.addEventListener('keydown', handleKeydown);
+document.addEventListener('selectionchange', () => {
+  syncGraphExpressionSelection(document.activeElement);
+});
 window.addEventListener('resize', handleResize);
 window.addEventListener('load', () => drawGraph());
 window.addEventListener('popstate', handlePopState);
@@ -264,6 +581,240 @@ async function applyLanguageChange(language) {
   render();
 }
 
+async function applyFullscreenSetting(enabled) {
+  const nextValue = await setFullscreenState(enabled);
+  updateFullscreenState(nextValue);
+  render();
+}
+
+function applyRepeatEqualsSetting(enabled) {
+  state.settings.repeatEquals = enabled;
+  persistRepeatEquals();
+  render();
+}
+
+function createCalculatorSnapshot() {
+  return structuredClone({
+    mode: state.mode,
+    collections: state.collections,
+    standard: state.standard,
+    scientific: state.scientific,
+    programmer: state.programmer
+  });
+}
+
+function restoreCalculatorSnapshot(snapshot) {
+  state.mode = snapshot.mode;
+  state.collections = structuredClone(snapshot.collections);
+  state.standard = structuredClone(snapshot.standard);
+  state.scientific = structuredClone(snapshot.scientific);
+  state.programmer = structuredClone(snapshot.programmer);
+  persistCollections();
+}
+
+function calculatorSnapshotsMatch(left, right) {
+  return JSON.stringify(left) === JSON.stringify(right);
+}
+
+function commitCalculatorSnapshot(previousSnapshot) {
+  if (!previousSnapshot) {
+    return false;
+  }
+
+  const nextSnapshot = createCalculatorSnapshot();
+  if (calculatorSnapshotsMatch(previousSnapshot, nextSnapshot)) {
+    return false;
+  }
+
+  calculatorUndoStack.push(previousSnapshot);
+  if (calculatorUndoStack.length > MAX_CALCULATOR_HISTORY) {
+    calculatorUndoStack.shift();
+  }
+  calculatorRedoStack.length = 0;
+  return true;
+}
+
+function performTrackedCalculatorAction(action, value = '') {
+  if (!isCalculatorMode(state.mode)) {
+    return false;
+  }
+
+  const snapshot = createCalculatorSnapshot();
+  handleAction(action, value);
+  return commitCalculatorSnapshot(snapshot);
+}
+
+function restorePreviousCalculatorSnapshot() {
+  const previousSnapshot = calculatorUndoStack.pop();
+  if (!previousSnapshot) {
+    return false;
+  }
+
+  calculatorRedoStack.push(createCalculatorSnapshot());
+  restoreCalculatorSnapshot(previousSnapshot);
+  return true;
+}
+
+function restoreNextCalculatorSnapshot() {
+  const nextSnapshot = calculatorRedoStack.pop();
+  if (!nextSnapshot) {
+    return false;
+  }
+
+  calculatorUndoStack.push(createCalculatorSnapshot());
+  restoreCalculatorSnapshot(nextSnapshot);
+  return true;
+}
+
+function normalizePastedDecimal(text) {
+  const trimmed = String(text || '').trim().replace(/\s+/g, '');
+  if (!trimmed || !/^[+\-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/.test(trimmed)) {
+    return null;
+  }
+
+  const normalized = trimmed.replace(',', '.');
+  const numeric = Number(normalized);
+  if (!Number.isFinite(numeric)) {
+    return null;
+  }
+
+  return normalized;
+}
+
+function normalizePastedProgrammerValue(text) {
+  const trimmed = String(text || '').trim().replace(/\s+/g, '').toUpperCase();
+  if (!trimmed) {
+    return null;
+  }
+
+  const sign = trimmed.startsWith('-') ? '-' : '';
+  const digits = sign ? trimmed.slice(1) : trimmed;
+  if (!digits) {
+    return null;
+  }
+
+  const patterns = {
+    BIN: /^[01]+$/,
+    OCT: /^[0-7]+$/,
+    DEC: /^\d+$/,
+    HEX: /^[0-9A-F]+$/
+  };
+  const validator = patterns[state.programmer.base] ?? patterns.DEC;
+  return validator.test(digits) ? `${sign}${digits}` : null;
+}
+
+function applyPastedCalculatorText(text) {
+  if (!isCalculatorMode(state.mode)) {
+    return false;
+  }
+
+  const snapshot = createCalculatorSnapshot();
+
+  if (state.mode === 'programmer') {
+    const normalized = normalizePastedProgrammerValue(text);
+    if (!normalized) {
+      return false;
+    }
+    state.programmer = createProgrammerState();
+    state.programmer.display = normalized;
+    return commitCalculatorSnapshot(snapshot);
+  }
+
+  const normalized = normalizePastedDecimal(text);
+  if (!normalized) {
+    return false;
+  }
+
+  if (state.mode === 'scientific') {
+    state.scientific = createScientificState();
+    state.scientific.display = normalized;
+    state.scientific.expression = normalized;
+    state.scientific.justEvaluated = true;
+    return commitCalculatorSnapshot(snapshot);
+  }
+
+  state.standard = createStandardState();
+  state.standard.display = normalized;
+  return commitCalculatorSnapshot(snapshot);
+}
+
+function getCopyableCalculatorValue() {
+  if (!isCalculatorMode(state.mode)) {
+    return '';
+  }
+
+  if (state.mode === 'scientific') {
+    return state.scientific.display;
+  }
+  if (state.mode === 'programmer') {
+    return state.programmer.display;
+  }
+  return state.standard.display;
+}
+
+async function copyCalculatorValue() {
+  const text = getCopyableCalculatorValue();
+  if (!text) {
+    return false;
+  }
+
+  await navigator.clipboard?.writeText?.(text);
+  return true;
+}
+
+async function pasteCalculatorValue() {
+  const text = await navigator.clipboard?.readText?.();
+  return applyPastedCalculatorText(text);
+}
+
+function updateFullscreenState(enabled) {
+  state.settings.isFullscreen = Boolean(enabled);
+}
+
+async function setFullscreenState(enabled) {
+  if (typeof fullscreenBridge?.setFullscreen === 'function') {
+    return Boolean(await fullscreenBridge.setFullscreen(Boolean(enabled)));
+  }
+
+  if (enabled) {
+    await document.documentElement.requestFullscreen?.();
+  } else if (document.fullscreenElement) {
+    await document.exitFullscreen?.();
+  }
+
+  return Boolean(document.fullscreenElement);
+}
+
+function initFullscreenState() {
+  if (typeof fullscreenBridge?.onFullscreenChanged === 'function') {
+    fullscreenBridge.onFullscreenChanged((enabled) => {
+      updateFullscreenState(enabled);
+      if (state.mode === 'settings') {
+        render();
+      }
+    });
+  } else {
+    document.addEventListener('fullscreenchange', () => {
+      updateFullscreenState(Boolean(document.fullscreenElement));
+      if (state.mode === 'settings') {
+        render();
+      }
+    });
+  }
+
+  if (typeof fullscreenBridge?.getFullscreen === 'function') {
+    void fullscreenBridge.getFullscreen().then((enabled) => {
+      updateFullscreenState(enabled);
+      if (state.mode === 'settings') {
+        render();
+      }
+    });
+    return;
+  }
+
+  updateFullscreenState(Boolean(document.fullscreenElement));
+}
+
 function handleResize() {
   const nextViewportWidth = window.innerWidth;
   const nextViewportHeight = window.innerHeight;
@@ -355,6 +906,23 @@ function handleClick(event) {
   const target = source?.closest('button');
   if (!target) {
     if (shouldRender) {
+      render();
+    }
+    return;
+  }
+
+  if (target.dataset.settingsShortcutCapture) {
+    beginShortcutCapture(target.dataset.settingsShortcutCapture);
+    return;
+  }
+
+  if (target.dataset.settingsShortcutReset) {
+    const shortcutId = target.dataset.settingsShortcutReset;
+    if (APP_SHORTCUT_DEFAULTS[shortcutId]) {
+      setShortcutBinding(shortcutId, APP_SHORTCUT_DEFAULTS[shortcutId]);
+      if (state.settings.activeShortcutId === shortcutId) {
+        clearShortcutCapture();
+      }
       render();
     }
     return;
@@ -525,6 +1093,18 @@ function handleClick(event) {
 
     if (menu === 'language') {
       void applyLanguageChange(value);
+      return;
+    }
+  }
+
+  if (target.dataset.settingsToggle) {
+    if (target.dataset.settingsToggle === 'repeatEquals') {
+      applyRepeatEqualsSetting(!state.settings.repeatEquals);
+      return;
+    }
+
+    if (target.dataset.settingsToggle === 'fullscreen') {
+      void applyFullscreenSetting(!state.settings.isFullscreen);
       return;
     }
   }
@@ -783,8 +1363,15 @@ function handleClick(event) {
     if (target.dataset.graphEditAction === 'plot') {
       commitGraphExpression(state.graphing.activeExpressionIndex);
       updateGraph();
+      render();
+      return;
     }
-    render();
+    if (canPatchActiveGraphExpressionInput() && patchActiveGraphExpressionInput()) {
+      drawGraph();
+    } else {
+      render();
+      restoreGraphExpressionSelection();
+    }
     return;
   }
 
@@ -793,13 +1380,18 @@ function handleClick(event) {
     state.graphing.openMenu = null;
     state.graphing.settingsOpen = false;
     insertGraphToken(target.dataset.graphInsert);
-    updateGraph();
-    render();
+    if (canPatchActiveGraphExpressionInput() && patchActiveGraphExpressionInput()) {
+      drawGraph();
+    } else {
+      updateGraph();
+      render();
+      restoreGraphExpressionSelection();
+    }
     return;
   }
 
   if (target.dataset.action && target.dataset.action !== 'noop') {
-    handleAction(target.dataset.action, target.dataset.value || '');
+    performTrackedCalculatorAction(target.dataset.action, target.dataset.value || '');
     render();
   }
 }
@@ -1035,6 +1627,7 @@ function handleInput(event) {
   if (target.name?.startsWith('graph-expression-')) {
     const index = Number(target.name.replace('graph-expression-', ''));
     setGraphExpression(index, target.value);
+    syncGraphExpressionSelection(target);
     drawGraph();
     return;
   }
@@ -1064,6 +1657,7 @@ function handleFocusIn(event) {
   if (target instanceof HTMLInputElement) {
     if (target.name?.startsWith('graph-expression-')) {
       selectGraphExpression(Number(target.name.replace('graph-expression-', '')));
+      syncGraphExpressionSelection(target);
       return;
     }
 
@@ -1097,6 +1691,14 @@ function handleFocusIn(event) {
 
 function handleKeydown(event) {
   if (urlPreferences.readOnly) {
+    return;
+  }
+
+  if (handleShortcutCapture(event)) {
+    return;
+  }
+
+  if (handleConfiguredShortcut(event)) {
     return;
   }
 
@@ -1195,19 +1797,19 @@ function handleKeydown(event) {
 
   const key = event.key;
   if (/^[0-9]$/.test(key)) {
-    handleAction('digit', key);
+    performTrackedCalculatorAction('digit', key);
   } else if (state.mode === 'programmer' && /^[a-fA-F]$/.test(key)) {
-    handleAction('digit', key.toUpperCase());
+    performTrackedCalculatorAction('digit', key.toUpperCase());
   } else if (key === '.') {
-    handleAction('decimal', '.');
+    performTrackedCalculatorAction('decimal', '.');
   } else if (key === 'Backspace') {
-    handleAction('backspace', '');
+    performTrackedCalculatorAction('backspace', '');
   } else if (key === 'Escape') {
-    handleAction('clear-all', '');
+    performTrackedCalculatorAction('clear-all', '');
   } else if (key === 'Enter' || key === '=') {
-    handleAction('equals', '');
+    performTrackedCalculatorAction('equals', '');
   } else if (['+', '-', '*', '/'].includes(key)) {
-    handleAction('operator', key);
+    performTrackedCalculatorAction('operator', key);
   } else {
     return;
   }

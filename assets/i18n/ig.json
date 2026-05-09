@@ -6,7 +6,9 @@
   "common": {
     "back": "Azu",
     "backspace": "Oghere azụ",
-    "closeSidePanel": "Mechie otu panel"
+    "closeSidePanel": "Mechie otu panel",
+    "clear": "Kpochapụ",
+    "clearEntry": "Kpochapụ ntinye"
   },
   "converter": {
     "unitConverter": "Ntụgharị nkeji",
@@ -248,7 +250,8 @@
       "function": "Ọrụ",
       "functionsAria": "Ọrụ",
       "trigonometricFunctionsAria": "Ọrụ trigonometric",
-      "angleUnit": "Otu akụkụ {value}"
+      "angleUnit": "Otu akụkụ {value}",
+      "exponentialFormat": "Gbanwee usoro nkọwa"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Ebe nchekwa ọrụ",
       "readme": "README",
       "license": "MIT ikike"
+    },
+    "calculation": {
+      "group": "Mgbakọ",
+      "repeatEqualsTitle": "Tinyegharịa ọrụ ikpeazụ n'usoro nhata",
+      "repeatEqualsDescription": "Na ụdị Standard, Sayensị, na Programmer, ịpị = ọzọ na-etinyekwa onye ọrụ gara aga na operand.",
+      "enabled": "Agbanyere",
+      "disabled": "Agbanyụrụ"
+    },
+    "window": {
+      "group": "windo",
+      "fullscreenTitle": "Ihuenyo zuru ezu (F11)",
+      "fullscreenDescription": "Họrọ ma ịchọrọ ka ngwa ahụ bụrụ Ihuenyo zuru oke ma ọ bụ na ọ chọghị",
+      "fullscreenEnabled": "Ihuenyo zuru ezu",
+      "fullscreenDisabled": "Nkịtị"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

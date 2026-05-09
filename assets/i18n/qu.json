@@ -6,7 +6,9 @@
   "common": {
     "back": "Kutiy",
     "backspace": "Qhipaman",
-    "closeSidePanel": "Panel wichq'ay"
+    "closeSidePanel": "Panel wichq'ay",
+    "clear": "Ch'uyanchana",
+    "clearEntry": "Ch'uya yaykuy"
   },
   "converter": {
     "unitConverter": "Unidad Tikraq",
@@ -248,7 +250,8 @@
       "function": "Ruray",
       "functionsAria": "Ruraykuna",
       "trigonometricFunctionsAria": "Trigonométrico nisqa ruwaykuna",
-      "angleUnit": "K'uchu unidad {value} ."
+      "angleUnit": "K'uchu unidad {value} .",
+      "exponentialFormat": "Exponencial nisqa formatota tikray"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Proyecto waqaychasqa",
       "readme": "ÑAWINCHAY",
       "license": "MIT nisqa licencia"
+    },
+    "calculation": {
+      "group": "Yupay",
+      "repeatEqualsTitle": "Qhipa llamk'ayta kutichiy qatiq kaqllakunapi",
+      "repeatEqualsDescription": "Estándar, Científico, Programador nisqa modokunapi, = ñit'iyqa yapamanta ñawpaq operadorta operandotawan churan.",
+      "enabled": "Atichisqa",
+      "disabled": "Mana llamk'achisqa"
+    },
+    "window": {
+      "group": "Ventana",
+      "fullscreenTitle": "Tukuy Pantalla (F11) .",
+      "fullscreenDescription": "Akllay sichus munanki chay app FullScreen kananta icha manachu",
+      "fullscreenEnabled": "LliwPantalla",
+      "fullscreenDisabled": "Normal nisqa"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

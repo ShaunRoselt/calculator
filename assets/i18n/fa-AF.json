@@ -6,7 +6,9 @@
   "common": {
     "back": "بازگشت",
     "backspace": "Backspace",
-    "closeSidePanel": "پانل را ببندید"
+    "closeSidePanel": "پانل را ببندید",
+    "clear": "پاک کردن",
+    "clearEntry": "پاک کردن ورودی"
   },
   "converter": {
     "unitConverter": "تبدیل واحد",
@@ -248,7 +250,8 @@
       "function": "عملکرد",
       "functionsAria": "عملکردها",
       "trigonometricFunctionsAria": "توابع مثلثاتی",
-      "angleUnit": "واحد زاویه {value}"
+      "angleUnit": "واحد زاویه {value}",
+      "exponentialFormat": "تغییر قالب نمایی"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "مخزن پروژه",
       "readme": "README",
       "license": "مجوز MIT"
+    },
+    "calculation": {
+      "group": "محاسبه",
+      "repeatEqualsTitle": "آخرین عملیات را در مساوی متوالی تکرار کنید",
+      "repeatEqualsDescription": "در حالت‌های استاندارد، علمی، و برنامه‌نویس، فشار دادن دوباره = عملگر و عملوند قبلی را دوباره اعمال می‌کند.",
+      "enabled": "فعال شد",
+      "disabled": "غیرفعال شده است"
+    },
+    "window": {
+      "group": "پنجره",
+      "fullscreenTitle": "تمام صفحه (F11)",
+      "fullscreenDescription": "انتخاب کنید که آیا می‌خواهید برنامه تمام صفحه باشد یا خیر",
+      "fullscreenEnabled": "تمام صفحه",
+      "fullscreenDisabled": "معمولی"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

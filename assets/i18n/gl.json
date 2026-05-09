@@ -6,7 +6,9 @@
   "common": {
     "back": "Volver",
     "backspace": "Retroceso",
-    "closeSidePanel": "Pechar panel"
+    "closeSidePanel": "Pechar panel",
+    "clear": "Borrar",
+    "clearEntry": "Borrar entrada"
   },
   "converter": {
     "unitConverter": "Conversor de unidades",
@@ -248,7 +250,8 @@
       "function": "Función",
       "functionsAria": "Funcións",
       "trigonometricFunctionsAria": "Funcións trigonométricas",
-      "angleUnit": "Unidade angular {value}"
+      "angleUnit": "Unidade angular {value}",
+      "exponentialFormat": "Cambia o formato exponencial"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "Repositorio do proxecto",
       "readme": "LEAME",
       "license": "Licenza MIT"
+    },
+    "calculation": {
+      "group": "Cálculo",
+      "repeatEqualsTitle": "Repita a última operación en iguais consecutivos",
+      "repeatEqualsDescription": "Nos modos Estándar, Científico e Programador, premer de novo = volve aplicar o operador e o operando anteriores.",
+      "enabled": "Activado",
+      "disabled": "Desactivado"
+    },
+    "window": {
+      "group": "Xanela",
+      "fullscreenTitle": "Pantalla completa (F11)",
+      "fullscreenDescription": "Selecciona se queres que a aplicación sexa a pantalla completa ou non",
+      "fullscreenEnabled": "Pantalla completa",
+      "fullscreenDisabled": "Normal"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

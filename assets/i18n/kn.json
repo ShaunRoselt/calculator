@@ -6,7 +6,9 @@
   "common": {
     "back": "ಹಿಂದೆ",
     "backspace": "ಬ್ಯಾಕ್ ಸ್ಪೇಸ್",
-    "closeSidePanel": "ಪ್ಯಾನಲ್ ಮುಚ್ಚಿ"
+    "closeSidePanel": "ಪ್ಯಾನಲ್ ಮುಚ್ಚಿ",
+    "clear": "ತೆರವುಗೊಳಿಸಿ",
+    "clearEntry": "ಪ್ರವೇಶವನ್ನು ತೆರವುಗೊಳಿಸಿ"
   },
   "converter": {
     "unitConverter": "ಯುನಿಟ್ ಪರಿವರ್ತಕ",
@@ -248,7 +250,8 @@
       "function": "ಕಾರ್ಯ",
       "functionsAria": "ಕಾರ್ಯಗಳು",
       "trigonometricFunctionsAria": "ತ್ರिकೋನಮಿತಿಯ ಕಾರ್ಯಗಳು",
-      "angleUnit": "ಕೋನ ಘಟಕ {value}"
+      "angleUnit": "ಕೋನ ಘಟಕ {value}",
+      "exponentialFormat": "ಘಾತೀಯ ಸ್ವರೂಪವನ್ನು ಟಾಗಲ್ ಮಾಡಿ"
     }
   },
   "settings": {
@@ -280,6 +283,40 @@
       "repository": "ಪ್ರಾಜೆಕ್ಟ್ ರೆಪೊಸಿಟರಿ",
       "readme": "ಓದಿ",
       "license": "MIT ਪਰವಾನಗಿ"
+    },
+    "calculation": {
+      "group": "ಲೆಕ್ಕಾಚಾರ",
+      "repeatEqualsTitle": "ಕಳೆದ ಕಾರ್ಯಾಚರಣೆಯನ್ನು ಸತತ ಸಮಾನಗಳಲ್ಲಿ ಪುನರಾವರ್ತಿಸಿ",
+      "repeatEqualsDescription": "ಸ್ಟ್ಯಾಂಡರ್ಡ್, ಸೈಂಟಿಫಿಕ್ ಮತ್ತು ಪ್ರೋಗ್ರಾಮರ್ ಮೋಡ್‌ಗಳಲ್ಲಿ, = ಒತ್ತುವುದರಿಂದ ಹಿಂದಿನ ಆಪರೇಟರ್ ಮತ್ತು ಆಪರೇಟರ್ ಅನ್ನು ಮತ್ತೆ ಅನ್ವಯಿಸುತ್ತದೆ.",
+      "enabled": "ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ",
+      "disabled": "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ"
+    },
+    "window": {
+      "group": "ಕಿಟಕಿ",
+      "fullscreenTitle": "ಪೂರ್ಣಪರದೆ (F11)",
+      "fullscreenDescription": "ಅಪ್ಲಿಕೇಶನ್ ಪೂರ್ಣಪರದೆಯಲ್ಲಿರಬೇಕೆ ಅಥವಾ ಬೇಡವೇ ಎಂಬುದನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+      "fullscreenEnabled": "ಪೂರ್ಣಪರದೆ",
+      "fullscreenDisabled": "ಸಾಮಾನ್ಯ"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
     }
   },
   "modes": {

@@ -1,5 +1,5 @@
 const path = require('node:path');
-const { app, BrowserWindow, screen, shell } = require('electron');
+const { app, BrowserWindow, ipcMain, screen, shell } = require('electron');
 
 const appIconPath = process.platform === 'win32'
   ? path.join(__dirname, '..', 'assets', 'icons', 'app-icon-dark.ico')
@@ -48,7 +48,30 @@ function createMainWindow() {
     void shell.openExternal(url);
     return { action: 'deny' };
   });
+
+  const sendFullscreenState = () => {
+    mainWindow.webContents.send('app:fullscreen-changed', mainWindow.isFullScreen());
+  };
+
+  mainWindow.on('enter-full-screen', sendFullscreenState);
+  mainWindow.on('leave-full-screen', sendFullscreenState);
+  mainWindow.webContents.once('did-finish-load', sendFullscreenState);
 }
+
+ipcMain.handle('app:get-fullscreen', (event) => {
+  const window = BrowserWindow.fromWebContents(event.sender);
+  return window?.isFullScreen() ?? false;
+});
+
+ipcMain.handle('app:set-fullscreen', (event, enabled) => {
+  const window = BrowserWindow.fromWebContents(event.sender);
+  if (!window) {
+    return false;
+  }
+
+  window.setFullScreen(Boolean(enabled));
+  return window.isFullScreen();
+});
 
 app.whenReady().then(() => {
   createMainWindow();

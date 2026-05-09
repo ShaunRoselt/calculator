@@ -225,6 +225,12 @@ function getCalcButtonTooltip(button) {
   if (button.action === 'backspace') {
     return t('common.backspace');
   }
+  if (button.action === 'clear-all') {
+    return t('common.clear');
+  }
+  if (button.action === 'clear-entry') {
+    return t('common.clearEntry');
+  }
   return '';
 }
 

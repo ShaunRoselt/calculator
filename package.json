@@ -7,6 +7,8 @@
   "scripts": {
     "check": "node scripts/check.js",
     "capture:steam:screenshots": "node marketing/steam/capture_full_page_screenshots.cjs",
+    "generate:steam:store": "node marketing/steam/generate_store_images.cjs",
+    "generate:logos:png": "node assets/logos/generate_png_logos.cjs",
     "package:flatpak": "npm run package:linux && sh scripts/package-flatpak.sh",
     "package:linux:appimage": "electron-builder --linux AppImage --x64 --config.directories.output=dist/Roselt-Calculator-linux-x64-appimage",
     "package:linux": "electron-packager . \"Roselt Calculator\" --platform=linux --arch=x64 --icon=assets/icons/app-icon-4096.png --out=dist --overwrite --asar --prune=true --ignore='^/(dist|flatpak/build|flatpak/repo|\\.flatpak-builder)(/|$)'",

@@ -903,7 +903,7 @@ function handleClick(event) {
     }
   }
 
-  const target = source?.closest('button');
+  const target = source?.closest('button, a[data-set-mode]');
   if (!target) {
     if (shouldRender) {
       render();
@@ -968,6 +968,24 @@ function handleClick(event) {
   }
 
   if (target.dataset.setMode) {
+    if (target instanceof HTMLAnchorElement) {
+      if (
+        event.defaultPrevented
+        || event.button !== 0
+        || event.metaKey
+        || event.ctrlKey
+        || event.shiftKey
+        || event.altKey
+      ) {
+        if (shouldRender) {
+          render();
+        }
+        return;
+      }
+
+      event.preventDefault();
+    }
+
     setMode(target.dataset.setMode);
     return;
   }

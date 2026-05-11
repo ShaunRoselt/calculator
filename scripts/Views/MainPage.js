@@ -253,6 +253,7 @@ function syncConverterMenuScroll() {
 function renderNavigationView() {
   const navigationGroups = getNavigationGroups();
   const settingsMeta = getModeMeta('settings') ?? MODE_META.settings;
+  const getModeHref = (mode) => `?page=${encodeURIComponent(mode)}`;
   return `
     <aside class="sidebar" aria-label="${t('navigation.aria.navigation')}">
       <div class="sidebar-header">
@@ -266,10 +267,10 @@ function renderNavigationView() {
               ${group.modes.map((mode) => {
                 const meta = getModeMeta(mode) ?? MODE_META[mode];
                 return `
-                  <button class="nav-button ${state.mode === mode ? 'active' : ''}" data-set-mode="${mode}">
+                  <a class="nav-button ${state.mode === mode ? 'active' : ''}" data-set-mode="${mode}" href="${getModeHref(mode)}" ${state.mode === mode ? 'aria-current="page"' : ''}>
                     <span class="nav-icon">${renderNavIcon(meta.icon)}</span>
                     <span class="nav-label">${meta.label}</span>
-                  </button>
+                  </a>
                 `;
               }).join('')}
             </div>
@@ -277,10 +278,10 @@ function renderNavigationView() {
         `).join('')}
       </nav>
       <div class="nav-footer">
-        <button class="nav-button ${state.mode === 'settings' ? 'active' : ''}" data-set-mode="settings">
+        <a class="nav-button ${state.mode === 'settings' ? 'active' : ''}" data-set-mode="settings" href="${getModeHref('settings')}" ${state.mode === 'settings' ? 'aria-current="page"' : ''}>
           <span class="nav-icon">${renderNavIcon(MODE_META.settings.icon)}</span>
           <span class="nav-label">${settingsMeta.label}</span>
-        </button>
+        </a>
       </div>
     </aside>
   `;

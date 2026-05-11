@@ -267,7 +267,7 @@
     },
     "preferences": {
       "group": "Preferences",
-      "description": "Choose the theme, language, and key app behavior settings"
+      "description": "Choose the theme, language, and key app behavior"
     },
     "language": {
       "group": "Language",

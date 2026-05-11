@@ -259,6 +259,7 @@
       "group": "Appearance",
       "themeTitle": "Theme",
       "themeDescription": "Pick the look of the app",
+      "searchThemes": "Search themes",
       "light": "Light",
       "dark": "Dark",
       "blue": "Blue",
@@ -272,7 +273,8 @@
     "language": {
       "group": "Language",
       "title": "Language",
-      "description": "Choose the language used across the app"
+      "description": "Choose the language used across the app",
+      "search": "Search languages"
     },
     "window": {
       "group": "Window",

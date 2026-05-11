@@ -27,9 +27,10 @@
 }
 
 .settings-expander {
+  --settings-expander-radius: 14px;
   background: var(--panel);
   border: 1px solid var(--border-subtle);
-  border-radius: 14px;
+  border-radius: var(--settings-expander-radius);
   overflow: visible;
 }
 
@@ -47,7 +48,7 @@
   align-items: center;
   gap: 14px;
   padding: 16px 18px;
-  border-radius: inherit;
+  border-radius: var(--settings-expander-radius);
   overflow: hidden;
   cursor: pointer;
   list-style: none;

@@ -15,6 +15,7 @@ import { renderUnitConverterView } from './UnitConverter.js';
 
 export function render() {
   const settingsExpanderStates = captureSettingsExpanderStates();
+  const settingsScrollTop = captureSettingsScrollTop();
   const layoutMode = getLayoutMode();
   const sidePanelVisible = isSidePanelVisible();
   appRoot.innerHTML = `
@@ -38,6 +39,7 @@ export function render() {
     </div>
   `;
   restoreSettingsExpanderStates(settingsExpanderStates);
+  restoreSettingsScrollTop(settingsScrollTop);
   prepareTooltipTargets(appRoot);
   syncCalculatorMascotPlacement();
   syncConverterMenuScroll();
@@ -65,6 +67,24 @@ function restoreSettingsExpanderStates(expanderStates) {
     }
 
     expander.open = expanderStates[index] ?? expander.open;
+  });
+}
+
+function captureSettingsScrollTop() {
+  const settingsScroll = appRoot.querySelector('.settings-page .settings-scroll');
+  return settingsScroll instanceof HTMLElement ? settingsScroll.scrollTop : null;
+}
+
+function restoreSettingsScrollTop(scrollTop) {
+  if (typeof scrollTop !== 'number') {
+    return;
+  }
+
+  requestAnimationFrame(() => {
+    const settingsScroll = appRoot.querySelector('.settings-page .settings-scroll');
+    if (settingsScroll instanceof HTMLElement) {
+      settingsScroll.scrollTop = scrollTop;
+    }
   });
 }
 

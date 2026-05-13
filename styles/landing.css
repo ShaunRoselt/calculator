@@ -146,10 +146,6 @@ main,
   text-decoration: none;
 }
 
-.brand img {
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
 
 .brand span {
   display: grid;

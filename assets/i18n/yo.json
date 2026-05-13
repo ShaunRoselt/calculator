@@ -3,6 +3,75 @@
     "title": "Roselt Ẹrọ iṣiro",
     "name": "Roselt Iṣiro"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Awọn ayanfẹ",
+      "title": "Akori & Ede",
+      "subtitle": "Yan iwo app naa. Yan ede ti a lo kọja app naa."
+    },
+    "summary": {
+      "themeCountLabel": "Awọn akori",
+      "languageCountLabel": "Awọn ede",
+      "copy": "Awotẹlẹ gbogbo akori to wa ki o lọ kiri ni kikun atokọ ede atilẹyin."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Irisi",
+        "title": "Akori",
+        "copy": "Yan iwo app naa."
+      },
+      "languages": {
+        "kicker": "Ede",
+        "title": "Ede",
+        "copy": "Yan ede ti a lo kaakiri app naa."
+      }
+    },
+    "cards": {
+      "previewLabel": "awotẹlẹ akori",
+      "lightScheme": "Eto awọ ina",
+      "darkScheme": "Eto awọ dudu",
+      "openTheme": "Ṣii akori yii",
+      "openInSettings": "Ṣii ni awọn eto"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Ayipada",
+      "title": "Gbogbo itusilẹ, lati ipilẹ akọkọ si oni.",
+      "intro": "Ẹrọ iṣiro Roselt lọ lati ipilẹ oniṣiro wẹẹbu ti o daduro si akojọpọ ni kikun, ọpọlọpọ-Syeed, ohun elo ede-ọpọlọpọ ni lẹsẹsẹ awọn idasilẹ idojukọ. Oju-iwe yii n tọpa ohun ti o yipada ni ẹya kọọkan lati 1.0.0 nipasẹ 12.0.0.",
+      "versionHistory": "Itan ẹya"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Calculator ile",
+      "updates": "Awọn imudojuiwọn",
+      "launchCalculator": "Iṣiro Iṣiro silẹ",
+      "launchCalculatorNewTab": "Lọlẹ Ẹrọ iṣiro ni taabu titun kan",
+      "primaryNavigation": "Lilọ kiri akọkọ"
+    },
+    "hero": {
+      "title": "Ohun elo Ẹrọ iṣiro to Dara julọ",
+      "subtitle": "Ile rẹ fun boṣewa, imọ-jinlẹ, ati iṣẹ iṣiro ilọsiwaju."
+    },
+    "downloads": {
+      "aria": "Awọn igbasilẹ iru ẹrọ",
+      "steam": "Ṣe igbasilẹ lori Steam",
+      "flathub": "Ṣe igbasilẹ lori Flathub",
+      "googlePlay": "Ṣe igbasilẹ lori Google Play itaja",
+      "preview": "Roselt Ẹrọ iṣiro ifiwe awotẹlẹ"
+    },
+    "modal": {
+      "title": "Nbọ Laipẹ!",
+      "close": "Agbejade ti nbọ laipe",
+      "dismiss": "Gba"
+    },
+    "menus": {
+      "loadingLanguages": "Nkojọpọ awọn ede...",
+      "loadingThemes": "Nkojọpọ awọn akori...",
+      "noMatches": "Ko si baramu"
+    }
+  },
   "common": {
     "back": "Pada",
     "backspace": "Apahin",

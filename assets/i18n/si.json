@@ -3,6 +3,75 @@
     "title": "Roselt ගණකය",
     "name": "Roselt ගණකය"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "මනාප",
+      "title": "තේමාව සහ භාෂාව",
+      "subtitle": "යෙදුමේ පෙනුම තෝරන්න. යෙදුම හරහා භාවිතා කරන භාෂාව තෝරන්න."
+    },
+    "summary": {
+      "themeCountLabel": "තේමා",
+      "languageCountLabel": "භාෂා",
+      "copy": "පවතින සෑම තේමාවක්ම පෙරදසුන් කර සම්පූර්ණ සහය දක්වන භාෂා ලැයිස්තුව බ්‍රවුස් කරන්න."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "පෙනුම",
+        "title": "තේමාව",
+        "copy": "යෙදුමේ පෙනුම තෝරන්න."
+      },
+      "languages": {
+        "kicker": "භාෂාව",
+        "title": "භාෂාව",
+        "copy": "යෙදුම හරහා භාවිතා කරන භාෂාව තෝරන්න."
+      }
+    },
+    "cards": {
+      "previewLabel": "තේමා පෙරදසුන",
+      "lightScheme": "ලා වර්ණ පටිපාටිය",
+      "darkScheme": "අඳුරු වර්ණ පටිපාටිය",
+      "openTheme": "මෙම තේමාව විවෘත කරන්න",
+      "openInSettings": "සැකසීම් තුළ විවෘත කරන්න"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "පළමු ගොඩනැගීමේ සිට අද දක්වා සෑම නිකුතුවක්ම.",
+      "intro": "Roselt කැල්කියුලේටරය හුදකලා වෙබ් කැල්කියුලේටර පදනමක සිට සම්පුර්ණයෙන්ම ඇසුරුම් කරන ලද, බහු-වේදිකා, බහු-භාෂා යෙදුමක් දක්වා නාභිගත නිකුත් කිරීම් මාලාවක් තුළට ගියේය. මෙම පිටුව 1.0.0 සිට 12.0.0 දක්වා එක් එක් අනුවාදයේ වෙනස් වූ දේ නිරීක්ෂණය කරයි.",
+      "versionHistory": "අනුවාද ඉතිහාසය"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Calculator නිවස",
+      "updates": "යාවත්කාලීන කිරීම්",
+      "launchCalculator": "කැල්කියුලේටරය දියත් කරන්න",
+      "launchCalculatorNewTab": "නව ටැබ් එකකින් කැල්කියුලේටරය දියත් කරන්න",
+      "primaryNavigation": "ප්‍රාථමික සංචාලනය"
+    },
+    "hero": {
+      "title": "හොඳම කැල්කියුලේටර යෙදුම",
+      "subtitle": "සම්මත, විද්‍යාත්මක සහ උසස් කැල්කියුලේටර වැඩ සඳහා ඔබේ නිවස."
+    },
+    "downloads": {
+      "aria": "වේදිකා බාගැනීම්",
+      "steam": "Steam මත බාගන්න",
+      "flathub": "Flathub මත බාගන්න",
+      "googlePlay": "Google Play Store මත බාගන්න",
+      "preview": "Roselt Calculator සජීවී පෙරදසුන"
+    },
+    "modal": {
+      "title": "ඉක්මනින් පැමිණේ!",
+      "close": "ළඟදීම එන popup වසන්න",
+      "dismiss": "තේරුණා"
+    },
+    "menus": {
+      "loadingLanguages": "භාෂා පූරණය වෙමින්...",
+      "loadingThemes": "තේමා පූරණය වෙමින්...",
+      "noMatches": "ගැලපීම් නැත"
+    }
+  },
   "common": {
     "back": "ආපසු",
     "backspace": "Backspace",

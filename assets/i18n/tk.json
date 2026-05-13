@@ -3,6 +3,75 @@
     "title": "Roselt Kalkulýator",
     "name": "Roselt Kalkulýator"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Saýlamalar",
+      "title": "Mowzuk we dil",
+      "subtitle": "Programmanyň görnüşini saýlaň. Programmanyň üsti bilen ulanylýan dili saýlaň."
+    },
+    "summary": {
+      "themeCountLabel": "Mowzuklar",
+      "languageCountLabel": "Diller",
+      "copy": "Bar bolan mowzugy gözden geçiriň we goldanýan dil sanawyna göz aýlaň."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Daş görnüşi",
+        "title": "Mowzuk",
+        "copy": "Programmanyň görnüşini saýlaň."
+      },
+      "languages": {
+        "kicker": "Dil",
+        "title": "Dil",
+        "copy": "Programmanyň içinde ulanylýan dili saýlaň."
+      }
+    },
+    "cards": {
+      "previewLabel": "mowzuk deslapky syn",
+      "lightScheme": "Açyk reňk shemasy",
+      "darkScheme": "Gara reňk shemasy",
+      "openTheme": "Bu temany açyň",
+      "openInSettings": "Sazlamalarda açyň"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "Every release, from the first build to today.",
+      "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.0.0.",
+      "versionHistory": "Version history"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Kalkulýator öýi",
+      "updates": "Täzelenmeler",
+      "launchCalculator": "Kalkulýatory işe giriziň",
+      "launchCalculatorNewTab": "Kalkulýatory täze goýmada işe giriziň",
+      "primaryNavigation": "Esasy nawigasiýa"
+    },
+    "hero": {
+      "title": "Iň oňat kalkulýator programmasy",
+      "subtitle": "Adaty, ylmy we ösen kalkulýator işi üçin jaýyňyz."
+    },
+    "downloads": {
+      "aria": "Platformany göçürip almak",
+      "steam": "Bugda göçürip alyň",
+      "flathub": "Flathub-da göçürip alyň",
+      "googlePlay": "Google Play dükanyndan göçürip alyň",
+      "preview": "Roselt Kalkulýatorynyň göni syn"
+    },
+    "modal": {
+      "title": "Soonakynda!",
+      "close": "soonakyn wagtda açylar",
+      "dismiss": "düşündim"
+    },
+    "menus": {
+      "loadingLanguages": "Dilleri ýüklemek ...",
+      "loadingThemes": "Temalary ýüklemek ...",
+      "noMatches": "Gabat gelenok"
+    }
+  },
   "common": {
     "back": "Yzyna",
     "backspace": "Yzky giňişlik",

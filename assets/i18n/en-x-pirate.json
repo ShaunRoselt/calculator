@@ -3,6 +3,75 @@
     "title": "Roselt Cap'n Calc",
     "name": "Roselt Cap'n Calc"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferences",
+      "title": "Theme & Language",
+      "subtitle": "Pick th' look o' th' app. Choose th' language used across th' app."
+    },
+    "summary": {
+      "themeCountLabel": "Themes",
+      "languageCountLabel": "Languages",
+      "copy": "Preview every available theme and browse the full supported language list."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Appearance",
+        "title": "Theme",
+        "copy": "Pick th' look o' th' app."
+      },
+      "languages": {
+        "kicker": "Language",
+        "title": "Language",
+        "copy": "Choose th' language used across th' app."
+      }
+    },
+    "cards": {
+      "previewLabel": "theme preview",
+      "lightScheme": "Light color scheme",
+      "darkScheme": "Dark color scheme",
+      "openTheme": "Open this theme",
+      "openInSettings": "Open in settings"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "Every release, from th first build t today.",
+      "intro": "Roselt Calculator sailed from a standalone web calculator foundation t a fully packaged, multi-platform, multi-language app in a series o' focused releases. This page tracks what changed in each version from 1.0.0 through 12.0.0.",
+      "versionHistory": "Version history"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Cap'n Calc home port",
+      "updates": "Fresh tidings",
+      "launchCalculator": "Launch th' Calculator",
+      "launchCalculatorNewTab": "Launch th' Calculator in a new tab",
+      "primaryNavigation": "Main chart"
+    },
+    "hero": {
+      "title": "Th' Best Calculator App",
+      "subtitle": "Yer home fer standard, scientific, an' advanced calculator work."
+    },
+    "downloads": {
+      "aria": "Platform downloads",
+      "steam": "Download on Steam",
+      "flathub": "Download on Flathub",
+      "googlePlay": "Download on Google Play Store",
+      "preview": "Roselt Cap'n Calc live preview"
+    },
+    "modal": {
+      "title": "Comin' Soon!",
+      "close": "Close th' comin' soon popup",
+      "dismiss": "Aye"
+    },
+    "menus": {
+      "loadingLanguages": "Loading languages...",
+      "loadingThemes": "Loading themes...",
+      "noMatches": "No matches"
+    }
+  },
   "common": {
     "back": "Aft",
     "backspace": "Scrub aft",

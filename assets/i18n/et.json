@@ -3,6 +3,75 @@
     "title": "Roselt Kalkulaator",
     "name": "Roselt Kalkulaator"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Eelistused",
+      "title": "Teema ja keel",
+      "subtitle": "Valige rakenduse välimus. Valige kogu rakenduses kasutatav keel."
+    },
+    "summary": {
+      "themeCountLabel": "Teemad",
+      "languageCountLabel": "Keeled",
+      "copy": "Vaadake kõigi saadaolevate teemade eelvaadet ja sirvige täielikku toetatud keelte loendit."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Välimus",
+        "title": "Teema",
+        "copy": "Valige rakenduse välimus."
+      },
+      "languages": {
+        "kicker": "Keel",
+        "title": "Keel",
+        "copy": "Valige kogu rakenduses kasutatav keel."
+      }
+    },
+    "cards": {
+      "previewLabel": "teema eelvaade",
+      "lightScheme": "Hele värviskeem",
+      "darkScheme": "Tume värviskeem",
+      "openTheme": "Ava see teema",
+      "openInSettings": "Ava seadetes"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Muudatuste logi",
+      "title": "Iga väljalase, esimesest järgust tänaseni.",
+      "intro": "Roselt Calculator muutus eraldiseisvast veebikalkulaatori vundamendist täielikult pakitud, mitme platvormi ja mitmekeelse rakenduseni, mis on suunatud väljaannete seeriale. Sellel lehel jälgitakse, mis muutus igas versioonis 1.0.0 kuni 12.0.0.",
+      "versionHistory": "Versiooniajalugu"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt kalkulaatori avaleht",
+      "updates": "Värskendused",
+      "launchCalculator": "Käivitage kalkulaator",
+      "launchCalculatorNewTab": "Käivitage kalkulaator uuel vahelehel",
+      "primaryNavigation": "Peamine navigeerimine"
+    },
+    "hero": {
+      "title": "Parim kalkulaatorirakendus",
+      "subtitle": "Teie kodu standardse, teadusliku ja täiustatud kalkulaatoritöö jaoks."
+    },
+    "downloads": {
+      "aria": "Platvormi allalaadimised",
+      "steam": "Laadige alla Steamist",
+      "flathub": "Laadige alla Flathubis",
+      "googlePlay": "Laadige alla Google Play poest",
+      "preview": "Roselt kalkulaatori reaalajas eelvaade"
+    },
+    "modal": {
+      "title": "Varsti!",
+      "close": "Sule peagi ilmuv hüpikaken",
+      "dismiss": "Selge"
+    },
+    "menus": {
+      "loadingLanguages": "Keelte laadimine...",
+      "loadingThemes": "Teemade laadimine...",
+      "noMatches": "Vastused puuduvad"
+    }
+  },
   "common": {
     "back": "Tagasi",
     "backspace": "Tagasilükke",

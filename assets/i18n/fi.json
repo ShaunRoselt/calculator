@@ -3,6 +3,75 @@
     "title": "Roselt Laskin",
     "name": "Roselt Laskin"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Asetukset",
+      "title": "Teema ja kieli",
+      "subtitle": "Valitse sovelluksen ulkoasu. Valitse sovelluksessa käytettävä kieli."
+    },
+    "summary": {
+      "themeCountLabel": "Teemat",
+      "languageCountLabel": "Kielet",
+      "copy": "Esikatsele jokaista saatavilla olevaa teemaa ja selaa kaikkia tuettuja kieliä."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Ulkonäkö",
+        "title": "Teema",
+        "copy": "Valitse sovelluksen ulkoasu."
+      },
+      "languages": {
+        "kicker": "Kieli",
+        "title": "Kieli",
+        "copy": "Valitse sovelluksessa käytettävä kieli."
+      }
+    },
+    "cards": {
+      "previewLabel": "teeman esikatselu",
+      "lightScheme": "Vaalea värimaailma",
+      "darkScheme": "Tumma värimaailma",
+      "openTheme": "Avaa tämä teema",
+      "openInSettings": "Avaa asetuksista"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Muutosloki",
+      "title": "Jokainen julkaisu ensimmäisestä koontiversiosta tähän päivään.",
+      "intro": "Roselt Calculator muuttui erillisestä verkkolaskimen perustasta täysin pakatuksi, usean alustan ja monikielisen sovelluksen sarjassa kohdistettuja julkaisuja. Tämä sivu seuraa, mitä muuttui kussakin versiossa 1.0.0 - 12.0.0.",
+      "versionHistory": "Versiohistoria"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Laskin etusivu",
+      "updates": "Päivitykset",
+      "launchCalculator": "Käynnistä Laskin",
+      "launchCalculatorNewTab": "Käynnistä Laskin uudella välilehdellä",
+      "primaryNavigation": "Ensisijainen navigointi"
+    },
+    "hero": {
+      "title": "Paras laskinsovellus",
+      "subtitle": "Kotisi tavallista, tieteellistä ja edistyksellistä laskintyötä varten."
+    },
+    "downloads": {
+      "aria": "Alustalataukset",
+      "steam": "Lataa Steamista",
+      "flathub": "Lataa Flathubista",
+      "googlePlay": "Lataa Google Play Kaupasta",
+      "preview": "Roselt Calculatorin live-esikatselu"
+    },
+    "modal": {
+      "title": "Tulossa pian!",
+      "close": "Sulje pian ilmestyvä ponnahdusikkuna",
+      "dismiss": "Selvä"
+    },
+    "menus": {
+      "loadingLanguages": "Ladataan kieliä...",
+      "loadingThemes": "Ladataan teemoja...",
+      "noMatches": "Ei osumia"
+    }
+  },
   "common": {
     "back": "Takaisin",
     "backspace": "Askelpalautin",

@@ -3,6 +3,75 @@
     "title": "Roselt 計算器",
     "name": "Roselt 計算器"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "偏好設定",
+      "title": "主題與語言",
+      "subtitle": "選擇應用程式的外觀。選擇整個應用程式使用的語言。"
+    },
+    "summary": {
+      "themeCountLabel": "主題",
+      "languageCountLabel": "語言",
+      "copy": "預覽每個可用主題並瀏覽完整支援的語言清單。"
+    },
+    "sections": {
+      "themes": {
+        "kicker": "外觀",
+        "title": "主題",
+        "copy": "選擇應用程式的外觀。"
+      },
+      "languages": {
+        "kicker": "語言",
+        "title": "語言",
+        "copy": "選擇應用程式中使用的語言。"
+      }
+    },
+    "cards": {
+      "previewLabel": "主題預覽",
+      "lightScheme": "淺色方案",
+      "darkScheme": "深色配色方案",
+      "openTheme": "開啟此主題",
+      "openInSettings": "在設定中打開"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "變更日誌",
+      "title": "從第一個版本到今天的每個版本。",
+      "intro": "Roselt Calculator 透過一系列重點發布，從獨立的網頁計算器基礎發展成為完全打包的、多平台、多語言的應用程式。此頁面追蹤從 1.0.0 到 12.0.0 的每個版本中的變更。",
+      "versionHistory": "版本歷史"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt 計算機首頁",
+      "updates": "更新",
+      "launchCalculator": "啟動計算器",
+      "launchCalculatorNewTab": "在新分頁中啟動計算器",
+      "primaryNavigation": "主導航"
+    },
+    "hero": {
+      "title": "最好的計算器應用程式",
+      "subtitle": "您的標準、科學和高級計算器工作之家。"
+    },
+    "downloads": {
+      "aria": "平台下載",
+      "steam": "在 Steam 上下載",
+      "flathub": "在 Flathub 上下載",
+      "googlePlay": "在 Google Play 商店下載",
+      "preview": "Roselt 計算器即時預覽"
+    },
+    "modal": {
+      "title": "即將推出！",
+      "close": "即將關閉彈出視窗",
+      "dismiss": "知道了"
+    },
+    "menus": {
+      "loadingLanguages": "正在載入語言...",
+      "loadingThemes": "正在載入主題...",
+      "noMatches": "沒有符合項"
+    }
+  },
   "common": {
     "back": "返回",
     "backspace": "退格鍵",

@@ -3,6 +3,75 @@
     "title": "Roselt Reiknivél",
     "name": "Roselt Reiknivél"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Kjörstillingar",
+      "title": "Þema og tungumál",
+      "subtitle": "Veldu útlit appsins. Veldu tungumálið sem notað er í forritinu."
+    },
+    "summary": {
+      "themeCountLabel": "Þemu",
+      "languageCountLabel": "Tungumál",
+      "copy": "Forskoðaðu hvert tiltækt þema og skoðaðu allan studd tungumálalistann."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Útlit",
+        "title": "Þema",
+        "copy": "Veldu útlit appsins."
+      },
+      "languages": {
+        "kicker": "Tungumál",
+        "title": "Tungumál",
+        "copy": "Veldu tungumálið sem notað er í forritinu."
+      }
+    },
+    "cards": {
+      "previewLabel": "þema forskoðun",
+      "lightScheme": "Létt litasamsetning",
+      "darkScheme": "Dökk litasamsetning",
+      "openTheme": "Opnaðu þetta þema",
+      "openInSettings": "Opna í stillingum"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Breytingaskrá",
+      "title": "Sérhver útgáfa, frá fyrstu byggingu til dagsins í dag.",
+      "intro": "Roselt Reiknivél fór úr sjálfstæðum vefreiknivélargrunni yfir í fullbúið, fjölpalla, fjöltungumálaforrit í röð markvissra útgáfur. Þessi síða fylgist með því sem breyttist í hverri útgáfu frá 1.0.0 til 12.0.0.",
+      "versionHistory": "Útgáfuferill"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt reiknivél heima",
+      "updates": "Uppfærslur",
+      "launchCalculator": "Ræstu reiknivél",
+      "launchCalculatorNewTab": "Ræstu Reiknivél á nýjum flipa",
+      "primaryNavigation": "Aðalleiðsögn"
+    },
+    "hero": {
+      "title": "Besta reiknivélaforritið",
+      "subtitle": "Heimili þitt fyrir staðlaða, vísindalega og háþróaða reiknivélavinnu."
+    },
+    "downloads": {
+      "aria": "Niðurhal á palli",
+      "steam": "Hlaða niður á Steam",
+      "flathub": "Hlaða niður á Flathub",
+      "googlePlay": "Sæktu í Google Play Store",
+      "preview": "Roselt reiknivél í beinni forskoðun"
+    },
+    "modal": {
+      "title": "Kemst bráðum!",
+      "close": "Loka kemur bráðum sprettigluggi",
+      "dismiss": "Sko"
+    },
+    "menus": {
+      "loadingLanguages": "Hleður tungumálum...",
+      "loadingThemes": "Hleður þemu...",
+      "noMatches": "Engar samsvörun"
+    }
+  },
   "common": {
     "back": "Til baka",
     "backspace": "Backspace",

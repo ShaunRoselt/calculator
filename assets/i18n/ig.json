@@ -3,6 +3,75 @@
     "title": "Roselt Ihe mgbako",
     "name": "Roselt Ihe mgbako"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Mmasị",
+      "title": "Isiokwu & Asụsụ",
+      "subtitle": "Họrọ ụdị ngwa ahụ. Họrọ asụsụ a na-eji n'ofe ngwa ahụ."
+    },
+    "summary": {
+      "themeCountLabel": "Gburugburu",
+      "languageCountLabel": "Asụsụ",
+      "copy": "Lelee isiokwu ọ bụla dị wee chọgharịa ndepụta asụsụ akwadoro zuru oke."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Ọdịdị",
+        "title": "Gburugburu",
+        "copy": "Họrọ ụdị ngwa ahụ."
+      },
+      "languages": {
+        "kicker": "Asụsụ",
+        "title": "Asụsụ",
+        "copy": "Họrọ asụsụ a na-eji n'ofe ngwa ahụ."
+      }
+    },
+    "cards": {
+      "previewLabel": "nhụchalụ isiokwu",
+      "lightScheme": "Atụmatụ agba dị mfe",
+      "darkScheme": "Atụmatụ agba gbara ọchịchịrị",
+      "openTheme": "Mepee isiokwu a",
+      "openInSettings": "Mepee na ntọala"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Ngbanwe",
+      "title": "Ntọhapụ ọ bụla, site na nke mbụ arụrụ ruo taa.",
+      "intro": "Roselt Calculator si na ntọala mgbako webụ kwụ ọtọ gaa na ngwugwu zuru oke, ngwa ọtụtụ ngwa, ọtụtụ asụsụ n'usoro ewepụtara lekwasịrị anya. Ibe a na-enyocha ihe gbanwere na ụdị ọ bụla site na 1.0.0 ruo 12.0.0.",
+      "versionHistory": "Akụkọ ụdị"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Ụlọ mgbako Roselt",
+      "updates": "Mmelite",
+      "launchCalculator": "Mwepụta mgbako",
+      "launchCalculatorNewTab": "Mwepụta mgbako na taabụ ọhụrụ",
+      "primaryNavigation": "Nsoro ụzọ"
+    },
+    "hero": {
+      "title": "Ngwa mgbako kacha mma",
+      "subtitle": "Ụlọ gị maka ọrụ ọkọlọtọ, sayensị na ọrụ mgbako dị elu."
+    },
+    "downloads": {
+      "aria": "Nbudata n'elu ikpo okwu",
+      "steam": "Budata na Steam",
+      "flathub": "Budata na Flathub",
+      "googlePlay": "Budata na Ụlọ Ahịa Google Play",
+      "preview": "Roselt Calculator nhụchalụ dị ndụ"
+    },
+    "modal": {
+      "title": "Na-abịa n'oge adịghị anya!",
+      "close": "Mmiri mmapụta na-abịa nso",
+      "dismiss": "nwetara ya"
+    },
+    "menus": {
+      "loadingLanguages": "na-ebunye asụsụ...",
+      "loadingThemes": "na-ebu gburugburu...",
+      "noMatches": "Ọnweghị nha"
+    }
+  },
   "common": {
     "back": "Azu",
     "backspace": "Oghere azụ",

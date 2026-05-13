@@ -3,6 +3,75 @@
     "title": "Roselt Kalkolatur",
     "name": "Roselt Kalkolatur"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferenzi",
+      "title": "Tema u Lingwa",
+      "subtitle": "Agħżel id-dehra tal-app. Agħżel il-lingwa użata fl-app."
+    },
+    "summary": {
+      "themeCountLabel": "Temi",
+      "languageCountLabel": "Lingwi",
+      "copy": "Approva kull tema disponibbli u bbrawżja l-lista sħiħa tal-lingwi appoġġjati."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Dehra",
+        "title": "Tema",
+        "copy": "Agħżel id-dehra tal-app."
+      },
+      "languages": {
+        "kicker": "Lingwa",
+        "title": "Lingwa",
+        "copy": "Agħżel il-lingwa użata fl-app."
+      }
+    },
+    "cards": {
+      "previewLabel": "previżjoni tat-tema",
+      "lightScheme": "Skema ta' kulur ċar",
+      "darkScheme": "Skema ta' kulur skur",
+      "openTheme": "Iftaħ din it-tema",
+      "openInSettings": "Miftuħ fis-settings"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "Kull ħruġ, mill-ewwel bini sal-lum.",
+      "intro": "Roselt Calculator mar minn pedament ta' kalkolatur tal-web awtonomu għal app ippakkjata bis-sħiħ, b'ħafna pjattaformi u b'ħafna lingwi f'serje ta' ħarġiet iffukati. Din il-paġna ssegwi dak li nbidel f'kull verżjoni minn 1.0.0 sa 12.0.0.",
+      "versionHistory": "Istorja tal-verżjoni"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Id-dar tal-Kalkolatur Roselt",
+      "updates": "Aġġornamenti",
+      "launchCalculator": "Tnedija Kalkulatur",
+      "launchCalculatorNewTab": "Tnedija Kalkulatur f'tab ġdida",
+      "primaryNavigation": "Navigazzjoni primarja"
+    },
+    "hero": {
+      "title": "L-Aqwa App tal-Kalkolatur",
+      "subtitle": "Id-dar tiegħek għal xogħol ta' kalkolatur standard, xjentifiku u avvanzat."
+    },
+    "downloads": {
+      "aria": "Downloads tal-pjattaformi",
+      "steam": "Niżżel fuq Steam",
+      "flathub": "Niżżel fuq Flathub",
+      "googlePlay": "Niżżel fuq Google Play Store",
+      "preview": "Preview live tal-Kalkolatur Roselt"
+    },
+    "modal": {
+      "title": "Dalwaqt!",
+      "close": "Agħlaq dalwaqt popup",
+      "dismiss": "Ksibt"
+    },
+    "menus": {
+      "loadingLanguages": "Qiegħed il-lingwi...",
+      "loadingThemes": "Qiegħed it-temi...",
+      "noMatches": "L-ebda logħbiet"
+    }
+  },
   "common": {
     "back": "Lura",
     "backspace": "Backspace",

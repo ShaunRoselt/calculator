@@ -3,6 +3,75 @@
     "title": "Roselt Máy tính",
     "name": "Roselt Máy tính"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Tùy chọn",
+      "title": "Chủ đề và ngôn ngữ",
+      "subtitle": "Chọn giao diện của ứng dụng. Chọn ngôn ngữ được sử dụng trên ứng dụng."
+    },
+    "summary": {
+      "themeCountLabel": "Chủ đề",
+      "languageCountLabel": "Ngôn ngữ",
+      "copy": "Xem trước mọi chủ đề có sẵn và duyệt qua danh sách ngôn ngữ được hỗ trợ đầy đủ."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Diện mạo",
+        "title": "Chủ đề",
+        "copy": "Chọn giao diện của ứng dụng."
+      },
+      "languages": {
+        "kicker": "Ngôn ngữ",
+        "title": "Ngôn ngữ",
+        "copy": "Chọn ngôn ngữ được sử dụng trên ứng dụng."
+      }
+    },
+    "cards": {
+      "previewLabel": "xem trước chủ đề",
+      "lightScheme": "Cách phối màu sáng",
+      "darkScheme": "Phối màu tối",
+      "openTheme": "Mở chủ đề này",
+      "openInSettings": "Mở trong cài đặt"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Nhật ký thay đổi",
+      "title": "Mọi bản phát hành, từ bản dựng đầu tiên cho đến hôm nay.",
+      "intro": "Máy tính Roselt đã phát triển từ nền tảng máy tính web độc lập thành một ứng dụng đa ngôn ngữ, đa nền tảng, được đóng gói đầy đủ trong một loạt các bản phát hành tập trung. Trang này theo dõi những gì đã thay đổi trong mỗi phiên bản từ 1.0.0 đến 12.0.0.",
+      "versionHistory": "Lịch sử phiên bản"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Trang chủ Máy tính Roselt",
+      "updates": "Cập nhật",
+      "launchCalculator": "Khởi chạy Máy tính",
+      "launchCalculatorNewTab": "Khởi chạy Máy tính trong tab mới",
+      "primaryNavigation": "Điều hướng chính"
+    },
+    "hero": {
+      "title": "Ứng dụng máy tính tốt nhất",
+      "subtitle": "Ngôi nhà dành cho công việc tính toán tiêu chuẩn, khoa học và nâng cao của bạn."
+    },
+    "downloads": {
+      "aria": "Tải xuống nền tảng",
+      "steam": "Tải xuống trên Steam",
+      "flathub": "Tải xuống trên Flathub",
+      "googlePlay": "Tải xuống trên Cửa hàng Google Play",
+      "preview": "Xem trước trực tiếp Máy tính Roselt"
+    },
+    "modal": {
+      "title": "Sắp ra mắt!",
+      "close": "Đóng cửa sổ bật lên sắp ra mắt",
+      "dismiss": "Hiểu rồi"
+    },
+    "menus": {
+      "loadingLanguages": "Đang tải ngôn ngữ...",
+      "loadingThemes": "Đang tải chủ đề...",
+      "noMatches": "Không có kết quả phù hợp"
+    }
+  },
   "common": {
     "back": "Quay lại",
     "backspace": "Xóa lùi",

@@ -3,6 +3,75 @@
     "title": "Roselt Skaičiuoklė",
     "name": "Roselt Skaičiuoklė"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Nuostatos",
+      "title": "Tema ir kalba",
+      "subtitle": "Pasirinkite programos išvaizdą. Pasirinkite programoje naudojamą kalbą."
+    },
+    "summary": {
+      "themeCountLabel": "Temos",
+      "languageCountLabel": "Kalbos",
+      "copy": "Peržiūrėkite visas galimas temas ir naršykite visą palaikomų kalbų sąrašą."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Išvaizda",
+        "title": "Tema",
+        "copy": "Pasirinkite programos išvaizdą."
+      },
+      "languages": {
+        "kicker": "Kalba",
+        "title": "Kalba",
+        "copy": "Pasirinkite programoje naudojamą kalbą."
+      }
+    },
+    "cards": {
+      "previewLabel": "temos peržiūra",
+      "lightScheme": "Šviesi spalvų schema",
+      "darkScheme": "Tamsių spalvų schema",
+      "openTheme": "Atidaryti šią temą",
+      "openInSettings": "Atidaryti nustatymuose"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Pakeitimų žurnalas",
+      "title": "Kiekvienas leidimas, nuo pirmosios versijos iki šiandien.",
+      "intro": "„Roselt Calculator“ iš atskiro žiniatinklio skaičiuotuvo pagrindo tapo visiškai supakuota, kelių platformų, kelių kalbų programa. Šiame puslapyje stebima, kas pasikeitė kiekvienoje versijoje nuo 1.0.0 iki 12.0.0.",
+      "versionHistory": "Versijų istorija"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "„Roselt“ skaičiuoklės pagrindinis puslapis",
+      "updates": "Atnaujinimai",
+      "launchCalculator": "Paleiskite skaičiuotuvą",
+      "launchCalculatorNewTab": "Paleiskite Skaičiuoklę naujame skirtuke",
+      "primaryNavigation": "Pagrindinė navigacija"
+    },
+    "hero": {
+      "title": "Geriausia skaičiuotuvo programa",
+      "subtitle": "Jūsų namai standartiniam, moksliniam ir išplėstiniam skaičiuotuvų darbui."
+    },
+    "downloads": {
+      "aria": "Platformos atsisiuntimai",
+      "steam": "Atsisiųskite iš „Steam“.",
+      "flathub": "Atsisiųskite iš „Flathub“.",
+      "googlePlay": "Atsisiųskite iš „Google Play“ parduotuvės",
+      "preview": "„Roselt Calculator“ tiesioginė peržiūra"
+    },
+    "modal": {
+      "title": "Netrukus!",
+      "close": "Uždaryti netrukus pasirodys iššokantis langas",
+      "dismiss": "Supratau"
+    },
+    "menus": {
+      "loadingLanguages": "Įkeliamos kalbos...",
+      "loadingThemes": "Įkeliamos temos...",
+      "noMatches": "Atitikčių nėra"
+    }
+  },
   "common": {
     "back": "Atgal",
     "backspace": "Backspace",

@@ -3,6 +3,75 @@
     "title": "Roselt ماشین حساب",
     "name": "Roselt ماشین حساب"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferences",
+      "title": "Theme & Language",
+      "subtitle": "Pick the look of the app. Choose the language used across the app."
+    },
+    "summary": {
+      "themeCountLabel": "Themes",
+      "languageCountLabel": "Languages",
+      "copy": "Preview every available theme and browse the full supported language list."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Appearance",
+        "title": "Theme",
+        "copy": "Pick the look of the app."
+      },
+      "languages": {
+        "kicker": "Language",
+        "title": "Language",
+        "copy": "Choose the language used across the app."
+      }
+    },
+    "cards": {
+      "previewLabel": "theme preview",
+      "lightScheme": "Light color scheme",
+      "darkScheme": "Dark color scheme",
+      "openTheme": "Open this theme",
+      "openInSettings": "Open in settings"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "تغییر",
+      "title": "هر نسخه، از اولین نسخه تا امروز.",
+      "intro": "Roselt Calculator از یک پایه ماشین حساب وب مستقل به یک برنامه کاملاً بسته بندی شده، چند پلتفرمی و چند زبانه در مجموعه ای از نسخه های متمرکز تبدیل شد. این صفحه تغییرات را در هر نسخه از 1.0.0 تا 12.0.0 دنبال می کند.",
+      "versionHistory": "سابقه نسخه"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "خانه ماشین حساب روزلت",
+      "updates": "به روز رسانی ها",
+      "launchCalculator": "ماشین حساب را راه اندازی کنید",
+      "launchCalculatorNewTab": "ماشین حساب را در یک برگه جدید راه اندازی کنید",
+      "primaryNavigation": "ناوبری اولیه"
+    },
+    "hero": {
+      "title": "بهترین برنامه ماشین حساب",
+      "subtitle": "خانه شما برای کار با ماشین حساب استاندارد، علمی و پیشرفته."
+    },
+    "downloads": {
+      "aria": "دانلودهای پلتفرم",
+      "steam": "دانلود در استیم",
+      "flathub": "در Flathub دانلود کنید",
+      "googlePlay": "در فروشگاه گوگل پلی دانلود کنید",
+      "preview": "پیش نمایش زنده ماشین حساب Roselt"
+    },
+    "modal": {
+      "title": "به زودی!",
+      "close": "بستن به زودی پنجره بازشو",
+      "dismiss": "متوجه شدم"
+    },
+    "menus": {
+      "loadingLanguages": "در حال بارگیری زبان ها...",
+      "loadingThemes": "در حال بارگیری تم ها...",
+      "noMatches": "هیچ مسابقه ای وجود ندارد"
+    }
+  },
   "common": {
     "back": "بازگشت",
     "backspace": "Backspace",

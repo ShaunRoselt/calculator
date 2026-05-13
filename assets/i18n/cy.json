@@ -3,6 +3,75 @@
     "title": "Roselt Cyfrifiannell",
     "name": "Roselt Cyfrifiannell"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Dewisiadau",
+      "title": "Thema ac Iaith",
+      "subtitle": "Dewiswch olwg yr ap. Dewiswch yr iaith a ddefnyddir ar draws yr ap."
+    },
+    "summary": {
+      "themeCountLabel": "Themâu",
+      "languageCountLabel": "Ieithoedd",
+      "copy": "Rhagolwg o bob thema sydd ar gael a phori'r rhestr lawn o ieithoedd a gefnogir."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Golwg",
+        "title": "Thema",
+        "copy": "Dewiswch olwg yr ap."
+      },
+      "languages": {
+        "kicker": "Iaith",
+        "title": "Iaith",
+        "copy": "Dewiswch yr iaith a ddefnyddir ar draws yr ap."
+      }
+    },
+    "cards": {
+      "previewLabel": "rhagolwg thema",
+      "lightScheme": "Cynllun lliwiau golau",
+      "darkScheme": "Cynllun lliwiau tywyll",
+      "openTheme": "Agorwch y thema hon",
+      "openInSettings": "Agor yn y gosodiadau"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "log newid",
+      "title": "Pob datganiad, o'r adeilad cyntaf hyd heddiw.",
+      "intro": "Aeth Roselt Calculator o sylfaen cyfrifiannell gwe annibynnol i ap aml-lwyfan, aml-iaith wedi'i becynnu'n llawn mewn cyfres o ddatganiadau â ffocws. Mae'r dudalen hon yn olrhain yr hyn a newidiodd ym mhob fersiwn o 1.0.0 i 12.0.0.",
+      "versionHistory": "Hanes fersiynau"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Cartref Cyfrifiannell Roselt",
+      "updates": "Diweddariadau",
+      "launchCalculator": "Lansio Cyfrifiannell",
+      "launchCalculatorNewTab": "Lansio Cyfrifiannell mewn tab newydd",
+      "primaryNavigation": "llywio sylfaenol"
+    },
+    "hero": {
+      "title": "Yr Ap Cyfrifiannell Gorau",
+      "subtitle": "Eich cartref ar gyfer gwaith cyfrifiannell safonol, gwyddonol ac uwch."
+    },
+    "downloads": {
+      "aria": "Lawrlwythiadau platfform",
+      "steam": "Lawrlwythwch ar Steam",
+      "flathub": "Lawrlwythwch ar Flathub",
+      "googlePlay": "Lawrlwythwch ar Google Play Store",
+      "preview": "Rhagolwg byw Roselt Calculator"
+    },
+    "modal": {
+      "title": "Yn dod yn fuan!",
+      "close": "Naidlen yn agos at ddod yn fuan",
+      "dismiss": "Wedi'i gael"
+    },
+    "menus": {
+      "loadingLanguages": "Yn llwytho ieithoedd...",
+      "loadingThemes": "Wrthi'n llwytho themâu...",
+      "noMatches": "Dim yn cyfateb"
+    }
+  },
   "common": {
     "back": "Yn ôl",
     "backspace": "Bod yn ôl",

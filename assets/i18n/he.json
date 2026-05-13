@@ -3,6 +3,75 @@
     "title": "Roselt מחשבון",
     "name": "Roselt מחשבון"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "העדפות",
+      "title": "נושא ושפה",
+      "subtitle": "בחר את המראה של האפליקציה. בחר את השפה שבה נעשה שימוש בכל האפליקציה."
+    },
+    "summary": {
+      "themeCountLabel": "ערכות נושא",
+      "languageCountLabel": "שפות",
+      "copy": "הצג תצוגה מקדימה של כל נושא זמין ועיין ברשימת השפות הנתמכות המלאה."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "מראה",
+        "title": "נושא",
+        "copy": "בחר את המראה של האפליקציה."
+      },
+      "languages": {
+        "kicker": "שפה",
+        "title": "שפה",
+        "copy": "בחר את השפה המשמשת באפליקציה."
+      }
+    },
+    "cards": {
+      "previewLabel": "תצוגה מקדימה של ערכת הנושא",
+      "lightScheme": "ערכת צבעים בהירה",
+      "darkScheme": "ערכת צבעים כהה",
+      "openTheme": "פתח את הנושא הזה",
+      "openInSettings": "פתח בהגדרות"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "שינויים",
+      "title": "כל מהדורה, מהגרסה הראשונה ועד היום.",
+      "intro": "Roselt Calculator עבר מבסיס מחשבון אינטרנט עצמאי לאפליקציה ארוזה במלואה, מרובת פלטפורמות, מרובת שפות בסדרה של מהדורות ממוקדות. דף זה עוקב אחר מה שהשתנה בכל גרסה מ-1.0.0 עד 12.0.0.",
+      "versionHistory": "היסטוריית גרסאות"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "בית מחשבון רוזלט",
+      "updates": "עדכונים",
+      "launchCalculator": "הפעל את מחשבון",
+      "launchCalculatorNewTab": "הפעל את מחשבון בכרטיסייה חדשה",
+      "primaryNavigation": "ניווט ראשי"
+    },
+    "hero": {
+      "title": "אפליקציית המחשבון הטובה ביותר",
+      "subtitle": "הבית שלך לעבודת מחשבון סטנדרטית, מדעית ומתקדמת."
+    },
+    "downloads": {
+      "aria": "הורדות פלטפורמה",
+      "steam": "הורד ב-Steam",
+      "flathub": "הורד ב-Flathub",
+      "googlePlay": "הורד בחנות Google Play",
+      "preview": "תצוגה מקדימה חיה של מחשבון רוזלט"
+    },
+    "modal": {
+      "title": "בקרוב!",
+      "close": "סגור בקרוב חלון קופץ",
+      "dismiss": "הבנתי"
+    },
+    "menus": {
+      "loadingLanguages": "טוען שפות...",
+      "loadingThemes": "טוען ערכות נושא...",
+      "noMatches": "אין התאמות"
+    }
+  },
   "common": {
     "back": "חזרה",
     "backspace": "Backspace",

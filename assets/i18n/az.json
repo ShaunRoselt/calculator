@@ -3,6 +3,75 @@
     "title": "Roselt Kalkulyator",
     "name": "Roselt Kalkulyator"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Tərcihlər",
+      "title": "Mövzu və Dil",
+      "subtitle": "Tətbiqin görünüşünü seçin. Proqramda istifadə olunan dili seçin."
+    },
+    "summary": {
+      "themeCountLabel": "Mövzular",
+      "languageCountLabel": "Dillər",
+      "copy": "Mövcud olan hər bir mövzuya nəzər salın və tam dəstəklənən dil siyahısına göz atın."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Görünüş",
+        "title": "Mövzu",
+        "copy": "Tətbiqin görünüşünü seçin."
+      },
+      "languages": {
+        "kicker": "Dil",
+        "title": "Dil",
+        "copy": "Tətbiqdə istifadə olunan dili seçin."
+      }
+    },
+    "cards": {
+      "previewLabel": "tema önizləməsi",
+      "lightScheme": "Açıq rəng sxemi",
+      "darkScheme": "Tünd rəng sxemi",
+      "openTheme": "Bu temanı açın",
+      "openInSettings": "Ayarlarda açın"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Dəyişikliklər qeydi",
+      "title": "İlk qurulmadan bu günə qədər hər buraxılış.",
+      "intro": "Roselt Kalkulyator müstəqil veb kalkulyator bazasından tam paketlənmiş, çox platformalı, çoxdilli proqrama çevrildi. Bu səhifə 1.0.0-dan 12.0.0-a qədər hər versiyada nələrin dəyişdiyini izləyir.",
+      "versionHistory": "Versiya tarixçəsi"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Kalkulyator ev",
+      "updates": "Yeniləmələr",
+      "launchCalculator": "Kalkulyatoru işə salın",
+      "launchCalculatorNewTab": "Kalkulyatoru yeni tabda işə salın",
+      "primaryNavigation": "İlkin naviqasiya"
+    },
+    "hero": {
+      "title": "Ən Yaxşı Kalkulyator Tətbiqi",
+      "subtitle": "Standart, elmi və təkmil kalkulyator işi üçün eviniz."
+    },
+    "downloads": {
+      "aria": "Platforma endirmələri",
+      "steam": "Steam-də endirin",
+      "flathub": "Flathub-da endirin",
+      "googlePlay": "Google Play Store-da endirin",
+      "preview": "Roselt Kalkulyator canlı önizləmə"
+    },
+    "modal": {
+      "title": "Tezliklə!",
+      "close": "Tezliklə bağlanacaq pop-up",
+      "dismiss": "Anladım"
+    },
+    "menus": {
+      "loadingLanguages": "Dillər yüklənir...",
+      "loadingThemes": "Temalar yüklənir...",
+      "noMatches": "Uyğunluq yoxdur"
+    }
+  },
   "common": {
     "back": "Geri",
     "backspace": "Backspace",

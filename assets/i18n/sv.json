@@ -3,6 +3,75 @@
     "title": "Roselt Kalkylator",
     "name": "Roselt Kalkylator"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Inställningar",
+      "title": "Tema och språk",
+      "subtitle": "Välj utseendet på appen. Välj det språk som används i appen."
+    },
+    "summary": {
+      "themeCountLabel": "Teman",
+      "languageCountLabel": "Språk",
+      "copy": "Förhandsgranska alla tillgängliga teman och bläddra i hela listan över språk som stöds."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Utseende",
+        "title": "Tema",
+        "copy": "Välj utseendet på appen."
+      },
+      "languages": {
+        "kicker": "Språk",
+        "title": "Språk",
+        "copy": "Välj språket som används i appen."
+      }
+    },
+    "cards": {
+      "previewLabel": "förhandsgranskning av tema",
+      "lightScheme": "Lätt färgschema",
+      "darkScheme": "Mörkt färgschema",
+      "openTheme": "Öppna det här temat",
+      "openInSettings": "Öppna i inställningarna"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Ändringslogg",
+      "title": "Varje version, från den första versionen till idag.",
+      "intro": "Roselt Calculator gick från en fristående webbräknare till en fullt paketerad app för flera plattformar och flera språk i en serie fokuserade utgåvor. Den här sidan spårar vad som ändrades i varje version från 1.0.0 till 12.0.0.",
+      "versionHistory": "Versionshistorik"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Calculator hem",
+      "updates": "Uppdateringar",
+      "launchCalculator": "Starta kalkylator",
+      "launchCalculatorNewTab": "Starta kalkylatorn på en ny flik",
+      "primaryNavigation": "Primär navigering"
+    },
+    "hero": {
+      "title": "Den bästa kalkylatorappen",
+      "subtitle": "Ditt hem för standard, vetenskaplig och avancerad miniräknare."
+    },
+    "downloads": {
+      "aria": "Plattformnedladdningar",
+      "steam": "Ladda ner på Steam",
+      "flathub": "Ladda ner på Flathub",
+      "googlePlay": "Ladda ned på Google Play Butik",
+      "preview": "Roselt Calculator liveförhandsvisning"
+    },
+    "modal": {
+      "title": "Kommer snart!",
+      "close": "Stäng kommer snart popup",
+      "dismiss": "Förstår"
+    },
+    "menus": {
+      "loadingLanguages": "Laddar språk...",
+      "loadingThemes": "Läser in teman...",
+      "noMatches": "Inga matchningar"
+    }
+  },
   "common": {
     "back": "Tillbaka",
     "backspace": "Backsteg",

@@ -3,6 +3,75 @@
     "title": "Roselt Lommeregner",
     "name": "Roselt Lommeregner"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Præferencer",
+      "title": "Tema og sprog",
+      "subtitle": "Vælg appens udseende. Vælg det sprog, der bruges på tværs af appen."
+    },
+    "summary": {
+      "themeCountLabel": "Temaer",
+      "languageCountLabel": "Sprog",
+      "copy": "Se et eksempel på alle tilgængelige temaer, og gennemse den fulde liste over understøttede sprog."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Udseende",
+        "title": "Tema",
+        "copy": "Vælg appens udseende."
+      },
+      "languages": {
+        "kicker": "Sprog",
+        "title": "Sprog",
+        "copy": "Vælg det sprog, der bruges på tværs af appen."
+      }
+    },
+    "cards": {
+      "previewLabel": "forhåndsvisning af tema",
+      "lightScheme": "Lys farvesammensætning",
+      "darkScheme": "Mørkt farveskema",
+      "openTheme": "Åbn dette tema",
+      "openInSettings": "Åbn i indstillingerne"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Ændringslog",
+      "title": "Hver udgivelse, fra den første build til i dag.",
+      "intro": "Roselt Calculator gik fra et selvstændigt webberegnerfundament til en fuldt pakket multi-platform, multi-sprog app i en række fokuserede udgivelser. Denne side sporer, hvad der er ændret i hver version fra 1.0.0 til 12.0.0.",
+      "versionHistory": "Versionshistorik"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Lommeregner hjem",
+      "updates": "Opdateringer",
+      "launchCalculator": "Start Lommeregner",
+      "launchCalculatorNewTab": "Start Lommeregner på en ny fane",
+      "primaryNavigation": "Primær navigation"
+    },
+    "hero": {
+      "title": "Den bedste lommeregner-app",
+      "subtitle": "Dit hjem til standard, videnskabeligt og avanceret lommeregnerarbejde."
+    },
+    "downloads": {
+      "aria": "Platformdownloads",
+      "steam": "Download på Steam",
+      "flathub": "Download på Flathub",
+      "googlePlay": "Download i Google Play Butik",
+      "preview": "Roselt Calculator live forhåndsvisning"
+    },
+    "modal": {
+      "title": "Kommer snart!",
+      "close": "Luk kommer snart pop op",
+      "dismiss": "Forstår det"
+    },
+    "menus": {
+      "loadingLanguages": "Indlæser sprog...",
+      "loadingThemes": "Indlæser temaer...",
+      "noMatches": "Ingen matcher"
+    }
+  },
   "common": {
     "back": "Tilbage",
     "backspace": "Tilbage",

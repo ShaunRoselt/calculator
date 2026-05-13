@@ -3,6 +3,75 @@
     "title": "Roselt 電卓",
     "name": "Roselt 電卓"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "設定",
+      "title": "テーマと言語",
+      "subtitle": "アプリの外観を選択します。アプリ全体で使用される言語を選択します。"
+    },
+    "summary": {
+      "themeCountLabel": "テーマ",
+      "languageCountLabel": "言語",
+      "copy": "利用可能なすべてのテーマをプレビューし、サポートされている完全な言語リストを参照します。"
+    },
+    "sections": {
+      "themes": {
+        "kicker": "外観",
+        "title": "テーマ",
+        "copy": "アプリの外観を選択します。"
+      },
+      "languages": {
+        "kicker": "言語",
+        "title": "言語",
+        "copy": "アプリ全体で使用される言語を選択します。"
+      }
+    },
+    "cards": {
+      "previewLabel": "テーマのプレビュー",
+      "lightScheme": "明るい配色",
+      "darkScheme": "ダークな配色",
+      "openTheme": "このテーマを開く",
+      "openInSettings": "設定で開く"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "変更履歴",
+      "title": "最初のビルドから今日までのすべてのリリース。",
+      "intro": "Roselt Calculator は、一連の重点リリースにより、スタンドアロンの Web 電卓基盤から、完全にパッケージ化されたマルチプラットフォーム、多言語アプリになりました。このページでは、1.0.0 から 12.0.0 までの各バージョンでの変更点を追跡します。",
+      "versionHistory": "バージョン履歴"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "ローゼルト電卓のホーム",
+      "updates": "アップデート",
+      "launchCalculator": "電卓を起動",
+      "launchCalculatorNewTab": "新しいタブで電卓を起動します",
+      "primaryNavigation": "プライマリナビゲーション"
+    },
+    "hero": {
+      "title": "最高の電卓アプリ",
+      "subtitle": "標準計算、科学計算、および高度な計算作業のためのホームです。"
+    },
+    "downloads": {
+      "aria": "プラットフォームのダウンロード",
+      "steam": "Steam でダウンロード",
+      "flathub": "Flathub でダウンロード",
+      "googlePlay": "Google Play ストアでダウンロード",
+      "preview": "ローゼルト電卓のライブ プレビュー"
+    },
+    "modal": {
+      "title": "近日公開予定！",
+      "close": "近日ポップアップを閉じる",
+      "dismiss": "わかりました"
+    },
+    "menus": {
+      "loadingLanguages": "言語を読み込み中...",
+      "loadingThemes": "テーマを読み込み中...",
+      "noMatches": "一致するものはありません"
+    }
+  },
   "common": {
     "back": "戻る",
     "backspace": "バックスペース",

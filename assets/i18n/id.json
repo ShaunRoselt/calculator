@@ -3,6 +3,75 @@
     "title": "Roselt Kalkulator",
     "name": "Roselt Kalkulator"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferensi",
+      "title": "Tema & Bahasa",
+      "subtitle": "Pilih tampilan aplikasi. Pilih bahasa yang digunakan di seluruh aplikasi."
+    },
+    "summary": {
+      "themeCountLabel": "Tema",
+      "languageCountLabel": "Bahasa",
+      "copy": "Pratinjau setiap tema yang tersedia dan jelajahi daftar lengkap bahasa yang didukung."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Penampilan",
+        "title": "Tema",
+        "copy": "Pilih tampilan aplikasi."
+      },
+      "languages": {
+        "kicker": "Bahasa",
+        "title": "Bahasa",
+        "copy": "Pilih bahasa yang digunakan di seluruh aplikasi."
+      }
+    },
+    "cards": {
+      "previewLabel": "pratinjau tema",
+      "lightScheme": "Skema warna terang",
+      "darkScheme": "Skema warna gelap",
+      "openTheme": "Buka tema ini",
+      "openInSettings": "Buka di pengaturan"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "log perubahan",
+      "title": "Setiap rilis, dari versi pertama hingga hari ini.",
+      "intro": "Kalkulator Roselt beralih dari fondasi kalkulator web mandiri menjadi aplikasi multi-platform dan multi-bahasa yang dikemas penuh dalam serangkaian rilis terfokus. Halaman ini melacak apa yang berubah di setiap versi dari 1.0.0 hingga 12.0.0.",
+      "versionHistory": "Riwayat versi"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Beranda Kalkulator Roselt",
+      "updates": "Pembaruan",
+      "launchCalculator": "Luncurkan Kalkulator",
+      "launchCalculatorNewTab": "Luncurkan Kalkulator di tab baru",
+      "primaryNavigation": "Navigasi utama"
+    },
+    "hero": {
+      "title": "Aplikasi Kalkulator Terbaik",
+      "subtitle": "Rumah Anda untuk pekerjaan kalkulator standar, ilmiah, dan lanjutan."
+    },
+    "downloads": {
+      "aria": "Unduhan platform",
+      "steam": "Unduh di Steam",
+      "flathub": "Unduh di Flathub",
+      "googlePlay": "Unduh di Google Play Store",
+      "preview": "Pratinjau langsung Kalkulator Roselt"
+    },
+    "modal": {
+      "title": "Segera Hadir!",
+      "close": "Tutup segera hadir",
+      "dismiss": "Mengerti"
+    },
+    "menus": {
+      "loadingLanguages": "Memuat bahasa...",
+      "loadingThemes": "Memuat tema...",
+      "noMatches": "Tidak ada yang cocok"
+    }
+  },
   "common": {
     "back": "Kembali",
     "backspace": "Backspace",

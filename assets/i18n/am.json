@@ -3,6 +3,75 @@
     "title": "Roselt ካልኩሌተር",
     "name": "Roselt ካልኩሌተር"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "ምርጫዎች",
+      "title": "ገጽታ እና ቋንቋ",
+      "subtitle": "የመተግበሪያውን ገጽታ ይምረጡ። በመተግበሪያው ውስጥ ጥቅም ላይ የዋለውን ቋንቋ ይምረጡ።"
+    },
+    "summary": {
+      "themeCountLabel": "ገጽታዎች",
+      "languageCountLabel": "ቋንቋዎች",
+      "copy": "የሚገኘውን እያንዳንዱን ገጽታ አስቀድመው ይመልከቱ እና ሙሉ የሚደገፈውን የቋንቋ ዝርዝር ያስሱ።"
+    },
+    "sections": {
+      "themes": {
+        "kicker": "መልክ",
+        "title": "ገጽታ",
+        "copy": "የመተግበሪያውን ገጽታ ይምረጡ።"
+      },
+      "languages": {
+        "kicker": "ቋንቋ",
+        "title": "ቋንቋ",
+        "copy": "በመተግበሪያው ላይ የሚጠቀመውን ቋንቋ ይምረጡ።"
+      }
+    },
+    "cards": {
+      "previewLabel": "የገጽታ ቅድመ እይታ",
+      "lightScheme": "ፈካ ያለ የቀለም ዘዴ",
+      "darkScheme": "የጨለማ የቀለም ዘዴ",
+      "openTheme": "ይህንን ገጽታ ይክፈቱ",
+      "openInSettings": "በቅንብሮች ውስጥ ክፈት"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "ለውጥ",
+      "title": "እያንዳንዱ ልቀት፣ ከመጀመሪያው ግንባታ እስከ ዛሬ።",
+      "intro": "Roselt ካልኩሌተር ራሱን የቻለ የድር ማስያ ፋውንዴሽን ወደ ሙሉ በሙሉ ወደታሸገ፣ ባለብዙ ፕላትፎርም፣ ባለብዙ ቋንቋ መተግበሪያ በተከታታይ በተለቀቁ ልቀቶች ሄደ። ይህ ገጽ በእያንዳንዱ ስሪት ከ1.0.0 እስከ 12.0.0 ያለውን ለውጥ ይከታተላል።",
+      "versionHistory": "የስሪት ታሪክ"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt ካልኩሌተር መነሻ",
+      "updates": "ዝማኔዎች",
+      "launchCalculator": "ካልኩሌተርን አስጀምር",
+      "launchCalculatorNewTab": "ካልኩሌተርን በአዲስ ትር አስጀምር",
+      "primaryNavigation": "ዋና አሰሳ"
+    },
+    "hero": {
+      "title": "ምርጥ ካልኩሌተር መተግበሪያ",
+      "subtitle": "የእርስዎ ቤት ለመደበኛ፣ ሳይንሳዊ እና የላቀ ካልኩሌተር ሥራ።"
+    },
+    "downloads": {
+      "aria": "የመሳሪያ ስርዓት ውርዶች",
+      "steam": "በSteam ላይ አውርድ",
+      "flathub": "በFlathub ላይ አውርድ",
+      "googlePlay": "በGoogle ፕሌይ ስቶር ላይ አውርድ",
+      "preview": "Roselt ካልኩሌተር የቀጥታ ቅድመ እይታ"
+    },
+    "modal": {
+      "title": "በቅርብ ቀን!",
+      "close": "በቅርብ ጊዜ ብቅ-ባይ ዝጋ",
+      "dismiss": "ገባኝ።"
+    },
+    "menus": {
+      "loadingLanguages": "ቋንቋዎችን በመጫን ላይ...",
+      "loadingThemes": "ገጽታዎችን በመጫን ላይ...",
+      "noMatches": "ምንም ተዛማጅ የለም።"
+    }
+  },
   "common": {
     "back": "ተመለስ",
     "backspace": "የኋላ ቦታ",

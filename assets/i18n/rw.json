@@ -3,6 +3,75 @@
     "title": "Roselt Kubara",
     "name": "Roselt Kubara"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Ibyifuzo",
+      "title": "Insanganyamatsiko & Ururimi",
+      "subtitle": "Tora isura ya porogaramu. Hitamo ururimi rukoreshwa muri porogaramu."
+    },
+    "summary": {
+      "themeCountLabel": "Insanganyamatsiko",
+      "languageCountLabel": "Indimi",
+      "copy": "Reba buri nsanganyamatsiko iboneka hanyuma urebe urutonde rwururimi rushyigikiwe."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Kugaragara",
+        "title": "Insanganyamatsiko",
+        "copy": "Tora isura ya porogaramu."
+      },
+      "languages": {
+        "kicker": "Ururimi",
+        "title": "Ururimi",
+        "copy": "Hitamo imvugo ikoreshwa muri porogaramu."
+      }
+    },
+    "cards": {
+      "previewLabel": "kureba insanganyamatsiko",
+      "lightScheme": "Igishushanyo cyamabara yoroheje",
+      "darkScheme": "Igishushanyo cyijimye",
+      "openTheme": "Fungura iyi nsanganyamatsiko",
+      "openInSettings": "Fungura mumiterere"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "Every release, from the first build to today.",
+      "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.0.0.",
+      "versionHistory": "Version history"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Inzu ya Roselt",
+      "updates": "Amakuru agezweho",
+      "launchCalculator": "Gutangiza Kubara",
+      "launchCalculatorNewTab": "Tangiza Kalkuliyeri muri tab nshya",
+      "primaryNavigation": "Kugenda kwambere"
+    },
+    "hero": {
+      "title": "Porogaramu nziza yo kubara",
+      "subtitle": "Urugo rwawe kubikorwa bisanzwe, siyanse, kandi bigezweho."
+    },
+    "downloads": {
+      "aria": "Gukuramo porogaramu",
+      "steam": "Gukuramo kuri Steam",
+      "flathub": "Gukuramo kuri Flathub",
+      "googlePlay": "Gukuramo Ububiko bwa Google",
+      "preview": "Roselt Calculator iboneka neza"
+    },
+    "modal": {
+      "title": "Vuba!",
+      "close": "Gufunga vuba vuba popup",
+      "dismiss": "Yabonye"
+    },
+    "menus": {
+      "loadingLanguages": "Gutwara indimi ...",
+      "loadingThemes": "Gutwara insanganyamatsiko ...",
+      "noMatches": "Ntaho bihuriye"
+    }
+  },
   "common": {
     "back": "Inyuma",
     "backspace": "Umwanya winyuma",

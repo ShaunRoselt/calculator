@@ -3,6 +3,75 @@
     "title": "Roselt Kalkulatër",
     "name": "Roselt Kalkulatër"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferences",
+      "title": "Theme & Language",
+      "subtitle": "Pick the look of the app. Choose the language used across the app."
+    },
+    "summary": {
+      "themeCountLabel": "Themes",
+      "languageCountLabel": "Languages",
+      "copy": "Preview every available theme and browse the full supported language list."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Appearance",
+        "title": "Theme",
+        "copy": "Pick the look of the app."
+      },
+      "languages": {
+        "kicker": "Language",
+        "title": "Language",
+        "copy": "Choose the language used across the app."
+      }
+    },
+    "cards": {
+      "previewLabel": "theme preview",
+      "lightScheme": "Light color scheme",
+      "darkScheme": "Dark color scheme",
+      "openTheme": "Open this theme",
+      "openInSettings": "Open in settings"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Journal coppite",
+      "title": "Bépp génne, daale ko ci tabax bu njëkk bi ba tay.",
+      "intro": "Roselt Calculator joge na ci fondaasioŋ kalkulatër web bu nekk boppam dem ba nekk aplikaasioŋ bu mat sëkk, platform yu bari, làkk yu bari ci ay génne yuñ tànn. Xët wii dafay topp li soppeeku ci bépp verisioŋ daale ko ci 1.0.0 ba ci 12.0.0.",
+      "versionHistory": "Taarixu jëmmal"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt kalkulatër kër",
+      "updates": "yeesal",
+      "launchCalculator": "Ubbi kalkulatër bi",
+      "launchCalculatorNewTab": "Ubbi kalkulatër bi ci lëkkalekaay bu bees",
+      "primaryNavigation": "Navigation bu njëkk"
+    },
+    "hero": {
+      "title": "App kalkulatër bi gëna baax",
+      "subtitle": "Sa kër ngir liggéeyum kalkulatër buñ miin, science ak xarañte."
+    },
+    "downloads": {
+      "aria": "Yebbi platform",
+      "steam": "Yebbi ci Steam",
+      "flathub": "Yebbi ci Flathub",
+      "googlePlay": "Yebbi ci Màngasin Google Play",
+      "preview": "Roselt kalkulatër bi ñuy xool ci saasi"
+    },
+    "modal": {
+      "title": "Dikk!",
+      "close": "Popup buy ñëw tëj",
+      "dismiss": "Jot"
+    },
+    "menus": {
+      "loadingLanguages": "Lakk yiy yobbu...",
+      "loadingThemes": "Dafay yobbu tema yi...",
+      "noMatches": "Amul méngoo"
+    }
+  },
   "common": {
     "back": "Dellu",
     "backspace": "Dellu ginaaw",

@@ -3,6 +3,75 @@
     "title": "Roselt Khalekhuleita",
     "name": "Roselt Khalekhuleita"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferences",
+      "title": "Theme & Language",
+      "subtitle": "Pick the look of the app. Choose the language used across the app."
+    },
+    "summary": {
+      "themeCountLabel": "Themes",
+      "languageCountLabel": "Languages",
+      "copy": "Preview every available theme and browse the full supported language list."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Appearance",
+        "title": "Theme",
+        "copy": "Pick the look of the app."
+      },
+      "languages": {
+        "kicker": "Language",
+        "title": "Language",
+        "copy": "Choose the language used across the app."
+      }
+    },
+    "cards": {
+      "previewLabel": "theme preview",
+      "lightScheme": "Light color scheme",
+      "darkScheme": "Dark color scheme",
+      "openTheme": "Open this theme",
+      "openInSettings": "Open in settings"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Lekwalophetogo",
+      "title": "Kgololo nngwe le nngwe, go tswa mo kagong ya ntlha go fitlha gompieno.",
+      "intro": "Roselt Calculator e ne ya tswa mo motheong wa khalekhuleita ya webo e e ikemetseng ka nosi go ya go tiriswa e e phuthetsweng ka botlalo, ya dipolatefomo tse dintsi, ya dipuo tse dintsi mo motseletseleng wa ditokololo tse di tsepameng. Tsebe eno e latedisa se se fetogileng mo mofuteng mongwe le mongwe go tswa go 1.0.0 go ya go 12.0.0.",
+      "versionHistory": "Hisitori ya mofuta"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Legae la Khalekhuleita ya Roselt",
+      "updates": "Dintšhwafatso",
+      "launchCalculator": "Simolola Khalekhuleitara",
+      "launchCalculatorNewTab": "Simolola Khalekhuleitara mo thebong e ntšha",
+      "primaryNavigation": "Go tsamaya ga motheo"
+    },
+    "hero": {
+      "title": "Tiriswa e e Gaisang tsotlhe ya Khalekhuleitara",
+      "subtitle": "Legae la gago la tiro ya khalekhuleita e e tlwaelegileng, ya saense le ya maemo a a kwa godimo."
+    },
+    "downloads": {
+      "aria": "Ditaisololo tsa polatefomo",
+      "steam": "Laisolola mo Steam",
+      "flathub": "Laisolola mo Flathub",
+      "googlePlay": "Laisolola mo Lebenkeleng la Google Play",
+      "preview": "Tebopele e e tshelang ya Khalekhuleitara ya Roselt"
+    },
+    "modal": {
+      "title": "Ya tla mo bogautshwaneng!",
+      "close": "Tswala e tla tloga e tlhagelela",
+      "dismiss": "E bone"
+    },
+    "menus": {
+      "loadingLanguages": "Go laisa dipuo...",
+      "loadingThemes": "Go laisa dithitokgang...",
+      "noMatches": "Ga go na ditshwano"
+    }
+  },
   "common": {
     "back": "Morago",
     "backspace": "Sebaka sa go boela morago",

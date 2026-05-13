@@ -3,6 +3,75 @@
     "title": "Roselt Számológép",
     "name": "Roselt Számológép"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Beállítások",
+      "title": "Téma és nyelv",
+      "subtitle": "Válassza ki az alkalmazás megjelenését. Válassza ki az alkalmazásban használt nyelvet."
+    },
+    "summary": {
+      "themeCountLabel": "Témák",
+      "languageCountLabel": "Nyelvek",
+      "copy": "Tekintse meg az összes elérhető témát, és böngésszen a támogatott nyelvek teljes listájában."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Megjelenés",
+        "title": "Téma",
+        "copy": "Válassza ki az alkalmazás megjelenését."
+      },
+      "languages": {
+        "kicker": "Nyelv",
+        "title": "Nyelv",
+        "copy": "Válassza ki az alkalmazásban használt nyelvet."
+      }
+    },
+    "cards": {
+      "previewLabel": "téma előnézete",
+      "lightScheme": "Világos színséma",
+      "darkScheme": "Sötét színséma",
+      "openTheme": "Nyissa meg ezt a témát",
+      "openInSettings": "Megnyitás a beállításokban"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Változásnapló",
+      "title": "Minden kiadás, az első buildtől a mai napig.",
+      "intro": "A Roselt Calculator egy önálló webes számológép alapból egy teljesen becsomagolt, többplatformos, többnyelvű alkalmazássá vált egy sor speciális kiadásban. Ez az oldal nyomon követi, hogy mi változott az egyes verziókban 1.0.0 és 12.0.0 között.",
+      "versionHistory": "Verzióelőzmények"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "A Roselt kalkulátor főoldala",
+      "updates": "Frissítések",
+      "launchCalculator": "Indítsa el a Számológépet",
+      "launchCalculatorNewTab": "Indítsa el a Számológépet egy új lapon",
+      "primaryNavigation": "Elsődleges navigáció"
+    },
+    "hero": {
+      "title": "A legjobb számológép alkalmazás",
+      "subtitle": "Otthona a szokásos, tudományos és haladó számológépes munkákhoz."
+    },
+    "downloads": {
+      "aria": "Platformletöltések",
+      "steam": "Letöltés a Steamen",
+      "flathub": "Letöltés Flathubon",
+      "googlePlay": "Letöltés a Google Play Áruházból",
+      "preview": "A Roselt Calculator élő előnézete"
+    },
+    "modal": {
+      "title": "Hamarosan!",
+      "close": "Hamarosan bezárás előugró ablak",
+      "dismiss": "Értem"
+    },
+    "menus": {
+      "loadingLanguages": "Nyelvek betöltése...",
+      "loadingThemes": "Témák betöltése...",
+      "noMatches": "Nincs találat"
+    }
+  },
   "common": {
     "back": "Vissza",
     "backspace": "Backspace",

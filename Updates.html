@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Full changelog and release history for Roselt Calculator from version 1.0.0 through 12.0.0." />
+    <meta name="theme-color" content="#1f2025" />
+    <title>Roselt Calculator | Release History</title>
+    <link rel="icon" id="page-favicon" type="image/svg+xml" href="assets/logos/dark.svg" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="styles/landing.css" />
+    <link rel="stylesheet" href="styles/theme.css" />
+    <link rel="stylesheet" href="styles/Views/DateCalculator.css" />
+    <link rel="stylesheet" href="styles/Views/Settings.css" />
+    <link rel="stylesheet" href="styles/publicPage.css" />
+    <link rel="stylesheet" id="active-theme-stylesheet" href="assets/themes/css/dark.css" />
+    <style>
+      .updates-body {
+        --timeline-meta-width: 104px;
+        --timeline-gap: 3rem;
+      }
+
+      .updates-hero {
+        padding: 7rem 2rem 4rem;
+        max-width: var(--page-max-width);
+        margin: 0 auto;
+      }
+
+      .updates-hero .eyebrow {
+        margin-bottom: 0.75rem;
+      }
+
+      .updates-hero h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 700;
+        line-height: 1.15;
+        margin: 0 0 1.25rem;
+        max-width: 38ch;
+      }
+
+      .updates-hero p {
+        color: var(--page-text-soft);
+        font-size: 1.1rem;
+        max-width: 56ch;
+        margin: 0;
+        line-height: 1.7;
+      }
+
+      .changelog-section {
+        padding: 2rem 2rem 5rem;
+        max-width: var(--page-max-width);
+        margin: 0 auto;
+      }
+
+      .changelog-timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        position: relative;
+      }
+
+      .changelog-timeline::before {
+        content: '';
+        position: absolute;
+        left: calc(var(--timeline-meta-width) + (var(--timeline-gap) / 2));
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: var(--page-border);
+      }
+
+      .changelog-entry {
+        display: grid;
+        grid-template-columns: var(--timeline-meta-width) minmax(0, 1fr);
+        gap: 0 var(--timeline-gap);
+        position: relative;
+        padding-bottom: 3rem;
+      }
+
+      .changelog-entry:last-child {
+        padding-bottom: 0;
+      }
+
+      .changelog-entry-meta {
+        text-align: right;
+        padding-right: 0.35rem;
+        padding-top: 0.15rem;
+        position: relative;
+      }
+
+      .changelog-entry-meta::after {
+        content: '';
+        position: absolute;
+        right: calc(var(--timeline-gap) / -2);
+        top: 0.95rem;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--page-accent);
+        border: 2px solid var(--page-bg);
+        transform: translate(50%, -50%);
+        box-shadow: 0 0 0 1px var(--page-accent);
+      }
+
+      .changelog-entry.entry-major .changelog-entry-meta::after {
+        background: var(--page-accent-2);
+        box-shadow: 0 0 0 1px var(--page-accent-2), 0 0 12px rgba(103, 180, 255, 0.4);
+        width: 11px;
+        height: 11px;
+        top: 0.95rem;
+      }
+
+      .changelog-version-badge {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        color: var(--page-accent);
+        background: rgba(121, 230, 179, 0.12);
+        border: 1px solid rgba(121, 230, 179, 0.25);
+        border-radius: 999px;
+        padding: 0.2rem 0.55rem;
+        white-space: nowrap;
+      }
+
+      .changelog-entry.entry-major .changelog-version-badge {
+        color: var(--page-accent-2);
+        background: rgba(103, 180, 255, 0.12);
+        border-color: rgba(103, 180, 255, 0.28);
+      }
+
+      .changelog-date {
+        font-size: 0.7rem;
+        color: var(--page-text-muted);
+        margin-top: 0.35rem;
+        line-height: 1.3;
+      }
+
+      .changelog-body {
+        padding-top: 0;
+      }
+
+      .changelog-body h2 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem;
+        color: var(--page-text);
+        line-height: 1.3;
+      }
+
+      .changelog-body .changelog-summary {
+        font-size: 0.9rem;
+        color: var(--page-text-soft);
+        margin: 0 0 1rem;
+        line-height: 1.65;
+      }
+
+      .changelog-body ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .changelog-body ul li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        font-size: 0.875rem;
+        color: var(--page-text-soft);
+        line-height: 1.55;
+      }
+
+      .changelog-body ul li::before {
+        content: '';
+        flex-shrink: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--page-accent);
+        margin-top: 0.48rem;
+      }
+
+      .changelog-entry.entry-major .changelog-body ul li::before {
+        background: var(--page-accent-2);
+      }
+
+      .changelog-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 1rem;
+      }
+
+      .changelog-tag {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        padding: 0.2rem 0.55rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--page-text-muted);
+        border: 1px solid var(--page-border);
+      }
+
+      .changelog-divider {
+        border: none;
+        border-top: 1px solid var(--page-border);
+        margin: 3rem 0;
+      }
+
+      @media (max-width: 600px) {
+        .changelog-timeline::before {
+          display: none;
+        }
+
+        .changelog-entry {
+          grid-template-columns: 1fr;
+          gap: 0.5rem;
+        }
+
+        .changelog-entry-meta {
+          text-align: left;
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+        }
+
+        .changelog-entry-meta::after {
+          display: none;
+        }
+
+        .changelog-date {
+          margin-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="landing-body updates-body">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="page-header">
+      <div class="page-header__inner">
+        <a class="page-header__brand" href="index.html" aria-label="Roselt Calculator home">
+          <img src="assets/logos/dark.svg" alt="Roselt Calculator logo" width="30" height="30" />
+          <span class="page-header__brand-name">Roselt Calculator</span>
+        </a>
+
+        <nav class="page-header__nav" aria-label="Primary navigation" data-primary-nav>
+          <a class="page-header__link" data-themes-link href="themes.html" hidden>Themes</a>
+          <a class="page-header__link" data-updates-link href="Updates.html">Updates</a>
+        </nav>
+
+        <span class="page-header__spacer" aria-hidden="true"></span>
+
+        <div class="page-header__controls">
+          <div class="date-native-select-wrap settings-select-wrap settings-select-menu-wrap" data-menu-wrap="language">
+            <button type="button" class="date-native-select-button settings-select-button" data-menu-toggle="language" aria-haspopup="listbox" aria-expanded="false" aria-controls="language-menu" aria-label="Language">
+              <span class="settings-select-button-label">Loading languages...</span>
+            </button>
+            <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
+            <div class="date-native-mode-menu settings-select-menu" id="language-menu" data-menu-panel="language" role="listbox" aria-label="Language" hidden></div>
+          </div>
+
+          <div class="date-native-select-wrap settings-select-wrap settings-select-menu-wrap" data-menu-wrap="theme">
+            <button type="button" class="date-native-select-button settings-select-button" data-menu-toggle="theme" aria-haspopup="listbox" aria-expanded="false" aria-controls="theme-menu" aria-label="Theme">
+              <span class="settings-select-button-label">Loading themes...</span>
+            </button>
+            <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
+            <div class="date-native-mode-menu settings-select-menu" id="theme-menu" data-menu-panel="theme" role="listbox" aria-label="Theme" hidden></div>
+          </div>
+
+          <a class="page-header__cta" data-launch-link href="app.html?page=standard&theme=dark&language=en" target="_blank" rel="noopener noreferrer">Launch Calculator</a>
+        </div>
+      </div>
+    </header>
+    <div class="landing-shell">
+      <main id="main-content">
+        <div class="updates-hero">
+          <p class="eyebrow" data-updates-eyebrow>Changelog</p>
+          <h1 data-updates-title>Every release, from the first build to today.</h1>
+          <p data-updates-intro>
+            Roselt Calculator went from a standalone web calculator foundation to a fully packaged,
+            multi-platform, multi-language app in a series of focused releases. This page tracks what
+            changed in each version from 1.0.0 through 12.0.0.
+          </p>
+        </div>
+
+        <section class="changelog-section" aria-labelledby="changelog-title">
+          <h2 id="changelog-title" class="sr-only" data-changelog-title>Version history</h2>
+          <div class="changelog-timeline">
+
+            <!-- 12.0.0 -->
+            <article class="changelog-entry entry-major">
+              <div class="changelog-entry-meta">
+                <span class="changelog-version-badge">12.0.0</span>
+                <div class="changelog-date">May 2026</div>
+              </div>
+              <div class="changelog-body">
+                <h2>Polish, expanded themes, and platform publishing</h2>
+                <p class="changelog-summary">
+                  The 12.0.0 cycle focused on refinement across every surface — a fuller theme catalog,
+                  dedicated per-theme CSS files, theme preloading, currency localization, settings search,
+                  a Steam Store build, and a live preview window on the public site.
+                </p>
+                <ul>
+                  <li>Added a live preview window for the calculator on the public website with controls and a responsive frame.</li>
+                  <li>Added search functionality for themes and languages in the settings panel.</li>
+                  <li>Preserved settings scroll position when toggling preference toggles.</li>
+                  <li>Each theme now has its own dedicated CSS file for cleaner loading and isolation.</li>
+                  <li>Added theme preloading and enhanced theme management in the app shell.</li>
+                  <li>Added Matrix Rain theme with SVG logos and JSON configuration.</li>
+                  <li>Expanded the theme and language catalog significantly.</li>
+                  <li>Added currency localization support via locale-currency integration.</li>
+                  <li>Added AppImage packaging script for Linux distributions.</li>
+                  <li>Finalized Flathub manifest and submission documentation.</li>
+                  <li>Added Steam Store publish preparation work.</li>
+                  <li>Refactored code structure for improved readability and maintainability.</li>
+                  <li>Added button digit text color as a dedicated CSS variable.</li>
+                  <li>Added a script to generate app screenshots.</li>
+                  <li>Refactored window dimensions and minimum size for better layout handling.</li>
+                  <li>Updated navigation buttons to use anchor tags for better accessibility and routing.</li>
+                  <li>Fixed CSS variable usage for settings expander border radius.</li>
+                </ul>
+                <div class="changelog-tags">
+                  <span class="changelog-tag">Themes</span>
+                  <span class="changelog-tag">Localization</span>
+                  <span class="changelog-tag">Settings</span>
+                  <span class="changelog-tag">Linux</span>
+                  <span class="changelog-tag">Polish</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 11.0.0 -->
+            <article class="changelog-entry entry-major">
+              <div class="changelog-entry-meta">
+                <span class="changelog-version-badge">11.0.0</span>
+                <div class="changelog-date">Apr – May 2026</div>
+              </div>
+              <div class="changelog-body">
+                <h2>Rebranding, multilingual support, and themes showcase</h2>
+                <p class="changelog-summary">
+                  The project was formally renamed to Roselt Calculator, a large batch of new themes and
+                  languages were added, and a public themes showcase page was built with live embedded
+                  calculator previews.
+                </p>
+                <ul>
+                  <li>Rebranded from the working name to <strong>Roselt Calculator</strong>.</li>
+                  <li>Added multilanguage support with a large initial set of interface translations.</li>
+                  <li>Added a significant expansion of new languages and themes in one release.</li>
+                  <li>Introduced a new Themes Selection UI for browsing and applying themes in-app.</li>
+                  <li>Built a public themes showcase page with live calculator previews and a full language index.</li>
+                  <li>Improved button grid layout for Scientific and Programmer modes.</li>
+                  <li>Updated logos and screenshots to reflect the new branding.</li>
+                  <li>Changed Electron app to start on the primary monitor in the mobile UI layout.</li>
+                </ul>
+                <div class="changelog-tags">
+                  <span class="changelog-tag">Rebranding</span>
+                  <span class="changelog-tag">Languages</span>
+                  <span class="changelog-tag">Themes</span>
+                  <span class="changelog-tag">Showcase</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 10.0.0 -->
+            <article class="changelog-entry entry-major">
+              <div class="changelog-entry-meta">
+                <span class="changelog-version-badge">10.0.0</span>
+                <div class="changelog-date">Apr 2026</div>
+              </div>
+              <div class="changelog-body">
+                <h2>Desktop builds: Windows portable, Flatpak, and AppImage</h2>
+                <p class="changelog-summary">
+                  Desktop packaging was expanded beyond the initial Electron integration to include portable
+                  Windows builds, Flatpak support for Linux, and the foundation for AppImage distribution.
+                  A public-facing website was launched alongside packaging work.
+                </p>
+                <ul>
+                  <li>Added Flatpak support for Linux desktop environments.</li>
+                  <li>Added a portable build option for Windows via electron-builder.</li>
+                  <li>Updated Electron and packager dependencies to the latest versions.</li>
+                  <li>Applied various fixes and improvements for the Windows app experience.</li>
+                  <li>Removed the old native Windows app implementation.</li>
+                  <li>Built a public-facing landing website for the installable app.</li>
+                  <li>Added arrow indicators to settings expander summaries for better UX.</li>
+                  <li>Restructured file layout for clarity.</li>
+                  <li>Removed unused service-worker cache and fetch-event handling.</li>
+                </ul>
+                <div class="changelog-tags">
+                  <span class="changelog-tag">Electron</span>
+                  <span class="changelog-tag">Flatpak</span>
+                  <span class="changelog-tag">Windows</span>
+                  <span class="changelog-tag">Website</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 9.0.0 -->
+            <article class="changelog-entry">
+              <div class="changelog-entry-meta">
+                <span class="changelog-version-badge">9.0.0</span>
+                <div class="changelog-date">Apr 2026</div>
+              </div>
+              <div class="changelog-body">
+                <h2>Theming system, PWA, and style consistency</h2>
+                <p class="changelog-summary">
+                  This release introduced the Progressive Web App manifest and service worker,
+                  introduced a consistent CSS variable theming system, and improved button hover
+                  states across the entire interface.
+                </p>
+                <ul>
+                  <li>Added Progressive Web App support including a web manifest and service worker.</li>
+                  <li>Introduced CSS variables for consistent theming across all components.</li>
+                  <li>Updated CSS variables for improved theming and visual consistency across modes.</li>
+                  <li>Enhanced button hover effects using new CSS variables for richer UI feedback.</li>
+                  <li>Fixed the date field rendering by correcting the element type used.</li>
+                  <li>Updated the site header text case for consistency.</li>
+                </ul>
+                <div class="changelog-tags">
+                  <span class="changelog-tag">PWA</span>
+                  <span class="changelog-tag">Theming</span>
+                  <span class="changelog-tag">Styles</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 8.0.0 -->
+            <article class="changelog-entry">
+              <div class="changelog-entry-meta">
+                <span class="changelog-version-badge">8.0.0</span>
+                <div class="changelog-date">Apr 2026</div>
+              </div>
+              <div class="changelog-body">
+                <h2>Electron integration, nerdamer, and unit converter expansion</h2>
+                <p class="changelog-summary">
+                  The app was migrated to Electron for the first time, bringing nerdamer as the symbolic
+                  math engine for the graphing calculator. The unit converter was also expanded with a
+                  larger set of measurement categories.
+                </p>
+                <ul>
+                  <li>Migrated the app to Electron for cross-platform desktop packaging.</li>
+                  <li>Integrated nerdamer as the symbolic math engine powering graphing expressions.</li>
+                  <li>Updated nerdamer script source and removed local dependency copies.</li>
+                  <li>Expanded unit converter categories with additional measurement types.</li>
+                  <li>Added volume unit sub-categories with more conversion options.</li>
+                  <li>Added a <code>factorUnit</code> function for improved unit handling.</li>
+                  <li>Improved implicit multiplication handling in Scientific mode expressions.</li>
+                </ul>
+                <div class="changelog-tags">
+                  <span class="changelog-tag">Electron</span>
+                  <span class="changelog-tag">Nerdamer</span>
+                  <span class="changelog-tag">Units</span>
+                  <span class="changelog-tag">Scientific</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 7.0.0 -->
+            <article class="changelog-entry">
+              <div class="changelog-entry-meta">
+                <span class="changelog-version-badge">7.0.0</span>
+                <div class="changelog-date">Apr 2026</div>
+              </div>
+              <div class="changelog-body">
+                <h2>Tooltips, dynamic icons, and settings polish</h2>
+                <p class="changelog-summary">
+                  A global tooltip system was added across buttons and memory actions. Settings received
+                  dynamic app icon support that updates based on the active theme, and the graphing
+                  calculator was refined with compact mode and icon improvements.
+                </p>
+                <ul>
+                  <li>Implemented a tooltip system across the full application with dynamic descriptions.</li>
+                  <li>Added detailed tooltip data attributes to all button and memory action elements.</li>
+                  <li>Implemented enhanced tooltip functionality across graphing, scientific, and programmer views.</li>
+                  <li>Settings now dynamically updates the app icon based on the selected theme.</li>
+                  <li>Enhanced the graphing calculator UI with a compact display mode and improved icon rendering.</li>
+                  <li>Added a clear history function for the programmer mode history panel.</li>
+                </ul>
+                <div class="changelog-tags">
+                  <span class="changelog-tag">Tooltips</span>
+                  <span class="changelog-tag">Settings</span>
+                  <span class="changelog-tag">Graphing</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6.0.0 -->
+            <article class="changelog-entry">
+              <div class="changelog-entry-meta">
+                <span class="changelog-version-badge">6.0.0</span>
+                <div class="changelog-date">Apr 2026</div>
+              </div>
+              <div class="changelog-body">
+                <h2>Date calculator, history, and memory overhaul</h2>
+                <p class="changelog-summary">
+                  The date calculator mode was built from the ground up, complete with date-specific
+                  history tracking. History and memory management were also refactored across all
+                  modes for more consistent state handling.
+                </p>
+                <ul>
+                  <li>Implemented the Date Calculator with full UI and date range / offset calculations.</li>
+                  <li>Added date calculation history support with state management integration.</li>
+                  <li>Refactored history and memory management for improved and consistent state handling.</li>
+                  <li>Enhanced the programmer mode display panel, controls, and button actions.</li>
+                  <li>Added a history panel with clear history support in Programmer mode.</li>
+                </ul>
+                <div class="changelog-tags">
+                  <span class="changelog-tag">Date</span>
+                  <span class="changelog-tag">History</span>
+                  <span class="changelog-tag">Memory</span>
+                  <span class="changelog-tag">Programmer</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5.0.0 -->
+            <article class="changelog-entry">
+              <div class="changelog-entry-meta">
+                <span class="changelog-version-badge">5.0.0</span>
+                <div class="changelog-date">Apr 2026</div>
+              </div>
+              <div class="changelog-body">
+                <h2>Currency and unit converter</h2>
+                <p class="changelog-summary">
+                  Converter tooling was added as a first-class mode, covering currency exchange with live
+                  rate updates, a currency selection menu, unit conversion across multiple categories, and
+                  dedicated converter history tracking.
+                </p>
+                <ul>
+                  <li>Added currency conversion mode with a full keypad and display.</li>
+                  <li>Implemented a currency selection menu with dynamically populated options.</li>
+                  <li>Added currency rate update functionality with state management.</li>
+                  <li>Refactored internal naming from "currency" to "converter" for broader scope.</li>
+                  <li>Implemented <code>commitConverterHistory</code> and enhanced converter state management.</li>
+                  <li>Added converter history tracking for consistent cross-mode history behavior.</li>
+                </ul>
+                <div class="changelog-tags">
+                  <span class="changelog-tag">Currency</span>
+                  <span class="changelog-tag">Converter</span>
+                  <span class="changelog-tag">History</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4.0.0 -->
+            <article class="changelog-entry">
+              <div class="changelog-entry-meta">
+                <span class="changelog-version-badge">4.0.0</span>
+                <div class="changelog-date">Apr 2026</div>
+              </div>
+              <div class="changelog-body">
+                <h2>Graphing calculator</h2>
+                <p class="changelog-summary">
+                  A full graphing calculator was built and integrated into the app shell, with expression
+                  management, viewport controls, a settings panel, dynamic operator menus, and a compact
+                  display mode for smaller windows.
+                </p>
+                <ul>
+                  <li>Built the graphing calculator layout, keypad, and expression management system.</li>
+                  <li>Implemented graphing functionality with viewport pan and zoom controls.</li>
+                  <li>Enhanced graphing calculator styles and layout for improved responsiveness.</li>
+                  <li>Updated graph status visibility and styling for clearer user feedback.</li>
+                  <li>Added a graph settings panel with viewport reset functionality.</li>
+                  <li>Implemented a graphing menu with dynamic operator options and UI enhancements.</li>
+                  <li>Refactored the graphing calculator UI into focused tool groups.</li>
+                  <li>Enhanced graphing expressions with analysis features.</li>
+                  <li>Set default graphing expressions and status messages for initial state.</li>
+                </ul>
+                <div class="changelog-tags">
+                  <span class="changelog-tag">Graphing</span>
+                  <span class="changelog-tag">New mode</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3.0.0 -->
+            <article class="changelog-entry">
+              <div class="changelog-entry-meta">
+                <span class="changelog-version-badge">3.0.0</span>
+                <div class="changelog-date">Apr 2026</div>
+              </div>
+              <div class="changelog-body">
+                <h2>Programmer mode</h2>
+                <p class="changelog-summary">
+                  Programmer mode was added with full bitwise operations, alternate base displays
+                  (HEX, DEC, OCT, BIN), a bit-flip panel, and a dedicated programmer display panel
+                  for inspecting values at different word widths.
+                </p>
+                <ul>
+                  <li>Implemented Programmer mode with enhanced display and control layout.</li>
+                  <li>Added bitwise operations: AND, OR, XOR, NOT, bit shifts, and rotations.</li>
+                  <li>Added alternate numeral base display (HEX / DEC / OCT / BIN).</li>
+                  <li>Added the programmer bit-flip panel for direct bit toggling.</li>
+                  <li>Added the programmer display panel for word-width value inspection.</li>
+                  <li>Wired up button actions and state management specific to programmer workflows.</li>
+                </ul>
+                <div class="changelog-tags">
+                  <span class="changelog-tag">Programmer</span>
+                  <span class="changelog-tag">Bitwise</span>
+                  <span class="changelog-tag">New mode</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2.0.0 -->
+            <article class="changelog-entry">
+              <div class="changelog-entry-meta">
+                <span class="changelog-version-badge">2.0.0</span>
+                <div class="changelog-date">Apr 2026</div>
+              </div>
+              <div class="changelog-body">
+                <h2>Scientific mode</h2>
+                <p class="changelog-summary">
+                  Scientific mode was introduced with a full set of trigonometric, logarithmic, and
+                  power functions. Angle mode cycling (DEG / RAD / GRAD) was implemented alongside
+                  an updated toolbar and button layout.
+                </p>
+                <ul>
+                  <li>Implemented Scientific mode with operator menus, button layouts, and enhanced functionality.</li>
+                  <li>Added angle mode cycling between DEG, RAD, and GRAD with a dedicated button.</li>
+                  <li>Refactored scientific angle buttons and updated styles for the angle toggle.</li>
+                  <li>Enhanced Scientific mode UI with new button icons and an updated toolbar.</li>
+                  <li>Improved implicit multiplication handling for scientific expressions.</li>
+                  <li>Added side panel auto-show logic based on window dimensions.</li>
+                </ul>
+                <div class="changelog-tags">
+                  <span class="changelog-tag">Scientific</span>
+                  <span class="changelog-tag">Trigonometry</span>
+                  <span class="changelog-tag">New mode</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- 1.0.0 -->
+            <article class="changelog-entry entry-major">
+              <div class="changelog-entry-meta">
+                <span class="changelog-version-badge">1.0.0</span>
+                <div class="changelog-date">5 Apr 2026</div>
+              </div>
+              <div class="changelog-body">
+                <h2>Initial release — web calculator foundation</h2>
+                <p class="changelog-summary">
+                  The first public release established the standalone web calculator shell with Standard
+                  mode, a Windows Calculator-inspired layout, responsive breakpoints, a settings page,
+                  and the navigation structure for all future modes.
+                </p>
+                <ul>
+                  <li>Shipped the standalone web calculator with a Standard arithmetic mode.</li>
+                  <li>Built the app shell with Windows Calculator UI parity as the design baseline.</li>
+                  <li>Implemented responsive layout breakpoints for phone, tablet, and desktop.</li>
+                  <li>Added a settings page with expandable preference sections.</li>
+                  <li>Matched native navigation groups and added placeholder converter views.</li>
+                  <li>Added URL synchronization for mode routing and default mode support.</li>
+                  <li>Fixed relative paths for assets across HTML and JavaScript files.</li>
+                  <li>Set up the initial project structure based on the Windows Calculator open-source foundation.</li>
+                </ul>
+                <div class="changelog-tags">
+                  <span class="changelog-tag">Standard</span>
+                  <span class="changelog-tag">Foundation</span>
+                  <span class="changelog-tag">Initial release</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Roselt Calculator is an independent installable calculator app for the web.</p>
+        <div class="site-footer-links">
+          <a href="index.html">Home</a>
+          <a href="https://github.com/ShaunRoselt/calculator">View source on GitHub</a>
+        </div>
+      </footer>
+    </div>
+    <noscript>
+      <div class="noscript-card">
+        <h1>Roselt Calculator</h1>
+        <p>This page works without JavaScript.</p>
+      </div>
+    </noscript>
+    <script type="module" src="scripts/updatesPage.js"></script>
+  </body>
+</html>

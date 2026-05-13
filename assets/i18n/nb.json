@@ -3,6 +3,75 @@
     "title": "Roselt Kalkulator",
     "name": "Roselt Kalkulator"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferanser",
+      "title": "Tema og språk",
+      "subtitle": "Velg utseendet til appen. Velg språket som brukes i appen."
+    },
+    "summary": {
+      "themeCountLabel": "Temaer",
+      "languageCountLabel": "Språk",
+      "copy": "Forhåndsvis alle tilgjengelige temaer og bla gjennom hele listen over støttede språk."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Utseende",
+        "title": "Tema",
+        "copy": "Velg utseendet til appen."
+      },
+      "languages": {
+        "kicker": "Språk",
+        "title": "Språk",
+        "copy": "Velg språket som brukes i appen."
+      }
+    },
+    "cards": {
+      "previewLabel": "forhåndsvisning av tema",
+      "lightScheme": "Lys fargevalg",
+      "darkScheme": "Mørkt fargevalg",
+      "openTheme": "Åpne dette temaet",
+      "openInSettings": "Åpne i innstillingene"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Endrelogg",
+      "title": "Hver utgivelse, fra den første versjonen til i dag.",
+      "intro": "Roselt Calculator gikk fra et frittstående nettkalkulatorgrunnlag til en fullstendig pakket, multi-plattform, flerspråklig app i en serie fokuserte utgivelser. Denne siden sporer hva som er endret i hver versjon fra 1.0.0 til 12.0.0.",
+      "versionHistory": "Versjonslogg"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Kalkulator hjem",
+      "updates": "Oppdateringer",
+      "launchCalculator": "Start kalkulator",
+      "launchCalculatorNewTab": "Start Kalkulator i en ny fane",
+      "primaryNavigation": "Primær navigasjon"
+    },
+    "hero": {
+      "title": "Den beste kalkulatorappen",
+      "subtitle": "Hjemmet ditt for standard, vitenskapelig og avansert kalkulatorarbeid."
+    },
+    "downloads": {
+      "aria": "Plattformnedlastinger",
+      "steam": "Last ned på Steam",
+      "flathub": "Last ned på Flathub",
+      "googlePlay": "Last ned på Google Play Butikk",
+      "preview": "Roselt Calculator live forhåndsvisning"
+    },
+    "modal": {
+      "title": "Kommer snart!",
+      "close": "Stengt kommer snart popup",
+      "dismiss": "Skjønner det"
+    },
+    "menus": {
+      "loadingLanguages": "Laster inn språk ...",
+      "loadingThemes": "Laster inn temaer …",
+      "noMatches": "Ingen treff"
+    }
+  },
   "common": {
     "back": "Tilbake",
     "backspace": "Tilbake",

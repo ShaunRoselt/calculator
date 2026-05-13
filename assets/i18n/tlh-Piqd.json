@@ -3,6 +3,75 @@
     "title": "Roselt ",
     "name": "Roselt "
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferences",
+      "title": "Theme & Language",
+      "subtitle": "Pick the look of the app. Choose the language used across the app."
+    },
+    "summary": {
+      "themeCountLabel": "Themes",
+      "languageCountLabel": "Languages",
+      "copy": "Preview every available theme and browse the full supported language list."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Appearance",
+        "title": "Theme",
+        "copy": "Pick the look of the app."
+      },
+      "languages": {
+        "kicker": "Language",
+        "title": "Language",
+        "copy": "Choose the language used across the app."
+      }
+    },
+    "cards": {
+      "previewLabel": "theme preview",
+      "lightScheme": "Light color scheme",
+      "darkScheme": "Dark color scheme",
+      "openTheme": "Open this theme",
+      "openInSettings": "Open in settings"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "Every release, from the first build to today.",
+      "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.0.0.",
+      "versionHistory": "Version history"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Calculator home",
+      "updates": "Updates",
+      "launchCalculator": "Launch Calculator",
+      "launchCalculatorNewTab": "Launch Calculator in a new tab",
+      "primaryNavigation": "Primary navigation"
+    },
+    "hero": {
+      "title": "The Best Calculator App",
+      "subtitle": "Your home for standard, scientific, and advanced calculator work."
+    },
+    "downloads": {
+      "aria": "Platform downloads",
+      "steam": "Download on Steam",
+      "flathub": "Download on Flathub",
+      "googlePlay": "Download on Google Play Store",
+      "preview": "Roselt Calculator live preview"
+    },
+    "modal": {
+      "title": "Coming Soon!",
+      "close": "Close coming soon popup",
+      "dismiss": "Got it"
+    },
+    "menus": {
+      "loadingLanguages": "Loading languages...",
+      "loadingThemes": "Loading themes...",
+      "noMatches": "No matches"
+    }
+  },
   "common": {
     "back": "",
     "backspace": "",

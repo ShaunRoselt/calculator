@@ -3,6 +3,75 @@
     "title": "Roselt ቋንቋ",
     "name": "Roselt ካልኩሌተር"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "ምርጫታት",
+      "title": "ቴማ & ቋንቋ",
+      "subtitle": "መልክዕ ናይቲ ኣፕ ምረጽ። ኣብ መላእ እቲ ኣፕ እትጥቀመሉ ቋንቋ ምረጽ።"
+    },
+    "summary": {
+      "themeCountLabel": "ቴማታት",
+      "languageCountLabel": "ቋንቋታት",
+      "copy": "ነፍሲ ወከፍ ዝርከብ ቴማ ቅድመ-ምርኣይን ምሉእ ዝድገፍ ዝርዝር ቋንቋታት ዳህስስን።"
+    },
+    "sections": {
+      "themes": {
+        "kicker": "መልክዕ",
+        "title": "ቴማ",
+        "copy": "መልክዕ ናይቲ ኣፕ ምረጽ።"
+      },
+      "languages": {
+        "kicker": "ቋንቋ",
+        "title": "ቋንቋ",
+        "copy": "ኣብ መላእ እቲ ኣፕ ዝጥቀመሉ ቋንቋ ምረጽ።"
+      }
+    },
+    "cards": {
+      "previewLabel": "ቅድመ-ምርኢት ቴማ",
+      "lightScheme": "ቀሊል ሕብሪ ስኬም",
+      "darkScheme": "ጸሊም ሕብሪ ስኬም",
+      "openTheme": "ነዚ ቴማ ክፈቶ",
+      "openInSettings": "ኣብ ቅጥዕታት ክፈት"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "ናይ ለውጢ ምዝገባ",
+      "title": "ነፍሲ ወከፍ ምውጻእ፡ ካብ ቀዳማይ ህንጸት ክሳብ ሎሚ።",
+      "intro": "ሮዘልት ካልኩሌተር ካብ ንበይኑ ዝሰርሕ ዌብ ካልኩሌተር መሰረት ናብ ምሉእ ብምሉእ ዝተዓሸገ፣ ብዙሕ መድረኻት ዘለዎ፣ ብዙሕ ቋንቋታት ዘለዎ ኣፕ ኣብ ተኸታታሊ ትኹረት ዝገበረ ምውጻእ ከይዱ። እዚ ገጽ እዚ ኣብ ነፍሲ ወከፍ ስሪት ካብ 1.0.0 ክሳብ 12.0.0 እንታይ ከም ዝተቐየረ ይከታተል።",
+      "versionHistory": "ታሪኽ ስሪት።"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "ሮዘልት ካልኩሌተር ገዛ",
+      "updates": "እዋናዊ ሓበሬታ",
+      "launchCalculator": "ካልኩሌተር ምጅማር",
+      "launchCalculatorNewTab": "ካልኩሌተር ኣብ ሓድሽ ትብ ምጅማር",
+      "primaryNavigation": "ቀዳማይ ደረጃ ምድህሳስ"
+    },
+    "hero": {
+      "title": "እቲ ዝበለጸ ካልኩሌተር ኣፕ",
+      "subtitle": "ቤትካ ንመደበኛ፣ ሳይንሳዊን ምዕቡልን ስራሕ ካልኩሌተር።"
+    },
+    "downloads": {
+      "aria": "መድረኽ ምውራድ",
+      "steam": "ኣብ ስቲም ኣውርድ",
+      "flathub": "ኣብ Flathub ኣውርድ",
+      "googlePlay": "ኣብ ጉግል ፕለይ ስቶር ኣውርድ",
+      "preview": "ሮዘልት ካልኩሌተር ቀጥታዊ ቅድመ ምርኢት"
+    },
+    "modal": {
+      "title": "ኣብ ቀረባ እዋን!",
+      "close": "ዕጾ ኣብ ቀረባ እዋን ፖፕኣፕ",
+      "dismiss": "ረኺበዮ"
+    },
+    "menus": {
+      "loadingLanguages": "ቋንቋታት ይጽዕን ኣሎ...",
+      "loadingThemes": "ቴማታት ይጽዕን ኣሎ...",
+      "noMatches": "ዝኾነ ምትእስሳር የለን"
+    }
+  },
   "common": {
     "back": "ንምምላስ",
     "backspace": "ድሕሪት ቦታ",

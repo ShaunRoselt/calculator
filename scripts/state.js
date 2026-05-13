@@ -308,6 +308,10 @@ export function persistNav() {
   localStorage.setItem(STORAGE_KEYS.nav, JSON.stringify(state.navOpen));
 }
 
+export function persistPage(mode = state.mode) {
+  localStorage.setItem(STORAGE_KEYS.page, mode);
+}
+
 export function persistTheme() {
   localStorage.setItem(STORAGE_KEYS.theme, state.settings.theme);
 }

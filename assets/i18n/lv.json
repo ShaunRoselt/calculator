@@ -3,6 +3,75 @@
     "title": "Roselt Kalkulators",
     "name": "Roselt Kalkulators"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferences",
+      "title": "Motīvs un valoda",
+      "subtitle": "Izvēlieties lietotnes izskatu. Izvēlieties lietotnē izmantoto valodu."
+    },
+    "summary": {
+      "themeCountLabel": "Motīvi",
+      "languageCountLabel": "Valodas",
+      "copy": "Priekšskatiet katru pieejamo motīvu un pārlūkojiet visu atbalstīto valodu sarakstu."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Izskats",
+        "title": "Motīvs",
+        "copy": "Izvēlieties lietotnes izskatu."
+      },
+      "languages": {
+        "kicker": "Valoda",
+        "title": "Valoda",
+        "copy": "Izvēlieties lietotnē izmantoto valodu."
+      }
+    },
+    "cards": {
+      "previewLabel": "motīva priekšskatījums",
+      "lightScheme": "Gaiša krāsu shēma",
+      "darkScheme": "Tumša krāsu shēma",
+      "openTheme": "Atveriet šo motīvu",
+      "openInSettings": "Atvērt iestatījumos"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Izmaiņu žurnāls",
+      "title": "Katrs laidiens, no pirmās versijas līdz šodienai.",
+      "intro": "Roselt Calculator kļuva no atsevišķa tīmekļa kalkulatora pamata par pilnībā iesaiņotu, vairāku platformu un vairāku valodu lietotni vairākos mērķtiecīgos laidienos. Šajā lapā tiek izsekotas izmaiņas katrā versijā no 1.0.0 līdz 12.0.0.",
+      "versionHistory": "Versiju vēsture"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt kalkulatora sākums",
+      "updates": "Atjauninājumi",
+      "launchCalculator": "Palaidiet kalkulatoru",
+      "launchCalculatorNewTab": "Palaidiet Kalkulatoru jaunā cilnē",
+      "primaryNavigation": "Galvenā navigācija"
+    },
+    "hero": {
+      "title": "Labākā kalkulatora lietotne",
+      "subtitle": "Jūsu mājas standarta, zinātniskam un progresīvam kalkulatora darbam."
+    },
+    "downloads": {
+      "aria": "Platformas lejupielādes",
+      "steam": "Lejupielādēt pakalpojumā Steam",
+      "flathub": "Lejupielādēt pakalpojumā Flathub",
+      "googlePlay": "Lejupielādēt Google Play veikalā",
+      "preview": "Roselt Calculator tiešraides priekšskatījums"
+    },
+    "modal": {
+      "title": "Drīzumā!",
+      "close": "Drīzumā tiks aizvērts uznirstošais logs",
+      "dismiss": "Sapratu"
+    },
+    "menus": {
+      "loadingLanguages": "Notiek valodu ielāde...",
+      "loadingThemes": "Notiek motīvu ielāde...",
+      "noMatches": "Nav atbilstības"
+    }
+  },
   "common": {
     "back": "Atpakaļ",
     "backspace": "Atkāpšanās atkāpe",

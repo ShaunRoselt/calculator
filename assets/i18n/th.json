@@ -3,6 +3,75 @@
     "title": "Roselt เครื่องคิดเลข",
     "name": "Roselt เครื่องคิดเลข"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "การตั้งค่า",
+      "title": "ธีมและภาษา",
+      "subtitle": "เลือกรูปลักษณ์ของแอป เลือกภาษาที่ใช้ในแอป"
+    },
+    "summary": {
+      "themeCountLabel": "ธีม",
+      "languageCountLabel": "ภาษา",
+      "copy": "ดูตัวอย่างทุกธีมที่มีและเรียกดูรายการภาษาที่รองรับทั้งหมด"
+    },
+    "sections": {
+      "themes": {
+        "kicker": "รูปลักษณ์ภายนอก",
+        "title": "ธีม",
+        "copy": "เลือกรูปลักษณ์ของแอป"
+      },
+      "languages": {
+        "kicker": "ภาษา",
+        "title": "ภาษา",
+        "copy": "เลือกภาษาที่ใช้ในแอป"
+      }
+    },
+    "cards": {
+      "previewLabel": "ตัวอย่างธีม",
+      "lightScheme": "โทนสีอ่อน",
+      "darkScheme": "โทนสีเข้ม",
+      "openTheme": "เปิดธีมนี้",
+      "openInSettings": "เปิดในการตั้งค่า"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "บันทึกการเปลี่ยนแปลง",
+      "title": "ทุกรุ่น ตั้งแต่บิวด์แรกจนถึงปัจจุบัน",
+      "intro": "Roselt Calculator เปลี่ยนจากเครื่องคิดเลขบนเว็บแบบสแตนด์อโลนไปเป็นแอปหลายภาษาที่ครบครันและหลากหลายแพลตฟอร์มในชุดรุ่นที่มุ่งเน้น หน้านี้ติดตามการเปลี่ยนแปลงในแต่ละเวอร์ชันตั้งแต่ 1.0.0 ถึง 12.0.0",
+      "versionHistory": "ประวัติเวอร์ชัน"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "หน้าแรกของเครื่องคิดเลข Roselt",
+      "updates": "อัปเดต",
+      "launchCalculator": "เปิดเครื่องคิดเลข",
+      "launchCalculatorNewTab": "เปิดเครื่องคิดเลขในแท็บใหม่",
+      "primaryNavigation": "การนำทางหลัก"
+    },
+    "hero": {
+      "title": "แอปเครื่องคิดเลขที่ดีที่สุด",
+      "subtitle": "ศูนย์รวมเครื่องคิดเลขมาตรฐาน วิทยาศาสตร์ และขั้นสูงของคุณ"
+    },
+    "downloads": {
+      "aria": "การดาวน์โหลดแพลตฟอร์ม",
+      "steam": "ดาวน์โหลดบน Steam",
+      "flathub": "ดาวน์โหลดบน Flathub",
+      "googlePlay": "ดาวน์โหลดบน Google Play Store",
+      "preview": "ตัวอย่างสดของ Roselt Calculator"
+    },
+    "modal": {
+      "title": "เร็วๆ นี้!",
+      "close": "ปิดป๊อปอัปเร็วๆ นี้",
+      "dismiss": "เข้าใจแล้ว"
+    },
+    "menus": {
+      "loadingLanguages": "กำลังโหลดภาษา...",
+      "loadingThemes": "กำลังโหลดธีม...",
+      "noMatches": "ไม่มีการแข่งขัน"
+    }
+  },
   "common": {
     "back": "กลับ",
     "backspace": "ย้อนกลับ",

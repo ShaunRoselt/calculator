@@ -3,6 +3,75 @@
     "title": "Roselt Kalkulator",
     "name": "Roselt Kalkulator"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Postavke",
+      "title": "Tema i jezik",
+      "subtitle": "Odaberite izgled aplikacije. Odaberite jezik koji se koristi u aplikaciji."
+    },
+    "summary": {
+      "themeCountLabel": "Teme",
+      "languageCountLabel": "Jezici",
+      "copy": "Pregledajte svaku dostupnu temu i pregledajte kompletnu listu podržanih jezika."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Izgled",
+        "title": "Tema",
+        "copy": "Odaberite izgled aplikacije."
+      },
+      "languages": {
+        "kicker": "Jezik",
+        "title": "Jezik",
+        "copy": "Odaberite jezik koji se koristi u aplikaciji."
+      }
+    },
+    "cards": {
+      "previewLabel": "pregled teme",
+      "lightScheme": "Svjetla šema boja",
+      "darkScheme": "Tamna šema boja",
+      "openTheme": "Otvorite ovu temu",
+      "openInSettings": "Otvori u postavkama"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Izmjena",
+      "title": "Svako izdanje, od prve verzije do danas.",
+      "intro": "Roselt Calculator je prešao od samostalne osnove za web kalkulator do potpuno upakovane, višeplatformske, višejezične aplikacije u nizu fokusiranih izdanja. Ova stranica prati šta se promijenilo u svakoj verziji od 1.0.0 do 12.0.0.",
+      "versionHistory": "Historija verzija"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt kalkulator početna",
+      "updates": "Ažuriranja",
+      "launchCalculator": "Pokreni kalkulator",
+      "launchCalculatorNewTab": "Pokrenite Kalkulator na novoj kartici",
+      "primaryNavigation": "Primarna navigacija"
+    },
+    "hero": {
+      "title": "Najbolja aplikacija za kalkulator",
+      "subtitle": "Vaš dom za standardni, naučni i napredni rad na kalkulatoru."
+    },
+    "downloads": {
+      "aria": "Preuzimanja platforme",
+      "steam": "Preuzmite na Steam-u",
+      "flathub": "Preuzmite na Flathubu",
+      "googlePlay": "Preuzmite na Google Play trgovini",
+      "preview": "Pregled uživo Roselt kalkulatora"
+    },
+    "modal": {
+      "title": "Uskoro!",
+      "close": "Zatvori uskoro iskačući prozor",
+      "dismiss": "Razumijem"
+    },
+    "menus": {
+      "loadingLanguages": "Učitavanje jezika...",
+      "loadingThemes": "Učitavanje tema...",
+      "noMatches": "Nema podudaranja"
+    }
+  },
   "common": {
     "back": "Nazad",
     "backspace": "Backspace",

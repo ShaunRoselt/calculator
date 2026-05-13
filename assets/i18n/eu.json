@@ -3,6 +3,75 @@
     "title": "Roselt Kalkulagailua",
     "name": "Roselt Kalkulagailua"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Hobespenak",
+      "title": "Gaia eta hizkuntza",
+      "subtitle": "Hautatu aplikazioaren itxura. Aukeratu aplikazioan erabilitako hizkuntza."
+    },
+    "summary": {
+      "themeCountLabel": "Gaiak",
+      "languageCountLabel": "Hizkuntzak",
+      "copy": "Aurreikusi eskuragarri dauden gai guztiak eta arakatu onartzen diren hizkuntzen zerrenda osoa."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Itxura",
+        "title": "Gaia",
+        "copy": "Hautatu aplikazioaren itxura."
+      },
+      "languages": {
+        "kicker": "Hizkuntza",
+        "title": "Hizkuntza",
+        "copy": "Aukeratu aplikazioan erabilitako hizkuntza."
+      }
+    },
+    "cards": {
+      "previewLabel": "gaiaren aurrebista",
+      "lightScheme": "Argi-kolore eskema",
+      "darkScheme": "Kolore iluneko eskema",
+      "openTheme": "Ireki gai hau",
+      "openInSettings": "Ireki ezarpenetan"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Aldaketen erregistroa",
+      "title": "Argitaratu bakoitza, lehen eraikuntzatik gaur egunera arte.",
+      "intro": "Roselt Calculator web-kalkulagailuaren oinarri autonomotik guztiz paketatuta, plataforma anitzeko eta hizkuntza anitzeko aplikazio izatera pasa zen hainbat argitalpenetan. Orrialde honek 1.0.0tik 12.0.0ra bitarteko bertsio bakoitzean aldatutakoaren jarraipena egiten du.",
+      "versionHistory": "Bertsio-historia"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Calculator hasiera",
+      "updates": "Eguneratzeak",
+      "launchCalculator": "Abiarazi Kalkulagailua",
+      "launchCalculatorNewTab": "Ikusi Kalkulagailua fitxa berri batean",
+      "primaryNavigation": "Nabigazio nagusia"
+    },
+    "hero": {
+      "title": "Kalkulagailuen aplikazio onena",
+      "subtitle": "Zure etxea kalkulagailu estandar, zientifiko eta aurreratuetarako lan egiteko."
+    },
+    "downloads": {
+      "aria": "Plataformaren deskargak",
+      "steam": "Deskargatu Steam-en",
+      "flathub": "Deskargatu Flathub-en",
+      "googlePlay": "Deskargatu Google Play Store-n",
+      "preview": "Roselt Calculator zuzeneko aurrebista"
+    },
+    "modal": {
+      "title": "Laster!",
+      "close": "Itxi laster pop-up",
+      "dismiss": "Ados"
+    },
+    "menus": {
+      "loadingLanguages": "Hizkuntzak kargatzen...",
+      "loadingThemes": "Gaiak kargatzen...",
+      "noMatches": "Ez dago parekorik"
+    }
+  },
   "common": {
     "back": "Itzuli",
     "backspace": "Atzera atzera",

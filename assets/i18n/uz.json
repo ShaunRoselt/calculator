@@ -3,6 +3,75 @@
     "title": "Roselt Kalkulyator",
     "name": "Roselt Kalkulyator"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Sozlamalar",
+      "title": "Mavzu va til",
+      "subtitle": "Ilova koʻrinishini tanlang. Ilovada ishlatiladigan tilni tanlang."
+    },
+    "summary": {
+      "themeCountLabel": "Mavzular",
+      "languageCountLabel": "Tillar",
+      "copy": "Har bir mavjud mavzuni koʻrib chiqing va toʻliq qoʻllab-quvvatlanadigan tillar roʻyxatini koʻrib chiqing."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Tashqi koʻrinish",
+        "title": "Mavzu",
+        "copy": "Ilova koʻrinishini tanlang."
+      },
+      "languages": {
+        "kicker": "Til",
+        "title": "Til",
+        "copy": "Ilovada ishlatiladigan tilni tanlang."
+      }
+    },
+    "cards": {
+      "previewLabel": "mavzuni oldindan koʻrish",
+      "lightScheme": "Och rang sxemasi",
+      "darkScheme": "Toʻq rang sxemasi",
+      "openTheme": "Ushbu mavzuni oching",
+      "openInSettings": "Sozlamalarda oching"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Oʻzgarishlar jurnali",
+      "title": "Birinchi tuzilishdan to bugungi kungacha bo‘lgan har bir nashr.",
+      "intro": "Roselt Calculator mustaqil veb-kalkulyatordan toʻliq paketlangan, koʻp platformali, koʻp tilli ilovaga aylandi. Bu sahifa 1.0.0 dan 12.0.0 gacha bo'lgan har bir versiyada nima o'zgarganini kuzatib boradi.",
+      "versionHistory": "Versiya tarixi"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Kalkulyator uyi",
+      "updates": "Yangilanishlar",
+      "launchCalculator": "Kalkulyatorni ishga tushiring",
+      "launchCalculatorNewTab": "Kalkulyatorni yangi varaqda ishga tushiring",
+      "primaryNavigation": "Birlamchi navigatsiya"
+    },
+    "hero": {
+      "title": "Eng yaxshi kalkulyator ilovasi",
+      "subtitle": "Standart, ilmiy va ilg‘or kalkulyator ishi uchun uyingiz."
+    },
+    "downloads": {
+      "aria": "Platformani yuklab olish",
+      "steam": "Steam orqali yuklab oling",
+      "flathub": "Flathub orqali yuklab olish",
+      "googlePlay": "Google Play Marketdan yuklab oling",
+      "preview": "Roselt Calculator jonli koʻrish"
+    },
+    "modal": {
+      "title": "Tez orada!",
+      "close": "Yopish tez orada qalqib chiquvchi oyna",
+      "dismiss": "Tushundim"
+    },
+    "menus": {
+      "loadingLanguages": "Tillar yuklanmoqda...",
+      "loadingThemes": "Mavzular yuklanmoqda...",
+      "noMatches": "Hech narsa topilmadi"
+    }
+  },
   "common": {
     "back": "Orqaga",
     "backspace": "Backspace",

@@ -22,6 +22,7 @@ import {
   persistCollections,
   persistLanguage,
   persistNav,
+  persistPage,
   persistRepeatEquals,
   persistShortcuts,
   persistTheme,
@@ -521,6 +522,7 @@ function setMode(nextMode, { replaceHistory = false, renderView = true } = {}) {
   }
 
   state.mode = resolvedMode;
+  persistPage(state.mode);
   state.navOpen = false;
   state.historyOpen = supportsHistoryPanelMode(state.mode) ? state.historyOpen : false;
   if (!supportsMemoryPanelMode(state.mode) && state.historyTab === 'memory') {

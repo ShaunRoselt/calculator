@@ -3,6 +3,75 @@
     "title": "Roselt Kalkulačka",
     "name": "Roselt Kalkulačka"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Předvolby",
+      "title": "Motiv a jazyk",
+      "subtitle": "Vyberte si vzhled aplikace. Vyberte jazyk používaný v aplikaci."
+    },
+    "summary": {
+      "themeCountLabel": "Motivy",
+      "languageCountLabel": "Jazyky",
+      "copy": "Prohlédněte si náhled všech dostupných motivů a procházejte úplný seznam podporovaných jazyků."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Vzhled",
+        "title": "Motiv",
+        "copy": "Vyberte si vzhled aplikace."
+      },
+      "languages": {
+        "kicker": "Jazyk",
+        "title": "Jazyk",
+        "copy": "Vyberte jazyk používaný v aplikaci."
+      }
+    },
+    "cards": {
+      "previewLabel": "náhled motivu",
+      "lightScheme": "Světlé barevné schéma",
+      "darkScheme": "Schema tmavých barev",
+      "openTheme": "Otevřít tento motiv",
+      "openInSettings": "Otevřít v nastavení"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Prolog",
+      "title": "Každé vydání, od prvního sestavení až po dnešek.",
+      "intro": "Roselt Calculator přešel ze samostatného základu webového kalkulátoru na plně zabalenou, multiplatformní a vícejazyčnou aplikaci v řadě zaměřených verzí. Tato stránka sleduje změny v jednotlivých verzích od 1.0.0 do 12.0.0.",
+      "versionHistory": "Historie verzí"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Domovská stránka Roselt Calculator",
+      "updates": "Aktualizace",
+      "launchCalculator": "Spusťte kalkulačku",
+      "launchCalculatorNewTab": "Spusťte kalkulačku na nové kartě",
+      "primaryNavigation": "Primární navigace"
+    },
+    "hero": {
+      "title": "Nejlepší aplikace pro kalkulačku",
+      "subtitle": "Váš domov pro standardní, vědeckou a pokročilou práci s kalkulačkou."
+    },
+    "downloads": {
+      "aria": "Stahování z platformy",
+      "steam": "Stáhnout na Steamu",
+      "flathub": "Stáhnout na Flathub",
+      "googlePlay": "Stáhnout z Obchodu Google Play",
+      "preview": "Živý náhled Roselt Calculator"
+    },
+    "modal": {
+      "title": "Již brzy!",
+      "close": "Zavřít brzy vyskakovací okno",
+      "dismiss": "Rozumím"
+    },
+    "menus": {
+      "loadingLanguages": "Načítání jazyků...",
+      "loadingThemes": "Načítání motivů...",
+      "noMatches": "Žádné shody"
+    }
+  },
   "common": {
     "back": "Zpět",
     "backspace": "Backspace",

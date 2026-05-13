@@ -3,6 +3,75 @@
     "title": "Roselt Rechner",
     "name": "Roselt Rechner"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Einstellungen",
+      "title": "Thema und Sprache",
+      "subtitle": "Wählen Sie das Aussehen der App. Wählen Sie die Sprache aus, die in der App verwendet wird."
+    },
+    "summary": {
+      "themeCountLabel": "Themen",
+      "languageCountLabel": "Sprachen",
+      "copy": "Sehen Sie sich eine Vorschau aller verfügbaren Designs an und durchsuchen Sie die vollständige Liste der unterstützten Sprachen."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Aussehen",
+        "title": "Thema",
+        "copy": "Wählen Sie das Aussehen der App."
+      },
+      "languages": {
+        "kicker": "Sprache",
+        "title": "Sprache",
+        "copy": "Wählen Sie die Sprache aus, die in der App verwendet wird."
+      }
+    },
+    "cards": {
+      "previewLabel": "Themenvorschau",
+      "lightScheme": "Helles Farbschema",
+      "darkScheme": "Dunkles Farbschema",
+      "openTheme": "Öffnen Sie dieses Thema",
+      "openInSettings": "In den Einstellungen öffnen"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Änderungsprotokoll",
+      "title": "Jede Veröffentlichung, vom ersten Build bis heute.",
+      "intro": "Roselt Calculator hat sich in einer Reihe gezielter Veröffentlichungen von einer eigenständigen Web-Rechner-Grundlage zu einer vollständig verpackten, plattformübergreifenden und mehrsprachigen App entwickelt. Auf dieser Seite wird nachverfolgt, was sich in den einzelnen Versionen von 1.0.0 bis 12.0.0 geändert hat.",
+      "versionHistory": "Versionsverlauf"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt-Rechner-Startseite",
+      "updates": "Updates",
+      "launchCalculator": "Rechner starten",
+      "launchCalculatorNewTab": "Rechner in einem neuen Tab starten",
+      "primaryNavigation": "Primäre Navigation"
+    },
+    "hero": {
+      "title": "Die beste Rechner-App",
+      "subtitle": "Ihr Zuhause für Standard-, wissenschaftliche und fortgeschrittene Taschenrechnerarbeiten."
+    },
+    "downloads": {
+      "aria": "Plattform-Downloads",
+      "steam": "Auf Steam herunterladen",
+      "flathub": "Download auf Flathub",
+      "googlePlay": "Im Google Play Store herunterladen",
+      "preview": "Live-Vorschau des Roselt-Rechners"
+    },
+    "modal": {
+      "title": "Demnächst verfügbar!",
+      "close": "Popup bald schließen",
+      "dismiss": "Verstanden"
+    },
+    "menus": {
+      "loadingLanguages": "Sprachen werden geladen...",
+      "loadingThemes": "Themen werden geladen...",
+      "noMatches": "Keine Übereinstimmungen"
+    }
+  },
   "common": {
     "back": "Zurück",
     "backspace": "Backspace",

@@ -3,6 +3,75 @@
     "title": "Roselt Hesap makinesi",
     "name": "Roselt Hesap makinesi"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Tercihler",
+      "title": "Tema ve Dil",
+      "subtitle": "Uygulamanın görünümünü seçin. Uygulama genelinde kullanılan dili seçin."
+    },
+    "summary": {
+      "themeCountLabel": "Temalar",
+      "languageCountLabel": "Diller",
+      "copy": "Mevcut tüm temaları önizleyin ve desteklenen dillerin tam listesine göz atın."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Görünüş",
+        "title": "Tema",
+        "copy": "Uygulamanın görünümünü seçin."
+      },
+      "languages": {
+        "kicker": "Dil",
+        "title": "Dil",
+        "copy": "Uygulama genelinde kullanılan dili seçin."
+      }
+    },
+    "cards": {
+      "previewLabel": "tema önizlemesi",
+      "lightScheme": "Açık renk şeması",
+      "darkScheme": "Koyu renk şeması",
+      "openTheme": "Bu temayı aç",
+      "openInSettings": "Ayarlarda aç"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Değişiklik günlüğü",
+      "title": "İlk derlemeden bugüne kadar her sürüm.",
+      "intro": "Roselt Calculator, bağımsız bir web hesap makinesi temelinden, bir dizi odaklanmış sürümle tamamen paketlenmiş, çok platformlu, çok dilli bir uygulamaya dönüştü. Bu sayfa, 1.0.0'dan 12.0.0'a kadar her sürümde nelerin değiştiğini izler.",
+      "versionHistory": "Sürüm geçmişi"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Hesap Makinesi ana sayfası",
+      "updates": "Güncellemeler",
+      "launchCalculator": "Hesap Makinesini Başlat",
+      "launchCalculatorNewTab": "Hesap Makinesi'ni yeni bir sekmede başlat",
+      "primaryNavigation": "Birincil gezinme"
+    },
+    "hero": {
+      "title": "En İyi Hesap Makinesi Uygulaması",
+      "subtitle": "Standart, bilimsel ve gelişmiş hesap makinesi çalışmaları için eviniz."
+    },
+    "downloads": {
+      "aria": "Platform indirmeleri",
+      "steam": "Steam'den İndirin",
+      "flathub": "Flathub'dan indirin",
+      "googlePlay": "Google Play Store'dan indirin",
+      "preview": "Roselt Hesap Makinesi canlı önizlemesi"
+    },
+    "modal": {
+      "title": "Çok Yakında!",
+      "close": "Çok yakında açılır pencereyi kapat",
+      "dismiss": "Anladım"
+    },
+    "menus": {
+      "loadingLanguages": "Diller yükleniyor...",
+      "loadingThemes": "Temalar yükleniyor...",
+      "noMatches": "Eşleşme yok"
+    }
+  },
   "common": {
     "back": "Geri",
     "backspace": "Geri tuşu",

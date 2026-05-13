@@ -3,6 +3,75 @@
     "title": "Roselt ھېسابلىغۇچ",
     "name": "Roselt ھېسابلىغۇچ"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "مايىللىق",
+      "title": "تېما ۋە تىل",
+      "subtitle": "ئەپنىڭ كۆرۈنۈشىنى تاللاڭ. ئەپتە ئىشلىتىلگەن تىلنى تاللاڭ."
+    },
+    "summary": {
+      "themeCountLabel": "باشتېمىلار",
+      "languageCountLabel": "تىللار",
+      "copy": "ھەر بىر تېمىنى كۆرۈپ بېقىڭ ھەمدە قوللايدىغان تىل تىزىملىكىنى كۆرۈڭ."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "كۆرۈنۈش",
+        "title": "باشتېما",
+        "copy": "ئەپنىڭ كۆرۈنۈشىنى تاللاڭ."
+      },
+      "languages": {
+        "kicker": "تىل",
+        "title": "تىل",
+        "copy": "ئەپتە ئىشلىتىلگەن تىلنى تاللاڭ."
+      }
+    },
+    "cards": {
+      "previewLabel": "باشتېما ئالدىن كۆرۈش",
+      "lightScheme": "سۇس رەڭلىك لايىھە",
+      "darkScheme": "قېنىق رەڭلىك لايىھە",
+      "openTheme": "بۇ تېمىنى ئېچىڭ",
+      "openInSettings": "تەڭشەكلەردە ئېچىڭ"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "Every release, from the first build to today.",
+      "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.0.0.",
+      "versionHistory": "Version history"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt ھېسابلىغۇچ ئۆيى",
+      "updates": "يېڭىلانمىلار",
+      "launchCalculator": "ھېسابلىغۇچنى قوزغىتىش",
+      "launchCalculatorNewTab": "يېڭى بەتكۈچتە ھېسابلىغۇچنى قوزغىتىڭ",
+      "primaryNavigation": "دەسلەپكى يول باشلاش"
+    },
+    "hero": {
+      "title": "ئەڭ ياخشى ھېسابلىغۇچ دېتالى",
+      "subtitle": "ئۆلچەملىك ، ئىلمىي ۋە ئىلغار ھېسابلىغۇچ خىزمىتى ئۈچۈن ئۆيىڭىز."
+    },
+    "downloads": {
+      "aria": "سۇپا چۈشۈرۈش",
+      "steam": "ھوردا چۈشۈرۈش",
+      "flathub": "Flathub دا چۈشۈرۈش",
+      "googlePlay": "Google Play دۇكىنىدىن چۈشۈرۈڭ",
+      "preview": "Roselt ھېسابلىغۇچ نەق مەيدان ئالدىن كۆرۈش"
+    },
+    "modal": {
+      "title": "پات يېقىندا كېلىدۇ!",
+      "close": "پات ئارىدا ئېچىلىدۇ",
+      "dismiss": "تاپتى"
+    },
+    "menus": {
+      "loadingLanguages": "تىللارنى يۈكلەش ...",
+      "loadingThemes": "باشتېمىلارنى يۈكلەۋاتىدۇ ...",
+      "noMatches": "ماس كەلمەيدۇ"
+    }
+  },
   "common": {
     "back": "قايتىش",
     "backspace": "ئارقا بوشلۇق",

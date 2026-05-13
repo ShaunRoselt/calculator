@@ -3,6 +3,75 @@
     "title": "Roselt Isibali-manani",
     "name": "Roselt Isibali-manani"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferences",
+      "title": "Theme & Language",
+      "subtitle": "Pick the look of the app. Choose the language used across the app."
+    },
+    "summary": {
+      "themeCountLabel": "Themes",
+      "languageCountLabel": "Languages",
+      "copy": "Preview every available theme and browse the full supported language list."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Appearance",
+        "title": "Theme",
+        "copy": "Pick the look of the app."
+      },
+      "languages": {
+        "kicker": "Language",
+        "title": "Language",
+        "copy": "Choose the language used across the app."
+      }
+    },
+    "cards": {
+      "previewLabel": "theme preview",
+      "lightScheme": "Light color scheme",
+      "darkScheme": "Dark color scheme",
+      "openTheme": "Open this theme",
+      "openInSettings": "Open in settings"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "Every release, from the first build to today.",
+      "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.0.0.",
+      "versionHistory": "Version history"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Ikhaya le-Roselt Calculator",
+      "updates": "Uhlaziyo",
+      "launchCalculator": "Qalisa iKhatyhuleyitha",
+      "launchCalculatorNewTab": "Qalisa isibali kwithebhu entsha",
+      "primaryNavigation": "Ukukhangela okuphambili"
+    },
+    "hero": {
+      "title": "Eyona App yeCalculator igqwesileyo",
+      "subtitle": "Ikhaya lakho lomsebenzi osemgangathweni, wenzululwazi, kunye nomgangatho ophezulu wokubala."
+    },
+    "downloads": {
+      "aria": "Ukhuphelo lweqonga",
+      "steam": "Khuphela kwiSteam",
+      "flathub": "Khuphela kwiFlathub",
+      "googlePlay": "Khuphela kuGoogle Play Store",
+      "preview": "Roselt Calculator live preview"
+    },
+    "modal": {
+      "title": "Iyeza kunekudala!",
+      "close": "Vala iyeza kungekudala popup",
+      "dismiss": "Ndiyifumene"
+    },
+    "menus": {
+      "loadingLanguages": "Ilayisha iilwimi...",
+      "loadingThemes": "Ilayisha imixholo...",
+      "noMatches": "Akukho midlalo"
+    }
+  },
   "common": {
     "back": "Emva",
     "backspace": "Cima unobumba",

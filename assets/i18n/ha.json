@@ -3,6 +3,75 @@
     "title": "Roselt Kalakuleta",
     "name": "Roselt Kalakuleta"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Abubuwan da ake so",
+      "title": "Jigo & Harshe",
+      "subtitle": "Zaɓi yanayin ƙa'idar. Zaɓi harshen da ake amfani da shi a cikin ƙa'idar."
+    },
+    "summary": {
+      "themeCountLabel": "Jigogi",
+      "languageCountLabel": "Harsuna",
+      "copy": "Yi samfoti kowane jigo da ke akwai kuma bincika cikakken jerin harsuna masu tallafi."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Bayyanar",
+        "title": "Jigo",
+        "copy": "Zaɓi yanayin ƙa'idar."
+      },
+      "languages": {
+        "kicker": "Harshe",
+        "title": "Harshe",
+        "copy": "Zaɓi yaren da ake amfani da shi a cikin ƙa'idar."
+      }
+    },
+    "cards": {
+      "previewLabel": "samfotin jigo",
+      "lightScheme": "Tsarin launi mai haske",
+      "darkScheme": "Tsarin launi mai duhu",
+      "openTheme": "Bude wannan jigon",
+      "openInSettings": "Bude cikin saituna"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Canji",
+      "title": "Kowace saki, daga ginin farko zuwa yau.",
+      "intro": "Roselt Calculator ya tafi daga tushe mai ƙididdigewa na gidan yanar gizo zuwa cikakken kunshin, dandamali da yawa, ƙa'idar harshe da yawa a cikin jerin fitattun fitattun abubuwan da aka mayar da hankali. Wannan shafin yana bin abin da ya canza a kowace sigar daga 1.0.0 zuwa 12.0.0.",
+      "versionHistory": "Tarihin sigar"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Calculator gida",
+      "updates": "Sabuntawa",
+      "launchCalculator": "Kaddamar Kalkuleta",
+      "launchCalculatorNewTab": "Kaddamar da Kalkuleta a cikin sabon shafin",
+      "primaryNavigation": "kewayawa na farko"
+    },
+    "hero": {
+      "title": "Mafi kyawun Kalkuleta App",
+      "subtitle": "Gidan ku don daidaitaccen aiki, kimiyya, da aikin ƙididdiga na ci gaba."
+    },
+    "downloads": {
+      "aria": "Zazzagewar dandamali",
+      "steam": "Sauke akan Steam",
+      "flathub": "Sauke akan Flathub",
+      "googlePlay": "Zazzagewa akan Google Play Store",
+      "preview": "Roselt Calculator samfoti kai tsaye"
+    },
+    "modal": {
+      "title": "Ana zuwa Nan ba da jimawa ba!",
+      "close": "Rufe mai zuwa nan ba da jimawa ba",
+      "dismiss": "Na samu"
+    },
+    "menus": {
+      "loadingLanguages": "Ana loda harsuna...",
+      "loadingThemes": "Ana loda jigogi...",
+      "noMatches": "Babu ashana"
+    }
+  },
   "common": {
     "back": "Komawa",
     "backspace": "Baya",

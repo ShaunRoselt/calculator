@@ -3,6 +3,75 @@
     "title": "Roselt Llogaritësi",
     "name": "Roselt Llogaritësi"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferences",
+      "title": "Theme & Language",
+      "subtitle": "Pick the look of the app. Choose the language used across the app."
+    },
+    "summary": {
+      "themeCountLabel": "Themes",
+      "languageCountLabel": "Languages",
+      "copy": "Preview every available theme and browse the full supported language list."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Appearance",
+        "title": "Theme",
+        "copy": "Pick the look of the app."
+      },
+      "languages": {
+        "kicker": "Language",
+        "title": "Language",
+        "copy": "Choose the language used across the app."
+      }
+    },
+    "cards": {
+      "previewLabel": "theme preview",
+      "lightScheme": "Light color scheme",
+      "darkScheme": "Dark color scheme",
+      "openTheme": "Open this theme",
+      "openInSettings": "Open in settings"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Regjistri i ndryshimeve",
+      "title": "Çdo publikim, nga ndërtimi i parë deri më sot.",
+      "intro": "Roselt Calculator kaloi nga një bazë e pavarur kalkulatori në ueb në një aplikacion shumë-gjuhësh të paketuar plotësisht, me shumë platforma, në një seri publikimesh të fokusuara. Kjo faqe gjurmon çfarë ka ndryshuar në çdo version nga 1.0.0 në 12.0.0.",
+      "versionHistory": "Historiku i versionit"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Kalkulatori Roselt në shtëpi",
+      "updates": "Përditësimet",
+      "launchCalculator": "Hapni kalkulatorin",
+      "launchCalculatorNewTab": "Hapni Llogaritësin në një skedë të re",
+      "primaryNavigation": "Lundrimi kryesor"
+    },
+    "hero": {
+      "title": "Aplikacioni më i mirë i kalkulatorit",
+      "subtitle": "Shtëpia juaj për punë standarde, shkencore dhe të avancuara me kalkulator."
+    },
+    "downloads": {
+      "aria": "Shkarkimet e platformës",
+      "steam": "Shkarkoni në Steam",
+      "flathub": "Shkarkoni në Flathub",
+      "googlePlay": "Shkarkoni në Google Play Store",
+      "preview": "Vrojtim i drejtpërdrejtë i Kalkulatorit Roselt"
+    },
+    "modal": {
+      "title": "Së shpejti!",
+      "close": "Mbyllni dritaren kërcyese që vjen së shpejti",
+      "dismiss": "E kuptova"
+    },
+    "menus": {
+      "loadingLanguages": "Po ngarkon gjuhët...",
+      "loadingThemes": "Po ngarkon temat...",
+      "noMatches": "Nuk ka ndeshje"
+    }
+  },
   "common": {
     "back": "Prapa",
     "backspace": "Backspace",

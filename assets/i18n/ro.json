@@ -3,6 +3,75 @@
     "title": "Roselt Calculator",
     "name": "Roselt Calculator"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferințe",
+      "title": "Temă și limbă",
+      "subtitle": "Alegeți aspectul aplicației. Alegeți limba folosită în aplicație."
+    },
+    "summary": {
+      "themeCountLabel": "Teme",
+      "languageCountLabel": "Limbi",
+      "copy": "Previzualizează fiecare temă disponibilă și răsfoiește lista completă de limbi acceptate."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Aspect",
+        "title": "Temă",
+        "copy": "Alegeți aspectul aplicației."
+      },
+      "languages": {
+        "kicker": "Limba",
+        "title": "Limba",
+        "copy": "Alegeți limba folosită în aplicație."
+      }
+    },
+    "cards": {
+      "previewLabel": "previzualizarea temei",
+      "lightScheme": "Schema de culori deschise",
+      "darkScheme": "Schema de culori închise",
+      "openTheme": "Deschide această temă",
+      "openInSettings": "Deschide în setări"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Jurnalul modificărilor",
+      "title": "Fiecare lansare, de la prima versiune până astăzi.",
+      "intro": "Roselt Calculator a trecut de la o bază de calcul web autonomă la o aplicație completă, multi-platformă, în mai multe limbi într-o serie de versiuni focalizate. Această pagină urmărește ceea ce s-a schimbat în fiecare versiune de la 1.0.0 la 12.0.0.",
+      "versionHistory": "Istoricul versiunilor"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Acasă a Calculatorului Roselt",
+      "updates": "Actualizări",
+      "launchCalculator": "Lansați Calculatorul",
+      "launchCalculatorNewTab": "Lansați Calculatorul într-o filă nouă",
+      "primaryNavigation": "Navigarea principală"
+    },
+    "hero": {
+      "title": "Cea mai bună aplicație pentru calculatoare",
+      "subtitle": "Casa ta pentru lucrul cu calculatorul standard, științific și avansat."
+    },
+    "downloads": {
+      "aria": "Descărcări de platformă",
+      "steam": "Descărcați pe Steam",
+      "flathub": "Descărcați pe Flathub",
+      "googlePlay": "Descărcați din Magazin Google Play",
+      "preview": "Previzualizare live a Calculatorului Roselt"
+    },
+    "modal": {
+      "title": "În curând!",
+      "close": "Închide în curând pop-up",
+      "dismiss": "Am înțeles"
+    },
+    "menus": {
+      "loadingLanguages": "Se încarcă limbile...",
+      "loadingThemes": "Se încarcă teme...",
+      "noMatches": "Nicio potrivire"
+    }
+  },
   "common": {
     "back": "Înapoi",
     "backspace": "Backspace",

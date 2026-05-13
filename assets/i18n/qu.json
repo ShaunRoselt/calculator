@@ -3,6 +3,75 @@
     "title": "Roselt Yupay ruwaq",
     "name": "Roselt Yupay ruwaq"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Munasqakuna",
+      "title": "Tema & Simi",
+      "subtitle": "Apppa rikchayninta akllay. Akllay ima simitachus tukuy app nisqapi llamk’achkanki."
+    },
+    "summary": {
+      "themeCountLabel": "Temakuna",
+      "languageCountLabel": "Simikuna",
+      "copy": "Sapa tarikuq temamanta ñawpaqmanta qhaway chaymanta hunt'asqa yanapasqa simi lista maskay."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Rikuy",
+        "title": "Tema nisqamanta",
+        "copy": "App nisqapa rikchayninta akllay."
+      },
+      "languages": {
+        "kicker": "Simi",
+        "title": "Simi",
+        "copy": "Akllay simita llamk'achisqa tukuy app kaqpi."
+      }
+    },
+    "cards": {
+      "previewLabel": "tema ñawpaq qhaway",
+      "lightScheme": "K'anchay llimp'ikuna",
+      "darkScheme": "Tutayaq llimp'ikuna",
+      "openTheme": "Kay temata kichay",
+      "openInSettings": "Ajustes nisqapi kichay"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Tikray qillqa",
+      "title": "Sapa lluqsichiy, ñawpaq ruwaymanta kunankama.",
+      "intro": "Roselt Yupay huk sapalla web yupaypa cimientonmanta huk hunt'asqa paquetechasqa, achka plataformayuq, achka simiyuq ruwanaman huk serie enfocadu lluqsichiykunapi rirqa. Kay p'anqaqa sapa layapi 1.0.0 kaqmanta 12.0.0 kaqkama ima tikrasqa kaqta qatin.",
+      "versionHistory": "Versión nisqamanta willakuy"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Yupay wasi",
+      "updates": "Akchachiykuna",
+      "launchCalculator": "Qallariy Yupay",
+      "launchCalculatorNewTab": "Mosoq tablapi Yupay ruwaqta qallariy",
+      "primaryNavigation": "Ñawpaq kaq puriy"
+    },
+    "hero": {
+      "title": "Allin yupayniyuq App",
+      "subtitle": "Wasiyki estándar, cientifico, hinallataq ñawpaqman puriq calculadora llamk'anapaq."
+    },
+    "downloads": {
+      "aria": "Plataforma uraykachiykuna",
+      "steam": "Steam nisqapi uraykachiy",
+      "flathub": "Flathub nisqapi uraykachiy",
+      "googlePlay": "Google Play Store nisqapi uraykachiy",
+      "preview": "Roselt Calculator kawsaq ñawpaq qhaway"
+    },
+    "modal": {
+      "title": "Usqhaylla hamusaq!",
+      "close": "Wisq'ay hamun pisi tiempollamanta popup",
+      "dismiss": "Chayta hap'irqani"
+    },
+    "menus": {
+      "loadingLanguages": "Simikunata kargachkan...",
+      "loadingThemes": "Temakunata kargachkan...",
+      "noMatches": "Mana tupanchu"
+    }
+  },
   "common": {
     "back": "Kutiy",
     "backspace": "Qhipaman",

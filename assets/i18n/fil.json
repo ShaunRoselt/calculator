@@ -3,6 +3,75 @@
     "title": "Roselt Calculator",
     "name": "Roselt Calculator"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Mga Kagustuhan",
+      "title": "Tema at Wika",
+      "subtitle": "Piliin ang hitsura ng app. Piliin ang wikang ginagamit sa buong app."
+    },
+    "summary": {
+      "themeCountLabel": "Mga Tema",
+      "languageCountLabel": "Mga wika",
+      "copy": "I-preview ang bawat available na tema at i-browse ang buong listahan ng sinusuportahang wika."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Hitsura",
+        "title": "Tema",
+        "copy": "Piliin ang hitsura ng app."
+      },
+      "languages": {
+        "kicker": "Wika",
+        "title": "Wika",
+        "copy": "Piliin ang wikang ginagamit sa buong app."
+      }
+    },
+    "cards": {
+      "previewLabel": "preview ng tema",
+      "lightScheme": "Maliwanag na scheme ng kulay",
+      "darkScheme": "Madilim na scheme ng kulay",
+      "openTheme": "Buksan ang temang ito",
+      "openInSettings": "Buksan sa mga setting"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "Bawat release, mula sa unang build hanggang ngayon.",
+      "intro": "Napunta ang Roselt Calculator mula sa isang standalone na web calculator foundation patungo sa isang ganap na naka-package, multi-platform, multi-language na app sa isang serye ng mga nakatutok na release. Sinusubaybayan ng pahinang ito kung ano ang nagbago sa bawat bersyon mula 1.0.0 hanggang 12.0.0.",
+      "versionHistory": "History ng bersyon"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Calculator home",
+      "updates": "Mga Update",
+      "launchCalculator": "Ilunsad ang Calculator",
+      "launchCalculatorNewTab": "Ilunsad ang Calculator sa isang bagong tab",
+      "primaryNavigation": "Pangunahing nabigasyon"
+    },
+    "hero": {
+      "title": "Ang Pinakamahusay na Calculator App",
+      "subtitle": "Ang iyong tahanan para sa karaniwan, siyentipiko, at advanced na gawain sa calculator."
+    },
+    "downloads": {
+      "aria": "Mga pag-download sa platform",
+      "steam": "I-download sa Steam",
+      "flathub": "I-download sa Flathub",
+      "googlePlay": "I-download sa Google Play Store",
+      "preview": "Live na preview ng Roselt Calculator"
+    },
+    "modal": {
+      "title": "Malapit na!",
+      "close": "Isara ang paparating na popup",
+      "dismiss": "Nakuha ko"
+    },
+    "menus": {
+      "loadingLanguages": "Naglo-load ng mga wika...",
+      "loadingThemes": "Naglo-load ng mga tema...",
+      "noMatches": "Walang mga tugma"
+    }
+  },
   "common": {
     "back": "Bumalik",
     "backspace": "Backspace",

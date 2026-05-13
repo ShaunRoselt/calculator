@@ -3,6 +3,75 @@
     "title": "Roselt Rechner",
     "name": "Roselt Rechner"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Astellungen",
+      "title": "Thema & Sprooch",
+      "subtitle": "Wielt de Look vun der App. Wielt d'Sprooch déi an der App benotzt gëtt."
+    },
+    "summary": {
+      "themeCountLabel": "Themen",
+      "languageCountLabel": "Sproochen",
+      "copy": "Virschau all verfügbaren Thema a kuckt déi voll ënnerstëtzt Sproochlëscht."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Erscheinung",
+        "title": "Thema",
+        "copy": "Wielt de Look vun der App."
+      },
+      "languages": {
+        "kicker": "Sprooch",
+        "title": "Sprooch",
+        "copy": "Wielt d'Sprooch déi an der App benotzt gëtt."
+      }
+    },
+    "cards": {
+      "previewLabel": "Thema Virschau",
+      "lightScheme": "Liicht Faarfschema",
+      "darkScheme": "Däischter Faarfschema",
+      "openTheme": "Open dëst Thema",
+      "openInSettings": "Open an Astellungen"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "All Verëffentlechung, vum éischte Bau bis haut.",
+      "intro": "Roselt Rechner ass vun enger onofhängeger Webrechner Fondatioun op eng voll verpackt, Multi-Plattform, Multi-Sprooch App an enger Serie vu fokusséierte Verëffentlechungen gaang. Dës Säit verfollegt wat an all Versioun vun 1.0.0 bis 12.0.0 geännert huet.",
+      "versionHistory": "Versiounsgeschicht"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Rechner doheem",
+      "updates": "Aktualiséierungen",
+      "launchCalculator": "Rechner starten",
+      "launchCalculatorNewTab": "Start Rechner an engem neien Tab",
+      "primaryNavigation": "Primär Navigatioun"
+    },
+    "hero": {
+      "title": "Déi Bescht Rechner App",
+      "subtitle": "Äert Heem fir Standard, wëssenschaftlech a fortgeschratt Rechneraarbecht."
+    },
+    "downloads": {
+      "aria": "Plattform Downloads",
+      "steam": "Luet op Steam erof",
+      "flathub": "Luet op Flathub",
+      "googlePlay": "Luet am Google Play Store erof",
+      "preview": "Roselt Rechner Live Virschau"
+    },
+    "modal": {
+      "title": "Kommt geschwënn!",
+      "close": "Zoumaache kënnt geschwënn Popup",
+      "dismiss": "Gott et"
+    },
+    "menus": {
+      "loadingLanguages": "Sproochen lueden...",
+      "loadingThemes": "Themen lueden...",
+      "noMatches": "Keng Mätscher"
+    }
+  },
   "common": {
     "back": "Zréck",
     "backspace": "Backspace",

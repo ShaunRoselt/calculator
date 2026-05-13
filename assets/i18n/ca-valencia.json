@@ -3,6 +3,75 @@
     "title": "Roselt Calculadora",
     "name": "Roselt Calculadora"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferències",
+      "title": "Tema i idioma",
+      "subtitle": "Tria l'aspecte de l'aplicació. Trieu l'idioma utilitzat a l'aplicació."
+    },
+    "summary": {
+      "themeCountLabel": "Temes",
+      "languageCountLabel": "Idiomes",
+      "copy": "Previsualitza tots els temes disponibles i navega per la llista completa d'idiomes compatibles."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Aparença",
+        "title": "Tema",
+        "copy": "Tria l'aspecte de l'aplicació."
+      },
+      "languages": {
+        "kicker": "Idioma",
+        "title": "Idioma",
+        "copy": "Trieu l'idioma utilitzat a l'aplicació."
+      }
+    },
+    "cards": {
+      "previewLabel": "previsualització del tema",
+      "lightScheme": "Esquema de colors clars",
+      "darkScheme": "Esquema de color fosc",
+      "openTheme": "Obre aquest tema",
+      "openInSettings": "Obre a la configuració"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Registre de canvis",
+      "title": "Cada llançament, des de la primera versió fins avui.",
+      "intro": "Roselt Calculator va passar d'una base de calculadora web autònoma a una aplicació totalment empaquetada, multiplataforma i en diversos idiomes en una sèrie de llançaments centrats. Aquesta pàgina fa un seguiment del que ha canviat en cada versió de l'1.0.0 a la 12.0.0.",
+      "versionHistory": "Historial de versions"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Inici de la calculadora Roselt",
+      "updates": "Actualitzacions",
+      "launchCalculator": "Inicia la calculadora",
+      "launchCalculatorNewTab": "Inicia la calculadora en una pestanya nova",
+      "primaryNavigation": "Navegació principal"
+    },
+    "hero": {
+      "title": "La millor aplicació de calculadora",
+      "subtitle": "La teva casa per treballar amb calculadora estàndard, científica i avançada."
+    },
+    "downloads": {
+      "aria": "Descàrregues de la plataforma",
+      "steam": "Baixa a Steam",
+      "flathub": "Baixa a Flathub",
+      "googlePlay": "Baixa a Google Play Store",
+      "preview": "Previsualització en directe de Roselt Calculator"
+    },
+    "modal": {
+      "title": "Aviat!",
+      "close": "Aviat tancarà la finestra emergent",
+      "dismiss": "Ho entenc"
+    },
+    "menus": {
+      "loadingLanguages": "S'estan carregant els idiomes...",
+      "loadingThemes": "S'estan carregant els temes...",
+      "noMatches": "Cap coincidència"
+    }
+  },
   "common": {
     "back": "Enrere",
     "backspace": "Retrocés",

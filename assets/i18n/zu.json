@@ -3,6 +3,75 @@
     "title": "Roselt Isibali-manani",
     "name": "Roselt Isibali-manani"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferences",
+      "title": "Theme & Language",
+      "subtitle": "Pick the look of the app. Choose the language used across the app."
+    },
+    "summary": {
+      "themeCountLabel": "Themes",
+      "languageCountLabel": "Languages",
+      "copy": "Preview every available theme and browse the full supported language list."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Appearance",
+        "title": "Theme",
+        "copy": "Pick the look of the app."
+      },
+      "languages": {
+        "kicker": "Language",
+        "title": "Language",
+        "copy": "Choose the language used across the app."
+      }
+    },
+    "cards": {
+      "previewLabel": "theme preview",
+      "lightScheme": "Light color scheme",
+      "darkScheme": "Dark color scheme",
+      "openTheme": "Open this theme",
+      "openInSettings": "Open in settings"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "Every release, from the first build to today.",
+      "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.0.0.",
+      "versionHistory": "Version history"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Ikhaya le-Roselt Calculator",
+      "updates": "Izibuyekezo",
+      "launchCalculator": "Yethula Isibali",
+      "launchCalculatorNewTab": "Yethula Isibali kuthebhu entsha",
+      "primaryNavigation": "Ukuzulazula okuyinhloko"
+    },
+    "hero": {
+      "title": "Uhlelo lokusebenza oluhle kakhulu lwe-Calculator",
+      "subtitle": "Ikhaya lakho lomsebenzi wokubala ojwayelekile, wesayensi, nothuthukisiwe."
+    },
+    "downloads": {
+      "aria": "Okulandwayo kwenkundla",
+      "steam": "Landa ku-Steam",
+      "flathub": "Landa ku-Flathub",
+      "googlePlay": "Landa ku-Google Play Isitolo",
+      "preview": "Ukubuka kuqala kwe-Roselt Calculator bukhoma"
+    },
+    "modal": {
+      "title": "Kuyeza maduze!",
+      "close": "Vala i-popup iyeza maduze",
+      "dismiss": "Ngiyitholile"
+    },
+    "menus": {
+      "loadingLanguages": "Ilayisha izilimi...",
+      "loadingThemes": "Ilayisha amatimu...",
+      "noMatches": "Akukho okufanayo"
+    }
+  },
   "common": {
     "back": "Emuva",
     "backspace": "Sula uhlamvu",

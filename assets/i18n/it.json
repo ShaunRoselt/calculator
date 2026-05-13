@@ -3,6 +3,75 @@
     "title": "Roselt Calcolatrice",
     "name": "Roselt Calcolatrice"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferenze",
+      "title": "Tema e lingua",
+      "subtitle": "Scegli l'aspetto dell'app. Scegli la lingua utilizzata nell'app."
+    },
+    "summary": {
+      "themeCountLabel": "Temi",
+      "languageCountLabel": "Lingue",
+      "copy": "Visualizza l'anteprima di tutti i temi disponibili e sfoglia l'elenco completo delle lingue supportate."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Aspetto",
+        "title": "Tema",
+        "copy": "Scegli l'aspetto dell'app."
+      },
+      "languages": {
+        "kicker": "Lingua",
+        "title": "Lingua",
+        "copy": "Scegli la lingua utilizzata nell'app."
+      }
+    },
+    "cards": {
+      "previewLabel": "anteprima del tema",
+      "lightScheme": "Combinazione di colori chiari",
+      "darkScheme": "Combinazione di colori scuri",
+      "openTheme": "Apri questo tema",
+      "openInSettings": "Apri nelle impostazioni"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Registro modifiche",
+      "title": "Ogni versione, dalla prima build a oggi.",
+      "intro": "Roselt Calculator è passato da una base di calcolo web autonoma a un'app multipiattaforma e multilingue completamente integrata in una serie di versioni mirate. Questa pagina tiene traccia di ciò che è cambiato in ciascuna versione dalla 1.0.0 alla 12.0.0.",
+      "versionHistory": "Cronologia delle versioni"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Calcola Roselt a casa",
+      "updates": "Aggiornamenti",
+      "launchCalculator": "Avvia Calcolatrice",
+      "launchCalculatorNewTab": "Avvia Calcolatrice in una nuova scheda",
+      "primaryNavigation": "Navigazione principale"
+    },
+    "hero": {
+      "title": "La migliore app calcolatrice",
+      "subtitle": "La tua casa per il lavoro con la calcolatrice standard, scientifica e avanzata."
+    },
+    "downloads": {
+      "aria": "Download della piattaforma",
+      "steam": "Scarica su Steam",
+      "flathub": "Scarica su Flathub",
+      "googlePlay": "Scarica da Google Play Store",
+      "preview": "Anteprima dal vivo del calcolatore Roselt"
+    },
+    "modal": {
+      "title": "Prossimamente!",
+      "close": "Chiudi il popup in arrivo",
+      "dismiss": "Capito"
+    },
+    "menus": {
+      "loadingLanguages": "Caricamento lingue...",
+      "loadingThemes": "Caricamento temi...",
+      "noMatches": "Nessuna corrispondenza"
+    }
+  },
   "common": {
     "back": "Indietro",
     "backspace": "Backspace",

@@ -3,6 +3,75 @@
     "title": "Roselt ڪيڪروليٽر",
     "name": "Roselt ڪيلڪوليٽر"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "ترجيحات",
+      "title": "موضوع ۽ ٻولي",
+      "subtitle": "ائپ جو ڏيک چونڊيو. ايپ ۾ استعمال ٿيل ٻولي چونڊيو."
+    },
+    "summary": {
+      "themeCountLabel": "موضوع",
+      "languageCountLabel": "ٻوليون",
+      "copy": "هر موجود موضوع جو جائزو وٺو ۽ مڪمل سپورٽ ٿيل ٻولي لسٽ کي براؤز ڪريو."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "ظاهر",
+        "title": "موضوع",
+        "copy": "ائپ جو ڏيک چونڊيو."
+      },
+      "languages": {
+        "kicker": "ٻولي",
+        "title": "ٻولي",
+        "copy": "سڄي ايپ ۾ استعمال ٿيل ٻولي چونڊيو."
+      }
+    },
+    "cards": {
+      "previewLabel": "موضوع جو ڏيک",
+      "lightScheme": "هلڪو رنگ اسڪيم",
+      "darkScheme": "ڪارو رنگ اسڪيم",
+      "openTheme": "هن موضوع کي کوليو",
+      "openInSettings": "سيٽنگن ۾ کوليو"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "هر رليز، پهرين تعمير کان اڄ تائين.",
+      "intro": "Roselt Calculator هڪ اسٽينڊ اڪيلو ويب ڪيلڪيوليٽر فائونڊيشن کان وٺي هڪ مڪمل پيڪيج ٿيل، ملٽي پليٽ فارم، گهڻ-ٻولي واري ايپ ڏانهن متمرکز ريليزز جي هڪ سلسلي ۾ ويو. هي صفحو ٽريڪ ڪري ٿو ته 1.0.0 کان 12.0.0 تائين هر ورزن ۾ ڪهڙي تبديلي آئي آهي.",
+      "versionHistory": "ورجن جي تاريخ"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Calculator home",
+      "updates": "تازه ڪاريون",
+      "launchCalculator": "ڪلڪوليٽر لانچ ڪريو",
+      "launchCalculatorNewTab": "نئين ٽيب ۾ ڳڻپيوڪر لانچ ڪريو",
+      "primaryNavigation": "پرائمري نيويگيشن"
+    },
+    "hero": {
+      "title": "بهترين حساب ڪندڙ ايپ",
+      "subtitle": "توهان جو گهر معياري، سائنسي ۽ جديد ڪيلڪيوليٽر ڪم لاءِ."
+    },
+    "downloads": {
+      "aria": "پليٽ فارم ڊائون لوڊ",
+      "steam": "ڊائون لوڊ ڪريو ٻاڦ تي",
+      "flathub": "ڊائون لوڊ ڪريو Flathub تي",
+      "googlePlay": "Google Play Store تي ڊائون لوڊ ڪريو",
+      "preview": "Roselt Calculator live preview"
+    },
+    "modal": {
+      "title": "جلد اچي رهيو آهي!",
+      "close": "بند ٿي رهيو آهي جلد ئي پاپ اپ",
+      "dismiss": "سمجهيو"
+    },
+    "menus": {
+      "loadingLanguages": "ٻوليون لوڊ ٿي رهيون آهن...",
+      "loadingThemes": "موضوع لوڊ ٿي رهيو آهي...",
+      "noMatches": "ڪو به ملندو"
+    }
+  },
   "common": {
     "back": "واپس",
     "backspace": "بيڪ اسپيس",

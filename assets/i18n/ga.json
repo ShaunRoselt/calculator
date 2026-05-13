@@ -3,6 +3,75 @@
     "name": "Roselt Áireamhán",
     "title": "Roselt Áireamhán"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Sainroghanna",
+      "title": "Téama & Teanga",
+      "subtitle": "Roghnaigh cuma na haipe. Roghnaigh an teanga a úsáidtear ar fud na haipe."
+    },
+    "summary": {
+      "themeCountLabel": "Téamaí",
+      "languageCountLabel": "Teangacha",
+      "copy": "Réamhamharc ar gach téama atá ar fáil agus brabhsáil an liosta iomlán de na teangacha a dtacaítear leo."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "chuma",
+        "title": "Téama",
+        "copy": "Roghnaigh cuma na haipe."
+      },
+      "languages": {
+        "kicker": "Teanga",
+        "title": "Teanga",
+        "copy": "Roghnaigh an teanga a úsáidtear san aip."
+      }
+    },
+    "cards": {
+      "previewLabel": "réamhamharc ar théama",
+      "lightScheme": "Scéim dathanna éadroma",
+      "darkScheme": "Scéim dathanna dorcha",
+      "openTheme": "Oscail an téama seo",
+      "openInSettings": "Oscail sna socruithe"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Athrú loga",
+      "title": "Gach eisiúint, ón gcéad tógáil go dtí an lá inniu.",
+      "intro": "Chuaigh Áireamhán Roselt ó bhunús áireamhán gréasáin neamhspleách go haip lánphacáistithe, il-ardán, iltheanga i sraith eisiúintí dírithe. Rianaíonn an leathanach seo an méid a d’athraigh i ngach leagan ó 1.0.0 go 12.0.0.",
+      "versionHistory": "Stair na leaganacha"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Abhaile Áireamhán Roselt",
+      "updates": "Nuashonruithe",
+      "launchCalculator": "Seol Áireamhán",
+      "launchCalculatorNewTab": "Seol Áireamhán i gcluaisín nua",
+      "primaryNavigation": "Príomhsheoladh"
+    },
+    "hero": {
+      "title": "An aip Áireamhán is Fearr",
+      "subtitle": "Do bhaile le haghaidh oibre áireamhán caighdeánach, eolaíoch agus ardleibhéil."
+    },
+    "downloads": {
+      "aria": "Íoslódálacha ardán",
+      "steam": "Íoslódáil ar Steam",
+      "flathub": "Íoslódáil ar Flathub",
+      "googlePlay": "Íoslódáil ar Google Play Store",
+      "preview": "Réamhamharc beo ar Roselt Calculator"
+    },
+    "modal": {
+      "title": "Ag teacht go luath!",
+      "close": "Preabfhuinneog ag teacht gar go luath",
+      "dismiss": "Fuair ​​sé"
+    },
+    "menus": {
+      "loadingLanguages": "Teangacha á lódáil...",
+      "loadingThemes": "Téamaí á lódáil...",
+      "noMatches": "Níl aon mheaitseanna ann"
+    }
+  },
   "calculator": {
     "scientific": {
       "angleUnit": "Aonad uillinne {value}",

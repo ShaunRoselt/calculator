@@ -3,6 +3,75 @@
     "title": "Roselt Tataitai",
     "name": "Roselt Tataitai"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Manakohanga",
+      "title": "Tahuhu me te Reo",
+      "subtitle": "Tikihia te ahua o te taupānga. Kōwhirihia te reo e whakamahia ana puta noa i te taupānga."
+    },
+    "summary": {
+      "themeCountLabel": "Kaupapa",
+      "languageCountLabel": "Reo",
+      "copy": "Arokite nga kaupapa katoa e waatea ana ka tirotirohia te rarangi reo tautoko katoa."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Te ahua",
+        "title": "Kaupapa",
+        "copy": "Tikihia te ahua o te taupānga."
+      },
+      "languages": {
+        "kicker": "Reo",
+        "title": "Reo",
+        "copy": "Kōwhiritia te reo e whakamahia ana puta noa i te taupānga."
+      }
+    },
+    "cards": {
+      "previewLabel": "arokite kaupapa",
+      "lightScheme": "Ahanga tae marama",
+      "darkScheme": "Ahanga tae pouri",
+      "openTheme": "Whakatuwheratia tenei kaupapa",
+      "openInSettings": "Tuwhera ki nga tautuhinga"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Huihuri",
+      "title": "Ia tukunga, mai i te hanga tuatahi ki tenei ra.",
+      "intro": "Roselt Calculator i haere mai i te turanga tataitai tukutuku takitahi ki tetahi taupānga kua kapi katoa, papa-maha, reo-maha i roto i te raupapa o nga tukunga arotahi. Ka whai tenei wharangi i nga mea i whakarereke i ia putanga mai i te 1.0.0 ki te 12.0.0.",
+      "versionHistory": "Hitori Putanga"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Calculator kainga",
+      "updates": "Whakahoutanga",
+      "launchCalculator": "Whakarewa Calculator",
+      "launchCalculatorNewTab": "Whakarewahia te Calculator ki te ripa hou",
+      "primaryNavigation": "Te whakatere tuatahi"
+    },
+    "hero": {
+      "title": "Te Taupānga Tatau Pai",
+      "subtitle": "Ko to kainga mo nga mahi tatauranga paerewa, putaiao, matatau hoki."
+    },
+    "downloads": {
+      "aria": "Tikiake papaaho",
+      "steam": "Tikiake i runga Steam",
+      "flathub": "Tikiake ki Flathub",
+      "googlePlay": "Tikiake ki te Toa Play Google",
+      "preview": "Roselt Calculator arokite ora"
+    },
+    "modal": {
+      "title": "Kei te haere mai!",
+      "close": "Kati ka tata te pahū-ake",
+      "dismiss": "Kua mohio"
+    },
+    "menus": {
+      "loadingLanguages": "Ka utaina nga reo...",
+      "loadingThemes": "Ka utaina nga kaupapa...",
+      "noMatches": "Karekau he whakataetae"
+    }
+  },
   "common": {
     "back": "Hoki",
     "backspace": "Mokowāmuri",

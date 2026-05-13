@@ -3,6 +3,75 @@
     "title": "Roselt Sakrekenaar",
     "name": "Roselt Sakrekenaar"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Voorkeure",
+      "title": "Tema en taal",
+      "subtitle": "Kies die voorkoms van die toepassing. Kies die taal wat in die toepassing gebruik word."
+    },
+    "summary": {
+      "themeCountLabel": "Temas",
+      "languageCountLabel": "Tale",
+      "copy": "Beskou elke beskikbare tema en blaai deur die volledige ondersteunde taallys."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Voorkoms",
+        "title": "Tema",
+        "copy": "Kies die voorkoms van die toepassing."
+      },
+      "languages": {
+        "kicker": "Taal",
+        "title": "Taal",
+        "copy": "Kies die taal wat in die toepassing gebruik word."
+      }
+    },
+    "cards": {
+      "previewLabel": "temavoorskou",
+      "lightScheme": "Ligte kleurskema",
+      "darkScheme": "Donker kleurskema",
+      "openTheme": "Maak hierdie tema oop",
+      "openInSettings": "Maak oop in instellings"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Veranderboek",
+      "title": "Elke vrystelling, van die eerste bou tot vandag.",
+      "intro": "Roselt Sakrekenaar het van 'n selfstandige websakrekenaargrondslag gegaan na 'n volledig verpakte, multi-platform, multi-taal toepassing in 'n reeks gefokusde vrystellings. Hierdie bladsy volg wat in elke weergawe van 1.0.0 tot 12.0.0 verander het.",
+      "versionHistory": "Weergawe geskiedenis"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Sakrekenaar tuis",
+      "updates": "Opdaterings",
+      "launchCalculator": "Begin sakrekenaar",
+      "launchCalculatorNewTab": "Begin Sakrekenaar in 'n nuwe oortjie",
+      "primaryNavigation": "Primêre navigasie"
+    },
+    "hero": {
+      "title": "Die beste sakrekenaar-app",
+      "subtitle": "Jou tuiste vir standaard, wetenskaplike en gevorderde sakrekenaarwerk."
+    },
+    "downloads": {
+      "aria": "Platform-aflaaie",
+      "steam": "Laai af op Steam",
+      "flathub": "Laai af op Flathub",
+      "googlePlay": "Laai af op Google Play Winkel",
+      "preview": "Roselt Sakrekenaar regstreekse voorskou"
+    },
+    "modal": {
+      "title": "Kom binnekort!",
+      "close": "Maak binnekort opspringer toe",
+      "dismiss": "Het dit"
+    },
+    "menus": {
+      "loadingLanguages": "Laai tans tale …",
+      "loadingThemes": "Laai tans temas …",
+      "noMatches": "Geen passings nie"
+    }
+  },
   "common": {
     "back": "Terug",
     "backspace": "Terugspasieer",

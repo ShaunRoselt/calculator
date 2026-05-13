@@ -3,6 +3,75 @@
     "title": "Roselt Rekenmachine",
     "name": "Roselt Rekenmachine"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Voorkeuren",
+      "title": "Thema en taal",
+      "subtitle": "Kies het uiterlijk van de app. Kies de taal die in de app wordt gebruikt."
+    },
+    "summary": {
+      "themeCountLabel": "Thema's",
+      "languageCountLabel": "Talen",
+      "copy": "Bekijk een voorbeeld van elk beschikbaar thema en blader door de volledige lijst met ondersteunde talen."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Uiterlijk",
+        "title": "Thema",
+        "copy": "Kies het uiterlijk van de app."
+      },
+      "languages": {
+        "kicker": "Taal",
+        "title": "Taal",
+        "copy": "Kies de taal die in de app wordt gebruikt."
+      }
+    },
+    "cards": {
+      "previewLabel": "themavoorbeeld",
+      "lightScheme": "Lichtkleurenschema",
+      "darkScheme": "Donker kleurenschema",
+      "openTheme": "Open dit thema",
+      "openInSettings": "Openen in instellingen"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Wijzigingslog",
+      "title": "Elke release, vanaf de eerste build tot vandaag.",
+      "intro": "Roselt Calculator ging van een zelfstandige webcalculator naar een volledig verpakte, multi-platform, meertalige app in een reeks gerichte releases. Op deze pagina wordt bijgehouden wat er in elke versie is veranderd van 1.0.0 tot en met 12.0.0.",
+      "versionHistory": "Versiegeschiedenis"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Rekenmachine thuis",
+      "updates": "Updates",
+      "launchCalculator": "Start rekenmachine",
+      "launchCalculatorNewTab": "Start Rekenmachine op een nieuw tabblad",
+      "primaryNavigation": "Primaire navigatie"
+    },
+    "hero": {
+      "title": "De beste rekenmachine-app",
+      "subtitle": "Uw huis voor standaard, wetenschappelijk en geavanceerd rekenwerk."
+    },
+    "downloads": {
+      "aria": "Platformdownloads",
+      "steam": "Downloaden op Steam",
+      "flathub": "Downloaden op Flathub",
+      "googlePlay": "Downloaden in de Google Play Store",
+      "preview": "Roselt Rekenmachine live preview"
+    },
+    "modal": {
+      "title": "Binnenkort beschikbaar!",
+      "close": "Sluit binnenkort pop-up",
+      "dismiss": "Begrepen"
+    },
+    "menus": {
+      "loadingLanguages": "Talen laden...",
+      "loadingThemes": "Thema's laden...",
+      "noMatches": "Geen overeenkomsten"
+    }
+  },
   "common": {
     "back": "Terug",
     "backspace": "Backspace",

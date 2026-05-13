@@ -16,6 +16,7 @@ export const STORAGE_KEYS = {
   history: 'calculator-history',
   memory: 'calculator-memory',
   nav: 'calculator-nav',
+  page: 'calculator-page',
   theme: 'calculator-theme',
   language: 'calculator-language',
   repeatEquals: 'calculator-repeat-equals',

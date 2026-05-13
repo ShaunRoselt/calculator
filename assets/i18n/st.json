@@ -3,6 +3,75 @@
     "title": "Roselt Khalkhuleita",
     "name": "Roselt Khalkhuleita"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferences",
+      "title": "Theme & Language",
+      "subtitle": "Pick the look of the app. Choose the language used across the app."
+    },
+    "summary": {
+      "themeCountLabel": "Themes",
+      "languageCountLabel": "Languages",
+      "copy": "Preview every available theme and browse the full supported language list."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Appearance",
+        "title": "Theme",
+        "copy": "Pick the look of the app."
+      },
+      "languages": {
+        "kicker": "Language",
+        "title": "Language",
+        "copy": "Choose the language used across the app."
+      }
+    },
+    "cards": {
+      "previewLabel": "theme preview",
+      "lightScheme": "Light color scheme",
+      "darkScheme": "Dark color scheme",
+      "openTheme": "Open this theme",
+      "openInSettings": "Open in settings"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "Every release, from the first build to today.",
+      "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.0.0.",
+      "versionHistory": "Version history"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt Calculator lapeng",
+      "updates": "Lintlafatso",
+      "launchCalculator": "Qala Calculator",
+      "launchCalculatorNewTab": "Qala Calculator ho tab e ncha",
+      "primaryNavigation": "Navigation ea mantlha"
+    },
+    "hero": {
+      "title": "Sesebelisoa se Molemohali sa Calculator",
+      "subtitle": "Lehae la hau bakeng sa mosebetsi o tloaelehileng, oa mahlale, le o tsoetseng pele oa sebali."
+    },
+    "downloads": {
+      "aria": "Lisebelisoa tsa sethala",
+      "steam": "Khoasolla ho Steam",
+      "flathub": "Khoasolla ho Flathub",
+      "googlePlay": "Khoasolla ho Google Play Store",
+      "preview": "Roselt Calculator e shebelloa ka ho fetesisa"
+    },
+    "modal": {
+      "title": "E fihla haufinyane!",
+      "close": "Ho tla koaloa haufinyane",
+      "dismiss": "Kea utoisisa"
+    },
+    "menus": {
+      "loadingLanguages": "E kenya lipuo...",
+      "loadingThemes": "E kenya lihlooho...",
+      "noMatches": "Ha ho lipapali"
+    }
+  },
   "common": {
     "back": "Morao",
     "backspace": "Backspace",

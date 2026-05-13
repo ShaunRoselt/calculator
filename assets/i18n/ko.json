@@ -3,6 +3,75 @@
     "title": "Roselt 계산기",
     "name": "Roselt 계산기"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "환경설정",
+      "title": "테마 및 언어",
+      "subtitle": "앱의 디자인을 선택하세요. 앱 전체에서 사용되는 언어를 선택하세요."
+    },
+    "summary": {
+      "themeCountLabel": "테마",
+      "languageCountLabel": "언어",
+      "copy": "사용 가능한 모든 테마를 미리보고 지원되는 전체 언어 목록을 찾아보세요."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "외관",
+        "title": "테마",
+        "copy": "앱의 디자인을 선택하세요."
+      },
+      "languages": {
+        "kicker": "언어",
+        "title": "언어",
+        "copy": "앱 전체에서 사용되는 언어를 선택하세요."
+      }
+    },
+    "cards": {
+      "previewLabel": "테마 미리보기",
+      "lightScheme": "밝은 색 구성표",
+      "darkScheme": "어두운 색 구성표",
+      "openTheme": "이 테마 열기",
+      "openInSettings": "설정에서 열기"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "변경 로그",
+      "title": "첫 번째 빌드부터 현재까지의 모든 릴리스입니다.",
+      "intro": "Roselt 계산기는 일련의 집중 릴리스를 통해 독립형 웹 계산기 기반에서 완전히 패키지된 다중 플랫폼, 다중 언어 앱으로 발전했습니다. 이 페이지는 1.0.0부터 12.0.0까지 각 버전에서 변경된 내용을 추적합니다.",
+      "versionHistory": "버전 기록"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Roselt 계산기 홈",
+      "updates": "업데이트",
+      "launchCalculator": "계산기 실행",
+      "launchCalculatorNewTab": "새 탭에서 계산기 실행",
+      "primaryNavigation": "기본 탐색"
+    },
+    "hero": {
+      "title": "최고의 계산기 앱",
+      "subtitle": "표준, 과학 및 고급 계산기 작업을 위한 홈입니다."
+    },
+    "downloads": {
+      "aria": "플랫폼 다운로드",
+      "steam": "Steam에서 다운로드",
+      "flathub": "Flathub에서 다운로드",
+      "googlePlay": "Google Play 스토어에서 다운로드",
+      "preview": "Roselt 계산기 실시간 미리보기"
+    },
+    "modal": {
+      "title": "출시 예정!",
+      "close": "곧 팝업 닫기",
+      "dismiss": "알겠습니다"
+    },
+    "menus": {
+      "loadingLanguages": "언어 로드 중...",
+      "loadingThemes": "테마 로드 중...",
+      "noMatches": "일치하는 항목 없음"
+    }
+  },
   "common": {
     "back": "뒤로",
     "backspace": "백스페이스",

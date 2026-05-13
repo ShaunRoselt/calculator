@@ -3,6 +3,75 @@
     "title": "Roselt Калкулатор",
     "name": "Roselt Калкулатор"
   },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferences",
+      "title": "Theme & Language",
+      "subtitle": "Pick the look of the app. Choose the language used across the app."
+    },
+    "summary": {
+      "themeCountLabel": "Themes",
+      "languageCountLabel": "Languages",
+      "copy": "Preview every available theme and browse the full supported language list."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Appearance",
+        "title": "Theme",
+        "copy": "Pick the look of the app."
+      },
+      "languages": {
+        "kicker": "Language",
+        "title": "Language",
+        "copy": "Choose the language used across the app."
+      }
+    },
+    "cards": {
+      "previewLabel": "theme preview",
+      "lightScheme": "Light color scheme",
+      "darkScheme": "Dark color scheme",
+      "openTheme": "Open this theme",
+      "openInSettings": "Open in settings"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Дневник на промени",
+      "title": "Секое издание, од првата верзија до денес.",
+      "intro": "Roselt Calculator премина од самостојна основа за веб-калкулатор во целосно спакувана, повеќеплатформска, повеќејазична апликација во серија фокусирани изданија. Оваа страница следи што се променило во секоја верзија од 1.0.0 до 12.0.0.",
+      "versionHistory": "Историја на верзии"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Розелт Калкулатор дома",
+      "updates": "Ажурирања",
+      "launchCalculator": "Стартувајте калкулатор",
+      "launchCalculatorNewTab": "Стартувајте го Калкулаторот во ново јазиче",
+      "primaryNavigation": "Примарна навигација"
+    },
+    "hero": {
+      "title": "Најдобрата апликација за калкулатор",
+      "subtitle": "Вашиот дом за стандардна, научна и напредна работа со калкулатор."
+    },
+    "downloads": {
+      "aria": "Преземања на платформа",
+      "steam": "Преземете на Steam",
+      "flathub": "Преземете на Flathub",
+      "googlePlay": "Преземете на Google Play Store",
+      "preview": "Преглед во живо на Roselt Calculator"
+    },
+    "modal": {
+      "title": "Наскоро!",
+      "close": "Затвори наскоро скокачки прозорец",
+      "dismiss": "Го разбрав"
+    },
+    "menus": {
+      "loadingLanguages": "Се вчитуваат јазици...",
+      "loadingThemes": "Се вчитуваат темите...",
+      "noMatches": "Нема совпаѓања"
+    }
+  },
   "common": {
     "back": "Назад",
     "backspace": "Backspace",

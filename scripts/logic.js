@@ -1538,7 +1538,66 @@ function tokenize(expression) {
     }
     throw new Error('Invalid input');
   }
-  return tokens;
+  return withImplicitMultiplication(tokens);
+}
+
+const SCIENTIFIC_INFIX_IDENTIFIERS = new Set(['mod', 'root', 'logbase']);
+const SCIENTIFIC_FUNCTION_IDENTIFIERS = new Set([
+  'sin', 'cos', 'tan', 'sec', 'csc', 'cot',
+  'asin', 'acos', 'atan', 'asec', 'acsc', 'acot',
+  'sinh', 'cosh', 'tanh', 'sech', 'csch', 'coth',
+  'asinh', 'acosh', 'atanh', 'asech', 'acsch', 'acoth',
+  'dms', 'degrees', 'rand',
+  'sqrt', 'abs', 'floor', 'ceil', 'log', 'ln', 'exp'
+]);
+
+function withImplicitMultiplication(tokens) {
+  if (tokens.length < 2) {
+    return tokens;
+  }
+
+  const expanded = [];
+  for (let index = 0; index < tokens.length; index += 1) {
+    const current = tokens[index];
+    const next = tokens[index + 1];
+    expanded.push(current);
+
+    if (!next || !shouldInsertImplicitMultiplication(current, next)) {
+      continue;
+    }
+
+    expanded.push({ type: 'operator', value: '*' });
+  }
+
+  return expanded;
+}
+
+function shouldInsertImplicitMultiplication(left, right) {
+  if (!tokenCanEndImplicitProduct(left) || !tokenCanStartImplicitProduct(right)) {
+    return false;
+  }
+
+  return !(left.type === 'identifier'
+    && SCIENTIFIC_FUNCTION_IDENTIFIERS.has(left.value)
+    && right.value === '(');
+}
+
+function tokenCanEndImplicitProduct(token) {
+  if (token.type === 'number' || token.value === ')') {
+    return true;
+  }
+
+  return token.type === 'identifier'
+    && !SCIENTIFIC_INFIX_IDENTIFIERS.has(token.value)
+    && !SCIENTIFIC_FUNCTION_IDENTIFIERS.has(token.value);
+}
+
+function tokenCanStartImplicitProduct(token) {
+  if (token.type === 'number' || token.value === '(') {
+    return true;
+  }
+
+  return token.type === 'identifier' && !SCIENTIFIC_INFIX_IDENTIFIERS.has(token.value);
 }
 
 function scientificFunction(name, value, angle) {
@@ -2331,7 +2390,7 @@ export function resetGraphViewport() {
   state.graphing.isManualAdjustment = false;
 }
 
-export function zoomGraph(action) {
+export function zoomGraph(action, anchor = null) {
   const viewport = state.graphing.viewport;
   if (action === 'reset') {
     resetGraphViewport();
@@ -2341,15 +2400,43 @@ export function zoomGraph(action) {
   state.graphing.isManualAdjustment = true;
 
   const factor = action === 'in' ? 0.8 : 1.25;
+  const width = viewport.xMax - viewport.xMin;
+  const height = viewport.yMax - viewport.yMin;
+  const nextWidth = width * factor;
+  const nextHeight = height * factor;
+
+  if (anchor && Number.isFinite(anchor.x) && Number.isFinite(anchor.y) && width > 0 && height > 0) {
+    const anchorRatioX = (anchor.x - viewport.xMin) / width;
+    const anchorRatioY = (anchor.y - viewport.yMin) / height;
+
+    viewport.xMin = anchor.x - (anchorRatioX * nextWidth);
+    viewport.xMax = viewport.xMin + nextWidth;
+    viewport.yMin = anchor.y - (anchorRatioY * nextHeight);
+    viewport.yMax = viewport.yMin + nextHeight;
+    return;
+  }
+
   const centerX = (viewport.xMin + viewport.xMax) / 2;
   const centerY = (viewport.yMin + viewport.yMax) / 2;
-  const halfWidth = ((viewport.xMax - viewport.xMin) / 2) * factor;
-  const halfHeight = ((viewport.yMax - viewport.yMin) / 2) * factor;
+  const halfWidth = nextWidth / 2;
+  const halfHeight = nextHeight / 2;
 
   viewport.xMin = centerX - halfWidth;
   viewport.xMax = centerX + halfWidth;
   viewport.yMin = centerY - halfHeight;
   viewport.yMax = centerY + halfHeight;
+}
+
+export function panGraph(deltaX, deltaY) {
+  if (!Number.isFinite(deltaX) || !Number.isFinite(deltaY)) {
+    return;
+  }
+
+  state.graphing.isManualAdjustment = true;
+  state.graphing.viewport.xMin += deltaX;
+  state.graphing.viewport.xMax += deltaX;
+  state.graphing.viewport.yMin += deltaY;
+  state.graphing.viewport.yMax += deltaY;
 }
 
 export function updateGraph() {

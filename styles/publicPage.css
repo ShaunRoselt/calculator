@@ -356,16 +356,12 @@ img {
 }
 
 .page-header.page-header--stacked .page-header__controls {
-  width: 100%;
-  flex: 1 0 100%;
+  width: fit-content;
+  max-width: 100%;
+  flex: 0 1 auto;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.page-header.page-header--stacked .page-header__controls::-webkit-scrollbar {
-  display: none;
+  overflow: visible;
 }
 
 @media (max-width: 720px) {

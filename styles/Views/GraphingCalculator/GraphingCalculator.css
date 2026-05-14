@@ -139,6 +139,11 @@
   min-height: 100%;
   display: block;
   background: var(--graph-canvas-bg);
+  cursor: grab;
+}
+
+.graph-canvas.is-panning {
+  cursor: grabbing;
 }
 
 .graph-overlay {

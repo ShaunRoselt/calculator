@@ -57,7 +57,7 @@ function renderThemeGallery(context) {
     const title = createElement('h3', 'showcase-theme-card-title');
     const titleLink = createElement('a', 'showcase-theme-card-title-link', theme.label);
     titleLink.href = context.buildAppHref({
-      page: context.currentAppPage,
+      page: 'standard',
       theme: theme.id,
       language: context.currentLanguageId
     });
@@ -74,7 +74,7 @@ function renderThemeGallery(context) {
     iframe.tabIndex = -1;
     iframe.setAttribute('aria-hidden', 'true');
     iframe.src = context.buildAppHref({
-      page: context.currentAppPage,
+      page: 'standard',
       theme: theme.id,
       language: context.currentLanguageId,
       readOnly: true

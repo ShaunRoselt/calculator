@@ -50,6 +50,13 @@
   gap: 1rem;
 }
 
+.showcase-section__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 28rem);
+  gap: 1rem 1.5rem;
+  align-items: end;
+}
+
 .showcase-section__copy {
   display: grid;
   gap: 0.45rem;
@@ -70,6 +77,7 @@
 
 .themes-search {
   width: min(100%, 28rem);
+  justify-self: end;
 }
 
 .themes-search__input {
@@ -153,7 +161,16 @@
 }
 
 @media (max-width: 720px) {
+  .showcase-section__header {
+    grid-template-columns: 1fr;
+  }
+
   .theme-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .themes-search {
+    width: 100%;
+    justify-self: stretch;
   }
 }

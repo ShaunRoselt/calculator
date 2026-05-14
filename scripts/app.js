@@ -49,6 +49,7 @@ import {
   insertGraphToken,
   isCalculatorMode,
   openGraphExpressionAnalysis,
+  panGraph,
   recallHistory,
   recallMemory,
   removeGraphExpression,
@@ -90,6 +91,7 @@ let converterTypeaheadBuffer = '';
 let converterTypeaheadTimestamp = 0;
 let lastViewportWidth = window.innerWidth;
 let lastViewportHeight = window.innerHeight;
+let graphPanSession = null;
 const calculatorUndoStack = [];
 const calculatorRedoStack = [];
 const MAX_CALCULATOR_HISTORY = 100;
@@ -381,8 +383,116 @@ function canPatchActiveGraphExpressionInput() {
   return pane instanceof HTMLElement && pane.offsetParent !== null && state.graphing.openMenu === null && !state.graphing.settingsOpen;
 }
 
+function getGraphCanvas() {
+  const canvas = document.getElementById('graph-canvas');
+  return canvas instanceof HTMLCanvasElement ? canvas : null;
+}
+
+function setGraphCanvasPanningState(isPanning) {
+  const canvas = getGraphCanvas();
+  if (!canvas) {
+    return;
+  }
+
+  canvas.classList.toggle('is-panning', isPanning);
+}
+
+function getGraphWorldPointFromMouseEvent(event) {
+  const canvas = getGraphCanvas();
+  if (!canvas) {
+    return null;
+  }
+
+  const rect = canvas.getBoundingClientRect();
+  if (rect.width <= 0 || rect.height <= 0) {
+    return null;
+  }
+
+  const { xMin, xMax, yMin, yMax } = state.graphing.viewport;
+  const xRatio = (event.clientX - rect.left) / rect.width;
+  const yRatio = (event.clientY - rect.top) / rect.height;
+
+  return {
+    x: xMin + (xRatio * (xMax - xMin)),
+    y: yMax - (yRatio * (yMax - yMin))
+  };
+}
+
+function stopGraphPan() {
+  if (!graphPanSession) {
+    return;
+  }
+
+  graphPanSession = null;
+  setGraphCanvasPanningState(false);
+}
+
+function handleGraphMouseMove(event) {
+  if (!graphPanSession || state.mode !== 'graphing') {
+    return;
+  }
+
+  const canvas = getGraphCanvas();
+  if (!canvas) {
+    stopGraphPan();
+    return;
+  }
+
+  const rect = canvas.getBoundingClientRect();
+  if (rect.width <= 0 || rect.height <= 0) {
+    return;
+  }
+
+  const deltaX = event.clientX - graphPanSession.lastClientX;
+  const deltaY = event.clientY - graphPanSession.lastClientY;
+  if (deltaX === 0 && deltaY === 0) {
+    return;
+  }
+
+  graphPanSession.lastClientX = event.clientX;
+  graphPanSession.lastClientY = event.clientY;
+
+  const { xMin, xMax, yMin, yMax } = state.graphing.viewport;
+  const worldDeltaX = -(deltaX / rect.width) * (xMax - xMin);
+  const worldDeltaY = (deltaY / rect.height) * (yMax - yMin);
+  panGraph(worldDeltaX, worldDeltaY);
+  drawGraph();
+  event.preventDefault();
+}
+
+function handleGraphWheel(event) {
+  if (state.mode !== 'graphing') {
+    return;
+  }
+
+  const target = event.target instanceof Element ? event.target : null;
+  if (!target?.closest('#graph-canvas')) {
+    return;
+  }
+
+  if (event.deltaY === 0) {
+    return;
+  }
+
+  const anchor = getGraphWorldPointFromMouseEvent(event);
+  zoomGraph(event.deltaY < 0 ? 'in' : 'out', anchor);
+  drawGraph();
+  event.preventDefault();
+}
+
 function handleMouseDown(event) {
   if (state.mode !== 'graphing') {
+    return;
+  }
+
+  const graphCanvas = event.target instanceof Element ? event.target.closest('#graph-canvas') : null;
+  if (graphCanvas instanceof HTMLCanvasElement && event.button === 0) {
+    graphPanSession = {
+      lastClientX: event.clientX,
+      lastClientY: event.clientY
+    };
+    setGraphCanvasPanningState(true);
+    event.preventDefault();
     return;
   }
 
@@ -410,16 +520,20 @@ void preloadRemainingThemes();
 
 document.addEventListener('click', handleClick);
 document.addEventListener('mousedown', handleMouseDown);
+document.addEventListener('mousemove', handleGraphMouseMove);
+document.addEventListener('mouseup', stopGraphPan);
 document.addEventListener('change', handleChange);
 document.addEventListener('input', handleInput);
 document.addEventListener('focusin', handleFocusIn);
 document.addEventListener('keydown', handleKeydown);
+document.addEventListener('wheel', handleGraphWheel, { passive: false });
 document.addEventListener('selectionchange', () => {
   syncGraphExpressionSelection(document.activeElement);
 });
 window.addEventListener('resize', handleResize);
 window.addEventListener('load', () => drawGraph());
 window.addEventListener('popstate', handlePopState);
+window.addEventListener('blur', stopGraphPan);
 systemThemeMedia?.addEventListener?.('change', () => {
   if (state.settings.theme === 'system') {
     applyTheme();

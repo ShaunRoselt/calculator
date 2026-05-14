@@ -632,8 +632,8 @@
 
       .page-header.page-header--stacked .page-header__brand,
       .page-header.page-header--stacked .page-header__nav {
-        flex: 1 0 100%;
-        width: 100%;
+        flex: 0 1 auto;
+        width: auto;
         margin-left: 0;
       }
 
@@ -642,10 +642,10 @@
       }
 
       .page-header.page-header--stacked .page-header__controls {
-        width: fit-content;
+        flex: 1 0 100%;
+        width: 100%;
         max-width: 100%;
-        flex: 0 1 auto;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: flex-start;
         overflow: visible;
       }
@@ -701,7 +701,7 @@
         }
 
         .hero-preview-embed {
-          aspect-ratio: 10 / 19.5;
+          aspect-ratio: 10 / 15;
         }
       }
     </style>

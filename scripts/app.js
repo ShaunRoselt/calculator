@@ -1007,6 +1007,11 @@ function handleClick(event) {
   if (source && state.mode === 'graphing') {
     if (state.graphing.settingsOpen && !source.closest('.graph-settings-panel, [data-graph-settings-toggle]')) {
       state.graphing.settingsOpen = false;
+      state.graphing.settingsMenu = null;
+      shouldRender = true;
+    }
+    if (state.graphing.settingsMenu && !source.closest('.graph-settings-select-wrap')) {
+      state.graphing.settingsMenu = null;
       shouldRender = true;
     }
     if (state.graphing.stylePanelExpressionIndex != null && !source.closest('.graph-expression-style-panel, [data-graph-expression-style]')) {
@@ -1426,6 +1431,7 @@ function handleClick(event) {
   if (target.dataset.graphSettingsToggle) {
     state.graphing.settingsOpen = !state.graphing.settingsOpen;
     state.graphing.openMenu = null;
+    state.graphing.settingsMenu = null;
     render();
     return;
   }
@@ -1452,6 +1458,37 @@ function handleClick(event) {
     updateGraph();
     render();
     return;
+  }
+
+  if (target.dataset.graphSettingsMenuToggle) {
+    const menu = target.dataset.graphSettingsMenuToggle;
+    state.graphing.settingsMenu = state.graphing.settingsMenu === menu ? null : menu;
+    render();
+    return;
+  }
+
+  if (target.dataset.graphSettingsMenuSelect) {
+    const menu = target.dataset.graphSettingsMenuSelect;
+    const value = target.dataset.graphSettingsMenuValue;
+    if (!menu || !value) {
+      return;
+    }
+
+    state.graphing.settingsMenu = null;
+
+    if (menu === 'line-thickness') {
+      state.graphing.lineThickness = Number(value) || 2;
+      drawGraph();
+      render();
+      return;
+    }
+
+    if (menu === 'theme') {
+      state.graphing.theme = normalizeGraphThemeSetting(value);
+      drawGraph();
+      render();
+      return;
+    }
   }
 
   if (target.dataset.graphMenuToggle) {
@@ -1884,8 +1921,9 @@ function handleKeydown(event) {
     return;
   }
 
-  if (state.mode === 'graphing' && event.key === 'Escape' && (state.graphing.settingsOpen || state.graphing.openMenu)) {
+  if (state.mode === 'graphing' && event.key === 'Escape' && (state.graphing.settingsOpen || state.graphing.settingsMenu || state.graphing.openMenu)) {
     state.graphing.settingsOpen = false;
+    state.graphing.settingsMenu = null;
     state.graphing.openMenu = null;
     state.graphing.trigShifted = false;
     state.graphing.trigHyperbolic = false;

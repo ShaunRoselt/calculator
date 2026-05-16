@@ -88,8 +88,7 @@
   color: var(--text-soft);
 }
 
-.graph-settings-field input,
-.graph-settings-select {
+.graph-settings-field input {
   width: 100%;
   min-height: 36px;
   padding: 0 10px;
@@ -129,8 +128,23 @@
   margin-top: 16px;
 }
 
-.graph-settings-theme-select {
-  margin-top: 16px;
+.graph-settings-select-wrap {
+  width: 100%;
+  min-width: 0;
+}
+
+.graph-settings-select-button {
+  width: 100%;
+}
+
+.graph-settings-menu {
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  max-height: min(320px, calc(100dvh - 180px));
+  overflow: auto;
 }
 
 .graph-canvas {

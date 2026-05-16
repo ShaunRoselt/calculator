@@ -332,20 +332,82 @@ function renderGraphSettingsPanel() {
         ${renderGraphSettingsChoice(t('graph.degrees'), 'DEG', state.graphing.angle === 'DEG')}
         ${renderGraphSettingsChoice(t('graph.gradians'), 'GRAD', state.graphing.angle === 'GRAD')}
       </div>
-      <label class="graph-settings-select-label">
-        <span>${t('graph.lineThickness')}</span>
-        <select class="graph-settings-select" name="graph-line-thickness">
-          ${[1, 2, 3, 4].map((value) => `<option value="${value}" ${Number(state.graphing.lineThickness) === value ? 'selected' : ''}>${value.toFixed(1)}</option>`).join('')}
-        </select>
-      </label>
-      <label class="graph-settings-select-label graph-settings-theme-select">
-        <span>${t('graph.theme')}</span>
-        <select class="graph-settings-select" name="graph-theme">
-          <option value="match-app" ${state.graphing.theme === 'match-app' ? 'selected' : ''}>${t('graph.matchAppTheme')}</option>
-          ${themes.map((theme) => `<option value="${theme.value}" ${state.graphing.theme === theme.value ? 'selected' : ''}>${escapeHtml(theme.label)}</option>`).join('')}
-        </select>
-      </label>
+      ${renderGraphSettingsMenu(
+        'line-thickness',
+        t('graph.lineThickness'),
+        formatGraphLineThickness(state.graphing.lineThickness),
+        String(Number(state.graphing.lineThickness) || 2),
+        [1, 2, 3, 4].map((value) => ({
+          value: String(value),
+          label: value.toFixed(1)
+        }))
+      )}
+      ${renderGraphSettingsMenu(
+        'theme',
+        t('graph.theme'),
+        getGraphThemeLabel(themes, state.graphing.theme),
+        state.graphing.theme,
+        [
+          { value: 'match-app', label: t('graph.matchAppTheme') },
+          ...themes.map((theme) => ({
+            value: theme.value,
+            label: theme.label
+          }))
+        ]
+      )}
     </section>
+  `;
+}
+
+function formatGraphLineThickness(value) {
+  const numericValue = Number(value);
+  return Number.isFinite(numericValue) ? numericValue.toFixed(1) : '2.0';
+}
+
+function getGraphThemeLabel(themes, themeValue) {
+  if (themeValue === 'match-app') {
+    return t('graph.matchAppTheme');
+  }
+
+  return themes.find((theme) => theme.value === themeValue)?.label ?? themeValue;
+}
+
+function renderGraphSettingsMenu(menu, label, selectedLabel, selectedValue, options) {
+  const isOpen = state.graphing.settingsMenu === menu;
+  return `
+    <div class="graph-settings-select-label date-native-select-wrap settings-select-wrap graph-settings-select-wrap graph-settings-select-menu-wrap">
+      <button
+        type="button"
+        class="date-native-select-button settings-select-button graph-settings-select-button ${isOpen ? 'active' : ''}"
+        data-graph-settings-menu-toggle="${menu}"
+        aria-haspopup="listbox"
+        aria-expanded="${isOpen ? 'true' : 'false'}"
+        aria-label="${escapeHtml(label)}"
+      >
+        <span class="settings-select-button-label">${escapeHtml(selectedLabel)}</span>
+      </button>
+      <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
+      ${isOpen ? `
+        <div class="date-native-mode-menu settings-select-menu graph-settings-menu" role="listbox" aria-label="${escapeHtml(label)}">
+          ${options.map((option) => renderGraphSettingsMenuOption(menu, option, option.value === selectedValue)).join('')}
+        </div>
+      ` : ''}
+    </div>
+  `;
+}
+
+function renderGraphSettingsMenuOption(menu, option, selected) {
+  return `
+    <button
+      type="button"
+      class="date-native-mode-option ${selected ? 'selected' : ''}"
+      data-graph-settings-menu-select="${menu}"
+      data-graph-settings-menu-value="${escapeHtml(option.value)}"
+      role="option"
+      aria-selected="${selected ? 'true' : 'false'}"
+    >
+      <span class="settings-menu-option-label">${escapeHtml(option.label)}</span>
+    </button>
   `;
 }
 

@@ -120,6 +120,7 @@ function createGraphingState() {
     analysisData: null,
     openMenu: null,
     settingsOpen: false,
+    settingsMenu: null,
     trigShifted: false,
     trigHyperbolic: false,
     stylePanelExpressionIndex: null,

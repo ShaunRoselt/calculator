@@ -1,0 +1,73 @@
+{
+  "name": "calculator",
+  "version": "12.0.0",
+  "description": "Roselt Calculator is an installable calculator app with standard, scientific, programmer, graphing, date, and conversion modes.",
+  "desktopName": "io.github.ShaunRoselt.Calculator.desktop",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "check": "node scripts/check.js",
+    "capture:steam:screenshots": "node marketing/steam/capture_full_page_screenshots.cjs",
+    "create:steam:trailer": "node marketing/steam/create_trailer.cjs",
+    "generate:steam:store": "node marketing/steam/generate_store_images.cjs",
+    "generate:logos:png": "node assets/logos/generate_png_logos.cjs",
+    "package:flatpak": "npm run package:linux && sh scripts/package-flatpak.sh",
+    "package:linux:appimage": "electron-builder --linux AppImage --x64 --config.directories.output=dist/Roselt-Calculator-linux-x64-appimage",
+    "package:linux": "electron-packager . \"Roselt Calculator\" --platform=linux --arch=x64 --icon=assets/icons/app-icon-4096.png --out=dist --overwrite --asar --prune=true --ignore='^/(dist|flatpak/build|flatpak/repo|\\.flatpak-builder)(/|$)'",
+    "package:win": "electron-packager . \"Roselt Calculator\" --platform=win32 --arch=x64 --icon=assets/icons/app-icon-dark.ico --out=dist --overwrite --asar --prune=true --ignore='^/(dist|flatpak/build|flatpak/repo|\\.flatpak-builder)(/|$)'",
+    "package:win:portable": "electron-builder --win portable",
+    "start": "python3 -m http.server 4173",
+    "start:desktop": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaunRoselt/calculator.git"
+  },
+  "keywords": [],
+  "author": "Shaun Roselt",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ShaunRoselt/calculator/issues"
+  },
+  "homepage": "https://github.com/ShaunRoselt/calculator#readme",
+  "private": true,
+  "build": {
+    "appId": "io.github.ShaunRoselt.Calculator",
+    "productName": "Roselt Calculator",
+    "directories": {
+      "output": "dist/Roselt-Calculator-win32-x64-portable"
+    },
+    "files": [
+      "**/*",
+      "!dist{,/**/*}",
+      "!.venv{,/**/*}",
+      "!flatpak/build{,/**/*}",
+      "!flatpak/repo{,/**/*}",
+      "!.flatpak-builder{,/**/*}"
+    ],
+    "asar": true,
+    "linux": {
+      "artifactName": "Roselt-Calculator-${version}.${ext}",
+      "category": "Utility",
+      "icon": "assets/icons/app-icon-4096.png"
+    },
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "signAndEditExecutable": false,
+      "icon": "assets/icons/app-icon-dark.ico"
+    },
+    "portable": {
+      "artifactName": "Roselt-Calculator-Portable-${version}.exe"
+    }
+  },
+  "dependencies": {
+    "nerdamer": "^1.1.13"
+  },
+  "devDependencies": {
+    "@electron/packager": "^19.1.0",
+    "electron-builder": "^26.8.1",
+    "electron": "^41.2.0"
+  }
+}

@@ -1,0 +1,56 @@
+<svg width="499" height="667" viewBox="0 0 499 667" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<linearGradient id="shellGradient" x1="28" y1="18" x2="471" y2="649" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#99A1AA"/>
+			<stop offset="1" stop-color="#8E98A2"/>
+		</linearGradient>
+		<linearGradient id="displayGradient" x1="55" y1="54" x2="444" y2="179" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#54D7F2"/>
+			<stop offset="1" stop-color="#37B8E8"/>
+		</linearGradient>
+		<filter id="softShadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB">
+			<feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#4A5560" flood-opacity="0.26"/>
+		</filter>
+		<filter id="smallShadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB">
+			<feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#4A5560" flood-opacity="0.24"/>
+		</filter>
+	</defs>
+
+	<rect width="499" height="667" rx="26" fill="url(#shellGradient)"/>
+
+	<g filter="url(#softShadow)">
+		<rect x="55" y="54" width="389" height="125" rx="14" fill="url(#displayGradient)"/>
+	</g>
+
+	<g filter="url(#smallShadow)">
+		<rect x="55" y="239" width="109" height="110" rx="17" fill="#C0C9D2"/>
+	</g>
+
+	<g filter="url(#smallShadow)">
+		<rect x="195" y="239" width="109" height="110" rx="17" fill="#C0C9D2"/>
+	</g>
+
+	<g filter="url(#smallShadow)">
+		<rect x="335" y="239" width="109" height="110" rx="17" fill="#C0C9D2"/>
+	</g>
+
+	<g filter="url(#smallShadow)">
+		<rect x="55" y="366" width="109" height="110" rx="17" fill="#C0C9D2"/>
+	</g>
+
+	<g filter="url(#smallShadow)">
+		<rect x="195" y="366" width="109" height="110" rx="17" fill="#C0C9D2"/>
+	</g>
+
+	<g filter="url(#smallShadow)">
+		<rect x="55" y="493" width="109" height="110" rx="17" fill="#C0C9D2"/>
+	</g>
+
+	<g filter="url(#smallShadow)">
+		<rect x="195" y="493" width="109" height="110" rx="17" fill="#C0C9D2"/>
+	</g>
+
+	<g filter="url(#smallShadow)">
+		<rect x="335" y="366" width="109" height="237" rx="17" fill="#214F8E"/>
+	</g>
+</svg>

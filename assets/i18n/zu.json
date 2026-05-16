@@ -1,0 +1,731 @@
+{
+  "app": {
+    "title": "Roselt Isibali-manani",
+    "name": "Roselt Isibali-manani"
+  },
+  "themesPage": {
+    "hero": {
+      "eyebrow": "Preferences",
+      "title": "Theme & Language",
+      "subtitle": "Pick the look of the app. Choose the language used across the app."
+    },
+    "summary": {
+      "themeCountLabel": "Themes",
+      "languageCountLabel": "Languages",
+      "copy": "Preview every available theme and browse the full supported language list."
+    },
+    "sections": {
+      "themes": {
+        "kicker": "Appearance",
+        "title": "Theme",
+        "copy": "Pick the look of the app."
+      },
+      "languages": {
+        "kicker": "Language",
+        "title": "Language",
+        "copy": "Choose the language used across the app."
+      }
+    },
+    "cards": {
+      "previewLabel": "theme preview",
+      "lightScheme": "Light color scheme",
+      "darkScheme": "Dark color scheme",
+      "openTheme": "Open this theme",
+      "openInSettings": "Open in settings"
+    }
+  },
+  "updatesPage": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "Every release, from the first build to today.",
+      "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.0.0.",
+      "versionHistory": "Version history"
+    }
+  },
+  "landingPage": {
+    "header": {
+      "home": "Ikhaya le-Roselt Calculator",
+      "updates": "Izibuyekezo",
+      "launchCalculator": "Yethula Isibali",
+      "launchCalculatorNewTab": "Yethula Isibali kuthebhu entsha",
+      "primaryNavigation": "Ukuzulazula okuyinhloko"
+    },
+    "hero": {
+      "title": "Uhlelo lokusebenza oluhle kakhulu lwe-Calculator",
+      "subtitle": "Ikhaya lakho lomsebenzi wokubala ojwayelekile, wesayensi, nothuthukisiwe."
+    },
+    "downloads": {
+      "aria": "Okulandwayo kwenkundla",
+      "steam": "Landa ku-Steam",
+      "flathub": "Landa ku-Flathub",
+      "googlePlay": "Landa ku-Google Play Isitolo",
+      "preview": "Ukubuka kuqala kwe-Roselt Calculator bukhoma"
+    },
+    "modal": {
+      "title": "Kuyeza maduze!",
+      "close": "Vala i-popup iyeza maduze",
+      "dismiss": "Ngiyitholile"
+    },
+    "menus": {
+      "loadingLanguages": "Ilayisha izilimi...",
+      "loadingThemes": "Ilayisha amatimu...",
+      "noMatches": "Akukho okufanayo"
+    }
+  },
+  "common": {
+    "back": "Emuva",
+    "backspace": "Sula uhlamvu",
+    "closeSidePanel": "Vala iphaneli",
+    "clear": "Sula",
+    "clearEntry": "Sula okufakiwe"
+  },
+  "converter": {
+    "unitConverter": "Isiguquli samayunithi",
+    "title": "Iziguquli zamayunithi",
+    "builtInCollections": "Amaqoqo akhelwe ngaphakathi",
+    "category": "Isigaba",
+    "from": "Kusuka",
+    "to": "Kuya",
+    "inputValue": "Inani okufanele liguqulwe",
+    "convertedValue": "Inani eliguquliwe",
+    "swapUnits": "Shintshanisa amayunithi",
+    "keypad": "Ikhiphedi yokuguqula",
+    "unit": "iyunithi",
+    "unitOptions": "izinketho zeyunithi",
+    "currency": {
+      "updatingRates": "Kubuyekezwa amanani...",
+      "updateRates": "Buyekeza amanani",
+      "keypad": "Ikhiphedi yemali",
+      "currency": "imali",
+      "options": "izinketho zemali",
+      "updated": "Kubuyekezwe ngo-{timestamp}",
+      "status": {
+        "mockNote": "Amanani okulingisa ereferensi wedemo ezimele yohlelo.",
+        "fetching": "Kulandwa amanani akamuva ereferensi e-USD...",
+        "liveRatesLoaded": "Amanani bukhoma alayishwe kusuka ku-ExchangeRate-API.",
+        "liveUpdateUnavailable": "Ukuvuselela bukhoma akutholakali. Amanani edemo avuselelwe endaweni."
+      },
+      "search": "Search currencies"
+    },
+    "aboutEqualTo": "Cishe kulingana no"
+  },
+  "errors": {
+    "invalidInput": "Okufakiwe akuvumelekile",
+    "cannotDivideByZero": "Awukwazi ukuhlukanisa ngoziro",
+    "cannotModuloByZero": "Awukwazi ukwenza imodulo ngoziro",
+    "invalidProgrammerOperation": "Umsebenzi awuvumelekile",
+    "overflow": "Umphumela mkhulu kakhulu"
+  },
+  "date": {
+    "calculationMode": "Imodi yokubala",
+    "from": "Kusuka",
+    "to": "Kuya",
+    "results": {
+      "difference": "Umehluko",
+      "sameDates": "Izinsuku ziyefana",
+      "date": "Usuku"
+    },
+    "calculationModeOptions": "Izinketho zemodi yokubala",
+    "mode": {
+      "difference": "Umehluko",
+      "shift": "Shift"
+    },
+    "operation": "Umsebenzi",
+    "add": "Engeza",
+    "subtract": "Susa",
+    "years": "Iminyaka",
+    "months": "Izinyanga",
+    "days": "Izinsuku",
+    "chooseDate": "Khetha usuku",
+    "previousMonth": "Inyanga edlule",
+    "nextMonth": "Inyanga elandelayo",
+    "duration": {
+      "year": {
+        "one": "unyaka ongu-{count}",
+        "other": "iminyaka engu-{count}"
+      },
+      "month": {
+        "one": "inyanga engu-{count}",
+        "other": "izinyanga ezingu-{count}"
+      },
+      "week": {
+        "one": "isonto elingu-{count}",
+        "other": "amasonto angu-{count}"
+      },
+      "day": {
+        "one": "usuku olungu-{count}",
+        "other": "izinsuku ezingu-{count}"
+      }
+    },
+    "history": {
+      "differenceBetween": "Umehluko phakathi kuka-{from} no-{to}",
+      "addTo": "Engeza u-{duration} ku-{date}",
+      "subtractFrom": "Susa u-{duration} ku-{date}"
+    }
+  },
+  "graph": {
+    "checkHighlightedExpression": "Hlola inkulumo eqokonyisiwe",
+    "enterExpression": "Faka inkulumo",
+    "canvas": "Ikhanvasi yegrafu",
+    "stopTracing": "Misa ukulandelela",
+    "startTracing": "Qala ukulandelela",
+    "share": "Yabelana",
+    "options": "Izinketho",
+    "zoomIn": "Sondeza ngaphakathi",
+    "zoomInLabel": "Sondeza ngaphakathi",
+    "zoomOut": "Sondeza ngaphandle",
+    "zoomOutLabel": "Sondeza ngaphandle",
+    "refreshViewAutomatically": "Vuselela ukubuka ngokuzenzakalela",
+    "view": "Ukubuka",
+    "expressions": "Izinkulumo",
+    "mobileView": "Ukubuka kweselula",
+    "showGraph": "Bonisa igrafu",
+    "showExpressions": "Bonisa izinkulumo",
+    "backToFunctionList": "Buyela ohlwini lwemisebenzi",
+    "window": "Iwindi",
+    "resetView": "Setha kabusha ukubuka",
+    "units": "Amayunithi",
+    "radians": "Ama-radian",
+    "degrees": "Amadigri",
+    "gradians": "Ama-gradian",
+    "lineThickness": "Ukujiya komugqa",
+    "theme": "Itimu",
+    "alwaysLight": "Hlala kukhanya",
+    "matchAppTheme": "Fanisa netimu yohlelo",
+    "groups": {
+      "inequalities": "Ukungalingani",
+      "trigonometry": "I-trigonometry",
+      "function": "Umsebenzi"
+    },
+    "functions": "Imisebenzi",
+    "showEquation": "Bonisa isibalo",
+    "hideEquation": "Fihla isibalo",
+    "lineOptions": "Izinketho zomugqa",
+    "color": "Umbala",
+    "style": "Isitayela",
+    "plottingExpressions": "Kudwetshwa izinkulumo ezingu-{count}",
+    "xMin": "X-Okuncane",
+    "xMax": "X-Okukhulu",
+    "yMin": "Y-Okuncane",
+    "yMax": "Y-Okukhulu",
+    "selectExpression": "Khetha inkulumo {index}",
+    "expressionIndex": "Inkulumo {index}",
+    "analyzeFunction": "Hlaziya umsebenzi",
+    "changeEquationStyle": "Shintsha isitayela sesibalo",
+    "removeEquation": "Susa isibalo",
+    "lineStyle": {
+      "solid": "Isitayela somugqa oqinile",
+      "dash": "Isitayela somugqa oqalekezelwe",
+      "dot": "Isitayela samachashazi"
+    },
+    "analysis": {
+      "title": "Ukuhlaziya",
+      "domain": "Isizinda",
+      "range": "Ububanzi",
+      "xIntercept": "x-intercept",
+      "yIntercept": "y-i-intercept",
+      "minima": "Okuncane",
+      "maxima": "U-Maxima",
+      "inflectionPoints": "Amaphoyinti e-inflection",
+      "verticalAsymptotes": "Ama-asymptote aqondile",
+      "horizontalAsymptotes": "Ama-asymptote avundlile",
+      "obliqueAsymptotes": "Ama-asymptote e-Oblique",
+      "parity": "I-Parity",
+      "period": "Isikhathi",
+      "monotonicity": "I-Monotonicity",
+      "domainNone": "Ayikho imikhawulo yesizinda",
+      "rangeNone": "Ayikho imikhawulo yobubanzi",
+      "xInterceptNone": "Awekho ama-x-intercepts",
+      "yInterceptNone": "Ayikho i-y-intercepts",
+      "minimaNone": "Akukho okuncane",
+      "maximaNone": "Abukho ubuningi",
+      "inflectionNone": "Awekho amaphuzu e-inflection",
+      "verticalAsymptotesNone": "Awekho ama-asymptote aqondile",
+      "horizontalAsymptotesNone": "Awekho ama-asymptote avundlile",
+      "obliqueAsymptotesNone": "Awekho ama-asymptote atshekile",
+      "parityUnknown": "Akwaziwa",
+      "parityOdd": "Okungavamile",
+      "parityEven": "Ngisho",
+      "parityNeither": "Nakanye",
+      "periodicityUnknown": "Akwaziwa",
+      "periodicityNotPeriodic": "Akusona isikhathi",
+      "monotonicityConstant": "Okuvamile",
+      "monotonicityIncreasing": "Iyanda",
+      "monotonicityDecreasing": "Iyancipha",
+      "monotonicityUnknown": "Akwaziwa",
+      "monotonicityError": "Ayikwazi ukunquma",
+      "featureTooComplexPlural": "Kunzima kakhulu ukuthi kungahlaziywa",
+      "analysisCouldNotBePerformed": "Ukuhlaziya akwenziwanga",
+      "analysisNotSupported": "Ukuhlaziya akusekelwa",
+      "variableIsNotX": "Okuguquguqukayo akuyona x"
+    }
+  },
+  "history": {
+    "empty": "Umlando awunalutho",
+    "clearAll": "Sula konke",
+    "clear": "Sula umlando",
+    "title": "Umlando",
+    "andMemory": "Umlando neMemori",
+    "aria": {
+      "historyPanel": "Iphaneli yomlando",
+      "historyAndMemoryPanel": "Iphaneli yomlando nememori"
+    },
+    "closeFlyout": "Vala umlando",
+    "openFlyout": "Vula umlando"
+  },
+  "memory": {
+    "empty": "Imemori ayinalutho",
+    "clearItem": "Sula into",
+    "addCurrentValue": "Engeza inani lamanje",
+    "subtractCurrentValue": "Susa inani lamanje",
+    "clearAll": "Sula konke",
+    "clear": "Sula imemori",
+    "title": "Imemori",
+    "controls": "Izilawuli zememori",
+    "tooltips": {
+      "clearAll": "Sula yonke imemori",
+      "recall": "Buyisa kusuka kwimemori",
+      "add": "Engeza kwimemori",
+      "subtract": "Susa kwimemori",
+      "store": "Gcina kwimemori"
+    },
+    "recallValue": "Buyisa imemori {value}"
+  },
+  "navigation": {
+    "aria": {
+      "navigation": "Ukuzulazula",
+      "closeNavigation": "Vala ukuzulazula",
+      "openNavigation": "Vula ukuzulazula"
+    },
+    "groups": {
+      "calculator": "Isibali-manani",
+      "converter": "Isiguquli"
+    }
+  },
+  "programmer": {
+    "bitFlipPanel": "Iphaneli yokuphendula amabhithi",
+    "baseReadouts": "Ukufundwa kwezisekelo",
+    "surfaceMode": "Imodi yobuso",
+    "fullKeypad": "Ikhiphedi ephelele",
+    "showKeypad": "Bonisa ikhiphedi",
+    "bitTogglingKeypad": "Ikhiphedi yokushintsha amabhithi",
+    "showBitView": "Bonisa ukubuka kwamabhithi",
+    "wordSize": "Usayizi wegama",
+    "bitwise": "I-Bitwise",
+    "bitShift": "Ukushintsha amabhithi"
+  },
+  "calculator": {
+    "scientific": {
+      "trigonometry": "I-trigonometry",
+      "function": "Umsebenzi",
+      "functionsAria": "Imisebenzi",
+      "trigonometricFunctionsAria": "Imisebenzi ye-trigonometry",
+      "angleUnit": "Iyunithi ye-engeli {value}",
+      "exponentialFormat": "Shintsha ifomethi yomchazi"
+    }
+  },
+  "settings": {
+    "appearance": {
+      "group": "Ukubukeka",
+      "themeTitle": "Itimu",
+      "themeDescription": "Khetha uhlelo lwemibala",
+      "light": "Khanyayo",
+      "dark": "Mnyama",
+      "blue": "Luhlaza okwesibhakabhaka",
+      "green": "Luhlaza",
+      "system": "Isistimu"
+    },
+    "language": {
+      "group": "Ulimi",
+      "title": "Ulimi",
+      "description": "Khetha ulimi olukhethayo"
+    },
+    "about": {
+      "group": "Mayelana"
+    },
+    "feedback": "Thumela impendulo",
+    "contribute": {
+      "prefix": "Nikela ku",
+      "link": "GitHub",
+      "suffix": "ukuze usize ukuthuthukisa lesi sibali-manani"
+    },
+    "links": {
+      "repository": "Indawo yephrojekthi",
+      "readme": "README",
+      "license": "Ilayisense ye-MIT"
+    },
+    "calculation": {
+      "group": "Isibalo",
+      "repeatEqualsTitle": "Phinda umsebenzi wokugcina ngokulingana okulandelanayo",
+      "repeatEqualsDescription": "Kumamodi Ajwayelekile, Esayensi, kanye NoMhleli, ukucindezela = futhi kusebenzisa kabusha i-opharetha nomsebenzi wangaphambilini.",
+      "enabled": "Kunikwe amandla",
+      "disabled": "Ikhutshaziwe"
+    },
+    "window": {
+      "group": "Iwindi",
+      "fullscreenTitle": "Isikrini Esigcwele (F11)",
+      "fullscreenDescription": "Khetha ukuthi uyafuna yini uhlelo lokusebenza lube i-FullScreen noma cha",
+      "fullscreenEnabled": "Isikrini esigcwele",
+      "fullscreenDisabled": "Jwayelekile"
+    },
+    "shortcuts": {
+      "group": "Shortcuts",
+      "title": "App shortcuts",
+      "description": "Review and customize the keyboard shortcuts used by the app",
+      "helper": "Select a shortcut, then press a new key combination. Press Escape to cancel.",
+      "recording": "Press shortcut",
+      "reset": "Reset",
+      "invalid": "Use a modifier key or function key for app shortcuts.",
+      "conflict": "That shortcut is already assigned to {shortcut}.",
+      "undoTitle": "Undo",
+      "undoDescription": "Restore the previous calculator state",
+      "redoTitle": "Redo",
+      "redoDescription": "Reapply the last undone calculator state",
+      "copyTitle": "Copy",
+      "copyDescription": "Copy the current calculator result",
+      "pasteTitle": "Paste",
+      "pasteDescription": "Paste a value into the current calculator mode",
+      "fullscreenTitle": "Toggle fullscreen",
+      "fullscreenDescription": "Enter or leave fullscreen mode"
+    }
+  },
+  "modes": {
+    "standard": {
+      "label": "Okuvamile",
+      "subtitle": "Ukuhlola okusheshayo kwakudala"
+    },
+    "scientific": {
+      "label": "Isayensi",
+      "subtitle": "Ama-operator, imisebenzi, nokusekelwa kwezinkulumo"
+    },
+    "graphing": {
+      "label": "Igrafu",
+      "subtitle": "Dweba inkulumo elula endizeni ye-Cartesian"
+    },
+    "programmer": {
+      "label": "Umhleli",
+      "subtitle": "Izibalo zemininingwane ephelele nokuguqulwa kwe-base"
+    },
+    "date": {
+      "label": "Ukubala usuku",
+      "subtitle": "Thola izikhathi futhi ushintshe izinsuku"
+    },
+    "currency": {
+      "label": "Imali",
+      "subtitle": "Guqula amanani okushintshanisa okulingisa"
+    },
+    "volume": {
+      "label": "Ivolumu",
+      "subtitle": "Guqula izilinganiso zevolumu"
+    },
+    "length": {
+      "label": "Ubude",
+      "subtitle": "Guqula amabanga namayunithi obude"
+    },
+    "weight": {
+      "label": "Isisindo neMisa",
+      "subtitle": "Guqula amayunithi esisindo nemisa"
+    },
+    "temperature": {
+      "label": "Izinga lokushisa",
+      "subtitle": "Guqula izikali zezinga lokushisa"
+    },
+    "energy": {
+      "label": "Amandla",
+      "subtitle": "Guqula izilinganiso zamandla"
+    },
+    "area": {
+      "label": "Indawo",
+      "subtitle": "Guqula izilinganiso zendawo"
+    },
+    "speed": {
+      "label": "Ijubane",
+      "subtitle": "Guqula izilinganiso zejubane"
+    },
+    "time": {
+      "label": "Isikhathi",
+      "subtitle": "Guqula amayunithi esikhathi"
+    },
+    "power": {
+      "label": "Amandla",
+      "subtitle": "Guqula izilinganiso wamandla"
+    },
+    "data": {
+      "label": "Idatha",
+      "subtitle": "Guqula amayunithi okugcina idijithali"
+    },
+    "pressure": {
+      "label": "Ingcindezi",
+      "subtitle": "Guqula amayunithi engcindezi"
+    },
+    "angle": {
+      "label": "I-engeli",
+      "subtitle": "Guqula izilinganiso zama-engeli"
+    },
+    "settings": {
+      "label": "Amasethingi",
+      "subtitle": "Ukubukeka nolwazi lohlelo"
+    }
+  },
+  "categories": {
+    "Currency": "Imali",
+    "Volume": "Ivolumu",
+    "Length": "Ubude",
+    "Mass": "Imisa",
+    "Temperature": "Izinga lokushisa",
+    "Energy": "Amandla",
+    "Area": "Indawo",
+    "Speed": "Ijubane",
+    "Time": "Isikhathi",
+    "Power": "Amandla",
+    "Data": "Idatha",
+    "Pressure": "Ingcindezi",
+    "Angle": "I-engeli"
+  },
+  "units": {
+    "labels": {
+      "Angstroms": "Ama-Angstroms",
+      "Nanometers": "Ama-Nanometer",
+      "Microns": "Amamakrofoni",
+      "Millimeters": "Amamilimitha",
+      "Centimeters": "Amasentimitha",
+      "Meters": "Amamitha",
+      "Kilometers": "Amakhilomitha",
+      "Inches": "Amayintshi",
+      "Feet": "Izinyawo",
+      "Yards": "Amayadi",
+      "Miles": "Amamayela",
+      "Nautical miles": "Amamayela e-Nautical",
+      "paperclips": "iziqeshana zamaphepha",
+      "hands": "izandla",
+      "jumbo jets": "amajethi amakhulu",
+      "Carats": "Ama-Carats",
+      "Milligrams": "Amamiligremu",
+      "Centigrams": "Amasentimitha",
+      "Decigrams": "Ama-decigram",
+      "Grams": "Amagremu",
+      "Dekagrams": "Ama-Dekagram",
+      "Hectograms": "Ama-Hectogram",
+      "Kilograms": "Amakhilogremu",
+      "Metric tonnes": "Amathani wemethrikhi",
+      "Ounces": "Ama-ounces",
+      "Pounds": "Amaphawundi",
+      "Stone": "Itshe",
+      "Short tons (US)": "Amathani amafushane (US)",
+      "Long tons (UK)": "Amathani amade (UK)",
+      "snowflakes": "amakhekheba eqhwa",
+      "soccer balls": "amabhola ebhola",
+      "elephants": "izindlovu",
+      "whales": "imikhomo",
+      "Celsius": "Celsius",
+      "Fahrenheit": "Fahrenheit",
+      "Kelvin": "Kelvin",
+      "Milliliters": "Amamililitha",
+      "Cubic centimeters": "Cubic centimeter",
+      "Liters": "Amalitha",
+      "Cubic meters": "Cubic metres",
+      "Teaspoons (US)": "Izipuni (US)",
+      "Tablespoons (US)": "Izipuni (US)",
+      "Fluid ounces (US)": "I-Fluid ounces (US)",
+      "Cups (US)": "Izindebe (US)",
+      "Pints (US)": "Amaphinti (US)",
+      "Quarts (US)": "Ama-Quarts (US)",
+      "Gallons (US)": "Amagalani (US)",
+      "Cubic inches": "Amasentimitha e-Cubic",
+      "Cubic feet": "Cubic feet",
+      "Cubic yards": "Cubic yards",
+      "Teaspoons (UK)": "Izipuni (UK)",
+      "Tablespoons (UK)": "Izipuni (UK)",
+      "Fluid ounces (UK)": "Ama-Fluid ounces (UK)",
+      "Pints (UK)": "Amaphinti (UK)",
+      "Quarts (UK)": "Ama-Quarts (UK)",
+      "Gallons (UK)": "Amagalani (UK)",
+      "coffee cups": "izinkomishi zekhofi",
+      "bathtubs": "obhavu",
+      "swimming pools": "amadamu okubhukuda",
+      "Square millimeters": "Amamilimitha ayisikwele",
+      "Square centimeters": "Amasentimitha ayisikwele",
+      "Square meters": "Izikwele zamamitha",
+      "Hectares": "Amahektha",
+      "Square kilometers": "Amakhilomitha-skwele",
+      "Square inches": "Amayintshi ayisikwele",
+      "Square feet": "Izinyawo eziyisikwele",
+      "Square yards": "Amayadi ayisikwele",
+      "Acres": "Ama-acres",
+      "Square miles": "Amamayela ayisikwele",
+      "sheets of paper": "amashidi ephepha",
+      "soccer fields": "izinkundla zebhola",
+      "castles": "izinqaba",
+      "Pyeong": "I-Pyeong",
+      "Centimeters per second": "Amasentimitha ngesekhondi",
+      "Meters per second": "Amamitha ngomzuzwana",
+      "Kilometers per hour": "Amakhilomitha ngehora",
+      "Feet per second": "Izinyawo ngesekhondi",
+      "Miles per hour": "Amamayela ngehora",
+      "Knots": "Amafindo",
+      "Mach": "Mach",
+      "turtles": "izimfudu",
+      "horses": "amahhashi",
+      "jets": "amajethi",
+      "Watts": "Ama-Watts",
+      "Kilowatts": "AmaKilowatt",
+      "Horsepower (US)": "Amandla amahhashi (US)",
+      "Foot-pounds/minute": "Unyawo-pondo/umzuzu",
+      "BTUs/minute": "BTUs/umzuzu",
+      "light bulbs": "amalambu",
+      "train engines": "izinjini zesitimela",
+      "Thermal calories": "Amakhalori ashisayo",
+      "Food calories": "Amakhalori okudla",
+      "British thermal units": "Amayunithi we-thermal ase-British",
+      "Kilojoules": "Amakhilojuli",
+      "Kilowatt-hours": "Amahora we-Kilowatt",
+      "Electron volts": "Amavolthi e-electron",
+      "Joules": "Joules",
+      "Foot-pounds": "Amaphawundi onyawo",
+      "batteries": "amabhethri",
+      "bananas": "ubhanana",
+      "slices of cake": "izingcezu zekhekhe",
+      "Bits": "Amabhithi",
+      "Nibble": "Nibble",
+      "Bytes": "Amabhayithi",
+      "Kilobits": "Amakhilobhithi",
+      "Kibibits": "Ama-Kibibits",
+      "Kilobytes": "Amakhilobhayithi",
+      "Kibibytes": "Ama-Kibibytes",
+      "Megabits": "Amamegabhithi",
+      "Mebibits": "Ama-Mebibits",
+      "Megabytes": "Amamegabhayithi",
+      "Mebibytes": "Ama-Mebibytes",
+      "Gigabits": "AmaGigabhithi",
+      "Gibibits": "Ama-Gibibits",
+      "Gigabytes": "AmaGigabhayithi",
+      "Gibibytes": "Gibibytes",
+      "Terabits": "Ama-Terabit",
+      "Tebibits": "Ama-Tebibit",
+      "Terabytes": "Ama-terabhayithi",
+      "Tebibytes": "Ama-Tebibytes",
+      "Petabits": "Ama-Petabits",
+      "Pebibits": "Ama-Pebibits",
+      "Petabytes": "Ama-Petabytes",
+      "Pebibytes": "Ama-Pebibytes",
+      "Exabits": "Izingqinamba",
+      "Exbibits": "Ama-Exbibit",
+      "Exabytes": "Ama-Exabyte",
+      "Exbibytes": "Ama-Exbibytes",
+      "Zetabits": "Ama-Zetabits",
+      "Zebibits": "AmaZebibit",
+      "Zetabytes": "Ama-Zetabytes",
+      "Zebibytes": "AmaZebibyte",
+      "Yottabits": "Ama-Yottabits",
+      "Yobibits": "Ama-Yobibits",
+      "Yottabytes": "Ama-Yottabytes",
+      "Yobibytes": "Ama-Yobibytes",
+      "floppy disks": "ama-floppy disk",
+      "CDs": "Ama-CD",
+      "DVDs": "AmaDVD",
+      "Atmospheres": "Umkhathi",
+      "Bars": "Amabha",
+      "Kilopascals": "Ama-Kilopascal",
+      "Millimeters of mercury": "Amamilimitha e-mercury",
+      "Pascals": "Ama-Pascals",
+      "Pounds per square inch": "Amaphawundi ngeyintshi yesikwele",
+      "Degrees": "Amadigri",
+      "Radians": "AmaRadians",
+      "Gradians": "Ama-Gradians",
+      "Microseconds": "Amasekhondi amancane",
+      "Milliseconds": "Ama-millisecond",
+      "Seconds": "Amasekhondi",
+      "Minutes": "Amaminithi",
+      "Hours": "Amahora",
+      "Days": "Izinsuku",
+      "Weeks": "Amasonto",
+      "Years": "Iminyaka"
+    }
+  },
+  "currencies": {
+    "names": {
+      "US Dollar": "Idola lase-US",
+      "Euro": "I-Euro",
+      "British Pound": "Upondo waseBrithani",
+      "Japanese Yen": "I-Japanese Yen",
+      "Canadian Dollar": "I-Canadian Dollar",
+      "Australian Dollar": "Idola lase-Australia",
+      "Brazilian Real": "I-Brazilian Real",
+      "Chilean Peso": "I-Chilean Peso",
+      "Chinese Yuan": "I-Chinese Yuan",
+      "Colombian Peso": "I-Peso yase-Colombia",
+      "Danish Krone": "I-Danish Krone",
+      "Egyptian Pound": "Ipondo laseGibhithe",
+      "Hong Kong Dollar": "Idola lase-Hong Kong",
+      "Indian Rupee": "I-Indian Rupee",
+      "Kenyan Shilling": "Usheleni waseKenya",
+      "Mexican Peso": "I-Mexican Peso",
+      "Nigerian Naira": "I-Nigerian Naira",
+      "New Zealand Dollar": "I-New Zealand Dollar",
+      "Norwegian Krone": "Norwegian Krone",
+      "Philippine Piso": "I-Philippine Piso",
+      "Polish Zloty": "I-Polish Zloty",
+      "Qatari Riyal": "Qatari Riyal",
+      "Saudi Riyal": "I-Saudi Riyal",
+      "Singapore Dollar": "Singapore Dollar",
+      "South African Rand": "IRandi laseNingizimu Afrika",
+      "South Korean Won": "I-South Korean Won",
+      "Swedish Krona": "I-Swedish Krona",
+      "Swiss Franc": "I-Swiss Franc",
+      "Thai Baht": "I-Thai Baht",
+      "Turkish Lira": "I-Turkish Lira",
+      "Turkmenistani Manat": "Turkmenistani Manat",
+      "Ugandan Shilling": "UShili wase-Uganda",
+      "Ukrainian Hryvnia": "I-Ukrainian Hryvnia",
+      "UAE Dirham": "I-UAE Dirham",
+      "Uruguayan Peso": "I-Uruguayan Peso",
+      "Uzbekistani Som": "I-Uzbekistani Som",
+      "Vanuatu Vatu": "I-Vanuatu Vatu",
+      "Venezuelan Bolivar Soberano": "I-Venezuelan Bolívar Soberano",
+      "Vietnamese Dong": "Vietnamese Dong",
+      "Yemeni Rial": "I-Yemeni Rial"
+    },
+    "labels": {
+      "United States - Dollar": "I-United States - Idola",
+      "Europe - Euro": "I-Euro - iYurophu",
+      "United Kingdom - Pound": "I-United Kingdom - Iphawundi",
+      "Japan - Yen": "Japan - Yen",
+      "Canada - Dollar": "Canada - Dollar",
+      "Australia - Dollar": "I-Australia - Idola",
+      "Brazil - Real": "I-Brazil - Impela",
+      "Chile - Peso": "I-Chile - Peso",
+      "China - Yuan Renminbi": "I-China - Yuan Renminbi",
+      "Colombia - Peso": "I-Colombia - Peso",
+      "Denmark - Krone": "I-Denmark - I-Krone",
+      "Egypt - Pound": "I-Egypt - Pondo",
+      "Hong Kong SAR - Dollar": "I-Hong Kong SAR - Idola",
+      "India - Rupee": "I-India - Rupee",
+      "Kenya - Shilling": "I-Kenya - Shilling",
+      "Mexico - Peso": "Mexico - Peso",
+      "Nigeria - Naira": "Nigeria - Naira",
+      "New Zealand - Dollar": "I-New Zealand - Idola",
+      "Norway - Krone": "I-Norway - I-Krone",
+      "Philippines - Piso": "Philippines - Piso",
+      "Poland - Zloty": "I-Poland - Zloty",
+      "Qatar - Riyal": "Qatar - Riyal",
+      "Saudi Arabia - Riyal": "I-Saudi Arabia - Riyal",
+      "Singapore - Dollar": "Singapore - Idola",
+      "South Africa - Rand": "INingizimu Afrika - iRandi",
+      "South Korea - Won": "INingizimu Korea - Iwinile",
+      "Sweden - Krona": "I-Sweden - Krona",
+      "Switzerland - Franc": "Switzerland - Franc",
+      "Thailand - Baht": "I-Thailand - Baht",
+      "Turkey - Lira": "Turkey - Lira",
+      "Turkmenistan - Manat": "I-Turkmenistan - iManat",
+      "Uganda - Shilling": "Uganda - Shilling",
+      "Ukraine - Hryvnia": "Ukraine - Hryvnia",
+      "United Arab Emirates - Dirham": "I-United Arab Emirates - Dirham",
+      "Uruguay - Peso": "I-Uruguay - Peso",
+      "Uzbekistan - Som": "I-Uzbekistan - Som",
+      "Vanuatu - Vatu": "I-Vanuatu - i-Vatu",
+      "Venezuela - Bolívar Soberano": "Venezuela - Bolívar Soberano",
+      "Vietnam - Dong": "I-Vietnam - Dong",
+      "Yemen - Rial": "I-Yemen - i-Rial"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Roselt Calculator
+Comment=Calculator with scientific, graphing, programmer, and conversion modes
+Exec=io.github.ShaunRoselt.Calculator
+Icon=io.github.ShaunRoselt.Calculator
+Categories=Utility;
+Keywords=calculator;math;scientific;programmer;graphing;conversion;
+StartupWMClass=Roselt Calculator
+Terminal=false

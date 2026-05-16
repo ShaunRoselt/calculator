@@ -1,0 +1,301 @@
+{
+  "createdAt": "2026-05-15T19:59:46.278Z",
+  "outputVideo": "Roselt-Calculator-Steam-Trailer-1080p60.mp4",
+  "resolution": "1920x1080",
+  "fps": 60,
+  "container": "mp4",
+  "videoCodec": "h264",
+  "audioCodec": "aac",
+  "targetVideoBitrate": "12000k",
+  "durationSeconds": 72.5,
+  "scenes": [
+    {
+      "id": "01_standard_entry",
+      "page": "standard",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2.4,
+      "still": "stills/01_standard_entry.png",
+      "clip": "clips/01_standard_entry.mp4"
+    },
+    {
+      "id": "02_standard_result",
+      "page": "standard",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2.4,
+      "still": "stills/02_standard_result.png",
+      "clip": "clips/02_standard_result.mp4"
+    },
+    {
+      "id": "03_scientific_trig",
+      "page": "scientific",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2.5,
+      "still": "stills/03_scientific_trig.png",
+      "clip": "clips/03_scientific_trig.mp4"
+    },
+    {
+      "id": "04_scientific_factorial",
+      "page": "scientific",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2.5,
+      "still": "stills/04_scientific_factorial.png",
+      "clip": "clips/04_scientific_factorial.mp4"
+    },
+    {
+      "id": "05_graphing_plot",
+      "page": "graphing",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2.8,
+      "still": "stills/05_graphing_plot.png",
+      "clip": "clips/05_graphing_plot.mp4"
+    },
+    {
+      "id": "06_graphing_analysis",
+      "page": "graphing",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2.8,
+      "still": "stills/06_graphing_analysis.png",
+      "clip": "clips/06_graphing_analysis.mp4"
+    },
+    {
+      "id": "07_programmer_decimal",
+      "page": "programmer",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2.3,
+      "still": "stills/07_programmer_decimal.png",
+      "clip": "clips/07_programmer_decimal.mp4"
+    },
+    {
+      "id": "08_programmer_hex",
+      "page": "programmer",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2.3,
+      "still": "stills/08_programmer_hex.png",
+      "clip": "clips/08_programmer_hex.mp4"
+    },
+    {
+      "id": "09_programmer_bits",
+      "page": "programmer",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2.5,
+      "still": "stills/09_programmer_bits.png",
+      "clip": "clips/09_programmer_bits.mp4"
+    },
+    {
+      "id": "10_date_difference",
+      "page": "date",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2.6,
+      "still": "stills/10_date_difference.png",
+      "clip": "clips/10_date_difference.mp4"
+    },
+    {
+      "id": "11_date_shift",
+      "page": "date",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2.6,
+      "still": "stills/11_date_shift.png",
+      "clip": "clips/11_date_shift.mp4"
+    },
+    {
+      "id": "12_currency",
+      "page": "currency",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2,
+      "still": "stills/12_currency.png",
+      "clip": "clips/12_currency.mp4"
+    },
+    {
+      "id": "13_volume",
+      "page": "volume",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2,
+      "still": "stills/13_volume.png",
+      "clip": "clips/13_volume.mp4"
+    },
+    {
+      "id": "14_length",
+      "page": "length",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2,
+      "still": "stills/14_length.png",
+      "clip": "clips/14_length.mp4"
+    },
+    {
+      "id": "15_weight",
+      "page": "weight",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2,
+      "still": "stills/15_weight.png",
+      "clip": "clips/15_weight.mp4"
+    },
+    {
+      "id": "16_temperature",
+      "page": "temperature",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2,
+      "still": "stills/16_temperature.png",
+      "clip": "clips/16_temperature.mp4"
+    },
+    {
+      "id": "17_energy",
+      "page": "energy",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2,
+      "still": "stills/17_energy.png",
+      "clip": "clips/17_energy.mp4"
+    },
+    {
+      "id": "18_area",
+      "page": "area",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2,
+      "still": "stills/18_area.png",
+      "clip": "clips/18_area.mp4"
+    },
+    {
+      "id": "19_speed",
+      "page": "speed",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2,
+      "still": "stills/19_speed.png",
+      "clip": "clips/19_speed.mp4"
+    },
+    {
+      "id": "20_time",
+      "page": "time",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2,
+      "still": "stills/20_time.png",
+      "clip": "clips/20_time.mp4"
+    },
+    {
+      "id": "21_power",
+      "page": "power",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2,
+      "still": "stills/21_power.png",
+      "clip": "clips/21_power.mp4"
+    },
+    {
+      "id": "22_data",
+      "page": "data",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2,
+      "still": "stills/22_data.png",
+      "clip": "clips/22_data.mp4"
+    },
+    {
+      "id": "23_pressure",
+      "page": "pressure",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2,
+      "still": "stills/23_pressure.png",
+      "clip": "clips/23_pressure.mp4"
+    },
+    {
+      "id": "24_angle",
+      "page": "angle",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2,
+      "still": "stills/24_angle.png",
+      "clip": "clips/24_angle.mp4"
+    },
+    {
+      "id": "25_theme_gallery",
+      "page": "settings",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2.8,
+      "still": "stills/25_theme_gallery.png",
+      "clip": "clips/25_theme_gallery.mp4"
+    },
+    {
+      "id": "26_theme_terminal",
+      "page": "standard",
+      "theme": "terminal",
+      "language": "en",
+      "duration": 2.2,
+      "still": "stills/26_theme_terminal.png",
+      "clip": "clips/26_theme_terminal.mp4"
+    },
+    {
+      "id": "27_theme_unicorn",
+      "page": "standard",
+      "theme": "unicorn",
+      "language": "en",
+      "duration": 2.2,
+      "still": "stills/27_theme_unicorn.png",
+      "clip": "clips/27_theme_unicorn.mp4"
+    },
+    {
+      "id": "28_theme_south_africa",
+      "page": "standard",
+      "theme": "south-africa",
+      "language": "en",
+      "duration": 2.2,
+      "still": "stills/28_theme_south_africa.png",
+      "clip": "clips/28_theme_south_africa.mp4"
+    },
+    {
+      "id": "29_language_gallery",
+      "page": "settings",
+      "theme": "dark",
+      "language": "en",
+      "duration": 2.8,
+      "still": "stills/29_language_gallery.png",
+      "clip": "clips/29_language_gallery.mp4"
+    },
+    {
+      "id": "30_language_german",
+      "page": "standard",
+      "theme": "dark",
+      "language": "de",
+      "duration": 2.2,
+      "still": "stills/30_language_german.png",
+      "clip": "clips/30_language_german.mp4"
+    },
+    {
+      "id": "31_language_japanese",
+      "page": "standard",
+      "theme": "dark",
+      "language": "ja",
+      "duration": 2.2,
+      "still": "stills/31_language_japanese.png",
+      "clip": "clips/31_language_japanese.mp4"
+    },
+    {
+      "id": "32_language_arabic",
+      "page": "standard",
+      "theme": "dark",
+      "language": "ar",
+      "duration": 2.2,
+      "still": "stills/32_language_arabic.png",
+      "clip": "clips/32_language_arabic.mp4"
+    }
+  ]
+}

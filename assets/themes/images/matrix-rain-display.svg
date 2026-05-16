@@ -1,0 +1,33 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="displayRain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0fff2" stop-opacity="0.75"/>
+      <stop offset="0.15" stop-color="#8dff9f" stop-opacity="0.5"/>
+      <stop offset="0.5" stop-color="#43da5b" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#08150b" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="displayGlow" x="-40%" y="-20%" width="180%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#7bff91" flood-opacity="0.5"/>
+    </filter>
+    <style>
+      .col {
+        fill: url(#displayRain);
+        font-family: "Noto Sans Mono CJK JP", "Noto Sans JP", "MS Gothic", monospace;
+        font-weight: 700;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        letter-spacing: 2px;
+      }
+    </style>
+  </defs>
+  <g filter="url(#displayGlow)" opacity="0.8">
+    <text class="col" x="54" y="-36" font-size="20">ﾈﾜﾂ|ﾌﾏﾘ+ﾁﾖﾚ=ﾎﾕ</text>
+    <text class="col" x="166" y="-98" font-size="18">ﾖﾌﾁ*ﾜﾅﾚ|ﾏﾂﾎ+ﾘﾕ</text>
+    <text class="col" x="292" y="-22" font-size="22">ﾚﾏﾅ+ﾂﾖﾌ|ﾜﾁﾎ*ﾕﾓ</text>
+    <text class="col" x="436" y="-84" font-size="18">ﾁﾎﾜ|ﾚﾅﾂ+ﾏﾌﾘ*ﾕﾓ</text>
+    <text class="col" x="592" y="-12" font-size="24">ﾂﾖﾌ*ﾏﾚﾅ|ﾜﾁﾎ+ﾘﾓ</text>
+    <text class="col" x="754" y="-72" font-size="18">ﾏﾁﾚ=ﾎﾜﾅ|ﾂﾌﾘ+ﾕﾓ</text>
+    <text class="col" x="918" y="-28" font-size="20">ﾖﾈﾂ+ﾌﾜﾘ|ﾏﾁﾎ*ﾚﾕ</text>
+    <text class="col" x="1058" y="-104" font-size="16">ﾜﾂﾖ|ﾌﾏﾚ+ﾁﾎﾘ*ﾕ</text>
+  </g>
+</svg>

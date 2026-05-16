@@ -1,0 +1,31 @@
+<svg width="499" height="667" viewBox="0 0 499 667" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shellGradient" x1="28" y1="18" x2="471" y2="649" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D46A3B"/>
+      <stop offset="0.25" stop-color="#F5A16E"/>
+      <stop offset="0.5" stop-color="#F7D2C0"/>
+      <stop offset="0.75" stop-color="#D67AA0"/>
+      <stop offset="1" stop-color="#A24370"/>
+    </linearGradient>
+    <linearGradient id="surfaceGradient" x1="55" y1="54" x2="444" y2="179" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8C5A4A"/>
+      <stop offset="1" stop-color="#5A3028"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="335" y1="366" x2="444" y2="603" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF9D62"/>
+      <stop offset="1" stop-color="#D46696"/>
+    </linearGradient>
+    <filter id="softShadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#150B09" flood-opacity="0.34"/></filter>
+    <filter id="smallShadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#150B09" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect x="1.5" y="1.5" width="496" height="664" rx="24.5" fill="url(#shellGradient)" stroke="#FFE4DA" stroke-width="3"/>
+  <g filter="url(#softShadow)"><rect x="55" y="54" width="389" height="125" rx="14" fill="url(#surfaceGradient)"/></g>
+  <g filter="url(#smallShadow)"><rect x="55" y="239" width="109" height="110" rx="17" fill="url(#surfaceGradient)"/></g>
+  <g filter="url(#smallShadow)"><rect x="195" y="239" width="109" height="110" rx="17" fill="url(#surfaceGradient)"/></g>
+  <g filter="url(#smallShadow)"><rect x="335" y="239" width="109" height="110" rx="17" fill="url(#surfaceGradient)"/></g>
+  <g filter="url(#smallShadow)"><rect x="55" y="366" width="109" height="110" rx="17" fill="url(#surfaceGradient)"/></g>
+  <g filter="url(#smallShadow)"><rect x="195" y="366" width="109" height="110" rx="17" fill="url(#surfaceGradient)"/></g>
+  <g filter="url(#smallShadow)"><rect x="55" y="493" width="109" height="110" rx="17" fill="url(#surfaceGradient)"/></g>
+  <g filter="url(#smallShadow)"><rect x="195" y="493" width="109" height="110" rx="17" fill="url(#surfaceGradient)"/></g>
+  <g filter="url(#smallShadow)"><rect x="335" y="366" width="109" height="237" rx="17" fill="url(#accentGradient)"/></g>
+</svg>

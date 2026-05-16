@@ -1,0 +1,44 @@
+.scientific-angle-operators {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.scientific-angle-operators button {
+  min-height: 24px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text-soft);
+  font-size: 0.86rem;
+}
+
+.scientific-angle-operators .angle-toggle,
+.scientific-angle-operators .angle-toggle.active,
+.scientific-angle-operators button:hover,
+.scientific-angle-operators button:focus-visible {
+  background: transparent;
+}
+
+.scientific-angle-operators button:hover,
+.scientific-angle-operators button:focus-visible,
+.scientific-angle-operators button.active {
+  color: var(--text);
+}
+
+.scientific-angle-operators .exponential-format-toggle.active {
+  position: relative;
+}
+
+.scientific-angle-operators .exponential-format-toggle.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--accent);
+}

@@ -1,0 +1,220 @@
+.showcase-body {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(121, 230, 179, 0.18), transparent 26%),
+    radial-gradient(circle at 92% 12%, rgba(103, 180, 255, 0.24), transparent 22%),
+    linear-gradient(180deg, #0a1324 0%, #09111f 46%, #040913 100%);
+}
+
+.hero-compact {
+  min-height: auto;
+  align-items: start;
+}
+
+.showcase-summary-card,
+.showcase-theme-card,
+.language-panel {
+  background: linear-gradient(180deg, rgba(18, 29, 52, 0.9) 0%, rgba(10, 18, 35, 0.84) 100%);
+  border: 1px solid var(--page-border);
+  box-shadow: var(--page-shadow);
+}
+
+.showcase-summary-card {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: var(--page-radius-xl);
+}
+
+.showcase-summary-card h2 {
+  margin: 0;
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+  line-height: 1.05;
+}
+
+.showcase-summary-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--page-text-soft);
+  display: grid;
+  gap: 0.7rem;
+}
+
+.showcase-section,
+.language-section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.showcase-heading {
+  max-width: none;
+}
+
+.theme-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.showcase-status {
+  margin: 0;
+  padding: 1.25rem 1.4rem;
+  border-radius: var(--page-radius-lg);
+  color: var(--page-text-soft);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.showcase-theme-card {
+  display: grid;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.showcase-theme-card-preview {
+  position: relative;
+  min-height: 320px;
+  background: rgba(6, 12, 24, 0.78);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.showcase-theme-card-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: 0;
+  pointer-events: none;
+  background: #0f1728;
+}
+
+.showcase-theme-card-body {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.showcase-theme-card-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.showcase-theme-card-logo {
+  width: 46px;
+  height: 46px;
+  padding: 0.4rem;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.06) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.showcase-theme-card-title-wrap {
+  min-width: 0;
+}
+
+.showcase-theme-card-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.showcase-theme-card-subtitle {
+  margin: 0.2rem 0 0;
+  color: var(--page-text-soft);
+  font-size: 0.9rem;
+}
+
+.showcase-meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.showcase-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--page-text-soft);
+  font-size: 0.84rem;
+}
+
+.showcase-theme-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.showcase-theme-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.65rem 0.95rem;
+  border-radius: 999px;
+  color: #061218;
+  background: linear-gradient(135deg, var(--theme-accent, var(--page-accent)) 0%, var(--theme-accent-strong, var(--page-accent-2)) 100%);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.showcase-theme-link.secondary {
+  color: var(--page-text);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.language-panel {
+  padding: 1rem;
+  border-radius: var(--page-radius-xl);
+}
+
+.language-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.75rem;
+}
+
+.language-item {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--page-radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.language-item strong {
+  font-size: 0.98rem;
+}
+
+.language-item span {
+  color: var(--page-text-soft);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 1024px) {
+  .hero-compact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .showcase-summary-card,
+  .showcase-theme-card-body,
+  .language-panel {
+    padding: 1.25rem;
+  }
+
+  .theme-gallery,
+  .language-list {
+    grid-template-columns: 1fr;
+  }
+}

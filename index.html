@@ -343,7 +343,11 @@
         display: grid;
         gap: 0.9rem;
         justify-items: center;
-        max-width: 50rem;
+        width: min(100%, 90rem);
+        max-width: 90rem;
+        margin-inline: auto;
+        padding-inline: 1rem;
+        text-align: center;
       }
 
       .hero-title {
@@ -352,8 +356,10 @@
         font-size: clamp(2.2rem, 5vw, 4rem);
         line-height: 0.95;
         letter-spacing: -0.03em;
-        white-space: nowrap;
-        text-wrap: nowrap;
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        text-wrap: balance;
       }
 
       .hero-subtitle {
@@ -361,6 +367,8 @@
         color: color-mix(in srgb, var(--text-soft) 88%, white 12%);
         font-size: clamp(1.02rem, 2vw, 1.4rem);
         line-height: 1.45;
+        max-width: 100%;
+        overflow-wrap: anywhere;
         text-wrap: balance;
       }
 
@@ -944,6 +952,10 @@
       }
 
       function scheduleHeaderLayoutUpdate() {
+        if (heroTitle instanceof HTMLElement) {
+          heroTitle.classList.remove('hero-title--measuring', 'hero-title--single-line');
+        }
+
         if (typeof window.requestAnimationFrame !== 'function') {
           updateHeaderLayout();
           return;
@@ -1064,12 +1076,35 @@
         return systemThemeMedia?.matches === true ? 'light' : 'dark';
       }
 
+      function normalizeThemeCandidate(themeId) {
+        return typeof themeId === 'string'
+          ? themeId.trim().toLowerCase().replaceAll('_', '-').replaceAll(' ', '-')
+          : '';
+      }
+
+      function findSupportedThemeSetting(themeId) {
+        const normalizedThemeId = normalizeThemeCandidate(themeId);
+        if (!normalizedThemeId) {
+          return null;
+        }
+
+        if (normalizedThemeId === 'system') {
+          return 'system';
+        }
+
+        return baseThemeOptions.find((theme) => {
+          const normalizedValue = normalizeThemeCandidate(theme.value);
+          const normalizedLabel = normalizeThemeCandidate(theme.label);
+          return normalizedValue === normalizedThemeId || normalizedLabel === normalizedThemeId;
+        })?.value ?? null;
+      }
+
       function isSupportedThemeSetting(themeId) {
-        return themeId === 'system' || baseThemeOptions.some((theme) => theme.value === themeId);
+        return findSupportedThemeSetting(themeId) !== null;
       }
 
       function normalizeThemeSetting(themeId) {
-        return isSupportedThemeSetting(themeId) ? themeId : 'system';
+        return findSupportedThemeSetting(themeId) ?? 'system';
       }
 
       function getStoredPreference(primaryKey, secondaryKey) {
@@ -1218,10 +1253,26 @@
 
       function syncUrl({ themeId, languageId }) {
         const url = new URL(window.location.href);
-        url.searchParams.set('page', currentAppPage);
-        url.searchParams.set('theme', themeId);
-        url.searchParams.set('language', languageId);
-        window.history.replaceState({}, '', url);
+        let shouldUpdateUrl = false;
+
+        if (url.searchParams.has('page') || currentAppPage !== DEFAULT_MODE) {
+          url.searchParams.set('page', currentAppPage);
+          shouldUpdateUrl = true;
+        }
+
+        if (url.searchParams.has('theme')) {
+          url.searchParams.set('theme', themeId);
+          shouldUpdateUrl = true;
+        }
+
+        if (url.searchParams.has('language')) {
+          url.searchParams.set('language', languageId);
+          shouldUpdateUrl = true;
+        }
+
+        if (shouldUpdateUrl) {
+          window.history.replaceState({}, '', url);
+        }
       }
 
       function getMenuElements(menuId) {
@@ -1575,6 +1626,8 @@
 
         rawLanguageOptions = getSupportedLanguages();
         baseThemeOptions = getThemeOptions();
+        const requestedLanguageId = getRequestedLanguageId();
+        const requestedThemeId = getRequestedThemeId();
         // Determine requested page but default to standard on the public site.
         // Preserve query/local behaviour during local development (file:// or localhost).
         currentAppPage = getRequestedAppPage();
@@ -1582,8 +1635,9 @@
           currentAppPage = DEFAULT_MODE;
         }
 
-        await applyLanguage(getRequestedLanguageId());
-        applyTheme(getRequestedThemeId());
+        currentThemeSetting = requestedThemeId;
+        await applyLanguage(requestedLanguageId);
+        applyTheme(requestedThemeId);
 
         if (systemThemeMedia?.addEventListener) {
           systemThemeMedia.addEventListener('change', () => {

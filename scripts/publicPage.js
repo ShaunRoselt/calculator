@@ -710,9 +710,12 @@ export async function initPublicPage({
   await initThemes();
   rawLanguageOptions = getSupportedLanguages();
   baseThemeOptions = getThemeOptions();
+  const requestedLanguageId = getRequestedLanguageId();
+  const requestedThemeSetting = normalizeThemeSetting(getRequestedThemeSetting());
   currentAppPage = getRequestedAppPage();
-  await applyLanguage(getRequestedLanguageId());
-  applyTheme(getRequestedThemeSetting());
+  currentThemeSetting = requestedThemeSetting;
+  await applyLanguage(requestedLanguageId);
+  applyTheme(requestedThemeSetting);
 
   if (systemThemeMedia?.addEventListener) {
     systemThemeMedia.addEventListener('change', () => {

@@ -8,12 +8,14 @@ const { spawn } = require('node:child_process');
 const ROOT = path.resolve(__dirname, '..', '..');
 const SOURCE_DIR = path.join(__dirname, 'Steam Store', 'Delphi');
 const DEFAULT_OUTPUT_DIR = path.join(__dirname, 'store');
-const ELECTRON_BIN = path.join(
-  ROOT,
-  'node_modules',
-  '.bin',
-  process.platform === 'win32' ? 'electron.cmd' : 'electron'
-);
+const ELECTRON_BIN = typeof require('electron') === 'string'
+  ? require('electron')
+  : path.join(
+    ROOT,
+    'node_modules',
+    '.bin',
+    process.platform === 'win32' ? 'electron.cmd' : 'electron'
+  );
 const DARK_BACKGROUND = '#1b1c20';
 const FOREGROUND = '#f4f4f5';
 const ACCENT = '#57b9ed';
@@ -451,12 +453,15 @@ function runCli(options) {
   ensureElectronInstalled();
 
   return new Promise((resolve, reject) => {
-    const child = spawn(ELECTRON_BIN, ['--no-sandbox', '--disable-setuid-sandbox', __filename, ...process.argv.slice(2)], {
+    const childEnv = {
+      ...process.env,
+      ROS_ELT_STORE_OUTPUT_DIR: options.outputDir
+    };
+    delete childEnv.ELECTRON_RUN_AS_NODE;
+
+    const child = spawn(ELECTRON_BIN, [__filename, '--no-sandbox', '--disable-setuid-sandbox', ...process.argv.slice(2)], {
       stdio: 'inherit',
-      env: {
-        ...process.env,
-        ROS_ELT_STORE_OUTPUT_DIR: options.outputDir
-      }
+      env: childEnv
     });
 
     child.on('error', reject);

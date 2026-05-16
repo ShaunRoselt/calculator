@@ -104,7 +104,8 @@
         "fetching": "Извличане на най-новите референтни курсове в USD...",
         "liveRatesLoaded": "Техни курсове на живо, заредени от ExchangeRate-API.",
         "liveUpdateUnavailable": "Не е налична актуализация на живо. Обновени демо цени на местно ниво."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Приблизително равно на"
   },

@@ -104,7 +104,8 @@
         "fetching": "সর্বশেষ USD রেফারেন্স রেট আনা হচ্ছে...",
         "liveRatesLoaded": "ExchangeRate-API থেকে লাইভ রেট লোড হয়েছে।",
         "liveUpdateUnavailable": "লাইভ আপডেট অনুপলব্ধ৷ স্থানীয়ভাবে ডেমো রেট রিফ্রেশ করা হয়েছে।"
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "এর সমান"
   },

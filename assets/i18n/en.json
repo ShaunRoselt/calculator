@@ -98,12 +98,13 @@
       "keypad": "Currency keypad",
       "currency": "currency",
       "options": "currency options",
+      "search": "Search currencies",
       "updated": "Updated {timestamp}",
       "status": {
-        "mockNote": "Mock reference rates for the standalone app demo.",
+        "mockNote": "Using the bundled offline currency snapshot from the latest manual update.",
         "fetching": "Fetching the latest USD reference rates...",
         "liveRatesLoaded": "Live rates loaded from ExchangeRate-API.",
-        "liveUpdateUnavailable": "Live update unavailable. Refreshed demo rates locally."
+        "liveUpdateUnavailable": "Live update unavailable. Using the bundled offline currency snapshot."
       }
     },
     "aboutEqualTo": "About equal to"

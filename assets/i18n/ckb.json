@@ -104,7 +104,8 @@
         "fetching": "وەرگرتنی نوێترین ڕێژەی ئاماژەی USD...",
         "liveRatesLoaded": "ڕێژەی ڕاستەوخۆ لە ExchangeRate-API بارکراوە.",
         "liveUpdateUnavailable": "نوێکردنەوەی ڕاستەوخۆ بەردەست نییە. ڕێژەی دیمۆ نوێکراوەتەوە لە ناوخۆدا."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "نزیکەی یەکسانە بە"
   },

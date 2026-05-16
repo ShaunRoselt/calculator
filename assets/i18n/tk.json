@@ -104,7 +104,8 @@
         "fetching": "Iň soňky USD salgylanma nyrhlaryny almak ...",
         "liveRatesLoaded": "ExchangeRate-API-den ýüklenen göni nyrhlar.",
         "liveUpdateUnavailable": "Göni täzelenme elýeterli däl. Locallyerli derejede täzelenen demo nyrhlary."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Deňdir"
   },

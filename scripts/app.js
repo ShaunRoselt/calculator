@@ -4,6 +4,7 @@ import {
   CONVERTER_MODE_TO_CATEGORY,
   CURRENCY_CODE_TO_NAME,
   DEFAULT_CURRENCY_RATES,
+  OFFLINE_CURRENCY_UPDATED_AT,
   DEFAULT_MODE,
   canonicalizeShortcutBinding,
   getCurrencyDetails,
@@ -983,6 +984,7 @@ function handleClick(event) {
   let shouldRender = false;
 
   if (source && isConverterMode(state.mode) && state.converter.openConverterMenu && !source.closest('.converter-select-wrap')) {
+    clearConverterMenuSearch(state.converter.openConverterMenu);
     state.converter.openConverterMenu = null;
     shouldRender = true;
   }
@@ -1295,10 +1297,15 @@ function handleClick(event) {
 
   if (target.dataset.converterMenuToggle) {
     const field = target.dataset.converterMenuToggle;
-    state.converter.openConverterMenu = state.converter.openConverterMenu === field ? null : field;
+    const isOpening = state.converter.openConverterMenu !== field;
+    clearConverterMenuSearch();
+    state.converter.openConverterMenu = isOpening ? field : null;
     state.converter.converterKeyboardField = field;
     setConverterActiveField(field);
     render();
+    if (isOpening) {
+      focusConverterMenuSearch(field);
+    }
     return;
   }
 
@@ -1558,7 +1565,7 @@ async function updateCurrencyRates() {
     state.converter.currencyUpdateMessageKey = 'converter.currency.status.liveRatesLoaded';
   } catch {
     state.converter.currencyRates = buildFallbackCurrencyRates();
-    state.converter.currencyUpdatedAt = formatCurrencyTimestamp(new Date().toISOString());
+    state.converter.currencyUpdatedAt = OFFLINE_CURRENCY_UPDATED_AT;
     state.converter.currencyUpdateMessageKey = 'converter.currency.status.liveUpdateUnavailable';
   } finally {
     state.converter.isUpdatingRates = false;
@@ -1583,22 +1590,7 @@ function normalizeCurrencyRates(rates) {
 }
 
 function buildFallbackCurrencyRates() {
-  const fallbackRates = { ...DEFAULT_CURRENCY_RATES };
-  const minuteSeed = Math.floor(Date.now() / 60000);
-  let index = 0;
-
-  for (const [name, rate] of Object.entries(fallbackRates)) {
-    if (name === 'US Dollar') {
-      continue;
-    }
-
-    const offset = ((minuteSeed + index * 17) % 23) - 11;
-    const driftMultiplier = 1 + (offset / 5000);
-    fallbackRates[name] = Number((rate * driftMultiplier).toPrecision(10));
-    index += 1;
-  }
-
-  return fallbackRates;
+  return { ...DEFAULT_CURRENCY_RATES };
 }
 
 function formatCurrencyTimestamp(value) {
@@ -1758,6 +1750,17 @@ function handleInput(event) {
     return;
   }
 
+  if (target.dataset.converterMenuSearch) {
+    const field = target.dataset.converterMenuSearch;
+    if (field === 'from' || field === 'to') {
+      setConverterMenuSearchValue(field, target.value);
+      state.converter.converterKeyboardField = field;
+      render();
+      focusConverterMenuSearch(field);
+    }
+    return;
+  }
+
   if (target.name?.startsWith('graph-expression-')) {
     const index = Number(target.name.replace('graph-expression-', ''));
     setGraphExpression(index, target.value);
@@ -1789,6 +1792,11 @@ function handleFocusIn(event) {
 
   const target = event.target;
   if (target instanceof HTMLInputElement) {
+    if (target.dataset.converterMenuSearch === 'from' || target.dataset.converterMenuSearch === 'to') {
+      state.converter.converterKeyboardField = target.dataset.converterMenuSearch;
+      return;
+    }
+
     if (target.name?.startsWith('graph-expression-')) {
       selectGraphExpression(Number(target.name.replace('graph-expression-', '')));
       syncGraphExpressionSelection(target);
@@ -1805,7 +1813,7 @@ function handleFocusIn(event) {
     return;
   }
 
-  const currencyToggle = target.closest('[data-currency-menu-toggle]');
+  const currencyToggle = target.closest('[data-converter-menu-toggle]');
   if (currencyToggle instanceof HTMLElement) {
     const field = currencyToggle.dataset.converterMenuToggle;
     if (field === 'from' || field === 'to') {
@@ -1841,6 +1849,7 @@ function handleKeydown(event) {
   }
 
   if (isConverterMode(state.mode) && event.key === 'Escape' && state.converter.openConverterMenu) {
+    clearConverterMenuSearch(state.converter.openConverterMenu);
     state.converter.openConverterMenu = null;
     render();
     event.preventDefault();
@@ -1904,6 +1913,9 @@ function handleKeydown(event) {
       updateGraph();
       render();
     }
+    if (event.target instanceof HTMLInputElement || event.target instanceof HTMLSelectElement) {
+      return;
+    }
     if (isConverterMode(state.mode) || state.mode === 'converter') {
       if (/^[0-9]$/.test(event.key)) {
         handleConverterKeypad('digit', event.key);
@@ -1957,6 +1969,8 @@ function handleConverterDropdownKeydown(event) {
     return false;
   }
 
+  const isMenuSearchInput = event.target instanceof HTMLInputElement
+    && (event.target.dataset.converterMenuSearch === 'from' || event.target.dataset.converterMenuSearch === 'to');
   const isDropdownTarget = isConverterDropdownTarget(event.target);
   if (!isDropdownTarget && !state.converter.openConverterMenu) {
     return false;
@@ -1971,11 +1985,18 @@ function handleConverterDropdownKeydown(event) {
     moveConverterSelection(field, event.key === 'ArrowDown' ? 1 : -1);
     event.preventDefault();
     render();
+    if (isMenuSearchInput) {
+      focusConverterMenuSearch(field);
+    }
     return true;
   }
 
+  if (isMenuSearchInput) {
+    return false;
+  }
+
   if (event.key === 'Home' || event.key === 'End') {
-    const options = getConverterDropdownOptions();
+    const options = getConverterDropdownOptions(field);
     if (!options.length) {
       return false;
     }
@@ -1987,10 +2008,15 @@ function handleConverterDropdownKeydown(event) {
   }
 
   if (event.key === 'Enter' || event.key === ' ') {
-    state.converter.openConverterMenu = state.converter.openConverterMenu === field ? null : field;
+    const isOpening = state.converter.openConverterMenu !== field;
+    clearConverterMenuSearch();
+    state.converter.openConverterMenu = isOpening ? field : null;
     state.converter.converterKeyboardField = field;
     event.preventDefault();
     render();
+    if (isOpening) {
+      focusConverterMenuSearch(field);
+    }
     return true;
   }
 
@@ -2019,6 +2045,14 @@ function getConverterKeyboardField(target) {
     }
   }
 
+  const searchInput = element?.closest('[data-converter-menu-search]');
+  if (searchInput instanceof HTMLElement) {
+    const field = searchInput.dataset.converterMenuSearch;
+    if (field === 'from' || field === 'to') {
+      return field;
+    }
+  }
+
   const option = element?.closest('[data-converter-option-select]');
   if (option instanceof HTMLElement) {
     const field = option.dataset.converterOptionSelect;
@@ -2040,7 +2074,7 @@ function isConverterDropdownTarget(target) {
 }
 
 function moveConverterSelection(field, direction) {
-  const options = getConverterDropdownOptions();
+  const options = getConverterDropdownOptions(field);
   if (!options.length) {
     return;
   }
@@ -2053,7 +2087,7 @@ function moveConverterSelection(field, direction) {
 }
 
 function selectConverterByIndex(field, index, keepMenuOpen) {
-  const values = getConverterDropdownOptions().map((option) => option.value);
+  const values = getConverterDropdownOptions(field).map((option) => option.value);
   if (!values.length) {
     return;
   }
@@ -2064,6 +2098,9 @@ function selectConverterByIndex(field, index, keepMenuOpen) {
 function applyConverterSelection(field, value, keepMenuOpen = false) {
   state.converter[field === 'from' ? 'fromUnit' : 'toUnit'] = value;
   state.converter.openConverterMenu = keepMenuOpen ? field : null;
+  if (!keepMenuOpen) {
+    clearConverterMenuSearch(field);
+  }
   state.converter.converterKeyboardField = field;
   setConverterActiveField(field);
   syncConverterValues(field);
@@ -2079,13 +2116,13 @@ function findConverterTypeaheadMatch(field, key) {
   converterTypeaheadTimestamp = now;
   converterTypeaheadBuffer += key.toLowerCase();
 
-  const options = getConverterDropdownOptions();
+  const options = getConverterDropdownOptions(field);
   const currentValue = field === 'from' ? state.converter.fromUnit : state.converter.toUnit;
   const currentIndex = Math.max(0, options.findIndex((option) => option.value === currentValue));
   const orderedOptions = [...options.slice(currentIndex + 1), ...options.slice(0, currentIndex + 1)];
 
   return orderedOptions.find((option) => {
-    const searchTerms = [option.value, option.label, option.code]
+    const searchTerms = [option.value, option.label, option.code, option.symbol, option.meta]
       .filter(Boolean)
       .map((term) => term.toLowerCase());
 
@@ -2094,21 +2131,78 @@ function findConverterTypeaheadMatch(field, key) {
   }) ?? null;
 }
 
-function getConverterDropdownOptions() {
-  if (state.converter.category === 'Currency') {
-    return getCurrencyOptions().map((currency) => {
+function getConverterDropdownOptions(field) {
+  const options = state.converter.category === 'Currency'
+    ? getCurrencyOptions().map((currency) => {
       const details = getCurrencyDetails(currency.name);
       return {
         value: currency.name,
         label: details.label,
-        code: details.code
+        code: details.code,
+        symbol: details.symbol,
+        meta: getCurrencyOptionMeta(details)
       };
-    });
+    })
+    : getUnitsForCategory(state.converter.category).map((unit) => ({
+      value: unit.name,
+      label: getUnitLabel(unit.name),
+      code: unit.symbol
+    }));
+
+  const searchQuery = getConverterMenuSearchValue(field).trim().toLowerCase();
+  if (!searchQuery) {
+    return options;
   }
 
-  return getUnitsForCategory(state.converter.category).map((unit) => ({
-    value: unit.name,
-    label: getUnitLabel(unit.name),
-    code: unit.symbol
-  }));
+  return options.filter((option) => [option.value, option.label, option.code, option.symbol, option.meta]
+    .filter(Boolean)
+    .some((term) => String(term).toLowerCase().includes(searchQuery)));
+}
+
+function getCurrencyOptionMeta(details) {
+  const code = String(details.code || '').trim().toUpperCase();
+  const symbol = String(details.symbol || '').trim();
+  return symbol && symbol !== code ? `${code} · ${symbol}` : code;
+}
+
+function getConverterMenuSearchValue(field) {
+  const searchState = getConverterMenuSearchState();
+  return searchState[field === 'to' ? 'to' : 'from'] ?? '';
+}
+
+function setConverterMenuSearchValue(field, value) {
+  const searchState = getConverterMenuSearchState();
+  searchState[field === 'to' ? 'to' : 'from'] = value;
+}
+
+function clearConverterMenuSearch(field = null) {
+  const searchState = getConverterMenuSearchState();
+  if (field === 'from' || field === 'to') {
+    searchState[field] = '';
+    return;
+  }
+
+  searchState.from = '';
+  searchState.to = '';
+}
+
+function getConverterMenuSearchState() {
+  if (!state.converter.converterMenuSearch || typeof state.converter.converterMenuSearch !== 'object') {
+    state.converter.converterMenuSearch = { from: '', to: '' };
+  }
+
+  return state.converter.converterMenuSearch;
+}
+
+function focusConverterMenuSearch(field) {
+  requestAnimationFrame(() => {
+    const input = document.querySelector(`[data-converter-menu-search="${field}"]`);
+    if (!(input instanceof HTMLInputElement)) {
+      return;
+    }
+
+    const cursorPosition = input.value.length;
+    input.focus();
+    input.setSelectionRange(cursorPosition, cursorPosition);
+  });
 }

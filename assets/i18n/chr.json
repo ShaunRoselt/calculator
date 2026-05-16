@@ -104,7 +104,8 @@
         "fetching": "USD ᎤᎵᏍᎩ ᎤᏓᎷᎸᎢ ᎠᎴ ᎠᏓᏟᎶᎯ…",
         "liveRatesLoaded": "ExchangeRate-API ᎤᎵᏍᎩ ᎠᏓᏟᎶᎯ ᎤᎵᎮᎵᏍᎬ.",
         "liveUpdateUnavailable": "ᎤᎵᏍᎩ ᎠᏓᏟᎶᎯ ᎤᏃᎸᎸ ᎠᎴ ᎠᎹ ᎠᏓᏟᎶᎯ ᎤᎵᎮᎵᏍᎬ."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "ᎠᎴ ᎠᎵᎦᎵ"
   },

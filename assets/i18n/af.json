@@ -104,7 +104,8 @@
         "fetching": "Besig om die nuutste USD-verwysingskoerse te haal...",
         "liveRatesLoaded": "Lewende koerse is vanaf ExchangeRate-API gelaai.",
         "liveUpdateUnavailable": "Lewende opdatering is nie beskikbaar nie. Demo-koerse is plaaslik verfris."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Ongeveer gelyk aan"
   },

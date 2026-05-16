@@ -104,7 +104,8 @@
         "fetching": "Noudetaan viimeisimmät USD-viitekurssit...",
         "liveRatesLoaded": "ExchangeRate-API:sta ladatut reaaliaikaiset hinnat.",
         "liveUpdateUnavailable": "Live päivitys ei ole saatavilla. Päivitetyt demohinnat paikallisesti."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Suurin verran"
   },

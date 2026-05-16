@@ -104,7 +104,8 @@
         "fetching": "Na-ebuta ọnụego ntụaka USD kacha ọhụrụ...",
         "liveRatesLoaded": "Ọnụego efu sitere na ExchangeRate-API bugoro.",
         "liveUpdateUnavailable": "Mmelite dị ndụ adịghị. Ọnụego ngosi ume ọhụrụ na mpaghara."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Ihe dị ka hà nhata"
   },

@@ -104,7 +104,8 @@
         "fetching": "USDaren azken erreferentzia-tasak eskuratzen...",
         "liveRatesLoaded": "ExchangeRate-APItik kargatu dira zuzeneko tarifak.",
         "liveUpdateUnavailable": "Zuzenean eguneratzea ez dago erabilgarri. Demo-tasa freskatuak lokalean."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Gutxi gorabehera berdina"
   },

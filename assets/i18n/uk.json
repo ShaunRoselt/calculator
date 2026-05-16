@@ -104,7 +104,8 @@
         "fetching": "Отримання останніх довідкових курсів долара...",
         "liveRatesLoaded": "Активні курси, завантажені з ExchangeRate-API.",
         "liveUpdateUnavailable": "Оновлення в реальному часі недоступне. Оновлені демонстраційні тарифи локально."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Приблизно дорівнює"
   },

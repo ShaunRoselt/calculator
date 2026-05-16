@@ -104,7 +104,8 @@
         "fetching": "En son USD referans oranları getiriliyor...",
         "liveRatesLoaded": "Canlı oranlar ExchangeRate-API'den yüklendi.",
         "liveUpdateUnavailable": "Canlı güncelleme kullanılamıyor. Demo oranları yerel olarak yenilendi."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Yaklaşık olarak eşit"
   },

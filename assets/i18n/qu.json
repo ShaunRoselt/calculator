@@ -104,7 +104,8 @@
         "fetching": "Qhipa USD referencia tarifakunata apamuspa...",
         "liveRatesLoaded": "Kawsaq tarifakuna ExchangeRate-API kaqmanta kargasqa.",
         "liveUpdateUnavailable": "Kawsaq musuqchayqa manam kanchu. Musuqyachisqa demo tarifakuna llaqtapi."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Yaqa kaqlla"
   },

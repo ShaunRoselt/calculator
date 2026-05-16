@@ -104,7 +104,8 @@
         "fetching": "Viimaste USD viitekursside toomine...",
         "liveRatesLoaded": "ExchangeRate-API-st laaditud reaalajas kursid.",
         "liveUpdateUnavailable": "Reaalajas värskendus pole saadaval. Värskendatud demohinnad kohapeal."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Umbes võrdne"
   },

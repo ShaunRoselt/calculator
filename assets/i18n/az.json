@@ -104,7 +104,8 @@
         "fetching": "Son ABŞ dolları istinad məzənnələri əldə edilir...",
         "liveRatesLoaded": "Canlı məzənnələr ExchangeRate-API-dən yüklənib.",
         "liveUpdateUnavailable": "Canlı yeniləmə mövcud deyil. Yerli olaraq yenilənmiş demo dərəcələri."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Təxminən bərabərdir"
   },

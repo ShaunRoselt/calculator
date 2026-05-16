@@ -104,7 +104,8 @@
         "fetching": "Obteniendo las últimas tasas de referencia en USD...",
         "liveRatesLoaded": "Tarifas en vivo cargadas desde ExchangeRate-API.",
         "liveUpdateUnavailable": "Actualización en vivo no disponible. Tarifas de demostración actualizadas a nivel local."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Aproximadamente igual a"
   },

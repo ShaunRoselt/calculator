@@ -1,7 +1,7 @@
 import {
   CONVERTER_MODE_TO_CATEGORY,
   DEFAULT_CURRENCY_RATES,
-  MOCK_CURRENCY_UPDATED_AT,
+  OFFLINE_CURRENCY_UPDATED_AT,
   STORAGE_KEYS,
   createDefaultShortcutBindings,
   normalizeShortcutBindings
@@ -179,8 +179,12 @@ function createInitialState() {
       toValue: '',
       lastEdited: 'from',
       openConverterMenu: null,
+      converterMenuSearch: {
+        from: '',
+        to: ''
+      },
       currencyRates: { ...DEFAULT_CURRENCY_RATES },
-      currencyUpdatedAt: MOCK_CURRENCY_UPDATED_AT,
+      currencyUpdatedAt: OFFLINE_CURRENCY_UPDATED_AT,
       currencyUpdateMessageKey: 'converter.currency.status.mockNote',
       isUpdatingRates: false,
       converterKeyboardField: 'from'

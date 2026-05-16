@@ -104,7 +104,8 @@
         "fetching": "Fëllt déi lescht USD Referenzraten ...",
         "liveRatesLoaded": "Live Tariffer gelueden vum ExchangeRate-API.",
         "liveUpdateUnavailable": "Live Update net verfügbar. Erfrëscht Demo Tariffer lokal."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Ongeféier gläich wéi"
   },

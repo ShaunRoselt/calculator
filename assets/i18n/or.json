@@ -104,7 +104,8 @@
         "fetching": "Fetching the latest USD reference rates...",
         "liveRatesLoaded": "Live rates loaded from ExchangeRate-API.",
         "liveUpdateUnavailable": "Live update unavailable. Refreshed demo rates locally."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "About equal to"
   },

@@ -104,7 +104,8 @@
         "fetching": "እዋናዊ መወከሲ ዋጋታት USD ምምጻእ...",
         "liveRatesLoaded": "ካብ ExchangeRate-API ዝተጻዕኑ ቀጥታዊ ደረጃታት።",
         "liveUpdateUnavailable": "ቀጥታዊ ምዕባለ ኣይርከብን። ኣብ ውሽጢ ዓዲ ዝተሓደሰ ናይ ዲሞ ደረጃታት።"
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "ኣስታት ማዕረ..."
   },

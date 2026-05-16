@@ -104,7 +104,8 @@
         "fetching": "Go tsaya ditlhwatlhwa tsa bosheng tsa USD...",
         "liveRatesLoaded": "Ditlhwatlhwa tse di tshelang di laisitswe go tswa go API ya Tlhwatlhwa ya Phapantsho.",
         "liveUpdateUnavailable": "Ntšhwafatso ya ka tlhamalalo ga e yo. Ditlhwatlhwa tsa pontsho tse di ntšhwafaditsweng mo lefelong la gaeno."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "E ka nna e lekana le"
   },

@@ -104,7 +104,8 @@
         "fetching": "Bezig met ophalen van de nieuwste USD-referentiekoersen...",
         "liveRatesLoaded": "Live-koersen geladen van ExchangeRate-API.",
         "liveUpdateUnavailable": "Live-update niet beschikbaar. Demo-koersen lokaal vernieuwd."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Ongeveer gelijk aan"
   },

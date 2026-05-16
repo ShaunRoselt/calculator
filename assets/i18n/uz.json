@@ -104,7 +104,8 @@
         "fetching": "AQSh dollarining oxirgi maʼlumot kurslari olinmoqda...",
         "liveRatesLoaded": "ExchangeRate-API dan yuklangan jonli tariflar.",
         "liveUpdateUnavailable": "Jonli yangilanish mavjud emas. Mahalliy demo stavkalari yangilandi."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Taxminan teng"
   },

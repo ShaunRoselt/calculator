@@ -104,7 +104,8 @@
         "fetching": "Λήψη των πιο πρόσφατων τιμών αναφοράς σε USD...",
         "liveRatesLoaded": "Οι ζωντανές τιμές φορτώθηκαν από το ExchangeRate-API.",
         "liveUpdateUnavailable": "Η ζωντανή ενημέρωση δεν είναι διαθέσιμη. Ανανεωμένες τιμές επίδειξης τοπικά."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Περίπου ίσο με"
   },

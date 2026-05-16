@@ -104,7 +104,8 @@
         "fetching": "Načítavajú sa najnovšie referenčné sadzby USD...",
         "liveRatesLoaded": "Aktuálne kurzy načítané z ExchangeRate-API.",
         "liveUpdateUnavailable": "Aktívna aktualizácia nie je k dispozícii. Miestne obnovené demo sadzby."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Približne sa rovná"
   },

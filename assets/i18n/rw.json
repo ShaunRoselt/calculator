@@ -104,7 +104,8 @@
         "fetching": "Kubona ibiciro bya USD biheruka ...",
         "liveRatesLoaded": "Ibiciro bizima biva kuri ExchangeRate-API.",
         "liveUpdateUnavailable": "Kuvugurura Live ntibishoboka. Igipimo cya demo cyavuguruwe mukarere."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Bingana na"
   },

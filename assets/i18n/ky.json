@@ -104,7 +104,8 @@
         "fetching": "Акыркы АКШ долларынын маалымдама курстары алынууда...",
         "liveRatesLoaded": "ExchangeRate-APIден жүктөлгөн жандуу тарифтер.",
         "liveUpdateUnavailable": "Түз ободо жаңыртуу жеткиликсиз. Жергиликтүү демо тарифтери жаңыртылган."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Болжол менен барабар"
   },

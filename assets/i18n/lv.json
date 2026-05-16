@@ -104,7 +104,8 @@
         "fetching": "Notiek jaunāko USD atsauces likmju iegūšana...",
         "liveRatesLoaded": "Tiešraides kursi, kas ielādēti no ExchangeRate-API.",
         "liveUpdateUnavailable": "Tiešraides atjauninājums nav pieejams. Atsvaidzināti demonstrācijas tarifi uz vietas."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Apmēram vienāds ar"
   },

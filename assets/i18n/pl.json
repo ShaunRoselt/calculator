@@ -104,7 +104,8 @@
         "fetching": "Pobieram najnowsze kursy referencyjne USD...",
         "liveRatesLoaded": "Stawki aktualne załadowane z ExchangeRate-API.",
         "liveUpdateUnavailable": "Aktualizacja na żywo niedostępna. Odświeżone stawki za demo lokalnie."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Mniej więcej tyle samo"
   },

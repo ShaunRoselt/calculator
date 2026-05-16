@@ -1,0 +1,268 @@
+// Bundled offline snapshot. Update these values manually whenever you want to
+// refresh the built-in exchange rates used without a network connection.
+export const OFFLINE_CURRENCY_RATE_SNAPSHOT = {
+  AED: 3.6725,
+  AFN: 63.717499,
+  ALL: 81.562165,
+  AMD: 368.200223,
+  ANG: 1.79,
+  AOA: 925.232189,
+  ARS: 1395.3478,
+  AUD: 1.397699,
+  AWG: 1.79,
+  AZN: 1.699795,
+  BAM: 1.681726,
+  BBD: 2,
+  BDT: 122.758757,
+  BGN: 1.681726,
+  BHD: 0.376,
+  BIF: 2983.235789,
+  BMD: 1,
+  BND: 1.278935,
+  BOB: 6.923258,
+  BRL: 5.018716,
+  BSD: 1,
+  BTN: 96.006481,
+  BWP: 14.057956,
+  BYN: 2.781724,
+  BZD: 2,
+  CAD: 1.374759,
+  CDF: 2237.491262,
+  CHF: 0.786528,
+  CLF: 0.022574,
+  CLP: 892.275892,
+  CNH: 6.811303,
+  CNY: 6.822857,
+  COP: 3781.230767,
+  CRC: 455.358718,
+  CUP: 24,
+  CVE: 94.811683,
+  CZK: 20.886558,
+  DJF: 177.721,
+  DKK: 6.413467,
+  DOP: 59.067907,
+  DZD: 132.436695,
+  EGP: 52.905552,
+  ERN: 15,
+  ETB: 156.335098,
+  EUR: 0.859854,
+  FJD: 2.182924,
+  FKP: 0.749811,
+  FOK: 6.413457,
+  GBP: 0.749818,
+  GEL: 2.677944,
+  GGP: 0.749811,
+  GHS: 11.383665,
+  GIP: 0.749811,
+  GMD: 74.169368,
+  GNF: 8765.331617,
+  GTQ: 7.628827,
+  GYD: 209.170941,
+  HKD: 7.830845,
+  HNL: 26.593882,
+  HRK: 6.478562,
+  HTG: 130.733083,
+  HUF: 309.394336,
+  IDR: 17522.198509,
+  ILS: 2.91836,
+  IMP: 0.749811,
+  INR: 96.006792,
+  IQD: 1309.065099,
+  IRR: 1263908.573036,
+  ISK: 123.476914,
+  JEP: 0.749811,
+  JMD: 158.129375,
+  JOD: 0.709,
+  JPY: 158.64789,
+  KES: 129.184571,
+  KGS: 87.502626,
+  KHR: 4022.472101,
+  KID: 1.397688,
+  KMF: 423.019911,
+  KRW: 1498.079787,
+  KWD: 0.308151,
+  KYD: 0.833333,
+  KZT: 468.872643,
+  LAK: 21906.533601,
+  LBP: 89500,
+  LKR: 324.603467,
+  LRD: 183.168309,
+  LSL: 16.646944,
+  LYD: 6.316488,
+  MAD: 9.208182,
+  MDL: 17.220225,
+  MGA: 4182.056897,
+  MKD: 52.664726,
+  MMK: 2098.989945,
+  MNT: 3568.679243,
+  MOP: 8.06577,
+  MRU: 40.131998,
+  MUR: 47.062206,
+  MVR: 15.441418,
+  MWK: 1744.120738,
+  MXN: 17.333669,
+  MYR: 3.94636,
+  MZN: 63.560614,
+  NAD: 16.646944,
+  NGN: 1369.582697,
+  NIO: 36.781107,
+  NOK: 9.312155,
+  NPR: 153.610369,
+  NZD: 1.712141,
+  OMR: 0.384497,
+  PAB: 1,
+  PEN: 3.429752,
+  PGK: 4.358967,
+  PHP: 61.66579,
+  PKR: 278.837491,
+  PLN: 3.649278,
+  PYG: 6118.905369,
+  QAR: 3.64,
+  RON: 4.466138,
+  RSD: 100.566352,
+  RUB: 73.220278,
+  RWF: 1467.826897,
+  SAR: 3.75,
+  SBD: 7.905382,
+  SCR: 14.733633,
+  SDG: 510.508387,
+  SEK: 9.439294,
+  SGD: 1.27894,
+  SHP: 0.749811,
+  SLE: 24.573845,
+  SLL: 24573.844927,
+  SOS: 571.339238,
+  SRD: 37.14816,
+  SSP: 4701.24991,
+  STN: 21.066397,
+  SYP: 113.977967,
+  SZL: 16.646944,
+  THB: 32.638093,
+  TJS: 9.335382,
+  TMT: 3.499445,
+  TND: 2.901917,
+  TOP: 2.353932,
+  TRY: 45.55875,
+  TTD: 6.770763,
+  TVD: 1.397688,
+  TWD: 31.586792,
+  TZS: 2599.990225,
+  UAH: 44.078627,
+  UGX: 3721.420936,
+  USD: 1,
+  UYU: 39.802609,
+  UZS: 12029.6495,
+  VES: 517.9619,
+  VND: 26157.668229,
+  VUV: 117.650053,
+  WST: 2.674314,
+  XAF: 564.026548,
+  XCD: 2.7,
+  XCG: 1.79,
+  XDR: 0.731361,
+  XOF: 564.026548,
+  XPF: 102.60797,
+  YER: 238.582322,
+  ZAR: 16.647257,
+  ZMW: 18.873916,
+  ZWG: 25.8135,
+  ZWL: 25.8135,
+};
+
+const CURRENCY_DISPLAY_NAMES = typeof Intl?.DisplayNames === 'function'
+  ? new Intl.DisplayNames(['en'], { type: 'currency' })
+  : null;
+
+const CURRENCY_SYMBOL_FORMATTERS = new Map();
+
+function getCurrencyDisplayName(code) {
+  const normalizedCode = String(code || '').trim().toUpperCase();
+  if (!normalizedCode) {
+    return 'Unknown Currency';
+  }
+
+  const displayName = CURRENCY_DISPLAY_NAMES?.of(normalizedCode);
+  return typeof displayName === 'string' && displayName && displayName !== normalizedCode ? displayName : normalizedCode;
+}
+
+function getCurrencySymbol(code) {
+  const normalizedCode = String(code || '').trim().toUpperCase();
+  if (!normalizedCode) {
+    return '¤';
+  }
+
+  let formatter = CURRENCY_SYMBOL_FORMATTERS.get(normalizedCode);
+  if (!formatter) {
+    try {
+      formatter = new Intl.NumberFormat('en', {
+        style: 'currency',
+        currency: normalizedCode,
+        currencyDisplay: 'narrowSymbol',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+      });
+    } catch {
+      return normalizedCode;
+    }
+    CURRENCY_SYMBOL_FORMATTERS.set(normalizedCode, formatter);
+  }
+
+  try {
+    const symbol = formatter.formatToParts(0).find((part) => part.type === 'currency')?.value;
+    return symbol || normalizedCode;
+  } catch {
+    return normalizedCode;
+  }
+}
+
+const SUPPORTED_CURRENCIES = Object.entries(OFFLINE_CURRENCY_RATE_SNAPSHOT).map(([code, unitsPerUsd]) => ({
+  name: getCurrencyDisplayName(code),
+  label: getCurrencyDisplayName(code),
+  symbol: getCurrencySymbol(code),
+  code,
+  unitsPerUsd
+})).sort((left, right) => left.label.localeCompare(right.label));
+
+export const CURRENCY_OPTIONS = SUPPORTED_CURRENCIES;
+
+export const CURRENCY_DETAILS = Object.fromEntries(
+  SUPPORTED_CURRENCIES.map((currency) => [currency.name, { label: currency.label, symbol: currency.symbol, code: currency.code }])
+);
+
+export const CURRENCY_CODE_TO_NAME = Object.fromEntries(
+  SUPPORTED_CURRENCIES.map((currency) => [currency.code, currency.name])
+);
+
+export const DEFAULT_CURRENCY_RATES = Object.fromEntries(
+  SUPPORTED_CURRENCIES.map((currency) => [currency.name, currency.unitsPerUsd])
+);
+
+export const OFFLINE_CURRENCY_UPDATED_AT = '2026/05/16 00:02:31';
+
+export function getCurrencyOptions() {
+  return SUPPORTED_CURRENCIES
+    .map((currency) => ({
+      ...currency,
+      nameLabel: currency.name,
+      label: currency.label
+    }))
+    .sort((left, right) => left.label.localeCompare(right.label));
+}
+
+export function getCurrencyDetails(name) {
+  const currency = SUPPORTED_CURRENCIES.find((item) => item.name === name || item.code === name);
+  if (!currency) {
+    return {
+      label: getCurrencyName(name),
+      symbol: getCurrencySymbol(name),
+      code: String(name || '').trim().toUpperCase() || 'CUR'
+    };
+  }
+
+  return {
+    label: currency.label,
+    symbol: currency.symbol,
+    code: currency.code,
+    name: currency.name
+  };
+}

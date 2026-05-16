@@ -104,7 +104,8 @@
         "fetching": "Niġbru l-aħħar rati ta' referenza ta' USD...",
         "liveRatesLoaded": "Rati ħajjin mgħobbija minn ExchangeRate-API.",
         "liveUpdateUnavailable": "Aġġornament dirett mhux disponibbli. Rati demo aggornati lokalment."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Madwar ugwali għal"
   },

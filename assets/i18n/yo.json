@@ -104,7 +104,8 @@
         "fetching": "Ngba awọn oṣuwọn itọkasi USD tuntun wa...",
         "liveRatesLoaded": "Awọn oṣuwọn ifiwe ti kojọpọ lati ExchangeRate-API.",
         "liveUpdateUnavailable": "Imudojuiwọn laaye ko si. Awọn oṣuwọn demo isọdọtun ni agbegbe."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Nipa dọgba si"
   },

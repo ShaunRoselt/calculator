@@ -104,7 +104,8 @@
         "fetching": "Қурбҳои охирини истинод ба доллари ИМА гирифта мешаванд...",
         "liveRatesLoaded": "Қурбҳои зинда аз ExchangeRate-API бор карда шудаанд.",
         "liveUpdateUnavailable": "Навсозии зинда дастрас нест. Қурбҳои намоишии навшуда дар сатҳи маҳаллӣ."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Тақрибан баробар ба"
   },

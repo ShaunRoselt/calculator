@@ -104,7 +104,8 @@
         "fetching": "නවතම USD යොමු ගාස්තු ලබා ගනිමින්...",
         "liveRatesLoaded": "සජීවී ගාස්තු ExchangeRate-API වෙතින් පූරණය කර ඇත.",
         "liveUpdateUnavailable": "සජීවී යාවත්කාලීනය නොමැත. දේශීයව ආදර්ශන ගාස්තු නැවුම් කරන ලදී."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "ට සමානයි"
   },

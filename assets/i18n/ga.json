@@ -121,7 +121,8 @@
       },
       "updateRates": "Rátaí nuashonraithe",
       "updated": "Nuashonraithe {timestamp}",
-      "updatingRates": "Tá rátaí nuashonraithe…"
+      "updatingRates": "Tá rátaí nuashonraithe…",
+      "search": "Search currencies"
     },
     "from": "Ó",
     "inputValue": "Luach le tiontú",

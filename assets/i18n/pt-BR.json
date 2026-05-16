@@ -104,7 +104,8 @@
         "fetching": "Buscando as taxas de referência mais recentes em dólares americanos...",
         "liveRatesLoaded": "Taxas em tempo real carregadas da API ExchangeRate.",
         "liveUpdateUnavailable": "Atualização ao vivo indisponível. Taxas de demonstração atualizadas localmente."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Quase igual a"
   },

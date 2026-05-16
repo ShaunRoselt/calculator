@@ -104,7 +104,8 @@
         "fetching": "Sækir nýjustu viðmiðunargengi Bandaríkjadala...",
         "liveRatesLoaded": "Gengi í beinni hlaðið frá ExchangeRate-API.",
         "liveUpdateUnavailable": "Bein uppfærsla ekki tiltæk. Uppfært kynningarverð á staðnum."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Um það bil jafnt og"
   },

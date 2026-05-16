@@ -104,7 +104,8 @@
         "fetching": "Po merren normat më të fundit të referencës në USD...",
         "liveRatesLoaded": "Normat e drejtpërdrejta të ngarkuara nga ExchangeRate-API.",
         "liveUpdateUnavailable": "Përditësimi i drejtpërdrejtë nuk ofrohet. Tarifat demonstruese të rifreskuara në nivel lokal."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Rreth e barabartë me"
   },

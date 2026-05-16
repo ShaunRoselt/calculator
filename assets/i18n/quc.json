@@ -104,7 +104,8 @@
         "fetching": "K'ayij ch'ich' chik pa ruwi' USD...",
         "liveRatesLoaded": "K'ex taq ch'ich' chik pa ExchangeRate-API.",
         "liveUpdateUnavailable": "Man k'ex taq ch'ich' chik ta. K'ex taq ch'ich' chik pa ruwi' ch'ich'."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "K'ayij ch'ich'"
   },

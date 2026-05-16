@@ -104,7 +104,8 @@
         "fetching": "નવીનતમ USD સંદર્ભ દરો મેળવી રહ્યાં છીએ...",
         "liveRatesLoaded": "ExchangeRate-API પરથી લાઇવ રેટ લોડ થયા.",
         "liveUpdateUnavailable": "લાઇવ અપડેટ અનુપલબ્ધ. સ્થાનિક સ્તરે ડેમો દરો તાજા કર્યા."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "લગભગ બરાબર"
   },

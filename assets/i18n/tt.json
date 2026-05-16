@@ -104,7 +104,8 @@
         "fetching": "Соңгы АКШ доллары сылтамаларын алу ...",
         "liveRatesLoaded": "LiveRate-API'тан йөкләнгән тере тарифлар.",
         "liveUpdateUnavailable": "Тере яңарту мөмкин түгел. локаль рәвештә яңартылган демо ставкалары."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Тигез"
   },

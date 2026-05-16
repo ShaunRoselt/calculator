@@ -104,7 +104,8 @@
         "fetching": "শেহতীয়া USD ৰেফাৰেন্স হাৰৰ সন্ধান...",
         "liveRatesLoaded": "ExchangeRate-API ৰ পৰা লাইভ হাৰ লোড কৰা হৈছে।",
         "liveUpdateUnavailable": "লাইভ আপডেট উপলব্ধ নহয়। স্থানীয়ভাৱে সতেজ কৰা ডেমো হাৰ।"
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "প্ৰায় সমান"
   },

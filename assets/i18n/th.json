@@ -104,7 +104,8 @@
         "fetching": "กำลังดึงข้อมูลอัตราอ้างอิง USD ล่าสุด...",
         "liveRatesLoaded": "โหลดอัตราสดจาก ExchangeRate-API",
         "liveUpdateUnavailable": "การอัปเดตสดไม่พร้อมใช้งาน รีเฟรชอัตราการสาธิตในพื้นที่"
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "ประมาณเท่ากับ"
   },

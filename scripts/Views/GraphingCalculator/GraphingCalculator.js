@@ -12,36 +12,36 @@ const GRAPHING_TOOL_GROUPS = [
 
 const GRAPHING_TRIG_LAYOUTS = {
   base: [
-    { label: 'sin', insert: 'sin(' },
-    { label: 'cos', insert: 'cos(' },
-    { label: 'tan', insert: 'tan(' },
-    { label: 'sec', insert: 'sec(' },
-    { label: 'csc', insert: 'csc(' },
-    { label: 'cot', insert: 'cot(' }
+    { label: 'sin', insert: 'sin()' },
+    { label: 'cos', insert: 'cos()' },
+    { label: 'tan', insert: 'tan()' },
+    { label: 'sec', insert: 'sec()' },
+    { label: 'csc', insert: 'csc()' },
+    { label: 'cot', insert: 'cot()' }
   ],
   shifted: [
-    { label: 'sin⁻¹', insert: 'asin(' },
-    { label: 'cos⁻¹', insert: 'acos(' },
-    { label: 'tan⁻¹', insert: 'atan(' },
-    { label: 'sec⁻¹', insert: 'asec(' },
-    { label: 'csc⁻¹', insert: 'acsc(' },
-    { label: 'cot⁻¹', insert: 'acot(' }
+    { label: 'sin⁻¹', insert: 'asin()' },
+    { label: 'cos⁻¹', insert: 'acos()' },
+    { label: 'tan⁻¹', insert: 'atan()' },
+    { label: 'sec⁻¹', insert: 'asec()' },
+    { label: 'csc⁻¹', insert: 'acsc()' },
+    { label: 'cot⁻¹', insert: 'acot()' }
   ],
   hyp: [
-    { label: 'sinh', insert: 'sinh(' },
-    { label: 'cosh', insert: 'cosh(' },
-    { label: 'tanh', insert: 'tanh(' },
-    { label: 'sech', insert: 'sech(' },
-    { label: 'csch', insert: 'csch(' },
-    { label: 'coth', insert: 'coth(' }
+    { label: 'sinh', insert: 'sinh()' },
+    { label: 'cosh', insert: 'cosh()' },
+    { label: 'tanh', insert: 'tanh()' },
+    { label: 'sech', insert: 'sech()' },
+    { label: 'csch', insert: 'csch()' },
+    { label: 'coth', insert: 'coth()' }
   ],
   hypShifted: [
-    { label: 'sinh⁻¹', insert: 'asinh(' },
-    { label: 'cosh⁻¹', insert: 'acosh(' },
-    { label: 'tanh⁻¹', insert: 'atanh(' },
-    { label: 'sech⁻¹', insert: 'asech(' },
-    { label: 'csch⁻¹', insert: 'acsch(' },
-    { label: 'coth⁻¹', insert: 'acoth(' }
+    { label: 'sinh⁻¹', insert: 'asinh()' },
+    { label: 'cosh⁻¹', insert: 'acosh()' },
+    { label: 'tanh⁻¹', insert: 'atanh()' },
+    { label: 'sech⁻¹', insert: 'asech()' },
+    { label: 'csch⁻¹', insert: 'acsch()' },
+    { label: 'coth⁻¹', insert: 'acoth()' }
   ]
 };
 
@@ -524,6 +524,8 @@ function renderExpressionRow(expression, index) {
 }
 
 function renderExpressionStylePanel(expression, index) {
+  const selectedStyle = GRAPH_LINE_STYLES.find((option) => option.value === expression.lineStyle) ?? GRAPH_LINE_STYLES[0];
+  const styleMenuOpen = state.graphing.styleMenuExpressionIndex === index;
   return `
     <section class="graph-expression-style-panel" role="dialog" aria-label="${t('graph.lineOptions')}">
       <h3>${t('graph.lineOptions')}</h3>
@@ -542,12 +544,79 @@ function renderExpressionStylePanel(expression, index) {
       </div>
       <label class="graph-expression-style-select-label">
         <span>${t('graph.style')}</span>
-        <select class="graph-expression-style-select" name="graph-expression-line-style-${index}">
-          ${GRAPH_LINE_STYLES.map((option) => `<option value="${option.value}" ${expression.lineStyle === option.value ? 'selected' : ''}>${t(option.labelKey) === option.labelKey ? option.label : t(option.labelKey)}</option>`).join('')}
-        </select>
+        <div class="date-native-select-wrap settings-select-wrap graph-expression-style-select-wrap">
+          <button
+            type="button"
+            class="date-native-select-button settings-select-button graph-expression-style-select-button ${styleMenuOpen ? 'active' : ''}"
+            data-graph-expression-style-menu-toggle="${index}"
+            aria-haspopup="listbox"
+            aria-expanded="${styleMenuOpen ? 'true' : 'false'}"
+            aria-label="${t('graph.style')}"
+          >
+            ${renderGraphLineStyleOptionContent(selectedStyle, expression.color)}
+          </button>
+          <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
+          ${styleMenuOpen ? `
+            <div class="date-native-mode-menu settings-select-menu graph-expression-style-menu" role="listbox" aria-label="${t('graph.style')}">
+              ${GRAPH_LINE_STYLES.map((option) => `
+                <button
+                  type="button"
+                  class="date-native-mode-option ${expression.lineStyle === option.value ? 'selected' : ''}"
+                  data-graph-expression-style-select="${index}"
+                  data-graph-expression-style-value="${option.value}"
+                  role="option"
+                  aria-selected="${expression.lineStyle === option.value ? 'true' : 'false'}"
+                >
+                  ${renderGraphLineStyleOptionContent(option, expression.color)}
+                </button>
+              `).join('')}
+            </div>
+          ` : ''}
+        </div>
       </label>
     </section>
   `;
+}
+
+function renderGraphLineStyleOptionContent(option, color) {
+  const label = t(option.labelKey) === option.labelKey ? option.label : t(option.labelKey);
+  return `
+    <span class="graph-expression-style-option-content">
+      <span class="graph-expression-style-option-label">${escapeHtml(label)}</span>
+      <span class="graph-expression-style-preview" aria-hidden="true">
+        ${renderGraphLineStylePreview(option.value, color)}
+      </span>
+    </span>
+  `;
+}
+
+function renderGraphLineStylePreview(lineStyle, color) {
+  const dashArray = getGraphLineStyleDashArray(lineStyle);
+  const strokeWidth = Math.max(2, Number(state.graphing.lineThickness) || 2);
+  return `
+    <svg viewBox="0 0 48 12" focusable="false" aria-hidden="true">
+      <line
+        x1="2"
+        y1="6"
+        x2="46"
+        y2="6"
+        stroke="${escapeHtml(color)}"
+        stroke-width="${strokeWidth}"
+        stroke-linecap="${lineStyle === 'solid' ? 'square' : 'round'}"
+        ${dashArray ? `stroke-dasharray="${dashArray}"` : ''}
+      />
+    </svg>
+  `;
+}
+
+function getGraphLineStyleDashArray(lineStyle) {
+  if (lineStyle === 'dash') {
+    return '10 6';
+  }
+  if (lineStyle === 'dot') {
+    return '2 6';
+  }
+  return '';
 }
 
 function renderKeypadButton(button) {

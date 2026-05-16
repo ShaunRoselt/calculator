@@ -2251,7 +2251,7 @@ export function insertGraphToken(token) {
   }
   const { start, end } = getActiveGraphExpressionSelection(expression);
   expression.value = `${expression.value.slice(0, start)}${token}${expression.value.slice(end)}`;
-  const nextCursor = start + token.length;
+  const nextCursor = token.endsWith('()') ? start + token.length - 1 : start + token.length;
   state.graphing.activeExpressionSelectionStart = nextCursor;
   state.graphing.activeExpressionSelectionEnd = nextCursor;
   expression.error = false;
@@ -2316,6 +2316,12 @@ export function removeGraphExpression(index) {
     state.graphing.stylePanelExpressionIndex -= 1;
   }
 
+  if (state.graphing.styleMenuExpressionIndex === index) {
+    state.graphing.styleMenuExpressionIndex = null;
+  } else if (typeof state.graphing.styleMenuExpressionIndex === 'number' && state.graphing.styleMenuExpressionIndex > index) {
+    state.graphing.styleMenuExpressionIndex -= 1;
+  }
+
   if (state.graphing.analysisExpressionIndex === index) {
     state.graphing.analysisExpressionIndex = null;
     state.graphing.analysisData = null;
@@ -2367,6 +2373,7 @@ export function openGraphExpressionAnalysis(index) {
   state.graphing.activeExpressionIndex = index;
   state.graphing.mobileView = 'editor';
   state.graphing.stylePanelExpressionIndex = null;
+  state.graphing.styleMenuExpressionIndex = null;
   state.graphing.settingsOpen = false;
   state.graphing.openMenu = null;
 }
@@ -2469,6 +2476,46 @@ export function updateGraph() {
   }
 
   drawGraph();
+}
+
+export function updateGraphHover(clientX, clientY) {
+  const canvas = document.getElementById('graph-canvas');
+  if (!(canvas instanceof HTMLCanvasElement)) {
+    clearGraphHover({ redraw: false });
+    return;
+  }
+
+  const rect = canvas.getBoundingClientRect();
+  if (rect.width <= 0 || rect.height <= 0) {
+    clearGraphHover({ redraw: false });
+    return;
+  }
+
+  const mouseX = clientX - rect.left;
+  const mouseY = clientY - rect.top;
+  if (mouseX < 0 || mouseX > rect.width || mouseY < 0 || mouseY > rect.height) {
+    clearGraphHover();
+    return;
+  }
+
+  const nextHoverPoint = findGraphHoverPoint(mouseX, mouseY, rect.width, rect.height);
+  if (isSameGraphHoverPoint(state.graphing.hoverPoint, nextHoverPoint)) {
+    return;
+  }
+
+  state.graphing.hoverPoint = nextHoverPoint;
+  drawGraph();
+}
+
+export function clearGraphHover({ redraw = true } = {}) {
+  if (!state.graphing.hoverPoint) {
+    return;
+  }
+
+  state.graphing.hoverPoint = null;
+  if (redraw) {
+    drawGraph();
+  }
 }
 
 function canEvaluateGraphExpression(expression, angle) {
@@ -2601,6 +2648,159 @@ export function drawGraph() {
     ctx.stroke();
     ctx.setLineDash([]);
   }
+
+  if (state.graphing.hoverPoint && isGraphHoverPointVisible(state.graphing.hoverPoint)) {
+    drawGraphHoverCallout(ctx, state.graphing.hoverPoint, cssWidth, cssHeight, toScreenX, toScreenY, palette);
+  } else if (state.graphing.hoverPoint) {
+    state.graphing.hoverPoint = null;
+  }
+}
+
+function findGraphHoverPoint(mouseX, mouseY, cssWidth, cssHeight) {
+  const visibleExpressions = state.graphing.expressions
+    .map((expression, index) => ({ expression, index }))
+    .filter(({ expression }) => expression.plottedValue.trim() && !expression.error && expression.visible !== false);
+
+  if (!visibleExpressions.length) {
+    return null;
+  }
+
+  const { xMin, xMax, yMin, yMax } = state.graphing.viewport;
+  const xRange = xMax - xMin;
+  const yRange = yMax - yMin;
+  const toScreenY = (value) => cssHeight - (((value - yMin) / yRange) * cssHeight);
+  const hoverDistanceThreshold = Math.max(48, (Number(state.graphing.lineThickness) || 2) * 12);
+  const sampleRadius = hoverDistanceThreshold + 16;
+  let bestMatch = null;
+  let bestDistance = Infinity;
+
+  for (const { expression, index } of visibleExpressions) {
+    const normalizedExpression = normalizeGraphExpression(expression.plottedValue);
+
+    for (let offset = -sampleRadius; offset <= sampleRadius; offset += 2) {
+      const sampleScreenX = Math.max(0, Math.min(cssWidth, mouseX + offset));
+      const x = xMin + ((sampleScreenX / cssWidth) * xRange);
+      let y;
+
+      try {
+        y = evaluateScientificExpression(normalizedExpression, { x, angle: state.graphing.angle });
+      } catch {
+        continue;
+      }
+
+      const sampleScreenY = toScreenY(y);
+      if (!Number.isFinite(sampleScreenY) || sampleScreenY < -cssHeight * 3 || sampleScreenY > cssHeight * 4) {
+        continue;
+      }
+
+      const distance = Math.hypot(sampleScreenX - mouseX, sampleScreenY - mouseY);
+      if (distance >= bestDistance) {
+        continue;
+      }
+
+      bestDistance = distance;
+      bestMatch = {
+        expressionIndex: index,
+        x,
+        y,
+        color: expression.color
+      };
+    }
+  }
+
+  return bestDistance <= hoverDistanceThreshold ? bestMatch : null;
+}
+
+function isSameGraphHoverPoint(previousPoint, nextPoint) {
+  if (!previousPoint && !nextPoint) {
+    return true;
+  }
+
+  if (!previousPoint || !nextPoint) {
+    return false;
+  }
+
+  return previousPoint.expressionIndex === nextPoint.expressionIndex
+    && Math.abs(previousPoint.x - nextPoint.x) < 1e-6
+    && Math.abs(previousPoint.y - nextPoint.y) < 1e-6;
+}
+
+function isGraphHoverPointVisible(hoverPoint) {
+  const expression = state.graphing.expressions[hoverPoint.expressionIndex];
+  return Boolean(expression?.plottedValue.trim() && !expression.error && expression.visible !== false);
+}
+
+function drawGraphHoverCallout(ctx, hoverPoint, cssWidth, cssHeight, toScreenX, toScreenY, palette) {
+  const pointX = toScreenX(hoverPoint.x);
+  const pointY = toScreenY(hoverPoint.y);
+  if (!Number.isFinite(pointX) || !Number.isFinite(pointY)) {
+    return;
+  }
+
+  const styles = getComputedStyle(document.documentElement);
+  const tooltipBackground = styles.getPropertyValue('--panel').trim() || 'rgba(34, 34, 38, 0.96)';
+  const tooltipBorder = styles.getPropertyValue('--border-subtle').trim() || 'rgba(255, 255, 255, 0.18)';
+  const tooltipText = styles.getPropertyValue('--text').trim() || palette.label;
+  const tooltipShadow = 'rgba(0, 0, 0, 0.35)';
+  const label = `(${formatNumber(hoverPoint.x)}, ${formatNumber(hoverPoint.y)})`;
+  const radius = 5;
+  const pointRadius = 4;
+  const paddingX = 10;
+  const paddingY = 6;
+  const calloutGap = 14;
+  const tooltipHeight = 28;
+
+  ctx.save();
+  ctx.font = '12px "Calculator UI", "Segoe UI", system-ui, sans-serif';
+  const textWidth = ctx.measureText(label).width;
+  const tooltipWidth = Math.max(76, Math.ceil(textWidth + (paddingX * 2)));
+  let tooltipX = pointX + calloutGap;
+  let tooltipY = pointY - tooltipHeight - 8;
+
+  if (tooltipX + tooltipWidth > cssWidth - 8) {
+    tooltipX = pointX - tooltipWidth - calloutGap;
+  }
+  if (tooltipX < 8) {
+    tooltipX = Math.max(8, Math.min(cssWidth - tooltipWidth - 8, pointX - (tooltipWidth / 2)));
+  }
+  tooltipY = Math.max(8, Math.min(cssHeight - tooltipHeight - 8, tooltipY));
+
+  ctx.fillStyle = hoverPoint.color;
+  ctx.beginPath();
+  ctx.arc(pointX, pointY, pointRadius, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = '#ffffff';
+  ctx.stroke();
+
+  ctx.shadowColor = tooltipShadow;
+  ctx.shadowBlur = 8;
+  ctx.shadowOffsetY = 2;
+  ctx.fillStyle = tooltipBackground;
+  drawRoundedRect(ctx, tooltipX, tooltipY, tooltipWidth, tooltipHeight, radius);
+  ctx.fill();
+
+  ctx.shadowColor = 'transparent';
+  ctx.lineWidth = 1;
+  ctx.strokeStyle = tooltipBorder;
+  drawRoundedRect(ctx, tooltipX, tooltipY, tooltipWidth, tooltipHeight, radius);
+  ctx.stroke();
+
+  ctx.fillStyle = tooltipText;
+  ctx.textBaseline = 'middle';
+  ctx.fillText(label, tooltipX + paddingX, tooltipY + (tooltipHeight / 2));
+  ctx.restore();
+}
+
+function drawRoundedRect(ctx, x, y, width, height, radius) {
+  const boundedRadius = Math.max(0, Math.min(radius, width / 2, height / 2));
+  ctx.beginPath();
+  ctx.moveTo(x + boundedRadius, y);
+  ctx.arcTo(x + width, y, x + width, y + height, boundedRadius);
+  ctx.arcTo(x + width, y + height, x, y + height, boundedRadius);
+  ctx.arcTo(x, y + height, x, y, boundedRadius);
+  ctx.arcTo(x, y, x + width, y, boundedRadius);
+  ctx.closePath();
 }
 
 function getGraphLineDash(lineStyle) {

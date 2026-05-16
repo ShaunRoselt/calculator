@@ -646,6 +646,56 @@
   color: var(--text);
 }
 
+.settings-select-wrap.graph-expression-style-select-wrap {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.settings-select-button.graph-expression-style-select-button {
+  width: 100%;
+  min-width: 0;
+}
+
+.settings-select-menu.graph-expression-style-menu {
+  left: 0;
+  right: auto;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: min(240px, calc(100dvh - 260px));
+  overflow: auto;
+}
+
+.graph-expression-style-option-content {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.graph-expression-style-option-label {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.graph-expression-style-preview {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 48px;
+}
+
+.graph-expression-style-preview svg {
+  width: 48px;
+  height: 12px;
+  overflow: visible;
+}
+
 .graph-expression-input::placeholder {
   color: var(--text-faint);
 }

@@ -124,6 +124,8 @@ function createGraphingState() {
     trigShifted: false,
     trigHyperbolic: false,
     stylePanelExpressionIndex: null,
+    styleMenuExpressionIndex: null,
+    hoverPoint: null,
     angle: 'RAD',
     lineThickness: 2,
     theme: 'match-app',

@@ -39,6 +39,7 @@ import {
   commitConverterHistory,
   commitDateHistory,
   closeGraphExpressionAnalysis,
+  clearGraphHover,
   clearGraphExpression,
   commitGraphExpression,
   computeDateResults,
@@ -61,6 +62,7 @@ import {
   setGraphExpressionLineStyle,
   selectGraphExpression,
   setGraphExpression,
+  updateGraphHover,
   setGraphMobileView,
   supportsHistoryPanelMode,
   supportsMemoryPanelMode,
@@ -336,6 +338,9 @@ function syncGraphExpressionSelection(input) {
 }
 
 function restoreGraphExpressionSelection() {
+  const selectionStart = state.graphing.activeExpressionSelectionStart;
+  const selectionEnd = state.graphing.activeExpressionSelectionEnd;
+
   const applySelection = () => {
     const input = document.querySelector(`input[name="graph-expression-${state.graphing.activeExpressionIndex}"]`);
     if (!(input instanceof HTMLInputElement)) {
@@ -348,19 +353,20 @@ function restoreGraphExpressionSelection() {
 
     input.focus();
     input.setSelectionRange(
-      state.graphing.activeExpressionSelectionStart ?? input.value.length,
-      state.graphing.activeExpressionSelectionEnd ?? input.value.length
+      selectionStart ?? input.value.length,
+      selectionEnd ?? input.value.length
     );
+    syncGraphExpressionSelection(input);
     return true;
   };
-
-  if (applySelection()) {
-    return;
-  }
 
   requestAnimationFrame(() => {
     applySelection();
   });
+
+  if (applySelection()) {
+    return;
+  }
 }
 
 function patchActiveGraphExpressionInput() {
@@ -371,11 +377,7 @@ function patchActiveGraphExpressionInput() {
   }
 
   input.value = expression.value;
-  input.focus();
-  input.setSelectionRange(
-    state.graphing.activeExpressionSelectionStart ?? input.value.length,
-    state.graphing.activeExpressionSelectionEnd ?? input.value.length
-  );
+  restoreGraphExpressionSelection();
   return true;
 }
 
@@ -429,7 +431,17 @@ function stopGraphPan() {
 }
 
 function handleGraphMouseMove(event) {
-  if (!graphPanSession || state.mode !== 'graphing') {
+  if (state.mode !== 'graphing') {
+    return;
+  }
+
+  const target = event.target instanceof Element ? event.target.closest('#graph-canvas') : null;
+  if (!graphPanSession) {
+    if (target instanceof HTMLCanvasElement) {
+      updateGraphHover(event.clientX, event.clientY);
+    } else {
+      clearGraphHover();
+    }
     return;
   }
 
@@ -475,6 +487,7 @@ function handleGraphWheel(event) {
     return;
   }
 
+  clearGraphHover({ redraw: false });
   const anchor = getGraphWorldPointFromMouseEvent(event);
   zoomGraph(event.deltaY < 0 ? 'in' : 'out', anchor);
   drawGraph();
@@ -488,6 +501,7 @@ function handleMouseDown(event) {
 
   const graphCanvas = event.target instanceof Element ? event.target.closest('#graph-canvas') : null;
   if (graphCanvas instanceof HTMLCanvasElement && event.button === 0) {
+    clearGraphHover({ redraw: false });
     graphPanSession = {
       lastClientX: event.clientX,
       lastClientY: event.clientY
@@ -1016,6 +1030,11 @@ function handleClick(event) {
     }
     if (state.graphing.stylePanelExpressionIndex != null && !source.closest('.graph-expression-style-panel, [data-graph-expression-style]')) {
       state.graphing.stylePanelExpressionIndex = null;
+      state.graphing.styleMenuExpressionIndex = null;
+      shouldRender = true;
+    }
+    if (state.graphing.styleMenuExpressionIndex != null && !source.closest('.graph-expression-style-select-wrap')) {
+      state.graphing.styleMenuExpressionIndex = null;
       shouldRender = true;
     }
     if (state.graphing.openMenu && !source.closest('.graph-keypad-shell')) {
@@ -1379,6 +1398,7 @@ function handleClick(event) {
     const index = Number(target.dataset.graphExpressionStyle);
     setGraphCompactEditorView('expressions');
     state.graphing.stylePanelExpressionIndex = state.graphing.stylePanelExpressionIndex === index ? null : index;
+    state.graphing.styleMenuExpressionIndex = null;
     render();
     return;
   }
@@ -1449,6 +1469,22 @@ function handleClick(event) {
       resetGraphViewport();
       drawGraph();
     }
+    render();
+    return;
+  }
+
+  if (target.dataset.graphExpressionStyleMenuToggle) {
+    const index = Number(target.dataset.graphExpressionStyleMenuToggle);
+    state.graphing.styleMenuExpressionIndex = state.graphing.styleMenuExpressionIndex === index ? null : index;
+    render();
+    return;
+  }
+
+  if (target.dataset.graphExpressionStyleSelect) {
+    const index = Number(target.dataset.graphExpressionStyleSelect);
+    setGraphExpressionLineStyle(index, target.dataset.graphExpressionStyleValue || '');
+    state.graphing.styleMenuExpressionIndex = null;
+    drawGraph();
     render();
     return;
   }
@@ -1916,6 +1952,14 @@ function handleKeydown(event) {
 
   if (state.mode === 'graphing' && event.key === 'Escape' && state.graphing.analysisExpressionIndex != null) {
     closeGraphExpressionAnalysis();
+    render();
+    event.preventDefault();
+    return;
+  }
+
+  if (state.mode === 'graphing' && event.key === 'Escape' && (state.graphing.styleMenuExpressionIndex != null || state.graphing.stylePanelExpressionIndex != null)) {
+    state.graphing.styleMenuExpressionIndex = null;
+    state.graphing.stylePanelExpressionIndex = null;
     render();
     event.preventDefault();
     return;

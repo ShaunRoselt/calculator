@@ -1417,11 +1417,22 @@
         openMenuId = menuId;
 
         const searchInput = menu.querySelector('[data-menu-search]');
-        if (searchInput instanceof HTMLInputElement) {
-          searchInput.value = '';
-          filterMenuOptions(menuId, '');
-          requestAnimationFrame(() => searchInput.focus());
-        }
+
+        // After rendering, focus search and scroll selected option into view
+        requestAnimationFrame(() => {
+          if (searchInput instanceof HTMLInputElement) {
+            searchInput.value = '';
+            filterMenuOptions(menuId, '');
+            searchInput.focus();
+          }
+
+          const optionsContainer = menu.querySelector('[data-menu-options]');
+          const selectedButton = optionsContainer ? optionsContainer.querySelector('[data-menu-option].selected') : null;
+          if (selectedButton instanceof HTMLElement) {
+            // Ensure the selected option is visible when the menu opens
+            selectedButton.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+          }
+        });
       }
 
       function updateLaunchLink() {
@@ -1564,7 +1575,12 @@
 
         rawLanguageOptions = getSupportedLanguages();
         baseThemeOptions = getThemeOptions();
+        // Determine requested page but default to standard on the public site.
+        // Preserve query/local behaviour during local development (file:// or localhost).
         currentAppPage = getRequestedAppPage();
+        if (!isLocalPublicContext()) {
+          currentAppPage = DEFAULT_MODE;
+        }
 
         await applyLanguage(getRequestedLanguageId());
         applyTheme(getRequestedThemeId());

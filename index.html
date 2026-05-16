@@ -1193,13 +1193,19 @@
       }
 
       function getRequestedThemeId() {
+        // Prefer stored user preference so a theme set on the public site persists.
+        const storedTheme = getStoredPreference(THEME_STORAGE_KEY, APP_THEME_STORAGE_KEY);
+        if (typeof storedTheme === 'string' && storedTheme.trim()) {
+          return normalizeThemeSetting(storedTheme.trim());
+        }
+
         const params = new URLSearchParams(window.location.search);
         const queryTheme = params.get('theme');
         if (typeof queryTheme === 'string' && queryTheme.trim()) {
           return normalizeThemeSetting(queryTheme.trim());
         }
 
-        return normalizeThemeSetting(getStoredPreference(THEME_STORAGE_KEY, APP_THEME_STORAGE_KEY) ?? 'system');
+        return normalizeThemeSetting('system');
       }
 
       function normalizePage(page) {

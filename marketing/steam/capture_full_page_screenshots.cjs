@@ -9,12 +9,19 @@ const { spawn } = require('node:child_process');
 const ROOT = path.resolve(__dirname, '..', '..');
 const OUTPUT_ROOT = path.join(ROOT, 'marketing', 'steam', 'screenshot-assets', 'full-page');
 const THEME_INDEX_PATH = path.join(ROOT, 'assets', 'themes', 'data', 'index.json');
-const ELECTRON_BIN = path.join(
-  ROOT,
-  'node_modules',
-  '.bin',
-  process.platform === 'win32' ? 'electron.cmd' : 'electron'
-);
+const ELECTRON_BIN = (() => {
+  try {
+    // Prefer a resolved electron binary when available (installed electron package)
+    const resolved = require.resolve('electron');
+    const candidate = path.join(path.dirname(resolved), '..', 'dist', process.platform === 'win32' ? 'electron.exe' : 'electron');
+    if (fs.existsSync(candidate)) return candidate;
+    if (fs.existsSync(resolved)) return resolved;
+  } catch (e) {
+    // ignore and fall back
+  }
+
+  return path.join(ROOT, 'node_modules', '.bin', process.platform === 'win32' ? 'electron.cmd' : 'electron');
+})();
 const APP_ENTRY = 'app.html';
 const EXPECTED_MODE_ORDER = [
   'standard',
@@ -439,6 +446,11 @@ if (!globalThis.__captureHelpers) {
 
 function spawnElectronCapture(options, viewportName) {
   return new Promise((resolve, reject) => {
+    const childEnv = { ...process.env, CALCULATOR_CAPTURE_CHILD: '1' };
+    if (Object.prototype.hasOwnProperty.call(childEnv, 'ELECTRON_RUN_AS_NODE')) {
+      delete childEnv.ELECTRON_RUN_AS_NODE;
+    }
+
     const child = spawn(
       ELECTRON_BIN,
       [
@@ -453,10 +465,7 @@ function spawnElectronCapture(options, viewportName) {
       ],
       {
         cwd: ROOT,
-        env: {
-          ...process.env,
-          CALCULATOR_CAPTURE_CHILD: '1'
-        },
+        env: childEnv,
         stdio: 'inherit'
       }
     );

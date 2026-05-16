@@ -1,31 +1,3 @@
-node_modules/
 
-.DS_Store
-Thumbs.db
-
-.vscode/
-.idea/
-
-dist/
-flatpak/build/
-flatpak/repo/
-.flatpak-builder/
-coverage/
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-__pycache__/
-*.pyc
-.tmp*/
-.copilot*/
-
-test/
-
-# Ignore generated marketing screenshot images (keep manifest)
-/marketing/steam/screenshot-assets/full-page/**/*.png
-/marketing/steam/screenshot-assets/full-page/**/*.jpg
-/marketing/steam/screenshot-assets/full-page/**/*.jpeg
-/marketing/steam/screenshot-assets/full-page/**/*.webp
-!/marketing/steam/screenshot-assets/full-page/manifest.json
+# Ignore trailer MP4s
+/marketing/steam/trailer/*.mp4

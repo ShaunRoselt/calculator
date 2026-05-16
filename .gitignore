@@ -29,3 +29,6 @@ test/
 /marketing/steam/screenshot-assets/full-page/**/*.jpeg
 /marketing/steam/screenshot-assets/full-page/**/*.webp
 !/marketing/steam/screenshot-assets/full-page/manifest.json
+
+# Ignore trailer MP4s
+/marketing/steam/trailer/*.mp4

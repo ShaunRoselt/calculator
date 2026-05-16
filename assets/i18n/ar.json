@@ -104,7 +104,8 @@
         "fetching": "جارٍ جلب أحدث الأسعار المرجعية للدولار الأمريكي...",
         "liveRatesLoaded": "تم تحميل الأسعار المباشرة من ExchangeRate-API.",
         "liveUpdateUnavailable": "التحديث المباشر غير متاح. تحديث الأسعار التجريبية محليًا."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "حوالي يساوي"
   },

@@ -104,7 +104,8 @@
         "fetching": "მიმდინარეობს აშშ დოლარის უახლესი საცნობარო განაკვეთების მიღება...",
         "liveRatesLoaded": "Live განაკვეთები ჩატვირთულია ExchangeRate-API-დან.",
         "liveUpdateUnavailable": "პირდაპირი განახლება მიუწვდომელია. განახლებული დემო განაკვეთები ადგილობრივად."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "დაახლოებით ტოლია"
   },

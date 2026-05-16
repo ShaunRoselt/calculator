@@ -104,7 +104,8 @@
         "fetching": "Kinukuha ang pinakabagong USD reference rate...",
         "liveRatesLoaded": "Na-load ang mga live na rate mula sa ExchangeRate-API.",
         "liveUpdateUnavailable": "Hindi available ang live na update. Lokal na ni-refresh ang mga demo rate."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Tungkol sa katumbas ng"
   },

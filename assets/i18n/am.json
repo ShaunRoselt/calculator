@@ -104,7 +104,8 @@
         "fetching": "የቅርብ ጊዜዎቹን የUSD ማጣቀሻ ተመኖችን በማምጣት ላይ...",
         "liveRatesLoaded": "ከ ExchangeRate-API የቀጥታ ተመኖች ተጭነዋል።",
         "liveUpdateUnavailable": "የቀጥታ ዝማኔ የለም። በአካባቢው የታደሰ ማሳያ ተመኖች።"
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "እኩል ነው።"
   },

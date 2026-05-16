@@ -134,7 +134,8 @@ function renderCurrencyView(units, title) {
 function renderConverterField(field, unit, value) {
   const options = getUnitsForCategory(state.converter.category).map((unitOption) => ({
     value: unitOption.name,
-    label: getUnitLabel(unitOption.name)
+    label: getUnitLabel(unitOption.name),
+    code: unitOption.symbol
   }));
   return `
     <div class="converter-native-field ${state.converter.lastEdited === field ? 'active' : ''}">
@@ -179,7 +180,10 @@ function getFormattedConverterMetaValue(value) {
 function renderCurrencyField(field, meta, value) {
   const options = getCurrencyOptions().map((currency) => ({
     value: currency.name,
-    label: currency.label
+    label: currency.label,
+    code: currency.code,
+    symbol: currency.symbol,
+    meta: getCurrencyOptionMeta(currency)
   }));
   return `
     <div class="currency-field ${state.converter.lastEdited === field ? 'active' : ''}">
@@ -189,29 +193,60 @@ function renderCurrencyField(field, meta, value) {
           <span class="currency-amount">${escapeHtml(value || '0')}</span>
         </div>
       </button>
-      ${renderConverterSelect(field, meta.label, options, `${field === 'from' ? t('converter.from') : t('converter.to')} ${t('converter.currency.currency').toLowerCase()}`, `${field === 'from' ? t('converter.from') : t('converter.to')} ${t('converter.currency.options').toLowerCase()}`)}
+      ${renderConverterSelect(
+        field,
+        meta.label,
+        options,
+        `${field === 'from' ? t('converter.from') : t('converter.to')} ${t('converter.currency.currency').toLowerCase()}`,
+        `${field === 'from' ? t('converter.from') : t('converter.to')} ${t('converter.currency.options').toLowerCase()}`,
+        getCurrencyOptionMeta(meta),
+        true
+      )}
     </div>
   `;
 }
 
-function renderConverterSelect(field, selectedLabel, options, buttonLabel, menuLabel) {
+function renderConverterSelect(field, selectedLabel, options, buttonLabel, menuLabel, selectedMeta = '', showSearch = false) {
   const menuOpen = state.converter.openConverterMenu === field;
   return `
     <label class="converter-select-wrap">
       <button type="button" class="converter-select-button ${menuOpen ? 'active' : ''}" data-converter-menu-toggle="${field}" aria-haspopup="listbox" aria-expanded="${menuOpen ? 'true' : 'false'}" aria-label="${buttonLabel}">
-        <span class="converter-select-label">${escapeHtml(selectedLabel)}</span>
+        <span class="converter-select-button-copy">
+          <span class="converter-select-label">${escapeHtml(selectedLabel)}</span>
+          ${selectedMeta ? `<span class="converter-select-current-meta">${escapeHtml(selectedMeta)}</span>` : ''}
+        </span>
         <span class="converter-select-caret ui-caret" aria-hidden="true"></span>
       </button>
-      ${menuOpen ? renderConverterMenu(field, options, menuLabel) : ''}
+      ${menuOpen ? renderConverterMenu(field, options, menuLabel, showSearch) : ''}
     </label>
   `;
 }
 
-function renderConverterMenu(field, options, menuLabel) {
+function renderConverterMenu(field, options, menuLabel, showSearch) {
   const currentValue = field === 'from' ? state.converter.fromUnit : state.converter.toUnit;
+  const searchValue = state.converter.converterMenuSearch?.[field] ?? '';
+  const filteredOptions = getFilteredConverterMenuOptions(field, options);
   return `
-    <div class="converter-select-menu" role="listbox" aria-label="${menuLabel}">
-      ${options.map((option) => renderConverterMenuOption(field, option, option.value === currentValue)).join('')}
+    <div class="converter-select-menu">
+      ${showSearch ? `
+        <div class="converter-select-search-row">
+          <input
+            type="search"
+            class="converter-select-search-input"
+            data-converter-menu-search="${field}"
+            placeholder="${escapeHtml(t('converter.currency.search'))}"
+            value="${escapeHtml(searchValue)}"
+            aria-label="${escapeHtml(menuLabel)}"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+      ` : ''}
+      <div class="converter-select-menu-options" role="listbox" aria-label="${escapeHtml(menuLabel)}">
+        ${filteredOptions.length
+          ? filteredOptions.map((option) => renderConverterMenuOption(field, option, option.value === currentValue)).join('')
+          : `<div class="converter-select-menu-empty">${t('landingPage.menus.noMatches')}</div>`}
+      </div>
     </div>
   `;
 }
@@ -222,11 +257,31 @@ function renderConverterMenuOption(field, option, selected) {
       type="button"
       class="converter-select-option ${selected ? 'selected' : ''}"
       data-converter-option-select="${field}"
-      data-converter-option-value="${option.value}"
+      data-converter-option-value="${escapeHtml(option.value)}"
       role="option"
       aria-selected="${selected ? 'true' : 'false'}"
-    >${escapeHtml(option.label)}</button>
+    >
+      <span class="converter-select-option-primary">${escapeHtml(option.label)}</span>
+      ${option.meta ? `<span class="converter-select-option-meta">${escapeHtml(option.meta)}</span>` : ''}
+    </button>
   `;
+}
+
+function getFilteredConverterMenuOptions(field, options) {
+  const query = String(state.converter.converterMenuSearch?.[field] ?? '').trim().toLowerCase();
+  if (!query) {
+    return options;
+  }
+
+  return options.filter((option) => [option.label, option.value, option.code, option.symbol, option.meta]
+    .filter(Boolean)
+    .some((term) => String(term).toLowerCase().includes(query)));
+}
+
+function getCurrencyOptionMeta(currency) {
+  const code = String(currency.code || '').trim().toUpperCase();
+  const symbol = String(currency.symbol || '').trim();
+  return symbol && symbol !== code ? `${code} · ${symbol}` : code;
 }
 
 function renderCurrencyRateLine(units, fromMeta, toMeta) {

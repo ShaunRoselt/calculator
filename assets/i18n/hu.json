@@ -104,7 +104,8 @@
         "fetching": "A legújabb USD referencia-kamatláb lekérése...",
         "liveRatesLoaded": "Az ExchangeRate-API-ból betöltött élő árfolyamok.",
         "liveUpdateUnavailable": "Az élő frissítés nem érhető el. Frissített demo árak helyben."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Körülbelül egyenlő"
   },

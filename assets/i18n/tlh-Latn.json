@@ -104,7 +104,8 @@
         "fetching": "USD reference rItmey vIghaj",
         "liveRatesLoaded": "Live rItmey ExchangeRate-API vIghaj.",
         "liveUpdateUnavailable": "Live update pagh. Demo rItmey locally chu'."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "mIw law'"
   },

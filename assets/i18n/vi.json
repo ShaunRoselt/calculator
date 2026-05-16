@@ -104,7 +104,8 @@
         "fetching": "Đang tìm nạp tỷ giá tham chiếu USD mới nhất...",
         "liveRatesLoaded": "Tỷ giá trực tiếp được tải từ ExchangeRate-API.",
         "liveUpdateUnavailable": "Không có bản cập nhật trực tiếp. Tỷ lệ demo được làm mới tại địa phương."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Xấp xỉ bằng"
   },

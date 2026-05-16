@@ -104,7 +104,8 @@
         "fetching": "ಇತ್ತೀಚಿನ USD ಉಲ್ಲೇಖ ದರಗಳನ್ನು ಪಡೆಯಲಾಗುತ್ತಿದೆ...",
         "liveRatesLoaded": "ExchangeRate-API ನಿಂದ ಲೈವ್ ದರಗಳನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಿದೆ.",
         "liveUpdateUnavailable": "ಲೈವ್ ಅಪ್‌ಡೇಟ್ ಲಭ್ಯವಿಲ್ಲ. ಸ್ಥಳೀಯವಾಗಿ ಡೆಮೊ ದರಗಳನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಲಾಗಿದೆ."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "ಸುಮಾರು ಸಮಾನವಾಗಿರುತ್ತದೆ"
   },

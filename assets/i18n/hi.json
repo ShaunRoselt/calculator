@@ -104,7 +104,8 @@
         "fetching": "नवीनतम USD संदर्भ दरें प्राप्त की जा रही हैं...",
         "liveRatesLoaded": "एक्सचेंजरेट-एपीआई से लाइव दरें लोड की गईं।",
         "liveUpdateUnavailable": "लाइव अपडेट अनुपलब्ध है। स्थानीय स्तर पर ताज़ा डेमो दरें।"
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "लगभग बराबर"
   },

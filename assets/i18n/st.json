@@ -104,7 +104,8 @@
         "fetching": "E lata litefiso tsa morao-rao tsa litšupiso tsa USD...",
         "liveRatesLoaded": "Lireite tsa hona joale tse tsoang ho ExchangeRate-API.",
         "liveUpdateUnavailable": "Lintlafatso tsa Live ha li teng. Lireite tsa demo tse nchafalitsoeng sebakeng sa heno."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "E ka ba ho lekana le"
   },

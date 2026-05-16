@@ -104,7 +104,8 @@
         "fetching": "Хамгийн сүүлийн үеийн ам.долларын лавлагааны ханшийг авч байна...",
         "liveRatesLoaded": "ExchangeRate-API-аас шууд ханшийг ачаалсан.",
         "liveUpdateUnavailable": "Шууд шинэчлэлт боломжгүй. Демо ханшийг орон нутагт шинэчилсэн."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "ойролцоогоор тэнцүү байна"
   },

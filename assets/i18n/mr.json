@@ -104,7 +104,8 @@
         "fetching": "नवीनतम USD संदर्भ दर आणत आहे...",
         "liveRatesLoaded": "ExchangeRate-API वरून थेट दर लोड केले.",
         "liveUpdateUnavailable": "लाइव्ह अपडेट अनुपलब्ध. स्थानिक पातळीवर डेमो दर रीफ्रेश केले."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "सुमारे समान"
   },

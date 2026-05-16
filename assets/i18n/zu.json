@@ -104,7 +104,8 @@
         "fetching": "Kulandwa amanani akamuva ereferensi e-USD...",
         "liveRatesLoaded": "Amanani bukhoma alayishwe kusuka ku-ExchangeRate-API.",
         "liveUpdateUnavailable": "Ukuvuselela bukhoma akutholakali. Amanani edemo avuselelwe endaweni."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Cishe kulingana no"
   },

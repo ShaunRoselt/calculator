@@ -104,7 +104,8 @@
         "fetching": "Dañuy jël njëgu royuwaay bi mujjee ci USD...",
         "liveRatesLoaded": "Njëg yiy dundu ñu ngi ko jëlee ci API-Njëg weccoo.",
         "liveUpdateUnavailable": "Amul yeesal ci saasi. Yeesal njëgu demo ci dëkk bi."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Lu tollu ci"
   },

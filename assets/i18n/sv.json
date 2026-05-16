@@ -104,7 +104,8 @@
         "fetching": "Hämtar de senaste referenskurserna för USD...",
         "liveRatesLoaded": "Livekurser laddade från ExchangeRate-API.",
         "liveUpdateUnavailable": "Liveuppdatering är inte tillgänglig. Förnyade demopriser lokalt."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Ungefär lika med"
   },

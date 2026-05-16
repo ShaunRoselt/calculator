@@ -104,7 +104,8 @@
         "fetching": "తాజా USD సూచన రేట్లను పొందుతోంది...",
         "liveRatesLoaded": "ప్రత్యక్ష ధరలు ExchangeRate-API నుండి లోడ్ చేయబడ్డాయి.",
         "liveUpdateUnavailable": "ప్రత్యక్ష నవీకరణ అందుబాటులో లేదు. స్థానికంగా డెమో రేట్లు రిఫ్రెష్ చేయబడ్డాయి."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "సుమారు సమానం"
   },

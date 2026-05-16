@@ -104,7 +104,8 @@
         "fetching": "تازين USD ريفرنس جي شرحن کي آڻڻ...",
         "liveRatesLoaded": "لائيو ريٽ لوڊ ڪيا ويا ExchangeRate-API کان.",
         "liveUpdateUnavailable": "لائيو اپڊيٽ دستياب ناهي. ريفريش ٿيل ڊيمو قيمتون مقامي طور تي."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "اٽڪل برابر"
   },

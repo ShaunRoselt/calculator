@@ -104,7 +104,8 @@
         "fetching": "Tii ana i nga reiti tohutoro USD hou...",
         "liveRatesLoaded": "Ka utaina nga reiti mai i ExchangeRate-API.",
         "liveUpdateUnavailable": "Karekau i te waatea te whakahou. Kua whakahoutia nga reiti demo i te rohe."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Mo te rite ki"
   },

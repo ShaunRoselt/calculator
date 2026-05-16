@@ -104,7 +104,8 @@
         "fetching": "Ana samun sabbin ƙima na USD...",
         "liveRatesLoaded": "An ɗora farashin kai tsaye daga ExchangeRate-API.",
         "liveUpdateUnavailable": "Babu sabuntawa kai tsaye. An sabunta darajar demo a gida."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Kimanin daidai"
   },

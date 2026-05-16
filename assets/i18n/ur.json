@@ -104,7 +104,8 @@
         "fetching": "تازہ ترین USD حوالہ جات کی بازیافت کی جا رہی ہے...",
         "liveRatesLoaded": "ExchangeRate-API سے لائیو ریٹ لوڈ کیے گئے۔",
         "liveUpdateUnavailable": "لائیو اپ ڈیٹ دستیاب نہیں ہے۔ مقامی طور پر ریفریش شدہ ڈیمو ریٹس۔"
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "تقریباً مساوی"
   },

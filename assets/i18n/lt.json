@@ -104,7 +104,8 @@
         "fetching": "Gaunami naujausi USD orientaciniai kursai...",
         "liveRatesLoaded": "Tiesioginiai kursai įkelti iš „ExchangeRate-API“.",
         "liveUpdateUnavailable": "Tiesioginis atnaujinimas nepasiekiamas. Atnaujinti demonstraciniai kursai vietoje."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Maždaug lygus"
   },

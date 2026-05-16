@@ -104,7 +104,8 @@
         "fetching": "در حال واکشی آخرین نرخ‌های مرجع USD...",
         "liveRatesLoaded": "نرخ‌های زنده از ExchangeRate-API بارگیری شده است.",
         "liveUpdateUnavailable": "به‌روزرسانی زنده در دسترس نیست. نرخ های نسخه ی نمایشی به صورت محلی به روز شده است."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "تقریباً برابر با"
   },

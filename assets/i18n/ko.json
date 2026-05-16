@@ -104,7 +104,8 @@
         "fetching": "최신 USD 참조 환율을 가져오는 중...",
         "liveRatesLoaded": "ExchangeRate-API에서 로드된 실시간 환율입니다.",
         "liveUpdateUnavailable": "라이브 업데이트를 사용할 수 없습니다. 현지 데모 요금이 새로워졌습니다."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "약 같음"
   },

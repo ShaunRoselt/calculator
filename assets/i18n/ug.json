@@ -104,7 +104,8 @@
         "fetching": "ئەڭ يېڭى USD پايدىلىنىش نىسبىتىنى ئېلىش ...",
         "liveRatesLoaded": "ExchangeRate-API دىن يۈكلەنگەن نەق مەيدان نىسبىتى.",
         "liveUpdateUnavailable": "نەق مەيدان يېڭىلاشنى ئىشلەتكىلى بولمايدۇ. يەرلىكتە كۆرسىتىش نىسبىتى يېڭىلاندى."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "باراۋەر"
   },

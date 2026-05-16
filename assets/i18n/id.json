@@ -104,7 +104,8 @@
         "fetching": "Mengambil kurs referensi USD terbaru...",
         "liveRatesLoaded": "Tarif langsung dimuat dari ExchangeRate-API.",
         "liveUpdateUnavailable": "Pembaruan langsung tidak tersedia. Tarif demo yang diperbarui secara lokal."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Hampir sama dengan"
   },

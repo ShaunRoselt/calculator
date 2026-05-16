@@ -104,7 +104,8 @@
         "fetching": "Se preiau cele mai recente rate de referință USD...",
         "liveRatesLoaded": "Rate live încărcate din ExchangeRate-API.",
         "liveUpdateUnavailable": "Actualizare live indisponibilă. Tarife demo actualizate la nivel local."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Aproximativ egal cu"
   },

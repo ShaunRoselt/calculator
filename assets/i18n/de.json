@@ -104,7 +104,8 @@
         "fetching": "Neueste USD-Referenzkurse werden abgerufen...",
         "liveRatesLoaded": "Live-Kurse wurden von ExchangeRate-API geladen.",
         "liveUpdateUnavailable": "Live-Aktualisierung nicht verfügbar. Demo-Kurse wurden lokal aktualisiert."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Ungefähr gleich"
   },

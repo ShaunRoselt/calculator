@@ -104,7 +104,8 @@
         "fetching": "מביא את שיעורי הייחוס העדכניים ביותר של דולר ארה\"ב...",
         "liveRatesLoaded": "תעריפים בזמן אמת נטענו מ- ExchangeRate-API.",
         "liveUpdateUnavailable": "עדכון חי לא זמין. רענון תעריפי הדגמה מקומית."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "בערך שווה ל"
   },

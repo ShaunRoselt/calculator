@@ -104,7 +104,8 @@
         "fetching": "नजें USD संदर्भ दर मेळोवप...",
         "liveRatesLoaded": "ExchangeRate-API कडल्यान लोड केल्ले लायव्ह दर.",
         "liveUpdateUnavailable": "लायव्ह अपडेट उपलब्ध ना. थळाव्यान ताजे केल्ले डेमो दर."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "सुमार इतले"
   },

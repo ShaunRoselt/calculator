@@ -104,7 +104,8 @@
         "fetching": "Henter de siste referansekursene for USD...",
         "liveRatesLoaded": "Livekurser lastet inn fra ExchangeRate-API.",
         "liveUpdateUnavailable": "Liveoppdatering er utilgjengelig. Oppdaterte demopriser lokalt."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Omtrent lik"
   },

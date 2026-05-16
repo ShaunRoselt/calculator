@@ -104,7 +104,8 @@
         "fetching": "Wrth nôl y cyfraddau cyfeirio USD diweddaraf...",
         "liveRatesLoaded": "Cyfraddau byw wedi'u llwytho o ExchangeRate-API.",
         "liveUpdateUnavailable": "Nid yw diweddariad byw ar gael. Cyfraddau demo wedi'u diweddaru'n lleol."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Tua hafal i"
   },

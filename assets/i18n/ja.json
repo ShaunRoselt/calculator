@@ -104,7 +104,8 @@
         "fetching": "最新の米ドル参照レートを取得しています...",
         "liveRatesLoaded": "ExchangeRate-API からロードされたライブ レート。",
         "liveUpdateUnavailable": "ライブアップデートは利用できません。デモレートをローカルで更新しました。"
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "ほぼ等しい"
   },

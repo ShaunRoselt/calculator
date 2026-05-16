@@ -104,7 +104,8 @@
         "fetching": "Inaleta viwango vipya zaidi vya marejeleo vya USD...",
         "liveRatesLoaded": "Bei za moja kwa moja zilizopakiwa kutoka ExchangeRate-API.",
         "liveUpdateUnavailable": "Sasisho la moja kwa moja halipatikani. Imerejesha viwango vya onyesho ndani ya nchi."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Takriban sawa na"
   },

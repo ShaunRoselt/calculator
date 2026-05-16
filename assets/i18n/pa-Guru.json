@@ -104,7 +104,8 @@
         "fetching": "ਨਵੀਨਤਮ USD ਸੰਦਰਭ ਦਰਾਂ ਪ੍ਰਾਪਤ ਕੀਤੀਆਂ ਜਾ ਰਹੀਆਂ ਹਨ...",
         "liveRatesLoaded": "ExchangeRate-API ਤੋਂ ਲੋਡ ਕੀਤੀਆਂ ਲਾਈਵ ਦਰਾਂ।",
         "liveUpdateUnavailable": "ਲਾਈਵ ਅੱਪਡੇਟ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਤਾਜ਼ਾ ਡੈਮੋ ਦਰਾਂ।"
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "ਲਗਭਗ ਬਰਾਬਰ"
   },

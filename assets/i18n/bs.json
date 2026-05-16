@@ -104,7 +104,8 @@
         "fetching": "Dohvaćanje najnovijih referentnih stopa u USD...",
         "liveRatesLoaded": "Uživo stope učitane iz ExchangeRate-API.",
         "liveUpdateUnavailable": "Ažuriranje uživo nije dostupno. Osvježene demo cijene lokalno."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Otprilike jednako"
   },

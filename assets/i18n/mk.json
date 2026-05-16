@@ -104,7 +104,8 @@
         "fetching": "Се преземаат најновите референтни стапки во УСД...",
         "liveRatesLoaded": "Стапките во живо се вчитани од ExchangeRate-API.",
         "liveUpdateUnavailable": "Недостапно е ажурирање во живо. Обновени демо стапки локално."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Околу еднакво на"
   },

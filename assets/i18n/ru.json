@@ -104,7 +104,8 @@
         "fetching": "Получение последних справочных курсов доллара США...",
         "liveRatesLoaded": "Текущие курсы, загруженные из ExchangeRate-API.",
         "liveUpdateUnavailable": "Оперативное обновление недоступно. Обновлены демо-тарифы на местном уровне."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Примерно равно"
   },

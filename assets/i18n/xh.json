@@ -104,7 +104,8 @@
         "fetching": "Kufunyanwa amaxabiso ereferensi e-USD akutshanje...",
         "liveRatesLoaded": "Amaxabiso aphilayo alayishwe ukusuka ku-ExchangeRate-API.",
         "liveUpdateUnavailable": "Uhlaziyo oluphilayo alufumaneki. Amaxabiso edemo avuselelwe apha ekhaya."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Phantse kulingana no"
   },

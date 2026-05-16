@@ -104,7 +104,8 @@
         "fetching": "சமீபத்திய USD குறிப்பு விகிதங்களைப் பெறுகிறது...",
         "liveRatesLoaded": "நேரடி கட்டணங்கள் ExchangeRate-API இலிருந்து ஏற்றப்பட்டன.",
         "liveUpdateUnavailable": "நேரடி புதுப்பிப்பு கிடைக்கவில்லை. உள்நாட்டில் டெமோ கட்டணங்கள் புதுப்பிக்கப்பட்டன."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "சுமார் சமம்"
   },

@@ -104,7 +104,8 @@
         "fetching": "Načítání nejnovějších referenčních sazeb v USD...",
         "liveRatesLoaded": "Aktuální sazby načteny z ExchangeRate-API.",
         "liveUpdateUnavailable": "Živá aktualizace není k dispozici. Aktualizované demo sazby lokálně."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Přibližně rovno"
   },

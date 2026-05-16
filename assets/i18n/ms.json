@@ -104,7 +104,8 @@
         "fetching": "Mengambil kadar rujukan USD terkini...",
         "liveRatesLoaded": "Kadar langsung dimuatkan daripada ExchangeRate-API.",
         "liveUpdateUnavailable": "Kemas kini langsung tidak tersedia. Kadar tunjuk cara diperbaharui secara tempatan."
-      }
+      },
+      "search": "Search currencies"
     },
     "aboutEqualTo": "Kira-kira sama dengan"
   },

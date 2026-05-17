@@ -391,6 +391,7 @@
     },
     "links": {
       "repository": "Project repository",
+      "releaseNotes": "Release Notes",
       "readme": "README",
       "license": "MIT license"
     }

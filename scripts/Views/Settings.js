@@ -7,14 +7,14 @@ import { state } from '../state.js';
 
 const SETTINGS_LINKS = [
   {
-    labelKey: 'settings.links.repository',
-    label: 'Project repository',
-    href: 'https://github.com/ShaunRoselt/calculator'
-  },
-  {
     labelKey: 'settings.links.readme',
     label: 'README',
     href: 'https://github.com/ShaunRoselt/calculator/blob/main/README.md'
+  },
+  {
+    labelKey: 'settings.links.releaseNotes',
+    label: 'Release Notes',
+    href: 'Updates.html'
   },
   {
     labelKey: 'settings.links.license',

@@ -333,12 +333,14 @@
       "dark": "Tume",
       "blue": "Sinine",
       "green": "Roheline",
-      "system": "Süsteem"
+      "system": "Süsteem",
+      "searchThemes": "Otsi teemasid"
     },
     "language": {
       "group": "Keel",
       "title": "Keel",
-      "description": "Valige eelistatud keel"
+      "description": "Valige eelistatud keel",
+      "search": "Otsi keeli"
     },
     "about": {
       "group": "Teave"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Projekti hoidla",
       "readme": "LOE",
-      "license": "MIT-litsents"
+      "license": "MIT-litsents",
+      "releaseNotes": "Väljalaskemärkmed"
     },
     "calculation": {
       "group": "Arvutamine",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Valige teema, keel ja rakenduse põhikäitumine",
+      "group": "Eelistused"
     }
   },
   "modes": {

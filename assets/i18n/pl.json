@@ -333,12 +333,14 @@
       "dark": "Ciemno",
       "blue": "Niebieski",
       "green": "Zielony",
-      "system": "System"
+      "system": "System",
+      "searchThemes": "Wyszukaj motywy"
     },
     "language": {
       "group": "Język",
       "title": "Język",
-      "description": "Wybierz preferowany język"
+      "description": "Wybierz preferowany język",
+      "search": "Wyszukaj języki"
     },
     "about": {
       "group": "O"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Repozytorium projektu",
       "readme": "CZYTAJ",
-      "license": "Licencja MIT"
+      "license": "Licencja MIT",
+      "releaseNotes": "Informacje o wydaniu"
     },
     "calculation": {
       "group": "Obliczenia",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Wybierz motyw, język i najważniejsze zachowanie aplikacji",
+      "group": "Preferencje"
     }
   },
   "modes": {

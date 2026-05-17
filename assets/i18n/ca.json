@@ -333,12 +333,14 @@
       "dark": "Fosc",
       "blue": "Blau",
       "green": "Verd",
-      "system": "Sistema"
+      "system": "Sistema",
+      "searchThemes": "Cerca temes"
     },
     "language": {
       "group": "Idioma",
       "title": "Idioma",
-      "description": "Tria el teu idioma preferit"
+      "description": "Tria el teu idioma preferit",
+      "search": "Cerca idiomes"
     },
     "about": {
       "group": "Quant a"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Repositori del projecte",
       "readme": "llegiu-me",
-      "license": "Llicència MIT"
+      "license": "Llicència MIT",
+      "releaseNotes": "Notes de la versió"
     },
     "calculation": {
       "group": "Càlcul",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Trieu el tema, l'idioma i el comportament clau de l'aplicació",
+      "group": "Preferències"
     }
   },
   "modes": {

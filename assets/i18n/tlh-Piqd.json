@@ -333,12 +333,14 @@
       "dark": "",
       "blue": "",
       "green": "",
-      "system": ""
+      "system": "",
+      "searchThemes": "Search themes"
     },
     "language": {
       "group": "",
       "title": "",
-      "description": "  "
+      "description": "  ",
+      "search": "Search languages"
     },
     "window": {
       "group": "",
@@ -366,7 +368,8 @@
     "links": {
       "repository": " ",
       "readme": "README",
-      "license": "MIT"
+      "license": "MIT",
+      "releaseNotes": "Release Notes"
     },
     "shortcuts": {
       "group": "Shortcuts",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Choose the theme, language, and key app behavior",
+      "group": "Preferences"
     }
   },
   "modes": {

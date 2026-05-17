@@ -333,12 +333,14 @@
       "dark": "黑暗",
       "blue": "藍色",
       "green": "綠色",
-      "system": "系統"
+      "system": "系統",
+      "searchThemes": "搜尋主題"
     },
     "language": {
       "group": "語言",
       "title": "語言",
-      "description": "選擇您的首選語言"
+      "description": "選擇您的首選語言",
+      "search": "搜尋語言"
     },
     "about": {
       "group": "關於"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "專案儲存庫",
       "readme": "自述文件",
-      "license": "麻省理工學院許可證"
+      "license": "麻省理工學院許可證",
+      "releaseNotes": "發行說明"
     },
     "calculation": {
       "group": "計算",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "選擇主題、語言和關鍵應用行為",
+      "group": "偏好設定"
     }
   },
   "modes": {

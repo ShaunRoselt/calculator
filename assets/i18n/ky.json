@@ -333,12 +333,14 @@
       "dark": "Кара",
       "blue": "Көк",
       "green": "Жашыл",
-      "system": "Систем"
+      "system": "Систем",
+      "searchThemes": "Темаларды издөө"
     },
     "language": {
       "group": "Тил",
       "title": "Тил",
-      "description": "Өзүңүзгө жаккан тилди тандаңыз"
+      "description": "Өзүңүзгө жаккан тилди тандаңыз",
+      "search": "Тилдерди издөө"
     },
     "about": {
       "group": "Жөнүндө"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Долбоордун репозиторийи",
       "readme": "README",
-      "license": "MIT лицензиясы"
+      "license": "MIT лицензиясы",
+      "releaseNotes": "Release Notes"
     },
     "calculation": {
       "group": "Эсептөө",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Теманы, тилди жана колдонмонун негизги жүрүм-турумун тандаңыз",
+      "group": "Preferences"
     }
   },
   "modes": {

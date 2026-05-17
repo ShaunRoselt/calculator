@@ -333,12 +333,14 @@
       "dark": "Donker",
       "system": "Systeem",
       "blue": "Blauw",
-      "green": "Groen"
+      "green": "Groen",
+      "searchThemes": "Zoek thema's"
     },
     "language": {
       "group": "Taal",
       "title": "Taal",
-      "description": "Kies uw voorkeurstaal"
+      "description": "Kies uw voorkeurstaal",
+      "search": "Zoek talen"
     },
     "about": {
       "group": "Over"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Projectrepository",
       "readme": "README",
-      "license": "MIT-licentie"
+      "license": "MIT-licentie",
+      "releaseNotes": "Release-opmerkingen"
     },
     "calculation": {
       "group": "Berekening",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Kies het thema, de taal en het belangrijkste app-gedrag",
+      "group": "Voorkeuren"
     }
   },
   "modes": {

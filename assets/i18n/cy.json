@@ -333,12 +333,14 @@
       "dark": "Tywyll",
       "blue": "Glas",
       "green": "Gwyrdd",
-      "system": "System"
+      "system": "System",
+      "searchThemes": "Chwilio themâu"
     },
     "language": {
       "group": "Iaith",
       "title": "Iaith",
-      "description": "Dewiswch eich dewis iaith"
+      "description": "Dewiswch eich dewis iaith",
+      "search": "Chwilio ieithoedd"
     },
     "about": {
       "group": "Ynghylch"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Ystorfa prosiect",
       "readme": "README",
-      "license": "Trwydded MIT"
+      "license": "Trwydded MIT",
+      "releaseNotes": "Nodiadau Rhyddhau"
     },
     "calculation": {
       "group": "Cyfrifiad",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Dewiswch thema, iaith ac ymddygiad allweddol yr ap",
+      "group": "Dewisiadau"
     }
   },
   "modes": {

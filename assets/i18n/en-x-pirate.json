@@ -333,12 +333,14 @@
       "dark": "Moonlit",
       "blue": "Blue tide",
       "green": "Green tide",
-      "system": "Match th' vessel"
+      "system": "Match th' vessel",
+      "searchThemes": "Search themes"
     },
     "language": {
       "group": "Tongue",
       "title": "Tongue",
-      "description": "Choose yer favored tongue"
+      "description": "Choose yer favored tongue",
+      "search": "Search languages"
     },
     "about": {
       "group": "About this vessel"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Ship's chart room",
       "readme": "README",
-      "license": "MIT license"
+      "license": "MIT license",
+      "releaseNotes": "Release Notes"
     },
     "calculation": {
       "group": "Calculation",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Choose the theme, language, and key app behavior",
+      "group": "Preferences"
     }
   },
   "modes": {

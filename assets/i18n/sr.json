@@ -333,12 +333,14 @@
       "dark": "Дарк",
       "blue": "Плава",
       "green": "Зелена",
-      "system": "Систем"
+      "system": "Систем",
+      "searchThemes": "Претражите теме"
     },
     "language": {
       "group": "Језик",
       "title": "Језик",
-      "description": "Одаберите жељени језик"
+      "description": "Одаберите жељени језик",
+      "search": "Тражи језике"
     },
     "about": {
       "group": "Абоут"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Репозиторијум пројекта",
       "readme": "РЕАДМЕ",
-      "license": "МИТ лиценца"
+      "license": "МИТ лиценца",
+      "releaseNotes": "Белешке о издању"
     },
     "calculation": {
       "group": "Калкулација",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Одаберите тему, језик и кључно понашање апликације",
+      "group": "Преференцес"
     }
   },
   "modes": {

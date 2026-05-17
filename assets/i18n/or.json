@@ -333,12 +333,14 @@
       "dark": "Dark",
       "blue": "Blue",
       "green": "Green",
-      "system": "System"
+      "system": "System",
+      "searchThemes": "ଥିମ୍ ସନ୍ଧାନ କରନ୍ତୁ |"
     },
     "language": {
       "group": "Language",
       "title": "Language",
-      "description": "Choose your preferred language"
+      "description": "Choose your preferred language",
+      "search": "ଭାଷା ଖୋଜ |"
     },
     "about": {
       "group": "About"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Project repository",
       "readme": "README",
-      "license": "MIT license"
+      "license": "MIT license",
+      "releaseNotes": "ଟିପ୍ପଣୀଗୁଡିକ ପ୍ରକାଶ କରନ୍ତୁ"
     },
     "calculation": {
       "group": "ଗଣନା |",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "ଥିମ୍, ଭାଷା, ଏବଂ ମୁଖ୍ୟ ଆପ୍ ଆଚରଣ ବାଛନ୍ତୁ |",
+      "group": "ପସନ୍ଦ"
     }
   },
   "modes": {

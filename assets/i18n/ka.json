@@ -333,12 +333,14 @@
       "dark": "ბნელი",
       "blue": "ლურჯი",
       "green": "მწვანე",
-      "system": "სისტემა"
+      "system": "სისტემა",
+      "searchThemes": "თემების ძიება"
     },
     "language": {
       "group": "ენა",
       "title": "ენა",
-      "description": "აირჩიეთ თქვენთვის სასურველი ენა"
+      "description": "აირჩიეთ თქვენთვის სასურველი ენა",
+      "search": "ენების ძიება"
     },
     "about": {
       "group": "დაახლოებით"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "პროექტის საცავი",
       "readme": "წაიკითხეთ",
-      "license": "MIT ლიცენზია"
+      "license": "MIT ლიცენზია",
+      "releaseNotes": "გამოშვების შენიშვნები"
     },
     "calculation": {
       "group": "გაანგარიშება",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "აირჩიეთ თემა, ენა და ძირითადი აპის ქცევა",
+      "group": "პრეფერენციები"
     }
   },
   "modes": {

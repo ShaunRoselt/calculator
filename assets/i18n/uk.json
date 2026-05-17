@@ -333,12 +333,14 @@
       "dark": "Темний",
       "blue": "Синій",
       "green": "Зелений",
-      "system": "Система"
+      "system": "Система",
+      "searchThemes": "Теми пошуку"
     },
     "language": {
       "group": "Мова",
       "title": "Мова",
-      "description": "Виберіть потрібну мову"
+      "description": "Виберіть потрібну мову",
+      "search": "Пошук мов"
     },
     "about": {
       "group": "Про"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Сховище проектів",
       "readme": "README",
-      "license": "Ліцензія MIT"
+      "license": "Ліцензія MIT",
+      "releaseNotes": "Примітки до випуску"
     },
     "calculation": {
       "group": "Розрахунок",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Виберіть тему, мову та ключову поведінку програми",
+      "group": "Уподобання"
     }
   },
   "modes": {

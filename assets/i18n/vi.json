@@ -333,12 +333,14 @@
       "dark": "Tối",
       "blue": "Xanh lam",
       "green": "Xanh lục",
-      "system": "Hệ thống"
+      "system": "Hệ thống",
+      "searchThemes": "Tìm kiếm chủ đề"
     },
     "language": {
       "group": "Ngôn ngữ",
       "title": "Ngôn ngữ",
-      "description": "Chọn ngôn ngữ ưa thích của bạn"
+      "description": "Chọn ngôn ngữ ưa thích của bạn",
+      "search": "Tìm kiếm ngôn ngữ"
     },
     "about": {
       "group": "Giới thiệu"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Kho lưu trữ dự án",
       "readme": "README",
-      "license": "Giấy phép MIT"
+      "license": "Giấy phép MIT",
+      "releaseNotes": "Ghi chú phát hành"
     },
     "calculation": {
       "group": "Tính toán",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Chọn chủ đề, ngôn ngữ và hành vi chính của ứng dụng",
+      "group": "Tùy chọn"
     }
   },
   "modes": {

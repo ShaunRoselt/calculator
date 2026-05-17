@@ -333,12 +333,14 @@
       "dark": "काळोख",
       "blue": "निळें",
       "green": "पाचवें",
-      "system": "प्रणाली"
+      "system": "प्रणाली",
+      "searchThemes": "विशय सोदप"
     },
     "language": {
       "group": "भास",
       "title": "भास",
-      "description": "तुमची आवडटी भास निवडात"
+      "description": "तुमची आवडटी भास निवडात",
+      "search": "भासो सोदप"
     },
     "about": {
       "group": "बद्दल"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "प्रकल्प भंडार",
       "readme": "README हें नांव",
-      "license": "MIT परवानो"
+      "license": "MIT परवानो",
+      "releaseNotes": "प्रकाशनाचीं नोंदी"
     },
     "calculation": {
       "group": "गणना करप",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "थीम, भास, आनी की ऍप्लिकेशन वागणूक निवडात",
+      "group": "प्राधान्यां"
     }
   },
   "modes": {

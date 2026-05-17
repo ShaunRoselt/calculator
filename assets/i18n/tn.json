@@ -333,12 +333,14 @@
       "dark": "Lefifi",
       "blue": "Botala jwa legodimo",
       "green": "Tala",
-      "system": "Thulaganyo"
+      "system": "Thulaganyo",
+      "searchThemes": "Batla dithitokgang"
     },
     "language": {
       "group": "Puo",
       "title": "Puo",
-      "description": "Tlhopha puo e o e ratang"
+      "description": "Tlhopha puo e o e ratang",
+      "search": "Batla dipuo"
     },
     "about": {
       "group": "Ka ga"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Polokelo ya porojeke",
       "readme": "NBUISA",
-      "license": "Laesense ya MIT"
+      "license": "Laesense ya MIT",
+      "releaseNotes": "Dintlha tsa Kgololo"
     },
     "calculation": {
       "group": "Palelo",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Tlhopha setlhogo, puo, le boitshwaro jwa tiriswa e e botlhokwa",
+      "group": "Ditlhopho"
     }
   },
   "modes": {

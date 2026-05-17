@@ -333,12 +333,14 @@
       "dark": "Myrkur",
       "blue": "Blár",
       "green": "Grænt",
-      "system": "Kerfi"
+      "system": "Kerfi",
+      "searchThemes": "Leitaðu að þemum"
     },
     "language": {
       "group": "Tungumál",
       "title": "Tungumál",
-      "description": "Veldu valið tungumál"
+      "description": "Veldu valið tungumál",
+      "search": "Leitaðu að tungumálum"
     },
     "about": {
       "group": "Um"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Verkefnageymsla",
       "readme": "LESIÐMIG",
-      "license": "MIT leyfi"
+      "license": "MIT leyfi",
+      "releaseNotes": "Útgáfuskýringar"
     },
     "calculation": {
       "group": "Útreikningur",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Veldu þema, tungumál og lykilforritshegðun",
+      "group": "Óskir"
     }
   },
   "modes": {

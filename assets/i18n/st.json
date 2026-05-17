@@ -333,12 +333,14 @@
       "dark": "E lefifi",
       "blue": "Putsoa",
       "green": "Botala",
-      "system": "Sistimi"
+      "system": "Sistimi",
+      "searchThemes": "Batla lihlooho"
     },
     "language": {
       "group": "Puo",
       "title": "Puo",
-      "description": "Khetha puo eo u e ratang"
+      "description": "Khetha puo eo u e ratang",
+      "search": "Batla lipuo"
     },
     "about": {
       "group": "Mabapi"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Bobolokelo ba morero",
       "readme": "BALA",
-      "license": "MIT laesense"
+      "license": "MIT laesense",
+      "releaseNotes": "Lintlha tsa Phatlalatso"
     },
     "calculation": {
       "group": "Palo",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Khetha sehlooho, puo, le mekhoa ea mantlha ea app",
+      "group": "Likhetho"
     }
   },
   "modes": {

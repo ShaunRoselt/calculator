@@ -333,12 +333,14 @@
       "dark": "Nyeusi",
       "blue": "Bluu",
       "green": "Kijani",
-      "system": "Mfumo"
+      "system": "Mfumo",
+      "searchThemes": "Tafuta mandhari"
     },
     "language": {
       "group": "Lugha",
       "title": "Lugha",
-      "description": "Chagua lugha unayopendelea"
+      "description": "Chagua lugha unayopendelea",
+      "search": "Tafuta lugha"
     },
     "about": {
       "group": "Kuhusu"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Hazina ya mradi",
       "readme": "SOMA",
-      "license": "Leseni ya MIT"
+      "license": "Leseni ya MIT",
+      "releaseNotes": "Vidokezo vya Kutolewa"
     },
     "calculation": {
       "group": "Hesabu",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Chagua mandhari, lugha na tabia kuu ya programu",
+      "group": "Mapendeleo"
     }
   },
   "modes": {

@@ -333,12 +333,14 @@
       "dark": "Тъмно",
       "blue": "Синьо",
       "green": "Зелено",
-      "system": "Система"
+      "system": "Система",
+      "searchThemes": "Теми за търсене"
     },
     "language": {
       "group": "Език",
       "title": "Език",
-      "description": "Изберете предпочитания от вас език"
+      "description": "Изберете предпочитания от вас език",
+      "search": "Търсене на езици"
     },
     "about": {
       "group": "Относно"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Хранилище на проекти",
       "readme": "ПРОЧЕТЕТЕ МЕ",
-      "license": "Лиценз на MIT"
+      "license": "Лиценз на MIT",
+      "releaseNotes": "Бележки по изданието"
     },
     "calculation": {
       "group": "Изчисляване",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Изберете темата, езика и основното поведение на приложението",
+      "group": "Предпочитания"
     }
   },
   "modes": {

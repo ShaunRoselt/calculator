@@ -333,12 +333,14 @@
       "dark": "Ọchịchịrị",
       "blue": "Na-acha anụnụ anụnụ",
       "green": "Akwụkwọ ndụ akwụkwọ ndụ",
-      "system": "Sistemụ"
+      "system": "Sistemụ",
+      "searchThemes": "Chọọ gburugburu"
     },
     "language": {
       "group": "Asụsụ",
       "title": "Asụsụ",
-      "description": "Họrọ asụsụ ọkacha mmasị gị"
+      "description": "Họrọ asụsụ ọkacha mmasị gị",
+      "search": "Chọọ asụsụ"
     },
     "about": {
       "group": "gbasara"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Ebe nchekwa ọrụ",
       "readme": "README",
-      "license": "MIT ikike"
+      "license": "MIT ikike",
+      "releaseNotes": "Ndetu mwepụta"
     },
     "calculation": {
       "group": "Mgbakọ",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Họrọ isiokwu, asụsụ, na omume isi ngwa",
+      "group": "Mmasị"
     }
   },
   "modes": {

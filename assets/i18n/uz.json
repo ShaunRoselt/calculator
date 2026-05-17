@@ -333,12 +333,14 @@
       "dark": "Qorongʻi",
       "blue": "Moviy",
       "green": "Yashil",
-      "system": "Tizim"
+      "system": "Tizim",
+      "searchThemes": "Mavzularni qidirish"
     },
     "language": {
       "group": "Til",
       "title": "Til",
-      "description": "Oʻzingizga qulay tilni tanlang"
+      "description": "Oʻzingizga qulay tilni tanlang",
+      "search": "Tillarni qidirish"
     },
     "about": {
       "group": "Haqida"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Loyihalar ombori",
       "readme": "README",
-      "license": "MIT litsenziyasi"
+      "license": "MIT litsenziyasi",
+      "releaseNotes": "Chiqarish eslatmalari"
     },
     "calculation": {
       "group": "Hisoblash",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Mavzu, til va asosiy ilova xatti-harakatlarini tanlang",
+      "group": "Afzalliklar"
     }
   },
   "modes": {

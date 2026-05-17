@@ -333,12 +333,14 @@
       "dark": "Mnyama",
       "blue": "Luhlaza okwesibhakabhaka",
       "green": "Luhlaza",
-      "system": "Inkqubo"
+      "system": "Inkqubo",
+      "searchThemes": "Phendla imixholo"
     },
     "language": {
       "group": "Ulwimi",
       "title": "Ulwimi",
-      "description": "Khetha ulwimi olukhethayo"
+      "description": "Khetha ulwimi olukhethayo",
+      "search": "Phendla iilwimi"
     },
     "about": {
       "group": "Malunga"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Indawo yeprojekthi",
       "readme": "README",
-      "license": "Ilayisensi ye-MIT"
+      "license": "Ilayisensi ye-MIT",
+      "releaseNotes": "Khupha amanqaku"
     },
     "calculation": {
       "group": "Ukubala",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Khetha umxholo, ulwimi, kunye nokuziphatha kosetyenziso oluphambili",
+      "group": "Ezikhethwayo"
     }
   },
   "modes": {

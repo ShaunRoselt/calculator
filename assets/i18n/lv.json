@@ -333,12 +333,14 @@
       "dark": "Tumšs",
       "blue": "Zils",
       "green": "Zaļš",
-      "system": "Sistēma"
+      "system": "Sistēma",
+      "searchThemes": "Meklēt tēmas"
     },
     "language": {
       "group": "Valoda",
       "title": "Valoda",
-      "description": "Izvēlieties vēlamo valodu"
+      "description": "Izvēlieties vēlamo valodu",
+      "search": "Meklēt valodas"
     },
     "about": {
       "group": "Par"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Projekta krātuve",
       "readme": "LASĪT",
-      "license": "MIT licence"
+      "license": "MIT licence",
+      "releaseNotes": "Izlaiduma piezīmes"
     },
     "calculation": {
       "group": "Aprēķins",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Izvēlieties motīvu, valodu un galveno lietotnes darbību",
+      "group": "Preferences"
     }
   },
   "modes": {

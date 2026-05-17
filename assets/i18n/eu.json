@@ -333,12 +333,14 @@
       "dark": "Iluna",
       "blue": "Urdina",
       "green": "Berdea",
-      "system": "Sistema"
+      "system": "Sistema",
+      "searchThemes": "Bilatu gaiak"
     },
     "language": {
       "group": "Hizkuntza",
       "title": "Hizkuntza",
-      "description": "Aukeratu nahi duzun hizkuntza"
+      "description": "Aukeratu nahi duzun hizkuntza",
+      "search": "Bilatu hizkuntzak"
     },
     "about": {
       "group": "Hori buruz"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Proiektuaren biltegia",
       "readme": "IRAKURRI",
-      "license": "MIT lizentzia"
+      "license": "MIT lizentzia",
+      "releaseNotes": "Argitalpen Oharrak"
     },
     "calculation": {
       "group": "Kalkulua",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Aukeratu gaia, hizkuntza eta aplikazioaren portaera gakoa",
+      "group": "Hobespenak"
     }
   },
   "modes": {

@@ -333,12 +333,14 @@
       "dark": "अंधेरा",
       "blue": "नीला",
       "green": "हरा",
-      "system": "प्रणाली"
+      "system": "प्रणाली",
+      "searchThemes": "थीम खोजें"
     },
     "language": {
       "group": "भाषा",
       "title": "भाषा",
-      "description": "अपनी पसंदीदा भाषा चुनें"
+      "description": "अपनी पसंदीदा भाषा चुनें",
+      "search": "भाषाएँ खोजें"
     },
     "about": {
       "group": "के बारे में"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "परियोजना भंडार",
       "readme": "पढ़ें",
-      "license": "एमआईटी लाइसेंस"
+      "license": "एमआईटी लाइसेंस",
+      "releaseNotes": "रिलीज नोट्स"
     },
     "calculation": {
       "group": "गणना",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "थीम, भाषा और मुख्य ऐप व्यवहार चुनें",
+      "group": "प्राथमिकताएँ"
     }
   },
   "modes": {

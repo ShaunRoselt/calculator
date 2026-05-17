@@ -333,12 +333,14 @@
       "dark": "Gelap",
       "blue": "Biru",
       "green": "Hijau",
-      "system": "Sistem"
+      "system": "Sistem",
+      "searchThemes": "Cari tema"
     },
     "language": {
       "group": "Bahasa",
       "title": "Bahasa",
-      "description": "Pilih bahasa pilihan Anda"
+      "description": "Pilih bahasa pilihan Anda",
+      "search": "Cari bahasa"
     },
     "about": {
       "group": "Tentang"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Repositori proyek",
       "readme": "BACA SAYA",
-      "license": "lisensi MIT"
+      "license": "lisensi MIT",
+      "releaseNotes": "Catatan Rilis"
     },
     "calculation": {
       "group": "Perhitungan",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Pilih tema, bahasa, dan perilaku aplikasi utama",
+      "group": "Preferensi"
     }
   },
   "modes": {

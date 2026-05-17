@@ -333,12 +333,14 @@
       "dark": "مظلم",
       "blue": "الأزرق",
       "green": "أخضر",
-      "system": "النظام"
+      "system": "النظام",
+      "searchThemes": "موضوعات البحث"
     },
     "language": {
       "group": "اللغة",
       "title": "اللغة",
-      "description": "اختر لغتك المفضلة"
+      "description": "اختر لغتك المفضلة",
+      "search": "لغات البحث"
     },
     "about": {
       "group": "حول"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "مستودع المشروع",
       "readme": "اقرأني",
-      "license": "ترخيص معهد ماساتشوستس للتكنولوجيا"
+      "license": "ترخيص معهد ماساتشوستس للتكنولوجيا",
+      "releaseNotes": "ملاحظات الإصدار"
     },
     "calculation": {
       "group": "الحساب",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "اختر السمة واللغة وسلوك التطبيق الرئيسي",
+      "group": "التفضيلات"
     }
   },
   "modes": {

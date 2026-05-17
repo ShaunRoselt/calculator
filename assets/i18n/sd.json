@@ -333,12 +333,14 @@
       "dark": "اونداهو",
       "blue": "نيرو",
       "green": "سائو",
-      "system": "سسٽم"
+      "system": "سسٽم",
+      "searchThemes": "موضوع ڳوليو"
     },
     "language": {
       "group": "ٻولي",
       "title": "ٻولي",
-      "description": "پنهنجي پسند جي ٻولي چونڊيو"
+      "description": "پنهنجي پسند جي ٻولي چونڊيو",
+      "search": "ٻوليون ڳولھيو"
     },
     "about": {
       "group": "بابت"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "پروجيڪٽ ريپوزٽري",
       "readme": "README",
-      "license": "MIT لائسنس"
+      "license": "MIT لائسنس",
+      "releaseNotes": "رليز نوٽس"
     },
     "calculation": {
       "group": "حساب",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "موضوع، ٻولي، ۽ اهم ايپ جي رويي کي چونڊيو",
+      "group": "ترجيحات"
     }
   },
   "modes": {

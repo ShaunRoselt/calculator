@@ -333,12 +333,14 @@
       "dark": "تاریک",
       "blue": "آبی",
       "green": "سبز",
-      "system": "سیستم"
+      "system": "سیستم",
+      "searchThemes": "جستجوی تم ها"
     },
     "language": {
       "group": "زبان",
       "title": "زبان",
-      "description": "زبان دلخواه خود را انتخاب کنید"
+      "description": "زبان دلخواه خود را انتخاب کنید",
+      "search": "جستجوی زبان ها"
     },
     "about": {
       "group": "درباره"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "مخزن پروژه",
       "readme": "README",
-      "license": "مجوز MIT"
+      "license": "مجوز MIT",
+      "releaseNotes": "یادداشت های انتشار"
     },
     "calculation": {
       "group": "محاسبه",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "طرح زمینه، زبان و رفتار کلید برنامه را انتخاب کنید",
+      "group": "ترجیحات"
     }
   },
   "modes": {

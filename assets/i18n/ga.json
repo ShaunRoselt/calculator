@@ -515,7 +515,8 @@
       "light": "Solas",
       "system": "Córas",
       "themeDescription": "Roghnaigh scéim dathanna",
-      "themeTitle": "Téama"
+      "themeTitle": "Téama",
+      "searchThemes": "Téamaí cuardaigh"
     },
     "contribute": {
       "link": "GitHub",
@@ -526,12 +527,14 @@
     "language": {
       "description": "Roghnaigh do rogha teanga",
       "group": "Teanga",
-      "title": "Teanga"
+      "title": "Teanga",
+      "search": "Cuardaigh teangacha"
     },
     "links": {
       "license": "Ceadúnas MIT",
       "readme": "LÉIGHINN",
-      "repository": "Stór tionscadail"
+      "repository": "Stór tionscadail",
+      "releaseNotes": "Nótaí Eisiúna"
     },
     "calculation": {
       "group": "Ríomh",
@@ -566,6 +569,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Roghnaigh an téama, an teanga, agus iompraíocht na haipe eochair",
+      "group": "Roghanna"
     }
   },
   "units": {

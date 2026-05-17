@@ -333,12 +333,14 @@
       "dark": "Sötét",
       "blue": "Kék",
       "green": "Zöld",
-      "system": "Rendszer"
+      "system": "Rendszer",
+      "searchThemes": "Témák keresése"
     },
     "language": {
       "group": "Nyelv",
       "title": "Nyelv",
-      "description": "Válassza ki a kívánt nyelvet"
+      "description": "Válassza ki a kívánt nyelvet",
+      "search": "Nyelvek keresése"
     },
     "about": {
       "group": "Körülbelül"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Projekttár",
       "readme": "OLVASÁS",
-      "license": "MIT-licenc"
+      "license": "MIT-licenc",
+      "releaseNotes": "Kiadási megjegyzések"
     },
     "calculation": {
       "group": "Számítás",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Válassza ki a témát, a nyelvet és az alkalmazás kulcsfontosságú viselkedését",
+      "group": "Preferences"
     }
   },
   "modes": {

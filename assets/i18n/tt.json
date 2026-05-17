@@ -333,12 +333,14 @@
       "dark": "Караңгы",
       "blue": "Зәңгәр",
       "green": "Яшел",
-      "system": "Система"
+      "system": "Система",
+      "searchThemes": "Темалар эзләү"
     },
     "language": {
       "group": "Тел",
       "title": "Тел",
-      "description": "Үзегез теләгән телне сайлагыз"
+      "description": "Үзегез теләгән телне сайлагыз",
+      "search": "Телләрне эзләү"
     },
     "about": {
       "group": "турында"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Проект складлары",
       "readme": "УКУ",
-      "license": "MIT лицензиясе"
+      "license": "MIT лицензиясе",
+      "releaseNotes": "Искәрмәләр"
     },
     "calculation": {
       "group": "Хисаплау",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Теманы, телне, кушымтаның төп тәртибен сайлагыз",
+      "group": "Өстенлекләр"
     }
   },
   "modes": {

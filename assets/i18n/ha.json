@@ -333,12 +333,14 @@
       "dark": "Duhu",
       "blue": "Blue",
       "green": "Kore",
-      "system": "Tsari"
+      "system": "Tsari",
+      "searchThemes": "Bincika jigogi"
     },
     "language": {
       "group": "Harshe",
       "title": "Harshe",
-      "description": "Zaɓi yaren da kuka fi so"
+      "description": "Zaɓi yaren da kuka fi so",
+      "search": "Bincika harsuna"
     },
     "about": {
       "group": "Game da"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Ma'ajiyar aikin",
       "readme": "KU KARANTA",
-      "license": "MIT lasisi"
+      "license": "MIT lasisi",
+      "releaseNotes": "Bayanan Saki"
     },
     "calculation": {
       "group": "Lissafi",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Zaɓi jigon, harshe, da maɓalli na ƙa'idar",
+      "group": "Abubuwan da ake so"
     }
   },
   "modes": {

@@ -333,12 +333,14 @@
       "dark": "ഇരുട്ട്",
       "blue": "നീല",
       "green": "പച്ച",
-      "system": "സിസ്റ്റം"
+      "system": "സിസ്റ്റം",
+      "searchThemes": "തീമുകൾ തിരയുക"
     },
     "language": {
       "group": "ഭാഷ",
       "title": "ഭാഷ",
-      "description": "നിങ്ങൾ തിരഞ്ഞെടുത്ത ഭാഷ തിരഞ്ഞെടുക്കുക"
+      "description": "നിങ്ങൾ തിരഞ്ഞെടുത്ത ഭാഷ തിരഞ്ഞെടുക്കുക",
+      "search": "ഭാഷകൾ തിരയുക"
     },
     "about": {
       "group": "ഏകദേശം"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "പദ്ധതി ശേഖരം",
       "readme": "വായിക്കുക",
-      "license": "എംഐടി ലൈസൻസ്"
+      "license": "എംഐടി ലൈസൻസ്",
+      "releaseNotes": "റിലീസ് കുറിപ്പുകൾ"
     },
     "calculation": {
       "group": "കണക്കുകൂട്ടൽ",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "തീം, ഭാഷ, പ്രധാന ആപ്പ് പെരുമാറ്റം എന്നിവ തിരഞ്ഞെടുക്കുക",
+      "group": "മുൻഗണനകൾ"
     }
   },
   "modes": {

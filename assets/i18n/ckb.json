@@ -333,12 +333,14 @@
       "dark": "تاریک",
       "blue": "شین",
       "green": "سەوز",
-      "system": "سیستەم"
+      "system": "سیستەم",
+      "searchThemes": "گەڕان بەدوای تەوەرەکاندا"
     },
     "language": {
       "group": "زمان",
       "title": "زمان",
-      "description": "زمانی دڵخوازی خۆت هەڵبژێرە"
+      "description": "زمانی دڵخوازی خۆت هەڵبژێرە",
+      "search": "زمانەکان بگەڕێ"
     },
     "about": {
       "group": "دەربارەی"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "کۆگای پڕۆژە",
       "readme": "README",
-      "license": "مۆڵەتی MIT"
+      "license": "مۆڵەتی MIT",
+      "releaseNotes": "تێبینی بڵاوکردنەوە"
     },
     "calculation": {
       "group": "حیسابکردن",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "بابەت و زمان و هەڵسوکەوتی سەرەکی ئەپەکە هەڵبژێرە",
+      "group": "هەڵبژاردنەکان"
     }
   },
   "modes": {

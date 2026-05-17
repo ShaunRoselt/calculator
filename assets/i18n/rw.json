@@ -333,12 +333,14 @@
       "dark": "Umwijima",
       "blue": "Ubururu",
       "green": "Icyatsi",
-      "system": "Sisitemu"
+      "system": "Sisitemu",
+      "searchThemes": "Shakisha insanganyamatsiko"
     },
     "language": {
       "group": "Ururimi",
       "title": "Ururimi",
-      "description": "Hitamo ururimi ukunda"
+      "description": "Hitamo ururimi ukunda",
+      "search": "Shakisha indimi"
     },
     "about": {
       "group": "Ibyerekeye"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Ububiko bwumushinga",
       "readme": "GUSOMA",
-      "license": "Uruhushya rwa MIT"
+      "license": "Uruhushya rwa MIT",
+      "releaseNotes": "Kurekura Inyandiko"
     },
     "calculation": {
       "group": "Kubara",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Hitamo insanganyamatsiko, ururimi, nimyitwarire yingenzi ya porogaramu",
+      "group": "Ibyifuzo"
     }
   },
   "modes": {

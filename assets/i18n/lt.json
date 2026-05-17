@@ -333,12 +333,14 @@
       "dark": "Tamsu",
       "blue": "Mėlyna",
       "green": "Žalia",
-      "system": "Sistema"
+      "system": "Sistema",
+      "searchThemes": "Ieškoti temų"
     },
     "language": {
       "group": "Kalba",
       "title": "Kalba",
-      "description": "Pasirinkite pageidaujamą kalbą"
+      "description": "Pasirinkite pageidaujamą kalbą",
+      "search": "Ieškoti kalbų"
     },
     "about": {
       "group": "Apie"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Projekto saugykla",
       "readme": "SKAITYTI",
-      "license": "MIT licencija"
+      "license": "MIT licencija",
+      "releaseNotes": "Išleidimo pastabos"
     },
     "calculation": {
       "group": "Skaičiavimas",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Pasirinkite temą, kalbą ir pagrindinę programos elgseną",
+      "group": "Parinktys"
     }
   },
   "modes": {

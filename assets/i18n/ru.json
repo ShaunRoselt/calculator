@@ -333,12 +333,14 @@
       "dark": "Темный",
       "blue": "Синий",
       "green": "Зеленый",
-      "system": "Система"
+      "system": "Система",
+      "searchThemes": "Поиск тем"
     },
     "language": {
       "group": "Язык",
       "title": "Язык",
-      "description": "Выберите предпочитаемый язык"
+      "description": "Выберите предпочитаемый язык",
+      "search": "Поиск языков"
     },
     "about": {
       "group": "О компании"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Репозиторий проекта",
       "readme": "README",
-      "license": "Лицензия MIT"
+      "license": "Лицензия MIT",
+      "releaseNotes": "Примечания к выпуску"
     },
     "calculation": {
       "group": "Расчет",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Выберите тему, язык и ключевое поведение приложения.",
+      "group": "Предпочтения"
     }
   },
   "modes": {

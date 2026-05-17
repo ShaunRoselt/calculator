@@ -333,12 +333,14 @@
       "dark": "Errësirë",
       "blue": "Blu",
       "green": "E gjelbër",
-      "system": "Sistemi"
+      "system": "Sistemi",
+      "searchThemes": "Kërko tema"
     },
     "language": {
       "group": "Gjuha",
       "title": "Gjuha",
-      "description": "Zgjidh gjuhën tënde të preferuar"
+      "description": "Zgjidh gjuhën tënde të preferuar",
+      "search": "Kërkoni gjuhë"
     },
     "about": {
       "group": "Rreth"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Depoja e projektit",
       "readme": "LEXO",
-      "license": "Licenca MIT"
+      "license": "Licenca MIT",
+      "releaseNotes": "Shënimet e publikimit"
     },
     "calculation": {
       "group": "Llogaritja",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Zgjidhni temën, gjuhën dhe sjelljen kryesore të aplikacionit",
+      "group": "Preferencat"
     }
   },
   "modes": {

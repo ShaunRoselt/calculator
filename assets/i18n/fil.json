@@ -333,12 +333,14 @@
       "dark": "Madilim",
       "blue": "Asul",
       "green": "Berde",
-      "system": "System"
+      "system": "System",
+      "searchThemes": "Maghanap ng mga tema"
     },
     "language": {
       "group": "Wika",
       "title": "Wika",
-      "description": "Piliin ang iyong gustong wika"
+      "description": "Piliin ang iyong gustong wika",
+      "search": "Maghanap ng mga wika"
     },
     "about": {
       "group": "Tungkol sa"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Repository ng proyekto",
       "readme": "README",
-      "license": "Lisensya ng MIT"
+      "license": "Lisensya ng MIT",
+      "releaseNotes": "Mga Tala sa Paglabas"
     },
     "calculation": {
       "group": "Pagkalkula",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Piliin ang tema, wika, at pangunahing gawi ng app",
+      "group": "Mga Kagustuhan"
     }
   },
   "modes": {

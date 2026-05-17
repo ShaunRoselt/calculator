@@ -333,12 +333,14 @@
       "dark": "Dark",
       "blue": "Blue",
       "green": "Green",
-      "system": "System"
+      "system": "System",
+      "searchThemes": "搜索主题"
     },
     "language": {
       "group": "Language",
       "title": "Language",
-      "description": "Choose your preferred language"
+      "description": "Choose your preferred language",
+      "search": "搜索语言"
     },
     "about": {
       "group": "About"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Project repository",
       "readme": "README",
-      "license": "MIT license"
+      "license": "MIT license",
+      "releaseNotes": "发行说明"
     },
     "calculation": {
       "group": "计算",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "选择主题、语言和关键应用行为",
+      "group": "偏好设置"
     }
   },
   "modes": {

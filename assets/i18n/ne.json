@@ -333,12 +333,14 @@
       "dark": "अँध्यारो",
       "blue": "निलो",
       "green": "हरियो",
-      "system": "प्रणाली"
+      "system": "प्रणाली",
+      "searchThemes": "विषयवस्तुहरू खोज्नुहोस्"
     },
     "language": {
       "group": "भाषा",
       "title": "भाषा",
-      "description": "आफ्नो मनपर्ने भाषा छान्नुहोस्"
+      "description": "आफ्नो मनपर्ने भाषा छान्नुहोस्",
+      "search": "भाषाहरू खोज्नुहोस्"
     },
     "about": {
       "group": "को बारेमा"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "परियोजना भण्डार",
       "readme": "README",
-      "license": "MIT लाइसेन्स"
+      "license": "MIT लाइसेन्स",
+      "releaseNotes": "रिलिज नोटहरू"
     },
     "calculation": {
       "group": "गणना",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "विषयवस्तु, भाषा, र कुञ्जी एप व्यवहार छान्नुहोस्",
+      "group": "प्राथमिकताहरू"
     }
   },
   "modes": {

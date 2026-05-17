@@ -333,12 +333,14 @@
       "dark": "আন্ধাৰ",
       "blue": "নীলা",
       "green": "সেউজীয়া",
-      "system": "চিস্টেম"
+      "system": "চিস্টেম",
+      "searchThemes": "থিম সন্ধান কৰক"
     },
     "language": {
       "group": "ভাষা",
       "title": "ভাষা",
-      "description": "আপোনাৰ পছন্দৰ ভাষা বাছক"
+      "description": "আপোনাৰ পছন্দৰ ভাষা বাছক",
+      "search": "ভাষা সন্ধান কৰক"
     },
     "about": {
       "group": "সম্পৰ্কে"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "প্ৰকল্প ভঁৰাল",
       "readme": "README",
-      "license": "MIT অনুজ্ঞাপত্ৰ"
+      "license": "MIT অনুজ্ঞাপত্ৰ",
+      "releaseNotes": "মুক্তিৰ টোকাসমূহ"
     },
     "calculation": {
       "group": "গণনা",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "থিম, ভাষা, আৰু মূল এপ আচৰণ বাছক",
+      "group": "পছন্দসমূহ"
     }
   },
   "modes": {

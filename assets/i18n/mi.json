@@ -333,12 +333,14 @@
       "dark": "Pouri",
       "blue": "Kanarangi",
       "green": "Kakariki",
-      "system": "Pūnaha"
+      "system": "Pūnaha",
+      "searchThemes": "Rapu kaupapa"
     },
     "language": {
       "group": "Reo",
       "title": "Reo",
-      "description": "Kōwhiritia tō reo pai"
+      "description": "Kōwhiritia tō reo pai",
+      "search": "Rapu reo"
     },
     "about": {
       "group": "Mō"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Putaka kaupapa",
       "readme": "PĀNUITIA",
-      "license": "Raihana MIT"
+      "license": "Raihana MIT",
+      "releaseNotes": "Panui Panui"
     },
     "calculation": {
       "group": "Tatauranga",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Kōwhirihia te kaupapa, te reo, me te whanonga taupānga matua",
+      "group": "Manakohanga"
     }
   },
   "modes": {

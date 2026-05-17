@@ -333,12 +333,14 @@
       "dark": "ముదురు",
       "blue": "నీలం",
       "green": "ఆకుపచ్చ",
-      "system": "సిస్టమ్"
+      "system": "సిస్టమ్",
+      "searchThemes": "థీమ్‌లను శోధించండి"
     },
     "language": {
       "group": "భాష",
       "title": "భాష",
-      "description": "మీ ప్రాధాన్య భాషను ఎంచుకోండి"
+      "description": "మీ ప్రాధాన్య భాషను ఎంచుకోండి",
+      "search": "భాషలను శోధించండి"
     },
     "about": {
       "group": "గురించి"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "ప్రాజెక్ట్ రిపోజిటరీ",
       "readme": "చదవండి",
-      "license": "MIT లైసెన్స్"
+      "license": "MIT లైసెన్స్",
+      "releaseNotes": "విడుదల గమనికలు"
     },
     "calculation": {
       "group": "గణన",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "థీమ్, భాష మరియు కీ యాప్ ప్రవర్తనను ఎంచుకోండి",
+      "group": "ప్రాధాన్యతలు"
     }
   },
   "modes": {

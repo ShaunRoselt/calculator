@@ -333,12 +333,14 @@
       "dark": "অন্ধকার",
       "blue": "নীল",
       "green": "সবুজ",
-      "system": "সিস্টেম"
+      "system": "সিস্টেম",
+      "searchThemes": "থিম খুঁজুন"
     },
     "language": {
       "group": "ভাষা",
       "title": "ভাষা",
-      "description": "আপনার পছন্দের ভাষা বেছে নিন"
+      "description": "আপনার পছন্দের ভাষা বেছে নিন",
+      "search": "ভাষা অনুসন্ধান করুন"
     },
     "about": {
       "group": "সম্পর্কে"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "প্রকল্প সংগ্রহস্থল",
       "readme": "README",
-      "license": "MIT লাইসেন্স"
+      "license": "MIT লাইসেন্স",
+      "releaseNotes": "রিলিজ নোট"
     },
     "calculation": {
       "group": "গণনা",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "থিম, ভাষা এবং কী অ্যাপ আচরণ বেছে নিন",
+      "group": "পছন্দসমূহ"
     }
   },
   "modes": {

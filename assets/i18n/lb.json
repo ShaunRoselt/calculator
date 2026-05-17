@@ -333,12 +333,14 @@
       "dark": "Däischter",
       "blue": "Blo",
       "green": "Gréng",
-      "system": "System"
+      "system": "System",
+      "searchThemes": "Sich Themen"
     },
     "language": {
       "group": "Sprooch",
       "title": "Sprooch",
-      "description": "Wielt Är gewënschte Sprooch"
+      "description": "Wielt Är gewënschte Sprooch",
+      "search": "Sich Sproochen"
     },
     "about": {
       "group": "Iwwer"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Projet Repository",
       "readme": "LIÉIERT",
-      "license": "MIT Lizenz"
+      "license": "MIT Lizenz",
+      "releaseNotes": "Verëffentlechungsnotizen"
     },
     "calculation": {
       "group": "Berechnung",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Wielt d'Thema, d'Sprooch a Schlëssel App Verhalen",
+      "group": "Preferenzen"
     }
   },
   "modes": {

@@ -333,12 +333,14 @@
       "dark": "Dudu",
       "blue": "bulu",
       "green": "Alawọ ewe",
-      "system": "Eto"
+      "system": "Eto",
+      "searchThemes": "Wa awọn akori"
     },
     "language": {
       "group": "Ede",
       "title": "Ede",
-      "description": "Yan ede ti o fẹ"
+      "description": "Yan ede ti o fẹ",
+      "search": "Wa awọn ede"
     },
     "about": {
       "group": "Nipa"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Ibi ipamọ ise agbese",
       "readme": "README",
-      "license": "MIT iwe-ašẹ"
+      "license": "MIT iwe-ašẹ",
+      "releaseNotes": "Awọn akọsilẹ Tu silẹ"
     },
     "calculation": {
       "group": "Iṣiro",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Yan akori, ede, ati ihuwasi app bọtini",
+      "group": "Awọn ayanfẹ"
     }
   },
   "modes": {

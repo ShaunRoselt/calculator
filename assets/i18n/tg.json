@@ -333,12 +333,14 @@
       "dark": "Торик",
       "blue": "Кабуд",
       "green": "Сабз",
-      "system": "Система"
+      "system": "Система",
+      "searchThemes": "Ҷустуҷӯи мавзӯъҳо"
     },
     "language": {
       "group": "Забон",
       "title": "Забон",
-      "description": "Забони дилхоҳи худро интихоб кунед"
+      "description": "Забони дилхоҳи худро интихоб кунед",
+      "search": "Ҷустуҷӯи забонҳо"
     },
     "about": {
       "group": "Дар бораи"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Анбори лоиҳа",
       "readme": "ХОНЕД",
-      "license": "Иҷозатномаи MIT"
+      "license": "Иҷозатномаи MIT",
+      "releaseNotes": "Қайдҳои нашр"
     },
     "calculation": {
       "group": "Ҳисобкунӣ",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Мавзӯъ, забон ва рафтори асосии барномаро интихоб кунед",
+      "group": "Афзалиятҳо"
     }
   },
   "modes": {

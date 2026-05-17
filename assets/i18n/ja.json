@@ -333,12 +333,14 @@
       "dark": "ダーク",
       "blue": "ブルー",
       "green": "緑",
-      "system": "システム"
+      "system": "システム",
+      "searchThemes": "テーマを検索する"
     },
     "language": {
       "group": "言語",
       "title": "言語",
-      "description": "好みの言語を選択してください"
+      "description": "好みの言語を選択してください",
+      "search": "検索言語"
     },
     "about": {
       "group": "概要"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "プロジェクトリポジトリ",
       "readme": "README",
-      "license": "MIT ライセンス"
+      "license": "MIT ライセンス",
+      "releaseNotes": "リリースノート"
     },
     "calculation": {
       "group": "計算",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "テーマ、言語、アプリの主要な動作を選択します",
+      "group": "設定"
     }
   },
   "modes": {

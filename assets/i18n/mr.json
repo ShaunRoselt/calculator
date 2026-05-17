@@ -333,12 +333,14 @@
       "dark": "गडद",
       "blue": "निळा",
       "green": "हिरवा",
-      "system": "सिस्टम"
+      "system": "सिस्टम",
+      "searchThemes": "थीम शोधा"
     },
     "language": {
       "group": "भाषा",
       "title": "भाषा",
-      "description": "तुमची पसंतीची भाषा निवडा"
+      "description": "तुमची पसंतीची भाषा निवडा",
+      "search": "भाषा शोधा"
     },
     "about": {
       "group": "बद्दल"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "प्रकल्प भांडार",
       "readme": "वाचा",
-      "license": "MIT परवाना"
+      "license": "MIT परवाना",
+      "releaseNotes": "रिलीझ नोट्स"
     },
     "calculation": {
       "group": "गणना",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "थीम, भाषा आणि मुख्य ॲप वर्तन निवडा",
+      "group": "प्राधान्ये"
     }
   },
   "modes": {

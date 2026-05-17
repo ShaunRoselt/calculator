@@ -333,12 +333,14 @@
       "dark": "અંધારું",
       "blue": "વાદળી",
       "green": "લીલો",
-      "system": "સિસ્ટમ"
+      "system": "સિસ્ટમ",
+      "searchThemes": "થીમ્સ શોધો"
     },
     "language": {
       "group": "ભાષા",
       "title": "ભાષા",
-      "description": "તમારી પસંદગીની ભાષા પસંદ કરો"
+      "description": "તમારી પસંદગીની ભાષા પસંદ કરો",
+      "search": "ભાષાઓ શોધો"
     },
     "about": {
       "group": "વિશે"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "પ્રોજેક્ટ રીપોઝીટરી",
       "readme": "વાંચો",
-      "license": "MIT લાઇસન્સ"
+      "license": "MIT લાઇસન્સ",
+      "releaseNotes": "પ્રકાશન નોંધો"
     },
     "calculation": {
       "group": "ગણતરી",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "થીમ, ભાષા અને કી એપ્લિકેશન વર્તન પસંદ કરો",
+      "group": "પસંદગીઓ"
     }
   },
   "modes": {

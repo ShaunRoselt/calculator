@@ -333,12 +333,14 @@
       "dark": "Tamno",
       "blue": "Plava",
       "green": "Zelena",
-      "system": "Sistem"
+      "system": "Sistem",
+      "searchThemes": "Pretražite teme"
     },
     "language": {
       "group": "Jezik",
       "title": "Jezik",
-      "description": "Odaberite željeni jezik"
+      "description": "Odaberite željeni jezik",
+      "search": "Traži jezike"
     },
     "about": {
       "group": "O"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Spremište projekta",
       "readme": "PROČITAJTE ME",
-      "license": "MIT licenca"
+      "license": "MIT licenca",
+      "releaseNotes": "Bilješke o izdanju"
     },
     "calculation": {
       "group": "Izračun",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Odaberite temu, jezik i ključno ponašanje aplikacije",
+      "group": "Preferences"
     }
   },
   "modes": {

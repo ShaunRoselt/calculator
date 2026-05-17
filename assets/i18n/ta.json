@@ -333,12 +333,14 @@
       "dark": "இருட்டு",
       "blue": "நீலம்",
       "green": "பச்சை",
-      "system": "அமைப்பு"
+      "system": "அமைப்பு",
+      "searchThemes": "தீம்களைத் தேடுங்கள்"
     },
     "language": {
       "group": "மொழி",
       "title": "மொழி",
-      "description": "உங்களுக்கு விருப்பமான மொழியைத் தேர்ந்தெடுக்கவும்"
+      "description": "உங்களுக்கு விருப்பமான மொழியைத் தேர்ந்தெடுக்கவும்",
+      "search": "மொழிகளைத் தேடுங்கள்"
     },
     "about": {
       "group": "சுமார்"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "திட்ட களஞ்சியம்",
       "readme": "படிக்க",
-      "license": "எம்ஐடி உரிமம்"
+      "license": "எம்ஐடி உரிமம்",
+      "releaseNotes": "வெளியீட்டு குறிப்புகள்"
     },
     "calculation": {
       "group": "கணக்கீடு",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "தீம், மொழி மற்றும் முக்கிய பயன்பாட்டு நடத்தை ஆகியவற்றைத் தேர்ந்தெடுக்கவும்",
+      "group": "விருப்பங்கள்"
     }
   },
   "modes": {

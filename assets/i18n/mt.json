@@ -333,12 +333,14 @@
       "dark": "Dlam",
       "blue": "Blu",
       "green": "Aħdar",
-      "system": "Sistema"
+      "system": "Sistema",
+      "searchThemes": "Fittex temi"
     },
     "language": {
       "group": "Lingwa",
       "title": "Lingwa",
-      "description": "Agħżel il-lingwa preferuta tiegħek"
+      "description": "Agħżel il-lingwa preferuta tiegħek",
+      "search": "Fittex lingwi"
     },
     "about": {
       "group": "Dwar"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Repożitorju tal-proġett",
       "readme": "AQRAMI",
-      "license": "Liċenzja MIT"
+      "license": "Liċenzja MIT",
+      "releaseNotes": "Noti ta' Ħruġ"
     },
     "calculation": {
       "group": "Kalkolu",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Agħżel it-tema, il-lingwa, u l-imġieba ewlenija tal-app",
+      "group": "Preferenzi"
     }
   },
   "modes": {

@@ -333,12 +333,14 @@
       "dark": "اندھیرا",
       "blue": "نیلا",
       "green": "سبز",
-      "system": "سسٹم"
+      "system": "سسٹم",
+      "searchThemes": "تھیمز تلاش کریں۔"
     },
     "language": {
       "group": "زبان",
       "title": "زبان",
-      "description": "اپنی پسندیدہ زبان منتخب کریں۔"
+      "description": "اپنی پسندیدہ زبان منتخب کریں۔",
+      "search": "زبانیں تلاش کریں۔"
     },
     "about": {
       "group": "کے بارے میں"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "پروجیکٹ ریپوزٹری",
       "readme": "پڑھیں۔",
-      "license": "MIT لائسنس"
+      "license": "MIT لائسنس",
+      "releaseNotes": "ریلیز نوٹس"
     },
     "calculation": {
       "group": "حساب",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "تھیم، زبان اور کلیدی ایپ کے رویے کا انتخاب کریں۔",
+      "group": "ترجیحات"
     }
   },
   "modes": {

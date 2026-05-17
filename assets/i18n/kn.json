@@ -333,12 +333,14 @@
       "dark": "ಕತ್ತಲು",
       "blue": "ನೀಲಿ",
       "green": "ಹಸಿರು",
-      "system": "ವ್ಯವಸ್ಥೆ"
+      "system": "ವ್ಯವಸ್ಥೆ",
+      "searchThemes": "ಥೀಮ್‌ಗಳನ್ನು ಹುಡುಕಿ"
     },
     "language": {
       "group": "ಭಾಷೆ",
       "title": "ಭಾಷೆ",
-      "description": "ನಿಮ್ಮ ಆದ್ಯತೆಯ ಭಾಷೆಯನ್ನು ಆರಿಸಿ"
+      "description": "ನಿಮ್ಮ ಆದ್ಯತೆಯ ಭಾಷೆಯನ್ನು ಆರಿಸಿ",
+      "search": "ಭಾಷೆಗಳನ್ನು ಹುಡುಕಿ"
     },
     "about": {
       "group": "ಸುಮಾರು"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "ಪ್ರಾಜೆಕ್ಟ್ ರೆಪೊಸಿಟರಿ",
       "readme": "ಓದಿ",
-      "license": "MIT ਪਰವಾನಗಿ"
+      "license": "MIT ਪਰವಾನಗಿ",
+      "releaseNotes": "ಬಿಡುಗಡೆ ಟಿಪ್ಪಣಿಗಳು"
     },
     "calculation": {
       "group": "ಲೆಕ್ಕಾಚಾರ",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "ಥೀಮ್, ಭಾಷೆ ಮತ್ತು ಪ್ರಮುಖ ಅಪ್ಲಿಕೇಶನ್ ನಡವಳಿಕೆಯನ್ನು ಆರಿಸಿ",
+      "group": "ಆದ್ಯತೆಗಳು"
     }
   },
   "modes": {

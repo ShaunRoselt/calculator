@@ -333,12 +333,14 @@
       "dark": "Mørk",
       "blue": "Blå",
       "green": "Grønt",
-      "system": "System"
+      "system": "System",
+      "searchThemes": "Søg i temaer"
     },
     "language": {
       "group": "Sprog",
       "title": "Sprog",
-      "description": "Vælg dit foretrukne sprog"
+      "description": "Vælg dit foretrukne sprog",
+      "search": "Søg efter sprog"
     },
     "about": {
       "group": "Omtrent"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Projektlager",
       "readme": "LÆS MIG",
-      "license": "MIT-licens"
+      "license": "MIT-licens",
+      "releaseNotes": "Release Notes"
     },
     "calculation": {
       "group": "Beregning",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Vælg tema, sprog og nøgleappadfærd",
+      "group": "Præferencer"
     }
   },
   "modes": {

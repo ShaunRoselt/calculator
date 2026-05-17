@@ -333,12 +333,14 @@
       "dark": "Харанхуй",
       "blue": "Цэнхэр",
       "green": "Ногоон",
-      "system": "Систем"
+      "system": "Систем",
+      "searchThemes": "Загвар хайх"
     },
     "language": {
       "group": "Хэл",
       "title": "Хэл",
-      "description": "Та дуртай хэлээ сонгоно уу"
+      "description": "Та дуртай хэлээ сонгоно уу",
+      "search": "Хэл хайх"
     },
     "about": {
       "group": "Тухай"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Төслийн агуулах",
       "readme": "УНШИХ",
-      "license": "MIT лиценз"
+      "license": "MIT лиценз",
+      "releaseNotes": "Хувилбарын тэмдэглэл"
     },
     "calculation": {
       "group": "Тооцоо",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Загвар, хэл, програмын гол үйлдлийг сонгоно уу",
+      "group": "Сонголтууд"
     }
   },
   "modes": {

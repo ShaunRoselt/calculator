@@ -333,12 +333,14 @@
       "dark": "Цёмна",
       "blue": "Сіні",
       "green": "Зялёны",
-      "system": "Сістэма"
+      "system": "Сістэма",
+      "searchThemes": "Пошук тэм"
     },
     "language": {
       "group": "Мова",
       "title": "Мова",
-      "description": "Выберыце жаданую мову"
+      "description": "Выберыце жаданую мову",
+      "search": "Пошук моў"
     },
     "about": {
       "group": "Пра"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Сховішча праектаў",
       "readme": "ПРАЧЫТАЦЬ ME",
-      "license": "Ліцэнзія MIT"
+      "license": "Ліцэнзія MIT",
+      "releaseNotes": "Заўвагі да выпуску"
     },
     "calculation": {
       "group": "Разлік",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Выберыце тэму, мову і асноўныя паводзіны праграмы",
+      "group": "Прэферэнцыі"
     }
   },
   "modes": {

@@ -333,12 +333,14 @@
       "dark": "Tma",
       "blue": "Modrá",
       "green": "Zelená",
-      "system": "Systém"
+      "system": "Systém",
+      "searchThemes": "Hledat témata"
     },
     "language": {
       "group": "Jazyk",
       "title": "Jazyk",
-      "description": "Vyberte preferovaný jazyk"
+      "description": "Vyberte preferovaný jazyk",
+      "search": "Hledat jazyky"
     },
     "about": {
       "group": "O"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Úložiště projektu",
       "readme": "README",
-      "license": "Licence MIT"
+      "license": "Licence MIT",
+      "releaseNotes": "Poznámky k vydání"
     },
     "calculation": {
       "group": "Výpočet",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Vyberte téma, jazyk a klíčové chování aplikace",
+      "group": "Předvolby"
     }
   },
   "modes": {

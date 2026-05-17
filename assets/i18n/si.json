@@ -333,12 +333,14 @@
       "dark": "අඳුරු",
       "blue": "නිල්",
       "green": "කොළ",
-      "system": "පද්ධතිය"
+      "system": "පද්ධතිය",
+      "searchThemes": "තේමා සොයන්න"
     },
     "language": {
       "group": "භාෂාව",
       "title": "භාෂාව",
-      "description": "ඔබ කැමති භාෂාව තෝරන්න"
+      "description": "ඔබ කැමති භාෂාව තෝරන්න",
+      "search": "භාෂා සොයන්න"
     },
     "about": {
       "group": "ගැන"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "ව්‍යාපෘති ගබඩාව",
       "readme": "කියවන්න",
-      "license": "MIT බලපත්‍රය"
+      "license": "MIT බලපත්‍රය",
+      "releaseNotes": "නිකුත් කිරීමේ සටහන්"
     },
     "calculation": {
       "group": "ගණනය",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "තේමාව, භාෂාව සහ ප්‍රධාන යෙදුම් හැසිරීම තෝරන්න",
+      "group": "මනාප"
     }
   },
   "modes": {

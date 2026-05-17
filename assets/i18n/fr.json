@@ -333,12 +333,14 @@
       "dark": "Dark",
       "blue": "Blue",
       "green": "Green",
-      "system": "System"
+      "system": "System",
+      "searchThemes": "Thèmes de recherche"
     },
     "language": {
       "group": "Language",
       "title": "Language",
-      "description": "Choose your preferred language"
+      "description": "Choose your preferred language",
+      "search": "Langues de recherche"
     },
     "about": {
       "group": "About"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Project repository",
       "readme": "README",
-      "license": "MIT license"
+      "license": "MIT license",
+      "releaseNotes": "Notes de version"
     },
     "calculation": {
       "group": "Calcul",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Choisissez le thème, la langue et le comportement clé de l'application",
+      "group": "Préférences"
     }
   },
   "modes": {

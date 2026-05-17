@@ -333,12 +333,14 @@
       "dark": "มืด",
       "blue": "สีน้ำเงิน",
       "green": "สีเขียว",
-      "system": "ระบบ"
+      "system": "ระบบ",
+      "searchThemes": "ค้นหาธีม"
     },
     "language": {
       "group": "ภาษา",
       "title": "ภาษา",
-      "description": "เลือกภาษาที่คุณต้องการ"
+      "description": "เลือกภาษาที่คุณต้องการ",
+      "search": "ค้นหาภาษา"
     },
     "about": {
       "group": "เกี่ยวกับ"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "พื้นที่เก็บข้อมูลโปรเจ็กต์",
       "readme": "README",
-      "license": "ใบอนุญาต MIT"
+      "license": "ใบอนุญาต MIT",
+      "releaseNotes": "บันทึกประจำรุ่น"
     },
     "calculation": {
       "group": "การคำนวณ",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "เลือกธีม ภาษา และลักษณะการทำงานของแอป",
+      "group": "การตั้งค่า"
     }
   },
   "modes": {

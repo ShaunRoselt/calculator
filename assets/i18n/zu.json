@@ -333,12 +333,14 @@
       "dark": "Mnyama",
       "blue": "Luhlaza okwesibhakabhaka",
       "green": "Luhlaza",
-      "system": "Isistimu"
+      "system": "Isistimu",
+      "searchThemes": "Sesha izingqikithi"
     },
     "language": {
       "group": "Ulimi",
       "title": "Ulimi",
-      "description": "Khetha ulimi olukhethayo"
+      "description": "Khetha ulimi olukhethayo",
+      "search": "Sesha izilimi"
     },
     "about": {
       "group": "Mayelana"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Indawo yephrojekthi",
       "readme": "README",
-      "license": "Ilayisense ye-MIT"
+      "license": "Ilayisense ye-MIT",
+      "releaseNotes": "Khipha Amanothi"
     },
     "calculation": {
       "group": "Isibalo",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Khetha itimu, ulimi, nokuziphatha okubalulekile kohlelo lokusebenza",
+      "group": "Okuthandwayo"
     }
   },
   "modes": {

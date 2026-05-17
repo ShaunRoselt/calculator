@@ -333,12 +333,14 @@
       "dark": "Pimeä",
       "blue": "Sininen",
       "green": "Vihreä",
-      "system": "Järjestelmä"
+      "system": "Järjestelmä",
+      "searchThemes": "Hae teemoja"
     },
     "language": {
       "group": "Kieli",
       "title": "Kieli",
-      "description": "Valitse haluamasi kieli"
+      "description": "Valitse haluamasi kieli",
+      "search": "Hae kieliä"
     },
     "about": {
       "group": "Tietoja"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Projektin arkisto",
       "readme": "LUE",
-      "license": "MIT-lisenssi"
+      "license": "MIT-lisenssi",
+      "releaseNotes": "Julkaisutiedot"
     },
     "calculation": {
       "group": "Laskelma",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Valitse teema, kieli ja tärkeimmät sovelluksen toimintatavat",
+      "group": "Asetukset"
     }
   },
   "modes": {

@@ -333,12 +333,14 @@
       "dark": "כהה",
       "blue": "כחול",
       "green": "ירוק",
-      "system": "מערכת"
+      "system": "מערכת",
+      "searchThemes": "חפש ערכות נושא"
     },
     "language": {
       "group": "שפה",
       "title": "שפה",
-      "description": "בחר את השפה המועדפת עליך"
+      "description": "בחר את השפה המועדפת עליך",
+      "search": "חיפוש שפות"
     },
     "about": {
       "group": "בערך"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "מאגר פרויקטים",
       "readme": "קרא אותי",
-      "license": "רישיון MIT"
+      "license": "רישיון MIT",
+      "releaseNotes": "הערות פרסום"
     },
     "calculation": {
       "group": "חישוב",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "בחר את הנושא, השפה והתנהגות האפליקציה העיקרית",
+      "group": "העדפות"
     }
   },
   "modes": {

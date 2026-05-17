@@ -333,12 +333,14 @@
       "dark": "Garaňky",
       "blue": "Gök",
       "green": "Greenaşyl",
-      "system": "Ulgam"
+      "system": "Ulgam",
+      "searchThemes": "Temalary gözläň"
     },
     "language": {
       "group": "Dil",
       "title": "Dil",
-      "description": "Halaýan diliňizi saýlaň"
+      "description": "Halaýan diliňizi saýlaň",
+      "search": "Dil gözläň"
     },
     "about": {
       "group": "hakda"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Taslamanyň ammary",
       "readme": "Oka",
-      "license": "MIT ygtyýarnamasy"
+      "license": "MIT ygtyýarnamasy",
+      "releaseNotes": "Bellikleri goýberiň"
     },
     "calculation": {
       "group": "Hasaplamak",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Temany, dili we esasy programma özüni alyp barşyny saýlaň",
+      "group": "Saýlamalar"
     }
   },
   "modes": {

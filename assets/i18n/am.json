@@ -333,12 +333,14 @@
       "dark": "ጨለማ",
       "blue": "ሰማያዊ",
       "green": "አረንጓዴ",
-      "system": "ስርዓት"
+      "system": "ስርዓት",
+      "searchThemes": "ገጽታዎችን ይፈልጉ"
     },
     "language": {
       "group": "ቋንቋ",
       "title": "ቋንቋ",
-      "description": "የመረጡትን ቋንቋ ይምረጡ"
+      "description": "የመረጡትን ቋንቋ ይምረጡ",
+      "search": "ቋንቋዎችን ይፈልጉ"
     },
     "about": {
       "group": "ስለ"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "የፕሮጀክት ማከማቻ",
       "readme": "አንብብ",
-      "license": "MIT ፈቃድ"
+      "license": "MIT ፈቃድ",
+      "releaseNotes": "የመልቀቂያ ማስታወሻዎች"
     },
     "calculation": {
       "group": "ስሌት",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "የመተግበሪያውን ገጽታ፣ ቋንቋ እና ቁልፍ ባህሪ ይምረጡ",
+      "group": "ምርጫዎች"
     }
   },
   "modes": {

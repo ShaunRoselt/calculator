@@ -333,12 +333,14 @@
       "dark": "ងងឹត",
       "blue": "ខៀវ",
       "green": "បៃតង",
-      "system": "ប្រព័ន្ធ"
+      "system": "ប្រព័ន្ធ",
+      "searchThemes": "ស្វែងរកប្រធានបទ"
     },
     "language": {
       "group": "ភាសា",
       "title": "ភាសា",
-      "description": "ជ្រើសរើសភាសាដែលអ្នកពេញចិត្ត"
+      "description": "ជ្រើសរើសភាសាដែលអ្នកពេញចិត្ត",
+      "search": "ស្វែងរកភាសា"
     },
     "about": {
       "group": "អំពី"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "ឃ្លាំងគម្រោង",
       "readme": "README",
-      "license": "អាជ្ញាប័ណ្ណ MIT"
+      "license": "អាជ្ញាប័ណ្ណ MIT",
+      "releaseNotes": "កំណត់ចំណាំចេញផ្សាយ"
     },
     "calculation": {
       "group": "ការគណនា",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "ជ្រើសរើសរូបរាង ភាសា និងឥរិយាបថកម្មវិធីសំខាន់ៗ",
+      "group": "ចំណូលចិត្ត"
     }
   },
   "modes": {

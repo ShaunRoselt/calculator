@@ -333,12 +333,14 @@
       "dark": "Tutayaq",
       "blue": "Azul nisqa",
       "green": "Q'umir",
-      "system": "Sistema nisqa"
+      "system": "Sistema nisqa",
+      "searchThemes": "Maskay temakuna"
     },
     "language": {
       "group": "Simi",
       "title": "Simi",
-      "description": "Akllay munasqayki simita"
+      "description": "Akllay munasqayki simita",
+      "search": "Simikunata maskay"
     },
     "about": {
       "group": "Imamanta"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Proyecto waqaychasqa",
       "readme": "ÑAWINCHAY",
-      "license": "MIT nisqa licencia"
+      "license": "MIT nisqa licencia",
+      "releaseNotes": "Notas de lanzamiento"
     },
     "calculation": {
       "group": "Yupay",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Akllay tema, simi chaymanta llave app ruwayninta",
+      "group": "Munasqakuna"
     }
   },
   "modes": {

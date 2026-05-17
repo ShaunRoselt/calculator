@@ -333,12 +333,14 @@
       "dark": "Σκοτεινό",
       "blue": "Μπλε",
       "green": "Πράσινο",
-      "system": "Σύστημα"
+      "system": "Σύστημα",
+      "searchThemes": "Αναζήτηση θεμάτων"
     },
     "language": {
       "group": "Γλώσσα",
       "title": "Γλώσσα",
-      "description": "Επιλέξτε τη γλώσσα που προτιμάτε"
+      "description": "Επιλέξτε τη γλώσσα που προτιμάτε",
+      "search": "Αναζήτηση γλωσσών"
     },
     "about": {
       "group": "Περίπου"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Αποθήκη έργου",
       "readme": "ΔΙΑΒΑΣΤΕ",
-      "license": "Άδεια MIT"
+      "license": "Άδεια MIT",
+      "releaseNotes": "Σημειώσεις Έκδοσης"
     },
     "calculation": {
       "group": "Υπολογισμός",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Επιλέξτε το θέμα, τη γλώσσα και τη βασική συμπεριφορά της εφαρμογής",
+      "group": "Προτιμήσεις"
     }
   },
   "modes": {

@@ -333,12 +333,14 @@
       "dark": "Lëmësu",
       "blue": "Baxa",
       "green": "Nëtëx",
-      "system": "Sistem"
+      "system": "Sistem",
+      "searchThemes": "Seetal tema"
     },
     "language": {
       "group": "làkk wi",
       "title": "làkk wi",
-      "description": "Tànn làkk wi la gënal"
+      "description": "Tànn làkk wi la gënal",
+      "search": "Seetlu làkk yi"
     },
     "about": {
       "group": "Ci"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Depo projet",
       "readme": "JANGAL MA",
-      "license": "Liseñsu MIT"
+      "license": "Liseñsu MIT",
+      "releaseNotes": "Notu génne"
     },
     "calculation": {
       "group": "Xayma",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Tannal theme bi, làkk wi, ak doxalinu aplikaasioŋ bi",
+      "group": "Taamu"
     }
   },
   "modes": {

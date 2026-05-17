@@ -333,12 +333,14 @@
       "dark": "ጸልማት",
       "blue": "ሰማያዊ",
       "green": "ቀጠልያ",
-      "system": "ስርዓት"
+      "system": "ስርዓት",
+      "searchThemes": "ቴማታት ድለዩ።"
     },
     "language": {
       "group": "ብዛዕባ...",
       "title": "ቋንቋ",
-      "description": "ዝመረጽካዮ ቋንቋ ምረጽ"
+      "description": "ዝመረጽካዮ ቋንቋ ምረጽ",
+      "search": "ቋንቋታት ድለዩ።"
     },
     "about": {
       "group": "ብዛዕባ..."
@@ -352,7 +354,8 @@
     "links": {
       "repository": "መኽዘን ፕሮጀክት",
       "readme": "README ዝብል ቃል ንባብ",
-      "license": "ናይ ሚት ፍቓድ"
+      "license": "ናይ ሚት ፍቓድ",
+      "releaseNotes": "መተሓሳሰቢ ምውጻእ"
     },
     "calculation": {
       "group": "ስሌት",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "ቴማ፡ ቋንቋን ቁልፊ ባህሪ ኣፕን ምረጽ",
+      "group": "ምርጫታት"
     }
   },
   "modes": {

@@ -333,12 +333,14 @@
       "dark": "Մութ",
       "blue": "Կապույտ",
       "green": "Կանաչ",
-      "system": "Համակարգ"
+      "system": "Համակարգ",
+      "searchThemes": "Որոնել թեմաներ"
     },
     "language": {
       "group": "Լեզու",
       "title": "Լեզու",
-      "description": "Ընտրեք ձեր նախընտրած լեզուն"
+      "description": "Ընտրեք ձեր նախընտրած լեզուն",
+      "search": "Լեզուների որոնում"
     },
     "about": {
       "group": "Մոտ"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Նախագծի պահոց",
       "readme": "ԿԱՐԴԱԼ",
-      "license": "MIT լիցենզիա"
+      "license": "MIT լիցենզիա",
+      "releaseNotes": "Թողարկման նշումներ"
     },
     "calculation": {
       "group": "Հաշվարկ",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Ընտրեք թեման, լեզուն և հիմնական հավելվածի վարքը",
+      "group": "Նախապատվություններ"
     }
   },
   "modes": {

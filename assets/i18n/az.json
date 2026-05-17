@@ -333,12 +333,14 @@
       "dark": "Qaranlıq",
       "blue": "Mavi",
       "green": "Yaşıl",
-      "system": "Sistem"
+      "system": "Sistem",
+      "searchThemes": "Mövzuları axtarın"
     },
     "language": {
       "group": "Dil",
       "title": "Dil",
-      "description": "Tercih etdiyiniz dili seçin"
+      "description": "Tercih etdiyiniz dili seçin",
+      "search": "Dilləri axtarın"
     },
     "about": {
       "group": "Haqqında"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Layihə deposu",
       "readme": "OXUYU",
-      "license": "MIT lisenziyası"
+      "license": "MIT lisenziyası",
+      "releaseNotes": "Buraxılış qeydləri"
     },
     "calculation": {
       "group": "Hesablama",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Mövzunu, dili və əsas tətbiq davranışını seçin",
+      "group": "Üstünlüklər"
     }
   },
   "modes": {

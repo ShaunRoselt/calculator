@@ -333,12 +333,14 @@
       "dark": "ਹਨੇਰਾ",
       "blue": "ਨੀਲਾ",
       "green": "ਹਰਾ",
-      "system": "ਸਿਸਟਮ"
+      "system": "ਸਿਸਟਮ",
+      "searchThemes": "ਥੀਮ ਖੋਜੋ"
     },
     "language": {
       "group": "ਭਾਸ਼ਾ",
       "title": "ਭਾਸ਼ਾ",
-      "description": "ਆਪਣੀ ਤਰਜੀਹੀ ਭਾਸ਼ਾ ਚੁਣੋ"
+      "description": "ਆਪਣੀ ਤਰਜੀਹੀ ਭਾਸ਼ਾ ਚੁਣੋ",
+      "search": "ਭਾਸ਼ਾਵਾਂ ਦੀ ਖੋਜ ਕਰੋ"
     },
     "about": {
       "group": "ਇਸ ਬਾਰੇ"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "ਪ੍ਰੋਜੈਕਟ ਭੰਡਾਰ",
       "readme": "ਪੜ੍ਹੋ",
-      "license": "MIT ਲਾਇਸੰਸ"
+      "license": "MIT ਲਾਇਸੰਸ",
+      "releaseNotes": "ਰੀਲੀਜ਼ ਨੋਟਸ"
     },
     "calculation": {
       "group": "ਗਣਨਾ",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "ਥੀਮ, ਭਾਸ਼ਾ ਅਤੇ ਮੁੱਖ ਐਪ ਵਿਹਾਰ ਚੁਣੋ",
+      "group": "ਤਰਜੀਹਾਂ"
     }
   },
   "modes": {

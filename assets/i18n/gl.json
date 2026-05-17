@@ -333,12 +333,14 @@
       "dark": "Escuro",
       "blue": "Azul",
       "green": "Verde",
-      "system": "Sistema"
+      "system": "Sistema",
+      "searchThemes": "Busca temas"
     },
     "language": {
       "group": "Idioma",
       "title": "Idioma",
-      "description": "Escolle o teu idioma preferido"
+      "description": "Escolle o teu idioma preferido",
+      "search": "Busca idiomas"
     },
     "about": {
       "group": "Acerca de"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Repositorio do proxecto",
       "readme": "LEAME",
-      "license": "Licenza MIT"
+      "license": "Licenza MIT",
+      "releaseNotes": "Notas de lanzamento"
     },
     "calculation": {
       "group": "Cálculo",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Escolle o tema, o idioma e o comportamento clave da aplicación",
+      "group": "Preferencias"
     }
   },
   "modes": {

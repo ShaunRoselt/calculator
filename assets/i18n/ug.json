@@ -333,12 +333,14 @@
       "dark": "قاراڭغۇ",
       "blue": "كۆك",
       "green": "يېشىل",
-      "system": "سىستېما"
+      "system": "سىستېما",
+      "searchThemes": "باشتېمىلارنى ئىزدە"
     },
     "language": {
       "group": "تىل",
       "title": "تىل",
-      "description": "ياقتۇرىدىغان تىلىڭىزنى تاللاڭ"
+      "description": "ياقتۇرىدىغان تىلىڭىزنى تاللاڭ",
+      "search": "تىل ئىزدەش"
     },
     "about": {
       "group": "ھەققىدە"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "تۈر ئامبىرى",
       "readme": "README",
-      "license": "MIT ئىجازەتنامىسى"
+      "license": "MIT ئىجازەتنامىسى",
+      "releaseNotes": "ئىزاھات"
     },
     "calculation": {
       "group": "ھېسابلاش",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "تېما ، تىل ۋە ئاچقۇچلۇق ئەپ ھەرىكىتىنى تاللاڭ",
+      "group": "مايىللىق"
     }
   },
   "modes": {

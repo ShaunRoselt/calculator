@@ -333,12 +333,14 @@
       "dark": "Koyu",
       "blue": "Mavi",
       "green": "Yeşil",
-      "system": "Sistem"
+      "system": "Sistem",
+      "searchThemes": "Temaları arayın"
     },
     "language": {
       "group": "Dil",
       "title": "Dil",
-      "description": "Tercih ettiğiniz dili seçin"
+      "description": "Tercih ettiğiniz dili seçin",
+      "search": "Dilleri ara"
     },
     "about": {
       "group": "Hakkında"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Proje deposu",
       "readme": "BENİOKU",
-      "license": "MIT lisansı"
+      "license": "MIT lisansı",
+      "releaseNotes": "Sürüm Notları"
     },
     "calculation": {
       "group": "Hesaplama",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Temayı, dili ve temel uygulama davranışını seçin",
+      "group": "Tercihler"
     }
   },
   "modes": {

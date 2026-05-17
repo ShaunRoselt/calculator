@@ -333,12 +333,14 @@
       "dark": "Donker",
       "system": "Stelsel",
       "blue": "Blou",
-      "green": "Groen"
+      "green": "Groen",
+      "searchThemes": "Soek temas"
     },
     "language": {
       "group": "Taal",
       "title": "Taal",
-      "description": "Kies jou voorkeur taal"
+      "description": "Kies jou voorkeur taal",
+      "search": "Soek tale"
     },
     "about": {
       "group": "Aangaande"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Projekbewaarplek",
       "readme": "README",
-      "license": "MIT-lisensie"
+      "license": "MIT-lisensie",
+      "releaseNotes": "Vrystellingsaantekeninge"
     },
     "calculation": {
       "group": "Berekening",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Kies die tema, taal en sleutelprogramgedrag",
+      "group": "Voorkeure"
     }
   },
   "modes": {

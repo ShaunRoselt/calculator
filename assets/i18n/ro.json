@@ -333,12 +333,14 @@
       "dark": "Întuneric",
       "blue": "Albastru",
       "green": "Verde",
-      "system": "Sistem"
+      "system": "Sistem",
+      "searchThemes": "Căutați teme"
     },
     "language": {
       "group": "Limba",
       "title": "Limba",
-      "description": "Alegeți limba preferată"
+      "description": "Alegeți limba preferată",
+      "search": "Căutați limbi"
     },
     "about": {
       "group": "Despre"
@@ -352,7 +354,8 @@
     "links": {
       "repository": "Arhivă de proiect",
       "readme": "CITIȚI-MĂ",
-      "license": "Licență MIT"
+      "license": "Licență MIT",
+      "releaseNotes": "Note de lansare"
     },
     "calculation": {
       "group": "Calcul",
@@ -387,6 +390,10 @@
       "pasteDescription": "Paste a value into the current calculator mode",
       "fullscreenTitle": "Toggle fullscreen",
       "fullscreenDescription": "Enter or leave fullscreen mode"
+    },
+    "preferences": {
+      "description": "Alegeți tema, limba și comportamentul cheie al aplicației",
+      "group": "Preferințe"
     }
   },
   "modes": {

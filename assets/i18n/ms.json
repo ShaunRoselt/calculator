@@ -36,7 +36,7 @@
   },
   "updatesPage": {
     "hero": {
-      "eyebrow": "Changelog",
+      "eyebrow": "RELEASE NOTES",
       "title": "Setiap keluaran, dari binaan pertama hingga hari ini.",
       "intro": "Kalkulator Roselt bertukar daripada asas kalkulator web kendiri kepada apl berbilang bahasa yang dibungkus sepenuhnya, berbilang platform, dalam satu siri keluaran terfokus. Halaman ini menjejaki apa yang berubah dalam setiap versi daripada 1.0.0 hingga 12.0.0.",
       "versionHistory": "Sejarah versi"

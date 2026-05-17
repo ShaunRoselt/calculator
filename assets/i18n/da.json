@@ -36,7 +36,7 @@
   },
   "updatesPage": {
     "hero": {
-      "eyebrow": "Ændringslog",
+      "eyebrow": "RELEASE NOTES",
       "title": "Hver udgivelse, fra den første build til i dag.",
       "intro": "Roselt Calculator gik fra et selvstændigt webberegnerfundament til en fuldt pakket multi-platform, multi-sprog app i en række fokuserede udgivelser. Denne side sporer, hvad der er ændret i hver version fra 1.0.0 til 12.0.0.",
       "versionHistory": "Versionshistorik"

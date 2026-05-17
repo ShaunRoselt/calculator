@@ -36,7 +36,7 @@
   },
   "updatesPage": {
     "hero": {
-      "eyebrow": "Değişiklik günlüğü",
+      "eyebrow": "RELEASE NOTES",
       "title": "İlk derlemeden bugüne kadar her sürüm.",
       "intro": "Roselt Calculator, bağımsız bir web hesap makinesi temelinden, bir dizi odaklanmış sürümle tamamen paketlenmiş, çok platformlu, çok dilli bir uygulamaya dönüştü. Bu sayfa, 1.0.0'dan 12.0.0'a kadar her sürümde nelerin değiştiğini izler.",
       "versionHistory": "Sürüm geçmişi"

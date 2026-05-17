@@ -36,7 +36,7 @@
   },
   "updatesPage": {
     "hero": {
-      "eyebrow": "log newid",
+      "eyebrow": "RELEASE NOTES",
       "title": "Pob datganiad, o'r adeilad cyntaf hyd heddiw.",
       "intro": "Aeth Roselt Calculator o sylfaen cyfrifiannell gwe annibynnol i ap aml-lwyfan, aml-iaith wedi'i becynnu'n llawn mewn cyfres o ddatganiadau â ffocws. Mae'r dudalen hon yn olrhain yr hyn a newidiodd ym mhob fersiwn o 1.0.0 i 12.0.0.",
       "versionHistory": "Hanes fersiynau"

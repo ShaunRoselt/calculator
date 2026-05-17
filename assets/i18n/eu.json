@@ -36,7 +36,7 @@
   },
   "updatesPage": {
     "hero": {
-      "eyebrow": "Aldaketen erregistroa",
+      "eyebrow": "RELEASE NOTES",
       "title": "Argitaratu bakoitza, lehen eraikuntzatik gaur egunera arte.",
       "intro": "Roselt Calculator web-kalkulagailuaren oinarri autonomotik guztiz paketatuta, plataforma anitzeko eta hizkuntza anitzeko aplikazio izatera pasa zen hainbat argitalpenetan. Orrialde honek 1.0.0tik 12.0.0ra bitarteko bertsio bakoitzean aldatutakoaren jarraipena egiten du.",
       "versionHistory": "Bertsio-historia"

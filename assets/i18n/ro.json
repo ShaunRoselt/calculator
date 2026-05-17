@@ -36,7 +36,7 @@
   },
   "updatesPage": {
     "hero": {
-      "eyebrow": "Jurnalul modificărilor",
+      "eyebrow": "RELEASE NOTES",
       "title": "Fiecare lansare, de la prima versiune până astăzi.",
       "intro": "Roselt Calculator a trecut de la o bază de calcul web autonomă la o aplicație completă, multi-platformă, în mai multe limbi într-o serie de versiuni focalizate. Această pagină urmărește ceea ce s-a schimbat în fiecare versiune de la 1.0.0 la 12.0.0.",
       "versionHistory": "Istoricul versiunilor"

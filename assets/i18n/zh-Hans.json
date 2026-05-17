@@ -36,7 +36,7 @@
   },
   "updatesPage": {
     "hero": {
-      "eyebrow": "变更日志",
+      "eyebrow": "RELEASE NOTES",
       "title": "从第一个版本到今天的每个版本。",
       "intro": "Roselt Calculator 通过一系列重点发布，从独立的网络计算器基础发展成为完全打包的、多平台、多语言的应用程序。此页面跟踪从 1.0.0 到 12.0.0 的每个版本中的更改。",
       "versionHistory": "版本历史"

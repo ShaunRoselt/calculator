@@ -36,7 +36,7 @@
   },
   "updatesPage": {
     "hero": {
-      "eyebrow": "Dziennik zmian",
+      "eyebrow": "RELEASE NOTES",
       "title": "Każda wersja, od pierwszej wersji do chwili obecnej.",
       "intro": "Kalkulator Roselt przeszedł od samodzielnego kalkulatora internetowego do w pełni spakowanej, wieloplatformowej i wielojęzycznej aplikacji w serii ukierunkowanych wydań. Ta strona śledzi zmiany w każdej wersji od 1.0.0 do 12.0.0.",
       "versionHistory": "Historia wersji"

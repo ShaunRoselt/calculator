@@ -36,7 +36,7 @@
   },
   "updatesPage": {
     "hero": {
-      "eyebrow": "Registro de alterações",
+      "eyebrow": "RELEASE NOTES",
       "title": "Cada versão, desde a primeira versão até hoje.",
       "intro": "Roselt Calculator passou de uma base de calculadora web independente para um aplicativo totalmente empacotado, multiplataforma e multilíngue em uma série de lançamentos específicos. Esta página acompanha o que mudou em cada versão de 1.0.0 a 12.0.0.",
       "versionHistory": "Histórico de versões"

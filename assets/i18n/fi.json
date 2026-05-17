@@ -36,7 +36,7 @@
   },
   "updatesPage": {
     "hero": {
-      "eyebrow": "Muutosloki",
+      "eyebrow": "RELEASE NOTES",
       "title": "Jokainen julkaisu ensimmäisestä koontiversiosta tähän päivään.",
       "intro": "Roselt Calculator muuttui erillisestä verkkolaskimen perustasta täysin pakatuksi, usean alustan ja monikielisen sovelluksen sarjassa kohdistettuja julkaisuja. Tämä sivu seuraa, mitä muuttui kussakin versiossa 1.0.0 - 12.0.0.",
       "versionHistory": "Versiohistoria"

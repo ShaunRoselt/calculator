@@ -1,44 +1,66 @@
 <svg width="499" height="667" viewBox="0 0 499 667" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Roselt Calculator South Africa theme logo">
   <defs>
-    <linearGradient id="shellGradient" x1="28" y1="18" x2="471" y2="649" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#132c2b"/>
-      <stop offset="1" stop-color="#3d7875"/>
+    <linearGradient id="sa-shell" x1="28" y1="18" x2="471" y2="649" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#08120f"/>
+      <stop offset="0.55" stop-color="#133127"/>
+      <stop offset="1" stop-color="#245547"/>
     </linearGradient>
-    <linearGradient id="surfaceGradient" x1="55" y1="54" x2="444" y2="179" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#173836"/>
-      <stop offset="1" stop-color="#1d4541"/>
+    <linearGradient id="sa-display" x1="55" y1="54" x2="444" y2="179" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#10221b"/>
+      <stop offset="1" stop-color="#0b1814"/>
     </linearGradient>
-    <linearGradient id="glossGradient" x1="86" y1="24" x2="310" y2="236" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.08"/>
+    <linearGradient id="sa-gloss" x1="86" y1="24" x2="310" y2="236" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.1"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
-    <filter id="softShadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0a1213" flood-opacity="0.34"/>
+    <linearGradient id="sa-function" x1="55" y1="239" x2="164" y2="349" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d8b58"/>
+      <stop offset="1" stop-color="#00663e"/>
+    </linearGradient>
+    <linearGradient id="sa-digit" x1="55" y1="366" x2="304" y2="603" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffef8"/>
+      <stop offset="1" stop-color="#efe6d0"/>
+    </linearGradient>
+    <linearGradient id="sa-operator" x1="55" y1="493" x2="164" y2="603" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#184a90"/>
+      <stop offset="1" stop-color="#0a2761"/>
+    </linearGradient>
+    <linearGradient id="sa-equals" x1="335" y1="366" x2="444" y2="603" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e03c31"/>
+      <stop offset="1" stop-color="#ffb81c"/>
+    </linearGradient>
+    <filter id="sa-shadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#07110d" flood-opacity="0.34"/>
     </filter>
-    <filter id="smallShadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0a1213" flood-opacity="0.9"/>
+    <filter id="sa-button-shadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#07110d" flood-opacity="0.82"/>
     </filter>
   </defs>
-  <rect x="1.5" y="1.5" width="496" height="664" rx="24.5" fill="url(#shellGradient)" stroke="#3d7875" stroke-width="3"/>
-  <path d="M48 28C142 12 274 10 395 27C429 32 454 52 463 85L480 150C420 81 268 45 121 57C91 60 65 48 48 28Z" fill="url(#glossGradient)" opacity="0.9"/>
-  <g filter="url(#softShadow)">
-    <rect x="55" y="54" width="389" height="125" rx="14" fill="url(#surfaceGradient)"/>
+  <rect x="1.5" y="1.5" width="496" height="664" rx="24.5" fill="url(#sa-shell)" stroke="#2f7162" stroke-width="3"/>
+  <path d="M48 28C142 12 274 10 395 27C429 32 454 52 463 85L480 150C420 81 268 45 121 57C91 60 65 48 48 28Z" fill="url(#sa-gloss)" opacity="0.9"/>
+  <g filter="url(#sa-shadow)">
+    <rect x="55" y="54" width="389" height="125" rx="14" fill="url(#sa-display)"/>
   </g>
-  <path d="M55 366H444V416H237L55 366Z" fill="#d44945"/>
-  <path d="M55 416H216L444 493V543H55V416Z" fill="#245988"/>
-  <path d="M55 357L234 416L55 552V610L285 452L444 505V449L309 404L444 357V302L283 381L55 302V357Z" fill="#f0bc3b"/>
-  <path d="M55 379L201 416L55 530V571L250 432L444 488V464L286 416L444 344V321L250 401L55 291V379Z" fill="#101012"/>
-  <path d="M55 402L166 416L55 503V540L236 428L444 482V470L272 416L444 336V324L236 405L55 294V402Z" fill="#1d7a55"/>
+  <path d="M55 94H444V108H55Z" fill="#f8f6ef" opacity="0.16"/>
+  <path d="M55 108H444V132H55Z" fill="#ffb81c" opacity="0.18"/>
+  <path d="M55 132H444V164H55Z" fill="#007749" opacity="0.22"/>
+  <path d="M55 54H444V179H55V145L238 118L55 94Z" fill="#ffffff" opacity="0.06"/>
   <g opacity="0.88">
     <rect x="88" y="95" width="214" height="12" rx="6" fill="#f4fbf6"/>
-    <rect x="88" y="122" width="152" height="12" rx="6" fill="#f4fbf6" opacity="0.58"/>
+    <rect x="88" y="122" width="152" height="12" rx="6" fill="#f4fbf6" opacity="0.56"/>
   </g>
-  <g filter="url(#smallShadow)"><rect x="55" y="239" width="109" height="110" rx="17" fill="url(#surfaceGradient)"/></g>
-  <g filter="url(#smallShadow)"><rect x="195" y="239" width="109" height="110" rx="17" fill="url(#surfaceGradient)"/></g>
-  <g filter="url(#smallShadow)"><rect x="335" y="239" width="109" height="110" rx="17" fill="url(#surfaceGradient)"/></g>
-  <g filter="url(#smallShadow)"><rect x="55" y="366" width="109" height="110" rx="17" fill="#d44945" opacity="0.12"/></g>
-  <g filter="url(#smallShadow)"><rect x="195" y="366" width="109" height="110" rx="17" fill="#1d7a55" opacity="0.12"/></g>
-  <g filter="url(#smallShadow)"><rect x="55" y="493" width="109" height="110" rx="17" fill="#245988" opacity="0.12"/></g>
-  <g filter="url(#smallShadow)"><rect x="195" y="493" width="109" height="110" rx="17" fill="#f0bc3b" opacity="0.12"/></g>
-  <g filter="url(#smallShadow)"><rect x="335" y="366" width="109" height="237" rx="17" fill="#1d7a55"/></g>
+  <path d="M55 361H444V418H232L55 361Z" fill="#db4339"/>
+  <path d="M55 418H204L444 504V545H55V418Z" fill="#184a90"/>
+  <path d="M55 352L230 418L55 554V608L286 455L444 509V451L307 406L444 352V299L283 382L55 299V352Z" fill="#ffb81c"/>
+  <path d="M55 373L197 418L55 528V569L251 432L444 488V466L286 418L444 345V321L250 400L55 291V373Z" fill="#0e1111"/>
+  <path d="M55 395L165 418L55 500V540L236 428L444 482V471L272 418L444 337V326L236 405L55 294V395Z" fill="#007749"/>
+  <path d="M55 385L183 418L55 516V545L243 430L444 485V474L278 418L444 340V329L244 406L55 297V385Z" fill="#ffffff" opacity="0.92"/>
+  <g filter="url(#sa-button-shadow)"><rect x="55" y="239" width="109" height="110" rx="17" fill="url(#sa-function)"/></g>
+  <g filter="url(#sa-button-shadow)"><rect x="195" y="239" width="109" height="110" rx="17" fill="url(#sa-function)"/></g>
+  <g filter="url(#sa-button-shadow)"><rect x="335" y="239" width="109" height="110" rx="17" fill="url(#sa-function)"/></g>
+  <g filter="url(#sa-button-shadow)"><rect x="55" y="366" width="109" height="110" rx="17" fill="url(#sa-digit)"/></g>
+  <g filter="url(#sa-button-shadow)"><rect x="195" y="366" width="109" height="110" rx="17" fill="url(#sa-digit)"/></g>
+  <g filter="url(#sa-button-shadow)"><rect x="55" y="493" width="109" height="110" rx="17" fill="url(#sa-operator)"/></g>
+  <g filter="url(#sa-button-shadow)"><rect x="195" y="493" width="109" height="110" rx="17" fill="url(#sa-digit)"/></g>
+  <g filter="url(#sa-button-shadow)"><rect x="335" y="366" width="109" height="237" rx="17" fill="url(#sa-equals)"/></g>
 </svg>

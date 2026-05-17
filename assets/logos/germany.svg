@@ -1,43 +1,66 @@
 <svg width="499" height="667" viewBox="0 0 499 667" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Roselt Calculator Germany theme logo">
   <defs>
-    <linearGradient id="shellGradient" x1="28" y1="18" x2="471" y2="649" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#1a1a1c"/>
-      <stop offset="1" stop-color="#5f3d42"/>
+    <linearGradient id="de-shell" x1="28" y1="18" x2="471" y2="649" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#09090a"/>
+      <stop offset="0.56" stop-color="#241417"/>
+      <stop offset="1" stop-color="#6d311d"/>
     </linearGradient>
-    <linearGradient id="surfaceGradient" x1="55" y1="54" x2="444" y2="179" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#21171a"/>
-      <stop offset="1" stop-color="#2b1f22"/>
+    <linearGradient id="de-display" x1="55" y1="54" x2="444" y2="179" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#171012"/>
+      <stop offset="1" stop-color="#0d090a"/>
     </linearGradient>
-    <linearGradient id="glossGradient" x1="86" y1="24" x2="310" y2="236" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.08"/>
+    <linearGradient id="de-gloss" x1="86" y1="24" x2="310" y2="236" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.1"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="accentGradient" x1="335" y1="366" x2="444" y2="603" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#c6463c"/>
-      <stop offset="1" stop-color="#f0c34d"/>
+    <linearGradient id="de-black" x1="55" y1="239" x2="164" y2="349" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1f2024"/>
+      <stop offset="1" stop-color="#060607"/>
     </linearGradient>
-    <filter id="softShadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0a0a0c" flood-opacity="0.34"/>
+    <linearGradient id="de-red" x1="55" y1="366" x2="304" y2="476" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ef2d2d"/>
+      <stop offset="1" stop-color="#aa0707"/>
+    </linearGradient>
+    <linearGradient id="de-gold" x1="55" y1="493" x2="304" y2="603" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff8d8"/>
+      <stop offset="1" stop-color="#ffce00"/>
+    </linearGradient>
+    <linearGradient id="de-equals" x1="335" y1="366" x2="444" y2="603" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dd0000"/>
+      <stop offset="1" stop-color="#ffce00"/>
+    </linearGradient>
+    <filter id="de-shadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#050506" flood-opacity="0.36"/>
     </filter>
-    <filter id="smallShadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0a0a0c" flood-opacity="0.9"/>
+    <filter id="de-button-shadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#050506" flood-opacity="0.86"/>
     </filter>
   </defs>
-  <rect x="1.5" y="1.5" width="496" height="664" rx="24.5" fill="url(#shellGradient)" stroke="#5f3d42" stroke-width="3"/>
-  <path d="M48 28C142 12 274 10 395 27C429 32 454 52 463 85L480 150C420 81 268 45 121 57C91 60 65 48 48 28Z" fill="url(#glossGradient)" opacity="0.9"/>
-  <g filter="url(#softShadow)">
-    <rect x="55" y="54" width="389" height="125" rx="14" fill="url(#surfaceGradient)"/>
+  <rect x="1.5" y="1.5" width="496" height="664" rx="24.5" fill="url(#de-shell)" stroke="#7e4a1f" stroke-width="3"/>
+  <path d="M48 28C142 12 274 10 395 27C429 32 454 52 463 85L480 150C420 81 268 45 121 57C91 60 65 48 48 28Z" fill="url(#de-gloss)" opacity="0.9"/>
+  <g filter="url(#de-shadow)">
+    <rect x="55" y="54" width="389" height="125" rx="14" fill="url(#de-display)"/>
   </g>
-  <g opacity="0.88">
-    <rect x="88" y="95" width="214" height="12" rx="6" fill="#fff7ea"/>
-    <rect x="88" y="122" width="152" height="12" rx="6" fill="#fff7ea" opacity="0.58"/>
+  <path d="M55 54H444V92H55Z" fill="#111113"/>
+  <path d="M55 92H444V129H55Z" fill="#dd0000" opacity="0.82"/>
+  <path d="M55 129H444V179H55Z" fill="#ffce00" opacity="0.8"/>
+  <path d="M55 54H444V179H55V145L239 118L55 92Z" fill="#ffffff" opacity="0.06"/>
+  <g opacity="0.9">
+    <rect x="88" y="95" width="214" height="12" rx="6" fill="#fff8ea"/>
+    <rect x="88" y="122" width="152" height="12" rx="6" fill="#fff8ea" opacity="0.56"/>
   </g>
-  <g filter="url(#smallShadow)"><rect x="55" y="239" width="109" height="110" rx="17" fill="#101012"/></g>
-  <g filter="url(#smallShadow)"><rect x="195" y="239" width="109" height="110" rx="17" fill="#101012"/></g>
-  <g filter="url(#smallShadow)"><rect x="335" y="239" width="109" height="110" rx="17" fill="#101012"/></g>
-  <g filter="url(#smallShadow)"><rect x="55" y="366" width="109" height="110" rx="17" fill="#c6463c"/></g>
-  <g filter="url(#smallShadow)"><rect x="195" y="366" width="109" height="110" rx="17" fill="#c6463c"/></g>
-  <g filter="url(#smallShadow)"><rect x="55" y="493" width="109" height="110" rx="17" fill="#f0c34d"/></g>
-  <g filter="url(#smallShadow)"><rect x="195" y="493" width="109" height="110" rx="17" fill="#f0c34d"/></g>
-  <g filter="url(#smallShadow)"><rect x="335" y="366" width="109" height="237" rx="17" fill="url(#accentGradient)"/></g>
+  <path d="M55 318H444V375H55Z" fill="#09090a" opacity="0.76"/>
+  <path d="M55 401H444V454H55Z" fill="#dd0000" opacity="0.7"/>
+  <path d="M55 484H444V543H55Z" fill="#ffce00" opacity="0.68"/>
+  <path d="M55 335H444V351H55Z" fill="#ffffff" opacity="0.05"/>
+  <path d="M55 420H444V433H55Z" fill="#ffffff" opacity="0.06"/>
+  <path d="M55 501H444V514H55Z" fill="#ffffff" opacity="0.08"/>
+  <g filter="url(#de-button-shadow)"><rect x="55" y="239" width="109" height="110" rx="17" fill="url(#de-black)"/></g>
+  <g filter="url(#de-button-shadow)"><rect x="195" y="239" width="109" height="110" rx="17" fill="url(#de-black)"/></g>
+  <g filter="url(#de-button-shadow)"><rect x="335" y="239" width="109" height="110" rx="17" fill="url(#de-black)"/></g>
+  <g filter="url(#de-button-shadow)"><rect x="55" y="366" width="109" height="110" rx="17" fill="url(#de-red)"/></g>
+  <g filter="url(#de-button-shadow)"><rect x="195" y="366" width="109" height="110" rx="17" fill="url(#de-red)"/></g>
+  <g filter="url(#de-button-shadow)"><rect x="55" y="493" width="109" height="110" rx="17" fill="url(#de-gold)"/></g>
+  <g filter="url(#de-button-shadow)"><rect x="195" y="493" width="109" height="110" rx="17" fill="url(#de-gold)"/></g>
+  <g filter="url(#de-button-shadow)"><rect x="335" y="366" width="109" height="237" rx="17" fill="url(#de-equals)"/></g>
 </svg>

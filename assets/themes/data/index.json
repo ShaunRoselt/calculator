@@ -286,13 +286,13 @@
       "file": "germany.css",
       "label": "Germany",
       "extends": "dark",
-      "metaColor": "#1a1a1c",
+      "metaColor": "#171214",
       "graphPalette": {
-        "background": "#161618",
-        "gridMajor": "rgba(255, 255, 255, 0.14)",
+        "background": "#111010",
+        "gridMajor": "rgba(255, 206, 0, 0.16)",
         "gridMinor": "rgba(255, 255, 255, 0.07)",
-        "axis": "#f3e4b0",
-        "label": "#fff8de"
+        "axis": "#fff0bf",
+        "label": "#ffe286"
       }
     },
     {

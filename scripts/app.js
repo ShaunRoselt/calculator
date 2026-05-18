@@ -3,6 +3,7 @@ import {
   APP_SHORTCUT_DEFINITIONS,
   CONVERTER_MODE_TO_CATEGORY,
   CURRENCY_CODE_TO_NAME,
+  CRYPTO_COIN_ID_TO_NAME,
   DEFAULT_CURRENCY_RATES,
   OFFLINE_CURRENCY_UPDATED_AT,
   DEFAULT_MODE,
@@ -1349,6 +1350,20 @@ function handleClick(event) {
     return;
   }
 
+  if (target.dataset.currencyCryptoToggle) {
+    state.converter.includeCryptocurrencies = !state.converter.includeCryptocurrencies;
+    state.converter.openConverterMenu = null;
+    clearConverterMenuSearch();
+    resetConverterUnits(true);
+    syncConverterValues(state.converter.lastEdited || 'from');
+    commitConverterHistory();
+    render();
+    if (state.converter.includeCryptocurrencies) {
+      void updateCurrencyRates();
+    }
+    return;
+  }
+
   if (target.dataset.converterAction) {
     handleConverterKeypad(target.dataset.converterAction, target.dataset.value || '');
     commitConverterHistory();
@@ -1619,25 +1634,41 @@ async function updateCurrencyRates() {
   state.converter.currencyUpdateMessageKey = 'converter.currency.status.fetching';
   render();
 
+  const fallbackRates = buildFallbackCurrencyRates();
+
   try {
-    const response = await fetch('https://open.er-api.com/v6/latest/USD', {
-      cache: 'no-store'
-    });
+    const [fiatResult, cryptoResult] = await Promise.allSettled([
+      fetchFiatCurrencyRates(),
+      fetchCryptoCurrencyRates()
+    ]);
 
-    if (!response.ok) {
-      throw new Error(`Request failed with status ${response.status}`);
+    let liveCurrencyRatesLoaded = false;
+    let liveCryptoRatesLoaded = false;
+    let latestTimestamp = OFFLINE_CURRENCY_UPDATED_AT;
+
+    if (fiatResult.status === 'fulfilled') {
+      Object.assign(fallbackRates, fiatResult.value.rates);
+      latestTimestamp = fiatResult.value.updatedAt;
+      liveCurrencyRatesLoaded = true;
     }
 
-    const payload = await response.json();
-    if (payload?.result !== 'success' || !payload?.rates || typeof payload.rates !== 'object') {
-      throw new Error('Currency service returned an unexpected payload.');
+    if (cryptoResult.status === 'fulfilled') {
+      Object.assign(fallbackRates, cryptoResult.value.rates);
+      latestTimestamp = liveCurrencyRatesLoaded ? latestTimestamp : cryptoResult.value.updatedAt;
+      liveCryptoRatesLoaded = true;
     }
 
-    state.converter.currencyRates = normalizeCurrencyRates(payload.rates);
-    state.converter.currencyUpdatedAt = formatCurrencyTimestamp(payload.time_last_update_utc);
-    state.converter.currencyUpdateMessageKey = 'converter.currency.status.liveRatesLoaded';
+    state.converter.currencyRates = fallbackRates;
+    state.converter.currencyUpdatedAt = liveCurrencyRatesLoaded || liveCryptoRatesLoaded
+      ? latestTimestamp
+      : OFFLINE_CURRENCY_UPDATED_AT;
+    state.converter.currencyUpdateMessageKey = liveCurrencyRatesLoaded && liveCryptoRatesLoaded
+      ? 'converter.currency.status.liveRatesLoaded'
+      : (liveCurrencyRatesLoaded || liveCryptoRatesLoaded
+          ? 'converter.currency.status.partialRatesLoaded'
+          : 'converter.currency.status.liveUpdateUnavailable');
   } catch {
-    state.converter.currencyRates = buildFallbackCurrencyRates();
+    state.converter.currencyRates = fallbackRates;
     state.converter.currencyUpdatedAt = OFFLINE_CURRENCY_UPDATED_AT;
     state.converter.currencyUpdateMessageKey = 'converter.currency.status.liveUpdateUnavailable';
   } finally {
@@ -1647,7 +1678,62 @@ async function updateCurrencyRates() {
   }
 }
 
-function normalizeCurrencyRates(rates) {
+async function fetchFiatCurrencyRates() {
+  const response = await fetch('https://open.er-api.com/v6/latest/USD', {
+    cache: 'no-store'
+  });
+
+  if (!response.ok) {
+    throw new Error(`Request failed with status ${response.status}`);
+  }
+
+  const payload = await response.json();
+  if (payload?.result !== 'success' || !payload?.rates || typeof payload.rates !== 'object') {
+    throw new Error('Currency service returned an unexpected payload.');
+  }
+
+  return {
+    rates: normalizeFiatCurrencyRates(payload.rates),
+    updatedAt: formatCurrencyTimestamp(payload.time_last_update_utc)
+  };
+}
+
+async function fetchCryptoCurrencyRates() {
+  const coinIds = Object.keys(CRYPTO_COIN_ID_TO_NAME);
+  if (!coinIds.length) {
+    return {
+      rates: {},
+      updatedAt: state.converter.currencyUpdatedAt
+    };
+  }
+
+  const response = await fetch(
+    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${encodeURIComponent(coinIds.join(','))}&order=market_cap_desc&per_page=${coinIds.length}&page=1&sparkline=false`,
+    { cache: 'no-store' }
+  );
+
+  if (!response.ok) {
+    throw new Error(`Request failed with status ${response.status}`);
+  }
+
+  const payload = await response.json();
+  if (!Array.isArray(payload)) {
+    throw new Error('Crypto service returned an unexpected payload.');
+  }
+
+  const updatedAt = payload
+    .map((entry) => entry?.last_updated)
+    .map((value) => new Date(value))
+    .filter((value) => value instanceof Date && !Number.isNaN(value.getTime()))
+    .sort((left, right) => right.getTime() - left.getTime())[0] ?? new Date();
+
+  return {
+    rates: normalizeCryptoCurrencyRates(payload),
+    updatedAt: formatCurrencyTimestamp(updatedAt)
+  };
+}
+
+function normalizeFiatCurrencyRates(rates) {
   const normalizedRates = { ...DEFAULT_CURRENCY_RATES };
 
   for (const [code, rawRate] of Object.entries(rates)) {
@@ -1657,6 +1743,21 @@ function normalizeCurrencyRates(rates) {
       continue;
     }
     normalizedRates[name] = numericRate;
+  }
+
+  return normalizedRates;
+}
+
+function normalizeCryptoCurrencyRates(entries) {
+  const normalizedRates = {};
+
+  for (const entry of entries) {
+    const name = CRYPTO_COIN_ID_TO_NAME[entry?.id];
+    const usdPrice = Number(entry?.current_price);
+    if (!name || !Number.isFinite(usdPrice) || usdPrice <= 0) {
+      continue;
+    }
+    normalizedRates[name] = 1 / usdPrice;
   }
 
   return normalizedRates;
@@ -2215,7 +2316,7 @@ function findConverterTypeaheadMatch(field, key) {
 
 function getConverterDropdownOptions(field) {
   const options = state.converter.category === 'Currency'
-    ? getCurrencyOptions().map((currency) => {
+    ? getCurrencyOptions({ includeCryptocurrencies: Boolean(state.converter.includeCryptocurrencies) }).map((currency) => {
       const details = getCurrencyDetails(currency.name);
       return {
         value: currency.name,
@@ -2244,6 +2345,9 @@ function getConverterDropdownOptions(field) {
 function getCurrencyOptionMeta(details) {
   const code = String(details.code || '').trim().toUpperCase();
   const symbol = String(details.symbol || '').trim();
+  if (details.type === 'crypto') {
+    return `${code} · ${t('converter.currency.cryptocurrency')}`;
+  }
   return symbol && symbol !== code ? `${code} · ${symbol}` : code;
 }
 

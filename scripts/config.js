@@ -1,6 +1,6 @@
 import { t } from './i18n.js';
 import { CURRENCY_OPTIONS } from './currencyData.js';
-export { CURRENCY_OPTIONS, CURRENCY_DETAILS, CURRENCY_CODE_TO_NAME, DEFAULT_CURRENCY_RATES, OFFLINE_CURRENCY_RATE_SNAPSHOT, OFFLINE_CURRENCY_UPDATED_AT, getCurrencyOptions, getCurrencyDetails } from './currencyData.js';
+export { CURRENCY_OPTIONS, CURRENCY_DETAILS, CURRENCY_CODE_TO_NAME, CRYPTO_COIN_ID_TO_NAME, DEFAULT_CURRENCY_RATES, OFFLINE_CURRENCY_RATE_SNAPSHOT, OFFLINE_CURRENCY_UPDATED_AT, getCurrencyOptions, getCurrencyDetails } from './currencyData.js';
 
 function btn(label, action, value = '', tone = 'default') {
   return { label, action, value, tone };

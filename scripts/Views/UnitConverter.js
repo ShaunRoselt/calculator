@@ -1,7 +1,7 @@
-import { CURRENCY_OPTIONS, UNIT_CATEGORIES, getCategoryLabel, getCurrencyDetails, getCurrencyOptions, getModeMeta, getUnitLabel, isConverterMode } from '../config.js';
+import { UNIT_CATEGORIES, getCategoryLabel, getCurrencyDetails, getCurrencyOptions, getModeMeta, getUnitLabel, isConverterMode } from '../config.js';
 import { t } from '../i18n.js';
 import { state } from '../state.js';
-import { escapeHtml } from '../utils.js';
+import { escapeHtml, formatNumber } from '../utils.js';
 import { getConverterDisplayValue, getUnitsForCategory } from '../logic.js';
 
 const CURRENCY_KEYPAD = [
@@ -118,6 +118,16 @@ function renderCurrencyView(units, title) {
           ${renderCurrencyField('to', toMeta, toDisplay)}
         </div>
         <div class="currency-meta">
+          <button
+            class="currency-crypto-toggle ${state.converter.includeCryptocurrencies ? 'active' : ''}"
+            type="button"
+            data-currency-crypto-toggle="true"
+            aria-pressed="${state.converter.includeCryptocurrencies ? 'true' : 'false'}"
+            aria-label="${escapeHtml(t('converter.currency.includeCryptocurrencies'))}"
+          >
+            <span class="currency-crypto-toggle-label">${t('converter.currency.includeCryptocurrencies')}</span>
+            <span class="currency-crypto-toggle-track" aria-hidden="true"><span class="currency-crypto-toggle-thumb"></span></span>
+          </button>
           <div class="currency-meta-line">${rateLine}</div>
           <div class="currency-meta-line">${t('converter.currency.updated', { timestamp: state.converter.currencyUpdatedAt })}</div>
           <div class="currency-meta-line currency-meta-status">${t(state.converter.currencyUpdateMessageKey)}</div>
@@ -178,7 +188,7 @@ function getFormattedConverterMetaValue(value) {
 }
 
 function renderCurrencyField(field, meta, value) {
-  const options = getCurrencyOptions().map((currency) => ({
+  const options = getCurrencyOptions({ includeCryptocurrencies: Boolean(state.converter.includeCryptocurrencies) }).map((currency) => ({
     value: currency.name,
     label: currency.label,
     code: currency.code,
@@ -281,6 +291,9 @@ function getFilteredConverterMenuOptions(field, options) {
 function getCurrencyOptionMeta(currency) {
   const code = String(currency.code || '').trim().toUpperCase();
   const symbol = String(currency.symbol || '').trim();
+  if (currency.type === 'crypto') {
+    return `${code} · ${t('converter.currency.cryptocurrency')}`;
+  }
   return symbol && symbol !== code ? `${code} · ${symbol}` : code;
 }
 
@@ -288,7 +301,7 @@ function renderCurrencyRateLine(units, fromMeta, toMeta) {
   const from = units.find((item) => item.name === state.converter.fromUnit) || units[0];
   const to = units.find((item) => item.name === state.converter.toUnit) || units[1] || units[0];
   const converted = to.fromBase(from.toBase(1));
-  return `1 ${fromMeta.code} = ${String(converted.toFixed(4)).replace('.', ',')} ${toMeta.code}`;
+  return `1 ${fromMeta.code} = ${formatNumber(converted).replace('.', ',')} ${toMeta.code}`;
 }
 
 function renderCurrencyKey(button) {

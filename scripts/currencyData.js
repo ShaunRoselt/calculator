@@ -1,5 +1,5 @@
-// Bundled offline snapshot. Update these values manually whenever you want to
-// refresh the built-in exchange rates used without a network connection.
+// Bundled offline fiat snapshot. Update these values manually whenever you want
+// to refresh the built-in exchange rates used without a network connection.
 export const OFFLINE_CURRENCY_RATE_SNAPSHOT = {
   AED: 3.6725,
   AFN: 63.717499,
@@ -169,6 +169,52 @@ export const OFFLINE_CURRENCY_RATE_SNAPSHOT = {
   ZWL: 25.8135,
 };
 
+const OFFLINE_CRYPTO_CURRENCY_RATE_SNAPSHOT = {
+  BTC: 0.000009463724,
+  ETH: 0.000379650673,
+  USDT: 0.99990001,
+  USDC: 0.99970009,
+  BNB: 0.001663340501,
+  XRP: 0.4405286344,
+  SOL: 0.005714285714,
+  ADA: 1.3458950202,
+  DOGE: 4.4309668448,
+  TRX: 3.7617326017,
+  TON: 0.3215434084,
+  AVAX: 0.0411861614,
+  DOT: 0.2046249734,
+  LINK: 0.0631719341,
+  LTC: 0.0109548169,
+  BCH: 0.0025075226,
+  XLM: 3.3707865169,
+  XMR: 0.0030171992,
+  ETC: 0.053561277,
+  ATOM: 0.2283105023
+};
+
+const CRYPTO_CURRENCY_DEFINITIONS = [
+  { code: 'BTC', label: 'Bitcoin', coinId: 'bitcoin' },
+  { code: 'ETH', label: 'Ethereum', coinId: 'ethereum' },
+  { code: 'USDT', label: 'Tether', coinId: 'tether' },
+  { code: 'USDC', label: 'USD Coin', coinId: 'usd-coin' },
+  { code: 'BNB', label: 'BNB', coinId: 'binancecoin' },
+  { code: 'XRP', label: 'XRP', coinId: 'ripple' },
+  { code: 'SOL', label: 'Solana', coinId: 'solana' },
+  { code: 'ADA', label: 'Cardano', coinId: 'cardano' },
+  { code: 'DOGE', label: 'Dogecoin', coinId: 'dogecoin' },
+  { code: 'TRX', label: 'TRON', coinId: 'tron' },
+  { code: 'TON', label: 'Toncoin', coinId: 'the-open-network' },
+  { code: 'AVAX', label: 'Avalanche', coinId: 'avalanche-2' },
+  { code: 'DOT', label: 'Polkadot', coinId: 'polkadot' },
+  { code: 'LINK', label: 'Chainlink', coinId: 'chainlink' },
+  { code: 'LTC', label: 'Litecoin', coinId: 'litecoin' },
+  { code: 'BCH', label: 'Bitcoin Cash', coinId: 'bitcoin-cash' },
+  { code: 'XLM', label: 'Stellar', coinId: 'stellar' },
+  { code: 'XMR', label: 'Monero', coinId: 'monero' },
+  { code: 'ETC', label: 'Ethereum Classic', coinId: 'ethereum-classic' },
+  { code: 'ATOM', label: 'Cosmos', coinId: 'cosmos' }
+];
+
 const CURRENCY_DISPLAY_NAMES = typeof Intl?.DisplayNames === 'function'
   ? new Intl.DisplayNames(['en'], { type: 'currency' })
   : null;
@@ -215,13 +261,27 @@ function getCurrencySymbol(code) {
   }
 }
 
-const SUPPORTED_CURRENCIES = Object.entries(OFFLINE_CURRENCY_RATE_SNAPSHOT).map(([code, unitsPerUsd]) => ({
+const SUPPORTED_FIAT_CURRENCIES = Object.entries(OFFLINE_CURRENCY_RATE_SNAPSHOT).map(([code, unitsPerUsd]) => ({
   name: getCurrencyDisplayName(code),
   label: getCurrencyDisplayName(code),
   symbol: getCurrencySymbol(code),
   code,
-  unitsPerUsd
-})).sort((left, right) => left.label.localeCompare(right.label));
+  unitsPerUsd,
+  type: 'fiat'
+}));
+
+const SUPPORTED_CRYPTO_CURRENCIES = CRYPTO_CURRENCY_DEFINITIONS.map((currency) => ({
+  name: currency.label,
+  label: currency.label,
+  symbol: currency.code,
+  code: currency.code,
+  unitsPerUsd: OFFLINE_CRYPTO_CURRENCY_RATE_SNAPSHOT[currency.code] ?? 1,
+  type: 'crypto',
+  coinId: currency.coinId
+}));
+
+const SUPPORTED_CURRENCIES = [...SUPPORTED_FIAT_CURRENCIES, ...SUPPORTED_CRYPTO_CURRENCIES]
+  .sort((left, right) => left.label.localeCompare(right.label));
 
 export const CURRENCY_OPTIONS = SUPPORTED_CURRENCIES;
 
@@ -233,14 +293,19 @@ export const CURRENCY_CODE_TO_NAME = Object.fromEntries(
   SUPPORTED_CURRENCIES.map((currency) => [currency.code, currency.name])
 );
 
+export const CRYPTO_COIN_ID_TO_NAME = Object.fromEntries(
+  SUPPORTED_CRYPTO_CURRENCIES.map((currency) => [currency.coinId, currency.name])
+);
+
 export const DEFAULT_CURRENCY_RATES = Object.fromEntries(
   SUPPORTED_CURRENCIES.map((currency) => [currency.name, currency.unitsPerUsd])
 );
 
 export const OFFLINE_CURRENCY_UPDATED_AT = '2026/05/16 00:02:31';
 
-export function getCurrencyOptions() {
+export function getCurrencyOptions({ includeCryptocurrencies = true } = {}) {
   return SUPPORTED_CURRENCIES
+    .filter((currency) => includeCryptocurrencies || currency.type !== 'crypto')
     .map((currency) => ({
       ...currency,
       nameLabel: currency.name,
@@ -252,10 +317,13 @@ export function getCurrencyOptions() {
 export function getCurrencyDetails(name) {
   const currency = SUPPORTED_CURRENCIES.find((item) => item.name === name || item.code === name);
   if (!currency) {
+    const normalizedName = String(name || '').trim();
+    const normalizedCode = normalizedName.toUpperCase() || 'CUR';
     return {
-      label: getCurrencyName(name),
-      symbol: getCurrencySymbol(name),
-      code: String(name || '').trim().toUpperCase() || 'CUR'
+      label: normalizedName || 'Unknown Currency',
+      symbol: getCurrencySymbol(normalizedCode),
+      code: normalizedCode,
+      type: 'fiat'
     };
   }
 
@@ -263,6 +331,8 @@ export function getCurrencyDetails(name) {
     label: currency.label,
     symbol: currency.symbol,
     code: currency.code,
-    name: currency.name
+    name: currency.name,
+    type: currency.type,
+    coinId: currency.coinId
   };
 }

@@ -93,6 +93,9 @@
     "unit": "unit",
     "unitOptions": "unit options",
     "currency": {
+      "includeCryptocurrencies": "Cryptocurrencies",
+      "cryptoToggleDescription": "Show Bitcoin, Ethereum, and other crypto assets in the currency lists.",
+      "cryptocurrency": "Cryptocurrency",
       "updatingRates": "Updating rates…",
       "updateRates": "Update rates",
       "keypad": "Currency keypad",
@@ -102,9 +105,10 @@
       "updated": "Updated {timestamp}",
       "status": {
         "mockNote": "Using the bundled offline currency snapshot from the latest manual update.",
-        "fetching": "Fetching the latest USD reference rates...",
-        "liveRatesLoaded": "Live rates loaded from ExchangeRate-API.",
-        "liveUpdateUnavailable": "Live update unavailable. Using the bundled offline currency snapshot."
+        "fetching": "Fetching the latest currency and crypto USD reference rates...",
+        "liveRatesLoaded": "Live currency and crypto rates loaded.",
+        "partialRatesLoaded": "Updated live rates where available. Using bundled fallback data for the rest.",
+        "liveUpdateUnavailable": "Live update unavailable. Using the bundled offline rate snapshot."
       }
     },
     "aboutEqualTo": "About equal to"

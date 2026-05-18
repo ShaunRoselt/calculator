@@ -1,4 +1,4 @@
-import { CURRENCY_DETAILS, CURRENCY_OPTIONS, DEFAULT_CURRENCY_RATES, UNIT_CATEGORIES, getModeMeta, getUnitLabel, isConverterMode } from './config.js';
+import { CURRENCY_DETAILS, DEFAULT_CURRENCY_RATES, UNIT_CATEGORIES, getCurrencyOptions, getModeMeta, getUnitLabel, isConverterMode } from './config.js';
 import { getDefaultCurrencyUnits } from './currencyLocale.js';
 import { getCurrentLocale, t } from './i18n.js';
 import {
@@ -1026,7 +1026,8 @@ export function commitConverterHistory() {
       toUnit: state.converter.toUnit,
       fromValue: state.converter.fromValue,
       toValue: state.converter.toValue,
-      lastEdited: state.converter.lastEdited
+      lastEdited: state.converter.lastEdited,
+      includeCryptocurrencies: Boolean(state.converter.includeCryptocurrencies)
     }
   });
 }
@@ -2008,7 +2009,7 @@ function formatLongDate(value) {
 
 export function getUnitsForCategory(category) {
   if (category === 'Currency') {
-    return CURRENCY_OPTIONS.map((currency) => {
+    return getCurrencyOptions({ includeCryptocurrencies: Boolean(state.converter.includeCryptocurrencies) }).map((currency) => {
       const unitsPerUsd = getCurrencyRate(currency.name);
       return {
         name: currency.name,
@@ -2032,24 +2033,38 @@ function getCurrencyRate(name) {
   return Number.isFinite(fallbackRate) && fallbackRate > 0 ? fallbackRate : 1;
 }
 
-export function resetConverterUnits() {
+export function resetConverterUnits(preserveExisting = false) {
   const units = getUnitsForCategory(state.converter.category);
   if (state.converter.category === 'Currency') {
+    const availableNames = units.map((unit) => unit.name);
     const unitNames = new Set(units.map((unit) => unit.name));
     const { fromUnit, toUnit } = getDefaultCurrencyUnits();
-    const fallbackFromUnit = units[0]?.name || '';
-    const fallbackToUnit = units[Math.min(1, units.length - 1)]?.name || fallbackFromUnit;
+    const defaultFromUnit = unitNames.has(fromUnit) ? fromUnit : (availableNames[0] || '');
+    const defaultToSeed = unitNames.has(toUnit) ? toUnit : (availableNames[Math.min(1, availableNames.length - 1)] || defaultFromUnit);
+    const fallbackToUnit = defaultToSeed === defaultFromUnit
+      ? (availableNames.find((name) => name !== defaultFromUnit) || defaultFromUnit)
+      : defaultToSeed;
+    const nextFromUnit = preserveExisting && unitNames.has(state.converter.fromUnit)
+      ? state.converter.fromUnit
+      : defaultFromUnit;
+    const preferredToUnit = preserveExisting && unitNames.has(state.converter.toUnit)
+      ? state.converter.toUnit
+      : fallbackToUnit;
 
-    state.converter.fromUnit = unitNames.has(fromUnit) ? fromUnit : fallbackFromUnit;
-    state.converter.toUnit = unitNames.has(toUnit) ? toUnit : fallbackToUnit;
+    state.converter.fromUnit = nextFromUnit;
+    state.converter.toUnit = preferredToUnit === nextFromUnit
+      ? (availableNames.find((name) => name !== nextFromUnit) || preferredToUnit)
+      : preferredToUnit;
   } else {
     state.converter.fromUnit = units[0].name;
     state.converter.toUnit = units[Math.min(1, units.length - 1)].name;
   }
 
-  state.converter.fromValue = state.converter.category === 'Currency' ? '0' : '1';
-  state.converter.toValue = '';
-  state.converter.lastEdited = 'from';
+  if (!preserveExisting) {
+    state.converter.fromValue = state.converter.category === 'Currency' ? '0' : '1';
+    state.converter.toValue = '';
+    state.converter.lastEdited = 'from';
+  }
 }
 
 export function syncConverterValues(source) {

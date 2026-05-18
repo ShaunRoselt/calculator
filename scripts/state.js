@@ -186,6 +186,7 @@ function createInitialState() {
         from: '',
         to: ''
       },
+      includeCryptocurrencies: true,
       currencyRates: { ...DEFAULT_CURRENCY_RATES },
       currencyUpdatedAt: OFFLINE_CURRENCY_UPDATED_AT,
       currencyUpdateMessageKey: 'converter.currency.status.mockNote',

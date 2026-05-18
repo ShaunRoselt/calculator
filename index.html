@@ -290,11 +290,12 @@
       #static-binary-grid {
         position: absolute;
         top: 0;
+        bottom: 0;
         left: 50%;
         z-index: 1;
         width: 100vw;
-        height: 100%;
-        max-height: 100vh;
+        height: auto;
+        min-height: 100%;
         overflow: hidden;
         transform: translateX(-50%);
         pointer-events: none;
@@ -322,7 +323,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        height: 34%;
+        height: clamp(8rem, 18vh, 16rem);
         background: linear-gradient(180deg, transparent 0%, var(--bg) 100%);
         pointer-events: none;
         z-index: 2;
@@ -855,6 +856,7 @@
       const googleStoreLink = document.querySelector('[data-store-link="google"]');
       const calculatorPreviewFrame = document.querySelector('[data-calculator-preview]');
       const previewLogo = document.querySelector('[data-preview-logo]');
+      const heroSection = document.querySelector('.hero-section');
       const heroGridText = document.querySelector('[data-hero-grid-text]');
       const comingSoonModal = document.querySelector('[data-coming-soon-modal]');
       const comingSoonTitle = document.querySelector('[data-coming-soon-title]');
@@ -878,6 +880,7 @@
       let currentAppPage = DEFAULT_MODE;
       let openMenuId = null;
       let headerLayoutFrame = null;
+      let heroGridFrame = null;
       const ENGLISH_LANGUAGE_DISPLAY_NAMES = typeof Intl?.DisplayNames === 'function'
         ? new Intl.DisplayNames(['en'], { type: 'language' })
         : null;
@@ -1494,6 +1497,49 @@
         });
       }
 
+      function getHeroGridRows() {
+        if (!(heroSection instanceof HTMLElement) || !(heroGridText instanceof HTMLElement)) {
+          return 170;
+        }
+
+        const parsedLineHeight = Number.parseFloat(window.getComputedStyle(heroGridText).lineHeight);
+        const lineHeight = Number.isFinite(parsedLineHeight) && parsedLineHeight > 0 ? parsedLineHeight : 15.75;
+        const sectionHeight = heroSection.getBoundingClientRect().height;
+
+        return Math.max(170, Math.ceil(sectionHeight / lineHeight) + 18);
+      }
+
+      function getHeroGridTokenWidth() {
+        if (!(heroGridText instanceof HTMLElement)) {
+          return 16;
+        }
+
+        const computedStyle = window.getComputedStyle(heroGridText);
+        const measurement = document.createElement('span');
+        measurement.textContent = '0 ';
+        measurement.style.position = 'absolute';
+        measurement.style.visibility = 'hidden';
+        measurement.style.whiteSpace = 'pre';
+        measurement.style.fontFamily = computedStyle.fontFamily;
+        measurement.style.fontSize = computedStyle.fontSize;
+        measurement.style.fontWeight = computedStyle.fontWeight;
+        measurement.style.letterSpacing = computedStyle.letterSpacing;
+        document.body.append(measurement);
+        const tokenWidth = measurement.getBoundingClientRect().width;
+        measurement.remove();
+
+        return tokenWidth > 0 ? tokenWidth : 16;
+      }
+
+      function getHeroGridColumns() {
+        if (!(heroSection instanceof HTMLElement)) {
+          return 108;
+        }
+
+        const sectionWidth = heroSection.getBoundingClientRect().width;
+        return Math.max(108, Math.ceil(sectionWidth / getHeroGridTokenWidth()) + 8);
+      }
+
       function updateCalculatorPreview() {
         const previewUrl = buildAppUrl({
           page: currentAppPage,
@@ -1506,11 +1552,17 @@
       }
 
       function buildHeroBinaryGrid() {
+        if (!(heroGridText instanceof HTMLElement)) {
+          return;
+        }
+
         const tokens = ['0', '1', 'ROSELT', 'CALCULATOR', 'STANDARD', 'GRAPHING', 'STEAM', 'FLATHUB', 'PLAY'];
         const rows = [];
-        for (let row = 0; row < 170; row += 1) {
+        const rowCount = getHeroGridRows();
+        const columnCount = getHeroGridColumns();
+        for (let row = 0; row < rowCount; row += 1) {
           const parts = [];
-          for (let column = 0; column < 108; column += 1) {
+          for (let column = 0; column < columnCount; column += 1) {
             const randomValue = Math.random();
             if (randomValue > 0.987) {
               parts.push(tokens[Math.floor(Math.random() * tokens.length)]);
@@ -1521,6 +1573,22 @@
           rows.push(parts.join(' '));
         }
         heroGridText.textContent = rows.join('\n');
+      }
+
+      function scheduleHeroBinaryGridUpdate() {
+        if (typeof window.requestAnimationFrame !== 'function') {
+          buildHeroBinaryGrid();
+          return;
+        }
+
+        if (heroGridFrame !== null) {
+          window.cancelAnimationFrame(heroGridFrame);
+        }
+
+        heroGridFrame = window.requestAnimationFrame(() => {
+          heroGridFrame = null;
+          buildHeroBinaryGrid();
+        });
       }
 
       function applyTheme(themeSetting) {
@@ -1555,6 +1623,7 @@
           favicon.href = themeLogoPath;
         }
         scheduleHeaderLayoutUpdate();
+        scheduleHeroBinaryGridUpdate();
       }
 
       function updateLocalizedCopy() {
@@ -1596,6 +1665,7 @@
           }
         }
         scheduleHeaderLayoutUpdate();
+        scheduleHeroBinaryGridUpdate();
       }
 
       async function applyLanguage(languageId) {
@@ -1670,14 +1740,19 @@
 
         window.addEventListener('focus', refreshStoredPage);
         window.addEventListener('resize', scheduleHeaderLayoutUpdate);
+        window.addEventListener('resize', scheduleHeroBinaryGridUpdate);
         window.addEventListener('storage', (event) => {
           if (event.key === APP_PAGE_STORAGE_KEY) {
             refreshStoredPage();
           }
         });
         scheduleHeaderLayoutUpdate();
+        scheduleHeroBinaryGridUpdate();
         if (document.fonts?.ready) {
-          void document.fonts.ready.then(scheduleHeaderLayoutUpdate);
+          void document.fonts.ready.then(() => {
+            scheduleHeaderLayoutUpdate();
+            scheduleHeroBinaryGridUpdate();
+          });
         }
       }
 
@@ -1734,7 +1809,7 @@
         }
       });
 
-      buildHeroBinaryGrid();
+      scheduleHeroBinaryGridUpdate();
 
       void initializeHeader().catch((error) => {
         console.error('Unable to initialize the header controls.', error);

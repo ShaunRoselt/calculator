@@ -103,9 +103,13 @@
         "mockNote": "จำลองอัตราอ้างอิงสำหรับการสาธิตแอปแบบสแตนด์อโลน",
         "fetching": "กำลังดึงข้อมูลอัตราอ้างอิง USD ล่าสุด...",
         "liveRatesLoaded": "โหลดอัตราสดจาก ExchangeRate-API",
-        "liveUpdateUnavailable": "การอัปเดตสดไม่พร้อมใช้งาน รีเฟรชอัตราการสาธิตในพื้นที่"
+        "liveUpdateUnavailable": "การอัปเดตสดไม่พร้อมใช้งาน รีเฟรชอัตราการสาธิตในพื้นที่",
+        "partialRatesLoaded": "อัปเดตราคาสดในพื้นที่ที่มีข้อมูล ใช้ข้อมูลสำรองแบบรวมสำหรับที่เหลือ"
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "สกุลเงินดิจิทัล",
+      "cryptoToggleDescription": "แสดง Bitcoin, Ethereum และสินทรัพย์คริปโตอื่นๆ ในรายการสกุลเงิน",
+      "cryptocurrency": "สกุลเงินดิจิทัล"
     },
     "aboutEqualTo": "ประมาณเท่ากับ"
   },

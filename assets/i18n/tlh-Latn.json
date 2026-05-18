@@ -103,9 +103,13 @@
         "mockNote": "Demo appDaq mock rItmey.",
         "fetching": "USD reference rItmey vIghaj",
         "liveRatesLoaded": "Live rItmey ExchangeRate-API vIghaj.",
-        "liveUpdateUnavailable": "Live update pagh. Demo rItmey locally chu'."
+        "liveUpdateUnavailable": "Live update pagh. Demo rItmey locally chu'.",
+        "partialRatesLoaded": "qaStaHvIS chu' ratemey update 'e' vIghro'. QavwI'vamDaq packaged fallback mIw chu' DIvI'."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Hochmey QI'yaH",
+      "cryptoToggleDescription": "Bitcoin, Ethereum je 'ej tugh Hoch cryptocurrency chungwI'pu' 'e' currency Qaw' listsDaq bImej.",
+      "cryptocurrency": "Hoch QI'yaH"
     },
     "aboutEqualTo": "mIw law'"
   },

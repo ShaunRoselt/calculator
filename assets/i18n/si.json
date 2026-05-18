@@ -103,9 +103,13 @@
         "mockNote": "ස්වාධීන යෙදුම් ආදර්ශනය සඳහා ව්‍යාජ යොමු ගාස්තු.",
         "fetching": "නවතම USD යොමු ගාස්තු ලබා ගනිමින්...",
         "liveRatesLoaded": "සජීවී ගාස්තු ExchangeRate-API වෙතින් පූරණය කර ඇත.",
-        "liveUpdateUnavailable": "සජීවී යාවත්කාලීනය නොමැත. දේශීයව ආදර්ශන ගාස්තු නැවුම් කරන ලදී."
+        "liveUpdateUnavailable": "සජීවී යාවත්කාලීනය නොමැත. දේශීයව ආදර්ශන ගාස්තු නැවුම් කරන ලදී.",
+        "partialRatesLoaded": "ලබාගෙන ඇති ප්‍රදේශවල සජීවී දර්ශක යාවත්කාලීන කළා. ඉතිරිව ඇති දේ සඳහා ඇතුලත් ඇඳීමේ දත්ත භාවිතා කෙරේ."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "ක්‍රිප්ටෝ මුදල්",
+      "cryptoToggleDescription": "මුදල් ලැයිස්තු වල Bitcoin, Ethereum සහ වෙනත් ක්‍රිප්ටෝ මූල්‍ය වත්කම් පෙන්වන්න.",
+      "cryptocurrency": "ක්‍රිප්ටෝ මුදල"
     },
     "aboutEqualTo": "ට සමානයි"
   },

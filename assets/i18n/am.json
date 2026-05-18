@@ -103,9 +103,13 @@
         "mockNote": "ለብቻው ለሚደረገው መተግበሪያ ማሳያ የማስመሰያ ዋጋ።",
         "fetching": "የቅርብ ጊዜዎቹን የUSD ማጣቀሻ ተመኖችን በማምጣት ላይ...",
         "liveRatesLoaded": "ከ ExchangeRate-API የቀጥታ ተመኖች ተጭነዋል።",
-        "liveUpdateUnavailable": "የቀጥታ ዝማኔ የለም። በአካባቢው የታደሰ ማሳያ ተመኖች።"
+        "liveUpdateUnavailable": "የቀጥታ ዝማኔ የለም። በአካባቢው የታደሰ ማሳያ ተመኖች።",
+        "partialRatesLoaded": "የቀጥታ የገንዘብ ግዜያዊ ሁኔታዎችን በሚገኙበት ቦታ አዘምናል። ለቀሪው የታካች ዳታ ተጠቃሚ የሆነ የተከፈለ መንገድ እንደገና እንጠቀማለን።"
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "ክሪፕቶከራንሲዎች",
+      "cryptoToggleDescription": "ቢትኮይን፣ ኢተርዬም እና ሌሎች ክሪፕቶ ባለንብረቶችን በገንዘብ ዝርዝሮች ውስጥ አሳይ.",
+      "cryptocurrency": "ክሪፕቶከራንሲ"
     },
     "aboutEqualTo": "እኩል ነው።"
   },

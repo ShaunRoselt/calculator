@@ -103,9 +103,13 @@
         "mockNote": "Tariffe di riferimento fittizie per la demo dell'app autonoma.",
         "fetching": "Recupero degli ultimi tassi di riferimento in USD...",
         "liveRatesLoaded": "Tariffe in tempo reale caricate da ExchangeRate-API.",
-        "liveUpdateUnavailable": "Aggiornamento in tempo reale non disponibile. Tariffe demo aggiornate a livello locale."
+        "liveUpdateUnavailable": "Aggiornamento in tempo reale non disponibile. Tariffe demo aggiornate a livello locale.",
+        "partialRatesLoaded": "Aggiornate le quotazioni live dove disponibili. Per il resto si usano dati di fallback inclusi."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Criptovalute",
+      "cryptoToggleDescription": "Mostra Bitcoin, Ethereum e altri asset cripto nelle liste di valuta.",
+      "cryptocurrency": "Criptovaluta"
     },
     "aboutEqualTo": "Circa uguale a"
   },

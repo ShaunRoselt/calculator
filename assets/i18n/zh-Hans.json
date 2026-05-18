@@ -103,9 +103,13 @@
         "mockNote": "Mock reference rates for the standalone app demo.",
         "fetching": "Fetching the latest USD reference rates...",
         "liveRatesLoaded": "Live rates loaded from ExchangeRate-API.",
-        "liveUpdateUnavailable": "Live update unavailable. Refreshed demo rates locally."
+        "liveUpdateUnavailable": "Live update unavailable. Refreshed demo rates locally.",
+        "partialRatesLoaded": "已在可用处更新实时汇率。其余使用捆绑的备用数据。"
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "加密货币",
+      "cryptoToggleDescription": "在货币列表中显示比特币、以太坊及其他加密资产。",
+      "cryptocurrency": "加密货币"
     },
     "aboutEqualTo": "About equal to"
   },

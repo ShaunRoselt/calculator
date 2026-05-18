@@ -103,9 +103,13 @@
         "mockNote": "Özbaşdak programma demo üçin masgaralama nyrhlary.",
         "fetching": "Iň soňky USD salgylanma nyrhlaryny almak ...",
         "liveRatesLoaded": "ExchangeRate-API-den ýüklenen göni nyrhlar.",
-        "liveUpdateUnavailable": "Göni täzelenme elýeterli däl. Locallyerli derejede täzelenen demo nyrhlary."
+        "liveUpdateUnavailable": "Göni täzelenme elýeterli däl. Locallyerli derejede täzelenen demo nyrhlary.",
+        "partialRatesLoaded": "Mumkin bolan ýerlerde dikeltme göni kurslar täzelendi. Galany üçin gaplanan ätiýaçlyk maglumaty ulanylýar."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kryptowalutalar",
+      "cryptoToggleDescription": "Walyuta sanawlarynda Bitcoin, Ethereum we beýleki kripto aktivlerini görkez.",
+      "cryptocurrency": "Kriptowaluta"
     },
     "aboutEqualTo": "Deňdir"
   },

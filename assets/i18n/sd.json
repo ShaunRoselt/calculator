@@ -103,9 +103,13 @@
         "mockNote": "اسٽينڊل ايپ ڊيمو لاءِ ٺٺولي ريفرنس ريٽ.",
         "fetching": "تازين USD ريفرنس جي شرحن کي آڻڻ...",
         "liveRatesLoaded": "لائيو ريٽ لوڊ ڪيا ويا ExchangeRate-API کان.",
-        "liveUpdateUnavailable": "لائيو اپڊيٽ دستياب ناهي. ريفريش ٿيل ڊيمو قيمتون مقامي طور تي."
+        "liveUpdateUnavailable": "لائيو اپڊيٽ دستياب ناهي. ريفريش ٿيل ڊيمو قيمتون مقامي طور تي.",
+        "partialRatesLoaded": "جتي دستياب هجن اتي تازي لائيو ريٽ اپڊيٽ ڪيا ويا. باقي لاءِ بند ٿيل بئڪ اپ ڊيٽا استعمال ڪئي پئي وڃي."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "ڪرپٽو ڪرنسيز",
+      "cryptoToggleDescription": "ڪرنسي لسٽن ۾ Bitcoin، Ethereum ۽ ٻين ڪرپٽو اثاثن کي ڏيکاريو.",
+      "cryptocurrency": "ڪرپٽو ڪرنسي"
     },
     "aboutEqualTo": "اٽڪل برابر"
   },

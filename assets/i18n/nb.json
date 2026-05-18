@@ -103,9 +103,13 @@
         "mockNote": "Hånlige referansepriser for den frittstående appdemoen.",
         "fetching": "Henter de siste referansekursene for USD...",
         "liveRatesLoaded": "Livekurser lastet inn fra ExchangeRate-API.",
-        "liveUpdateUnavailable": "Liveoppdatering er utilgjengelig. Oppdaterte demopriser lokalt."
+        "liveUpdateUnavailable": "Liveoppdatering er utilgjengelig. Oppdaterte demopriser lokalt.",
+        "partialRatesLoaded": "Oppdaterte live‑kurser der tilgjengelig. Bruker innebygde fallback‑data for resten."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kryptovalutaer",
+      "cryptoToggleDescription": "Vis Bitcoin, Ethereum og andre krypto‑eiendeler i valutalistene.",
+      "cryptocurrency": "Kryptovaluta"
     },
     "aboutEqualTo": "Omtrent lik"
   },

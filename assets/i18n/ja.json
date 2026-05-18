@@ -103,9 +103,13 @@
         "mockNote": "スタンドアロン アプリのデモ用の模擬参照レート。",
         "fetching": "最新の米ドル参照レートを取得しています...",
         "liveRatesLoaded": "ExchangeRate-API からロードされたライブ レート。",
-        "liveUpdateUnavailable": "ライブアップデートは利用できません。デモレートをローカルで更新しました。"
+        "liveUpdateUnavailable": "ライブアップデートは利用できません。デモレートをローカルで更新しました。",
+        "partialRatesLoaded": "利用可能な箇所のライブレートを更新しました。残りはバンドルされたフォールバックデータを使用しています。"
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "暗号通貨",
+      "cryptoToggleDescription": "通貨リストにBitcoin、Ethereum、その他の暗号資産を表示します。",
+      "cryptocurrency": "暗号通貨"
     },
     "aboutEqualTo": "ほぼ等しい"
   },

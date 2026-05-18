@@ -103,9 +103,13 @@
         "mockNote": "Моктивні базові ставки для демонстрації автономної програми.",
         "fetching": "Отримання останніх довідкових курсів долара...",
         "liveRatesLoaded": "Активні курси, завантажені з ExchangeRate-API.",
-        "liveUpdateUnavailable": "Оновлення в реальному часі недоступне. Оновлені демонстраційні тарифи локально."
+        "liveUpdateUnavailable": "Оновлення в реальному часі недоступне. Оновлені демонстраційні тарифи локально.",
+        "partialRatesLoaded": "Оновлено живі курси там, де доступні. Для решти використовуються вбудовані резервні дані."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Криптовалюти",
+      "cryptoToggleDescription": "Показувати Bitcoin, Ethereum та інші криптоактиви у списках валют.",
+      "cryptocurrency": "Криптовалюта"
     },
     "aboutEqualTo": "Приблизно дорівнює"
   },

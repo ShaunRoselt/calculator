@@ -103,9 +103,13 @@
         "mockNote": "Lažne referentne stope za demonstraciju samostalne aplikacije.",
         "fetching": "Dohvaćanje najnovijih referentnih stopa u USD...",
         "liveRatesLoaded": "Uživo stope učitane iz ExchangeRate-API.",
-        "liveUpdateUnavailable": "Ažuriranje uživo nije dostupno. Osvježene demo cijene lokalno."
+        "liveUpdateUnavailable": "Ažuriranje uživo nije dostupno. Osvježene demo cijene lokalno.",
+        "partialRatesLoaded": "Ažurirane su žive stope gdje su dostupne. Za ostalo se koristi ugrađeni rezervni skup podataka."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kriptovalute",
+      "cryptoToggleDescription": "Prikaži Bitcoin, Ethereum i druge kripto imovine na listama valuta.",
+      "cryptocurrency": "Kriptovaluta"
     },
     "aboutEqualTo": "Otprilike jednako"
   },

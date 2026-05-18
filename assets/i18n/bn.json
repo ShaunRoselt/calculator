@@ -103,9 +103,13 @@
         "mockNote": "স্বতন্ত্র অ্যাপ ডেমোর জন্য মক রেফারেন্স রেট।",
         "fetching": "সর্বশেষ USD রেফারেন্স রেট আনা হচ্ছে...",
         "liveRatesLoaded": "ExchangeRate-API থেকে লাইভ রেট লোড হয়েছে।",
-        "liveUpdateUnavailable": "লাইভ আপডেট অনুপলব্ধ৷ স্থানীয়ভাবে ডেমো রেট রিফ্রেশ করা হয়েছে।"
+        "liveUpdateUnavailable": "লাইভ আপডেট অনুপলব্ধ৷ স্থানীয়ভাবে ডেমো রেট রিফ্রেশ করা হয়েছে।",
+        "partialRatesLoaded": "উপলব্ধ স্থানে লাইভ রেট আপডেট করা হয়েছে। বাকি অংশের জন্য বান্ডেলকৃত ব্যাকআপ ডেটা ব্যবহার করা হচ্ছে।"
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "ক্রিপ্টোকারেন্সি",
+      "cryptoToggleDescription": "কারেন্সি তালিকায় বিটকয়েন, ইথেরিয়াম এবং অন্যান্য ক্রিপ্টো অ্যাসেট দেখান।",
+      "cryptocurrency": "ক্রিপ্টোকারেন্সি"
     },
     "aboutEqualTo": "এর সমান"
   },

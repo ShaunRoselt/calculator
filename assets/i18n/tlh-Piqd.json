@@ -103,9 +103,13 @@
         "mockNote": "    ",
         "fetching": "   USD...",
         "liveRatesLoaded": "   ExchangeRate-API.",
-        "liveUpdateUnavailable": "  .   ."
+        "liveUpdateUnavailable": "  .   .",
+        "partialRatesLoaded": "Updated live rates where available. Using bundled fallback data for the rest."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "",
+      "cryptoToggleDescription": "Bitcoin, Ethereum 𐓘𐓙 𐓚 𐓛 𐓜 currency 𐓝𐓞𐓟 𐓠𐓡.",
+      "cryptocurrency": ""
     },
     "aboutEqualTo": "  "
   },

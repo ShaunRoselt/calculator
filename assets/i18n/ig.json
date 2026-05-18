@@ -103,9 +103,13 @@
         "mockNote": "Ọnụ ego ntụaka akparị maka ngosi ngwa kwụụrụ onwe ya.",
         "fetching": "Na-ebuta ọnụego ntụaka USD kacha ọhụrụ...",
         "liveRatesLoaded": "Ọnụego efu sitere na ExchangeRate-API bugoro.",
-        "liveUpdateUnavailable": "Mmelite dị ndụ adịghị. Ọnụego ngosi ume ọhụrụ na mpaghara."
+        "liveUpdateUnavailable": "Mmelite dị ndụ adịghị. Ọnụego ngosi ume ọhụrụ na mpaghara.",
+        "partialRatesLoaded": "Anyị melitewo ọnụego ndụ ebe dị. Na-eji data ndabere edobere maka ndị ọzọ."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Ego crypto",
+      "cryptoToggleDescription": "Gosi Bitcoin, Ethereum, na akụ crypto ndị ọzọ n’ime ndepụta ego.",
+      "cryptocurrency": "Ego crypto"
     },
     "aboutEqualTo": "Ihe dị ka hà nhata"
   },

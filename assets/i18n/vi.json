@@ -103,9 +103,13 @@
         "mockNote": "Tỷ lệ tham chiếu mô phỏng cho bản demo ứng dụng độc lập.",
         "fetching": "Đang tìm nạp tỷ giá tham chiếu USD mới nhất...",
         "liveRatesLoaded": "Tỷ giá trực tiếp được tải từ ExchangeRate-API.",
-        "liveUpdateUnavailable": "Không có bản cập nhật trực tiếp. Tỷ lệ demo được làm mới tại địa phương."
+        "liveUpdateUnavailable": "Không có bản cập nhật trực tiếp. Tỷ lệ demo được làm mới tại địa phương.",
+        "partialRatesLoaded": "Đã cập nhật tỉ giá trực tiếp ở những nơi có sẵn. Sử dụng dữ liệu dự phòng đóng gói cho phần còn lại."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Tiền mã hóa",
+      "cryptoToggleDescription": "Hiển thị Bitcoin, Ethereum và các tài sản mã hóa khác trong danh sách tiền tệ.",
+      "cryptocurrency": "Tiền mã hóa"
     },
     "aboutEqualTo": "Xấp xỉ bằng"
   },

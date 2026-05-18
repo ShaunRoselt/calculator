@@ -103,9 +103,13 @@
         "mockNote": "ಸ್ವತಂತ್ರ ಅಪ್ಲಿಕೇಶನ್ ಡೆಮೊಗಾಗಿ ಅಣಕು ಉಲ್ಲೇಖ ದರಗಳು.",
         "fetching": "ಇತ್ತೀಚಿನ USD ಉಲ್ಲೇಖ ದರಗಳನ್ನು ಪಡೆಯಲಾಗುತ್ತಿದೆ...",
         "liveRatesLoaded": "ExchangeRate-API ನಿಂದ ಲೈವ್ ದರಗಳನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಿದೆ.",
-        "liveUpdateUnavailable": "ಲೈವ್ ಅಪ್‌ಡೇಟ್ ಲಭ್ಯವಿಲ್ಲ. ಸ್ಥಳೀಯವಾಗಿ ಡೆಮೊ ದರಗಳನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಲಾಗಿದೆ."
+        "liveUpdateUnavailable": "ಲೈವ್ ಅಪ್‌ಡೇಟ್ ಲಭ್ಯವಿಲ್ಲ. ಸ್ಥಳೀಯವಾಗಿ ಡೆಮೊ ದರಗಳನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಲಾಗಿದೆ.",
+        "partialRatesLoaded": "ಲಭ್ಯವಿರುವಲ್ಲಿ ಲೈವ್ ದರಗಳನ್ನು ನವೀಕರಿಸಲಾಗಿದೆ. ಉಳಿದವಿಗಾಗಿ ಪ್ಯಾಕೇಜ್ಡ್ ಬ್ಯಾಕಪ್ ಡೇಟಾ ಬಳಸಲಾಗುತ್ತಿದೆ."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "ಕ್ರಿಪ್ಟೋಕರೆನ್ಸಿಗಳು",
+      "cryptoToggleDescription": "ಕರೆನ್ಸಿ ಪಟ್ಟಿ ಗಳಲ್ಲಿ Bitcoin, Ethereum ಮತ್ತು ಇತರೆ ಕ್ರಿಪ್ಟೋ ಆಸ್ತಿ ಗಳನ್ನು ತೋರಿಸಿ.",
+      "cryptocurrency": "ಕ್ರಿಪ್ಟೋಕರೆನ್ಸಿ"
     },
     "aboutEqualTo": "ಸುಮಾರು ಸಮಾನವಾಗಿರುತ್ತದೆ"
   },

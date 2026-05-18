@@ -103,9 +103,13 @@
         "mockNote": "స్వతంత్ర యాప్ డెమో కోసం మాక్ రిఫరెన్స్ రేట్లు.",
         "fetching": "తాజా USD సూచన రేట్లను పొందుతోంది...",
         "liveRatesLoaded": "ప్రత్యక్ష ధరలు ExchangeRate-API నుండి లోడ్ చేయబడ్డాయి.",
-        "liveUpdateUnavailable": "ప్రత్యక్ష నవీకరణ అందుబాటులో లేదు. స్థానికంగా డెమో రేట్లు రిఫ్రెష్ చేయబడ్డాయి."
+        "liveUpdateUnavailable": "ప్రత్యక్ష నవీకరణ అందుబాటులో లేదు. స్థానికంగా డెమో రేట్లు రిఫ్రెష్ చేయబడ్డాయి.",
+        "partialRatesLoaded": "ప్రాంతాల్లో లైవ్ రేట్లు అందుబాటులో ఉన్న చోట నవీకరించబడ్డాయి. మిగిలిన వాటికి బండిల్ చేయబడిన ఫాల్‌బ్యాక్ డేటాను ఉపయోగిస్తున్నాం."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "క్రిప్టోకరెన్సీస్",
+      "cryptoToggleDescription": "కరెన్సీ జాబితాలలో Bitcoin, Ethereum మరియు ఇతర క్రిప్టో ఆస్తులను చూపించండి.",
+      "cryptocurrency": "క్రిప్టోకరెన్సీ"
     },
     "aboutEqualTo": "సుమారు సమానం"
   },

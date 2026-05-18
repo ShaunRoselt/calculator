@@ -103,9 +103,13 @@
         "mockNote": "Amaxabiso esalathiso okulinganisa ademo yenkqubo ezimeleyo.",
         "fetching": "Kufunyanwa amaxabiso ereferensi e-USD akutshanje...",
         "liveRatesLoaded": "Amaxabiso aphilayo alayishwe ukusuka ku-ExchangeRate-API.",
-        "liveUpdateUnavailable": "Uhlaziyo oluphilayo alufumaneki. Amaxabiso edemo avuselelwe apha ekhaya."
+        "liveUpdateUnavailable": "Uhlaziyo oluphilayo alufumaneki. Amaxabiso edemo avuselelwe apha ekhaya.",
+        "partialRatesLoaded": "Ireyithi zihlaziyiwe bukhoma apho zifumaneka. Ukusetyenziswa kwedatha egqithisiweyo efakiweyo kwezinye."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Iimali ze-crypto",
+      "cryptoToggleDescription": "Bonisa iBitcoin, iEthereum kunye nezinye iiasethi ze-crypto kuluhlu lwemali.",
+      "cryptocurrency": "Imali ye-crypto"
     },
     "aboutEqualTo": "Phantse kulingana no"
   },

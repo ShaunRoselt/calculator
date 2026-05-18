@@ -103,9 +103,13 @@
         "mockNote": "Примерные эталонные цены для автономной демо-версии приложения.",
         "fetching": "Получение последних справочных курсов доллара США...",
         "liveRatesLoaded": "Текущие курсы, загруженные из ExchangeRate-API.",
-        "liveUpdateUnavailable": "Оперативное обновление недоступно. Обновлены демо-тарифы на местном уровне."
+        "liveUpdateUnavailable": "Оперативное обновление недоступно. Обновлены демо-тарифы на местном уровне.",
+        "partialRatesLoaded": "Обновлены live‑курсы там, где доступны. Для остального используются встроенные резервные данные."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Криптовалюты",
+      "cryptoToggleDescription": "Показывать Bitcoin, Ethereum и другие криптоактивы в списках валют.",
+      "cryptocurrency": "Криптовалюта"
     },
     "aboutEqualTo": "Примерно равно"
   },

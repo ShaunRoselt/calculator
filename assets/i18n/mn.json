@@ -103,9 +103,13 @@
         "mockNote": "Бие даасан програмын демогийн жишиг лавлагааны үнэ.",
         "fetching": "Хамгийн сүүлийн үеийн ам.долларын лавлагааны ханшийг авч байна...",
         "liveRatesLoaded": "ExchangeRate-API-аас шууд ханшийг ачаалсан.",
-        "liveUpdateUnavailable": "Шууд шинэчлэлт боломжгүй. Демо ханшийг орон нутагт шинэчилсэн."
+        "liveUpdateUnavailable": "Шууд шинэчлэлт боломжгүй. Демо ханшийг орон нутагт шинэчилсэн.",
+        "partialRatesLoaded": "Амьд ханшууд боломжтой газруудад шинэчлэгдсэн. Үлдсэнд багцалсан нөөц өгөгдлийг ашиглаж байна."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Криптовалютууд",
+      "cryptoToggleDescription": "Валютын жагсаалтад Bitcoin, Ethereum болон бусад крипто активуудыг харуулна.",
+      "cryptocurrency": "Криптовалют"
     },
     "aboutEqualTo": "ойролцоогоор тэнцүү байна"
   },

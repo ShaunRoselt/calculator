@@ -103,9 +103,13 @@
         "mockNote": "સ્ટેન્ડઅલોન એપ્લિકેશન ડેમો માટે મોક રેફરન્સ રેટ.",
         "fetching": "નવીનતમ USD સંદર્ભ દરો મેળવી રહ્યાં છીએ...",
         "liveRatesLoaded": "ExchangeRate-API પરથી લાઇવ રેટ લોડ થયા.",
-        "liveUpdateUnavailable": "લાઇવ અપડેટ અનુપલબ્ધ. સ્થાનિક સ્તરે ડેમો દરો તાજા કર્યા."
+        "liveUpdateUnavailable": "લાઇવ અપડેટ અનુપલબ્ધ. સ્થાનિક સ્તરે ડેમો દરો તાજા કર્યા.",
+        "partialRatesLoaded": "જ્યાં ઉપલબ્ધ છે ત્યાં જીવંત દર અપડેટ કર્યા છે. બાકી માટે બંધ બેકઅપ ડેટા વપરાય છે."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "ક્રિપ્ટોકરન્સીઓ",
+      "cryptoToggleDescription": "કંચાણ યાદીઓમાં Bitcoin, Ethereum અને અન્ય ક્રિપ્ટો એસેટ બતાવો.",
+      "cryptocurrency": "ક્રિપ્ટોકરન્સી"
     },
     "aboutEqualTo": "લગભગ બરાબર"
   },

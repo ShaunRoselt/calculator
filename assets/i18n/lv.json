@@ -103,9 +103,13 @@
         "mockNote": "Izspēlētas atsauces likmes atsevišķai lietotnes demonstrācijai.",
         "fetching": "Notiek jaunāko USD atsauces likmju iegūšana...",
         "liveRatesLoaded": "Tiešraides kursi, kas ielādēti no ExchangeRate-API.",
-        "liveUpdateUnavailable": "Tiešraides atjauninājums nav pieejams. Atsvaidzināti demonstrācijas tarifi uz vietas."
+        "liveUpdateUnavailable": "Tiešraides atjauninājums nav pieejams. Atsvaidzināti demonstrācijas tarifi uz vietas.",
+        "partialRatesLoaded": "Atjauninātas tiešraides cenas tur, kur pieejamas. Pārējiem tiek izmantoti iesaiņotie rezerves dati."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kriptovalūtas",
+      "cryptoToggleDescription": "Rādīt Bitcoin, Ethereum un citus kripto aktīvus valūtu sarakstos.",
+      "cryptocurrency": "Kriptovalūta"
     },
     "aboutEqualTo": "Apmēram vienāds ar"
   },

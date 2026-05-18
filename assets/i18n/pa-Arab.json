@@ -103,9 +103,13 @@
         "mockNote": "اسٹینڈ اسٹون ایپ ڈیمو کے لیے فرضی حوالہ جاتی شرحیں۔",
         "fetching": "تازہ ترین USD حوالہ جات کی بازیافت کی جا رہی ہے...",
         "liveRatesLoaded": "ExchangeRate-API سے لائیو ریٹ لوڈ کیے گئے۔",
-        "liveUpdateUnavailable": "لائیو اپ ڈیٹ دستیاب نہیں ہے۔ مقامی طور پر ریفریش شدہ ڈیمو ریٹس۔"
+        "liveUpdateUnavailable": "لائیو اپ ڈیٹ دستیاب نہیں ہے۔ مقامی طور پر ریفریش شدہ ڈیمو ریٹس۔",
+        "partialRatesLoaded": "جہاں دستیاب ہیں وہاں تازہ ترین ریئل ٹائم ریٹس اپ ڈیٹ کیے گئے۔ باقی کے لیے بنڈلڈ فال بیک ڈیٹا استعمال کیا جا رہا ہے۔"
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "کرپٹو کرنسیاں",
+      "cryptoToggleDescription": "کرنسی فہرستوں میں بٹ کوائن، ایتھیریم اور دیگر کرپٹو اثاثے دکھائیں۔",
+      "cryptocurrency": "کرپٹو کرنسی"
     },
     "aboutEqualTo": "تقریباً مساوی"
   },

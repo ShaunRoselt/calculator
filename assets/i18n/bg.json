@@ -103,9 +103,13 @@
         "mockNote": "Фиктови референтни ставки за демонстрацията на самостоятелно приложение.",
         "fetching": "Извличане на най-новите референтни курсове в USD...",
         "liveRatesLoaded": "Техни курсове на живо, заредени от ExchangeRate-API.",
-        "liveUpdateUnavailable": "Не е налична актуализация на живо. Обновени демо цени на местно ниво."
+        "liveUpdateUnavailable": "Не е налична актуализация на живо. Обновени демо цени на местно ниво.",
+        "partialRatesLoaded": "Актуализирани живи курсове, където са налични. За останалите се използват вградени резервни данни."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Криптовалути",
+      "cryptoToggleDescription": "Покажи Bitcoin, Ethereum и други криптоактиви в списъците с валути.",
+      "cryptocurrency": "Криптовалута"
     },
     "aboutEqualTo": "Приблизително равно на"
   },

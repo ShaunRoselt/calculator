@@ -103,9 +103,13 @@
         "mockNote": "ናይ ላግጺ መወከሲ ደረጃታት ናይቲ ንበይኑ ዝሰርሕ ኣፕ ዲሞ።",
         "fetching": "እዋናዊ መወከሲ ዋጋታት USD ምምጻእ...",
         "liveRatesLoaded": "ካብ ExchangeRate-API ዝተጻዕኑ ቀጥታዊ ደረጃታት።",
-        "liveUpdateUnavailable": "ቀጥታዊ ምዕባለ ኣይርከብን። ኣብ ውሽጢ ዓዲ ዝተሓደሰ ናይ ዲሞ ደረጃታት።"
+        "liveUpdateUnavailable": "ቀጥታዊ ምዕባለ ኣይርከብን። ኣብ ውሽጢ ዓዲ ዝተሓደሰ ናይ ዲሞ ደረጃታት።",
+        "partialRatesLoaded": "ናይ ፍጥነት ዝተሻሻለ ዋጋታት ኣብ ዝተገኘ ቦታታት ኣሎት። ለቀሪ ብብንድል ዝተደረገ ዳታ እዩ ዘይተጠቐሙ።"
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "ክሪፕቶ ሰርፎታት",
+      "cryptoToggleDescription": "ቢትኮይን፣ ኢተርያምን እና ሓደ ካልኣይ ክሪፕቶ ንብረት ብዝርዝር ኣብ ዝተዛወረ ዝርዝር ይታውኣ።",
+      "cryptocurrency": "ክሪፕቶ ሰርፍ"
     },
     "aboutEqualTo": "ኣስታት ማዕረ..."
   },

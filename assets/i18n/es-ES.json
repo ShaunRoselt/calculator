@@ -103,9 +103,13 @@
         "mockNote": "Tasas de referencia simuladas para la demostración de la aplicación independiente.",
         "fetching": "Obteniendo las últimas tasas de referencia en USD...",
         "liveRatesLoaded": "Tarifas en vivo cargadas desde ExchangeRate-API.",
-        "liveUpdateUnavailable": "Actualización en vivo no disponible. Tarifas de demostración actualizadas a nivel local."
+        "liveUpdateUnavailable": "Actualización en vivo no disponible. Tarifas de demostración actualizadas a nivel local.",
+        "partialRatesLoaded": "Actualizadas las cotizaciones en tiempo real donde están disponibles. Usando datos de reserva incluidos para el resto."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Criptomonedas",
+      "cryptoToggleDescription": "Mostrar Bitcoin, Ethereum y otros activos cripto en las listas de monedas.",
+      "cryptocurrency": "Criptomoneda"
     },
     "aboutEqualTo": "Aproximadamente igual a"
   },

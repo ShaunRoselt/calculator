@@ -103,9 +103,13 @@
         "mockNote": "Skynverwysingskoerse vir die selfstandige toepassing-demo.",
         "fetching": "Besig om die nuutste USD-verwysingskoerse te haal...",
         "liveRatesLoaded": "Lewende koerse is vanaf ExchangeRate-API gelaai.",
-        "liveUpdateUnavailable": "Lewende opdatering is nie beskikbaar nie. Demo-koerse is plaaslik verfris."
+        "liveUpdateUnavailable": "Lewende opdatering is nie beskikbaar nie. Demo-koerse is plaaslik verfris.",
+        "partialRatesLoaded": "Gewys lewendige koersopdaterings waar beskikbaar. Gebruik ingeslote rugvaldata vir die res."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kriptogeldeenhede",
+      "cryptoToggleDescription": "Wys Bitcoin, Ethereum en ander kripto-bates in die geldeenheidslyste.",
+      "cryptocurrency": "Kriptogeldeenheid"
     },
     "aboutEqualTo": "Ongeveer gelyk aan"
   },

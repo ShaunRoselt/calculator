@@ -103,9 +103,13 @@
         "mockNote": "Sapanlla app demopaq tarifakuna referencia burlakuy.",
         "fetching": "Qhipa USD referencia tarifakunata apamuspa...",
         "liveRatesLoaded": "Kawsaq tarifakuna ExchangeRate-API kaqmanta kargasqa.",
-        "liveUpdateUnavailable": "Kawsaq musuqchayqa manam kanchu. Musuqyachisqa demo tarifakuna llaqtapi."
+        "liveUpdateUnavailable": "Kawsaq musuqchayqa manam kanchu. Musuqyachisqa demo tarifakuna llaqtapi.",
+        "partialRatesLoaded": "T’ikaq llarespa tasaqkuna actualizachkanqa mayqenpaqmi. Hinallataq qanchisqa backup-datakuna ruwachkanqa rikhuraykuta."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Cripto-monedas",
+      "cryptoToggleDescription": "Rikhiy Bitcoin, Ethereum hina imapaq cripto activos moneda listakunapi.",
+      "cryptocurrency": "Cripto-moneda"
     },
     "aboutEqualTo": "Yaqa kaqlla"
   },

@@ -103,9 +103,13 @@
         "mockNote": "Rati ta' referenza finta għad-demo tal-app waħedha.",
         "fetching": "Niġbru l-aħħar rati ta' referenza ta' USD...",
         "liveRatesLoaded": "Rati ħajjin mgħobbija minn ExchangeRate-API.",
-        "liveUpdateUnavailable": "Aġġornament dirett mhux disponibbli. Rati demo aggornati lokalment."
+        "liveUpdateUnavailable": "Aġġornament dirett mhux disponibbli. Rati demo aggornati lokalment.",
+        "partialRatesLoaded": "Iġġedded il-kotazzjonijiet ħajjin fejn disponibbli. Jintuża data ta' fallback imnixxfa għall-bqija."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kriptovaluti",
+      "cryptoToggleDescription": "Uriż Bitcoin, Ethereum u aktar assi crypto fil-listi tal-muniti.",
+      "cryptocurrency": "Kriptovaluta"
     },
     "aboutEqualTo": "Madwar ugwali għal"
   },

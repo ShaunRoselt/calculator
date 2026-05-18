@@ -103,9 +103,13 @@
         "mockNote": "Reeti tohutoro tawai mo te demo taupānga motuhake.",
         "fetching": "Tii ana i nga reiti tohutoro USD hou...",
         "liveRatesLoaded": "Ka utaina nga reiti mai i ExchangeRate-API.",
-        "liveUpdateUnavailable": "Karekau i te waatea te whakahou. Kua whakahoutia nga reiti demo i te rohe."
+        "liveUpdateUnavailable": "Karekau i te waatea te whakahou. Kua whakahoutia nga reiti demo i te rohe.",
+        "partialRatesLoaded": "Kua whakahoutia ngā reiti ora i ngā wāhi e wātea ana. E whakamahi ana i ngā raraunga taurewa kua piri mō te toenga."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Moni mokete-matau",
+      "cryptoToggleDescription": "Whakaatu i te Bitcoin, Ethereum, me ētahi atu rawa crypto i ngā rārangi moni.",
+      "cryptocurrency": "Moni crypto"
     },
     "aboutEqualTo": "Mo te rite ki"
   },

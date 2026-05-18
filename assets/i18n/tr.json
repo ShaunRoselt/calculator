@@ -103,9 +103,13 @@
         "mockNote": "Bağımsız uygulama demosu için örnek referans oranları.",
         "fetching": "En son USD referans oranları getiriliyor...",
         "liveRatesLoaded": "Canlı oranlar ExchangeRate-API'den yüklendi.",
-        "liveUpdateUnavailable": "Canlı güncelleme kullanılamıyor. Demo oranları yerel olarak yenilendi."
+        "liveUpdateUnavailable": "Canlı güncelleme kullanılamıyor. Demo oranları yerel olarak yenilendi.",
+        "partialRatesLoaded": "Mevcut yerlerde canlı kurlar güncellendi. Diğerleri için paketlenmiş yedek veriler kullanılıyor."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kripto paralar",
+      "cryptoToggleDescription": "Para listelerinde Bitcoin, Ethereum ve diğer kripto varlıkları göster.",
+      "cryptocurrency": "Kripto para"
     },
     "aboutEqualTo": "Yaklaşık olarak eşit"
   },

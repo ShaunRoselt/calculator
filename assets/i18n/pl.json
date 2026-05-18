@@ -103,9 +103,13 @@
         "mockNote": "Próbne stawki referencyjne dla samodzielnej wersji demonstracyjnej aplikacji.",
         "fetching": "Pobieram najnowsze kursy referencyjne USD...",
         "liveRatesLoaded": "Stawki aktualne załadowane z ExchangeRate-API.",
-        "liveUpdateUnavailable": "Aktualizacja na żywo niedostępna. Odświeżone stawki za demo lokalnie."
+        "liveUpdateUnavailable": "Aktualizacja na żywo niedostępna. Odświeżone stawki za demo lokalnie.",
+        "partialRatesLoaded": "Zaktualizowano kursy na żywo tam, gdzie dostępne. Dla pozostałych używane są dołączone dane zapasowe."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kryptowaluty",
+      "cryptoToggleDescription": "Pokaż Bitcoin, Ethereum i inne aktywa kryptograficzne na listach walut.",
+      "cryptocurrency": "Kryptowaluta"
     },
     "aboutEqualTo": "Mniej więcej tyle samo"
   },

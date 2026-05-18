@@ -103,9 +103,13 @@
         "mockNote": "स्टैंडअलोन ऐप डेमो के लिए नकली संदर्भ दरें।",
         "fetching": "नवीनतम USD संदर्भ दरें प्राप्त की जा रही हैं...",
         "liveRatesLoaded": "एक्सचेंजरेट-एपीआई से लाइव दरें लोड की गईं।",
-        "liveUpdateUnavailable": "लाइव अपडेट अनुपलब्ध है। स्थानीय स्तर पर ताज़ा डेमो दरें।"
+        "liveUpdateUnavailable": "लाइव अपडेट अनुपलब्ध है। स्थानीय स्तर पर ताज़ा डेमो दरें।",
+        "partialRatesLoaded": "जहाँ उपलब्ध हैं लाइव दरें अपडेट की गईं। बाकी के लिए बंडल किए गए बैकअप डेटा का उपयोग किया जा रहा है।"
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "क्रिप्टोकरेंसी",
+      "cryptoToggleDescription": "मुद्रा सूचियों में Bitcoin, Ethereum और अन्य क्रिप्टो संपत्तियाँ दिखाएँ।",
+      "cryptocurrency": "क्रिप्टोकरेंसी"
     },
     "aboutEqualTo": "लगभग बराबर"
   },

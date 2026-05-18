@@ -103,9 +103,13 @@
         "mockNote": "Litefiso tsa boikaketsi bakeng sa demo ea app e ikemetseng.",
         "fetching": "E lata litefiso tsa morao-rao tsa litšupiso tsa USD...",
         "liveRatesLoaded": "Lireite tsa hona joale tse tsoang ho ExchangeRate-API.",
-        "liveUpdateUnavailable": "Lintlafatso tsa Live ha li teng. Lireite tsa demo tse nchafalitsoeng sebakeng sa heno."
+        "liveUpdateUnavailable": "Lintlafatso tsa Live ha li teng. Lireite tsa demo tse nchafalitsoeng sebakeng sa heno.",
+        "partialRatesLoaded": "Litefiso tsa bophelo li ntlafalitsoe moo ho leng teng. Bakeng sa tse setseng re sebelisa data ea fallback e ipapisitse le sephuthelo."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Lichelete tsa crypto",
+      "cryptoToggleDescription": "Bontša Bitcoin, Ethereum le thepa e meng ea crypto lethathamong la lichelete.",
+      "cryptocurrency": "Chelete ea crypto"
     },
     "aboutEqualTo": "E ka ba ho lekana le"
   },

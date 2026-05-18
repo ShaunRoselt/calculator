@@ -103,9 +103,13 @@
         "mockNote": "Лажне референтне стопе за демонстрацију самосталне апликације.",
         "fetching": "Преузимање најновијих референтних стопа у УСД...",
         "liveRatesLoaded": "Тарифе уживо учитане из ЕкцхангеРате-АПИ-ја.",
-        "liveUpdateUnavailable": "Ажурирање уживо није доступно. Освежене демо цене локално."
+        "liveUpdateUnavailable": "Ажурирање уживо није доступно. Освежене демо цене локално.",
+        "partialRatesLoaded": "Ажуриране су живе цене где су доступне. За остало се користе уграђени резервни подаци."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Криптовалуте",
+      "cryptoToggleDescription": "Прикажи Bitcoin, Ethereum и друге крипто активе у списковима валута.",
+      "cryptocurrency": "Криптовалута"
     },
     "aboutEqualTo": "Отприлике једнако"
   },

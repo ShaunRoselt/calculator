@@ -103,9 +103,13 @@
         "mockNote": "Predskúšajte referenčné sadzby pre ukážku samostatnej aplikácie.",
         "fetching": "Načítavajú sa najnovšie referenčné sadzby USD...",
         "liveRatesLoaded": "Aktuálne kurzy načítané z ExchangeRate-API.",
-        "liveUpdateUnavailable": "Aktívna aktualizácia nie je k dispozícii. Miestne obnovené demo sadzby."
+        "liveUpdateUnavailable": "Aktívna aktualizácia nie je k dispozícii. Miestne obnovené demo sadzby.",
+        "partialRatesLoaded": "Aktualizované živé kurzy tam, kde sú dostupné. Pre zvyšok sa používajú zabudované záložné údaje."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kryptomeny",
+      "cryptoToggleDescription": "Zobraziť Bitcoin, Ethereum a ďalšie krypto aktíva v zoznamoch mien.",
+      "cryptocurrency": "Kryptomena"
     },
     "aboutEqualTo": "Približne sa rovná"
   },

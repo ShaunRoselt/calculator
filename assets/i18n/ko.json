@@ -103,9 +103,13 @@
         "mockNote": "독립형 앱 데모에 대한 모의 참조율입니다.",
         "fetching": "최신 USD 참조 환율을 가져오는 중...",
         "liveRatesLoaded": "ExchangeRate-API에서 로드된 실시간 환율입니다.",
-        "liveUpdateUnavailable": "라이브 업데이트를 사용할 수 없습니다. 현지 데모 요금이 새로워졌습니다."
+        "liveUpdateUnavailable": "라이브 업데이트를 사용할 수 없습니다. 현지 데모 요금이 새로워졌습니다.",
+        "partialRatesLoaded": "가능한 곳의 실시간 시세를 업데이트했습니다. 나머지는 번들된 대체 데이터 사용 중입니다."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "암호화폐",
+      "cryptoToggleDescription": "통화 목록에 비트코인, 이더리움 및 기타 암호 자산을 표시합니다.",
+      "cryptocurrency": "암호화폐"
     },
     "aboutEqualTo": "약 같음"
   },

@@ -103,9 +103,13 @@
         "mockNote": "ڕێژەی ئاماژەی گاڵتەجاڕی بۆ دیمۆی ئەپی سەربەخۆ.",
         "fetching": "وەرگرتنی نوێترین ڕێژەی ئاماژەی USD...",
         "liveRatesLoaded": "ڕێژەی ڕاستەوخۆ لە ExchangeRate-API بارکراوە.",
-        "liveUpdateUnavailable": "نوێکردنەوەی ڕاستەوخۆ بەردەست نییە. ڕێژەی دیمۆ نوێکراوەتەوە لە ناوخۆدا."
+        "liveUpdateUnavailable": "نوێکردنەوەی ڕاستەوخۆ بەردەست نییە. ڕێژەی دیمۆ نوێکراوەتەوە لە ناوخۆدا.",
+        "partialRatesLoaded": "نرخی زنده نوێکراوە لەو شوێنانەی بەردەست بوون. بۆ ماندووەکان داتای پشتیوانیی پەکەتی بەکاردێت."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "پارەی دراوەیی (کریپتو)",
+      "cryptoToggleDescription": "بیتکۆین، ئیتیریۆم و هەروەها دارایی کریپتۆی تریش نیشان بدە لە لیستی پارەکان.",
+      "cryptocurrency": "دارایی کریپتو"
     },
     "aboutEqualTo": "نزیکەی یەکسانە بە"
   },

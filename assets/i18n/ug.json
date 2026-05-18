@@ -103,9 +103,13 @@
         "mockNote": "مۇستەقىل ئەپ دېتالىنىڭ مەسخىرە پايدىلىنىش نىسبىتى.",
         "fetching": "ئەڭ يېڭى USD پايدىلىنىش نىسبىتىنى ئېلىش ...",
         "liveRatesLoaded": "ExchangeRate-API دىن يۈكلەنگەن نەق مەيدان نىسبىتى.",
-        "liveUpdateUnavailable": "نەق مەيدان يېڭىلاشنى ئىشلەتكىلى بولمايدۇ. يەرلىكتە كۆرسىتىش نىسبىتى يېڭىلاندى."
+        "liveUpdateUnavailable": "نەق مەيدان يېڭىلاشنى ئىشلەتكىلى بولمايدۇ. يەرلىكتە كۆرسىتىش نىسبىتى يېڭىلاندى.",
+        "partialRatesLoaded": "قولاي بولغان جايلاردا تۆۋەنكى نەۋقاتلىق باھالار يېڭىلاندى. قېلىپ قالغانلىرى ئۈچۈن قوشۇلغان زاپاس سانلىرى ئىشلىتىلىدۇ."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "كرىپتو پۇللار",
+      "cryptoToggleDescription": "ۋالۇتا تىزىملىكىدە Bitcoin، Ethereum ۋە باشقا كرىپتو مۈلۈكلەرنى كۆرسىتىڭ.",
+      "cryptocurrency": "كرىپتو پۇل"
     },
     "aboutEqualTo": "باراۋەر"
   },

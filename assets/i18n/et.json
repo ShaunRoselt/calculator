@@ -103,9 +103,13 @@
         "mockNote": "Iseloomuliku rakenduse demo viitemäärad.",
         "fetching": "Viimaste USD viitekursside toomine...",
         "liveRatesLoaded": "ExchangeRate-API-st laaditud reaalajas kursid.",
-        "liveUpdateUnavailable": "Reaalajas värskendus pole saadaval. Värskendatud demohinnad kohapeal."
+        "liveUpdateUnavailable": "Reaalajas värskendus pole saadaval. Värskendatud demohinnad kohapeal.",
+        "partialRatesLoaded": "Värskendatud reaalajas kursid, kus saadaval. Ülejäänute jaoks kasutatakse kaasa pakitud varudata."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Krüptovaluutad",
+      "cryptoToggleDescription": "Näita Bitcoin, Ethereum ja muid krüpto varasid valuutade nimekirjades.",
+      "cryptocurrency": "Krüptovaluuta"
     },
     "aboutEqualTo": "Umbes võrdne"
   },

@@ -103,9 +103,13 @@
         "mockNote": "អត្រាយោងក្លែងក្លាយសម្រាប់ការបង្ហាញកម្មវិធីដាច់ដោយឡែក។",
         "fetching": "កំពុងទាញយកអត្រាយោងចុងក្រោយបង្អស់របស់ USD...",
         "liveRatesLoaded": "អត្រាបន្តផ្ទាល់បានផ្ទុកពី ExchangeRate-API ។",
-        "liveUpdateUnavailable": "ការអាប់ដេតបន្តផ្ទាល់មិនមានទេ។ អត្រា​បង្ហាញ​សាកល្បង​ឡើងវិញ​ក្នុង​ស្រុក។"
+        "liveUpdateUnavailable": "ការអាប់ដេតបន្តផ្ទាល់មិនមានទេ។ អត្រា​បង្ហាញ​សាកល្បង​ឡើងវិញ​ក្នុង​ស្រុក។",
+        "partialRatesLoaded": "បានធ្វើបច្ចុប្បន្នភាពអត្រាពេលពិតនៅកន្លែងដែលមាន។ ការដែលនៅសល់កំពុងប្រើទិន្នន័យថែរក្សាដែលបានបញ្ចូល។"
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "រូបិយប័ណ្ណគ្រប់គ្រង",
+      "cryptoToggleDescription": "បង្ហាញ Bitcoin, Ethereum និងទ្រព្យសម្បត្តិក្រិបផ្សេងទៀតក្នុងបញ្ជីរូបិយប័ណ្ណ។",
+      "cryptocurrency": "រូបិយប័ណ្ណក្រិប"
     },
     "aboutEqualTo": "ប្រហែលស្មើនឹង"
   },

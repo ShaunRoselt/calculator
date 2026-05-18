@@ -103,9 +103,13 @@
         "mockNote": "Mock reference rates fer th' standalone app demo.",
         "fetching": "Fetching th' latest USD reference rates...",
         "liveRatesLoaded": "Live rates loaded from ExchangeRate-API.",
-        "liveUpdateUnavailable": "Live update unavailable. Refreshed demo rates locally."
+        "liveUpdateUnavailable": "Live update unavailable. Refreshed demo rates locally.",
+        "partialRatesLoaded": "Updated live rates where available. Usin' bundled fallback charts fer th' rest, ye scallywag."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Booty-Coins",
+      "cryptoToggleDescription": "Show Bitcoin, Ethereum, an' other crypto booty in th' currency lists, arrr!",
+      "cryptocurrency": "Crypto-Booty"
     },
     "aboutEqualTo": "About this vessel equal to"
   },

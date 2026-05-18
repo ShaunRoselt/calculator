@@ -103,9 +103,13 @@
         "mockNote": "Tarif referensi tiruan untuk demo aplikasi mandiri.",
         "fetching": "Mengambil kurs referensi USD terbaru...",
         "liveRatesLoaded": "Tarif langsung dimuat dari ExchangeRate-API.",
-        "liveUpdateUnavailable": "Pembaruan langsung tidak tersedia. Tarif demo yang diperbarui secara lokal."
+        "liveUpdateUnavailable": "Pembaruan langsung tidak tersedia. Tarif demo yang diperbarui secara lokal.",
+        "partialRatesLoaded": "Diperbarui tarif langsung jika tersedia. Menggunakan data cadangan bawaan untuk sisanya."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kriptokurensi",
+      "cryptoToggleDescription": "Tampilkan Bitcoin, Ethereum, dan aset kripto lainnya di daftar mata uang.",
+      "cryptocurrency": "Kriptokurensi"
     },
     "aboutEqualTo": "Hampir sama dengan"
   },

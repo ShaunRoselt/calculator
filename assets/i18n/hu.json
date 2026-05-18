@@ -103,9 +103,13 @@
         "mockNote": "Referencia-kamatláb az önálló alkalmazás bemutatójához.",
         "fetching": "A legújabb USD referencia-kamatláb lekérése...",
         "liveRatesLoaded": "Az ExchangeRate-API-ból betöltött élő árfolyamok.",
-        "liveUpdateUnavailable": "Az élő frissítés nem érhető el. Frissített demo árak helyben."
+        "liveUpdateUnavailable": "Az élő frissítés nem érhető el. Frissített demo árak helyben.",
+        "partialRatesLoaded": "Frissítve az élő árfolyamok, ahol elérhetők. A többiekhez beépített tartalék adatok használata folyamatban."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kriptovaluták",
+      "cryptoToggleDescription": "Bitcoin, Ethereum és egyéb kriptoeszközök megjelenítése a valutalistákban.",
+      "cryptocurrency": "Kriptovaluta"
     },
     "aboutEqualTo": "Körülbelül egyenlő"
   },

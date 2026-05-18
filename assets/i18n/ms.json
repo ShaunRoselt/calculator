@@ -103,9 +103,13 @@
         "mockNote": "Kadar rujukan olok-olok untuk tunjuk cara apl kendiri.",
         "fetching": "Mengambil kadar rujukan USD terkini...",
         "liveRatesLoaded": "Kadar langsung dimuatkan daripada ExchangeRate-API.",
-        "liveUpdateUnavailable": "Kemas kini langsung tidak tersedia. Kadar tunjuk cara diperbaharui secara tempatan."
+        "liveUpdateUnavailable": "Kemas kini langsung tidak tersedia. Kadar tunjuk cara diperbaharui secara tempatan.",
+        "partialRatesLoaded": "Kadar langsung dikemas kini di tempat yang tersedia. Menggunakan data sandaran terbina untuk selebihnya."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Mata wang kripto",
+      "cryptoToggleDescription": "Tunjukkan Bitcoin, Ethereum, dan aset kripto lain dalam senarai mata wang.",
+      "cryptocurrency": "Mata wang kripto"
     },
     "aboutEqualTo": "Kira-kira sama dengan"
   },

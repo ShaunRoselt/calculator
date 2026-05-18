@@ -103,9 +103,13 @@
         "mockNote": "Amanani okulingisa ereferensi wedemo ezimele yohlelo.",
         "fetching": "Kulandwa amanani akamuva ereferensi e-USD...",
         "liveRatesLoaded": "Amanani bukhoma alayishwe kusuka ku-ExchangeRate-API.",
-        "liveUpdateUnavailable": "Ukuvuselela bukhoma akutholakali. Amanani edemo avuselelwe endaweni."
+        "liveUpdateUnavailable": "Ukuvuselela bukhoma akutholakali. Amanani edemo avuselelwe endaweni.",
+        "partialRatesLoaded": "Amanani bukhoma abuyekeziwe lapho etholakala. Kusetshenziswa idatha yokusekelayo efakwe epaketheni kwezinye."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Izimali ze-crypto",
+      "cryptoToggleDescription": "Khombisa iBitcoin, iEthereum nezinye izimpahla ze-crypto ohlwini lwezimali.",
+      "cryptocurrency": "Imali ye-crypto"
     },
     "aboutEqualTo": "Cishe kulingana no"
   },

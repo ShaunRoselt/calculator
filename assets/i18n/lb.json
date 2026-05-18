@@ -103,9 +103,13 @@
         "mockNote": "Mock Referenzraten fir déi standalone App Demo.",
         "fetching": "Fëllt déi lescht USD Referenzraten ...",
         "liveRatesLoaded": "Live Tariffer gelueden vum ExchangeRate-API.",
-        "liveUpdateUnavailable": "Live Update net verfügbar. Erfrëscht Demo Tariffer lokal."
+        "liveUpdateUnavailable": "Live Update net verfügbar. Erfrëscht Demo Tariffer lokal.",
+        "partialRatesLoaded": "Live-Kurse goungen aktualiséiert wou disponibel. Fir de Rescht ginn agebaute Fallback-Daten benotzt."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kryptowährungen",
+      "cryptoToggleDescription": "Weist Bitcoin, Ethereum an aner Krypto-Aktiven an de Währungslisten aus.",
+      "cryptocurrency": "Kryptowährung"
     },
     "aboutEqualTo": "Ongeféier gläich wéi"
   },

@@ -103,9 +103,13 @@
         "mockNote": "Ditekanyetso tsa tshupiso tsa mock tsa pontsho ya tiriswa e e ikemetseng.",
         "fetching": "Go tsaya ditlhwatlhwa tsa bosheng tsa USD...",
         "liveRatesLoaded": "Ditlhwatlhwa tse di tshelang di laisitswe go tswa go API ya Tlhwatlhwa ya Phapantsho.",
-        "liveUpdateUnavailable": "Ntšhwafatso ya ka tlhamalalo ga e yo. Ditlhwatlhwa tsa pontsho tse di ntšhwafaditsweng mo lefelong la gaeno."
+        "liveUpdateUnavailable": "Ntšhwafatso ya ka tlhamalalo ga e yo. Ditlhwatlhwa tsa pontsho tse di ntšhwafaditsweng mo lefelong la gaeno.",
+        "partialRatesLoaded": "Ditheko tsa nako ya nnete di ntshetswe pele fa di mo teng. Go dirisiwa data ya fallback e bunditswe bakeng sa tse dingwe."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Ditcha tsa crypto",
+      "cryptoToggleDescription": "Bontsha Bitcoin, Ethereum le dithoto tse dingwe tsa crypto mo lenaneng la ditshupetso tsa madi.",
+      "cryptocurrency": "Ditcha tsa crypto"
     },
     "aboutEqualTo": "E ka nna e lekana le"
   },

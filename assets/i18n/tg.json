@@ -103,9 +103,13 @@
         "mockNote": "Меъёрҳои тақаллубӣ барои намоиши барномаи мустақил.",
         "fetching": "Қурбҳои охирини истинод ба доллари ИМА гирифта мешаванд...",
         "liveRatesLoaded": "Қурбҳои зинда аз ExchangeRate-API бор карда шудаанд.",
-        "liveUpdateUnavailable": "Навсозии зинда дастрас нест. Қурбҳои намоишии навшуда дар сатҳи маҳаллӣ."
+        "liveUpdateUnavailable": "Навсозии зинда дастрас нест. Қурбҳои намоишии навшуда дар сатҳи маҳаллӣ.",
+        "partialRatesLoaded": "Нархи зинда дар ҷойҳое, ки дастрас аст, навсозӣ шуд. Барои боқимонда маълумоти захиравии баста истифода мешавад."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Криптовалютҳо",
+      "cryptoToggleDescription": "Намуд диҳед Bitcoin, Ethereum ва дигар дороиҳои крипто дар феҳристҳои асъор.",
+      "cryptocurrency": "Криптовалюта"
     },
     "aboutEqualTo": "Тақрибан баробар ба"
   },

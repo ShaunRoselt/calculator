@@ -103,9 +103,13 @@
         "mockNote": "Примерни референтни стапки за самостојна демо апликација.",
         "fetching": "Се преземаат најновите референтни стапки во УСД...",
         "liveRatesLoaded": "Стапките во живо се вчитани од ExchangeRate-API.",
-        "liveUpdateUnavailable": "Недостапно е ажурирање во живо. Обновени демо стапки локално."
+        "liveUpdateUnavailable": "Недостапно е ажурирање во живо. Обновени демо стапки локално.",
+        "partialRatesLoaded": "Ажурирани живи курсеви каде што се достапни. За остатокот се користат вградените резервни податоци."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Криптовалути",
+      "cryptoToggleDescription": "Прикажи Bitcoin, Ethereum и други крипто‑активи во листите на валути.",
+      "cryptocurrency": "Криптовалута"
     },
     "aboutEqualTo": "Околу еднакво на"
   },

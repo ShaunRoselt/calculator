@@ -103,9 +103,13 @@
         "mockNote": "Müstəqil tətbiq demosu üçün saxta istinad qiymətləri.",
         "fetching": "Son ABŞ dolları istinad məzənnələri əldə edilir...",
         "liveRatesLoaded": "Canlı məzənnələr ExchangeRate-API-dən yüklənib.",
-        "liveUpdateUnavailable": "Canlı yeniləmə mövcud deyil. Yerli olaraq yenilənmiş demo dərəcələri."
+        "liveUpdateUnavailable": "Canlı yeniləmə mövcud deyil. Yerli olaraq yenilənmiş demo dərəcələri.",
+        "partialRatesLoaded": "Canlı məzənnələr mövcud olduqda yeniləndi. Qalan üçün paketlənmiş ehtiyat məlumatları istifadə olunur."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kriptovalyutalar",
+      "cryptoToggleDescription": "Valyuta siyahılarında Bitcoin, Ethereum və digər kripto aktivləri göstər.",
+      "cryptocurrency": "Kriptovalyuta"
     },
     "aboutEqualTo": "Təxminən bərabərdir"
   },

@@ -103,9 +103,13 @@
         "mockNote": "Vysmívejte se referenčním sazbám pro ukázku samostatné aplikace.",
         "fetching": "Načítání nejnovějších referenčních sazeb v USD...",
         "liveRatesLoaded": "Aktuální sazby načteny z ExchangeRate-API.",
-        "liveUpdateUnavailable": "Živá aktualizace není k dispozici. Aktualizované demo sazby lokálně."
+        "liveUpdateUnavailable": "Živá aktualizace není k dispozici. Aktualizované demo sazby lokálně.",
+        "partialRatesLoaded": "Aktualizovány živé kurzy tam, kde jsou dostupné. Pro zbytek se používají zabudovaná data jako záloha."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kryptoměny",
+      "cryptoToggleDescription": "Zobrazit Bitcoin, Ethereum a další kryptoměny v seznamech měn.",
+      "cryptocurrency": "Kryptoměna"
     },
     "aboutEqualTo": "Přibližně rovno"
   },

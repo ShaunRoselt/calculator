@@ -103,9 +103,13 @@
         "mockNote": "Tolluwaayu royuwaay yu ñaaw ngir demo aplikaasioŋ bi nekk boppam.",
         "fetching": "Dañuy jël njëgu royuwaay bi mujjee ci USD...",
         "liveRatesLoaded": "Njëg yiy dundu ñu ngi ko jëlee ci API-Njëg weccoo.",
-        "liveUpdateUnavailable": "Amul yeesal ci saasi. Yeesal njëgu demo ci dëkk bi."
+        "liveUpdateUnavailable": "Amul yeesal ci saasi. Yeesal njëgu demo ci dëkk bi.",
+        "partialRatesLoaded": "Ndogalu yu live jox nañu ci bi ñu am. Ndaxaloon nañu data yu fallback bu am ci pakkét bi ngir beneen."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Cryptomonedes",
+      "cryptoToggleDescription": "Wax Bitcoin, Ethereum ak ay jafe‑jafe crypto ci lëstukaay yu monnaie.",
+      "cryptocurrency": "Cryptomonede"
     },
     "aboutEqualTo": "Lu tollu ci"
   },

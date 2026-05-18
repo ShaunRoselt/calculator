@@ -103,9 +103,13 @@
         "mockNote": "שיעורי התייחסות מדומים עבור הדגמת האפליקציה העצמאית.",
         "fetching": "מביא את שיעורי הייחוס העדכניים ביותר של דולר ארה\"ב...",
         "liveRatesLoaded": "תעריפים בזמן אמת נטענו מ- ExchangeRate-API.",
-        "liveUpdateUnavailable": "עדכון חי לא זמין. רענון תעריפי הדגמה מקומית."
+        "liveUpdateUnavailable": "עדכון חי לא זמין. רענון תעריפי הדגמה מקומית.",
+        "partialRatesLoaded": "עודכנו שערים בזמן אמת במקומות שבהם זמינים. נעשה שימוש בנתוני גיבוי כלולים לשאר."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "מטבעות קריפטו",
+      "cryptoToggleDescription": "הצג ביטקוין, את'ריום ונכסי קריפטו נוספים ברשימות המטבעות.",
+      "cryptocurrency": "מטבע קריפטו"
     },
     "aboutEqualTo": "בערך שווה ל"
   },

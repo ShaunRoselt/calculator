@@ -103,9 +103,13 @@
         "mockNote": "Beispiel-Referenzkurse für die eigenständige App-Demo.",
         "fetching": "Neueste USD-Referenzkurse werden abgerufen...",
         "liveRatesLoaded": "Live-Kurse wurden von ExchangeRate-API geladen.",
-        "liveUpdateUnavailable": "Live-Aktualisierung nicht verfügbar. Demo-Kurse wurden lokal aktualisiert."
+        "liveUpdateUnavailable": "Live-Aktualisierung nicht verfügbar. Demo-Kurse wurden lokal aktualisiert.",
+        "partialRatesLoaded": "Live‑Kurse dort aktualisiert, wo verfügbar. Für den Rest werden eingebettete Fallback‑Daten verwendet."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kryptowährungen",
+      "cryptoToggleDescription": "Bitcoin, Ethereum und andere Krypto‑Assets in den Währungslisten anzeigen.",
+      "cryptocurrency": "Kryptowährung"
     },
     "aboutEqualTo": "Ungefähr gleich"
   },

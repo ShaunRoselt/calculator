@@ -103,9 +103,13 @@
         "mockNote": "K'ex taq ch'ich' pa ruwi' ch'ich' chik.",
         "fetching": "K'ayij ch'ich' chik pa ruwi' USD...",
         "liveRatesLoaded": "K'ex taq ch'ich' chik pa ExchangeRate-API.",
-        "liveUpdateUnavailable": "Man k'ex taq ch'ich' chik ta. K'ex taq ch'ich' chik pa ruwi' ch'ich'."
+        "liveUpdateUnavailable": "Man k'ex taq ch'ich' chik ta. K'ex taq ch'ich' chik pa ruwi' ch'ich'.",
+        "partialRatesLoaded": "Ruq'ux k'utaj k'utun raxk'ux ri q'atel ri utzil. Ri kumatz'anel ruwäch ri q'anil jalajuj."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Cripto-monedas",
+      "cryptoToggleDescription": "Ruxq'ij Bitcoin, Ethereum chik ri uxlab'äl ch'akulaj k'amama' pa lista ruxaq'ij.",
+      "cryptocurrency": "Cripto-moneda"
     },
     "aboutEqualTo": "K'ayij ch'ich'"
   },

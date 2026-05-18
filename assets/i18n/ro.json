@@ -103,9 +103,13 @@
         "mockNote": "Rate de referință simulate pentru demonstrația aplicației autonome.",
         "fetching": "Se preiau cele mai recente rate de referință USD...",
         "liveRatesLoaded": "Rate live încărcate din ExchangeRate-API.",
-        "liveUpdateUnavailable": "Actualizare live indisponibilă. Tarife demo actualizate la nivel local."
+        "liveUpdateUnavailable": "Actualizare live indisponibilă. Tarife demo actualizate la nivel local.",
+        "partialRatesLoaded": "Actualizate cotele live acolo unde sunt disponibile. Pentru rest se folosesc date de rezervă incluse."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Criptomonede",
+      "cryptoToggleDescription": "Afișează Bitcoin, Ethereum și alte active cripto în listele de monede.",
+      "cryptocurrency": "Criptomonedă"
     },
     "aboutEqualTo": "Aproximativ egal cu"
   },

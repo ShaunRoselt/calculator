@@ -103,9 +103,13 @@
         "mockNote": "Igipimo cyerekana urwenya kuri demo ya porogaramu yihariye.",
         "fetching": "Kubona ibiciro bya USD biheruka ...",
         "liveRatesLoaded": "Ibiciro bizima biva kuri ExchangeRate-API.",
-        "liveUpdateUnavailable": "Kuvugurura Live ntibishoboka. Igipimo cya demo cyavuguruwe mukarere."
+        "liveUpdateUnavailable": "Kuvugurura Live ntibishoboka. Igipimo cya demo cyavuguruwe mukarere.",
+        "partialRatesLoaded": "Amakoro y'ubuzima avuguruwe aho aboneka. Hakoreshejwe amakuru y'inyongera ari mu gikapu ku bindi."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Amafaranga ya crypto",
+      "cryptoToggleDescription": "Erekana Bitcoin, Ethereum n'andi masoko ya crypto mu rutonde rw'amafaranga.",
+      "cryptocurrency": "Ifaranga rya crypto"
     },
     "aboutEqualTo": "Bingana na"
   },

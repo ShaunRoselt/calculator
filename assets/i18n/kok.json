@@ -103,9 +103,13 @@
         "mockNote": "स्टँडअलोन ऍप्लिकेशन डेमो खातीर संदर्भ दर मॉक करात.",
         "fetching": "नजें USD संदर्भ दर मेळोवप...",
         "liveRatesLoaded": "ExchangeRate-API कडल्यान लोड केल्ले लायव्ह दर.",
-        "liveUpdateUnavailable": "लायव्ह अपडेट उपलब्ध ना. थळाव्यान ताजे केल्ले डेमो दर."
+        "liveUpdateUnavailable": "लायव्ह अपडेट उपलब्ध ना. थळाव्यान ताजे केल्ले डेमो दर.",
+        "partialRatesLoaded": "उपलब्ध स्थानांवर थेट दर अपडेट केल्या. उर्वरा भागासाठी बंडल केलेला बॅकअप डेटा वापरता येत आहे."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "क्रिप्टो करन्सीज",
+      "cryptoToggleDescription": "करन्सी यादीत Bitcoin, Ethereum आणि इतर क्रिप्टो मालमत्ता दर्शवा.",
+      "cryptocurrency": "क्रिप्टो करन्सी"
     },
     "aboutEqualTo": "सुमार इतले"
   },

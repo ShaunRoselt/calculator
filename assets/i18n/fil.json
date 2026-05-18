@@ -103,9 +103,13 @@
         "mockNote": "Mock reference rate para sa standalone na app demo.",
         "fetching": "Kinukuha ang pinakabagong USD reference rate...",
         "liveRatesLoaded": "Na-load ang mga live na rate mula sa ExchangeRate-API.",
-        "liveUpdateUnavailable": "Hindi available ang live na update. Lokal na ni-refresh ang mga demo rate."
+        "liveUpdateUnavailable": "Hindi available ang live na update. Lokal na ni-refresh ang mga demo rate.",
+        "partialRatesLoaded": "Na-update ang live rates kung saan available. Gumagamit ng naka-bundle na fallback data para sa iba."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Mga kriptomoneda",
+      "cryptoToggleDescription": "Ipakita ang Bitcoin, Ethereum, at iba pang crypto asset sa listahan ng mga pera.",
+      "cryptocurrency": "Kriptomoneda"
     },
     "aboutEqualTo": "Tungkol sa katumbas ng"
   },

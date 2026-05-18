@@ -103,9 +103,13 @@
         "mockNote": "Illitetyt viitehinnat erilliselle sovelluksen esittelylle.",
         "fetching": "Noudetaan viimeisimmät USD-viitekurssit...",
         "liveRatesLoaded": "ExchangeRate-API:sta ladatut reaaliaikaiset hinnat.",
-        "liveUpdateUnavailable": "Live päivitys ei ole saatavilla. Päivitetyt demohinnat paikallisesti."
+        "liveUpdateUnavailable": "Live päivitys ei ole saatavilla. Päivitetyt demohinnat paikallisesti.",
+        "partialRatesLoaded": "Päivitetty reaaliaikahinnat siellä, missä saatavilla. Muuhun käytetään mukana tulevaa varadatan pakettia."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kryptovaluutat",
+      "cryptoToggleDescription": "Näytä Bitcoin, Ethereum ja muut kryptovarallisuudet valuuttalistoissa.",
+      "cryptocurrency": "Kryptovaluutta"
     },
     "aboutEqualTo": "Suurin verran"
   },

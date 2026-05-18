@@ -103,9 +103,13 @@
         "mockNote": "أسعار مرجعية وهمية للعرض التوضيحي للتطبيق المستقل.",
         "fetching": "جارٍ جلب أحدث الأسعار المرجعية للدولار الأمريكي...",
         "liveRatesLoaded": "تم تحميل الأسعار المباشرة من ExchangeRate-API.",
-        "liveUpdateUnavailable": "التحديث المباشر غير متاح. تحديث الأسعار التجريبية محليًا."
+        "liveUpdateUnavailable": "التحديث المباشر غير متاح. تحديث الأسعار التجريبية محليًا.",
+        "partialRatesLoaded": "تحديث الأسعار الحية حيثما توفرت. سيتم استخدام بيانات احتياطية مضمنة للباقي."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "العملات المشفّرة",
+      "cryptoToggleDescription": "اعرض بيتكوين، إيثيريوم، وأصول التشفير الأخرى في قوائم العملات.",
+      "cryptocurrency": "عملة مشفّرة"
     },
     "aboutEqualTo": "حوالي يساوي"
   },

@@ -103,9 +103,13 @@
         "mockNote": "Aplikazio autonomoaren demoaren erreferentzia-tasak simulatu.",
         "fetching": "USDaren azken erreferentzia-tasak eskuratzen...",
         "liveRatesLoaded": "ExchangeRate-APItik kargatu dira zuzeneko tarifak.",
-        "liveUpdateUnavailable": "Zuzenean eguneratzea ez dago erabilgarri. Demo-tasa freskatuak lokalean."
+        "liveUpdateUnavailable": "Zuzenean eguneratzea ez dago erabilgarri. Demo-tasa freskatuak lokalean.",
+        "partialRatesLoaded": "Eguneratu dira biziko tasak non eskuragarri dauden. Gainerakoak pakatutako babes-datak erabiltzen ditu."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kripto-monetak",
+      "cryptoToggleDescription": "Erakutsi Bitcoin, Ethereum eta beste kripto aktiboak moneta zerrendetan.",
+      "cryptocurrency": "Kripto-moneta"
     },
     "aboutEqualTo": "Gutxi gorabehera berdina"
   },

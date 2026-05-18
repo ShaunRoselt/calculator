@@ -103,9 +103,13 @@
         "mockNote": "Voorbeeldreferentiekoersen voor de zelfstandige app-demo.",
         "fetching": "Bezig met ophalen van de nieuwste USD-referentiekoersen...",
         "liveRatesLoaded": "Live-koersen geladen van ExchangeRate-API.",
-        "liveUpdateUnavailable": "Live-update niet beschikbaar. Demo-koersen lokaal vernieuwd."
+        "liveUpdateUnavailable": "Live-update niet beschikbaar. Demo-koersen lokaal vernieuwd.",
+        "partialRatesLoaded": "Livekoersen bijgewerkt waar beschikbaar. Voor de rest worden ingebouwde fallback‑gegevens gebruikt."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Cryptocurrencies",
+      "cryptoToggleDescription": "Toon Bitcoin, Ethereum en andere crypto‑assets in de valutalijsten.",
+      "cryptocurrency": "Cryptocurrency"
     },
     "aboutEqualTo": "Ongeveer gelijk aan"
   },

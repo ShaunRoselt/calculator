@@ -103,9 +103,13 @@
         "mockNote": "ਸਟੈਂਡਅਲੋਨ ਐਪ ਡੈਮੋ ਲਈ ਨਕਲੀ ਹਵਾਲਾ ਦਰਾਂ।",
         "fetching": "ਨਵੀਨਤਮ USD ਸੰਦਰਭ ਦਰਾਂ ਪ੍ਰਾਪਤ ਕੀਤੀਆਂ ਜਾ ਰਹੀਆਂ ਹਨ...",
         "liveRatesLoaded": "ExchangeRate-API ਤੋਂ ਲੋਡ ਕੀਤੀਆਂ ਲਾਈਵ ਦਰਾਂ।",
-        "liveUpdateUnavailable": "ਲਾਈਵ ਅੱਪਡੇਟ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਤਾਜ਼ਾ ਡੈਮੋ ਦਰਾਂ।"
+        "liveUpdateUnavailable": "ਲਾਈਵ ਅੱਪਡੇਟ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਤਾਜ਼ਾ ਡੈਮੋ ਦਰਾਂ।",
+        "partialRatesLoaded": "ਜਿੱਥੇ ਉਪਲਬਧ ਹਨ ਉਥੇ ਲਾਈਵ ਰੇਟ ਅਪਡੇਟ ਕੀਤੀਆਂ ਗਈਆਂ। ਬਾਕੀ ਲਈ ਬੰਡਲ ਕੀਤੇ ਗਏ ਫਾਲਬੈਕ ਡੇਟਾ ਦਾ ਉਪਯੋਗ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ।"
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "ਕ੍ਰਿਪ੍ਟੋਕਰਨਸੀਆਂ",
+      "cryptoToggleDescription": "ਮੁਦਰਾ ਸੂਚੀਵਾਂ ਵਿੱਚ Bitcoin, Ethereum ਅਤੇ ਹੋਰ ਕਰਿਪਟੋ ਸੰਪਤੀਆਂ ਦਿਖਾਓ।",
+      "cryptocurrency": "ਕ੍ਰਿਪ੍ਟੋਕਰਨਸੀ"
     },
     "aboutEqualTo": "ਲਗਭਗ ਬਰਾਬਰ"
   },

@@ -103,9 +103,13 @@
         "mockNote": "Аерым кушымта демо өчен мыскыллау ставкалары.",
         "fetching": "Соңгы АКШ доллары сылтамаларын алу ...",
         "liveRatesLoaded": "LiveRate-API'тан йөкләнгән тере тарифлар.",
-        "liveUpdateUnavailable": "Тере яңарту мөмкин түгел. локаль рәвештә яңартылган демо ставкалары."
+        "liveUpdateUnavailable": "Тере яңарту мөмкин түгел. локаль рәвештә яңартылган демо ставкалары.",
+        "partialRatesLoaded": "Турыдан‑туры күрсәткечләр кирәкле урыннарда яңартылды. Калганнары өчен урнаштырылган резерв мәгълүматы кулланыла."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Криптовалюталар",
+      "cryptoToggleDescription": "Валюталар исемлегендә Bitcoin, Ethereum һәм башка крипто активларын күрсәтү.",
+      "cryptocurrency": "Криптовалюта"
     },
     "aboutEqualTo": "Тигез"
   },

@@ -103,9 +103,13 @@
         "mockNote": "স্বাধীন এপ ডেমোৰ বাবে মক ৰেফাৰেন্স হাৰ।",
         "fetching": "শেহতীয়া USD ৰেফাৰেন্স হাৰৰ সন্ধান...",
         "liveRatesLoaded": "ExchangeRate-API ৰ পৰা লাইভ হাৰ লোড কৰা হৈছে।",
-        "liveUpdateUnavailable": "লাইভ আপডেট উপলব্ধ নহয়। স্থানীয়ভাৱে সতেজ কৰা ডেমো হাৰ।"
+        "liveUpdateUnavailable": "লাইভ আপডেট উপলব্ধ নহয়। স্থানীয়ভাৱে সতেজ কৰা ডেমো হাৰ।",
+        "partialRatesLoaded": "ৰিয়েল টাইম মূল্য উপলব্ধ থকা ঠাইত আপডে'ট কৰা হৈছে। অবশিষ্টৰ বাবে সংলগ্ন বিপৰীত ডাটা ব্যৱহাৰ কৰি আছে।"
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "ক্ৰিপ্ট'কৰণচী",
+      "cryptoToggleDescription": "মুদ্ৰা তালিকাত বিটকয়েন, ইথেৰিয়াম, আৰু অন্য ক্ৰিপ্টো সম্পদ দেখুৱাওক।",
+      "cryptocurrency": "ক্ৰিপ্ট'কৰণচী"
     },
     "aboutEqualTo": "প্ৰায় সমান"
   },

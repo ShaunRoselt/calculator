@@ -103,9 +103,13 @@
         "mockNote": "Awọn oṣuwọn itọkasi ẹgan fun demo ohun elo adaduro.",
         "fetching": "Ngba awọn oṣuwọn itọkasi USD tuntun wa...",
         "liveRatesLoaded": "Awọn oṣuwọn ifiwe ti kojọpọ lati ExchangeRate-API.",
-        "liveUpdateUnavailable": "Imudojuiwọn laaye ko si. Awọn oṣuwọn demo isọdọtun ni agbegbe."
+        "liveUpdateUnavailable": "Imudojuiwọn laaye ko si. Awọn oṣuwọn demo isọdọtun ni agbegbe.",
+        "partialRatesLoaded": "A ti ṣe imudojuiwọn oṣuwọn laaye nibiti o ti wa. Nlo data agbapada ti a ṣe pọ fun iyokù."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Owó ìkọ́lé-àyelujara (crypto)",
+      "cryptoToggleDescription": "Fi Bitcoin, Ethereum, ati awọn ohun-ini crypto miiran han ninu awọn atokọ owo.",
+      "cryptocurrency": "Owó crypto"
     },
     "aboutEqualTo": "Nipa dọgba si"
   },

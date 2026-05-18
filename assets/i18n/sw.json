@@ -103,9 +103,13 @@
         "mockNote": "Bei za marejeleo za majaribio za onyesho la programu inayojitegemea.",
         "fetching": "Inaleta viwango vipya zaidi vya marejeleo vya USD...",
         "liveRatesLoaded": "Bei za moja kwa moja zilizopakiwa kutoka ExchangeRate-API.",
-        "liveUpdateUnavailable": "Sasisho la moja kwa moja halipatikani. Imerejesha viwango vya onyesho ndani ya nchi."
+        "liveUpdateUnavailable": "Sasisho la moja kwa moja halipatikani. Imerejesha viwango vya onyesho ndani ya nchi.",
+        "partialRatesLoaded": "Viwango vya moja kwa moja vimeboreshwa pale vinapopatikana. Kutumika data ya ziada iliyojumuishwa kwa mabaki."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Sarafu za crypto",
+      "cryptoToggleDescription": "Onyesha Bitcoin, Ethereum, na mali nyingine za crypto katika orodha za sarafu.",
+      "cryptocurrency": "Sarafu ya crypto"
     },
     "aboutEqualTo": "Takriban sawa na"
   },

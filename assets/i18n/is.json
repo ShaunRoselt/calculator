@@ -103,9 +103,13 @@
         "mockNote": "Skemmtileg viðmiðunarhlutföll fyrir sjálfstæða forritasýninguna.",
         "fetching": "Sækir nýjustu viðmiðunargengi Bandaríkjadala...",
         "liveRatesLoaded": "Gengi í beinni hlaðið frá ExchangeRate-API.",
-        "liveUpdateUnavailable": "Bein uppfærsla ekki tiltæk. Uppfært kynningarverð á staðnum."
+        "liveUpdateUnavailable": "Bein uppfærsla ekki tiltæk. Uppfært kynningarverð á staðnum.",
+        "partialRatesLoaded": "Uppfærðar rauntímagengur þar sem í boði. Notar innbyggð varagögn fyrir rest."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Dulritun",
+      "cryptoToggleDescription": "Sýna Bitcoin, Ethereum og aðrar dulritaeignir í gjaldmiðlasniðum.",
+      "cryptocurrency": "Dulritunargjaldmiðill"
     },
     "aboutEqualTo": "Um það bil jafnt og"
   },

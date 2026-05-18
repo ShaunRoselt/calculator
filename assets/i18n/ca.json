@@ -103,9 +103,13 @@
         "mockNote": "Tarifas de referència simulades per a la demostració de l'aplicació autònoma.",
         "fetching": "S'estan obtenint les últimes taxes de referència en USD...",
         "liveRatesLoaded": "Tarifes en directe carregades des de l'API ExchangeRate.",
-        "liveUpdateUnavailable": "Actualització en directe no disponible. Tarifes de demostració actualitzades a nivell local."
+        "liveUpdateUnavailable": "Actualització en directe no disponible. Tarifes de demostració actualitzades a nivell local.",
+        "partialRatesLoaded": "S'han actualitzat les tarifes en directe on estan disponibles. S'utilitzen dades de reserva agrupades per a la resta."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Criptomonedes",
+      "cryptoToggleDescription": "Mostra Bitcoin, Ethereum i altres actius criptogràfics a les llistes de divises.",
+      "cryptocurrency": "Criptomoneda"
     },
     "aboutEqualTo": "Aproximadament igual a"
   },

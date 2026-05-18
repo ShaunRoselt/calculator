@@ -103,9 +103,13 @@
         "mockNote": "Apsimetinėti atskiros programos demonstracinės versijos orientaciniai kursai.",
         "fetching": "Gaunami naujausi USD orientaciniai kursai...",
         "liveRatesLoaded": "Tiesioginiai kursai įkelti iš „ExchangeRate-API“.",
-        "liveUpdateUnavailable": "Tiesioginis atnaujinimas nepasiekiamas. Atnaujinti demonstraciniai kursai vietoje."
+        "liveUpdateUnavailable": "Tiesioginis atnaujinimas nepasiekiamas. Atnaujinti demonstraciniai kursai vietoje.",
+        "partialRatesLoaded": "Atnaujinti gyvi kursai, kur prieinami. Likusiems naudojami įtraukti atsarginiai duomenys."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kriptovaliutos",
+      "cryptoToggleDescription": "Rodyti Bitcoin, Ethereum ir kitas kripto turto rūšis valiutų sąrašuose.",
+      "cryptocurrency": "Kriptovaliuta"
     },
     "aboutEqualTo": "Maždaug lygus"
   },

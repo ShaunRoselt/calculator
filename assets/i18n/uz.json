@@ -103,9 +103,13 @@
         "mockNote": "Mustaqil ilova demosi uchun soxta maʼlumot stavkalari.",
         "fetching": "AQSh dollarining oxirgi maʼlumot kurslari olinmoqda...",
         "liveRatesLoaded": "ExchangeRate-API dan yuklangan jonli tariflar.",
-        "liveUpdateUnavailable": "Jonli yangilanish mavjud emas. Mahalliy demo stavkalari yangilandi."
+        "liveUpdateUnavailable": "Jonli yangilanish mavjud emas. Mahalliy demo stavkalari yangilandi.",
+        "partialRatesLoaded": "Mavjud joylarda jonli kurslar yangilandi. Qolganlari uchun paketlangan zaxira ma'lumotlari ishlatilmoqda."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Kriptovalyutalar",
+      "cryptoToggleDescription": "Valyuta ro'yxatlarida Bitcoin, Ethereum va boshqa kripto aktivlarni ko'rsatish.",
+      "cryptocurrency": "Kriptovalyuta"
     },
     "aboutEqualTo": "Taxminan teng"
   },

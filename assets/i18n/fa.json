@@ -103,9 +103,13 @@
         "mockNote": "نرخ‌های مرجع ساختگی برای نسخه نمایشی برنامه مستقل.",
         "fetching": "در حال واکشی آخرین نرخ‌های مرجع USD...",
         "liveRatesLoaded": "نرخ‌های زنده از ExchangeRate-API بارگیری شده است.",
-        "liveUpdateUnavailable": "به‌روزرسانی زنده در دسترس نیست. نرخ های نسخه ی نمایشی به صورت محلی به روز شده است."
+        "liveUpdateUnavailable": "به‌روزرسانی زنده در دسترس نیست. نرخ های نسخه ی نمایشی به صورت محلی به روز شده است.",
+        "partialRatesLoaded": "نرخ‌های لحظه‌ای در دسترس به‌روزرسانی شدند. برای بقیه از داده‌های پشتیبان بسته‌شده استفاده می‌شود."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "رمزارزها",
+      "cryptoToggleDescription": "نمایش بیت‌کوین، اتریوم و سایر دارایی‌های رمزنگاری‌شده در فهرست ارزها.",
+      "cryptocurrency": "رمزارز"
     },
     "aboutEqualTo": "تقریباً برابر با"
   },

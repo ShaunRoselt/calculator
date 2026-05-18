@@ -117,12 +117,16 @@
         "fetching": "Na rátaí tagartha USD is déanaí á fháil...",
         "liveRatesLoaded": "Rátaí beo lódáilte ó ExchangeRate-API.",
         "liveUpdateUnavailable": "Níl nuashonrú beo ar fáil. Rátaí taispeána athnuaite go háitiúil.",
-        "mockNote": "Rátaí tagartha bréige don léiriú aip neamhspleách."
+        "mockNote": "Rátaí tagartha bréige don léiriú aip neamhspleách.",
+        "partialRatesLoaded": "Nuashonraíodh rátaí beo ina bhfuil siad ar fáil. Ag úsáid sonraí cúltaca iomlána don chuid eile."
       },
       "updateRates": "Rátaí nuashonraithe",
       "updated": "Nuashonraithe {timestamp}",
       "updatingRates": "Tá rátaí nuashonraithe…",
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Crypt-airgeadais",
+      "cryptoToggleDescription": "Taispeáin Bitcoin, Ethereum agus sócmhainní crypto eile sna liostaí airgeadra.",
+      "cryptocurrency": "Crypt-airgead"
     },
     "from": "Ó",
     "inputValue": "Luach le tiontú",

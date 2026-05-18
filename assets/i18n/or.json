@@ -103,9 +103,13 @@
         "mockNote": "Mock reference rates for the standalone app demo.",
         "fetching": "Fetching the latest USD reference rates...",
         "liveRatesLoaded": "Live rates loaded from ExchangeRate-API.",
-        "liveUpdateUnavailable": "Live update unavailable. Refreshed demo rates locally."
+        "liveUpdateUnavailable": "Live update unavailable. Refreshed demo rates locally.",
+        "partialRatesLoaded": "ଯେଉଁଠାରେ ଉପଲବ୍ଧ ଅଛି ସେଠାରେ ସଜୀବ ଦର ଅଦ୍ୟତନ କରାଯାଇଛି। ଅବଶେଷ ପାଇଁ ବାଣ୍ଡଲ୍ ହୋଇଥିବା ବ୍ୟାକ୍ଅପ୍ ତଥ୍ୟ ବ୍ୟବହୃତ ହେଉଛି।"
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "କ୍ରିପ୍ଟୋକରେନ୍ସୀଗୁଡିକ",
+      "cryptoToggleDescription": "କରେନ୍ସୀ ତାଲିକାରେ Bitcoin, Ethereum ଏବଂ ଅନ୍ୟାନ୍ୟ କ୍ରିପ୍ଟୋ ସମ୍ପତ୍ତିଗୁଡିକୁ ଦେଖାନ୍ତୁ।",
+      "cryptocurrency": "କ୍ରିପ୍ଟୋକରେନ୍ସୀ"
     },
     "aboutEqualTo": "About equal to"
   },

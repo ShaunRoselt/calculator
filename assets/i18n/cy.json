@@ -103,9 +103,13 @@
         "mockNote": "Cyfraddau cyfeirio ffug ar gyfer y demo ap annibynnol.",
         "fetching": "Wrth nôl y cyfraddau cyfeirio USD diweddaraf...",
         "liveRatesLoaded": "Cyfraddau byw wedi'u llwytho o ExchangeRate-API.",
-        "liveUpdateUnavailable": "Nid yw diweddariad byw ar gael. Cyfraddau demo wedi'u diweddaru'n lleol."
+        "liveUpdateUnavailable": "Nid yw diweddariad byw ar gael. Cyfraddau demo wedi'u diweddaru'n lleol.",
+        "partialRatesLoaded": "Diweddarwyd cyfraddau byw lle bo ar gael. Defnyddio data wrth gefn wedi'u pacio ar gyfer y gweddill."
       },
-      "search": "Search currencies"
+      "search": "Search currencies",
+      "includeCryptocurrencies": "Cyptomonitau",
+      "cryptoToggleDescription": "Dangos Bitcoin, Ethereum, a asedau crypto eraill yn rhestrau arian.",
+      "cryptocurrency": "Cryptomoneda"
     },
     "aboutEqualTo": "Tua hafal i"
   },

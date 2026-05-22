@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Calculator UI';
   src: url('../assets/fonts/Selawik/selawk.woff2') format('woff2'),
-       url('../assets/fonts/Selawik/selawk.woff') format('woff');
+    url('../assets/fonts/Selawik/selawk.woff') format('woff');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -10,7 +10,7 @@
 @font-face {
   font-family: 'Calculator UI';
   src: url('../assets/fonts/Selawik/selawksb.woff2') format('woff2'),
-       url('../assets/fonts/Selawik/selawksb.woff') format('woff');
+    url('../assets/fonts/Selawik/selawksb.woff') format('woff');
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -19,7 +19,7 @@
 @font-face {
   font-family: 'Calculator UI';
   src: url('../assets/fonts/Selawik/selawkb.woff2') format('woff2'),
-       url('../assets/fonts/Selawik/selawkb.woff') format('woff');
+    url('../assets/fonts/Selawik/selawkb.woff') format('woff');
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -693,6 +693,7 @@ main {
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     transform: scale(1);
@@ -706,6 +707,7 @@ main {
 }
 
 @media (max-width: 1024px) {
+
   .hero,
   .split-heading,
   .install-panel,
@@ -736,6 +738,7 @@ main {
 }
 
 @media (max-width: 720px) {
+
   .site-header,
   main,
   .site-footer {

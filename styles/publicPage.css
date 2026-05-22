@@ -279,11 +279,27 @@ img {
 }
 
 #static-binary-grid {
-  position: absolute;
-  inset: 0;
+  position: fixed;
+  top: var(--header-height, 74px);
+  left: 0;
+  right: 0;
+  bottom: 0;
   overflow: hidden;
   opacity: 0.08;
   pointer-events: none;
+  z-index: 1;
+}
+
+#static-binary-grid::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: clamp(8rem, 18vh, 16rem);
+  background: linear-gradient(180deg, transparent 0%, var(--bg) 100%);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .hero-grid-text {

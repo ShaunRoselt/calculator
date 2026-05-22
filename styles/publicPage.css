@@ -38,6 +38,8 @@ body {
   height: auto;
   min-height: 100vh;
   min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
   padding-top: var(--header-height);
   font-family: var(--ui-font-family);
   color: var(--text);

@@ -30,7 +30,10 @@
     }
 
     body {
-      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
       min-height: 100vh;
       min-height: 100dvh;
       padding-top: var(--header-height);
@@ -250,14 +253,17 @@
 
     .page-main {
       position: relative;
-      min-height: calc(100vh - var(--header-height));
-      min-height: calc(100dvh - var(--header-height));
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
+      min-height: 0;
     }
 
     .hero-section {
       position: relative;
-      overflow: hidden;
-      min-height: calc(100vh - var(--header-height));
+      overflow: visible;
+      flex: 1 0 auto;
+      min-height: 0;
       padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(3.5rem, 7vw, 5.5rem);
       isolation: isolate;
     }
@@ -277,15 +283,15 @@
       width: 22rem;
       height: 22rem;
       top: 7rem;
-      left: -6rem;
+      left: clamp(1rem, 4vw, 4rem);
       background: color-mix(in srgb, var(--accent) 48%, transparent);
     }
 
     .hero-section::after {
       width: 24rem;
       height: 24rem;
-      right: -8rem;
-      bottom: 2rem;
+      right: clamp(1rem, 4vw, 4rem);
+      bottom: clamp(1rem, 5vh, 4rem);
       background: color-mix(in srgb, var(--button-equals-bg-end, var(--accent-strong)) 44%, transparent);
     }
 
@@ -305,8 +311,8 @@
 
     .hero-grid-text {
       position: absolute;
-      inset: 0;
-      margin: 0 -8px;
+      inset: -1.5rem;
+      margin: 0;
       overflow: hidden;
       color: color-mix(in srgb, var(--text-soft) 42%, transparent);
       font-family: ui-monospace, SFMono-Regular, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
@@ -1547,9 +1553,12 @@
 
       const parsedLineHeight = Number.parseFloat(window.getComputedStyle(heroGridText).lineHeight);
       const lineHeight = Number.isFinite(parsedLineHeight) && parsedLineHeight > 0 ? parsedLineHeight : 15.75;
+      const headerHeight = Math.max(0, pageHeader?.getBoundingClientRect?.().height ?? 0);
+      const viewportHeight = Math.max(0, window.innerHeight - headerHeight);
       const sectionHeight = heroSection.getBoundingClientRect().height;
+      const targetHeight = Math.max(sectionHeight, viewportHeight);
 
-      return Math.max(170, Math.ceil(sectionHeight / lineHeight) + 18);
+      return Math.max(170, Math.ceil((targetHeight + (lineHeight * 12)) / lineHeight));
     }
 
     function getHeroGridTokenWidth() {
@@ -1579,8 +1588,10 @@
         return 108;
       }
 
+      const viewportWidth = Math.max(window.innerWidth, document.documentElement.clientWidth || 0);
       const sectionWidth = heroSection.getBoundingClientRect().width;
-      return Math.max(108, Math.ceil(sectionWidth / getHeroGridTokenWidth()) + 8);
+      const targetWidth = Math.max(viewportWidth, sectionWidth) + 320;
+      return Math.max(160, Math.ceil(targetWidth / getHeroGridTokenWidth()) + 12);
     }
 
     function updateCalculatorPreview() {

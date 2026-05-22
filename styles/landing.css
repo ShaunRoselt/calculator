@@ -113,7 +113,7 @@ img {
   min-height: 0;
 }
 
-.landing-shell > main {
+.landing-shell>main {
   flex: 1 0 auto;
 }
 

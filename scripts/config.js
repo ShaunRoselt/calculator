@@ -320,6 +320,37 @@ export function getAppName() {
   return APP_INFO.name;
 }
 
+// Try to load the real version from the package.json next to the script at runtime.
+// This allows the UI (settings/about) to display the exact package version when
+// the app is served from a webroot or packaged environment where `package.json`
+// is available. If the fetch fails we silently keep the embedded default.
+(async function tryLoadPackageVersion() {
+  try {
+    if (typeof import.meta === 'undefined' || typeof fetch !== 'function') {
+      return;
+    }
+
+    const pkgUrl = new URL('../package.json', import.meta.url).href;
+    const resp = await fetch(pkgUrl, { cache: 'no-store' });
+    if (!resp.ok) {
+      return;
+    }
+    const pkg = await resp.json();
+    if (pkg && typeof pkg.version === 'string' && pkg.version.trim()) {
+      APP_INFO.version = String(pkg.version).trim();
+      try {
+        if (typeof document !== 'undefined' && typeof CustomEvent === 'function') {
+          document.dispatchEvent(new CustomEvent('appInfoUpdated', { detail: { version: APP_INFO.version } }));
+        }
+      } catch (e) {
+        // ignore dispatch errors
+      }
+    }
+  } catch (err) {
+    // ignore failures — keep the default APP_INFO.version
+  }
+})();
+
 export const STANDARD_BUTTONS = [
   [btn('%', 'percent', '', 'function'), btn('CE', 'clear-entry', '', 'function'), btn('C', 'clear-all', '', 'function'), btn('⌫', 'backspace', '', 'function')],
   [btn('¹∕x', 'standard-unary', 'reciprocal', 'function'), btn('x²', 'standard-unary', 'square', 'function'), btn('²√x', 'standard-unary', 'sqrt', 'function'), btn('÷', 'operator', '/', 'operator')],

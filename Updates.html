@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Full changelog and release history for Roselt Calculator from version 1.0.0 through 12.0.0." />
+    content="Full changelog and release history for Roselt Calculator from version 1.0.0 through 12.1.0." />
   <meta name="theme-color" content="#1f2025" />
   <title>Roselt Calculator | Release History</title>
   <link rel="icon" id="page-favicon" type="image/svg+xml" href="assets/logos/dark.svg" />
@@ -43,7 +43,8 @@
     .updates-hero p {
       color: var(--page-text-soft);
       font-size: 1.1rem;
-      max-width: 56ch;
+      max-width: none;
+      width: 100%;
       margin: 0;
       line-height: 1.7;
     }
@@ -185,6 +186,20 @@
       margin-top: 0.48rem;
     }
 
+    /* Inline code styling for changelog items */
+    .changelog-body ul li code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Courier New', monospace;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--page-text);
+      padding: 0.08rem 0.4rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      display: inline-block;
+      font-size: 0.86rem;
+      line-height: 1.55;
+      margin: 0 0.2rem;
+    }
+
     .changelog-entry.entry-major .changelog-body ul li::before {
       background: var(--page-accent-2);
     }
@@ -291,7 +306,7 @@
         <p data-updates-intro>
           Roselt Calculator went from a standalone web calculator foundation to a fully packaged,
           multi-platform, multi-language app in a series of focused releases. This page tracks what
-          changed in each version from 1.0.0 through 12.0.0.
+          changed in each version from 1.0.0 through 12.1.0.
         </p>
       </div>
 
@@ -313,13 +328,21 @@
               <ul>
                 <li>Selected converter amounts now display bold to make the active field clearer.</li>
                 <li>Added thousands/grouping separators for converter values and meta lines for readability.</li>
-                <li>Enhanced the Time converter "About equal to" meta to show grouped unit values (years, weeks, days).</li>
-                <li>Enabled a side-keypad layout that lets the left value display scale and fill available space on wide viewports.</li>
+                <li>Enhanced the Time converter "About equal to" meta to show grouped unit values (years, weeks, days).
+                </li>
+                <li>Enabled a side-keypad layout that lets the left value display scale and fill available space on wide
+                  viewports.</li>
                 <li>Adjusted left-display typography and vertical centering so large numbers stretch visually.</li>
-                <li>Added adaptive vertical spacing between top and bottom converter values when there is extra space.</li>
-                <li>Styled converter keypad actions (CE, Backspace) to match operator button backgrounds for consistency.</li>
-                <li>Applied operator background color to the first two rows in Standard mode for visual consistency.</li>
-                <li>Fixed a bug where opening or selecting a unit from a converter dropdown would change which numeric field was active — the active field now only changes when the numeric value is clicked.</li>
+                <li>Added adaptive vertical spacing between top and bottom converter values when there is extra space.
+                </li>
+                <li>Styled converter keypad actions (CE, Backspace) to match operator button backgrounds for
+                  consistency.</li>
+                <li>Applied operator background color to the first two rows in Standard mode for visual consistency.
+                </li>
+                <li>Fixed a bug where opening or selecting a unit from a converter dropdown would change which numeric
+                  field was active — the active field now only changes when the numeric value is clicked.</li>
+                <li>Made the About/version display dynamic: the app now pulls the version from <code>package.json</code>
+                  at runtime and updates the Settings view automatically.</li>
               </ul>
               <div class="changelog-tags">
                 <span class="changelog-tag">UI</span>

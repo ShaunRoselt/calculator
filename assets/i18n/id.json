@@ -38,7 +38,7 @@
     "hero": {
       "eyebrow": "RELEASE NOTES",
       "title": "Setiap rilis, dari versi pertama hingga hari ini.",
-      "intro": "Kalkulator Roselt beralih dari fondasi kalkulator web mandiri menjadi aplikasi multi-platform dan multi-bahasa yang dikemas penuh dalam serangkaian rilis terfokus. Halaman ini melacak apa yang berubah di setiap versi dari 1.0.0 hingga 12.0.0.",
+      "intro": "Kalkulator Roselt beralih dari fondasi kalkulator web mandiri menjadi aplikasi multi-platform dan multi-bahasa yang dikemas penuh dalam serangkaian rilis terfokus. Halaman ini melacak apa yang berubah di setiap versi dari 1.0.0 hingga 12.1.0.",
       "versionHistory": "Riwayat versi"
     }
   },

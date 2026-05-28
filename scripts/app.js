@@ -522,6 +522,15 @@ function handleMouseDown(event) {
   event.preventDefault();
 }
 
+// Re-render when app info updates (for example: version loaded from package.json)
+document.addEventListener('appInfoUpdated', () => {
+  try {
+    render();
+  } catch (e) {
+    // ignore
+  }
+});
+
 hydrateState();
 applyUrlPreferences();
 applyRuntimeAttributes();
@@ -1664,8 +1673,8 @@ async function updateCurrencyRates() {
     state.converter.currencyUpdateMessageKey = liveCurrencyRatesLoaded && liveCryptoRatesLoaded
       ? 'converter.currency.status.liveRatesLoaded'
       : (liveCurrencyRatesLoaded || liveCryptoRatesLoaded
-          ? 'converter.currency.status.partialRatesLoaded'
-          : 'converter.currency.status.liveUpdateUnavailable');
+        ? 'converter.currency.status.partialRatesLoaded'
+        : 'converter.currency.status.liveUpdateUnavailable');
   } catch {
     state.converter.currencyRates = fallbackRates;
     state.converter.currencyUpdatedAt = OFFLINE_CURRENCY_UPDATED_AT;

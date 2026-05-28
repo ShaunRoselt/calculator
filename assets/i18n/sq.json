@@ -38,7 +38,7 @@
     "hero": {
       "eyebrow": "RELEASE NOTES",
       "title": "Çdo publikim, nga ndërtimi i parë deri më sot.",
-      "intro": "Roselt Calculator kaloi nga një bazë e pavarur kalkulatori në ueb në një aplikacion shumë-gjuhësh të paketuar plotësisht, me shumë platforma, në një seri publikimesh të fokusuara. Kjo faqe gjurmon çfarë ka ndryshuar në çdo version nga 1.0.0 në 12.0.0.",
+        "intro": "Roselt Calculator kaloi nga një bazë e pavarur kalkulatori në ueb në një aplikacion shumë-gjuhësh të paketuar plotësisht, me shumë platforma, në një seri publikimesh të fokusuara. Kjo faqe gjurmon çfarë ka ndryshuar në çdo version nga 1.0.0 në 12.1.0.",
       "versionHistory": "Historiku i versionit"
     }
   },

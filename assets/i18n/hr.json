@@ -38,7 +38,7 @@
     "hero": {
       "eyebrow": "RELEASE NOTES",
       "title": "Svako izdanje, od prve verzije do danas.",
-      "intro": "Roselt Calculator prešao je put od temelja samostalnog web-kalkulatora do potpuno zapakirane aplikacije s više platformi i više jezika u nizu fokusiranih izdanja. Ova stranica prati što se promijenilo u svakoj verziji od 1.0.0 do 12.0.0.",
+      "intro": "Roselt Calculator prešao je put od temelja samostalnog web-kalkulatora do potpuno zapakirane aplikacije s više platformi i više jezika u nizu fokusiranih izdanja. Ova stranica prati što se promijenilo u svakoj verziji od 1.0.0 do 12.1.0.",
       "versionHistory": "Povijest verzija"
     }
   },

@@ -38,7 +38,7 @@
     "hero": {
       "eyebrow": "RELEASE NOTES",
       "title": "Gach eisiúint, ón gcéad tógáil go dtí an lá inniu.",
-      "intro": "Chuaigh Áireamhán Roselt ó bhunús áireamhán gréasáin neamhspleách go haip lánphacáistithe, il-ardán, iltheanga i sraith eisiúintí dírithe. Rianaíonn an leathanach seo an méid a d’athraigh i ngach leagan ó 1.0.0 go 12.0.0.",
+      "intro": "Chuaigh Áireamhán Roselt ó bhunús áireamhán gréasáin neamhspleách go haip lánphacáistithe, il-ardán, iltheanga i sraith eisiúintí dírithe. Rianaíonn an leathanach seo an méid a d’athraigh i ngach leagan ó 1.0.0 go 12.1.0.",
       "versionHistory": "Stair na leaganacha"
     }
   },

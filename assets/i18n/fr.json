@@ -38,7 +38,7 @@
     "hero": {
       "eyebrow": "RELEASE NOTES",
       "title": "Chaque version, de la première version à aujourd'hui.",
-      "intro": "Roselt Calculator est passée d'une base de calculatrice Web autonome à une application entièrement packagée, multiplateforme et multilingue dans une série de versions ciblées. Cette page suit ce qui a changé dans chaque version de 1.0.0 à 12.0.0.",
+      "intro": "Roselt Calculator est passée d'une base de calculatrice Web autonome à une application entièrement packagée, multiplateforme et multilingue dans une série de versions ciblées. Cette page suit ce qui a changé dans chaque version de 1.0.0 à 12.1.0.",
       "versionHistory": "Historique des versions"
     }
   },

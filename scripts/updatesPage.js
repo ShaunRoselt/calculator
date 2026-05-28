@@ -27,7 +27,7 @@ void initPublicPage({
       updatesTitle: translate('updatesPage.hero.title', 'Every release, from the first build to today.'),
       updatesIntro: translate(
         'updatesPage.hero.intro',
-        'Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.0.0.'
+        'Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.1.0.'
       ),
       versionHistoryTitle: translate('updatesPage.hero.versionHistory', 'Version history')
     };

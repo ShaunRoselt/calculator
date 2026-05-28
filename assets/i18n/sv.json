@@ -38,7 +38,7 @@
     "hero": {
       "eyebrow": "RELEASE NOTES",
       "title": "Varje version, från den första versionen till idag.",
-      "intro": "Roselt Calculator gick från en fristående webbräknare till en fullt paketerad app för flera plattformar och flera språk i en serie fokuserade utgåvor. Den här sidan spårar vad som ändrades i varje version från 1.0.0 till 12.0.0.",
+      "intro": "Roselt Calculator gick från en fristående webbräknare till en fullt paketerad app för flera plattformar och flera språk i en serie fokuserade utgåvor. Den här sidan spårar vad som ändrades i varje version från 1.0.0 till 12.1.0.",
       "versionHistory": "Versionshistorik"
     }
   },

@@ -701,7 +701,7 @@ function queueProgrammerOperator(operator) {
     const result = computeProgrammerBinary(calc.accumulator ?? 0n, inputValue, calc.operator);
     if (result == null) {
       return;
-   }
+    }
     calc.accumulator = normalizeProgrammerValue(result);
     calc.display = formatBigInt(calc.accumulator, calc.base);
   } else {
@@ -4183,19 +4183,19 @@ function resolveGraphDomainIntervalBoundary(interval, samples, asymptotes) {
     start: startAsymptote != null
       ? { value: formatGraphAnalysisNumber(startAsymptote), number: startAsymptote, brace: '(', inclusive: false }
       : {
-          value: formatGraphAnalysisNumber(startSample.x),
-          number: startSample.x,
-          brace: previousSample && !Number.isFinite(previousSample.y) ? '[' : '(',
-          inclusive: true
-        },
+        value: formatGraphAnalysisNumber(startSample.x),
+        number: startSample.x,
+        brace: previousSample && !Number.isFinite(previousSample.y) ? '[' : '(',
+        inclusive: true
+      },
     end: endAsymptote != null
       ? { value: formatGraphAnalysisNumber(endAsymptote), number: endAsymptote, brace: ')', inclusive: false }
       : {
-          value: formatGraphAnalysisNumber(endSample.x),
-          number: endSample.x,
-          brace: nextSample && !Number.isFinite(nextSample.y) ? ']' : ')',
-          inclusive: true
-        }
+        value: formatGraphAnalysisNumber(endSample.x),
+        number: endSample.x,
+        brace: nextSample && !Number.isFinite(nextSample.y) ? ']' : ')',
+        inclusive: true
+      }
   };
 }
 

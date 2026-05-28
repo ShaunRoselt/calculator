@@ -1326,7 +1326,6 @@ function handleClick(event) {
     clearConverterMenuSearch();
     state.converter.openConverterMenu = isOpening ? field : null;
     state.converter.converterKeyboardField = field;
-    setConverterActiveField(field);
     render();
     if (isOpening) {
       focusConverterMenuSearch(field);
@@ -2285,7 +2284,6 @@ function applyConverterSelection(field, value, keepMenuOpen = false) {
     clearConverterMenuSearch(field);
   }
   state.converter.converterKeyboardField = field;
-  setConverterActiveField(field);
   syncConverterValues(field);
   commitConverterHistory();
 }

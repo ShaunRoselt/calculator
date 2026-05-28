@@ -183,6 +183,7 @@
 .scientific-menu-toggle {
   font-size: 0.88rem;
 }
+
 .converter-swap {
   display: flex;
   gap: 0.45rem;
@@ -405,12 +406,13 @@
 }
 
 /* Make the first two rows in standard button-grid use operator background */
-.button-grid.standard > .calc-button:nth-child(-n+8) {
+.button-grid.standard>.calc-button:nth-child(-n+8) {
   background: var(--button-operator-bg);
   color: var(--text);
 }
-.button-grid.standard > .calc-button:nth-child(-n+8):hover,
-.button-grid.standard > .calc-button:nth-child(-n+8):focus-visible {
+
+.button-grid.standard>.calc-button:nth-child(-n+8):hover,
+.button-grid.standard>.calc-button:nth-child(-n+8):focus-visible {
   background: var(--button-operator-hover-bg);
 }
 

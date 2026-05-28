@@ -299,6 +299,36 @@
         <h2 id="changelog-title" class="sr-only" data-changelog-title>Version history</h2>
         <div class="changelog-timeline">
 
+          <!-- 12.1.0 -->
+          <article class="changelog-entry">
+            <div class="changelog-entry-meta">
+              <span class="changelog-version-badge">12.1.0</span>
+              <div class="changelog-date">28 May 2026</div>
+            </div>
+            <div class="changelog-body">
+              <h2>UI polishing: converter selection, formatting, and layout</h2>
+              <p class="changelog-summary">
+                A small release focused on converter UX, numeric formatting, and layout improvements.
+              </p>
+              <ul>
+                <li>Selected converter amounts now display bold to make the active field clearer.</li>
+                <li>Added thousands/grouping separators for converter values and meta lines for readability.</li>
+                <li>Enhanced the Time converter "About equal to" meta to show grouped unit values (years, weeks, days).</li>
+                <li>Enabled a side-keypad layout that lets the left value display scale and fill available space on wide viewports.</li>
+                <li>Adjusted left-display typography and vertical centering so large numbers stretch visually.</li>
+                <li>Added adaptive vertical spacing between top and bottom converter values when there is extra space.</li>
+                <li>Styled converter keypad actions (CE, Backspace) to match operator button backgrounds for consistency.</li>
+                <li>Applied operator background color to the first two rows in Standard mode for visual consistency.</li>
+                <li>Fixed a bug where opening or selecting a unit from a converter dropdown would change which numeric field was active — the active field now only changes when the numeric value is clicked.</li>
+              </ul>
+              <div class="changelog-tags">
+                <span class="changelog-tag">UI</span>
+                <span class="changelog-tag">Converters</span>
+                <span class="changelog-tag">Formatting</span>
+              </div>
+            </div>
+          </article>
+
           <!-- 12.0.0 -->
           <article class="changelog-entry entry-major">
             <div class="changelog-entry-meta">

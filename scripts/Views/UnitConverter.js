@@ -233,14 +233,14 @@ function renderCurrencyField(field, meta, value) {
         </div>
       </button>
       ${renderConverterSelect(
-        field,
-        meta.label,
-        options,
-        `${field === 'from' ? t('converter.from') : t('converter.to')} ${t('converter.currency.currency').toLowerCase()}`,
-        `${field === 'from' ? t('converter.from') : t('converter.to')} ${t('converter.currency.options').toLowerCase()}`,
-        getCurrencyOptionMeta(meta),
-        true
-      )}
+    field,
+    meta.label,
+    options,
+    `${field === 'from' ? t('converter.from') : t('converter.to')} ${t('converter.currency.currency').toLowerCase()}`,
+    `${field === 'from' ? t('converter.from') : t('converter.to')} ${t('converter.currency.options').toLowerCase()}`,
+    getCurrencyOptionMeta(meta),
+    true
+  )}
     </div>
   `;
 }
@@ -283,8 +283,8 @@ function renderConverterMenu(field, options, menuLabel, showSearch) {
       ` : ''}
       <div class="converter-select-menu-options" role="listbox" aria-label="${escapeHtml(menuLabel)}">
         ${filteredOptions.length
-          ? filteredOptions.map((option) => renderConverterMenuOption(field, option, option.value === currentValue)).join('')
-          : `<div class="converter-select-menu-empty">${t('landingPage.menus.noMatches')}</div>`}
+      ? filteredOptions.map((option) => renderConverterMenuOption(field, option, option.value === currentValue)).join('')
+      : `<div class="converter-select-menu-empty">${t('landingPage.menus.noMatches')}</div>`}
       </div>
     </div>
   `;

@@ -2152,25 +2152,15 @@ export function getConverterDisplayValue(field) {
   if (raw === invalidInputMessage()) {
     return raw;
   }
-  if (state.converter.category === 'Currency') {
-    return String(raw || '0').replace(/\./g, ',');
-  }
 
-  const numeric = Number(raw);
+  const numeric = Number(String(raw || ''));
   if (!Number.isFinite(numeric)) {
     return String(raw || '0').replace(/\./g, ',');
   }
 
-  let formatted;
-  if (Number.isInteger(numeric)) {
-    formatted = numeric.toString();
-  } else if (Math.abs(numeric) >= 1) {
-    formatted = String(Number(numeric.toPrecision(6)));
-  } else {
-    formatted = String(Number(numeric.toFixed(6)));
-  }
-
-  return formatted.replace(/\./g, ',');
+  // Use central formatter to get grouping separators, then convert decimal point to comma for display
+  const formatted = formatNumber(numeric);
+  return String(formatted).replace(/\./g, ',');
 }
 
 function normalizeConverterEntry(value, allowNegative = state.converter.category !== 'Currency') {

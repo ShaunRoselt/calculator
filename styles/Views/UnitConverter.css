@@ -183,6 +183,10 @@
   font-weight: 300;
   letter-spacing: -0.04em;
 }
+.converter-native-field.active .converter-native-amount,
+.currency-field.active .currency-amount {
+  font-weight: 700;
+}
 
 .converter-select-wrap {
   position: relative;
@@ -374,6 +378,25 @@
 .converter-native-meta-value {
   color: var(--text);
   font-size: 1rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.converter-native-meta-item {
+  display: flex;
+  gap: 0.45rem;
+  align-items: baseline;
+}
+
+.converter-native-meta-number {
+  font-weight: 700;
+}
+
+.converter-native-meta-unit {
+  color: var(--text-faint);
+  font-size: 0.88rem;
 }
 
 .currency-meta {
@@ -494,6 +517,26 @@
   border: 1px solid var(--border-faint);
 }
 
+/* Give special converter keypad buttons the same look as operator buttons */
+.converter-native-keypad .calc-button[data-converter-action="clear"],
+.converter-native-keypad .calc-button[data-converter-action="backspace"],
+.currency-keypad .calc-button[data-converter-action="clear"],
+.currency-keypad .calc-button[data-converter-action="backspace"] {
+  background: var(--button-operator-bg);
+  color: var(--text);
+}
+
+.converter-native-keypad .calc-button[data-converter-action="clear"]:hover,
+.converter-native-keypad .calc-button[data-converter-action="clear"]:focus-visible,
+.converter-native-keypad .calc-button[data-converter-action="backspace"]:hover,
+.converter-native-keypad .calc-button[data-converter-action="backspace"]:focus-visible,
+.currency-keypad .calc-button[data-converter-action="clear"]:hover,
+.currency-keypad .calc-button[data-converter-action="clear"]:focus-visible,
+.currency-keypad .calc-button[data-converter-action="backspace"]:hover,
+.currency-keypad .calc-button[data-converter-action="backspace"]:focus-visible {
+  background: var(--button-operator-hover-bg);
+}
+
 .converter-native-key svg,
 .currency-key svg {
   width: 1.1rem;
@@ -547,15 +590,20 @@
   padding: 0 10px 6px;
 }
 
+.converter-native-layout.converter-side-keypad .converter-native-panel {
+  height: 100%;
+  justify-content: center;
+}
+
 .converter-native-layout.converter-side-keypad .converter-native-values,
 .currency-layout.converter-side-keypad .currency-values {
-  align-content: start;
+  align-content: center;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .converter-native-layout.converter-side-keypad .converter-native-values {
-  gap: 1.2rem;
+  gap: clamp(1.2rem, 8vh, 6rem);
 }
 
 .currency-layout.converter-side-keypad .currency-values {
@@ -564,7 +612,7 @@
 
 .converter-native-layout.converter-side-keypad .converter-native-amount,
 .currency-layout.converter-side-keypad .currency-amount {
-  font-size: clamp(2.1rem, 9vw, 3rem);
+  font-size: clamp(3rem, 8vw, 6.5rem);
 }
 
 .converter-native-layout.converter-side-keypad .converter-native-meta,

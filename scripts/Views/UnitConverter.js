@@ -91,7 +91,7 @@ function renderNativeConverterView(units, title) {
           ${renderConverterField('to', toUnit, getConverterDisplayValue('to'))}
         </div>
         <div class="converter-native-meta ${aboutEqual ? '' : 'empty'}">
-          ${aboutEqual ? `<div class="converter-native-meta-label">${t('converter.aboutEqualTo')}</div><div class="converter-native-meta-value">${escapeHtml(aboutEqual)}</div>` : ''}
+          ${aboutEqual ? `<div class="converter-native-meta-label">${t('converter.aboutEqualTo')}</div><div class="converter-native-meta-value">${aboutEqual}</div>` : ''}
         </div>
       </section>
       <section class="converter-native-keypad" aria-label="${t('converter.keypad')}">
@@ -162,14 +162,41 @@ function renderConverterField(field, unit, value) {
 function renderConverterReferenceLine(units) {
   const from = units.find((item) => item.name === state.converter.fromUnit) || units[0];
   const to = units.find((item) => item.name === state.converter.toUnit) || units[1] || units[0];
-  const alternate = units.find((item) => item.name !== from.name && item.name !== to.name);
   const numeric = Number(String(state.converter.fromValue || '0').replace(/,/g, '.'));
-  if (!alternate || !Number.isFinite(numeric)) {
+  if (!Number.isFinite(numeric)) {
+    return '';
+  }
+
+  // For Time category, show a small set of helpful larger units (years, weeks, days).
+  if (state.converter.category === 'Time') {
+    const preferred = ['Years', 'Weeks', 'Days'];
+    const items = [];
+    for (const name of preferred) {
+      if (name === from.name || name === to.name) {
+        continue;
+      }
+      const unit = units.find((u) => u.name === name);
+      if (!unit) {
+        continue;
+      }
+      const converted = unit.fromBase(from.toBase(numeric));
+      const formatted = getFormattedConverterMetaValue(converted);
+      items.push(`<span class="converter-native-meta-item"><span class="converter-native-meta-number">${escapeHtml(formatted)}</span><span class="converter-native-meta-unit">${escapeHtml(unit.symbol)}</span></span>`);
+      if (items.length >= 3) {
+        break;
+      }
+    }
+
+    return items.join(' ');
+  }
+
+  const alternate = units.find((item) => item.name !== from.name && item.name !== to.name);
+  if (!alternate) {
     return '';
   }
   const converted = alternate.fromBase(from.toBase(numeric));
   const formatted = getFormattedConverterMetaValue(converted);
-  return `${formatted} ${alternate.symbol}`.trim();
+  return `${escapeHtml(formatted)} ${escapeHtml(alternate.symbol)}`.trim();
 }
 
 function getFormattedConverterMetaValue(value) {
@@ -179,12 +206,14 @@ function getFormattedConverterMetaValue(value) {
   }
   const numeric = Number(value);
   if (Number.isInteger(numeric)) {
-    return numeric.toString();
+    return formatNumber(numeric).replace(/\./g, ',');
   }
   if (Math.abs(numeric) >= 1) {
-    return String(Number(numeric.toFixed(2))).replace('.', ',');
+    const rounded = Number(numeric.toFixed(2));
+    return formatNumber(rounded).replace(/\./g, ',');
   }
-  return String(Number(numeric.toFixed(4))).replace('.', ',');
+  const rounded = Number(numeric.toFixed(4));
+  return formatNumber(rounded).replace(/\./g, ',');
 }
 
 function renderCurrencyField(field, meta, value) {
@@ -317,7 +346,7 @@ function getConverterLayoutClasses(baseClass) {
   return [
     baseClass,
     isShortHeight ? 'converter-short-height' : '',
-    isShortHeight && hasSideKeypadSpace ? 'converter-side-keypad' : ''
+    hasSideKeypadSpace ? 'converter-side-keypad' : ''
   ].filter(Boolean).join(' ');
 }
 

@@ -404,6 +404,16 @@
   background: var(--button-operator-bg);
 }
 
+/* Make the first two rows in standard button-grid use operator background */
+.button-grid.standard > .calc-button:nth-child(-n+8) {
+  background: var(--button-operator-bg);
+  color: var(--text);
+}
+.button-grid.standard > .calc-button:nth-child(-n+8):hover,
+.button-grid.standard > .calc-button:nth-child(-n+8):focus-visible {
+  background: var(--button-operator-hover-bg);
+}
+
 .calc-button.operator:hover,
 .calc-button.operator:focus-visible {
   background: var(--button-operator-hover-bg);

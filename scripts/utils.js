@@ -2,11 +2,27 @@ export function formatNumber(value) {
   if (!Number.isFinite(value)) {
     return 'Overflow';
   }
+
+  const groupDigits = (intStr) => {
+    return String(intStr).replace(/\B(?=(\d{3})+(?!\d))/g, '\u202F');
+  };
+
   if (Number.isInteger(value)) {
+    const sign = value < 0 ? '-' : '';
+    const abs = Math.abs(value);
+    return sign + groupDigits(String(abs));
+  }
+
+  const normalized = Number(value.toPrecision(12)).toString();
+  if (normalized.includes('e')) {
     return value.toString();
   }
-  const normalized = Number(value.toPrecision(12)).toString();
-  return normalized.includes('e') ? value.toString() : normalized;
+
+  const sign = normalized.startsWith('-') ? '-' : '';
+  const absStr = sign ? normalized.slice(1) : normalized;
+  const [intPart, fracPart] = absStr.split('.');
+  const groupedInt = groupDigits(intPart || '0');
+  return sign + groupedInt + (fracPart ? '.' + fracPart : '');
 }
 
 export function formatExpressionText(expression) {

@@ -156,7 +156,7 @@ function renderThemeMenuOption(option, selected) {
 
   return `
     <div class="settings-theme-card ${selected ? 'selected' : ''}" data-settings-menu-option="theme" data-settings-menu-text="${escapeHtml(searchText.toLowerCase())}" role="option" aria-selected="${selected ? 'true' : 'false'}">
-      <iframe class="settings-theme-card-frame" src="${escapeHtml(option.previewUrl)}" title="${escapeHtml(option.label)}" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+      <iframe class="settings-theme-card-frame" src="${escapeHtml(option.previewUrl)}" title="${escapeHtml(option.label)}" loading="eager" tabindex="-1" aria-hidden="true"></iframe>
       <button type="button" class="settings-theme-card-button" data-settings-menu-select="theme" data-settings-menu-value="${escapeHtml(option.value)}" aria-label="${escapeHtml(option.label)}" aria-pressed="${selected ? 'true' : 'false'}">
         <span class="settings-theme-card-header">
           <span class="settings-theme-card-title-wrap">
@@ -173,6 +173,7 @@ function renderThemeMenuOption(option, selected) {
 function renderSettingsMenu(menu, label, selectedLabel, options) {
   const isOpen = state.settings.openMenu === menu;
   const isThemeMenu = menu === 'theme';
+  const shouldRenderMenuPanel = isOpen || (isThemeMenu && state.settings.themeMenuPrepared);
   const searchPlaceholder = isThemeMenu ? t('settings.appearance.searchThemes') : t('settings.language.search');
   return `
     <span class="date-native-select-wrap settings-select-wrap settings-select-menu-wrap ${isThemeMenu ? 'settings-select-wrap-theme' : ''}">
@@ -180,8 +181,8 @@ function renderSettingsMenu(menu, label, selectedLabel, options) {
         <span class="settings-select-button-label">${escapeHtml(selectedLabel)}</span>
       </button>
       <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
-      ${isOpen ? `
-        <div class="date-native-mode-menu settings-select-menu ${isThemeMenu ? 'settings-select-menu-theme' : ''}">
+      ${shouldRenderMenuPanel ? `
+        <div class="date-native-mode-menu settings-select-menu ${isThemeMenu ? 'settings-select-menu-theme' : ''}"${isOpen ? '' : ' hidden'}>
           <div class="settings-select-search-row">
             <input type="search" class="settings-select-search-input" data-settings-menu-search="${menu}" placeholder="${escapeHtml(searchPlaceholder)}" aria-label="${escapeHtml(searchPlaceholder)}" autocomplete="off" spellcheck="false" />
           </div>

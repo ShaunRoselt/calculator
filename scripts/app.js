@@ -36,6 +36,8 @@ import { getCurrentLanguage, setLanguage, t } from './i18n.js';
 import { flushSettingsFile, persistSettingsFile } from './settingsFile.js';
 import { installTooltipHandling } from './tooltip.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
+import { ensureNerdamerLoaded } from './nerdamer.js';
+import { ensureModeStyles } from './stylesheets.js';
 import {
   backspaceGraphExpression,
   commitConverterHistory,
@@ -77,10 +79,10 @@ import {
 } from './logic.js';
 import {
   applyThemeToElement,
+  ensureTheme,
   getResolvedAppThemeId,
   isSupportedTheme,
-  normalizeGraphThemeSetting,
-  preloadAllThemes
+  normalizeGraphThemeSetting
 } from './themes.js';
 import { getUrlPreferenceOverrides } from './urlParams.js';
 
@@ -542,9 +544,9 @@ persistSettingsFile(state.settings);
 initFullscreenState();
 computeDateResults();
 syncConverterValues('from');
+await ensureModeStyles(state.mode);
 render();
 installTooltipHandling();
-void preloadRemainingThemes();
 
 document.addEventListener('click', handleClick);
 document.addEventListener('mousedown', handleMouseDown);
@@ -567,24 +569,25 @@ window.addEventListener('beforeunload', () => {
 });
 systemThemeMedia?.addEventListener?.('change', () => {
   if (state.settings.theme === 'system') {
-    applyTheme();
-    render();
+    void ensureTheme(getResolvedAppThemeId('system', getSystemTheme())).then(() => {
+      applyTheme();
+      render();
+    });
   }
 });
 
-async function preloadRemainingThemes() {
+async function renderModeWhenStylesReady(mode) {
   try {
-    await preloadAllThemes();
-    if (shouldRefreshForThemeCatalog()) {
+    await ensureModeStyles(mode);
+    if (state.mode === mode) {
       render();
     }
   } catch (error) {
-    console.warn('Unable to preload the full theme catalog.', error);
+    console.warn('Unable to load mode styles.', error);
+    if (state.mode === mode) {
+      render();
+    }
   }
-}
-
-function shouldRefreshForThemeCatalog() {
-  return state.mode === 'settings' || (state.mode === 'graphing' && state.graphing.settingsOpen);
 }
 
 function getSystemTheme() {
@@ -664,6 +667,8 @@ function setMode(nextMode, { replaceHistory = false, renderView = true } = {}) {
 
   if (resolvedMode !== 'settings') {
     state.settings.openMenu = null;
+  } else {
+    state.settings.themeMenuPrepared = true;
   }
 
   state.mode = resolvedMode;
@@ -676,8 +681,14 @@ function setMode(nextMode, { replaceHistory = false, renderView = true } = {}) {
   persistNav();
   syncUrlWithMode(state.mode, { replaceHistory });
 
+  if (resolvedMode === 'graphing') {
+    void ensureNerdamerLoaded().catch((error) => {
+      console.warn('Unable to load nerdamer for graphing.', error);
+    });
+  }
+
   if (renderView) {
-    render();
+    void renderModeWhenStylesReady(resolvedMode);
   }
 
   if (resolvedMode === 'currency') {
@@ -706,7 +717,14 @@ function applyTheme() {
   document.querySelector('#app-favicon')?.setAttribute('href', appliedTheme.logoPath ?? 'assets/logo-dark.svg');
 }
 
-function applyThemeSetting(theme) {
+function ensureGraphThemeSetting(themeSetting) {
+  const themeId = themeSetting === 'match-app'
+    ? getResolvedAppThemeId(state.settings.theme, getSystemTheme())
+    : themeSetting;
+  return ensureTheme(themeId);
+}
+
+async function applyThemeSetting(theme) {
   state.settings.theme = theme === 'system' || isSupportedTheme(theme)
     ? theme
     : 'system';
@@ -715,6 +733,7 @@ function applyThemeSetting(theme) {
 
   // A manual settings change should stop any stale URL override from winning on refresh.
   clearUrlPreferenceOverride('theme');
+  await ensureTheme(getResolvedAppThemeId(state.settings.theme, getSystemTheme()));
   applyTheme();
   render();
 }
@@ -1009,6 +1028,31 @@ function handlePopState() {
   applyUrlMode({ replaceHistory: true });
 }
 
+function setSettingsMenuDomState(menu, isOpen, { focusSearch = false } = {}) {
+  const toggle = document.querySelector(`[data-settings-menu-toggle="${menu}"]`);
+  const wrap = toggle?.closest('.settings-select-menu-wrap');
+  const panel = wrap?.querySelector('.settings-select-menu');
+
+  if (!(toggle instanceof HTMLButtonElement) || !(panel instanceof HTMLElement)) {
+    return false;
+  }
+
+  toggle.classList.toggle('active', isOpen);
+  toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  panel.hidden = !isOpen;
+
+  if (focusSearch) {
+    requestAnimationFrame(() => {
+      const searchInput = panel.querySelector(`[data-settings-menu-search="${menu}"]`);
+      if (searchInput instanceof HTMLInputElement) {
+        searchInput.focus();
+      }
+    });
+  }
+
+  return true;
+}
+
 function handleClick(event) {
   if (urlPreferences.readOnly) {
     return;
@@ -1034,8 +1078,11 @@ function handleClick(event) {
   }
 
   if (source && state.mode === 'settings' && state.settings.openMenu && !source.closest('.settings-select-menu-wrap')) {
+    const openMenu = state.settings.openMenu;
     state.settings.openMenu = null;
-    shouldRender = true;
+    if (!setSettingsMenuDomState(openMenu, false)) {
+      shouldRender = true;
+    }
   }
 
   if (source && state.mode === 'graphing') {
@@ -1247,16 +1294,17 @@ function handleClick(event) {
 
   if (target.dataset.settingsMenuToggle) {
     const nextMenu = target.dataset.settingsMenuToggle;
+    const previousMenu = state.settings.openMenu;
     const isOpening = state.settings.openMenu !== nextMenu;
     state.settings.openMenu = isOpening ? nextMenu : null;
-    render();
-    if (isOpening) {
-      requestAnimationFrame(() => {
-        const searchInput = document.querySelector(`[data-settings-menu-search="${nextMenu}"]`);
-        if (searchInput instanceof HTMLInputElement) {
-          searchInput.focus();
-        }
-      });
+
+    const closedPreviousMenu = previousMenu && previousMenu !== nextMenu
+      ? setSettingsMenuDomState(previousMenu, false)
+      : true;
+    const updatedCurrentMenu = setSettingsMenuDomState(nextMenu, isOpening, { focusSearch: isOpening });
+
+    if (!closedPreviousMenu || !updatedCurrentMenu) {
+      render();
     }
     return;
   }
@@ -1267,7 +1315,7 @@ function handleClick(event) {
     state.settings.openMenu = null;
 
     if (menu === 'theme') {
-      applyThemeSetting(value);
+      void applyThemeSetting(value);
       return;
     }
 
@@ -1449,8 +1497,9 @@ function handleClick(event) {
     setGraphCompactEditorView('expressions');
     commitGraphExpression(index);
     updateGraph();
-    openGraphExpressionAnalysis(index);
-    render();
+    void openGraphExpressionAnalysis(index).then(() => {
+      render();
+    });
     return;
   }
 
@@ -1554,8 +1603,10 @@ function handleClick(event) {
 
     if (menu === 'theme') {
       state.graphing.theme = normalizeGraphThemeSetting(value);
-      drawGraph();
-      render();
+      void ensureGraphThemeSetting(state.graphing.theme).then(() => {
+        drawGraph();
+        render();
+      });
       return;
     }
   }
@@ -1824,7 +1875,7 @@ function handleChange(event) {
   }
 
   if (target.name === 'settings-theme') {
-    applyThemeSetting(target.value);
+    void applyThemeSetting(target.value);
     return;
   }
 
@@ -1881,7 +1932,9 @@ function handleChange(event) {
 
   if (target.name === 'graph-theme') {
     state.graphing.theme = normalizeGraphThemeSetting(target.value);
-    render();
+    void ensureGraphThemeSetting(state.graphing.theme).then(() => {
+      render();
+    });
     return;
   }
 

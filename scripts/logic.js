@@ -16,6 +16,7 @@ import {
   solveGraphDerivativeWithCas,
   solveGraphExpressionWithCas
 } from './graphAnalysisCas.js';
+import { ensureNerdamerLoaded } from './nerdamer.js';
 import { getGraphPaletteForSelection } from './themes.js';
 import { formatExpressionText, formatNumber } from './utils.js';
 
@@ -2359,7 +2360,7 @@ export function setGraphExpressionLineStyle(index, lineStyle) {
   expression.lineStyle = ['solid', 'dash', 'dot'].includes(lineStyle) ? lineStyle : 'solid';
 }
 
-export function openGraphExpressionAnalysis(index) {
+export async function openGraphExpressionAnalysis(index) {
   const expression = state.graphing.expressions[index];
   if (!expression) {
     return;
@@ -2371,6 +2372,12 @@ export function openGraphExpressionAnalysis(index) {
 
   if (!expression.plottedValue.trim()) {
     return;
+  }
+
+  try {
+    await ensureNerdamerLoaded();
+  } catch (error) {
+    console.warn('Unable to load nerdamer for graph analysis.', error);
   }
 
   state.graphing.analysisExpressionIndex = index;

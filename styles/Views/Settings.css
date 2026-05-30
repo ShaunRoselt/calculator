@@ -3,7 +3,7 @@
   overflow: visible;
 }
 
-.settings-page:has(.settings-select-menu-theme) .settings-scroll {
+.settings-page:has(.settings-select-menu-theme:not([hidden])) .settings-scroll {
   overflow-x: visible;
   overflow-y: hidden;
 }
@@ -272,6 +272,10 @@
   padding: 8px;
   display: grid;
   gap: 8px;
+}
+
+.settings-select-menu[hidden] {
+  display: none;
 }
 
 .settings-select-menu-theme {

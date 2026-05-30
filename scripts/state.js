@@ -155,7 +155,8 @@ function createInitialState() {
       shortcuts: createDefaultShortcutBindings(),
       activeShortcutId: null,
       shortcutError: '',
-      openMenu: null
+      openMenu: null,
+      themeMenuPrepared: false
     },
     standard: createStandardState(),
     scientific: createScientificState(),

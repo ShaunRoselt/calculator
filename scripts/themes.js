@@ -272,11 +272,12 @@ export function getTheme(themeId) {
 
 export function getThemeOptions() {
   return themeOrder
-    .map((themeId) => themeDefinitions.get(themeId))
+    .map((themeId) => themeDefinitions.get(themeId) ?? manifestById.get(themeId))
     .filter(Boolean)
     .map((theme) => ({
       value: theme.id,
       label: theme.label,
+      description: typeof theme.description === 'string' ? theme.description : '',
       previewColors: getThemePreviewColors(theme)
     }));
 }

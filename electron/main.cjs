@@ -282,6 +282,7 @@ function createMainWindow() {
     minHeight: minimumWindowHeight,
     x,
     y,
+    show: false,
     autoHideMenuBar: true,
     backgroundColor: '#1f2025',
     icon: appIconPath,
@@ -291,6 +292,13 @@ function createMainWindow() {
       nodeIntegration: false,
       sandbox: false,
     },
+  });
+
+  // Reveal the window only once the first paint is ready. This avoids the
+  // white/blank flash that is especially noticeable under Wine/Proton and
+  // makes the app feel like it opens instantly.
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show();
   });
 
   mainWindow.loadFile(path.join(__dirname, '..', 'app.html'), {
@@ -344,8 +352,11 @@ app.on('before-quit', (event) => {
 
   event.preventDefault();
   isFlushingSettingsOnQuit = true;
+  // Keep the flag set: once we've committed to quitting, the next app.quit()
+  // must pass straight through this handler. Resetting it here would make
+  // app.quit() re-enter before-quit, re-prevent the quit, and spin forever
+  // (100% CPU, window never closes).
   void settingsSaveWriteQueue.finally(() => {
-    isFlushingSettingsOnQuit = false;
     app.quit();
   });
 });

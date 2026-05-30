@@ -4,9 +4,12 @@ set -eu
 repo_dir="flatpak/repo"
 build_dir="flatpak/build"
 manifest="flatpak/io.github.ShaunRoselt.Calculator.yml"
-bundle="dist/Roselt-Calculator-linux-x64.flatpak"
+bundle_dir="dist/Linux Flatpak"
+bundle="$bundle_dir/Roselt-Calculator.flatpak"
 app_id="io.github.ShaunRoselt.Calculator"
 branch="stable"
+
+mkdir -p "$bundle_dir"
 
 run_host_command() {
   if command -v flatpak-spawn >/dev/null 2>&1; then

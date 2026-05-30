@@ -32,3 +32,5 @@ test/
 /marketing/steam/trailer/**/*.mp4
 
 node_modules/
+Saves/
+.build-tools/

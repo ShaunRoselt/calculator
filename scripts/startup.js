@@ -3,6 +3,7 @@ const SERVICE_WORKER_URL = new URL('../service-worker.js', import.meta.url).href
 
 import { STORAGE_KEYS } from './config.js';
 import { initI18n } from './i18n.js';
+import { syncSettingsFileBeforeLaunch } from './settingsFile.js';
 import { prepareThemesForLaunch } from './themes.js';
 import { getUrlPreferenceOverrides } from './urlParams.js';
 
@@ -47,6 +48,11 @@ function getSystemThemeId() {
 }
 
 const urlPreferenceOverrides = getUrlPreferenceOverrides();
+
+if (!urlPreferenceOverrides.theme && !urlPreferenceOverrides.language && !urlPreferenceOverrides.readOnly) {
+  await syncSettingsFileBeforeLaunch();
+}
+
 const themePreference = urlPreferenceOverrides.theme || localStorage.getItem(STORAGE_KEYS.theme) || 'system';
 const languagePreference = urlPreferenceOverrides.language || localStorage.getItem(STORAGE_KEYS.language) || 'en';
 

@@ -33,6 +33,7 @@ import {
   state
 } from './state.js';
 import { getCurrentLanguage, setLanguage, t } from './i18n.js';
+import { flushSettingsFile, persistSettingsFile } from './settingsFile.js';
 import { installTooltipHandling } from './tooltip.js';
 import { getLayoutMode, render } from './Views/MainPage.js';
 import {
@@ -205,6 +206,7 @@ function clearShortcutCapture() {
 function setShortcutBinding(shortcutId, binding) {
   state.settings.shortcuts[shortcutId] = binding;
   persistShortcuts();
+  persistSettingsFile(state.settings);
 }
 
 function getShortcutConflict(shortcutId, binding) {
@@ -536,6 +538,7 @@ applyUrlPreferences();
 applyRuntimeAttributes();
 applyUrlMode({ replaceHistory: true, renderView: false });
 applyTheme();
+persistSettingsFile(state.settings);
 initFullscreenState();
 computeDateResults();
 syncConverterValues('from');
@@ -559,6 +562,9 @@ window.addEventListener('resize', handleResize);
 window.addEventListener('load', () => drawGraph());
 window.addEventListener('popstate', handlePopState);
 window.addEventListener('blur', stopGraphPan);
+window.addEventListener('beforeunload', () => {
+  void flushSettingsFile();
+});
 systemThemeMedia?.addEventListener?.('change', () => {
   if (state.settings.theme === 'system') {
     applyTheme();
@@ -691,6 +697,7 @@ function applyTheme() {
   if (normalizedThemeSetting !== state.settings.theme) {
     state.settings.theme = normalizedThemeSetting;
     persistTheme();
+    persistSettingsFile(state.settings);
   }
 
   const effectiveTheme = getResolvedAppThemeId(normalizedThemeSetting, getSystemTheme());
@@ -704,6 +711,7 @@ function applyThemeSetting(theme) {
     ? theme
     : 'system';
   persistTheme();
+  persistSettingsFile(state.settings);
 
   // A manual settings change should stop any stale URL override from winning on refresh.
   clearUrlPreferenceOverride('theme');
@@ -714,6 +722,7 @@ function applyThemeSetting(theme) {
 async function applyLanguageChange(language) {
   state.settings.language = language;
   persistLanguage();
+  persistSettingsFile(state.settings);
 
   // Language set from settings should persist via storage rather than a one-off URL override.
   clearUrlPreferenceOverride('language');
@@ -731,6 +740,7 @@ async function applyFullscreenSetting(enabled) {
 function applyRepeatEqualsSetting(enabled) {
   state.settings.repeatEquals = enabled;
   persistRepeatEquals();
+  persistSettingsFile(state.settings);
   render();
 }
 

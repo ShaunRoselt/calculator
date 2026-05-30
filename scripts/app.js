@@ -77,10 +77,10 @@ import {
 } from './logic.js';
 import {
   applyThemeToElement,
+  ensureGraphThemeLoaded,
   getResolvedAppThemeId,
   isSupportedTheme,
-  normalizeGraphThemeSetting,
-  preloadAllThemes
+  normalizeGraphThemeSetting
 } from './themes.js';
 import { getUrlPreferenceOverrides } from './urlParams.js';
 
@@ -544,7 +544,7 @@ computeDateResults();
 syncConverterValues('from');
 render();
 installTooltipHandling();
-void preloadRemainingThemes();
+void ensureGraphThemeLoaded(state.graphing.theme, getResolvedAppThemeId(state.settings.theme, getSystemTheme()));
 
 document.addEventListener('click', handleClick);
 document.addEventListener('mousedown', handleMouseDown);
@@ -571,21 +571,6 @@ systemThemeMedia?.addEventListener?.('change', () => {
     render();
   }
 });
-
-async function preloadRemainingThemes() {
-  try {
-    await preloadAllThemes();
-    if (shouldRefreshForThemeCatalog()) {
-      render();
-    }
-  } catch (error) {
-    console.warn('Unable to preload the full theme catalog.', error);
-  }
-}
-
-function shouldRefreshForThemeCatalog() {
-  return state.mode === 'settings' || (state.mode === 'graphing' && state.graphing.settingsOpen);
-}
 
 function getSystemTheme() {
   return systemThemeMedia?.matches === true ? 'light' : 'dark';
@@ -1554,8 +1539,10 @@ function handleClick(event) {
 
     if (menu === 'theme') {
       state.graphing.theme = normalizeGraphThemeSetting(value);
-      drawGraph();
-      render();
+      void ensureGraphThemeLoaded(state.graphing.theme, document.documentElement.dataset.theme).then(() => {
+        drawGraph();
+        render();
+      });
       return;
     }
   }
@@ -1881,7 +1868,10 @@ function handleChange(event) {
 
   if (target.name === 'graph-theme') {
     state.graphing.theme = normalizeGraphThemeSetting(target.value);
-    render();
+    void ensureGraphThemeLoaded(state.graphing.theme, document.documentElement.dataset.theme).then(() => {
+      drawGraph();
+      render();
+    });
     return;
   }
 

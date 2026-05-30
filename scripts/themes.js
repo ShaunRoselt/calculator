@@ -26,7 +26,6 @@ let themeOrder = [];
 let defaultThemeId = 'dark';
 let manifestById = new Map();
 let themeManifestPromise = null;
-let allThemesPromise = null;
 
 function getCanonicalThemeLogoPath(themeId) {
   return `assets/logos/${themeId}.svg`;
@@ -133,6 +132,28 @@ function parseThemeTokens(cssText) {
   return tokens;
 }
 
+function normalizeManifestTheme(manifestEntry, themeId = manifestEntry?.id) {
+  if (!isPlainObject(manifestEntry)) {
+    return null;
+  }
+
+  const id = typeof manifestEntry.id === 'string' && manifestEntry.id ? manifestEntry.id : themeId;
+  if (!id) {
+    return null;
+  }
+
+  return {
+    ...manifestEntry,
+    id,
+    label: typeof manifestEntry.label === 'string' && manifestEntry.label ? manifestEntry.label : id,
+    colorScheme: manifestEntry.colorScheme === 'light' ? 'light' : 'dark',
+    metaColor: typeof manifestEntry.metaColor === 'string' && manifestEntry.metaColor ? manifestEntry.metaColor : '#1f2025',
+    logoPath: getCanonicalThemeLogoPath(id),
+    tokens: {},
+    graphPalette: isPlainObject(manifestEntry.graphPalette) ? manifestEntry.graphPalette : {}
+  };
+}
+
 async function ensureThemeManifestLoaded() {
   if (themeOrder.length > 0 && manifestById.size > 0) {
     return;
@@ -228,17 +249,12 @@ export async function ensureTheme(themeId) {
 
 export async function initThemes() {
   await ensureThemeManifestLoaded();
-  await preloadAllThemes();
 }
 
 export async function prepareThemesForLaunch(themeSetting = 'system', systemThemeId = 'dark') {
   await ensureThemeManifestLoaded();
 
   const initialThemeId = getResolvedAppThemeId(themeSetting, systemThemeId);
-  await Promise.all([
-    ensureTheme(defaultThemeId),
-    ensureTheme(initialThemeId)
-  ]);
 
   if (typeof document !== 'undefined') {
     applyThemeToElement(document.documentElement, initialThemeId);
@@ -247,17 +263,13 @@ export async function prepareThemesForLaunch(themeSetting = 'system', systemThem
   return initialThemeId;
 }
 
-export async function preloadAllThemes() {
-  await ensureThemeManifestLoaded();
-
-  if (!allThemesPromise) {
-    allThemesPromise = Promise.all(themeOrder.map((themeId) => ensureTheme(themeId))).catch((error) => {
-      allThemesPromise = null;
-      throw error;
-    });
+export async function ensureGraphThemeLoaded(themeSetting, appThemeId) {
+  if (themeSetting === 'match-app') {
+    return;
   }
 
-  await allThemesPromise;
+  const themeId = getGraphThemeId(themeSetting, appThemeId);
+  await ensureTheme(themeId);
 }
 
 export function isSupportedTheme(themeId) {
@@ -265,14 +277,17 @@ export function isSupportedTheme(themeId) {
 }
 
 export function getTheme(themeId) {
-  return themeDefinitions.get(themeId)
-    ?? themeDefinitions.get(defaultThemeId)
-    ?? null;
+  if (themeDefinitions.has(themeId)) {
+    return themeDefinitions.get(themeId);
+  }
+
+  const manifestEntry = manifestById.get(themeId) ?? manifestById.get(defaultThemeId);
+  return normalizeManifestTheme(manifestEntry, themeId);
 }
 
 export function getThemeOptions() {
   return themeOrder
-    .map((themeId) => themeDefinitions.get(themeId))
+    .map((themeId) => getTheme(themeId))
     .filter(Boolean)
     .map((theme) => ({
       value: theme.id,
@@ -347,8 +362,10 @@ export function applyThemeToElement(element, themeId) {
     element.style.removeProperty(tokenName);
   }
 
-  for (const [tokenName, tokenValue] of Object.entries(theme.tokens)) {
-    element.style.setProperty(tokenName, tokenValue);
+  if (themeDefinitions.has(theme.id)) {
+    for (const [tokenName, tokenValue] of Object.entries(theme.tokens)) {
+      element.style.setProperty(tokenName, tokenValue);
+    }
   }
 
   element.style.colorScheme = theme.colorScheme;

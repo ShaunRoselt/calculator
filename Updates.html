@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Full changelog and release history for Roselt Calculator from version 1.0.0 through 12.1.0." />
+    content="Full changelog and release history for Roselt Calculator from version 1.0.0 through 12.2.0." />
   <meta name="theme-color" content="#1f2025" />
   <title>Roselt Calculator | Release History</title>
   <link rel="icon" id="page-favicon" type="image/svg+xml" href="assets/logos/dark.svg" />
@@ -308,13 +308,62 @@
         <p data-updates-intro>
           Roselt Calculator went from a standalone web calculator foundation to a fully packaged,
           multi-platform, multi-language app in a series of focused releases. This page tracks what
-          changed in each version from 1.0.0 through 12.1.0.
+          changed in each version from 1.0.0 through 12.2.0.
         </p>
       </div>
 
       <section class="changelog-section" aria-labelledby="changelog-title">
         <h2 id="changelog-title" class="sr-only" data-changelog-title>Version history</h2>
         <div class="changelog-timeline">
+
+          <!-- 12.2.0 -->
+          <article class="changelog-entry">
+            <div class="changelog-entry-meta">
+              <span class="changelog-version-badge">12.2.0</span>
+              <div class="changelog-date">31 May 2026</div>
+            </div>
+            <div class="changelog-body">
+              <h2>Desktop reliability, faster launches, and packaging</h2>
+              <p class="changelog-summary">
+                A release focused on desktop stability, launch performance, and cleaner platform builds —
+                with settings that persist beside the app, a close-on-quit fix, and Windows builds that
+                show the correct name in Task Manager.
+              </p>
+              <ul>
+                <li>Added a <code>Settings.json</code> file beside the app install for theme, language,
+                  shortcuts, repeat-equals, and window bounds — compatible with portable installs and Steam
+                  Cloud sync.</li>
+                <li>Settings are merged on launch and flushed on quit so preferences survive restarts and
+                  cloud sync.</li>
+                <li>Window size and position are now restored when the app relaunches.</li>
+                <li>Fixed a quit handler bug that could leave the window stuck as "Not Responding" and
+                  spinning CPU until force-closed.</li>
+                <li>Window opens on first paint (<code>ready-to-show</code>) to remove the blank flash on
+                  startup, especially under Wine/Proton.</li>
+                <li>Reorganized <code>dist/</code> output into five clean folders: Android, Windows
+                  Portable, Windows Unpacked, Linux Flatpak, and Linux AppImage.</li>
+                <li>Added orchestrated Windows packaging (<code>npm run package:win</code>) that builds
+                  portable and unpacked artifacts together from one command.</li>
+                <li>Added an AppImage packaging script with an uncompressed payload repack for faster
+                  launch.</li>
+                <li>Flatpak bundles now output to <code>dist/Linux Flatpak/</code>.</li>
+                <li>Excluded marketing assets, docs, and dev tooling from packaged app bundles, fixing a
+                  ~996 MB asar bloat that slowed every desktop build.</li>
+                <li>Windows builds now embed "Roselt Calculator" and the app icon in the exe so Task
+                  Manager shows the correct name and logo instead of "Electron".</li>
+                <li>Prioritized launch speed over file size with uncompressed/store packaging where
+                  supported.</li>
+                <li>Improved changelog list layout and inline code styling on the release notes page.</li>
+              </ul>
+              <div class="changelog-tags">
+                <span class="changelog-tag">Desktop</span>
+                <span class="changelog-tag">Settings</span>
+                <span class="changelog-tag">Packaging</span>
+                <span class="changelog-tag">Windows</span>
+                <span class="changelog-tag">Linux</span>
+              </div>
+            </div>
+          </article>
 
           <!-- 12.1.0 -->
           <article class="changelog-entry">

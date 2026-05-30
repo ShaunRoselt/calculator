@@ -12,8 +12,8 @@ for (const file of files) {
     const data = JSON.parse(raw);
     if (data && data.updatesPage && data.updatesPage.hero && typeof data.updatesPage.hero.intro === 'string') {
       const intro = data.updatesPage.hero.intro;
-      if (intro.includes('12.0.0')) {
-        data.updatesPage.hero.intro = intro.replace(/12\.0\.0/g, '12.1.0');
+      if (intro.includes('12.1.0')) {
+        data.updatesPage.hero.intro = intro.replace(/12\.1\.0/g, '12.2.0');
         fs.writeFileSync(full, JSON.stringify(data, null, 2) + '\n', 'utf8');
         console.log('updated', file);
         updated++;

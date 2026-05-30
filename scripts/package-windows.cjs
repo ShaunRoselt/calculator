@@ -8,19 +8,25 @@
  *   dist/Windows Portable/   -> a single self-contained Roselt-Calculator-Portable-<version>.exe
  *   dist/Windows Unpacked/   -> the plain Roselt Calculator.exe plus its runtime files
  *
- * A single "portable" build already produces the unpacked tree (win-unpacked)
- * before wrapping it into the portable executable, so we reuse that tree for
- * the unpacked folder instead of building twice.
+ * Pipeline:
+ *   1. Build the unpacked app (electron-builder --win dir).
+ *   2. Patch the unpacked .exe with native metadata + icon (resedit, no wine)
+ *      so Task Manager / taskbar / Properties show "Roselt Calculator".
+ *   3. Wrap the *patched* unpacked build into the portable exe (--prepackaged),
+ *      so the process that actually runs also carries the correct metadata.
  */
 
 const { execFileSync } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
+const { patch } = require('./patch-windows-exe.cjs');
 
 const root = path.join(__dirname, '..');
 const distDir = path.join(root, 'dist');
 const portableDir = path.join(distDir, 'Windows Portable');
 const unpackedDir = path.join(distDir, 'Windows Unpacked');
+const tmpDir = path.join(distDir, '.tmp-win-build');
+const exeName = 'Roselt Calculator.exe';
 const builderBin = path.join(
   root,
   'node_modules',
@@ -39,40 +45,47 @@ function rmrf(target) {
   fs.rmSync(target, { recursive: true, force: true });
 }
 
+function builder(args) {
+  execFileSync(builderBin, args, { stdio: 'inherit', cwd: root });
+}
+
 function cleanBuilderCruft(dir) {
-  if (!fs.existsSync(dir)) {
-    return;
-  }
+  if (!fs.existsSync(dir)) return;
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const isCruft = BUILDER_CRUFT.has(entry.name) || (entry.isFile() && entry.name.endsWith('.zip'));
-    if (isCruft) {
-      rmrf(path.join(dir, entry.name));
-    }
+    if (isCruft) rmrf(path.join(dir, entry.name));
   }
 }
 
-console.log('> Building Windows portable + unpacked (electron-builder)...');
-rmrf(portableDir);
+console.log('> [1/3] Building Windows unpacked (electron-builder)...');
+rmrf(tmpDir);
 rmrf(unpackedDir);
-fs.mkdirSync(portableDir, { recursive: true });
+builder(['--win', 'dir', `--config.directories.output=${tmpDir}`]);
 
-execFileSync(
-  builderBin,
-  ['--win', 'portable', `--config.directories.output=${portableDir}`],
-  { stdio: 'inherit', cwd: root }
-);
-
-// The portable build leaves the unpacked tree alongside the wrapped exe.
-const stagedUnpacked = path.join(portableDir, 'win-unpacked');
+const stagedUnpacked = path.join(tmpDir, 'win-unpacked');
 if (!fs.existsSync(stagedUnpacked)) {
   console.error(`Expected unpacked output at "${stagedUnpacked}" but it was not produced.`);
   process.exit(1);
 }
-fs.renameSync(stagedUnpacked, unpackedDir);
 
-cleanBuilderCruft(portableDir);
+console.log('> [2/3] Embedding native metadata + icon into the exe (resedit)...');
+patch(path.join(stagedUnpacked, exeName));
+
+fs.renameSync(stagedUnpacked, unpackedDir);
+rmrf(tmpDir);
 cleanBuilderCruft(unpackedDir);
 
-console.log(`\nDone.`);
+console.log('> [3/3] Wrapping the patched build into the portable exe...');
+rmrf(portableDir);
+fs.mkdirSync(portableDir, { recursive: true });
+builder([
+  '--win', 'portable',
+  '--prepackaged', unpackedDir,
+  `--config.directories.output=${portableDir}`
+]);
+rmrf(path.join(portableDir, 'win-unpacked'));
+cleanBuilderCruft(portableDir);
+
+console.log('\nDone.');
 console.log(`  Windows Portable -> ${path.relative(root, portableDir)}`);
 console.log(`  Windows Unpacked -> ${path.relative(root, unpackedDir)}`);

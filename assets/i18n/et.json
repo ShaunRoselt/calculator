@@ -38,7 +38,7 @@
     "hero": {
       "eyebrow": "RELEASE NOTES",
       "title": "Iga väljalase, esimesest järgust tänaseni.",
-        "intro": "Roselt Calculator muutus eraldiseisvast veebikalkulaatori vundamendist täielikult pakitud, mitme platvormi ja mitmekeelse rakenduseni, mis on suunatud väljaannete seeriale. Sellel lehel jälgitakse, mis muutus igas versioonis 1.0.0 kuni 12.1.0.",
+      "intro": "Roselt Calculator muutus eraldiseisvast veebikalkulaatori vundamendist täielikult pakitud, mitme platvormi ja mitmekeelse rakenduseni, mis on suunatud väljaannete seeriale. Sellel lehel jälgitakse, mis muutus igas versioonis 1.0.0 kuni 12.2.0.",
       "versionHistory": "Versiooniajalugu"
     }
   },

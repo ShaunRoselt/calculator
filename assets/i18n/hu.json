@@ -38,7 +38,7 @@
     "hero": {
       "eyebrow": "RELEASE NOTES",
       "title": "Minden kiadás, az első buildtől a mai napig.",
-       "intro": "A Roselt Calculator egy önálló webes számológép alapjától egy teljesen csomagolt, többplatformos, többnyelvű alkalmazássá vált, több, fókuszált kiadás sorozatában. Ez az oldal nyomon követi, mi változott minden verzióban az 1.0.0-tól a 12.1.0-ig.",
+      "intro": "A Roselt Calculator egy önálló webes számológép alapjától egy teljesen csomagolt, többplatformos, többnyelvű alkalmazássá vált, több, fókuszált kiadás sorozatában. Ez az oldal nyomon követi, mi változott minden verzióban az 1.0.0-tól a 12.2.0-ig.",
       "versionHistory": "Verzióelőzmények"
     }
   },

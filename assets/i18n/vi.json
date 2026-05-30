@@ -38,7 +38,7 @@
     "hero": {
       "eyebrow": "RELEASE NOTES",
       "title": "Mọi bản phát hành, từ bản dựng đầu tiên cho đến hôm nay.",
-      "intro": "Máy tính Roselt đã phát triển từ nền tảng máy tính web độc lập thành một ứng dụng đa ngôn ngữ, đa nền tảng, được đóng gói đầy đủ trong một loạt các bản phát hành tập trung. Trang này theo dõi những gì đã thay đổi trong mỗi phiên bản từ 1.0.0 đến 12.1.0.",
+      "intro": "Máy tính Roselt đã phát triển từ nền tảng máy tính web độc lập thành một ứng dụng đa ngôn ngữ, đa nền tảng, được đóng gói đầy đủ trong một loạt các bản phát hành tập trung. Trang này theo dõi những gì đã thay đổi trong mỗi phiên bản từ 1.0.0 đến 12.2.0.",
       "versionHistory": "Lịch sử phiên bản"
     }
   },

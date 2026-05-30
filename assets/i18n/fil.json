@@ -38,7 +38,7 @@
     "hero": {
       "eyebrow": "RELEASE NOTES",
       "title": "Bawat release, mula sa unang build hanggang ngayon.",
-      "intro": "Napunta ang Roselt Calculator mula sa isang standalone na web calculator foundation patungo sa isang ganap na naka-package, multi-platform, multi-language na app sa isang serye ng mga nakatutok na release. Sinusubaybayan ng pahinang ito kung ano ang nagbago sa bawat bersyon mula 1.0.0 hanggang 12.1.0.",
+      "intro": "Napunta ang Roselt Calculator mula sa isang standalone na web calculator foundation patungo sa isang ganap na naka-package, multi-platform, multi-language na app sa isang serye ng mga nakatutok na release. Sinusubaybayan ng pahinang ito kung ano ang nagbago sa bawat bersyon mula 1.0.0 hanggang 12.2.0.",
       "versionHistory": "History ng bersyon"
     }
   },

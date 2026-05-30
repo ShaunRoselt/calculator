@@ -38,7 +38,7 @@
     "hero": {
       "eyebrow": "RELEASE NOTES",
       "title": "Argitaratu bakoitza, lehen eraikuntzatik gaur egunera arte.",
-        "intro": "Roselt Calculator kalkulagailu independente baten web oinarritik atera eta aplikazio bateratu, multiplataforma eta hizkuntza anitzeko aplikazio bihurtu da, alde focus-eko bertsioen bidez. Orrialde honek jarraitzen du 1.0.0-tik 12.1.0-ra bitartean bertsio bakoitzean zer aldatu den.",
+      "intro": "Roselt Calculator kalkulagailu independente baten web oinarritik atera eta aplikazio bateratu, multiplataforma eta hizkuntza anitzeko aplikazio bihurtu da, alde focus-eko bertsioen bidez. Orrialde honek jarraitzen du 1.0.0-tik 12.2.0-ra bitartean bertsio bakoitzean zer aldatu den.",
       "versionHistory": "Bertsio-historia"
     }
   },

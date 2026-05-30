@@ -38,7 +38,7 @@
     "hero": {
       "eyebrow": "RELEASE NOTES",
       "title": "Hver utgivelse, fra den første versjonen til i dag.",
-      "intro": "Roselt Calculator gikk fra et frittstående nettkalkulatorgrunnlag til en fullstendig pakket, multi-plattform, flerspråklig app i en serie fokuserte utgivelser. Denne siden sporer hva som er endret i hver versjon fra 1.0.0 til 12.1.0.",
+      "intro": "Roselt Calculator gikk fra et frittstående nettkalkulatorgrunnlag til en fullstendig pakket, multi-plattform, flerspråklig app i en serie fokuserte utgivelser. Denne siden sporer hva som er endret i hver versjon fra 1.0.0 til 12.2.0.",
       "versionHistory": "Versjonslogg"
     }
   },

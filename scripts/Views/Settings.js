@@ -14,7 +14,7 @@ const SETTINGS_LINKS = [
   {
     labelKey: 'settings.links.releaseNotes',
     label: 'Release Notes',
-    href: 'Updates.html'
+    href: 'updates.html'
   },
   {
     labelKey: 'settings.links.license',
@@ -304,23 +304,23 @@ export function renderSettingsView() {
           </summary>
           <div class="settings-expander-body">
             ${renderSettingsPreferenceItem(
-              t('settings.appearance.themeTitle'),
-              t('settings.appearance.themeDescription'),
-              `<div class="settings-select-label">${renderSettingsMenu('theme', t('settings.appearance.themeTitle'), currentTheme.label, themeOptions)}</div>`,
-              '◐'
-            )}
+    t('settings.appearance.themeTitle'),
+    t('settings.appearance.themeDescription'),
+    `<div class="settings-select-label">${renderSettingsMenu('theme', t('settings.appearance.themeTitle'), currentTheme.label, themeOptions)}</div>`,
+    '◐'
+  )}
             ${renderSettingsPreferenceItem(
-              t('settings.language.title'),
-              t('settings.language.description'),
-              `<div class="settings-select-label">${renderSettingsMenu('language', t('settings.language.title'), currentLanguageOption.label, languageOptions)}</div>`,
-              'A'
-            )}
+    t('settings.language.title'),
+    t('settings.language.description'),
+    `<div class="settings-select-label">${renderSettingsMenu('language', t('settings.language.title'), currentLanguageOption.label, languageOptions)}</div>`,
+    'A'
+  )}
             ${renderSettingsPreferenceItem(
-              t('settings.calculation.repeatEqualsTitle'),
-              t('settings.calculation.repeatEqualsDescription'),
-              renderSettingsToggleControl('repeatEquals', t('settings.calculation.repeatEqualsTitle'), state.settings.repeatEquals),
-              '='
-            )}
+    t('settings.calculation.repeatEqualsTitle'),
+    t('settings.calculation.repeatEqualsDescription'),
+    renderSettingsToggleControl('repeatEquals', t('settings.calculation.repeatEqualsTitle'), state.settings.repeatEquals),
+    '='
+  )}
           </div>
         </details>
 

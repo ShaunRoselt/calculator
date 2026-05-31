@@ -34,3 +34,7 @@ test/
 node_modules/
 Saves/
 .build-tools/
+
+# Ignore final distribution builds
+/Final dist/
+

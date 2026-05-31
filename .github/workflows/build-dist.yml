@@ -1,0 +1,179 @@
+name: Build dist
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@main
+        with:
+          node-version: 'node'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run checks
+        run: npm run check
+
+  linux:
+    name: Build Linux dist
+    runs-on: ubuntu-latest
+    needs: check
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 'node'
+          cache: npm
+
+      - name: Install system packaging tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y flatpak flatpak-builder libfuse2 squashfs-tools
+          sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+          sudo flatpak install -y flathub org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Linux unpacked app
+        run: npm run package:linux
+
+      - name: Build Linux AppImage
+        run: npm run package:linux:appimage
+
+      - name: Build Linux Flatpak
+        run: sh scripts/package-flatpak.sh
+
+      - name: Create Linux dist archive
+        run: tar -czf dist-linux.tar.gz -C dist "Roselt Calculator-linux-x64" "Linux AppImage" "Linux Flatpak" "final dist"
+
+      - name: Upload Linux dist
+        uses: actions/upload-artifact@main
+        with:
+          name: dist-linux
+          if-no-files-found: error
+          path: dist-linux.tar.gz
+
+  windows:
+    name: Build Windows dist
+    runs-on: windows-latest
+    needs: check
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@main
+        with:
+          node-version: 'node'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Windows portable and unpacked apps
+        run: npm run package:win
+
+      - name: Create Windows dist archive
+        shell: pwsh
+        run: Compress-Archive -Path 'dist/Windows Portable', 'dist/Windows Unpacked', 'dist/final dist' -DestinationPath dist-windows.zip
+
+      - name: Upload Windows dist
+        uses: actions/upload-artifact@main
+        with:
+          name: dist-windows
+          if-no-files-found: error
+          path: dist-windows.zip
+
+  macos:
+    name: Build macOS dist
+    runs-on: macos-latest
+    needs: check
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@main
+        with:
+          node-version: 'node'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build macOS app bundles
+        run: npm run package:mac
+
+      - name: Create macOS dist archive
+        run: tar -czf dist-macos.tar.gz -C dist macOS "final dist"
+
+      - name: Upload macOS dist
+        uses: actions/upload-artifact@main
+        with:
+          name: dist-macos
+          if-no-files-found: error
+          path: dist-macos.tar.gz
+
+  final-dist:
+    name: Publish combined final dist artifact
+    runs-on: ubuntu-latest
+    needs:
+      - linux
+      - windows
+      - macos
+
+    steps:
+      - name: Download platform artifacts
+        uses: actions/download-artifact@main
+        with:
+          path: dist-artifacts
+
+      - name: Extract platform artifacts
+        run: |
+          mkdir -p dist-artifacts/extracted
+          tar -xzf dist-artifacts/dist-linux/dist-linux.tar.gz -C dist-artifacts/extracted
+          unzip -q dist-artifacts/dist-windows/dist-windows.zip -d dist-artifacts/extracted
+          tar -xzf dist-artifacts/dist-macos/dist-macos.tar.gz -C dist-artifacts/extracted
+
+      - name: Collect release-ready files
+        run: |
+          mkdir -p "final dist"
+          while IFS= read -r -d '' dir; do
+            find "$dir" -mindepth 1 -maxdepth 1 -exec cp -a {} "final dist/" \;
+          done < <(find dist-artifacts/extracted -type d -name "final dist" -print0)
+
+      - name: Create combined final dist archive
+        run: tar -czf final-dist.tar.gz "final dist"
+
+      - name: Upload final dist
+        uses: actions/upload-artifact@main
+        with:
+          name: final-dist
+          if-no-files-found: error
+          path: final-dist.tar.gz

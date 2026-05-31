@@ -107,16 +107,20 @@ Use [docs/ManualTests.md](docs/ManualTests.md) as the baseline manual test plan.
 
 ## Packaging
 
-Build the Windows x64 desktop bundle:
+GitHub Actions builds the desktop `dist` outputs on every pull request, every push to `main`, every `v*` tag, and manual workflow dispatch. Download the `dist-linux`, `dist-windows`, `dist-macos`, or combined `final-dist` artifacts from the **Build dist** workflow run.
+
+The package scripts can still be run locally when you need to reproduce a packaging issue.
+
+Build the Windows portable executable and unpacked desktop bundle:
 
 ```bash
 npm run package:win
 ```
 
-Build a single-file portable Windows executable:
+Build the macOS x64 and arm64 app bundles:
 
 ```bash
-npm run package:win:portable
+npm run package:mac
 ```
 
 Build the Linux x64 Electron bundle:
@@ -143,7 +147,7 @@ Build the Android package from the hosted PWA with PWABuilder:
 2. Package `https://calculator.apps.shaunroselt.com/`
 3. Choose Android and download the generated package archive
 
-The PWABuilder download includes at least an `.apk`, an `.aab`, and `assetlinks.json`.
+The PWABuilder download includes at least an `.apk`, an `.aab`, and `assetlinks.json`. Android packaging is still manual because it is generated from the hosted PWA rather than a repository build script.
 
 Launch the installed Flatpak:
 

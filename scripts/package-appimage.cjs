@@ -18,17 +18,11 @@ const fs = require('node:fs');
 const path = require('node:path');
 const os = require('node:os');
 const { copyToFinal } = require('./final-dist.cjs');
+const { runElectronBuilder } = require('./run-electron-builder.cjs');
 
 const root = path.join(__dirname, '..');
 const distDir = path.join(root, 'dist');
 const outputDir = path.join(distDir, 'Linux AppImage');
-const builderBin = path.join(
-  root,
-  'node_modules',
-  '.bin',
-  process.platform === 'win32' ? 'electron-builder.cmd' : 'electron-builder'
-);
-
 function rmrf(target) {
   fs.rmSync(target, { recursive: true, force: true });
 }
@@ -90,10 +84,9 @@ console.log('> Building Linux AppImage (electron-builder)...');
 rmrf(outputDir);
 fs.mkdirSync(outputDir, { recursive: true });
 
-execFileSync(
-  builderBin,
+runElectronBuilder(
   ['--linux', 'AppImage', '--x64', `--config.directories.output=${outputDir}`],
-  { stdio: 'inherit', cwd: root }
+  { cwd: root }
 );
 
 // Keep only the .AppImage; drop the unpacked tree and builder metadata.

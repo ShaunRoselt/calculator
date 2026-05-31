@@ -8,21 +8,14 @@
  *   dist/Roselt Calculator-linux-x64/
  */
 
-const { execFileSync } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
+const { runElectronBuilder } = require('./run-electron-builder.cjs');
 
 const root = path.join(__dirname, '..');
 const distDir = path.join(root, 'dist');
 const tmpDir = path.join(distDir, '.tmp-linux-build');
 const outputDir = path.join(distDir, 'Roselt Calculator-linux-x64');
-const builderBin = path.join(
-  root,
-  'node_modules',
-  '.bin',
-  process.platform === 'win32' ? 'electron-builder.cmd' : 'electron-builder'
-);
-
 function rmrf(target) {
   fs.rmSync(target, { recursive: true, force: true });
 }
@@ -31,10 +24,9 @@ console.log('> Building Linux unpacked (electron-builder)...');
 rmrf(tmpDir);
 rmrf(outputDir);
 
-execFileSync(
-  builderBin,
+runElectronBuilder(
   ['--linux', 'dir', '--x64', `--config.directories.output=${tmpDir}`],
-  { stdio: 'inherit', cwd: root }
+  { cwd: root }
 );
 
 const stagedUnpacked = path.join(tmpDir, 'linux-unpacked');

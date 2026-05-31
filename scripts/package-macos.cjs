@@ -13,18 +13,12 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
-const { execFileSync } = require('node:child_process');
 const { copyToFinal } = require('./final-dist.cjs');
+const { runElectronBuilder } = require('./run-electron-builder.cjs');
 
 const root = path.join(__dirname, '..');
 const distDir = path.join(root, 'dist');
 const outputDir = path.join(distDir, 'macOS');
-const builderBin = path.join(
-  root,
-  'node_modules',
-  '.bin',
-  process.platform === 'win32' ? 'electron-builder.cmd' : 'electron-builder'
-);
 const appIcon = path.join(root, 'assets', 'icons', 'app-icon.icns');
 const macArchitectures = ['x64', 'arm64'];
 
@@ -39,10 +33,9 @@ function buildMac(arch) {
   rmrf(tmpDir);
   rmrf(finalDir);
 
-  execFileSync(
-    builderBin,
+  runElectronBuilder(
     ['--mac', 'dir', `--${arch}`, `--config.directories.output=${tmpDir}`],
-    { stdio: 'inherit', cwd: root }
+    { cwd: root }
   );
 
   const stagedDir = fs.existsSync(path.join(tmpDir, 'mac'))

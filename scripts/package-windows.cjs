@@ -16,11 +16,11 @@
  *      so the process that actually runs also carries the correct metadata.
  */
 
-const { execFileSync } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
 const { copyToFinal } = require('./final-dist.cjs');
 const { patch } = require('./patch-windows-exe.cjs');
+const { runElectronBuilder } = require('./run-electron-builder.cjs');
 
 const root = path.join(__dirname, '..');
 const distDir = path.join(root, 'dist');
@@ -28,12 +28,6 @@ const portableDir = path.join(distDir, 'Windows Portable');
 const unpackedDir = path.join(distDir, 'Windows Unpacked');
 const tmpDir = path.join(distDir, '.tmp-win-build');
 const exeName = 'Roselt Calculator.exe';
-const builderBin = path.join(
-  root,
-  'node_modules',
-  '.bin',
-  process.platform === 'win32' ? 'electron-builder.cmd' : 'electron-builder'
-);
 
 const BUILDER_CRUFT = new Set([
   'builder-debug.yml',
@@ -47,7 +41,7 @@ function rmrf(target) {
 }
 
 function builder(args) {
-  execFileSync(builderBin, args, { stdio: 'inherit', cwd: root });
+  runElectronBuilder(args, { cwd: root });
 }
 
 function cleanBuilderCruft(dir) {

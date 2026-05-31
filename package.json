@@ -35,6 +35,7 @@
   "build": {
     "appId": "io.github.ShaunRoselt.Calculator",
     "productName": "Roselt Calculator",
+    "publish": null,
     "directories": {
       "output": "dist"
     },

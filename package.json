@@ -12,8 +12,10 @@
     "generate:logos:png": "node assets/logos/generate_png_logos.cjs",
     "package:flatpak": "npm run package:linux && sh scripts/package-flatpak.sh",
     "package:linux:appimage": "node scripts/package-appimage.cjs",
-    "package:linux": "electron-packager . \"Roselt Calculator\" --platform=linux --arch=x64 --icon=assets/icons/app-icon-4096.png --out=dist --overwrite --asar --prune=true --ignore='^/(dist|flatpak|\\.flatpak-builder|\\.git|\\.github|\\.vscode|\\.build-tools|\\.copilot-translation-chunks|\\.tmp-piqad-font|marketing|docs|test|Saves)(/|$)'",
+    "package:linux": "node scripts/package-linux.cjs",
+    "package:mac": "node scripts/package-macos.cjs",
     "package:win": "node scripts/package-windows.cjs",
+    "sync:final-dist": "node scripts/final-dist.cjs",
     "start": "python3 -m http.server 4173",
     "start:desktop": "electron ."
   },

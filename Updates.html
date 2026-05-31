@@ -255,6 +255,52 @@
         margin-top: 0;
       }
     }
+
+    /* Copy-to-clipboard button for changelog entries (placed next to the title) */
+    .changelog-body h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .changelog-copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+      background: transparent;
+      color: var(--page-text-muted);
+      font-size: 0.75rem;
+      padding: 0.18rem 0.45rem;
+      border-radius: 6px;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(-2px);
+      transition: opacity .15s ease, transform .15s ease, color .12s ease, background .12s ease;
+    }
+
+    .changelog-copy-btn svg {
+      width: 14px;
+      height: 14px;
+      display: block;
+      fill: currentColor;
+    }
+
+    .changelog-body h2:hover .changelog-copy-btn,
+    .changelog-body h2 .changelog-copy-btn:focus {
+      opacity: 1;
+      transform: none;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--page-text);
+      outline: none;
+    }
+
+    @media (max-width: 600px) {
+      .changelog-copy-btn {
+        opacity: 1;
+        transform: none;
+      }
+    }
   </style>
 </head>
 
@@ -339,15 +385,28 @@
                   force-closed.</li>
                 <li>Reduced the blank flash on startup by showing the window after the first content is
                   ready.</li>
+                <li>Improved launch performance by loading the graphing math engine only when graphing
+                  features need it.</li>
+                <li>Reduced startup loading by only loading the active theme and the styles needed for the
+                  current calculator mode.</li>
+                <li>Theme previews in Settings now prepare in the background and reopen faster after the
+                  dropdown has already been viewed.</li>
                 <li>Windows builds now embed "Roselt Calculator" and the app icon in the exe so Task
                   Manager shows the correct name and logo instead of "Electron".</li>
+                <li>Added Android packaging support so Roselt Calculator can now be shipped as an APK.</li>
+                <li>Added macOS app bundle support, including Apple Silicon builds for modern Macs.</li>
+                <li>Added native Linux and SteamOS desktop packaging for Steam distribution.</li>
                 <li>Reduced the packaged app size so desktop builds install and launch faster.</li>
               </ul>
               <div class="changelog-tags">
                 <span class="changelog-tag">Desktop</span>
                 <span class="changelog-tag">Settings</span>
+                <span class="changelog-tag">Performance</span>
                 <span class="changelog-tag">Windows</span>
                 <span class="changelog-tag">Linux</span>
+                <span class="changelog-tag">SteamOS</span>
+                <span class="changelog-tag">macOS</span>
+                <span class="changelog-tag">Android</span>
               </div>
             </div>
           </article>

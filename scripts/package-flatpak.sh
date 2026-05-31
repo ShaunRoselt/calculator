@@ -9,6 +9,7 @@ bundle="$bundle_dir/Roselt-Calculator.flatpak"
 app_id="io.github.ShaunRoselt.Calculator"
 branch="stable"
 
+rm -f "$bundle"
 mkdir -p "$bundle_dir"
 
 run_host_command() {
@@ -65,3 +66,4 @@ run_flatpak_command() {
 
 run_flatpak_builder --force-clean --repo="$repo_dir" "$build_dir" "$manifest"
 run_flatpak_command build-bundle "$repo_dir" "$bundle" "$app_id" "$branch"
+node scripts/final-dist.cjs flatpak

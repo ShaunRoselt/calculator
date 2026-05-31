@@ -19,6 +19,7 @@
 const { execFileSync } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
+const { copyToFinal } = require('./final-dist.cjs');
 const { patch } = require('./patch-windows-exe.cjs');
 
 const root = path.join(__dirname, '..');
@@ -85,6 +86,12 @@ builder([
 ]);
 rmrf(path.join(portableDir, 'win-unpacked'));
 cleanBuilderCruft(portableDir);
+
+const portableExe = fs.readdirSync(portableDir)
+  .find((name) => name.toLowerCase().endsWith('.exe'));
+if (portableExe) {
+  copyToFinal(path.join(portableDir, portableExe), 'Roselt Calculator.exe');
+}
 
 console.log('\nDone.');
 console.log(`  Windows Portable -> ${path.relative(root, portableDir)}`);

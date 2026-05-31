@@ -17,6 +17,7 @@ const { execFileSync } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
 const os = require('node:os');
+const { copyToFinal } = require('./final-dist.cjs');
 
 const root = path.join(__dirname, '..');
 const distDir = path.join(root, 'dist');
@@ -108,6 +109,7 @@ for (const entry of fs.readdirSync(outputDir, { withFileTypes: true })) {
 if (appImagePath) {
   console.log('> Repacking payload uncompressed for fastest launch...');
   makeUncompressed(appImagePath);
+  copyToFinal(appImagePath, 'Roselt Calculator.AppImage');
 }
 
 console.log('\nDone.');

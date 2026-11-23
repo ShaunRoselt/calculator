@@ -30,7 +30,8 @@
   --graph-input-focus-bg: #3d221b;
   --graph-style-panel-bg: #41241e;
   --graph-style-select-bg: #5c352d;
-  --converter-menu-bg: linear-gradient(180deg, #d16b3e 0%, #f7b48b 30%, #cf6f8f 70%, #a13f6b 100%);
+  --converter-menu-bg: linear-gradient(180deg, #8c432d 0%, #70462e 30%, #81374e 70%, #5f2341 100%);
+  --converter-menu-text-soft: #f8e5dd;
   --button-default-bg: #6c3d31;
   --button-default-hover-bg: #814939;
   --button-function-bg: #87424c;

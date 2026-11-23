@@ -31,6 +31,12 @@
   --graph-style-panel-bg: #312a52;
   --graph-style-select-bg: #433b6d;
   --converter-menu-bg: linear-gradient(180deg, #ff5cad 0%, #ffd85b 50%, #59dfff 100%);
+  --converter-menu-text: #211429;
+  --converter-menu-text-soft: #3a2546;
+  --converter-menu-hover: rgba(33, 20, 41, 0.06);
+  --converter-menu-active: rgba(33, 20, 41, 0.1);
+  --converter-menu-thumb: #4f375c;
+  --converter-menu-scrollbar: #4f375c transparent;
   --button-default-bg: #5a2d6f;
   --button-default-hover-bg: #6c3785;
   --button-function-bg: #725f26;

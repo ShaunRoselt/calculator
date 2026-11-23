@@ -18,7 +18,7 @@ import {
 } from './graphAnalysisCas.js';
 import { ensureNerdamerLoaded } from './nerdamer.js';
 import { getGraphPaletteForSelection } from './themes.js';
-import { formatExpressionText, formatNumber } from './utils.js';
+import { formatExpressionText, formatNumber, getHexColorLuminance } from './utils.js';
 
 function invalidInputMessage() {
   return t('errors.invalidInput');
@@ -2685,14 +2685,14 @@ export function drawGraph() {
 
   drawAxisDecorations(ctx, cssWidth, cssHeight, xAxisY, yAxisX, toScreenX, toScreenY, xMin, xMax, yMin, yMax, palette.label);
 
+  const backgroundLuminance = getHexColorLuminance(palette.background);
   for (const expression of state.graphing.expressions) {
     if (!expression.plottedValue.trim() || expression.error || expression.visible === false) {
       continue;
     }
 
     ctx.beginPath();
-    ctx.strokeStyle = expression.color;
-    ctx.lineWidth = Number(state.graphing.lineThickness) || 2;
+    const lineWidth = Number(state.graphing.lineThickness) || 2;
     ctx.setLineDash(getGraphLineDash(expression.lineStyle));
     let started = false;
     let previousY = null;
@@ -2724,6 +2724,16 @@ export function drawGraph() {
       previousY = py;
     }
 
+    const lineLuminance = getHexColorLuminance(expression.color);
+    const contrast = (Math.max(backgroundLuminance, lineLuminance) + 0.05)
+      / (Math.min(backgroundLuminance, lineLuminance) + 0.05);
+    if (contrast < 3) {
+      ctx.strokeStyle = palette.label;
+      ctx.lineWidth = lineWidth + 3;
+      ctx.stroke();
+    }
+    ctx.strokeStyle = expression.color;
+    ctx.lineWidth = lineWidth;
     ctx.stroke();
     ctx.setLineDash([]);
   }

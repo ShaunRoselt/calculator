@@ -72,3 +72,12 @@ export function escapeHtml(value) {
 export function toDateInputValue(date) {
   return new Date(date.getTime() - date.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
 }
+
+export function getHexColorLuminance(color) {
+  const linearize = (offset) => {
+    const channel = Number.parseInt(color.slice(offset, offset + 2), 16) / 255;
+    return channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4;
+  };
+
+  return linearize(1) * 0.2126 + linearize(3) * 0.7152 + linearize(5) * 0.0722;
+}

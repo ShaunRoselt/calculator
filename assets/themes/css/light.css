@@ -4,13 +4,18 @@
   --window-bg: #f7f7f7;
   --window-bg-alt: #efefef;
   --panel: #ffffff;
+  --shell-color: var(--shell-bg);
+  --window-color: var(--window-bg);
+  --panel-color: var(--panel);
   --panel-alt: #f3f3f3;
   --panel-soft: #ececec;
   --panel-strong: #dedede;
   --text: #1e1e1e;
-  --text-soft: #5f5f5f;
+  --text-soft: #535353;
   --text-faint: #777777;
   --accent: #0f6cbd;
+  --accent-ink: #ffffff;
+  --accent-text: #0f5695;
   --accent-strong: #115ea3;
   --operator: #e8e8e8;
   --danger: #c42b1c;
@@ -61,6 +66,7 @@
   --graph-swatch-selected-ring: 0 0 0 2px #0f6cbd, 0 0 0 4px rgba(15, 108, 189, 0.18);
   --graph-active-ring: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.06);
   --graph-success: #107c41;
+  --graph-success-ink: #ffffff;
   --converter-menu-bg: #ffffff;
   --button-default-bg: #f3f3f3;
   --button-default-hover-bg: #e6e6e6;

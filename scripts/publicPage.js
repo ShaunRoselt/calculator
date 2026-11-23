@@ -201,8 +201,6 @@ export async function initPublicPage({
   applyPageState = () => {},
   onThemeApplied = () => {}
 } = {}) {
-  const pageHeader = document.querySelector('.page-header');
-  const headerInner = document.querySelector('.page-header__inner');
   const brandLink = document.querySelector('.page-header__brand');
   const brandImage = brandLink?.querySelector('img');
   const primaryNav = document.querySelector('[data-primary-nav]');
@@ -241,7 +239,6 @@ export async function initPublicPage({
   let currentAppPage = DEFAULT_MODE;
   let currentCopy = { ...FALLBACK_COPY };
   let openMenuId = null;
-  let headerLayoutFrame = null;
 
   function isLocalPublicContext() {
     const hostname = window.location.hostname;
@@ -256,43 +253,6 @@ export async function initPublicPage({
 
   function getSystemThemeId() {
     return systemThemeMedia?.matches === true ? 'light' : 'dark';
-  }
-
-  function syncHeaderOffset() {
-    if (!(pageHeader instanceof HTMLElement)) {
-      return;
-    }
-
-    const measuredHeight = Math.max(74, Math.ceil(pageHeader.getBoundingClientRect().height));
-    document.documentElement.style.setProperty('--header-height', `${measuredHeight}px`);
-  }
-
-  function updateHeaderLayout() {
-    if (!(pageHeader instanceof HTMLElement) || !(headerInner instanceof HTMLElement)) {
-      syncHeaderOffset();
-      return;
-    }
-
-    pageHeader.classList.remove('page-header--stacked');
-    const needsStackedLayout = headerInner.scrollWidth > headerInner.clientWidth + 1;
-    pageHeader.classList.toggle('page-header--stacked', needsStackedLayout);
-    syncHeaderOffset();
-  }
-
-  function scheduleHeaderLayoutUpdate() {
-    if (typeof window.requestAnimationFrame !== 'function') {
-      updateHeaderLayout();
-      return;
-    }
-
-    if (headerLayoutFrame !== null) {
-      window.cancelAnimationFrame(headerLayoutFrame);
-    }
-
-    headerLayoutFrame = window.requestAnimationFrame(() => {
-      headerLayoutFrame = null;
-      updateHeaderLayout();
-    });
   }
 
   function findSupportedLanguageByValue(languageId) {
@@ -632,7 +592,6 @@ export async function initPublicPage({
 
     onThemeApplied(getContext());
     applyPageState(getContext());
-    scheduleHeaderLayoutUpdate();
   }
 
   async function applyLanguage(languageId) {
@@ -651,7 +610,6 @@ export async function initPublicPage({
     updateToggleLabel('theme', themeOptions.find((theme) => theme.value === currentThemeSetting)?.label ?? currentThemeSetting);
     renderMenuOptions('theme', themeOptions, currentThemeSetting);
     applyPageState(getContext());
-    scheduleHeaderLayoutUpdate();
   }
 
   function refreshCurrentAppPage() {
@@ -700,7 +658,6 @@ export async function initPublicPage({
   });
 
   window.addEventListener('focus', refreshCurrentAppPage);
-  window.addEventListener('resize', scheduleHeaderLayoutUpdate);
   window.addEventListener('storage', (event) => {
     if (event.key === STORAGE_KEYS.page) {
       refreshCurrentAppPage();
@@ -736,9 +693,5 @@ export async function initPublicPage({
   syncUrl();
   updateLaunchLink();
   applyPageState(getContext());
-  scheduleHeaderLayoutUpdate();
-  if (document.fonts?.ready) {
-    void document.fonts.ready.then(scheduleHeaderLayoutUpdate);
-  }
   return getContext();
 }

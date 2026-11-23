@@ -4,6 +4,9 @@
   --window-bg: #202126;
   --window-bg-alt: #202126;
   --panel: #23242b;
+  --shell-color: var(--shell-bg);
+  --window-color: var(--window-bg);
+  --panel-color: var(--panel);
   --panel-alt: #262831;
   --panel-soft: #30333b;
   --panel-strong: #3c4048;
@@ -11,6 +14,8 @@
   --text-soft: #b0b3bb;
   --text-faint: #777b84;
   --accent: #53b5eb;
+  --accent-ink: #080a0e;
+  --accent-text: var(--accent);
   --accent-strong: #4aacdf;
   --operator: #31343c;
   --danger: #ff6d7a;
@@ -55,13 +60,14 @@
   --graph-hidden-badge-hover-bg: rgba(255, 255, 255, 0.24);
   --graph-hidden-badge-text: rgba(244, 244, 245, 0.7);
   --graph-add-badge-bg: rgba(255, 255, 255, 0.28);
-  --graph-add-badge-text: rgba(244, 244, 245, 0.78);
+  --graph-add-badge-text: var(--text);
   --graph-style-panel-bg: #2a2c31;
   --graph-style-select-bg: #3b3d43;
   --graph-swatch-ring: rgba(255, 255, 255, 0.04);
   --graph-swatch-selected-ring: 0 0 0 2px #ffffff, 0 0 0 4px rgba(255, 255, 255, 0.22);
   --graph-active-ring: inset 0 0 0 1px rgba(255, 255, 255, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.16);
   --graph-success: #16c35b;
+  --graph-success-ink: #08160e;
   --converter-menu-bg: linear-gradient(180deg, #2f3440 0%, #292d38 100%);
   --button-default-bg: #353841;
   --button-default-hover-bg: #3b3e47;

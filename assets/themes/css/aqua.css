@@ -37,6 +37,7 @@
   --graph-swatch-selected-ring: 0 0 0 2px #ffffff, 0 0 0 4px rgba(121, 239, 242, 0.22);
   --graph-success: #27d0b8;
   --converter-menu-bg: linear-gradient(180deg, #30656f 0%, #234d55 100%);
+  --converter-menu-text-soft: #def5f6;
   --button-default-bg: #315d66;
   --button-default-hover-bg: #38707c;
   --button-function-bg: #2a535b;

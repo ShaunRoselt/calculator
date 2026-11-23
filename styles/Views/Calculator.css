@@ -153,7 +153,7 @@
   display: grid;
   gap: 2px;
   padding: 2px;
-  background: color-mix(in srgb, var(--window-bg) 94%, #111);
+  background: color-mix(in srgb, var(--window-color) 94%, #111);
   border: 1px solid var(--border-subtle);
   border-radius: 6px;
   box-shadow: var(--shadow-menu);
@@ -225,7 +225,7 @@
   min-height: 1.1rem;
   width: 100%;
   text-align: right;
-  color: var(--text-faint);
+  color: var(--text-soft);
   font-size: 0.8rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -403,12 +403,13 @@
 
 .calc-button.operator {
   background: var(--button-operator-bg);
+  color: var(--button-operator-text, var(--text));
 }
 
 /* Make the first two rows in standard button-grid use operator background */
 .button-grid.standard>.calc-button:nth-child(-n+8) {
   background: var(--button-operator-bg);
-  color: var(--text);
+  color: var(--button-operator-text, var(--text));
 }
 
 .button-grid.standard>.calc-button:nth-child(-n+8):hover,

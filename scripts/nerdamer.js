@@ -1,4 +1,4 @@
-const NERDAMER_LOCAL_URL = new URL('../assets/vendor/nerdamer/all.min.js', import.meta.url).href;
+const NERDAMER_LOCAL_URL = new URL('../assets/vendor/nerdamer/bundle.js', import.meta.url).href;
 
 let nerdamerLoadPromise = null;
 
@@ -6,6 +6,7 @@ function loadScript(sourceUrl, errorMessage) {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.src = sourceUrl;
+    script.fetchPriority = 'low';
     script.onload = () => resolve();
     script.onerror = () => reject(new Error(errorMessage));
     document.head.append(script);

@@ -84,7 +84,15 @@
   },
   "devDependencies": {
     "electron": "^45.4.1",
-    "electron-builder": "^26.18.0",
-    "resedit": "^3.0.2"
+    "electron-builder": "^26.18.1",
+    "resedit": "^3.1.1"
+  },
+  "overrides": {
+    "app-builder-lib@26.18.1": {
+      "minimatch@^10.2.5": "11.0.9"
+    },
+    "@electron/universal@2.0.3": {
+      "minimatch@^9.0.3": "11.0.9"
+    }
   }
 }

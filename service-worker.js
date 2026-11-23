@@ -1,6 +1,6 @@
 const scope = new URL(self.registration.scope);
 const cachePrefix = `roselt-shell:${scope.href}:`;
-const cacheName = `${cachePrefix}1`;
+const cacheName = `${cachePrefix}2`;
 const appUrl = new URL('app.html', scope).href;
 const shellAssets = [
   'app.html',
@@ -59,7 +59,7 @@ const shellAssets = [
   'assets/themes/css/dark.css',
   'assets/themes/css/light.css',
   'assets/themes/data/index.json',
-  'assets/vendor/nerdamer/all.min.js'
+  'assets/vendor/nerdamer/bundle.js'
 ];
 
 self.addEventListener('install', (event) => {

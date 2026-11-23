@@ -34,7 +34,7 @@ For user-visible features and major UX changes, follow [docs/NewFeatureProcess.m
 
 Prerequisites:
 
-- Node.js 24 LTS and npm
+- Node.js 26 LTS and npm
 - Python 3, or another simple way to serve the repository over HTTP
 
 Install dependencies:

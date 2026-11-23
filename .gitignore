@@ -19,8 +19,6 @@ __pycache__/
 .tmp*/
 .copilot*/
 
-test/
-
 # Ignore generated marketing screenshot images (keep manifest)
 /marketing/steam/screenshot-assets/full-page/**/*.png
 /marketing/steam/screenshot-assets/full-page/**/*.jpg

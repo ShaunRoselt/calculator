@@ -21,7 +21,7 @@ Recommended viewport sizes:
 ### App launch
 
 1. Start the local server and open `index.html`.
-2. Refresh the page.
+2. Launch the calculator from the landing page and refresh the app.
 3. Switch between several modes from the navigation menu.
 
 Expected:
@@ -151,7 +151,7 @@ Expected:
 
 1. Load the app once while online.
 2. Reload it.
-3. Disconnect the network and reopen the app shell.
+3. After the service worker activates, disconnect the network and reopen `app.html?page=standard`.
 4. If supported, install the PWA and relaunch it.
 
 Expected:

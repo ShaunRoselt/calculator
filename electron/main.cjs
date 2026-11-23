@@ -13,7 +13,7 @@ const isFlatpak = Boolean(process.env.FLATPAK_ID);
 const minimumWindowWidth = 320;
 const minimumWindowHeight = 520;
 let settingsSaveCache = null;
-let settingsSaveWriteQueue = Promise.resolve();
+let settingsFileQueue = Promise.resolve();
 let windowBoundsSaveTimer = null;
 let isFlushingSettingsOnQuit = false;
 
@@ -84,8 +84,14 @@ function getAppInstallDirectory() {
   return path.join(__dirname, '..');
 }
 
-function getSettingsSavePath() {
+function getLegacySettingsSavePath() {
   return path.join(getAppInstallDirectory(), SETTINGS_SAVE_DIRECTORY, SETTINGS_SAVE_FILENAME);
+}
+
+function getSettingsSavePath() {
+  return process.env.PORTABLE_EXECUTABLE_DIR
+    ? getLegacySettingsSavePath()
+    : path.join(app.getPath('userData'), SETTINGS_SAVE_DIRECTORY, SETTINGS_SAVE_FILENAME);
 }
 
 function normalizeSettingsSave(value) {
@@ -141,7 +147,13 @@ async function readSettingsSaveFile() {
   const savePath = getSettingsSavePath();
 
   try {
-    const rawContents = await fs.readFile(savePath, 'utf8');
+    const rawContents = await fs.readFile(savePath, 'utf8').catch((error) => {
+      const legacyPath = getLegacySettingsSavePath();
+      if (error.code === 'ENOENT' && legacyPath !== savePath) {
+        return fs.readFile(legacyPath, 'utf8');
+      }
+      throw error;
+    });
     const parsedContents = JSON.parse(rawContents);
     settingsSaveCache = normalizeSettingsSave(parsedContents);
     return createSettingsFileResponse({
@@ -172,6 +184,7 @@ async function writeSettingsSaveFile(settings) {
   }
 
   const savePath = getSettingsSavePath();
+  const tempPath = `${savePath}.${process.pid}.tmp`;
   const mergedSettings = mergeSettings(settingsSaveCache, normalizedSettings);
   const payload = {
     schemaVersion: SETTINGS_SAVE_SCHEMA_VERSION,
@@ -181,10 +194,12 @@ async function writeSettingsSaveFile(settings) {
 
   try {
     await fs.mkdir(path.dirname(savePath), { recursive: true });
-    await fs.writeFile(savePath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+    await fs.writeFile(tempPath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+    await fs.rename(tempPath, savePath);
     settingsSaveCache = mergedSettings;
     return createSettingsFileResponse({ saved: true, exists: true, settings: mergedSettings });
   } catch (error) {
+    await fs.rm(tempPath, { force: true }).catch(() => undefined);
     return createSettingsFileResponse({
       saved: false,
       exists: false,
@@ -194,11 +209,11 @@ async function writeSettingsSaveFile(settings) {
   }
 }
 
-function queueSettingsSave(settings) {
-  settingsSaveWriteQueue = settingsSaveWriteQueue
+function queueSettingsFileOperation(operation) {
+  settingsFileQueue = settingsFileQueue
     .catch(() => undefined)
-    .then(() => writeSettingsSaveFile(settings));
-  return settingsSaveWriteQueue;
+    .then(operation);
+  return settingsFileQueue;
 }
 
 function getDefaultWindowBounds() {
@@ -259,7 +274,8 @@ function saveWindowBounds(window, { immediate = false } = {}) {
 
   const saveBounds = () => {
     if (!window.isDestroyed() && !window.isFullScreen() && !window.isMinimized()) {
-      void queueSettingsSave({ windowBounds: window.getBounds() });
+      const windowBounds = window.getBounds();
+      void queueSettingsFileOperation(() => writeSettingsSaveFile({ windowBounds }));
     }
   };
 
@@ -290,7 +306,7 @@ function createMainWindow() {
       preload: path.join(__dirname, 'preload.cjs'),
       contextIsolation: true,
       nodeIntegration: false,
-      sandbox: false,
+      sandbox: true,
     },
   });
 
@@ -306,9 +322,12 @@ function createMainWindow() {
   });
 
   mainWindow.webContents.setWindowOpenHandler(({ url }) => {
-    void shell.openExternal(url);
+    if (new URL(url).protocol === 'https:') {
+      void shell.openExternal(url).catch((error) => console.warn('Unable to open external link.', error));
+    }
     return { action: 'deny' };
   });
+  mainWindow.webContents.on('will-navigate', (event) => event.preventDefault());
 
   const sendFullscreenState = () => {
     mainWindow.webContents.send('app:fullscreen-changed', mainWindow.isFullScreen());
@@ -318,7 +337,11 @@ function createMainWindow() {
   mainWindow.on('leave-full-screen', sendFullscreenState);
   mainWindow.on('resize', () => saveWindowBounds(mainWindow));
   mainWindow.on('move', () => saveWindowBounds(mainWindow));
-  mainWindow.on('close', () => saveWindowBounds(mainWindow, { immediate: true }));
+  mainWindow.on('close', () => {
+    if (!isFlushingSettingsOnQuit) {
+      saveWindowBounds(mainWindow, { immediate: true });
+    }
+  });
   mainWindow.webContents.once('did-finish-load', sendFullscreenState);
 }
 
@@ -337,13 +360,14 @@ ipcMain.handle('app:set-fullscreen', (event, enabled) => {
   return window.isFullScreen();
 });
 
-ipcMain.handle('settings-file:load', () => readSettingsSaveFile());
+ipcMain.handle('settings-file:load', () => queueSettingsFileOperation(readSettingsSaveFile));
 
-ipcMain.handle('settings-file:save', (_event, settings) => queueSettingsSave(settings));
+ipcMain.handle('settings-file:save', (_event, settings) =>
+  queueSettingsFileOperation(() => writeSettingsSaveFile(settings)));
 
 ipcMain.handle('settings-file:get-path', () => createSettingsFileResponse());
 
-ipcMain.handle('settings-file:flush', () => settingsSaveWriteQueue);
+ipcMain.handle('settings-file:flush', () => settingsFileQueue);
 
 app.on('before-quit', (event) => {
   if (isFlushingSettingsOnQuit) {
@@ -352,11 +376,14 @@ app.on('before-quit', (event) => {
 
   event.preventDefault();
   isFlushingSettingsOnQuit = true;
+  for (const window of BrowserWindow.getAllWindows()) {
+    saveWindowBounds(window, { immediate: true });
+  }
   // Keep the flag set: once we've committed to quitting, the next app.quit()
   // must pass straight through this handler. Resetting it here would make
   // app.quit() re-enter before-quit, re-prevent the quit, and spin forever
   // (100% CPU, window never closes).
-  void settingsSaveWriteQueue.finally(() => {
+  void settingsFileQueue.finally(() => {
     app.quit();
   });
 });

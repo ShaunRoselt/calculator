@@ -143,7 +143,7 @@ function inputStandardDecimal() {
 
 function queueStandardOperator(operator) {
   const calc = state.standard;
-  const inputValue = parseDisplayNumber(calc.display);
+  const inputValue = getStandardDisplayNumber();
   if (calc.operator && (!calc.waitingForOperand || calc.pendingPercentValue != null)) {
     const operand = getStandardOperand(calc);
     const result = computeStandardBinary(calc.accumulator ?? 0, operand, calc.operator);
@@ -171,7 +171,7 @@ function evaluateStandardEquals() {
       return;
     }
 
-    const left = parseDisplayNumber(calc.display);
+    const left = getStandardDisplayNumber();
     const result = computeStandardBinary(left, calc.lastOperand, calc.lastOperator);
     if (result == null) {
       return;
@@ -214,7 +214,9 @@ function negateStandard() {
     return;
   }
   if (calc.justEvaluated && !calc.operator) {
+    const value = getStandardDisplayNumber();
     resetStandardReplay(calc);
+    calc.accumulator = -value;
   }
   clearStandardPendingPercent(calc);
   calc.display = calc.display.startsWith('-') ? calc.display.slice(1) : `-${calc.display}`;
@@ -235,11 +237,11 @@ function applyStandardPercent() {
 
 function applyStandardUnary(action) {
   const calc = state.standard;
+  const current = getStandardDisplayNumber();
   if (calc.justEvaluated && !calc.operator) {
     resetStandardReplay(calc);
   }
   clearStandardPendingPercent(calc);
-  const current = parseDisplayNumber(calc.display);
   let result;
   let expression;
   if (action === 'reciprocal') {
@@ -260,8 +262,14 @@ function applyStandardUnary(action) {
     result = Math.sqrt(current);
     expression = `√(${formatNumber(current)})`;
   }
+  if (!Number.isFinite(result)) {
+    setStandardError(t('errors.overflow'));
+    return;
+  }
   calc.display = formatNumber(result);
   calc.expression = expression;
+  if (!calc.operator) calc.accumulator = result;
+  calc.waitingForOperand = false;
   calc.justEvaluated = true;
   pushHistory(expression, calc.display, 'standard');
 }
@@ -279,7 +287,9 @@ function backspaceStandard() {
 
 function clearEntryStandard() {
   state.standard.display = '0';
+  state.standard.error = false;
   state.standard.waitingForOperand = false;
+  state.standard.justEvaluated = false;
   state.standard.lastOperand = null;
   state.standard.lastOperator = null;
   clearStandardPendingPercent(state.standard);
@@ -325,18 +335,28 @@ function getStandardOperand(calc) {
   return ((calc.accumulator ?? 0) * value) / 100;
 }
 
+function getStandardDisplayNumber() {
+  const calc = state.standard;
+  return calc.justEvaluated && !calc.operator && calc.accumulator != null
+    ? calc.accumulator
+    : parseDisplayNumber(calc.display);
+}
+
 function computeStandardBinary(left, right, operator) {
   if (operator === '/' && right === 0) {
     setStandardError(cannotDivideByZeroMessage());
     return null;
   }
-  switch (operator) {
-    case '+': return left + right;
-    case '-': return left - right;
-    case '*': return left * right;
-    case '/': return left / right;
-    default: return right;
+  let result = right;
+  if (operator === '+') result = left + right;
+  if (operator === '-') result = left - right;
+  if (operator === '*') result = left * right;
+  if (operator === '/') result = left / right;
+  if (!Number.isFinite(result)) {
+    setStandardError(t('errors.overflow'));
+    return null;
   }
+  return result;
 }
 
 function handleScientificAction(action, value) {
@@ -346,7 +366,7 @@ function handleScientificAction(action, value) {
   }
 
   if (action === 'clear-all') {
-    state.scientific = createScientificState();
+    state.scientific = createScientificState(calc);
     return;
   }
 
@@ -370,7 +390,7 @@ function handleScientificAction(action, value) {
 
   if (action === 'set-angle') {
     calc.angle = value;
-    calc.display = formatScientificDisplay(parseDisplayNumber(calc.display), calc.display);
+    calc.display = formatScientificDisplay(getScientificDisplayNumber(), calc.display);
     return;
   }
 
@@ -381,18 +401,18 @@ function handleScientificAction(action, value) {
       GRAD: 'DEG'
     }[calc.angle] ?? 'DEG';
     calc.angle = nextAngle;
-    calc.display = formatScientificDisplay(parseDisplayNumber(calc.display), calc.display);
+    calc.display = formatScientificDisplay(getScientificDisplayNumber(), calc.display);
     return;
   }
 
   if (action === 'toggle-fe') {
     calc.isExponentialFormat = !calc.isExponentialFormat;
-    calc.display = formatScientificDisplay(parseDisplayNumber(calc.display), calc.display);
+    calc.display = formatScientificDisplay(getScientificDisplayNumber(), calc.display);
     return;
   }
 
   if (calc.error && !['clear-all', 'clear-entry'].includes(action)) {
-    state.scientific = createScientificState();
+    state.scientific = createScientificState(calc);
   }
 
   switch (action) {
@@ -448,8 +468,10 @@ function appendScientificDigit(digit) {
 function clearEntryScientific() {
   const calc = state.scientific;
   calc.display = '0';
+  calc.result = null;
   calc.expression = '';
   calc.error = false;
+  calc.isExponentialFormat = false;
   clearScientificReplay(calc);
   calc.justEvaluated = false;
 }
@@ -474,17 +496,22 @@ function appendScientificDecimal() {
 
 function appendScientificOperator(operator) {
   const calc = state.scientific;
+  const trimmed = calc.justEvaluated
+    ? scientificOperandText(getScientificDisplayNumber())
+    : calc.expression.trim();
+  const expectsOperand = !trimmed || /(?:[+*/^(]|\b(?:mod|root|logbase))$/.test(trimmed) || calc.expression.endsWith(' - ');
+  if (expectsOperand && operator === '-') {
+    calc.expression = trimmed ? `${trimmed} -` : '-';
+    calc.display = '-';
+    calc.justEvaluated = false;
+    clearScientificReplay(calc);
+    return;
+  }
+  if (expectsOperand || trimmed.endsWith('-')) {
+    return;
+  }
   calc.justEvaluated = false;
   clearScientificReplay(calc);
-  const trimmed = calc.expression.trim();
-  if (!trimmed && operator === '-') {
-    calc.expression = '-';
-    calc.display = '-';
-    return;
-  }
-  if (!trimmed || /[+\-*/^(]$/.test(trimmed) || /mod$/.test(trimmed)) {
-    return;
-  }
   calc.expression = `${trimmed} ${operator} `;
 }
 
@@ -521,21 +548,52 @@ function appendScientificConstant(name) {
 
 function applyScientificUnary(action) {
   const calc = state.scientific;
+  const expression = calc.justEvaluated ? '' : calc.expression.trimEnd();
+  const operand = getTrailingScientificOperand(expression);
+  if (expression && !operand && action !== 'rand') {
+    return;
+  }
+  const prefix = expression.slice(0, expression.length - operand.length);
   clearScientificReplay(calc);
-  const current = parseDisplayNumber(calc.display === '-' ? '0' : calc.display);
+  let current;
   let result;
   try {
-    result = scientificUnary(action, current, calc.angle);
+    current = operand
+      ? evaluateScientificExpression(operand, { angle: calc.angle })
+      : getScientificDisplayNumber();
+    result = validateScientificResult(scientificUnary(action, current, calc.angle));
   } catch (error) {
     calc.display = localizeRuntimeErrorMessage(error.message);
     calc.error = true;
     return;
   }
-  const expression = unaryExpressionLabel(action, current);
-  calc.expression = expression;
   calc.display = formatScientificDisplay(result);
+  if (prefix) {
+    calc.expression = `${prefix.trimEnd()} ${scientificOperandText(result)}`;
+    return;
+  }
+  calc.expression = unaryExpressionLabel(action, current);
+  calc.result = result;
   calc.justEvaluated = true;
-  pushHistory(expression, calc.display, 'scientific');
+  pushHistory(calc.expression, calc.display, 'scientific');
+}
+
+function scientificOperandText(value) {
+  return value < 0 ? `(${value})` : String(value);
+}
+
+function getTrailingScientificOperand(expression) {
+  if (!expression.endsWith(')')) {
+    return lastScientificToken(expression);
+  }
+
+  let depth = 0;
+  for (let index = expression.length - 1; index >= 0; index -= 1) {
+    if (expression[index] === ')') depth += 1;
+    if (expression[index] === '(') depth -= 1;
+    if (depth === 0) return expression.slice(index);
+  }
+  return '';
 }
 
 function scientificBackspace() {
@@ -559,32 +617,45 @@ function scientificBackspace() {
 
 function evaluateScientificEquals() {
   const calc = state.scientific;
-  if (state.settings.repeatEquals && calc.justEvaluated && calc.lastOperator && calc.lastOperand != null) {
-    const left = parseDisplayNumber(calc.display);
+  if (calc.justEvaluated) {
+    if (!state.settings.repeatEquals || !calc.lastOperator || calc.lastOperand == null) {
+      return;
+    }
+    const left = getScientificDisplayNumber();
 
     try {
-      const result = computeScientificBinary(left, calc.lastOperand, calc.lastOperator);
+      const result = validateScientificResult(computeScientificBinary(left, calc.lastOperand, calc.lastOperator));
       const expression = `${formatScientificDisplay(left)} ${operatorLabel(calc.lastOperator)} ${formatScientificDisplay(calc.lastOperand)}`;
       calc.display = formatScientificDisplay(result);
+      calc.result = result;
       calc.expression = expression;
       calc.justEvaluated = true;
       pushHistory(expression, calc.display, 'scientific');
     } catch (error) {
       calc.display = localizeRuntimeErrorMessage(error.message);
       calc.error = true;
+      calc.justEvaluated = false;
     }
     return;
   }
 
   const expression = calc.expression.trim() || calc.display;
   try {
-    const result = evaluateScientificExpression(expression, { angle: calc.angle });
+    clearScientificReplay(calc);
+    const result = evaluateScientificExpression(expression, {
+      angle: calc.angle,
+      recordOperation(operator, operand) {
+        calc.lastOperator = operator;
+        calc.lastOperand = operand;
+      }
+    });
     calc.display = formatScientificDisplay(result);
+    calc.result = result;
     calc.expression = expression;
-    applyScientificReplayState(calc, expression);
     calc.justEvaluated = true;
     pushHistory(expression, calc.display, 'scientific');
   } catch (error) {
+    clearScientificReplay(calc);
     calc.display = localizeRuntimeErrorMessage(error.message);
     calc.error = true;
   }
@@ -595,21 +666,10 @@ function clearScientificReplay(calc) {
   calc.lastOperator = null;
 }
 
-function applyScientificReplayState(calc, expression) {
-  const replay = extractScientificReplayOperation(expression, calc.angle);
-  if (!replay) {
-    clearScientificReplay(calc);
-    return;
-  }
-
-  calc.lastOperator = replay.operator;
-  calc.lastOperand = replay.operand;
-}
-
 function handleProgrammerAction(action, value) {
   const calc = state.programmer;
   if (action === 'clear-all') {
-    state.programmer = createProgrammerState();
+    state.programmer = createProgrammerState(calc);
     return;
   }
   if (action === 'set-base') {
@@ -637,7 +697,7 @@ function handleProgrammerAction(action, value) {
     return;
   }
   if (calc.error && !['clear-all', 'clear-entry'].includes(action)) {
-    state.programmer = createProgrammerState();
+    state.programmer = createProgrammerState(calc);
   }
   switch (action) {
     case 'digit':
@@ -722,11 +782,10 @@ function applyProgrammerUnary(action) {
   const calc = state.programmer;
   clearProgrammerReplay(calc);
   const value = getProgrammerCurrentValue();
-  const result = normalizeProgrammerValue(~value);
-  calc.display = formatBigInt(result, calc.base);
   calc.expression = `NOT ${formatBigInt(value, calc.base)}`;
+  calc.display = pushProgrammerHistory(calc.expression, ~value);
+  calc.waitingForOperand = false;
   calc.justEvaluated = true;
-  pushHistory(calc.expression, calc.display, 'programmer');
 }
 
 function negateProgrammer() {
@@ -763,8 +822,7 @@ function evaluateProgrammerEquals() {
     }
 
     const expression = `${formatBigInt(left, calc.base)} ${operatorLabel(calc.lastOperator)} ${formatBigInt(calc.lastOperand, calc.base)} =`;
-    pushHistory(expression, formatBigInt(result, calc.base), 'programmer');
-    calc.display = formatBigInt(normalizeProgrammerValue(result), calc.base);
+    calc.display = pushProgrammerHistory(expression, result);
     calc.expression = expression;
     calc.accumulator = normalizeProgrammerValue(result);
     calc.waitingForOperand = true;
@@ -777,8 +835,7 @@ function evaluateProgrammerEquals() {
     return;
   }
   const expression = `${formatBigInt(calc.accumulator, calc.base)} ${operatorLabel(calc.operator)} ${formatBigInt(right, calc.base)} =`;
-  pushHistory(expression, formatBigInt(result, calc.base), 'programmer');
-  calc.display = formatBigInt(normalizeProgrammerValue(result), calc.base);
+  calc.display = pushProgrammerHistory(expression, result);
   calc.expression = expression;
   calc.accumulator = normalizeProgrammerValue(result);
   calc.lastOperand = right;
@@ -791,6 +848,13 @@ function evaluateProgrammerEquals() {
 function clearProgrammerReplay(calc) {
   calc.lastOperand = null;
   calc.lastOperator = null;
+}
+
+function pushProgrammerHistory(expression, result) {
+  const value = normalizeProgrammerValue(result);
+  const display = formatBigInt(value, state.programmer.base);
+  pushHistory(expression, display, 'programmer', { programmerValue: value.toString() });
+  return display;
 }
 
 function computeProgrammerBinary(left, right, operator) {
@@ -814,14 +878,21 @@ function computeProgrammerBinary(left, right, operator) {
       case 'and': return left & right;
       case 'or': return left | right;
       case 'xor': return left ^ right;
-      case 'lsh': return left << right;
-      case 'rsh': return left >> right;
+      case 'lsh': return left << limitProgrammerShift(right);
+      case 'rsh': return left >> limitProgrammerShift(right);
       default: return right;
     }
   } catch {
     setProgrammerError(invalidProgrammerOperationMessage());
     return null;
   }
+}
+
+function limitProgrammerShift(shift) {
+  const bits = BigInt(getProgrammerWordSizeBits());
+  if (shift > bits) return bits;
+  if (shift < -bits) return -bits;
+  return shift;
 }
 
 function setProgrammerBase(base) {
@@ -836,6 +907,9 @@ function setProgrammerWordSize(wordSize) {
   state.programmer.display = formatBigInt(normalizeProgrammerValue(value), state.programmer.base);
   if (state.programmer.accumulator != null) {
     state.programmer.accumulator = normalizeProgrammerValue(state.programmer.accumulator);
+  }
+  if (state.programmer.lastOperand != null) {
+    state.programmer.lastOperand = normalizeProgrammerValue(state.programmer.lastOperand);
   }
 }
 
@@ -884,7 +958,7 @@ export function handleMemoryOperation(operation) {
       const next = operation === 'm+' ? existing + current : existing - current;
       memory[0] = { value: formatStoredMemoryValue(next) };
     } else {
-      const existing = Number(memory[0]?.value || 0);
+      const existing = parseDisplayNumber(memory[0]?.value || '0');
       const next = operation === 'm+' ? existing + Number(current) : existing - Number(current);
       memory[0] = { value: formatNumber(next) };
     }
@@ -899,16 +973,36 @@ export function recallMemory(index) {
     return;
   }
   if (state.mode === 'programmer') {
+    const calc = state.programmer;
     const value = parseBigIntFlexible(item.value);
-    state.programmer.display = formatBigInt(value, state.programmer.base);
-    state.programmer.waitingForOperand = false;
+    calc.display = formatBigInt(normalizeProgrammerValue(value), calc.base);
+    calc.waitingForOperand = false;
+    calc.justEvaluated = true;
+    calc.error = false;
+    clearProgrammerReplay(calc);
   } else if (state.mode === 'scientific') {
-    state.scientific.display = item.value;
-    state.scientific.expression = item.value;
-    state.scientific.justEvaluated = true;
+    const calc = state.scientific;
+    const value = parseDisplayNumber(item.value);
+    const expression = calc.justEvaluated ? '' : calc.expression.trimEnd();
+    const operand = getTrailingScientificOperand(expression);
+    const prefix = expression.slice(0, expression.length - operand.length).trimEnd();
+    const operandText = scientificOperandText(value);
+    calc.display = formatScientificDisplay(value, item.value);
+    calc.result = value;
+    calc.expression = prefix ? `${prefix} ${operandText}` : operandText;
+    calc.justEvaluated = !prefix;
+    calc.error = false;
+    clearScientificReplay(calc);
   } else {
-    state.standard.display = item.value;
-    state.standard.waitingForOperand = false;
+    const calc = state.standard;
+    if (!calc.operator) resetStandardReplay(calc);
+    calc.display = item.value;
+    calc.waitingForOperand = false;
+    calc.justEvaluated = true;
+    calc.error = false;
+    calc.lastOperand = null;
+    calc.lastOperator = null;
+    clearStandardPendingPercent(calc);
   }
 }
 
@@ -937,7 +1031,7 @@ export function updateMemoryItem(index, operation) {
     const next = operation === 'add' ? existing + current : existing - current;
     memory[index] = { value: formatStoredMemoryValue(next) };
   } else {
-    const existing = Number(item.value || 0);
+    const existing = parseDisplayNumber(item.value || '0');
     const next = operation === 'add' ? existing + Number(current) : existing - Number(current);
     memory[index] = { value: formatNumber(next) };
   }
@@ -977,16 +1071,37 @@ export function recallHistory(index) {
     };
     computeDateResults();
   } else if (state.mode === 'programmer') {
-    const parsed = parseBigIntFlexible(entry.result);
-    state.programmer.display = formatBigInt(parsed, state.programmer.base);
+    const calc = createProgrammerState(state.programmer);
+    let value;
+    try {
+      // Older entries only stored the displayed digits. Letters identify hexadecimal;
+      // otherwise interpret the digits in the current base.
+      const legacyBase = /[a-f]/i.test(entry.result) ? 'HEX' : calc.base;
+      value = entry.programmerValue != null
+        ? BigInt(entry.programmerValue)
+        : parseBigIntFromBase(entry.result, legacyBase);
+    } catch {
+      return;
+    }
+    calc.display = formatBigInt(normalizeProgrammerValue(value), calc.base);
+    calc.expression = entry.expression;
+    calc.justEvaluated = true;
+    state.programmer = calc;
   } else if (state.mode === 'scientific') {
-    state.scientific.expression = entry.expression;
-    state.scientific.display = entry.result;
-    state.scientific.justEvaluated = true;
+    const calc = state.scientific;
+    calc.expression = entry.expression;
+    calc.result = parseDisplayNumber(entry.result);
+    calc.display = formatScientificDisplay(calc.result, entry.result);
+    calc.justEvaluated = true;
+    calc.error = false;
+    clearScientificReplay(calc);
   } else {
-    state.standard.display = entry.result;
-    state.standard.expression = entry.expression;
-    state.standard.justEvaluated = true;
+    state.standard = {
+      ...createStandardState(),
+      display: entry.result,
+      expression: entry.expression,
+      justEvaluated: true
+    };
   }
 }
 
@@ -1043,7 +1158,9 @@ function pushHistory(expression, result, mode, extra = {}) {
     ...extra
   };
 
-  if (history[0]?.expression === nextEntry.expression && history[0]?.result === nextEntry.result) {
+  if (history[0]?.expression === nextEntry.expression
+      && history[0]?.result === nextEntry.result
+      && history[0]?.programmerValue === nextEntry.programmerValue) {
     return;
   }
 
@@ -1056,13 +1173,12 @@ function pushHistory(expression, result, mode, extra = {}) {
 
 function getCurrentDisplayNumericValue() {
   if (state.mode === 'programmer') {
-    return getProgrammerCurrentValue();
+    return state.programmer.error ? null : getProgrammerCurrentValue();
   }
-  if (state.mode === 'scientific') {
-    const parsed = Number(state.scientific.display);
-    return Number.isFinite(parsed) ? parsed : null;
+  if (state[state.mode]?.error) {
+    return null;
   }
-  const parsed = Number(state.standard.display);
+  const parsed = state.mode === 'scientific' ? getScientificDisplayNumber() : getStandardDisplayNumber();
   return Number.isFinite(parsed) ? parsed : null;
 }
 
@@ -1150,7 +1266,12 @@ function operatorLabel(operator) {
 }
 
 function parseDisplayNumber(value) {
-  return Number(String(value).replace(/,/g, ''));
+  return Number(String(value).replace(/[,\s]/g, ''));
+}
+
+function getScientificDisplayNumber() {
+  const calc = state.scientific;
+  return calc.justEvaluated && calc.result != null ? calc.result : parseDisplayNumber(calc.display);
 }
 
 function scientificUnary(action, value, angle) {
@@ -1288,7 +1409,7 @@ function scientificDisplayFromExpression(expression) {
 }
 
 function lastScientificToken(expression) {
-  const matches = expression.match(/(pi|e|-?\d*\.?\d+)$/);
+  const matches = expression.match(/(pi|e|-?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?)$/i);
   return matches?.[0] ?? '';
 }
 
@@ -1308,65 +1429,6 @@ function canCloseScientificParen(expression) {
   return opens > closes && !/[+\-*/^(\s]$/.test(expression.trim());
 }
 
-function isScientificReplayBinaryOperator(token, previousToken) {
-  if (!token) {
-    return false;
-  }
-
-  if (token.value === 'mod') {
-    return true;
-  }
-
-  if (!['+', '-', '*', '/', '^'].includes(token.value)) {
-    return false;
-  }
-
-  if (!previousToken) {
-    return false;
-  }
-
-  return !['(', '+', '-', '*', '/', '^', 'mod'].includes(previousToken.value);
-}
-
-function tokensToScientificExpression(tokens) {
-  return tokens.map((token) => token.value).join(' ');
-}
-
-function extractScientificReplayOperation(expression, angle) {
-  const tokens = tokenize(expression);
-  let depth = 0;
-  let operatorIndex = -1;
-
-  for (let index = 0; index < tokens.length; index += 1) {
-    const token = tokens[index];
-    if (token.value === '(') {
-      depth += 1;
-      continue;
-    }
-    if (token.value === ')') {
-      depth = Math.max(0, depth - 1);
-      continue;
-    }
-    if (depth === 0 && isScientificReplayBinaryOperator(token, tokens[index - 1])) {
-      operatorIndex = index;
-    }
-  }
-
-  if (operatorIndex <= 0 || operatorIndex >= tokens.length - 1) {
-    return null;
-  }
-
-  const operandExpression = tokensToScientificExpression(tokens.slice(operatorIndex + 1));
-  if (!operandExpression) {
-    return null;
-  }
-
-  return {
-    operator: tokens[operatorIndex].value,
-    operand: evaluateScientificExpression(operandExpression, { angle })
-  };
-}
-
 function computeScientificBinary(left, right, operator) {
   switch (operator) {
     case '+': return left + right;
@@ -1378,6 +1440,8 @@ function computeScientificBinary(left, right, operator) {
       }
       return left / right;
     case '^': return left ** right;
+    case 'root': return nthRoot(right, left);
+    case 'logbase': return logBase(left, right);
     case 'mod':
       if (right === 0) {
         throw new Error('Cannot divide by zero');
@@ -1385,6 +1449,16 @@ function computeScientificBinary(left, right, operator) {
       return left % right;
     default: return right;
   }
+}
+
+function validateScientificResult(value) {
+  if (Number.isNaN(value)) {
+    throw new Error('Invalid input');
+  }
+  if (!Number.isFinite(value)) {
+    throw new Error('Overflow');
+  }
+  return value;
 }
 
 function evaluateScientificExpression(expression, context = {}) {
@@ -1404,53 +1478,40 @@ function evaluateScientificExpression(expression, context = {}) {
     return token;
   }
 
-  function parseExpression() {
-    let value = parseTerm();
+  function parseExpression(recordOperation) {
+    let value = parseTerm(recordOperation);
     while (peek() && ['+', '-'].includes(peek().value)) {
       const operator = consume().value;
       const right = parseTerm();
-      value = operator === '+' ? value + right : value - right;
+      value = computeScientificBinary(value, right, operator);
+      recordOperation?.(operator, right);
     }
     return value;
   }
 
-  function parseTerm() {
-    let value = parsePower();
+  function parseTerm(recordOperation) {
+    let value = parseRoot(recordOperation);
     while (peek() && ['*', '/', 'mod'].includes(peek().value)) {
       const operator = consume().value;
-      const right = parsePower();
-      if ((operator === '/' || operator === 'mod') && right === 0) {
-        throw new Error('Cannot divide by zero');
-      }
-      if (operator === '*') value *= right;
-      if (operator === '/') value /= right;
-      if (operator === 'mod') value %= right;
+      const right = parseRoot();
+      value = computeScientificBinary(value, right, operator);
+      recordOperation?.(operator, right);
     }
     return value;
   }
 
-  function parsePower() {
-    let value = parseUnary();
-    while (peek() && ['^', 'root', 'logbase'].includes(peek().value)) {
+  function parseRoot(recordOperation) {
+    let value = parseUnary(recordOperation);
+    while (peek() && ['root', 'logbase'].includes(peek().value)) {
       const operator = consume().value;
-      const exponent = parseUnary();
-      if (operator === '^') {
-        value = value ** exponent;
-      }
-      if (operator === 'root') {
-        if (value === 0) {
-          throw new Error('Invalid input');
-        }
-        value = nthRoot(exponent, value);
-      }
-      if (operator === 'logbase') {
-        value = logBase(value, exponent);
-      }
+      const right = parseUnary();
+      value = computeScientificBinary(value, right, operator);
+      recordOperation?.(operator, right);
     }
     return value;
   }
 
-  function parseUnary() {
+  function parseUnary(recordOperation) {
     if (peek()?.value === '+') {
       consume('+');
       return parseUnary();
@@ -1459,7 +1520,14 @@ function evaluateScientificExpression(expression, context = {}) {
       consume('-');
       return -parseUnary();
     }
-    return parsePrimary();
+    const value = parsePrimary();
+    if (peek()?.value !== '^') {
+      return value;
+    }
+    consume('^');
+    const exponent = parseUnary();
+    recordOperation?.('^', exponent);
+    return computeScientificBinary(value, exponent, '^');
   }
 
   function parsePrimary() {
@@ -1493,19 +1561,17 @@ function evaluateScientificExpression(expression, context = {}) {
     throw new Error('Invalid input');
   }
 
-  const result = parseExpression();
+  const result = parseExpression(context.recordOperation);
   if (index < tokens.length) {
     throw new Error('Invalid input');
   }
-  if (!Number.isFinite(result)) {
-    throw new Error('Overflow');
-  }
-  return result;
+  return validateScientificResult(result);
 }
 
 function tokenize(expression) {
   const tokens = [];
   const normalized = expression.replace(/\s+/g, ' ').trim();
+  const numberPattern = /(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?/iy;
   let i = 0;
   while (i < normalized.length) {
     const char = normalized[i];
@@ -1519,13 +1585,13 @@ function tokenize(expression) {
       continue;
     }
     if (/\d|\./.test(char)) {
-      let number = char;
-      i += 1;
-      while (i < normalized.length && /[\d.]/.test(normalized[i])) {
-        number += normalized[i];
-        i += 1;
+      numberPattern.lastIndex = i;
+      const match = numberPattern.exec(normalized);
+      if (!match || normalized[numberPattern.lastIndex] === '.') {
+        throw new Error('Invalid input');
       }
-      tokens.push({ type: 'number', value: number });
+      i = numberPattern.lastIndex;
+      tokens.push({ type: 'number', value: match[0] });
       continue;
     }
     if (/[A-Za-z]/.test(char)) {
@@ -1724,6 +1790,9 @@ function dmsToDegrees(value) {
 }
 
 function factorial(value) {
+  if (value > 170) {
+    return Infinity;
+  }
   let result = 1;
   for (let i = 2; i <= value; i += 1) {
     result *= i;
@@ -1835,8 +1904,7 @@ function formatScientificDisplay(value, fallback = '0') {
 }
 
 function getDateParts(value) {
-  const [year, month, day] = value.split('-').map(Number);
-  return new Date(Date.UTC(year, month - 1, day));
+  return new Date(`${value}T00:00:00Z`);
 }
 
 export function computeDateResults() {
@@ -1905,12 +1973,8 @@ function getDateDifferenceMonths(start, end) {
 
 function addDateDuration(baseDate, { years = 0, months = 0, days = 0 }) {
   const result = new Date(baseDate);
-  if (years) {
-    result.setUTCFullYear(result.getUTCFullYear() + years);
-  }
-  if (months) {
-    result.setUTCMonth(result.getUTCMonth() + months);
-  }
+  shiftDateMonths(result, years * 12);
+  shiftDateMonths(result, months);
   if (days) {
     result.setUTCDate(result.getUTCDate() + days);
   }
@@ -1922,13 +1986,16 @@ function subtractDateDuration(baseDate, { years = 0, months = 0, days = 0 }) {
   if (days) {
     result.setUTCDate(result.getUTCDate() - days);
   }
-  if (months) {
-    result.setUTCMonth(result.getUTCMonth() - months);
-  }
-  if (years) {
-    result.setUTCFullYear(result.getUTCFullYear() - years);
-  }
+  shiftDateMonths(result, -months);
+  shiftDateMonths(result, -years * 12);
   return result;
+}
+
+function shiftDateMonths(date, months) {
+  if (!months) return;
+  const day = date.getUTCDate();
+  date.setUTCMonth(date.getUTCMonth() + months + 1, 0);
+  date.setUTCDate(Math.min(day, date.getUTCDate()));
 }
 
 function formatDateUnit(value, unit) {

@@ -1,7 +1,7 @@
 const SERVICE_WORKER_URL = new URL('../service-worker.js', import.meta.url).href;
 
 import { STORAGE_KEYS } from './config.js';
-import { initI18n } from './i18n.js';
+import { getDefaultLanguage, initI18n } from './i18n.js';
 import { syncSettingsFileBeforeLaunch } from './settingsFile.js';
 import { prepareThemesForLaunch } from './themes.js';
 import { getUrlPreferenceOverrides } from './urlParams.js';
@@ -37,7 +37,16 @@ if (!urlPreferenceOverrides.theme && !urlPreferenceOverrides.language && !urlPre
 const themePreference = urlPreferenceOverrides.theme || localStorage.getItem(STORAGE_KEYS.theme) || 'system';
 const languagePreference = urlPreferenceOverrides.language || localStorage.getItem(STORAGE_KEYS.language) || 'en';
 
-await prepareThemesForLaunch(themePreference, getSystemThemeId());
-await initI18n(languagePreference);
+const systemTheme = getSystemThemeId();
+try {
+  await prepareThemesForLaunch(themePreference, systemTheme);
+} catch {
+  await prepareThemesForLaunch('system', systemTheme);
+}
+try {
+  await initI18n(languagePreference);
+} catch {
+  await initI18n(getDefaultLanguage());
+}
 void registerServiceWorker();
 await import('./app.js');

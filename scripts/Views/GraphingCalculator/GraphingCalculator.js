@@ -511,7 +511,7 @@ function renderExpressionRow(expression, index) {
           aria-label="${t('graph.expressionIndex', { index: index + 1 })}"
         />
         ${isAddRow ? '' : `
-          <div class="graph-expression-actions" aria-hidden="true">
+          <div class="graph-expression-actions">
             <button class="graph-expression-action" type="button" data-graph-expression-analyze="${index}" data-tooltip="${t('graph.analyzeFunction')}" aria-label="${t('graph.analyzeFunction')}">${renderToolbarIcon('graph-analyze-function')}</button>
             <button class="graph-expression-action ${stylePanelOpen ? 'active' : ''}" type="button" data-graph-expression-style="${index}" data-tooltip="${t('graph.changeEquationStyle')}" aria-label="${t('graph.changeEquationStyle')}">${renderToolbarIcon('graph-style-picker')}</button>
             <button class="graph-expression-action" type="button" data-graph-expression-remove="${index}" data-tooltip="${t('graph.removeEquation')}" aria-label="${t('graph.removeEquation')}">${renderToolbarIcon('graph-remove-equation')}</button>

@@ -6,6 +6,7 @@
   "main": "electron/main.cjs",
   "scripts": {
     "check": "node scripts/check.js",
+    "test": "node --test \"test/**/*.test.js\"",
     "capture:steam:screenshots": "node marketing/steam/capture_full_page_screenshots.cjs",
     "create:steam:trailer": "node marketing/steam/create_trailer.cjs",
     "generate:steam:store": "node marketing/steam/generate_store_images.cjs",
@@ -57,8 +58,7 @@
       "!Saves{,/**/*}",
       "!scripts/benchmark{,/**/*}",
       "!**/*.md",
-      "!CNAME",
-      "!NOTICE.txt"
+      "!CNAME"
     ],
     "asar": true,
     "compression": "store",
@@ -81,13 +81,9 @@
       "artifactName": "Roselt-Calculator-Portable-${version}.exe"
     }
   },
-  "dependencies": {
-    "nerdamer": "^1.1.13"
-  },
   "devDependencies": {
-    "@electron/packager": "^19.1.0",
-    "electron": "^41.2.0",
-    "electron-builder": "^26.8.1",
+    "electron": "^45.4.1",
+    "electron-builder": "^26.18.0",
     "resedit": "^3.0.2"
   }
 }

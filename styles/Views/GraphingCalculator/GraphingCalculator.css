@@ -543,6 +543,17 @@
   padding-right: 136px;
 }
 
+@media (hover: none) {
+  .graph-expression-row.filled-row .graph-expression-actions {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .graph-expression-row.filled-row .graph-expression-input {
+    padding-right: 136px;
+  }
+}
+
 .graph-expression-action {
   width: 30px;
   height: 30px;

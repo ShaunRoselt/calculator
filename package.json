@@ -64,6 +64,7 @@
     "compression": "store",
     "linux": {
       "artifactName": "Roselt-Calculator-${version}.${ext}",
+      "executableName": "calculator",
       "category": "Utility",
       "icon": "assets/icons/app-icon-4096.png"
     },

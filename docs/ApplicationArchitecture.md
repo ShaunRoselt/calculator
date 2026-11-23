@@ -88,7 +88,7 @@ decisions, not separate builds.
 The service worker pre-caches the calculator shell, mode styles, and the default language and
 themes. Requests for calculator assets prefer the network while online. Previously loaded
 languages and themes are reused offline. An uncached language or theme falls back to English
-or the system theme, respectively. Live currency requests bypass the service worker and use the
+or the default theme, respectively. Live currency requests bypass the service worker and use the
 converter's bundled rates if the providers are unavailable.
 
 ## Development model

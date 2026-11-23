@@ -45,7 +45,7 @@
   --button-digit-hover-bg: linear-gradient(180deg, rgba(250, 253, 255, 0.98) 0%, rgba(211, 244, 255, 0.92) 100%);
   --button-operator-bg: linear-gradient(180deg, rgba(233, 131, 255, 0.96) 0%, rgba(183, 113, 231, 0.98) 100%);
   --button-operator-hover-bg: linear-gradient(180deg, rgba(240, 153, 255, 0.98) 0%, rgba(191, 119, 235, 0.98) 100%);
-  --button-operator-text: #201136;
+  --button-operator-text: #160a26;
   --button-equals-bg-start: #7ff7ff;
   --button-equals-bg-end: #5b8fff;
   --button-equals-hover-bg-start: #98fbff;

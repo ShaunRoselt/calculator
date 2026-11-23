@@ -38,11 +38,12 @@
   --converter-menu-thumb: #43536b;
   --converter-menu-scrollbar: #43536b transparent;
   --button-default-bg: #466887;
-  --button-default-hover-bg: #527ba0;
+  --button-default-hover-bg: #476e90;
   --button-function-bg: #7d4f79;
   --button-function-hover-bg: #94608e;
   --button-digit-bg: #5fb9d6;
   --button-digit-hover-bg: #74c7e1;
+  --button-digit-text: #1c2430;
   --button-operator-bg: #384e64;
   --button-operator-hover-bg: #45617a;
   --button-equals-bg-start: #f4bfd7;

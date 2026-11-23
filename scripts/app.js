@@ -35,7 +35,7 @@ import {
 import { getCurrentLanguage, setLanguage, t } from './i18n.js';
 import { flushSettingsFile, persistSettingsFile } from './settingsFile.js';
 import { installTooltipHandling } from './tooltip.js';
-import { getLayoutMode, render } from './Views/MainPage.js';
+import { getLayoutMode, render as renderPage } from './Views/MainPage.js';
 import { ensureNerdamerLoaded } from './nerdamer.js';
 import { ensureModeStyles } from './stylesheets.js';
 import {
@@ -101,6 +101,7 @@ let converterTypeaheadTimestamp = 0;
 let lastViewportWidth = window.innerWidth;
 let lastViewportHeight = window.innerHeight;
 let graphPanSession = null;
+let styledMode = null;
 const calculatorUndoStack = [];
 const calculatorRedoStack = [];
 const MAX_CALCULATOR_HISTORY = 100;
@@ -546,8 +547,7 @@ persistSettingsFile(state.settings);
 initFullscreenState();
 computeDateResults();
 syncConverterValues('from');
-await ensureModeStyles(state.mode);
-render();
+await renderModeWhenStylesReady(state.mode);
 installTooltipHandling();
 
 document.addEventListener('click', handleClick);
@@ -578,18 +578,25 @@ systemThemeMedia?.addEventListener?.('change', () => {
   }
 });
 
+function render() {
+  if (state.mode === styledMode) {
+    renderPage();
+  }
+}
+
 async function renderModeWhenStylesReady(mode) {
   try {
     await ensureModeStyles(mode);
-    if (state.mode === mode) {
-      render();
-    }
   } catch (error) {
     console.warn('Unable to load mode styles.', error);
-    if (state.mode === mode) {
-      render();
-    }
   }
+
+  if (state.mode !== mode) {
+    return;
+  }
+
+  styledMode = mode;
+  render();
 }
 
 function getSystemTheme() {

@@ -75,6 +75,9 @@ async function smokeTest() {
       await delay(500);
     }
     assert.equal(await evaluate("document.querySelector('.display-value')?.textContent.trim()"), '0');
+    const { version } = require('../package.json');
+    assert.equal(await evaluate("(await import('./scripts/config.js')).APP_INFO.version"), version);
+
     assert.equal(await evaluate(`(() => {
       for (const label of ['2', '+', '3', '=']) {
         const button = [...document.querySelectorAll('main button[data-action]')]

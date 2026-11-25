@@ -20,7 +20,16 @@ const root = path.join(__dirname, '..');
 const distDir = path.join(root, 'dist');
 const outputDir = path.join(distDir, 'macOS');
 const appIcon = path.join(root, 'assets', 'icons', 'app-icon.icns');
-const macArchitectures = ['x64', 'arm64'];
+const finalNames = {
+  x64: 'Roselt Calculator (Intel).app',
+  arm64: 'Roselt Calculator.app'
+};
+const requestedArchitectures = process.argv.slice(2);
+const macArchitectures = requestedArchitectures.length ? requestedArchitectures : Object.keys(finalNames);
+if (macArchitectures.some((arch) => !Object.hasOwn(finalNames, arch))) {
+  console.error('Supported macOS architectures are x64 and arm64.');
+  process.exit(1);
+}
 
 function rmrf(target) {
   fs.rmSync(target, { recursive: true, force: true });
@@ -61,16 +70,11 @@ if (!fs.existsSync(appIcon)) {
 for (const arch of macArchitectures) {
   console.log(`> Building macOS ${arch}...`);
   buildMac(arch);
+  copyToFinal(
+    path.join(outputDir, `Roselt Calculator-darwin-${arch}`, 'Roselt Calculator.app'),
+    finalNames[arch]
+  );
 }
-
-copyToFinal(
-  path.join(outputDir, 'Roselt Calculator-darwin-arm64', 'Roselt Calculator.app'),
-  'Roselt Calculator.app'
-);
-copyToFinal(
-  path.join(outputDir, 'Roselt Calculator-darwin-x64', 'Roselt Calculator.app'),
-  'Roselt Calculator (Intel).app'
-);
 
 console.log('\nDone.');
 console.log(`  macOS -> ${path.relative(root, outputDir)}`);

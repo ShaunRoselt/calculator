@@ -76,7 +76,7 @@ async function smokeTest() {
     }
     assert.equal(await evaluate("document.querySelector('.display-value')?.textContent.trim()"), '0');
     const { version } = require('../package.json');
-    assert.equal(await evaluate("(await import('./scripts/config.js')).APP_INFO.version"), version);
+    assert.equal(await evaluate("import('./scripts/config.js').then(({ APP_INFO }) => APP_INFO.version)"), version);
 
     assert.equal(await evaluate(`(() => {
       for (const label of ['2', '+', '3', '=']) {

@@ -136,9 +136,15 @@ jobs:
           retention-days: 1
 
   macos:
-    name: Build macOS dist
-    runs-on: macos-latest
+    name: Build macOS dist (${{ matrix.arch }})
+    runs-on: ${{ matrix.runner }}
     needs: check
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { arch: arm64, runner: macos-latest }
+          - { arch: x64, runner: macos-15-intel }
 
     steps:
       - name: Check out repository
@@ -154,18 +160,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build macOS app bundles
-        run: npm run package:mac
+      - name: Build macOS app bundle
+        run: npm run package:mac -- ${{ matrix.arch }}
 
-      - name: Smoke-test the packaged macOS apps
-        run: |
-          if [[ "$(uname -m)" == arm64 ]]; then
-            if ! arch -x86_64 /usr/bin/true; then
-              sudo softwareupdate --install-rosetta --agree-to-license
-            fi
-            node scripts/smoke-desktop.cjs "dist/macOS/Roselt Calculator-darwin-arm64/Roselt Calculator.app/Contents/MacOS/Roselt Calculator"
-          fi
-          node scripts/smoke-desktop.cjs "dist/macOS/Roselt Calculator-darwin-x64/Roselt Calculator.app/Contents/MacOS/Roselt Calculator"
+      - name: Smoke-test the packaged macOS app
+        run: node scripts/smoke-desktop.cjs "dist/macOS/Roselt Calculator-darwin-${{ matrix.arch }}/Roselt Calculator.app/Contents/MacOS/Roselt Calculator"
 
       - name: Create macOS dist archive
         run: tar -czf dist-macos.tar.gz -C dist macOS "final dist"
@@ -173,7 +172,7 @@ jobs:
       - name: Upload macOS dist
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: dist-macos
+          name: dist-macos-${{ matrix.arch }}
           if-no-files-found: error
           path: dist-macos.tar.gz
           retention-days: 1
@@ -197,7 +196,9 @@ jobs:
           mkdir -p dist-artifacts/extracted
           tar -xzf dist-artifacts/dist-linux/dist-linux.tar.gz -C dist-artifacts/extracted
           unzip -q dist-artifacts/dist-windows/dist-windows.zip -d dist-artifacts/extracted
-          tar -xzf dist-artifacts/dist-macos/dist-macos.tar.gz -C dist-artifacts/extracted
+          for arch in arm64 x64; do
+            tar -xzf "dist-artifacts/dist-macos-$arch/dist-macos.tar.gz" -C dist-artifacts/extracted
+          done
 
       - name: Collect release-ready files
         run: |

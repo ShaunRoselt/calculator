@@ -11,33 +11,21 @@ function normalizeGraphExpressionForCas(expression) {
     .replace(/__CAS_NATURAL_LOG__\(/g, 'log(');
 }
 
-function isFiniteRealCasExpression(expression) {
-  const raw = expression?.toString?.() ?? '';
-  return raw && !/(^|[^A-Za-z])i([^A-Za-z]|$)/.test(raw);
-}
-
 function toFiniteNumber(expression) {
-  const nerdamer = getNerdamer();
-  if (!nerdamer || !isFiniteRealCasExpression(expression)) {
-    return null;
-  }
-
   try {
-    const value = Number(nerdamer(expression.toString()).evaluate().text());
-    return Number.isFinite(value) ? value : null;
+    if (!expression.isImaginary()) {
+      return Number(expression.evaluate().text({ decimal: true, precision: 16 }));
+    }
   } catch {
-    return null;
+    // A single unevaluable solution should not hide the other roots.
   }
+  return NaN;
 }
 
 function uniqueSortedValues(values, tolerance = 1e-7) {
   const result = [];
 
-  for (const value of values.sort((left, right) => left - right)) {
-    if (!Number.isFinite(value)) {
-      continue;
-    }
-
+  for (const value of values.filter(Number.isFinite).sort((left, right) => left - right)) {
     if (result.some((existing) => Math.abs(existing - value) <= tolerance)) {
       continue;
     }
@@ -55,14 +43,8 @@ function solveCasExpression(casExpression) {
   }
 
   try {
-    const result = nerdamer.solve(casExpression, 'x');
-    const elements = Array.isArray(result?.symbol?.elements)
-      ? result.symbol.elements
-      : result?.symbol
-        ? [result.symbol]
-        : [];
-
-    return uniqueSortedValues(elements.map(toFiniteNumber).filter(Number.isFinite));
+    const roots = nerdamer.solve(casExpression, 'x').toArray();
+    return uniqueSortedValues(roots.map(toFiniteNumber));
   } catch {
     return [];
   }
@@ -91,9 +73,9 @@ export function solveGraphDerivativeWithCas(expression, order = 1) {
   }
 
   try {
-    let derivative = normalizeGraphExpressionForCas(expression);
+    let derivative = nerdamer(normalizeGraphExpressionForCas(expression));
     for (let index = 0; index < order; index += 1) {
-      derivative = nerdamer(`diff(${derivative},x)`).toString();
+      derivative = derivative.diff('x');
     }
 
     return solveCasExpression(derivative);

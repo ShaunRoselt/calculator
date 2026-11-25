@@ -12,45 +12,9 @@
   <link rel="stylesheet" href="styles/theme.css" />
   <link rel="stylesheet" href="styles/Views/DateCalculator.css" />
   <link rel="stylesheet" href="styles/Views/Settings.css" />
+  <link rel="stylesheet" href="styles/publicPage.css" />
   <link rel="stylesheet" id="active-theme-stylesheet" href="assets/themes/css/dark.css" />
   <style>
-    :root {
-      --header-height: 74px;
-      --header-row-height: 74px;
-      --header-max-width: 1440px;
-      --header-border: color-mix(in srgb, var(--text) 12%, transparent);
-      --header-bg-top: color-mix(in srgb, var(--shell-bg) 88%, #050608 12%);
-      --header-bg-bottom: color-mix(in srgb, var(--shell-bg) 94%, #050608 6%);
-      --header-pill-bg: color-mix(in srgb, var(--panel) 70%, #050608 30%);
-      --header-pill-border: color-mix(in srgb, var(--text) 14%, transparent);
-    }
-
-    html {
-      background: var(--shell-bg);
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
-      overflow-y: auto;
-      min-height: 100vh;
-      min-height: 100dvh;
-      padding-top: var(--header-height);
-      background:
-        radial-gradient(circle at top left, color-mix(in srgb, var(--accent) 18%, transparent), transparent 26%),
-        linear-gradient(180deg, var(--shell-bg) 0%, var(--bg) 100%);
-    }
-
-    a {
-      color: inherit;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
     .visually-hidden {
       position: absolute;
       width: 1px;
@@ -61,194 +25,6 @@
       clip: rect(0, 0, 0, 0);
       white-space: nowrap;
       border: 0;
-    }
-
-    .page-header {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 100;
-      min-height: var(--header-row-height);
-      height: auto;
-      background: linear-gradient(180deg, var(--header-bg-top) 0%, var(--header-bg-bottom) 100%);
-      backdrop-filter: blur(18px);
-    }
-
-    .page-header::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-bottom: 1px solid var(--header-border);
-      pointer-events: none;
-    }
-
-    .page-header__inner {
-      width: min(calc(100% - 28px), var(--header-max-width));
-      min-height: var(--header-row-height);
-      height: auto;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: nowrap;
-    }
-
-    .page-header__brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.85rem;
-      min-width: 0;
-      text-decoration: none;
-    }
-
-    .page-header__brand img {
-      width: 30px;
-      height: 30px;
-      flex: 0 0 auto;
-    }
-
-    .page-header__brand-name {
-      font-size: 1.02rem;
-      font-weight: 600;
-      color: var(--text);
-      letter-spacing: 0.01em;
-      white-space: nowrap;
-    }
-
-    .page-header__nav {
-      display: flex;
-      align-items: center;
-      flex-wrap: nowrap;
-      gap: 0.35rem;
-      margin-left: 1rem;
-      white-space: nowrap;
-    }
-
-    .page-header__link {
-      display: inline-flex;
-      align-items: center;
-      min-height: 38px;
-      padding: 0 0.9rem;
-      border-radius: 6px;
-      color: var(--text-soft);
-      text-decoration: none;
-      transition: background-color 160ms ease, color 160ms ease;
-    }
-
-    .page-header__link:hover,
-    .page-header__link:focus-visible {
-      background: var(--surface-hover);
-      color: var(--text);
-    }
-
-    .page-header__spacer {
-      flex: 1 1 auto;
-    }
-
-    .page-header__controls {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      min-width: 0;
-      flex: 0 1 auto;
-      flex-wrap: nowrap;
-    }
-
-    .page-header .settings-select-menu-wrap {
-      position: relative;
-      flex: 0 0 auto;
-      min-width: 0;
-      max-width: min(100%, 28rem);
-    }
-
-    .page-header .date-native-select-wrap,
-    .page-header .settings-select-wrap {
-      width: fit-content;
-      min-width: 0;
-      max-width: 100%;
-    }
-
-    .page-header .date-native-select-button,
-    .page-header .settings-select-button {
-      width: auto;
-      min-width: 0;
-      max-width: 100%;
-      min-height: 38px;
-      padding-left: 0.95rem;
-      padding-right: 2.2rem;
-      border: 1px solid var(--header-pill-border);
-      background: var(--header-pill-bg);
-      font-size: 0.95rem;
-      line-height: 1.2;
-    }
-
-    .page-header .date-native-select-button:hover,
-    .page-header .date-native-select-button:focus-visible,
-    .page-header .settings-select-button:hover,
-    .page-header .settings-select-button:focus-visible {
-      background: color-mix(in srgb, var(--header-pill-bg) 88%, var(--surface-hover) 12%);
-    }
-
-    .page-header .settings-select-button.active,
-    .page-header .date-native-select-button.active {
-      background: color-mix(in srgb, var(--header-pill-bg) 84%, var(--surface-active) 16%);
-    }
-
-    .page-header .date-native-select-caret {
-      right: 0.85rem;
-    }
-
-    .page-header .date-native-mode-menu {
-      min-width: max(100%, 220px);
-      max-width: min(420px, calc(100vw - 24px));
-      overflow-x: hidden;
-    }
-
-    .page-header .date-native-mode-menu[hidden],
-    .page-header .settings-select-menu[hidden],
-    .page-header .settings-select-menu-empty[hidden],
-    .page-header .date-native-mode-option[hidden] {
-      display: none !important;
-    }
-
-    .page-header .date-native-mode-option {
-      min-height: 36px;
-      white-space: normal;
-      overflow-wrap: anywhere;
-    }
-
-    .page-header .settings-select-search-row,
-    .page-header .settings-select-menu-options {
-      min-width: 0;
-      width: 100%;
-      overflow-x: hidden;
-    }
-
-    .page-header .settings-select-search-input {
-      min-width: 0;
-      width: 100%;
-    }
-
-    .page-header__cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 38px;
-      padding: 0.65rem 1rem;
-      border-radius: 6px;
-      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-strong) 100%);
-      color: var(--button-equals-text, #07131b);
-      font-weight: 700;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: filter 160ms ease, transform 160ms ease;
-    }
-
-    .page-header__cta:hover,
-    .page-header__cta:focus-visible {
-      filter: brightness(1.05);
-      transform: translateY(-1px);
     }
 
     .page-main {
@@ -297,7 +73,7 @@
 
     #static-binary-grid {
       position: fixed;
-      top: var(--header-height, 74px);
+      top: 0;
       left: 0;
       right: 0;
       bottom: 0;
@@ -332,7 +108,7 @@
       bottom: 0;
       left: 0;
       height: clamp(8rem, 18vh, 16rem);
-      background: linear-gradient(180deg, transparent 0%, var(--bg) 100%);
+      background: linear-gradient(180deg, transparent 0%, var(--shell-color) 100%);
       pointer-events: none;
       z-index: 2;
     }
@@ -373,7 +149,7 @@
 
     .hero-subtitle {
       margin: 0;
-      color: color-mix(in srgb, var(--text-soft) 88%, white 12%);
+      color: var(--text-soft);
       font-size: clamp(1.02rem, 2vw, 1.4rem);
       line-height: 1.45;
       max-width: 100%;
@@ -388,7 +164,7 @@
       border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
       border-radius: 18px;
       background:
-        linear-gradient(180deg, color-mix(in srgb, var(--panel) 82%, transparent), color-mix(in srgb, var(--window-bg) 92%, transparent));
+        linear-gradient(180deg, color-mix(in srgb, var(--panel-color) 82%, transparent), color-mix(in srgb, var(--window-color) 92%, transparent));
       box-shadow: 0 22px 44px rgba(0, 0, 0, 0.24);
       backdrop-filter: blur(14px);
     }
@@ -408,7 +184,7 @@
       min-height: 56px;
       padding: 0.85rem 1rem;
       border-radius: 14px;
-      background: linear-gradient(180deg, color-mix(in srgb, white 94%, var(--panel)) 0%, color-mix(in srgb, white 84%, var(--panel)) 100%);
+      background: linear-gradient(180deg, color-mix(in srgb, white 94%, var(--panel-color)) 0%, color-mix(in srgb, white 84%, var(--panel-color)) 100%);
       color: #111821;
       text-decoration: none;
       font-size: 0.95rem;
@@ -467,7 +243,7 @@
       inset: 0;
       border: 0;
       padding: 0;
-      background: color-mix(in srgb, var(--window-bg) 70%, transparent);
+      background: color-mix(in srgb, var(--window-color) 70%, transparent);
       backdrop-filter: blur(18px) saturate(1.08);
     }
 
@@ -478,7 +254,7 @@
       border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
       border-radius: 28px;
       background:
-        linear-gradient(180deg, color-mix(in srgb, var(--panel) 94%, white 6%) 0%, color-mix(in srgb, var(--window-bg) 88%, var(--panel) 12%) 100%);
+        linear-gradient(180deg, color-mix(in srgb, var(--panel-color) 94%, white 6%) 0%, color-mix(in srgb, var(--window-color) 88%, var(--panel-color) 12%) 100%);
       box-shadow: 0 34px 88px rgba(0, 0, 0, 0.44);
       color: var(--text);
       transform: translateY(10px) scale(0.98);
@@ -523,7 +299,7 @@
 
     .coming-soon-modal__message {
       margin: 0;
-      color: color-mix(in srgb, var(--text-soft) 90%, white 10%);
+      color: var(--text-soft);
       font-size: 0.98rem;
       line-height: 1.5;
     }
@@ -581,7 +357,7 @@
       overflow: hidden;
       border-radius: 20px;
       border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
-      background: var(--window-bg);
+      background: var(--window-color);
       box-shadow: inset 0 1px 0 color-mix(in srgb, white 10%, transparent);
     }
 
@@ -592,7 +368,7 @@
       gap: 1rem;
       padding: 0.8rem 1rem;
       border-bottom: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
-      background: color-mix(in srgb, var(--window-bg-alt) 78%, var(--panel));
+      background: color-mix(in srgb, var(--window-bg-alt) 78%, var(--panel-color));
     }
 
     .hero-preview-titlebar-brand {
@@ -641,37 +417,7 @@
       background: var(--shell-bg);
     }
 
-    .page-header.page-header--stacked .page-header__inner {
-      padding: 0.9rem 0;
-      flex-wrap: wrap;
-      row-gap: 0.75rem;
-    }
-
-    .page-header.page-header--stacked .page-header__brand,
-    .page-header.page-header--stacked .page-header__nav {
-      flex: 0 1 auto;
-      width: auto;
-      margin-left: 0;
-    }
-
-    .page-header.page-header--stacked .page-header__spacer {
-      display: none;
-    }
-
-    .page-header.page-header--stacked .page-header__controls {
-      flex: 1 0 100%;
-      width: 100%;
-      max-width: 100%;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      overflow: visible;
-    }
-
     @media (max-width: 720px) {
-      .page-header.page-header--stacked .page-header__controls {
-        gap: 0.75rem;
-      }
-
       .page-main {
         min-height: 0;
       }
@@ -744,8 +490,8 @@
           <button type="button" class="date-native-select-button settings-select-button" data-menu-toggle="language"
             aria-haspopup="listbox" aria-expanded="false" aria-controls="language-menu" aria-label="Language">
             <span class="settings-select-button-label">Loading languages...</span>
+            <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
           </button>
-          <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
           <div class="date-native-mode-menu settings-select-menu" id="language-menu" data-menu-panel="language"
             role="listbox" aria-label="Language" hidden></div>
         </div>
@@ -754,8 +500,8 @@
           <button type="button" class="date-native-select-button settings-select-button" data-menu-toggle="theme"
             aria-haspopup="listbox" aria-expanded="false" aria-controls="theme-menu" aria-label="Theme">
             <span class="settings-select-button-label">Loading themes...</span>
+            <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
           </button>
-          <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
           <div class="date-native-mode-menu settings-select-menu" id="theme-menu" data-menu-panel="theme" role="listbox"
             aria-label="Theme" hidden></div>
         </div>
@@ -913,8 +659,6 @@
     const comingSoonPrimaryClose = document.querySelector('[data-coming-soon-primary-close]');
     const themeColorMeta = document.querySelector('meta[name="theme-color"]');
     const favicon = document.getElementById('page-favicon');
-    const pageHeader = document.querySelector('.page-header');
-    const headerInner = document.querySelector('.page-header__inner');
     const THEME_STORAGE_KEY = 'roselt-website-theme';
     const LANGUAGE_STORAGE_KEY = 'roselt-website-language';
     const APP_PAGE_STORAGE_KEY = STORAGE_KEYS.page;
@@ -928,7 +672,6 @@
     let currentThemeSetting = 'system';
     let currentAppPage = DEFAULT_MODE;
     let openMenuId = null;
-    let headerLayoutFrame = null;
     let heroGridFrame = null;
     const ENGLISH_LANGUAGE_DISPLAY_NAMES = typeof Intl?.DisplayNames === 'function'
       ? new Intl.DisplayNames(['en'], { type: 'language' })
@@ -980,47 +723,6 @@
         || hostname === '::1'
         || hostname === '[::1]'
         || hostname.endsWith('.localhost');
-    }
-
-    function syncHeaderOffset() {
-      if (!(pageHeader instanceof HTMLElement)) {
-        return;
-      }
-
-      const measuredHeight = Math.max(74, Math.ceil(pageHeader.getBoundingClientRect().height));
-      document.documentElement.style.setProperty('--header-height', `${measuredHeight}px`);
-    }
-
-    function updateHeaderLayout() {
-      if (!(pageHeader instanceof HTMLElement) || !(headerInner instanceof HTMLElement)) {
-        syncHeaderOffset();
-        return;
-      }
-
-      pageHeader.classList.remove('page-header--stacked');
-      const needsStackedLayout = headerInner.scrollWidth > headerInner.clientWidth + 1;
-      pageHeader.classList.toggle('page-header--stacked', needsStackedLayout);
-      syncHeaderOffset();
-    }
-
-    function scheduleHeaderLayoutUpdate() {
-      if (heroTitle instanceof HTMLElement) {
-        heroTitle.classList.remove('hero-title--measuring', 'hero-title--single-line');
-      }
-
-      if (typeof window.requestAnimationFrame !== 'function') {
-        updateHeaderLayout();
-        return;
-      }
-
-      if (headerLayoutFrame !== null) {
-        window.cancelAnimationFrame(headerLayoutFrame);
-      }
-
-      headerLayoutFrame = window.requestAnimationFrame(() => {
-        headerLayoutFrame = null;
-        updateHeaderLayout();
-      });
     }
 
     function normalizeLocaleCandidate(locale) {
@@ -1553,10 +1255,8 @@
 
       const parsedLineHeight = Number.parseFloat(window.getComputedStyle(heroGridText).lineHeight);
       const lineHeight = Number.isFinite(parsedLineHeight) && parsedLineHeight > 0 ? parsedLineHeight : 15.75;
-      const headerHeight = Math.max(0, pageHeader?.getBoundingClientRect?.().height ?? 0);
-      const viewportHeight = Math.max(0, window.innerHeight - headerHeight);
       const sectionHeight = heroSection.getBoundingClientRect().height;
-      const targetHeight = Math.max(sectionHeight, viewportHeight);
+      const targetHeight = Math.max(sectionHeight, window.innerHeight);
 
       return Math.max(170, Math.ceil((targetHeight + (lineHeight * 12)) / lineHeight));
     }
@@ -1676,7 +1376,6 @@
       if (favicon instanceof HTMLLinkElement) {
         favicon.href = themeLogoPath;
       }
-      scheduleHeaderLayoutUpdate();
       scheduleHeroBinaryGridUpdate();
     }
 
@@ -1718,7 +1417,6 @@
           labelElement.textContent = label;
         }
       }
-      scheduleHeaderLayoutUpdate();
       scheduleHeroBinaryGridUpdate();
     }
 
@@ -1742,7 +1440,6 @@
       renderMenuOptions('language', languageOptions, currentLanguageId);
       updateToggleLabel('theme', themeOptions.find((theme) => theme.value === currentThemeSetting)?.label ?? currentThemeSetting);
       renderMenuOptions('theme', themeOptions, currentThemeSetting);
-      scheduleHeaderLayoutUpdate();
     }
 
     async function initializeHeader() {
@@ -1793,18 +1490,15 @@
       };
 
       window.addEventListener('focus', refreshStoredPage);
-      window.addEventListener('resize', scheduleHeaderLayoutUpdate);
       window.addEventListener('resize', scheduleHeroBinaryGridUpdate);
       window.addEventListener('storage', (event) => {
         if (event.key === APP_PAGE_STORAGE_KEY) {
           refreshStoredPage();
         }
       });
-      scheduleHeaderLayoutUpdate();
       scheduleHeroBinaryGridUpdate();
       if (document.fonts?.ready) {
         void document.fonts.ready.then(() => {
-          scheduleHeaderLayoutUpdate();
           scheduleHeroBinaryGridUpdate();
         });
       }

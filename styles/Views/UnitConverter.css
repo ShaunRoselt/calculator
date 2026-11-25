@@ -286,7 +286,7 @@
   gap: 2px;
   max-height: 314px;
   overflow-y: auto;
-  scrollbar-color: var(--scrollbar-color);
+  scrollbar-color: var(--converter-menu-scrollbar, var(--scrollbar-color));
   scrollbar-width: thin;
 }
 
@@ -301,7 +301,7 @@
 .converter-select-menu-options::-webkit-scrollbar-thumb {
   border: 2px solid transparent;
   border-radius: 999px;
-  background: var(--scrollbar-thumb);
+  background: var(--converter-menu-thumb, var(--scrollbar-thumb));
   background-clip: padding-box;
 }
 
@@ -316,7 +316,7 @@
   padding: 0.55rem 12px 0.55rem 16px;
   border-radius: 8px;
   background: transparent;
-  color: var(--text);
+  color: var(--converter-menu-text, var(--text));
   text-align: left;
   font-size: 0.93rem;
   line-height: 1.35;
@@ -324,25 +324,27 @@
 
 .converter-select-option-primary {
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-wrap: anywhere;
 }
 
 .converter-select-option-meta {
-  flex: 0 0 auto;
-  color: var(--text-soft);
+  flex: 0 1 auto;
+  max-width: 55%;
+  color: var(--converter-menu-text-soft, var(--text-soft));
   font-size: 0.76rem;
   line-height: 1.2;
-  white-space: nowrap;
+  text-align: end;
+  overflow-wrap: anywhere;
 }
 
 .converter-select-option:hover,
 .converter-select-option:focus-visible {
-  background: var(--surface-hover);
+  background: var(--converter-menu-hover, var(--surface-hover));
+  outline-color: var(--converter-menu-text, var(--focus-ring));
 }
 
 .converter-select-option.selected {
-  background: var(--surface-active);
+  background: var(--converter-menu-active, var(--surface-active));
 }
 
 .converter-select-option.selected::before {
@@ -353,19 +355,19 @@
   bottom: 6px;
   width: 3px;
   border-radius: 999px;
-  background: var(--accent);
+  background: var(--converter-menu-text, var(--accent));
 }
 
 .converter-select-menu-empty {
   padding: 0.55rem 0.7rem;
-  color: var(--text-soft);
+  color: var(--converter-menu-text-soft, var(--text-soft));
   font-size: 0.86rem;
 }
 
 .converter-native-meta {
   margin-top: 0;
   padding-top: 1rem;
-  color: var(--text-faint);
+  color: var(--text-soft);
   font-size: 0.82rem;
 }
 
@@ -397,7 +399,7 @@
 }
 
 .converter-native-meta-unit {
-  color: var(--text-faint);
+  color: var(--text-soft);
   font-size: 0.88rem;
 }
 
@@ -407,7 +409,7 @@
   gap: 0.22rem;
   margin-top: 0;
   padding-top: 1rem;
-  color: var(--text-faint);
+  color: var(--text-soft);
   font-size: 0.78rem;
 }
 
@@ -424,14 +426,14 @@
   padding: 0;
   border: 0;
   background: transparent;
-  color: var(--text-faint);
+  color: var(--text-soft);
   font-size: 0.78rem;
   margin-bottom: 0.1rem;
 }
 
 .currency-crypto-toggle:hover,
 .currency-crypto-toggle:focus-visible {
-  color: var(--text-soft);
+  color: var(--text);
   background: transparent;
 }
 
@@ -446,7 +448,7 @@
   width: 34px;
   height: 19px;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--text-soft) 28%, var(--panel));
+  background: color-mix(in srgb, var(--text-soft) 28%, var(--panel-color));
   box-shadow: inset 0 0 0 1px var(--border-subtle);
   transition: background 140ms ease, box-shadow 140ms ease;
 }
@@ -468,7 +470,7 @@
 }
 
 .currency-crypto-toggle.active .currency-crypto-toggle-track {
-  background: color-mix(in srgb, var(--accent) 78%, var(--panel));
+  background: color-mix(in srgb, var(--accent) 78%, var(--panel-color));
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 68%, var(--border-subtle));
 }
 
@@ -481,7 +483,7 @@
   margin-top: 0.35rem;
   padding: 0;
   background: transparent;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .currency-update-button[disabled] {
@@ -525,7 +527,7 @@
 .currency-keypad .calc-button[data-converter-action="clear"],
 .currency-keypad .calc-button[data-converter-action="backspace"] {
   background: var(--button-operator-bg);
-  color: var(--text);
+  color: var(--button-operator-text, var(--text));
 }
 
 .converter-native-keypad .calc-button[data-converter-action="clear"]:hover,

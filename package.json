@@ -6,6 +6,7 @@
   "main": "electron/main.cjs",
   "scripts": {
     "check": "node scripts/check.js",
+    "test": "node --test \"test/**/*.test.js\"",
     "capture:steam:screenshots": "node marketing/steam/capture_full_page_screenshots.cjs",
     "create:steam:trailer": "node marketing/steam/create_trailer.cjs",
     "generate:steam:store": "node marketing/steam/generate_store_images.cjs",
@@ -57,13 +58,13 @@
       "!Saves{,/**/*}",
       "!scripts/benchmark{,/**/*}",
       "!**/*.md",
-      "!CNAME",
-      "!NOTICE.txt"
+      "!CNAME"
     ],
     "asar": true,
     "compression": "store",
     "linux": {
       "artifactName": "Roselt-Calculator-${version}.${ext}",
+      "executableName": "calculator",
       "category": "Utility",
       "icon": "assets/icons/app-icon-4096.png"
     },
@@ -81,13 +82,17 @@
       "artifactName": "Roselt-Calculator-Portable-${version}.exe"
     }
   },
-  "dependencies": {
-    "nerdamer": "^1.1.13"
-  },
   "devDependencies": {
-    "@electron/packager": "^19.1.0",
-    "electron": "^41.2.0",
-    "electron-builder": "^26.8.1",
-    "resedit": "^3.0.2"
+    "electron": "*",
+    "electron-builder": "*",
+    "resedit": "*"
+  },
+  "overrides": {
+    "app-builder-lib@26.18.1": {
+      "minimatch@^10.2.5": "11.0.9"
+    },
+    "@electron/universal@2.0.3": {
+      "minimatch@^9.0.3": "11.0.9"
+    }
   }
 }

@@ -158,8 +158,7 @@ function renderDatePicker(key, selectedValue) {
 
 function getVisibleMonthDate(selectedValue) {
   const source = state.date.pickerMonth || selectedValue.slice(0, 7);
-  const [year, month] = source.split('-').map(Number);
-  return new Date(Date.UTC(year, (month || 1) - 1, 1));
+  return new Date(`${source}-01T00:00:00Z`);
 }
 
 function formatCalendarMonth(value) {
@@ -178,7 +177,7 @@ function getDatePickerCells(visibleMonth, selectedValue) {
   return Array.from({ length: 42 }, (_, index) => {
     const cellDate = new Date(gridStart);
     cellDate.setUTCDate(gridStart.getUTCDate() + index);
-    const value = toDateInputValue(cellDate);
+    const value = cellDate.toISOString().slice(0, 10);
     return {
       value,
       day: cellDate.getUTCDate(),

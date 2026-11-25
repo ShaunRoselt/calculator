@@ -67,7 +67,7 @@
   padding: 0;
   border: 0;
   background: transparent;
-  color: var(--accent);
+  color: var(--accent-text);
   font-size: 0.82rem;
 }
 
@@ -121,7 +121,7 @@
 .graph-settings-choice.active {
   background: var(--accent);
   border-color: var(--accent);
-  color: var(--button-equals-text);
+  color: var(--accent-ink);
 }
 
 .graph-settings-select-label {
@@ -257,7 +257,7 @@
   gap: 8px;
   border: 0;
   background: var(--graph-expression-color, #0063b1);
-  color: #ffffff;
+  color: var(--graph-expression-ink, #ffffff);
 }
 
 .graph-analysis-back:hover,
@@ -385,7 +385,7 @@
 
 .graph-compact-editor-button.active {
   background: var(--accent);
-  color: var(--button-equals-text);
+  color: var(--accent-ink);
 }
 
 .graph-expression-pane,
@@ -430,7 +430,7 @@
   justify-content: center;
   min-height: 40px;
   background: var(--graph-expression-color, #737378);
-  color: var(--text);
+  color: var(--graph-expression-ink, #ffffff);
   border: 0;
   border-radius: 4px 0 0 4px;
   font-style: italic;
@@ -543,6 +543,17 @@
   padding-right: 136px;
 }
 
+@media (hover: none) {
+  .graph-expression-row.filled-row .graph-expression-actions {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .graph-expression-row.filled-row .graph-expression-input {
+    padding-right: 136px;
+  }
+}
+
 .graph-expression-action {
   width: 30px;
   height: 30px;
@@ -564,7 +575,7 @@
 
 .graph-expression-action.active {
   background: var(--graph-success);
-  color: #ffffff;
+  color: var(--graph-success-ink);
 }
 
 .graph-expression-action svg {
@@ -573,7 +584,7 @@
 }
 
 .graph-expression-row.hidden-row .graph-expression-input {
-  color: var(--text-faint);
+  color: var(--text-soft);
   background: var(--graph-hidden-input-bg);
   border-color: var(--graph-hidden-input-border);
 }
@@ -696,10 +707,6 @@
   overflow: visible;
 }
 
-.graph-expression-input::placeholder {
-  color: var(--text-faint);
-}
-
 .graph-expression-row.add-row .graph-expression-input {
   background: var(--graph-input-add-bg);
   border-color: var(--graph-input-add-border);
@@ -768,7 +775,7 @@
 }
 
 .graph-keypad-caret {
-  color: var(--text-faint);
+  color: var(--text-soft);
   font-size: 0.7rem;
 }
 
@@ -781,7 +788,7 @@
   display: grid;
   gap: 2px;
   padding: 2px;
-  background: color-mix(in srgb, var(--window-bg) 94%, #111);
+  background: color-mix(in srgb, var(--window-color) 94%, #111);
   border: 1px solid var(--border-subtle);
   border-radius: 6px;
   box-shadow: var(--shadow-menu);

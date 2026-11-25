@@ -108,6 +108,11 @@ select {
   font: inherit;
 }
 
+:where(input, textarea)::placeholder {
+  color: var(--text-soft);
+  opacity: 1;
+}
+
 .ui-caret {
   display: inline-flex;
   align-items: center;

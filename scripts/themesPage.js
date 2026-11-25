@@ -41,11 +41,7 @@ function renderThemeGallery(context) {
       continue;
     }
 
-    const accent = theme.tokens?.['--accent'] || theme.metaColor;
-    const accentStrong = theme.tokens?.['--accent-strong'] || theme.tokens?.['--button-equals-bg-end'] || accent;
     const card = createElement('article', 'showcase-theme-card');
-    card.style.setProperty('--theme-accent', accent);
-    card.style.setProperty('--theme-accent-strong', accentStrong);
 
     const header = createElement('div', 'showcase-theme-card-header');
     const logo = createElement('img', 'showcase-theme-card-logo');
@@ -72,6 +68,8 @@ function renderThemeGallery(context) {
     iframe.loading = 'lazy';
     iframe.title = `${theme.label} ${context.copy.themePreviewLabel}`;
     iframe.tabIndex = -1;
+    iframe.style.background = theme.metaColor;
+    iframe.style.colorScheme = theme.colorScheme;
     iframe.setAttribute('aria-hidden', 'true');
     iframe.src = context.buildAppHref({
       page: 'standard',
@@ -92,6 +90,7 @@ function renderThemeGallery(context) {
 }
 
 function applyThemesPageState(context) {
+  const languageChanged = latestContext?.currentLanguageId !== context.currentLanguageId;
   latestContext = context;
   const {
     copy
@@ -137,7 +136,9 @@ function applyThemesPageState(context) {
   }
 
   buildBinaryGrid(gridTarget, ['0', '1', 'ROSELT', 'CALCULATOR', 'THEME']);
-  renderThemeGallery(context);
+  if (languageChanged) {
+    renderThemeGallery(context);
+  }
 }
 
 document.addEventListener('input', (event) => {

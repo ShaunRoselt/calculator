@@ -14,26 +14,28 @@ const STYLE_PATHS = {
   settings: 'styles/Views/Settings.css'
 };
 
+const CONVERTER_STYLE_KEYS = ['calculator', 'unitConverter', 'history'];
+
 const MODE_STYLE_KEYS = {
   standard: ['calculator', 'history', 'memory'],
   scientific: ['calculator', 'scientificAngles', 'history', 'memory'],
   programmer: ['calculator', 'programmerDisplay', 'programmerBits', 'history', 'memory'],
   date: ['date', 'history'],
-  graphing: ['date', 'settings', 'graphing'],
+  graphing: ['calculator', 'date', 'settings', 'graphing'],
   settings: ['date', 'settings'],
-  currency: ['unitConverter', 'history'],
-  volume: ['unitConverter', 'history'],
-  length: ['unitConverter', 'history'],
-  weight: ['unitConverter', 'history'],
-  temperature: ['unitConverter', 'history'],
-  energy: ['unitConverter', 'history'],
-  area: ['unitConverter', 'history'],
-  speed: ['unitConverter', 'history'],
-  time: ['unitConverter', 'history'],
-  power: ['unitConverter', 'history'],
-  data: ['unitConverter', 'history'],
-  pressure: ['unitConverter', 'history'],
-  angle: ['unitConverter', 'history']
+  currency: CONVERTER_STYLE_KEYS,
+  volume: CONVERTER_STYLE_KEYS,
+  length: CONVERTER_STYLE_KEYS,
+  weight: CONVERTER_STYLE_KEYS,
+  temperature: CONVERTER_STYLE_KEYS,
+  energy: CONVERTER_STYLE_KEYS,
+  area: CONVERTER_STYLE_KEYS,
+  speed: CONVERTER_STYLE_KEYS,
+  time: CONVERTER_STYLE_KEYS,
+  power: CONVERTER_STYLE_KEYS,
+  data: CONVERTER_STYLE_KEYS,
+  pressure: CONVERTER_STYLE_KEYS,
+  angle: CONVERTER_STYLE_KEYS
 };
 
 const loadedStyleKeys = new Set();

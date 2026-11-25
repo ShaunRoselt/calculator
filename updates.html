@@ -118,18 +118,17 @@
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.04em;
-      color: var(--page-accent);
-      background: rgba(121, 230, 179, 0.12);
-      border: 1px solid rgba(121, 230, 179, 0.25);
+      color: var(--page-text);
+      background: color-mix(in srgb, var(--page-accent) 12%, var(--panel-color));
+      border: 1px solid color-mix(in srgb, var(--page-accent) 25%, var(--panel-color));
       border-radius: 999px;
       padding: 0.2rem 0.55rem;
       white-space: nowrap;
     }
 
     .changelog-entry.entry-major .changelog-version-badge {
-      color: var(--page-accent-2);
-      background: rgba(103, 180, 255, 0.12);
-      border-color: rgba(103, 180, 255, 0.28);
+      background: color-mix(in srgb, var(--page-accent-2) 18%, var(--panel-color));
+      border-color: color-mix(in srgb, var(--page-accent-2) 28%, var(--panel-color));
     }
 
     .changelog-date {
@@ -325,8 +324,8 @@
           <button type="button" class="date-native-select-button settings-select-button" data-menu-toggle="language"
             aria-haspopup="listbox" aria-expanded="false" aria-controls="language-menu" aria-label="Language">
             <span class="settings-select-button-label">Loading languages...</span>
+            <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
           </button>
-          <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
           <div class="date-native-mode-menu settings-select-menu" id="language-menu" data-menu-panel="language"
             role="listbox" aria-label="Language" hidden></div>
         </div>
@@ -335,8 +334,8 @@
           <button type="button" class="date-native-select-button settings-select-button" data-menu-toggle="theme"
             aria-haspopup="listbox" aria-expanded="false" aria-controls="theme-menu" aria-label="Theme">
             <span class="settings-select-button-label">Loading themes...</span>
+            <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
           </button>
-          <span class="date-native-select-caret ui-caret" aria-hidden="true"></span>
           <div class="date-native-mode-menu settings-select-menu" id="theme-menu" data-menu-panel="theme" role="listbox"
             aria-label="Theme" hidden></div>
         </div>

@@ -1,4 +1,4 @@
-// Vendored from locale-currency 1.0.0 for offline runtime use.
+// Currency data from locale-currency 1.1.0 for offline runtime use.
 const map = {
   AD: 'EUR',
   AE: 'AED',
@@ -52,7 +52,7 @@ const map = {
   CR: 'CRC',
   CU: 'CUP',
   CV: 'CVE',
-  CW: 'ANG',
+  CW: 'XCG',
   CX: 'AUD',
   CY: 'EUR',
   CZ: 'CZK',
@@ -210,7 +210,7 @@ const map = {
   SS: 'SSP',
   ST: 'STN',
   SV: 'SVC',
-  SX: 'ANG',
+  SX: 'XCG',
   SY: 'SYP',
   SZ: 'SZL',
   TC: 'USD',

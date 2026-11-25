@@ -34,7 +34,7 @@ For user-visible features and major UX changes, follow [docs/NewFeatureProcess.m
 
 Prerequisites:
 
-- Node.js and npm
+- Node.js 26 LTS and npm
 - Python 3, or another simple way to serve the repository over HTTP
 
 Install dependencies:
@@ -76,7 +76,7 @@ Prefer small, readable functions over large cross-cutting rewrites.
 - `index.html` serves the public landing page, links the manifest, and registers the service worker so install prompts can begin there
 - `app.html` boots the browser shell for the installed and in-browser calculator experience
 - `manifest.json` defines install metadata
-- `service-worker.js` keeps the PWA installable without caching app assets
+- `service-worker.js` makes the calculator shell available offline after its first online load
 
 ### JavaScript
 
@@ -99,6 +99,7 @@ Prefer small, readable functions over large cross-cutting rewrites.
 At a minimum, validate your change with:
 
 - `npm run check`
+- `npm test`
 - targeted manual testing for the affected modes
 - responsive verification when layout changes are involved
 - theme and keyboard checks when interactive UI changes are involved

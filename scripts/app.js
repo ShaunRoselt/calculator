@@ -35,7 +35,7 @@ import {
 import { getCurrentLanguage, setLanguage, t } from './i18n.js';
 import { flushSettingsFile, persistSettingsFile } from './settingsFile.js';
 import { installTooltipHandling } from './tooltip.js';
-import { getLayoutMode, render } from './Views/MainPage.js';
+import { getLayoutMode, render as renderPage } from './Views/MainPage.js';
 import { ensureNerdamerLoaded } from './nerdamer.js';
 import { ensureModeStyles } from './stylesheets.js';
 import {
@@ -48,6 +48,8 @@ import {
   commitGraphExpression,
   computeDateResults,
   drawGraph,
+  formatBigInt,
+  getProgrammerCurrentValue,
   handleAction,
   handleConverterKeypad,
   handleCurrencyKeypad,
@@ -99,6 +101,7 @@ let converterTypeaheadTimestamp = 0;
 let lastViewportWidth = window.innerWidth;
 let lastViewportHeight = window.innerHeight;
 let graphPanSession = null;
+let styledMode = null;
 const calculatorUndoStack = [];
 const calculatorRedoStack = [];
 const MAX_CALCULATOR_HISTORY = 100;
@@ -544,8 +547,7 @@ persistSettingsFile(state.settings);
 initFullscreenState();
 computeDateResults();
 syncConverterValues('from');
-await ensureModeStyles(state.mode);
-render();
+await renderModeWhenStylesReady(state.mode);
 installTooltipHandling();
 
 document.addEventListener('click', handleClick);
@@ -576,18 +578,25 @@ systemThemeMedia?.addEventListener?.('change', () => {
   }
 });
 
+function render() {
+  if (state.mode === styledMode) {
+    renderPage();
+  }
+}
+
 async function renderModeWhenStylesReady(mode) {
   try {
     await ensureModeStyles(mode);
-    if (state.mode === mode) {
-      render();
-    }
   } catch (error) {
     console.warn('Unable to load mode styles.', error);
-    if (state.mode === mode) {
-      render();
-    }
   }
+
+  if (state.mode !== mode) {
+    return;
+  }
+
+  styledMode = mode;
+  render();
 }
 
 function getSystemTheme() {
@@ -725,27 +734,40 @@ function ensureGraphThemeSetting(themeSetting) {
 }
 
 async function applyThemeSetting(theme) {
-  state.settings.theme = theme === 'system' || isSupportedTheme(theme)
+  const nextTheme = theme === 'system' || isSupportedTheme(theme)
     ? theme
     : 'system';
+  try {
+    await ensureTheme(getResolvedAppThemeId(nextTheme, getSystemTheme()));
+  } catch (error) {
+    console.warn('Unable to load the selected theme.', error);
+    render();
+    return;
+  }
+  state.settings.theme = nextTheme;
   persistTheme();
   persistSettingsFile(state.settings);
 
   // A manual settings change should stop any stale URL override from winning on refresh.
   clearUrlPreferenceOverride('theme');
-  await ensureTheme(getResolvedAppThemeId(state.settings.theme, getSystemTheme()));
   applyTheme();
   render();
 }
 
 async function applyLanguageChange(language) {
-  state.settings.language = language;
+  try {
+    await setLanguage(language);
+  } catch (error) {
+    console.warn('Unable to load the selected language.', error);
+    render();
+    return;
+  }
+  state.settings.language = getCurrentLanguage();
   persistLanguage();
   persistSettingsFile(state.settings);
 
   // Language set from settings should persist via storage rather than a one-off URL override.
   clearUrlPreferenceOverride('language');
-  await setLanguage(language);
   computeDateResults();
   render();
 }
@@ -774,7 +796,9 @@ function createCalculatorSnapshot() {
 }
 
 function restoreCalculatorSnapshot(snapshot) {
-  state.mode = snapshot.mode;
+  if (state.mode !== snapshot.mode) {
+    setMode(snapshot.mode, { replaceHistory: true, renderView: false });
+  }
   state.collections = structuredClone(snapshot.collections);
   state.standard = structuredClone(snapshot.standard);
   state.scientific = structuredClone(snapshot.scientific);
@@ -783,7 +807,10 @@ function restoreCalculatorSnapshot(snapshot) {
 }
 
 function calculatorSnapshotsMatch(left, right) {
-  return JSON.stringify(left) === JSON.stringify(right);
+  const serialize = (snapshot) => JSON.stringify(snapshot, (_key, value) =>
+    typeof value === 'bigint' ? { bigint: value.toString() } : value
+  );
+  return serialize(left) === serialize(right);
 }
 
 function commitCalculatorSnapshot(previousSnapshot) {
@@ -838,7 +865,7 @@ function restoreNextCalculatorSnapshot() {
 
 function normalizePastedDecimal(text) {
   const trimmed = String(text || '').trim().replace(/\s+/g, '');
-  if (!trimmed || !/^[+\-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/.test(trimmed)) {
+  if (!trimmed || !/^[+-]?(?:\d+(?:[.,]\d*)?|[.,]\d+)(?:e[+-]?\d+)?$/i.test(trimmed)) {
     return null;
   }
 
@@ -885,8 +912,9 @@ function applyPastedCalculatorText(text) {
     if (!normalized) {
       return false;
     }
-    state.programmer = createProgrammerState();
+    state.programmer = createProgrammerState(state.programmer);
     state.programmer.display = normalized;
+    state.programmer.display = formatBigInt(getProgrammerCurrentValue(), state.programmer.base);
     return commitCalculatorSnapshot(snapshot);
   }
 
@@ -896,7 +924,7 @@ function applyPastedCalculatorText(text) {
   }
 
   if (state.mode === 'scientific') {
-    state.scientific = createScientificState();
+    state.scientific = createScientificState(state.scientific);
     state.scientific.display = normalized;
     state.scientific.expression = normalized;
     state.scientific.justEvaluated = true;
@@ -1213,6 +1241,7 @@ function handleClick(event) {
     replaceHistoryCollection([]);
     persistCollections();
     render();
+    appRoot.querySelector('[data-history-tab="history"]')?.focus();
     return;
   }
 
@@ -1220,6 +1249,7 @@ function handleClick(event) {
     replaceMemoryCollection([]);
     persistCollections();
     render();
+    appRoot.querySelector('[data-history-tab="memory"]')?.focus();
     return;
   }
 
@@ -1242,8 +1272,13 @@ function handleClick(event) {
   }
 
   if (target.dataset.memoryClearItem) {
-    updateMemoryItem(Number(target.dataset.memoryClearItem), 'clear');
+    const index = Number(target.dataset.memoryClearItem);
+    updateMemoryItem(index, 'clear');
     render();
+    const nextIndex = Math.min(index, getMemoryCollection().length - 1);
+    const nextFocus = appRoot.querySelector(`[data-memory-recall="${nextIndex}"]`)
+      ?? appRoot.querySelector('[data-history-tab="memory"]');
+    nextFocus?.focus();
     return;
   }
 
@@ -1352,9 +1387,9 @@ function handleClick(event) {
   }
 
   if (target.dataset.datePickerNav) {
-    const [year, month] = state.date.pickerMonth.split('-').map(Number);
-    const nextVisible = new Date(Date.UTC(year, month - 1 + Number(target.dataset.datePickerNav), 1));
-    state.date.pickerMonth = `${nextVisible.getUTCFullYear()}-${String(nextVisible.getUTCMonth() + 1).padStart(2, '0')}`;
+    const nextVisible = new Date(`${state.date.pickerMonth}-01T00:00:00Z`);
+    nextVisible.setUTCMonth(nextVisible.getUTCMonth() + Number(target.dataset.datePickerNav));
+    state.date.pickerMonth = nextVisible.toISOString().slice(0, 7);
     render();
     return;
   }
@@ -1749,7 +1784,8 @@ async function updateCurrencyRates() {
 
 async function fetchFiatCurrencyRates() {
   const response = await fetch('https://open.er-api.com/v6/latest/USD', {
-    cache: 'no-store'
+    cache: 'no-store',
+    signal: AbortSignal.timeout(8000)
   });
 
   if (!response.ok) {
@@ -1778,7 +1814,7 @@ async function fetchCryptoCurrencyRates() {
 
   const response = await fetch(
     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${encodeURIComponent(coinIds.join(','))}&order=market_cap_desc&per_page=${coinIds.length}&page=1&sparkline=false`,
-    { cache: 'no-store' }
+    { cache: 'no-store', signal: AbortSignal.timeout(8000) }
   );
 
   if (!response.ok) {
@@ -2077,7 +2113,7 @@ function handleFocusIn(event) {
 }
 
 function handleKeydown(event) {
-  if (urlPreferences.readOnly) {
+  if (urlPreferences.readOnly || event.isComposing || event.keyCode === 229) {
     return;
   }
 
@@ -2196,6 +2232,10 @@ function handleKeydown(event) {
   }
 
   const key = event.key;
+  if (event.altKey || event.ctrlKey || event.metaKey
+      || (key === 'Enter' && event.target instanceof Element && event.target.closest('button, a[href]'))) {
+    return;
+  }
   if (/^[0-9]$/.test(key)) {
     performTrackedCalculatorAction('digit', key);
   } else if (state.mode === 'programmer' && /^[a-fA-F]$/.test(key)) {
@@ -2210,6 +2250,10 @@ function handleKeydown(event) {
     performTrackedCalculatorAction('equals', '');
   } else if (['+', '-', '*', '/'].includes(key)) {
     performTrackedCalculatorAction('operator', key);
+  } else if (state.mode === 'scientific' && key === '^') {
+    performTrackedCalculatorAction('operator', key);
+  } else if (state.mode === 'scientific' && (key === '(' || key === ')')) {
+    performTrackedCalculatorAction('paren', key);
   } else {
     return;
   }

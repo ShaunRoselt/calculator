@@ -260,7 +260,7 @@
 }
 
 .date-native-calendar-day.outside {
-  color: var(--text-faint);
+  color: var(--text-soft);
 }
 
 .date-native-calendar-day:hover,
@@ -271,7 +271,7 @@
 
 .date-native-calendar-day.selected {
   background: var(--accent);
-  color: var(--button-equals-text);
+  color: var(--accent-ink);
 }
 
 .date-native-radio-row {

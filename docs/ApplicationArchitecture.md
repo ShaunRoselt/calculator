@@ -11,7 +11,7 @@ The web app has four top-level entry points:
 - `index.html` serves the public landing page, links the manifest, and registers the service worker so PWA install flows can begin there
 - `app.html` loads the CSS and JavaScript bundles used by the browser shell and remains the installed app start surface
 - `manifest.json` defines install metadata for the PWA
-- `service-worker.js` keeps the app installable as a PWA without caching network responses
+- `service-worker.js` installs the offline calculator shell and serves cached app assets when the network is unavailable
 
 The page boot sequence is:
 
@@ -85,8 +85,11 @@ decisions, not separate builds.
 
 ## Offline model
 
-`service-worker.js` exists to satisfy the PWA install requirement, but it does not pre-cache app
-assets or intercept fetches. Network requests still go directly to the server for the latest files.
+The service worker pre-caches the calculator shell, mode styles, and the default language and
+themes. Requests for calculator assets prefer the network while online. Previously loaded
+languages and themes are reused offline. An uncached language or theme falls back to English
+or the default theme, respectively. Live currency requests bypass the service worker and use the
+converter's bundled rates if the providers are unavailable.
 
 ## Development model
 
@@ -94,7 +97,7 @@ The repository is intentionally lightweight:
 
 - no bundler is required for local development
 - no server-side runtime is required for the app itself
-- validation is currently centered on `npm run check` plus manual browser testing
+- validation runs syntax checks with `npm run check` and calculator regressions with `npm test`, alongside manual browser testing
 
 When adding new features, prefer extending the existing module boundaries instead of creating a new
 application layer. Most changes should fit into one or more of these buckets: config, state, logic,

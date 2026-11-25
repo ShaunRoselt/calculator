@@ -5,7 +5,7 @@ This repository now includes a Flathub-ready manifest at `flatpak/io.github.Shau
 ## What is prepared
 
 - The manifest uses `org.electronjs.Electron2.BaseApp` instead of copying a locally built Electron bundle.
-- The app runtime no longer depends on `node_modules` for `nerdamer`; it uses the vendored file at `assets/vendor/nerdamer/all.min.js`.
+- The graphing mode uses a vendored Nerdamer browser bundle from the pinned source archive.
 - AppStream metadata includes screenshots, a richer description, and release information suitable for KDE Discover and Flathub.
 - The source archive URL is pinned to commit `184a1c0f51bba798d2fdcfa0624dc76b66c8b1bc`.
 - The screenshot URLs in the AppStream metadata are pinned to an immutable GitHub commit so Discover and Flathub can cache them reliably.

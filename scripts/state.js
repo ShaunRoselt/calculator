@@ -213,11 +213,12 @@ export function createStandardState() {
   };
 }
 
-export function createScientificState() {
+export function createScientificState({ angle = 'DEG' } = {}) {
   return {
     display: '0',
+    result: null,
     expression: '',
-    angle: 'DEG',
+    angle,
     isExponentialFormat: false,
     isShifted: false,
     isHyperbolic: false,
@@ -229,7 +230,7 @@ export function createScientificState() {
   };
 }
 
-export function createProgrammerState() {
+export function createProgrammerState({ base = 'DEC', wordSize = 'QWORD', isBitFlipChecked = false } = {}) {
   return {
     display: '0',
     expression: '',
@@ -239,9 +240,9 @@ export function createProgrammerState() {
     lastOperand: null,
     lastOperator: null,
     error: false,
-    base: 'DEC',
-    wordSize: 'QWORD',
-    isBitFlipChecked: false,
+    base,
+    wordSize,
+    isBitFlipChecked,
     justEvaluated: false
   };
 }

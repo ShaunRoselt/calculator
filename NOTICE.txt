@@ -7,16 +7,13 @@ This project incorporates material from third parties.
 
 Nerdamer
 
-The MIT License (MIT)
-Copyright (c) Martin Donk
-
-Calculator vendors Nerdamer for runtime use, and Nerdamer is distributed under the MIT License.
-See `assets/vendor/nerdamer/all.min.js` and `node_modules/nerdamer` for the package contents and accompanying license details.
+Calculator includes Nerdamer 2.1.0 under Apache License 2.0. Its browser bundle includes
+Decimal.js 10.6.0 under the MIT License. See `assets/vendor/nerdamer/` for both licenses.
 
 ---
 
 locale-currency
 
-Calculator vendors locale-currency for offline locale-to-currency detection in the currency converter.
+Calculator vendors the locale-currency 1.1.0 map for offline currency detection.
 The upstream package metadata declares the BSD-2-Clause license.
-See `scripts/vendor/localeCurrency.js` for the vendored source and `https://github.com/tadeegan/locale-currency` for the upstream project.
+See `scripts/vendor/localeCurrency.js` and `scripts/vendor/locale-currency.LICENSE.txt` for the vendored source and license.

@@ -44,7 +44,7 @@
 }
 
 .programmer-readout:disabled {
-  color: var(--text-faint);
+  color: var(--text-soft);
 }
 
 .programmer-readout.active .programmer-readout-base {

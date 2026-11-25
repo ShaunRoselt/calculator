@@ -1,7 +1,7 @@
 import { state } from '../../state.js';
 import { t } from '../../i18n.js';
 import { getGraphThemeInlineStyle, getThemeOptions } from '../../themes.js';
-import { escapeHtml, formatExpressionForDisplay } from '../../utils.js';
+import { escapeHtml, formatExpressionForDisplay, getHexColorLuminance } from '../../utils.js';
 import { renderToolbarIcon } from '../ViewIcons.js';
 
 const GRAPHING_TOOL_GROUPS = [
@@ -242,6 +242,12 @@ function getGraphingLabel(key, fallback) {
   return translated === key ? fallback : translated;
 }
 
+function getExpressionColorStyle(color) {
+  const luminance = getHexColorLuminance(color);
+  const ink = (luminance + 0.05) / 0.05 > 1.05 / (luminance + 0.05) ? '#000000' : '#ffffff';
+  return `--graph-expression-color: ${escapeHtml(color)}; --graph-expression-ink: ${ink};`;
+}
+
 function renderFunctionAnalysisPanel() {
   const expressionIndex = state.graphing.analysisExpressionIndex;
   const analysis = state.graphing.analysisData;
@@ -260,7 +266,7 @@ function renderFunctionAnalysisPanel() {
           data-graph-analysis-close="true"
           data-tooltip="${t('graph.backToFunctionList')}"
           aria-label="${t('graph.backToFunctionList')}"
-          style="--graph-expression-color: ${expression.color};"
+          style="${getExpressionColorStyle(expression.color)}"
         >
           <span class="graph-analysis-back-icon">${renderToolbarIcon('back')}</span>
           <span class="graph-analysis-back-badge">
@@ -494,7 +500,7 @@ function renderExpressionRow(expression, index) {
 
   return `
     <div class="graph-expression-row ${state.graphing.activeExpressionIndex === index ? 'active' : ''} ${expression.error ? 'invalid' : ''} ${expression.visible === false ? 'hidden-row' : ''} ${stylePanelOpen ? 'style-open' : ''} ${isAddRow ? 'add-row' : 'filled-row'}">
-      <button class="graph-expression-badge" ${badgeControl} style="--graph-expression-color: ${expression.color};">
+      <button class="graph-expression-badge" ${badgeControl} style="${getExpressionColorStyle(expression.color)}">
         <span class="graph-expression-label">
           <span class="graph-expression-symbol">ƒ</span>
           ${isAddRow ? '' : `<span class="graph-expression-index">${index + 1}</span>`}
@@ -511,7 +517,7 @@ function renderExpressionRow(expression, index) {
           aria-label="${t('graph.expressionIndex', { index: index + 1 })}"
         />
         ${isAddRow ? '' : `
-          <div class="graph-expression-actions" aria-hidden="true">
+          <div class="graph-expression-actions">
             <button class="graph-expression-action" type="button" data-graph-expression-analyze="${index}" data-tooltip="${t('graph.analyzeFunction')}" aria-label="${t('graph.analyzeFunction')}">${renderToolbarIcon('graph-analyze-function')}</button>
             <button class="graph-expression-action ${stylePanelOpen ? 'active' : ''}" type="button" data-graph-expression-style="${index}" data-tooltip="${t('graph.changeEquationStyle')}" aria-label="${t('graph.changeEquationStyle')}">${renderToolbarIcon('graph-style-picker')}</button>
             <button class="graph-expression-action" type="button" data-graph-expression-remove="${index}" data-tooltip="${t('graph.removeEquation')}" aria-label="${t('graph.removeEquation')}">${renderToolbarIcon('graph-remove-equation')}</button>

@@ -51,6 +51,11 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="12.2.1" date="2026-11-26">
+      <description>
+        <p>Fixes calculation and history recall errors, improves offline web use and desktop settings persistence, and refines layouts and theme contrast.</p>
+      </description>
+    </release>
     <release version="12.2.0" date="2026-05-31">
       <description>
         <p>Improves desktop reliability with persistent settings, faster launches, cleaner platform packaging, and Windows Task Manager branding.</p>

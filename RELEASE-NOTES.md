@@ -13,9 +13,20 @@ This document tracks release summaries for Roselt Calculator.
 Roselt Calculator is built to cover quick everyday calculations, deeper technical workflows, and installable cross-device use in one app.
 
 ## Release Notes
+
+* [Version 12.2.1 (26/11/2026)](#version-1221-26112026)
 * [Version 12.0.0 (10/04/2026)](#version-1200-10042026)
 * [Version 1.0.0 (05/04/2026)](#version-100-05042026)
 
+
+## Version 12.2.1 (26/11/2026)
+
+- Fixed calculation chaining, repeat equals, and memory recall in Standard and Scientific modes.
+- Fixed signed-value recall across bases and word sizes in Programmer mode and corrected date calculations around daylight saving changes and month boundaries.
+- Corrected unit conversion examples and updated currency defaults for Curaçao and Sint Maarten to the Caribbean guilder.
+- Improved graph analysis and made the web calculator available offline after the first successful load and cache setup.
+- Made desktop settings saves more reliable and fixed the Flatpak launcher.
+- Improved keyboard access, contrast across themes, and layouts on narrow screens.
 
 ## Version 12.0.0 (10/04/2026)
 ![Roselt Calculator - Version 12.0.0](docs/Images/CalculatorScreenshot.png)

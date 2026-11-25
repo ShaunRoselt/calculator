@@ -67,6 +67,10 @@ copyToFinal(
   path.join(outputDir, 'Roselt Calculator-darwin-arm64', 'Roselt Calculator.app'),
   'Roselt Calculator.app'
 );
+copyToFinal(
+  path.join(outputDir, 'Roselt Calculator-darwin-x64', 'Roselt Calculator.app'),
+  'Roselt Calculator (Intel).app'
+);
 
 console.log('\nDone.');
 console.log(`  macOS -> ${path.relative(root, outputDir)}`);

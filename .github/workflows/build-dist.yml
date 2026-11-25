@@ -55,7 +55,7 @@ jobs:
       - name: Install system packaging tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y flatpak flatpak-builder libfuse2 squashfs-tools
+          sudo apt-get install -y flatpak flatpak-builder libfuse2 squashfs-tools xauth xvfb
           sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
           sudo flatpak install -y flathub org.freedesktop.Platform//26.08 org.freedesktop.Sdk//26.08
 
@@ -70,6 +70,13 @@ jobs:
 
       - name: Build Linux Flatpak
         run: sh scripts/package-flatpak.sh
+
+      - name: Smoke-test the packaged Linux apps
+        run: |
+          xvfb-run -a node scripts/smoke-desktop.cjs "dist/Roselt Calculator-linux-x64/calculator" --no-sandbox
+          APPIMAGE_EXTRACT_AND_RUN=1 xvfb-run -a node scripts/smoke-desktop.cjs dist/Linux\ AppImage/*.AppImage --no-sandbox
+          flatpak install --user --noninteractive --bundle "dist/Linux Flatpak/Roselt-Calculator.flatpak"
+          xvfb-run -a node scripts/smoke-desktop.cjs "$(command -v flatpak)" run --user --share=network io.github.ShaunRoselt.Calculator
 
       - name: Create Linux dist archive
         run: tar -czf dist-linux.tar.gz -C dist "Roselt Calculator-linux-x64" "Linux AppImage" "Linux Flatpak" "final dist"
@@ -104,6 +111,18 @@ jobs:
       - name: Build Windows portable and unpacked apps
         run: npm run package:win
 
+      - name: Smoke-test the packaged Windows apps
+        shell: pwsh
+        run: |
+          $unpacked = (Resolve-Path 'dist/Windows Unpacked/Roselt Calculator.exe').Path
+          $portable = (Get-ChildItem 'dist/Windows Portable' -Filter '*.exe').FullName
+          $testDir = New-Item -ItemType Directory -Path (Join-Path $env:RUNNER_TEMP 'roselt-portable-smoke')
+          $testExe = Join-Path $testDir.FullName (Split-Path $portable -Leaf)
+          Copy-Item $portable $testExe
+          node scripts/smoke-desktop.cjs "$unpacked"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node scripts/smoke-desktop.cjs "$testExe"
+
       - name: Create Windows dist archive
         shell: pwsh
         run: Compress-Archive -Path 'dist/Windows Portable', 'dist/Windows Unpacked', 'dist/final dist' -DestinationPath dist-windows.zip
@@ -137,6 +156,16 @@ jobs:
 
       - name: Build macOS app bundles
         run: npm run package:mac
+
+      - name: Smoke-test the packaged macOS apps
+        run: |
+          if [[ "$(uname -m)" == arm64 ]]; then
+            if ! arch -x86_64 /usr/bin/true; then
+              sudo softwareupdate --install-rosetta --agree-to-license
+            fi
+            node scripts/smoke-desktop.cjs "dist/macOS/Roselt Calculator-darwin-arm64/Roselt Calculator.app/Contents/MacOS/Roselt Calculator"
+          fi
+          node scripts/smoke-desktop.cjs "dist/macOS/Roselt Calculator-darwin-x64/Roselt Calculator.app/Contents/MacOS/Roselt Calculator"
 
       - name: Create macOS dist archive
         run: tar -czf dist-macos.tar.gz -C dist macOS "final dist"

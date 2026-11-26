@@ -12,7 +12,8 @@ import {
   getCurrencyOptions,
   getUnitLabel,
   isConverterMode,
-  isMode
+  isMode,
+  normalizeZoomPercent
 } from './config.js';
 import { appRoot } from './dom.js';
 import {
@@ -539,6 +540,9 @@ document.addEventListener('appInfoUpdated', () => {
 });
 
 hydrateState();
+if (!urlPreferences.readOnly) {
+  window.appWindow?.setZoomPercent?.(state.settings.zoomPercent);
+}
 applyUrlPreferences();
 applyRuntimeAttributes();
 applyUrlMode({ replaceHistory: true, renderView: false });
@@ -1917,6 +1921,13 @@ function handleChange(event) {
 
   if (target.name === 'settings-language') {
     void applyLanguageChange(target.value);
+    return;
+  }
+
+  if (target.name === 'settings-zoom') {
+    state.settings.zoomPercent = normalizeZoomPercent(target.value);
+    window.appWindow?.setZoomPercent?.(state.settings.zoomPercent);
+    persistSettingsFile(state.settings);
     return;
   }
 

@@ -22,8 +22,16 @@ export const STORAGE_KEYS = {
   theme: 'calculator-theme',
   language: 'calculator-language',
   repeatEquals: 'calculator-repeat-equals',
+  zoomPercent: 'calculator-zoom-percent',
   shortcuts: 'calculator-shortcuts'
 };
+
+export const ZOOM_PERCENT_OPTIONS = [50, 75, 90, 100, 110, 125, 150, 175, 200];
+
+export function normalizeZoomPercent(value) {
+  const percent = Number(value);
+  return ZOOM_PERCENT_OPTIONS.includes(percent) ? percent : 100;
+}
 
 export const APP_SHORTCUT_DEFINITIONS = [
   {

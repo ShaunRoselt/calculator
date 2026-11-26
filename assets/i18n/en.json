@@ -340,6 +340,10 @@
       "green": "Green",
       "system": "System"
     },
+    "zoom": {
+      "title": "Zoom",
+      "description": "Change the size of text and controls throughout the app."
+    },
     "preferences": {
       "group": "Preferences",
       "description": "Choose the theme, language, and key app behavior"

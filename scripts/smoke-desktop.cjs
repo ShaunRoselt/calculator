@@ -92,7 +92,35 @@ async function smokeTest() {
       const result = await window.settingsFile.save({ theme: 'dark' });
       return result.saved && (await window.settingsFile.load()).settings.theme === 'dark';
     })()`), true, 'The packaged app should save and read desktop settings.');
-    console.log('Packaged calculator launched, calculated 2 + 3 = 5, and saved desktop settings.');
+    const defaultScale = await evaluate('devicePixelRatio');
+    await evaluate("document.querySelector('[data-set-mode=settings]').click()");
+    for (let attempt = 0; attempt < 30; attempt += 1) {
+      if (await evaluate("Boolean(document.getElementById('settings-zoom'))")) break;
+      await delay(100);
+    }
+    assert.equal(await evaluate(`(() => {
+      const zoom = document.getElementById('settings-zoom');
+      if (!zoom || zoom.value !== '100') return false;
+      zoom.closest('details').open = true;
+      zoom.focus();
+      zoom.value = '125';
+      zoom.dispatchEvent(new Event('change', { bubbles: true }));
+      return true;
+    })()`), true, 'Preferences should open with a default zoom of 100%.');
+
+    for (let attempt = 0; attempt < 30; attempt += 1) {
+      if (Math.abs(await evaluate('devicePixelRatio') / defaultScale - 1.25) < 0.01) break;
+      await delay(100);
+    }
+    assert.ok(Math.abs(await evaluate('devicePixelRatio') / defaultScale - 1.25) < 0.01,
+      'Choosing 125% should immediately increase the page zoom.');
+    assert.equal(await evaluate(`(async () => {
+      const { flushSettingsFile } = await import('./scripts/settingsFile.js');
+      await flushSettingsFile();
+      return (await window.settingsFile.load()).settings.zoomPercent;
+    })()`), 125, 'The app should persist the selected zoom.');
+
+    console.log('Packaged calculator calculated 2 + 3 = 5 and applied and saved 125% zoom.');
     await command('Browser.close').catch(() => {});
   } finally {
     socket.close();

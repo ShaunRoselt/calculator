@@ -4,7 +4,8 @@ import {
   OFFLINE_CURRENCY_UPDATED_AT,
   STORAGE_KEYS,
   createDefaultShortcutBindings,
-  normalizeShortcutBindings
+  normalizeShortcutBindings,
+  normalizeZoomPercent
 } from './config.js';
 import { isSupportedLanguage } from './i18n.js';
 import { toDateInputValue } from './utils.js';
@@ -151,6 +152,7 @@ function createInitialState() {
       theme: 'system',
       language: 'en',
       repeatEquals: true,
+      zoomPercent: 100,
       isFullscreen: false,
       shortcuts: createDefaultShortcutBindings(),
       activeShortcutId: null,
@@ -281,6 +283,7 @@ export function hydrateState() {
       state.settings.repeatEquals = repeatEquals;
     }
 
+    state.settings.zoomPercent = normalizeZoomPercent(localStorage.getItem(STORAGE_KEYS.zoomPercent));
     state.settings.shortcuts = normalizeShortcutBindings(shortcuts);
   } catch {
     // ignore broken local storage

@@ -1,4 +1,4 @@
-import { STORAGE_KEYS } from './config.js';
+import { STORAGE_KEYS, normalizeZoomPercent } from './config.js';
 
 function getSettingsFileBridge() {
   return typeof window.settingsFile === 'object' && window.settingsFile !== null
@@ -17,7 +17,8 @@ function normalizePreference(value) {
 function getLocalSettings() {
   const settings = {
     theme: normalizePreference(localStorage.getItem(STORAGE_KEYS.theme)) || 'system',
-    language: normalizePreference(localStorage.getItem(STORAGE_KEYS.language)) || 'en'
+    language: normalizePreference(localStorage.getItem(STORAGE_KEYS.language)) || 'en',
+    zoomPercent: normalizeZoomPercent(localStorage.getItem(STORAGE_KEYS.zoomPercent))
   };
 
   try {
@@ -45,6 +46,7 @@ function hasSettings(settings) {
   return Boolean(
     normalizePreference(settings?.theme)
     || normalizePreference(settings?.language)
+    || typeof settings?.zoomPercent === 'number'
     || typeof settings?.repeatEquals === 'boolean'
     || isPlainObject(settings?.shortcuts)
     || isPlainObject(settings?.windowBounds)
@@ -75,6 +77,10 @@ export function pickPersistableAppSettings(settings) {
     persistable.repeatEquals = settings.repeatEquals;
   }
 
+  if (typeof settings?.zoomPercent === 'number') {
+    persistable.zoomPercent = normalizeZoomPercent(settings.zoomPercent);
+  }
+
   if (isPlainObject(settings?.shortcuts)) {
     persistable.shortcuts = settings.shortcuts;
   }
@@ -100,6 +106,10 @@ function writeSettingsToLocalStorage(settings) {
 
   if (typeof settings?.repeatEquals === 'boolean') {
     localStorage.setItem(STORAGE_KEYS.repeatEquals, JSON.stringify(settings.repeatEquals));
+  }
+
+  if (typeof settings?.zoomPercent === 'number') {
+    localStorage.setItem(STORAGE_KEYS.zoomPercent, String(normalizeZoomPercent(settings.zoomPercent)));
   }
 
   if (isPlainObject(settings?.shortcuts)) {

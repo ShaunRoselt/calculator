@@ -7,11 +7,12 @@ const SETTINGS_SAVE_FILENAME = 'Settings.json';
 const SETTINGS_SAVE_SCHEMA_VERSION = 1;
 const appIconPath = process.platform === 'win32'
   ? path.join(__dirname, '..', 'assets', 'icons', 'app-icon-dark.ico')
-  : path.join(__dirname, '..', 'assets', 'icons', 'app-icon-4096.png');
+  : path.join(__dirname, '..', 'assets', 'pwa', 'icon-192.png');
 
 const isFlatpak = Boolean(process.env.FLATPAK_ID);
 const minimumWindowWidth = 320;
 const minimumWindowHeight = 520;
+const windowDisplayScales = new WeakMap();
 let settingsSaveCache = null;
 let settingsFileQueue = Promise.resolve();
 let windowBoundsSaveTimer = null;
@@ -111,6 +112,10 @@ function normalizeSettingsSave(value) {
 
   if (typeof rawSettings.repeatEquals === 'boolean') {
     settings.repeatEquals = rawSettings.repeatEquals;
+  }
+
+  if (Number.isInteger(rawSettings.zoomPercent) && rawSettings.zoomPercent >= 50 && rawSettings.zoomPercent <= 200) {
+    settings.zoomPercent = rawSettings.zoomPercent;
   }
 
   if (isPlainObject(rawSettings.shortcuts)) {
@@ -274,7 +279,11 @@ function saveWindowBounds(window, { immediate = false } = {}) {
 
   const saveBounds = () => {
     if (!window.isDestroyed() && !window.isFullScreen() && !window.isMinimized()) {
-      const windowBounds = window.getBounds();
+      const windowBounds = window.getNormalBounds();
+      const displayScale = windowDisplayScales.get(window) ?? 1;
+      // Store unscaled sizes so changing monitors or display servers cannot compound scaling.
+      windowBounds.width = Math.round(windowBounds.width * displayScale);
+      windowBounds.height = Math.round(windowBounds.height * displayScale);
       void queueSettingsFileOperation(() => writeSettingsSaveFile({ windowBounds }));
     }
   };
@@ -344,6 +353,36 @@ function createMainWindow() {
   });
   mainWindow.webContents.once('did-finish-load', sendFullscreenState);
 }
+
+ipcMain.on('app:display-scale', (event, displayScale) => {
+  if (event.senderFrame !== event.sender.mainFrame || !Number.isFinite(displayScale) || displayScale < 0.25 || displayScale > 1) {
+    return;
+  }
+
+  const window = BrowserWindow.fromWebContents(event.sender);
+  if (!window || window.isDestroyed()) {
+    return;
+  }
+
+  const previousScale = windowDisplayScales.get(window) ?? 1;
+  if (previousScale === displayScale) {
+    return;
+  }
+
+  const bounds = window.getNormalBounds();
+  const { workArea } = screen.getDisplayMatching(bounds);
+  windowDisplayScales.set(window, displayScale);
+  window.setMinimumSize(
+    Math.min(Math.ceil(minimumWindowWidth / displayScale), workArea.width),
+    Math.min(Math.ceil(minimumWindowHeight / displayScale), workArea.height)
+  );
+  if (!window.isMaximized() && !window.isFullScreen() && !window.isMinimized()) {
+    window.setSize(
+      Math.min(Math.round(bounds.width * previousScale / displayScale), workArea.width),
+      Math.min(Math.round(bounds.height * previousScale / displayScale), workArea.height)
+    );
+  }
+});
 
 ipcMain.handle('app:get-fullscreen', (event) => {
   const window = BrowserWindow.fromWebContents(event.sender);

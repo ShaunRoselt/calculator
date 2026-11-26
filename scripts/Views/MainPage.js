@@ -16,6 +16,7 @@ import { renderUnitConverterView } from './UnitConverter.js';
 export function render() {
   const settingsExpanderStates = captureSettingsExpanderStates();
   const settingsScrollTop = captureSettingsScrollTop();
+  const zoomControlFocused = document.activeElement?.id === 'settings-zoom';
   const layoutMode = getLayoutMode();
   const sidePanelVisible = isSidePanelVisible();
   appRoot.innerHTML = `
@@ -39,7 +40,11 @@ export function render() {
     </div>
   `;
   restoreSettingsExpanderStates(settingsExpanderStates);
-  restoreSettingsScrollTop(settingsScrollTop);
+  if (zoomControlFocused) {
+    appRoot.querySelector('#settings-zoom')?.focus();
+  } else {
+    restoreSettingsScrollTop(settingsScrollTop);
+  }
   prepareTooltipTargets(appRoot);
   syncCalculatorMascotPlacement();
   syncConverterMenuScroll();

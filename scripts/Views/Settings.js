@@ -1,4 +1,4 @@
-import { APP_INFO, APP_SHORTCUT_DEFINITIONS, APP_SHORTCUT_DEFAULTS, getAppName } from '../config.js';
+import { APP_INFO, APP_SHORTCUT_DEFINITIONS, APP_SHORTCUT_DEFAULTS, ZOOM_PERCENT_OPTIONS, getAppName } from '../config.js';
 import { getCurrentLanguage, getCurrentLocale, getSupportedLanguages, t } from '../i18n.js';
 import { getResolvedAppThemeId, getThemeLogoPath, getThemeOptions } from '../themes.js';
 import { buildAppUrl } from '../urlParams.js';
@@ -196,14 +196,19 @@ function renderSettingsMenu(menu, label, selectedLabel, options) {
   `;
 }
 
-function renderSettingsPreferenceItem(title, description, controlMarkup, icon = '•') {
+function renderSettingsPreferenceItem(title, description, controlMarkup, icon = '•', controlId) {
+  const safeTitle = escapeHtml(title);
+  const titleMarkup = controlId
+    ? `<label class="settings-preference-title" for="${controlId}">${safeTitle}</label>`
+    : `<span class="settings-preference-title">${safeTitle}</span>`;
+  const descriptionId = controlId ? ` id="${controlId}-description"` : '';
   return `
     <div class="settings-preference-item">
       <span class="settings-preference-icon" aria-hidden="true">${escapeHtml(icon)}</span>
       <div class="settings-preference-content">
         <span class="settings-preference-copy">
-          <span class="settings-preference-title">${escapeHtml(title)}</span>
-          <span class="settings-preference-description">${escapeHtml(description)}</span>
+          ${titleMarkup}
+          <span class="settings-preference-description"${descriptionId}>${escapeHtml(description)}</span>
         </span>
         <div class="settings-preference-control">
           ${controlMarkup}
@@ -211,6 +216,21 @@ function renderSettingsPreferenceItem(title, description, controlMarkup, icon = 
       </div>
     </div>
   `;
+}
+
+function renderZoomPreference() {
+  const formatter = new Intl.NumberFormat(getCurrentLocale(), { style: 'percent' });
+  const options = ZOOM_PERCENT_OPTIONS.map((percent) => {
+    const selected = percent === state.settings.zoomPercent ? ' selected' : '';
+    return `<option value="${percent}"${selected}>${escapeHtml(formatter.format(percent / 100))}</option>`;
+  }).join('');
+  return renderSettingsPreferenceItem(
+    t('settings.zoom.title'),
+    t('settings.zoom.description'),
+    `<select class="settings-select-button" name="settings-zoom" id="settings-zoom" aria-describedby="settings-zoom-description">${options}</select>`,
+    '%',
+    'settings-zoom'
+  );
 }
 
 function renderSettingsToggleControl(setting, title, enabled, labels = {}) {
@@ -315,6 +335,7 @@ export function renderSettingsView() {
     `<div class="settings-select-label">${renderSettingsMenu('language', t('settings.language.title'), currentLanguageOption.label, languageOptions)}</div>`,
     'A'
   )}
+            ${typeof window.appWindow?.setZoomPercent === 'function' ? renderZoomPreference() : ''}
             ${renderSettingsPreferenceItem(
     t('settings.calculation.repeatEqualsTitle'),
     t('settings.calculation.repeatEqualsDescription'),

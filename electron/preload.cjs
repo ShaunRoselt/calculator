@@ -41,6 +41,7 @@ contextBridge.exposeInMainWorld('appWindow', {
 		}
 	},
 	getFullscreen: () => ipcRenderer.invoke('app:get-fullscreen'),
+	showGamepadKeyboard: (mode, bounds) => ipcRenderer.invoke('app:show-gamepad-keyboard', mode, bounds),
 	setFullscreen: (enabled) => ipcRenderer.invoke('app:set-fullscreen', enabled),
 	onFullscreenChanged: (listener) => {
 		if (typeof listener !== 'function') {

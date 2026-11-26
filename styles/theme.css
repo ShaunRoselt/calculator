@@ -142,6 +142,15 @@ button:focus-visible {
   outline-offset: -2px;
 }
 
+:is([data-gamepad-focus]:focus, [data-gamepad-focus]:focus-visible) {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: -3px;
+}
+
+[data-gamepad-focus][data-gamepad-selecting]:focus {
+  outline-style: dashed;
+}
+
 select,
 input[type="date"],
 input[type="number"],

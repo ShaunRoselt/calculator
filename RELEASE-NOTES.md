@@ -14,10 +14,19 @@ Roselt Calculator is built to cover quick everyday calculations, deeper technica
 
 ## Release Notes
 
+* [Version 12.2.2 (26/11/2026)](#version-1222-26112026)
 * [Version 12.2.1 (26/11/2026)](#version-1221-26112026)
 * [Version 12.0.0 (10/04/2026)](#version-1200-10042026)
 * [Version 1.0.0 (05/04/2026)](#version-100-05042026)
 
+
+## Version 12.2.2 (26/11/2026)
+
+- Navigate calculator modes, menus, and settings with a gamepad. Use the D-pad or left stick to move, A to select, and B to go back.
+- Keep focus on the same calculator key when the display updates, and return to the previous control when a menu closes.
+- Pan graphs with the right stick.
+- Open Steam’s on-screen keyboard by selecting a text field with a controller where Steam supports the keyboard.
+- Fit the desktop window to smaller displays on first launch.
 
 ## Version 12.2.1 (26/11/2026)
 

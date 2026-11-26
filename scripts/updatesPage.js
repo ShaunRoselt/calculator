@@ -1,27 +1,26 @@
 import { initPublicPage } from './publicPage.js';
 
-const latestRelease = document.querySelector('[data-release-1221]');
-const releaseCopy = Array.from(latestRelease?.querySelectorAll('[data-release-key]') ?? [], (element) => ({
-  element,
-  key: `updatesPage.release1221.${element.dataset.releaseKey}`,
-  fallback: element.textContent.trim()
+const releases = Array.from(document.querySelectorAll('[data-release]'), (article) => ({
+  article,
+  date: article.querySelector('time'),
+  copy: Array.from(article.querySelectorAll('[data-release-key]'), (element) => ({
+    element,
+    key: `updatesPage.release${article.dataset.release}.${element.dataset.releaseKey}`,
+    fallback: element.textContent.trim()
+  }))
 }));
 
 function applyUpdatesPageState(context) {
-  latestRelease?.removeAttribute('lang');
-  for (const { element, key, fallback } of releaseCopy) {
-    const translation = context.translateWithFallback(key, fallback);
-    element.textContent = translation;
-    if (translation === fallback) element.lang = 'en';
-    else element.removeAttribute('lang');
-  }
-  const releaseDate = latestRelease?.querySelector('time');
-  if (releaseDate) {
-    const date = new Date(releaseDate.dateTime);
-    releaseDate.textContent = new Intl.DateTimeFormat(context.currentLocale, {
-      dateStyle: 'long',
-      timeZone: 'UTC'
-    }).format(date);
+  const dateFormat = new Intl.DateTimeFormat(context.currentLocale, { dateStyle: 'long', timeZone: 'UTC' });
+  for (const { article, date, copy } of releases) {
+    article.removeAttribute('lang');
+    for (const { element, key, fallback } of copy) {
+      const translation = context.translateWithFallback(key, fallback);
+      element.textContent = translation;
+      if (translation === fallback) element.lang = 'en';
+      else element.removeAttribute('lang');
+    }
+    if (date) date.textContent = dateFormat.format(new Date(date.dateTime));
   }
   const eyebrow = document.querySelector('[data-updates-eyebrow]');
   const title = document.querySelector('[data-updates-title]');
@@ -49,7 +48,7 @@ void initPublicPage({
       updatesTitle: translate('updatesPage.hero.title', 'Every release, from the first build to today.'),
       updatesIntro: translate(
         'updatesPage.hero.intro',
-        'Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.1.'
+        'Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.2.'
       ),
       versionHistoryTitle: translate('updatesPage.hero.versionHistory', 'Version history')
     };

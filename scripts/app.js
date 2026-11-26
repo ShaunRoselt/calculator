@@ -16,6 +16,7 @@ import {
   normalizeZoomPercent
 } from './config.js';
 import { appRoot } from './dom.js';
+import { installGamepadControls } from './gamepad.js';
 import {
   createProgrammerState,
   createScientificState,
@@ -103,6 +104,7 @@ let lastViewportWidth = window.innerWidth;
 let lastViewportHeight = window.innerHeight;
 let graphPanSession = null;
 let styledMode = null;
+let gamepadControls;
 const calculatorUndoStack = [];
 const calculatorRedoStack = [];
 const MAX_CALCULATOR_HISTORY = 100;
@@ -553,6 +555,13 @@ computeDateResults();
 syncConverterValues('from');
 await renderModeWhenStylesReady(state.mode);
 installTooltipHandling();
+if (!urlPreferences.readOnly) {
+  gamepadControls = installGamepadControls(appRoot, {
+    goBack: handleGamepadBack,
+    panGraph: handleGamepadGraphPan,
+    isCapturingShortcut: () => Boolean(state.settings.activeShortcutId)
+  });
+}
 
 document.addEventListener('click', handleClick);
 document.addEventListener('mousedown', handleMouseDown);
@@ -584,8 +593,35 @@ systemThemeMedia?.addEventListener?.('change', () => {
 
 function render() {
   if (state.mode === styledMode) {
+    const restoreGamepadFocus = gamepadControls?.preserveFocus();
     renderPage();
+    restoreGamepadFocus?.();
   }
+}
+
+function handleGamepadBack() {
+  const { converter, date, graphing, scientific, settings } = state;
+  if (state.mode === 'scientific' && scientific.openMenu) {
+    scientific.openMenu = null;
+    render();
+  } else if (state.navOpen || state.historyOpen
+    || (state.mode === 'graphing' && (graphing.analysisExpressionIndex != null || graphing.stylePanelExpressionIndex != null
+      || graphing.settingsOpen || graphing.openMenu))
+    || (state.mode === 'date' && (date.openModeMenu || date.openPicker))
+    || (isConverterMode(state.mode) && converter.openConverterMenu)
+    || (state.mode === 'settings' && (settings.openMenu || settings.activeShortcutId))) {
+    document.activeElement.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+  } else if (state.mode === 'settings') {
+    setMode(state.lastNonSettingsMode);
+  }
+}
+
+function handleGamepadGraphPan(x, y, elapsed) {
+  if (state.mode !== 'graphing' || !getGraphCanvas()?.checkVisibility()) return;
+  const { xMin, xMax, yMin, yMax } = state.graphing.viewport;
+  const speed = 0.0008 * elapsed;
+  panGraph(x * (xMax - xMin) * speed, -y * (yMax - yMin) * speed);
+  drawGraph();
 }
 
 async function renderModeWhenStylesReady(mode) {

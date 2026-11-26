@@ -51,6 +51,11 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="12.2.2" date="2026-11-26">
+      <description>
+        <p>Adds gamepad navigation, keeps focus when calculations update, supports right-stick graph panning, and fits the window to smaller displays on first launch.</p>
+      </description>
+    </release>
     <release version="12.2.1" date="2026-11-26">
       <description>
         <p>Fixes calculation and history recall errors, improves offline web use and desktop settings persistence, and refines layouts and theme contrast.</p>

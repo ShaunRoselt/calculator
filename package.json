@@ -1,6 +1,6 @@
 {
   "name": "calculator",
-  "version": "12.2.1",
+  "version": "12.2.2",
   "description": "Roselt Calculator is an installable calculator app with standard, scientific, programmer, graphing, date, and conversion modes.",
   "desktopName": "io.github.ShaunRoselt.Calculator.desktop",
   "main": "electron/main.cjs",
@@ -62,6 +62,9 @@
       "!CNAME"
     ],
     "asar": true,
+    "asarUnpack": [
+      "node_modules/@armaldio/steamworks.js/dist/**/*"
+    ],
     "compression": "store",
     "linux": {
       "artifactName": "Roselt-Calculator-${version}.${ext}",
@@ -95,5 +98,8 @@
     "@electron/universal@2.0.3": {
       "minimatch@^9.0.3": "11.0.9"
     }
+  },
+  "dependencies": {
+    "@armaldio/steamworks.js": "0.7.0"
   }
 }

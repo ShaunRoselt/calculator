@@ -294,6 +294,11 @@
   pointer-events: none;
 }
 
+.date-native-radio:has(input[data-gamepad-focus]:focus) {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: -3px;
+}
+
 .date-native-radio-indicator {
   width: 18px;
   height: 18px;

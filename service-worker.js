@@ -1,6 +1,6 @@
 const scope = new URL(self.registration.scope);
 const cachePrefix = `roselt-shell:${scope.href}:`;
-const cacheName = `${cachePrefix}2`;
+const cacheName = `${cachePrefix}3`;
 const appUrl = new URL('app.html', scope).href;
 const shellAssets = [
   'app.html',
@@ -11,6 +11,7 @@ const shellAssets = [
   'scripts/currencyData.js',
   'scripts/currencyLocale.js',
   'scripts/dom.js',
+  'scripts/gamepad.js',
   'scripts/graphAnalysisCas.js',
   'scripts/i18n.js',
   'scripts/logic.js',

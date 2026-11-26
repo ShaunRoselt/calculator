@@ -88,6 +88,62 @@ async function smokeTest() {
       return document.querySelector('.display-value').textContent.trim();
     })()`), '5');
 
+    if (process.env.ROSELT_SMOKE_GAMEPAD === '1') {
+      await command('Emulation.setFocusEmulationEnabled', { enabled: true });
+      await evaluate(`(() => {
+        const buttons = Array.from({ length: 17 }, () => ({ pressed: false }));
+        const gamepad = { buttons, axes: [0, 0, 0, 0], index: 0, mapping: 'standard', connected: true };
+        Object.defineProperty(navigator, 'getGamepads', { value: () => [gamepad] });
+        window.pressTestGamepad = async (index) => {
+          buttons[index].pressed = true;
+          await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+          buttons[index].pressed = false;
+          await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+        };
+        window.panTestGamepad = async () => {
+          gamepad.axes[2] = 1;
+          await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+          gamepad.axes[2] = 0;
+        };
+        window.dispatchEvent(new Event('gamepadconnected'));
+        document.querySelector('[data-action="clear-all"]').click();
+        document.querySelector('[data-action="digit"][data-value="2"]').focus();
+      })()`);
+      const press = (index) => evaluate(`pressTestGamepad(${index})`);
+      const focused = () => evaluate("document.activeElement?.textContent.trim()");
+      await press(0);
+      assert.equal(await focused(), '2', 'Keep focus on the same calculator key after activating it.');
+      await press(15);
+      assert.equal(await focused(), '3');
+      await press(15);
+      assert.equal(await focused(), '+');
+      await press(0);
+      await press(14);
+      await press(0);
+      await press(13);
+      await press(15);
+      assert.equal(await focused(), '=');
+      await press(0);
+      assert.equal(await evaluate("document.querySelector('.display-value')?.textContent.trim()"), '5');
+      await press(9);
+      assert.equal(await evaluate("document.activeElement?.dataset.setMode"), 'standard');
+      await press(13);
+      assert.equal(await evaluate("document.activeElement?.dataset.setMode"), 'scientific');
+      await press(1);
+      assert.equal(await focused(), '=', 'Closing the menu should restore the last calculator control.');
+
+      await evaluate("document.querySelector('[data-set-mode=graphing]').click()");
+      for (let attempt = 0; attempt < 30; attempt += 1) {
+        if (await evaluate("Boolean(document.querySelector('#graph-canvas'))")) break;
+        await delay(100);
+      }
+      const graphOrigin = () => evaluate("import('./scripts/state.js').then(({ state }) => state.graphing.viewport.xMin)");
+      const initialOrigin = await graphOrigin();
+      await evaluate('panTestGamepad()');
+      assert.ok(await graphOrigin() > initialOrigin, 'The right stick should pan the graph.');
+      console.log('Gamepad navigation calculated 2 + 3 = 5, restored focus, and panned a graph.');
+    }
+
     assert.equal(await evaluate(`(async () => {
       const result = await window.settingsFile.save({ theme: 'dark' });
       return result.saved && (await window.settingsFile.load()).settings.theme === 'dark';
@@ -103,10 +159,30 @@ async function smokeTest() {
       if (!zoom || zoom.value !== '100') return false;
       zoom.closest('details').open = true;
       zoom.focus();
-      zoom.value = '125';
-      zoom.dispatchEvent(new Event('change', { bubbles: true }));
       return true;
     })()`), true, 'Preferences should open with a default zoom of 100%.');
+    if (process.env.ROSELT_SMOKE_GAMEPAD === '1') {
+      const press = (index) => evaluate(`pressTestGamepad(${index})`);
+      await press(0);
+      await press(15);
+      assert.notEqual(await evaluate("document.getElementById('settings-zoom').value"), '100');
+      await press(1);
+      assert.equal(await evaluate("document.getElementById('settings-zoom').value"), '100');
+      const steps = await evaluate(`(() => {
+        const zoom = document.getElementById('settings-zoom');
+        return [...zoom.options].findIndex(({ value }) => value === '125') - zoom.selectedIndex;
+      })()`);
+      assert.ok(steps > 0);
+      await press(0);
+      for (let step = 0; step < steps; step++) await press(15);
+      await press(0);
+    } else {
+      await evaluate(`(() => {
+        const zoom = document.getElementById('settings-zoom');
+        zoom.value = '125';
+        zoom.dispatchEvent(new Event('change', { bubbles: true }));
+      })()`);
+    }
 
     for (let attempt = 0; attempt < 30; attempt += 1) {
       if (Math.abs(await evaluate('devicePixelRatio') / defaultScale - 1.25) < 0.01) break;

@@ -2,6 +2,7 @@ const path = require('node:path');
 const fs = require('node:fs/promises');
 const { app, BrowserWindow, ipcMain, screen, shell } = require('electron');
 
+const STEAM_APP_ID = 4597760;
 const SETTINGS_SAVE_DIRECTORY = 'Saves';
 const SETTINGS_SAVE_FILENAME = 'Settings.json';
 const SETTINGS_SAVE_SCHEMA_VERSION = 1;
@@ -17,6 +18,7 @@ let settingsSaveCache = null;
 let settingsFileQueue = Promise.resolve();
 let windowBoundsSaveTimer = null;
 let isFlushingSettingsOnQuit = false;
+let steamUtils;
 
 if (process.platform === 'linux') {
   app.setDesktopName('io.github.ShaunRoselt.Calculator.desktop');
@@ -222,8 +224,9 @@ function queueSettingsFileOperation(operation) {
 }
 
 function getDefaultWindowBounds() {
-  const width = isFlatpak ? 320 : 420;
-  const height = isFlatpak ? 620 : 900;
+  const { width: screenWidth, height: screenHeight } = screen.getPrimaryDisplay().workArea;
+  const width = Math.max(minimumWindowWidth, Math.min(screenWidth, isFlatpak ? 320 : 420));
+  const height = Math.max(minimumWindowHeight, Math.min(screenHeight, isFlatpak ? 620 : 900));
   return centerWindowBounds({ width, height });
 }
 
@@ -384,6 +387,25 @@ ipcMain.on('app:display-scale', (event, displayScale) => {
   }
 });
 
+ipcMain.handle('app:show-gamepad-keyboard', async (event, mode, bounds) => {
+  const window = BrowserWindow.fromWebContents(event.sender);
+  if (!steamUtils || event.senderFrame !== event.sender.mainFrame || !window?.isFocused()
+    || ![0, 1, 3].includes(mode) || !Array.isArray(bounds) || bounds.length !== 4
+    || !bounds.every(Number.isFinite) || bounds[2] <= 0 || bounds[3] <= 0) {
+    return false;
+  }
+
+  const zoom = event.sender.getZoomFactor();
+  const { scaleFactor } = screen.getDisplayMatching(window.getBounds());
+  const pixelBounds = bounds.map((value) => Math.round(value * zoom * scaleFactor));
+  try {
+    return await steamUtils.showFloatingGamepadTextInput(mode, ...pixelBounds);
+  } catch (error) {
+    console.warn('Unable to open the Steam keyboard.', error);
+    return false;
+  }
+});
+
 ipcMain.handle('app:get-fullscreen', (event) => {
   const window = BrowserWindow.fromWebContents(event.sender);
   return window?.isFullScreen() ?? false;
@@ -428,6 +450,13 @@ app.on('before-quit', (event) => {
 });
 
 app.whenReady().then(async () => {
+  if ([process.env.SteamAppId, process.env.SteamGameId].includes(String(STEAM_APP_ID))) {
+    try {
+      steamUtils = require('@armaldio/steamworks.js').init(STEAM_APP_ID).utils;
+    } catch (error) {
+      console.warn('Unable to initialize Steamworks.', error);
+    }
+  }
   await readSettingsSaveFile();
   createMainWindow();
 

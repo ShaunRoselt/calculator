@@ -321,7 +321,7 @@ export function getCurrencyLabel(label) {
 
 export const APP_INFO = {
   name: 'Roselt Calculator',
-  version: '12.2.1'
+  version: '12.2.2'
 };
 
 export function getAppName() {

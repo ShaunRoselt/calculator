@@ -40,6 +40,15 @@
       "title": "Každé vydání, od prvního sestavení až po dnešek.",
       "intro": "Roselt Calculator přešel ze samostatného základu webového kalkulátoru na plně zabalenou, multiplatformní a vícejazyčnou aplikaci v řadě zaměřených verzí. Tato stránka sleduje změny v jednotlivých verzích od 1.0.0 do 12.2.1.",
       "versionHistory": "Historie verzí"
+    },
+    "release1221": {
+      "title": "Opravy výpočtů, použití offline a přehlednější rozvržení",
+      "item1": "Opraveno řetězení výpočtů, opakování se rovná a vyvolání paměti ve standardním a vědeckém režimu.",
+      "item2": "Opraveno vyvolání hodnoty se znaménkem napříč bázemi a velikostmi slov v režimu Programátor a opravené výpočty data kolem změn letního času a hranic měsíců.",
+      "item3": "Opravené příklady převodu jednotek a aktualizované výchozí hodnoty měny pro Curaçao a Sint Maarten na karibský gulden.",
+      "item4": "Vylepšená analýza grafů a zpřístupnění webové kalkulačky offline po prvním úspěšném načtení a nastavení mezipaměti.",
+      "item5": "Nastavení počítače zvyšuje spolehlivost a opravuje spouštěč Flatpak.",
+      "item6": "Vylepšený přístup ke klávesnici, kontrast mezi motivy a rozvržení na úzkých obrazovkách."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Vyberte téma, jazyk a klíčové chování aplikace",
       "group": "Předvolby"
+    },
+    "zoom": {
+      "title": "Přiblížení",
+      "description": "Změňte velikost textu a ovládacích prvků v celé aplikaci."
     }
   },
   "modes": {

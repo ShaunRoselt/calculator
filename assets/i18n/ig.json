@@ -40,6 +40,15 @@
       "title": "Ntọhapụ ọ bụla, site na nke mbụ arụrụ ruo taa.",
       "intro": "Roselt Calculator si na ntọala mgbako webụ kwụ ọtọ gaa na ngwugwu zuru oke, ngwa ọtụtụ ngwa, ọtụtụ asụsụ n'usoro ewepụtara lekwasịrị anya. Ibe a na-enyocha ihe gbanwere na ụdị ọ bụla site na 1.0.0 ruo 12.2.1.",
       "versionHistory": "Akụkọ ụdị"
+    },
+    "release1221": {
+      "title": "Ndozi mgbako, ojiji na-anọghị n'ịntanetị, yana nhazi nke dokwuo anya",
+      "item1": "Ịgbakọ ngụkọta agbadoro, megharịa nhata, yana ncheta n'ụdị ọkọlọtọ na sayensị.",
+      "item2": "Ncheta mbinye aka edobere n'ofe ntọala na nha okwu n'ụdị mmemme yana mgbako ụbọchị dezie gburugburu mgbanwe nchekwa ụbọchị na oke ọnwa.",
+      "item3": "Ọmụmaatụ mgbanwe otu emeziri yana ndabara ego emelitere maka Curaçao na Sint Maarten na guilder Caribbean.",
+      "item4": "Nyocha eserese emelitere wee mee ka ihe mgbako webụ dị na-anọghị n'ịntanetị ka ntọlite ​​​​ibu na cache nke mbụ gachara nke ọma.",
+      "item5": "Ntọala desktọpụ emebere na-echekwa ntụkwasị obi karịa yana dozie ihe mbido Flatpak.",
+      "item6": "Nnweta ahụigodo emelitere, ọdịiche n'okirikiri gburugburu yana nhazi n'ihuenyo dị warara."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Họrọ isiokwu, asụsụ, na omume isi ngwa",
       "group": "Mmasị"
+    },
+    "zoom": {
+      "title": "Bugharịa",
+      "description": "Gbanwee nha ederede yana njikwa n'ime ngwa ahụ."
     }
   },
   "modes": {

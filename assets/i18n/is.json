@@ -40,6 +40,15 @@
       "title": "Sérhver útgáfa, frá fyrstu byggingu til dagsins í dag.",
       "intro": "Roselt Reiknivél fór úr sjálfstæðum vefreiknivélargrunni yfir í fullbúið, fjölpalla, fjöltungumálaforrit í röð markvissra útgáfur. Þessi síða fylgist með því sem breyttist í hverri útgáfu frá 1.0.0 til 12.2.1.",
       "versionHistory": "Útgáfuferill"
+    },
+    "release1221": {
+      "title": "Leiðréttingar á útreikningum, notkun án nettengingar og skýrari útlit",
+      "item1": "Föst útreikningakeðja, endurtekið jafngildi og minnisminni í stöðluðum og vísindalegum stillingum.",
+      "item2": "Föst innköllun með undirrituðum gildum yfir grunni og orðastærðir í forritunarham og leiðrétta dagsetningarútreikninga í kringum sumartímabreytingar og mánaðarmörk.",
+      "item3": "Leiðrétt dæmi um umreikning eininga og uppfærð vanskil gjaldmiðla fyrir Curaçao og Sint Maarten í Karabíska gylden.",
+      "item4": "Bætti línuritsgreiningu og gerði vefreiknivélina aðgengilega án nettengingar eftir fyrstu heppnuðu hleðsluna og skyndiminni.",
+      "item5": "Skoðaðar skjáborðsstillingar spara áreiðanlegri og lagfærðu Flatpak ræsiforritið.",
+      "item6": "Bættur lyklaborðsaðgangur, andstæða þemu og útlit á þröngum skjám."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Veldu þema, tungumál og lykilforritshegðun",
       "group": "Óskir"
+    },
+    "zoom": {
+      "title": "Aðdráttur",
+      "description": "Breyttu stærð texta og stýringar í gegnum forritið."
     }
   },
   "modes": {

@@ -40,6 +40,15 @@
       "title": "Ia tukunga, mai i te hanga tuatahi ki tenei ra.",
       "intro": "Roselt Calculator i haere mai i te turanga tataitai tukutuku takitahi ki tetahi taupānga kua kapi katoa, papa-maha, reo-maha i roto i te raupapa o nga tukunga arotahi. Ka whai tenei wharangi i nga mea i whakarereke i ia putanga mai i te 1.0.0 ki te 12.2.1.",
       "versionHistory": "Hitori Putanga"
+    },
+    "release1221": {
+      "title": "Whakatika tatauranga, whakamahi tuimotu, me nga whakatakotoranga maamaa ake",
+      "item1": "Whakaritea te mekameka tatau, te tukurua rite, me te maumahara mahara i roto i nga momo Paerewa me te Putaiao.",
+      "item2": "Kua mau te maumahara kua hainatia puta noa i nga turanga me nga rahi kupu i roto i te aratau Papatono me te whakatika i nga tatauranga ra huri noa i nga huringa awatea me nga rohe marama.",
+      "item3": "Kua whakatikahia nga tauira hurihanga wae me nga hapa moni kua whakahoutia mo Curaçao me Sint Maarten ki te taara Karipiana.",
+      "item4": "I pai ake te tātari kauwhata me te waatea i te tatauranga ipurangi i muri i te tatūnga tuatahi o te uta me te keteroki.",
+      "item5": "Ko nga tautuhinga papamahi ka tiakina kia pono, ka whakatika i te kaiwhakarewa Flatpak.",
+      "item6": "Kua pai ake te uru papapātuhi, te rereke puta noa i nga kaupapa, me nga whakatakotoranga ki nga mata whaiti."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Kōwhirihia te kaupapa, te reo, me te whanonga taupānga matua",
       "group": "Manakohanga"
+    },
+    "zoom": {
+      "title": "Topa",
+      "description": "Hurihia te rahi o te kuputuhi me nga mana whakahaere puta noa i te taupānga."
     }
   },
   "modes": {

@@ -40,6 +40,15 @@
       "title": "Gbogbo itusilẹ, lati ipilẹ akọkọ si oni.",
       "intro": "Ẹrọ iṣiro Roselt lọ lati ipilẹ oniṣiro wẹẹbu ti o daduro si akojọpọ ni kikun, ọpọlọpọ-Syeed, ohun elo ede-ọpọlọpọ ni lẹsẹsẹ awọn idasilẹ idojukọ. Oju-iwe yii n tọpa ohun ti o yipada ni ẹya kọọkan lati 1.0.0 nipasẹ 12.2.1.",
       "versionHistory": "Itan ẹya"
+    },
+    "release1221": {
+      "title": "Awọn atunṣe iṣiro, lilo aisinipo, ati awọn ipilẹ ti o mọ",
+      "item1": "Sisopọ iṣiro ti o wa titi, tun ṣe dọgba, ati iranti iranti ni awọn ipo Standard ati Imọ-jinlẹ.",
+      "item2": "Ipeleti iye owo ti o wa titi ti o wa titi kọja awọn ipilẹ ati awọn iwọn ọrọ ni ipo olupilẹṣẹ ati awọn iṣiro ọjọ ti a ṣe atunṣe ni ayika awọn iyipada fifipamọ imọlẹ oju-ọjọ ati awọn aala oṣu.",
+      "item3": "Awọn apẹẹrẹ iyipada ẹyọkan ti a ṣe atunṣe ati awọn aipe owo imudojuiwọn fun Curaçao ati Sint Maarten si guilder Caribbean.",
+      "item4": "Ilọsiwaju itupalẹ awọnyaya ati jẹ ki ẹrọ iṣiro wẹẹbu wa ni aisinipo lẹhin iṣaṣeyọri iṣaṣeyọri akọkọ ati iṣeto cache.",
+      "item5": "Awọn eto tabili ti a ṣe n fipamọ ni igbẹkẹle diẹ sii ati ṣeto ifilọlẹ Flatpak.",
+      "item6": "Ilọsiwaju iwọle si kiiboodu, iyatọ kọja awọn akori, ati awọn ipalemo lori awọn iboju ti o dín."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Yan akori, ede, ati ihuwasi app bọtini",
       "group": "Awọn ayanfẹ"
+    },
+    "zoom": {
+      "title": "Sun-un",
+      "description": "Yi iwọn ọrọ pada ati awọn idari jakejado app naa."
     }
   },
   "modes": {

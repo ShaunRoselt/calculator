@@ -40,6 +40,15 @@
       "title": "Setiap rilis, dari versi pertama hingga hari ini.",
       "intro": "Kalkulator Roselt beralih dari fondasi kalkulator web mandiri menjadi aplikasi multi-platform dan multi-bahasa yang dikemas penuh dalam serangkaian rilis terfokus. Halaman ini melacak apa yang berubah di setiap versi dari 1.0.0 hingga 12.2.1.",
       "versionHistory": "Riwayat versi"
+    },
+    "release1221": {
+      "title": "Perbaikan perhitungan, penggunaan offline, dan tata letak yang lebih jelas",
+      "item1": "Perangkaian penghitungan, pengulangan yang sama, dan penarikan memori telah diperbaiki dalam mode Standar dan Ilmiah.",
+      "item2": "Memperbaiki penarikan kembali nilai yang ditandatangani di seluruh basis dan ukuran kata dalam mode Programmer dan mengoreksi perhitungan tanggal di sekitar perubahan musim panas dan batas bulan.",
+      "item3": "Contoh konversi unit yang diperbaiki dan default mata uang yang diperbarui untuk Curaçao dan Sint Maarten ke gulden Karibia.",
+      "item4": "Analisis grafik yang ditingkatkan dan menjadikan kalkulator web tersedia offline setelah pemuatan pertama dan penyiapan cache berhasil.",
+      "item5": "Membuat pengaturan desktop lebih andal dan memperbaiki peluncur Flatpak.",
+      "item6": "Peningkatan akses keyboard, kontras antar tema, dan tata letak pada layar sempit."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Pilih tema, bahasa, dan perilaku aplikasi utama",
       "group": "Preferensi"
+    },
+    "zoom": {
+      "title": "Perbesar",
+      "description": "Ubah ukuran teks dan kontrol di seluruh aplikasi."
     }
   },
   "modes": {

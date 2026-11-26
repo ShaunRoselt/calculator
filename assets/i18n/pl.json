@@ -40,6 +40,15 @@
       "title": "Każda wersja, od pierwszej wersji do chwili obecnej.",
       "intro": "Kalkulator Roselt przeszedł od samodzielnego kalkulatora internetowego do w pełni spakowanej, wieloplatformowej i wielojęzycznej aplikacji w serii ukierunkowanych wydań. Ta strona śledzi zmiany w każdej wersji od 1.0.0 do 12.2.1.",
       "versionHistory": "Historia wersji"
+    },
+    "release1221": {
+      "title": "Poprawki obliczeniowe, korzystanie w trybie offline i bardziej przejrzyste układy",
+      "item1": "Naprawiono łączenie obliczeń, powtarzanie równań i przywoływanie pamięci w trybach standardowym i naukowym.",
+      "item2": "Naprawiono przypominanie wartości ze znakiem dla różnych podstaw i rozmiarów słów w trybie programisty oraz poprawione obliczenia dat w odniesieniu do zmian czasu letniego i granic miesięcy.",
+      "item3": "Poprawione przykłady konwersji jednostek i zaktualizowane domyślne waluty dla Curaçao i Sint Maarten na gulden karaibski.",
+      "item4": "Ulepszona analiza wykresów i udostępnienie kalkulatora internetowego w trybie offline po pierwszym pomyślnym załadowaniu i skonfigurowaniu pamięci podręcznej.",
+      "item5": "Wprowadzono bardziej niezawodne ustawienia pulpitu i naprawiono program uruchamiający Flatpak.",
+      "item6": "Poprawiony dostęp za pomocą klawiatury, kontrast między motywami i układy na wąskich ekranach."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Wybierz motyw, język i najważniejsze zachowanie aplikacji",
       "group": "Preferencje"
+    },
+    "zoom": {
+      "title": "Powiększ",
+      "description": "Zmień rozmiar tekstu i elementy sterujące w całej aplikacji."
     }
   },
   "modes": {

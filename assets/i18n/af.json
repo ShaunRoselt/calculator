@@ -40,6 +40,15 @@
       "title": "Elke vrystelling, van die eerste bou tot vandag.",
       "intro": "Roselt Sakrekenaar het van 'n selfstandige websakrekenaargrondslag gegaan na 'n volledig verpakte, multi-platform, multi-taal toepassing in 'n reeks gefokusde vrystellings. Hierdie bladsy volg wat in elke weergawe van 1.0.0 tot 12.2.1 verander het.",
       "versionHistory": "Weergawe geskiedenis"
+    },
+    "release1221": {
+      "title": "Berekeningoplossings, vanlyn gebruik en duideliker uitlegte",
+      "item1": "Vaste berekening ketting, herhaal gelyke, en geheue herroep in Standaard en Wetenskaplike modusse.",
+      "item2": "Vaste herroeping van getekende waarde oor basisse en woordgroottes in programmeerdermodus en gekorrigeerde datumberekeninge rondom dagligbesparingsveranderinge en maandgrense.",
+      "item3": "Gekorrigeerde eenheidsomskakelingsvoorbeelde en opgedateerde geldeenheidstandaarde vir Curaçao en Sint Maarten na die Karibiese gulde.",
+      "item4": "Grafiekanalise is verbeter en die websakrekenaar vanlyn beskikbaar gestel na die eerste suksesvolle laai- en kasopstelling.",
+      "item5": "Gemaakte lessenaarinstellings spaar meer betroubaar en het die Flatpak-lanseerder reggestel.",
+      "item6": "Verbeterde sleutelbordtoegang, kontras oor temas en uitlegte op smal skerms."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Kies die tema, taal en sleutelprogramgedrag",
       "group": "Voorkeure"
+    },
+    "zoom": {
+      "title": "Zoom",
+      "description": "Verander die grootte van teks en kontroles regdeur die toepassing."
     }
   },
   "modes": {

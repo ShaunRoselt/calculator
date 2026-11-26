@@ -40,6 +40,15 @@
       "title": "Setiap keluaran, dari binaan pertama hingga hari ini.",
       "intro": "Kalkulator Roselt bertukar daripada asas kalkulator web kendiri kepada apl berbilang bahasa yang dibungkus sepenuhnya, berbilang platform, dalam satu siri keluaran terfokus. Halaman ini menjejaki apa yang berubah dalam setiap versi daripada 1.0.0 hingga 12.2.1.",
       "versionHistory": "Sejarah versi"
+    },
+    "release1221": {
+      "title": "Pembetulan pengiraan, penggunaan luar talian dan reka letak yang lebih jelas",
+      "item1": "Perantaian pengiraan tetap, ulangan sama dan ingatan ingatan dalam mod Standard dan Saintifik.",
+      "item2": "Pengingatan nilai ditandatangani tetap merentas asas dan saiz perkataan dalam mod Pengaturcara dan pengiraan tarikh yang diperbetulkan sekitar perubahan penjimatan siang dan sempadan bulan.",
+      "item3": "Contoh penukaran unit diperbetulkan dan lalai mata wang yang dikemas kini untuk Curaçao dan Sint Maarten kepada guilder Caribbean.",
+      "item4": "Analisis graf yang dipertingkatkan dan menjadikan kalkulator web tersedia di luar talian selepas pemuatan pertama yang berjaya dan persediaan cache.",
+      "item5": "Tetapan desktop yang dibuat menjimatkan lebih dipercayai dan membetulkan pelancar Flatpak.",
+      "item6": "Akses papan kekunci dipertingkat, kontras merentas tema dan reka letak pada skrin sempit."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Pilih tema, bahasa dan gelagat apl utama",
       "group": "Keutamaan"
+    },
+    "zoom": {
+      "title": "Zum",
+      "description": "Tukar saiz teks dan kawalan di seluruh apl."
     }
   },
   "modes": {

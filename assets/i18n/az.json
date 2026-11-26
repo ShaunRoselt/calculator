@@ -40,6 +40,15 @@
       "title": "İlk qurulmadan bu günə qədər hər buraxılış.",
       "intro": "Roselt Kalkulyator müstəqil veb kalkulyator bazasından tam paketlənmiş, çox platformalı, çoxdilli proqrama çevrildi. Bu səhifə 1.0.0-dan 12.2.1-a qədər hər versiyada nələrin dəyişdiyini izləyir.",
       "versionHistory": "Versiya tarixçəsi"
+    },
+    "release1221": {
+      "title": "Hesablama düzəlişləri, oflayn istifadə və daha aydın tərtibatlar",
+      "item1": "Standart və Elmi rejimlərdə sabit hesablama zəncirləmə, təkrar bərabərlik və yaddaşın geri çağırılması.",
+      "item2": "Proqramçı rejimində əsaslar və söz ölçüləri üzrə sabit imzalanmış dəyərin geri çağırılması və gün işığına qənaət dəyişiklikləri və ay sərhədləri ətrafında düzəldilmiş tarix hesablamaları.",
+      "item3": "Kuraçao və Sint Maarten üçün Karib dənizi gilderi üçün vahid konvertasiya nümunələri və yenilənmiş valyuta defoltları.",
+      "item4": "Təkmilləşdirilmiş qrafik təhlili və ilk uğurlu yükləmə və keş quraşdırmadan sonra veb kalkulyatoru oflayn olaraq əlçatan etdi.",
+      "item5": "Made üstü parametrləri daha etibarlı qənaət edir və Flatpak başlatma qurğusunu düzəldir.",
+      "item6": "Təkmilləşdirilmiş klaviatura girişi, mövzular üzrə kontrast və dar ekranlarda tərtibatlar."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Mövzunu, dili və əsas tətbiq davranışını seçin",
       "group": "Üstünlüklər"
+    },
+    "zoom": {
+      "title": "Böyüt",
+      "description": "Tətbiq daxilində mətnin və nəzarətlərin ölçüsünü dəyişdirin."
     }
   },
   "modes": {

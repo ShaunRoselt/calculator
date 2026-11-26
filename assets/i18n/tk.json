@@ -40,6 +40,15 @@
       "title": "Every release, from the first build to today.",
       "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.1.",
       "versionHistory": "Version history"
+    },
+    "release1221": {
+      "title": "Hasaplama düzedişleri, awtonom ulanyş we has düşnükli tertipler",
+      "item1": "Kesgitlenen hasaplama zynjyry, deň gaýtalamak we standart we ylmy re inimlerde ýadyňy ýatlamak.",
+      "item2": "Programmaçy re modeiminde esaslar we söz ululyklary boýunça kesgitlenen gol çekilen bahany ýatlatmak we gündiz tygşytlaýyş üýtgeşmeleri we aý araçäkleri boýunça düzedilen senäniň hasaplamalary.",
+      "item3": "Düzedilen birlik öwrüliş mysallary we Curaçao we Sint Maarten üçin Karib deňziniň gildiýasyna täzelenen walýuta defoltlary.",
+      "item4": "Grafiki derňewi gowulandyrdy we ilkinji üstünlikli ýük we keş keşi gurlandan soň web kalkulýatoryny awtonom görnüşde elýeterli etdi.",
+      "item5": "adeasama iş stoly sazlamalary has ygtybarly tygşytlaýar we Flatpak işledijisini düzedýär.",
+      "item6": "Klawiatura girişi, mowzuklaryň arasyndaky tapawut we dar ekranlarda ýerleşiş."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Temany, dili we esasy programma özüni alyp barşyny saýlaň",
       "group": "Saýlamalar"
+    },
+    "zoom": {
+      "title": "ulaltmak",
+      "description": "Programmanyň hemme ýerinde tekstiň we dolandyryşyň ululygyny üýtgediň."
     }
   },
   "modes": {

@@ -40,6 +40,15 @@
       "title": "Every release, from the first build to today.",
       "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.1.",
       "versionHistory": "Version history"
+    },
+    "release1221": {
+      "title": "Calculation fixes, offline uise, an clearer layouts",
+      "item1": "Fixed chainin calculations, repeatin equals, an mindin stored values in Standard an Scientific modes.",
+      "item2": "Fixed recallin signed values across bases an word sizes in Programmer mode, an date calculations at month ends an when the clocks chynge.",
+      "item3": "Fixed unit conversion examples an set the Caribbean guilder as the default for Curaçao an Sint Maarten.",
+      "item4": "Improved graph analysis an made the wab calculator wirk offline efter its first successful load an cache setup.",
+      "item5": "Made desktop settins mair reliable tae save an fixed the Flatpak launcher.",
+      "item6": "Improved keyboard access, theme contrast, an layouts on narra screens."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Choose the theme, language, and key app behavior",
       "group": "Preferences"
+    },
+    "zoom": {
+      "title": "Zoom",
+      "description": "Chynge the size o text an controls ootthrou the app."
     }
   },
   "modes": {

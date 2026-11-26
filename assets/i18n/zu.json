@@ -40,6 +40,15 @@
       "title": "Every release, from the first build to today.",
       "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.1.",
       "versionHistory": "Version history"
+    },
+    "release1221": {
+      "title": "Ukulungiswa kwezibalo, ukusetshenziswa ungaxhunyiwe ku-inthanethi, nezakhiwo ezicace kakhudlwana",
+      "item1": "Izibalo ezilungisiwe zamaketango, okulingana okuphindayo, nokukhumbula inkumbulo Kumamodi Ajwayelekile kanye Nesayensi.",
+      "item2": "Kulungiswe inani lokukhumbula inani esayiniwe kuzo zonke izisekelo nosayizi bamagama kumodi yoMhleli kanye nezibalo ezilungisiwe zedethi ezizungeze izinguquko zokulondoloza imini kanye nemingcele yenyanga.",
+      "item3": "Izibonelo zokuguqulwa kweyunithi ezilungisiwe kanye nokuzenzakalelayo okubuyekeziwe kohlobo lwemali lwe-Curaçao ne-Sint Maarten kuya ku-Caribbean guilder.",
+      "item4": "Ukuhlaziywa kwegrafu okuthuthukisiwe futhi kwenza isibali sewebhu satholakala ungaxhunyiwe ku-inthanethi ngemva kokulayisha okuyimpumelelo kokuqala nokusetha inqolobane.",
+      "item5": "Izilungiselelo ezenziwe zedeskithophu zilondoloza okuthembeke kakhulu futhi zalungisa isiqalisi se-Flatpak.",
+      "item6": "Ukufinyelela kwekhibhodi okuthuthukisiwe, ukugqama kuzo zonke izingqikithi, nezakhiwo ezikrinini eziwumngcingo."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Khetha itimu, ulimi, nokuziphatha okubalulekile kohlelo lokusebenza",
       "group": "Okuthandwayo"
+    },
+    "zoom": {
+      "title": "Sondeza",
+      "description": "Shintsha usayizi wombhalo nezilawuli kulo lonke uhlelo lokusebenza."
     }
   },
   "modes": {

@@ -40,6 +40,15 @@
       "title": "Argitaratu bakoitza, lehen eraikuntzatik gaur egunera arte.",
       "intro": "Roselt Calculator kalkulagailu independente baten web oinarritik atera eta aplikazio bateratu, multiplataforma eta hizkuntza anitzeko aplikazio bihurtu da, alde focus-eko bertsioen bidez. Orrialde honek jarraitzen du 1.0.0-tik 12.2.1-ra bitartean bertsio bakoitzean zer aldatu den.",
       "versionHistory": "Bertsio-historia"
+    },
+    "release1221": {
+      "title": "Kalkuluen konponketak, lineaz kanpoko erabilera eta diseinu argiagoak",
+      "item1": "Kalkulu-kateatze finkoa, errepikapen berdinak eta memoria berreskuratzea Estandar eta Zientifiko moduetan.",
+      "item2": "Programatzaile moduan oinarritutako eta hitz-tamainen arteko sinatutako balio-gogoratze konpondu da eta dataren kalkuluak zuzendu dira udako ordutegiaren aldaketen eta hilabeteen mugen inguruan.",
+      "item3": "Kuraçao eta Sint Maarten Karibeko florinerako unitateen bihurketa-adibideak eta moneta lehenetsiak eguneratu dira.",
+      "item4": "Grafikoen analisia hobetu da eta web-kalkulagailua lineaz kanpo erabilgarri jarri da lehen karga eta cache konfiguratu ondoren.",
+      "item5": "Mahaigaineko ezarpenek fidagarriagoak gordetzen dituzte eta Flatpak abiarazlea konpondu dute.",
+      "item6": "Teklatuaren sarbidea, gaien arteko kontrastea eta diseinuak pantaila estuetan hobetu dira."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Aukeratu gaia, hizkuntza eta aplikazioaren portaera gakoa",
       "group": "Hobespenak"
+    },
+    "zoom": {
+      "title": "Zoagotu",
+      "description": "Aldatu testuaren eta kontrolaren tamaina aplikazioan zehar."
     }
   },
   "modes": {

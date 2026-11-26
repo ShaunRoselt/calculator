@@ -40,6 +40,15 @@
       "title": "All Verëffentlechung, vum éischte Bau bis haut.",
       "intro": "Roselt Rechner ass vun enger onofhängeger Webrechner Fondatioun op eng voll verpackt, Multi-Plattform, Multi-Sprooch App an enger Serie vu fokusséierte Verëffentlechungen gaang. Dës Säit verfollegt wat an all Versioun vun 1.0.0 bis 12.2.1 geännert huet.",
       "versionHistory": "Versiounsgeschicht"
+    },
+    "release1221": {
+      "title": "Berechnungsfixer, offline Benotzung a méi kloer Layouten",
+      "item1": "Fix Berechnungskette, Widderhuelung Gläichheet, an Erënnerung Erënnerung a Standard a Wëssenschaftlech Modi.",
+      "item2": "Fix ënnerschriwwene Wäerterënnerung iwwer Basen a Wuertgréissten am Programmer Modus a korrigéierten Datumberechnunge ronderëm Dagesliichterspuernisser a Mountgrenzen.",
+      "item3": "Korrigéiert Eenheetskonvertéierungsbeispiller an aktualiséiert Währungsdefaults fir Curaçao a Sint Maarten op d'Karibik Gulden.",
+      "item4": "Grafikanalyse verbessert an de Webrechner offline verfügbar gemaach no der éischter erfollegräicher Luede a Cache-Setup.",
+      "item5": "Made Desktop Astellunge spueren méi zouverlässeg a fixéiert de Flatpak Launcher.",
+      "item6": "Besser Tastatur Zougang, Kontrast iwwer Themen, a Layouten op schmuele Schiirme."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Wielt d'Thema, d'Sprooch a Schlëssel App Verhalen",
       "group": "Preferenzen"
+    },
+    "zoom": {
+      "title": "Zoom",
+      "description": "Ännert d'Gréisst vum Text a Kontrollen duerch d'App."
     }
   },
   "modes": {

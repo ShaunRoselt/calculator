@@ -40,6 +40,15 @@
       "title": "Every release, from the first build to today.",
       "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.1.",
       "versionHistory": "Version history"
+    },
+    "release1221": {
+      "title": "Litokiso tsa lipalo, tšebeliso ea kantle ho marang-rang, le lipeakanyo tse hlakileng haholoanyane",
+      "item1": "Ketane e tsitsitseng ea lipalo, pheta tse lekanang, le mohopolo oa ho hopola ka mekhoa e tloaelehileng le ea Saense.",
+      "item2": "Khopotso e tsitsitseng ea boleng bo saennoeng ho pholletsa le metheo le boholo ba mantsoe ka mokhoa oa Programmer le lipalo tse lokisitsoeng tsa matsatsi mabapi le liphetoho tsa ho boloka letsatsi le meeli ea khoeli.",
+      "item3": "Mehlala e fetotsoeng ea yuniti le mekhoa e ntlafalitsoeng ea lichelete bakeng sa Curaçao le Sint Maarten ho guilder ea Caribbean.",
+      "item4": "Tlhahlobo e ntlafalitsoeng ea kerafo 'me ea etsa hore sebali sa tepo se fumanehe kantle ho Marang-rang ka mor'a ho kenya tšebetsong le ho seta cache.",
+      "item5": "Litlhophiso tse entsoeng ka komporo li boloka tse tšepahalang le ho lokisa sebui sa Flatpak.",
+      "item6": "Kakaretso ea ho kena ho keyboard, phapang pakeng tsa theme, le meralo ho likirini tse tšesaane."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Khetha sehlooho, puo, le mekhoa ea mantlha ea app",
       "group": "Likhetho"
+    },
+    "zoom": {
+      "title": "Atometsa",
+      "description": "Fetola boholo ba mongolo le ditaolo ho app kaofela."
     }
   },
   "modes": {

@@ -65,6 +65,15 @@
     }
   },
   "updatesPage": {
+    "release1221": {
+      "title": "Calculation fixes, offline use, and clearer layouts",
+      "item1": "Fixed calculation chaining, repeat equals, and memory recall in Standard and Scientific modes.",
+      "item2": "Fixed signed-value recall across bases and word sizes in Programmer mode and corrected date calculations around daylight saving changes and month boundaries.",
+      "item3": "Corrected unit conversion examples and updated currency defaults for Curaçao and Sint Maarten to the Caribbean guilder.",
+      "item4": "Improved graph analysis and made the web calculator available offline after the first successful load and cache setup.",
+      "item5": "Made desktop settings saves more reliable and fixed the Flatpak launcher.",
+      "item6": "Improved keyboard access, contrast across themes, and layouts on narrow screens."
+    },
     "hero": {
       "eyebrow": "RELEASE NOTES",
       "title": "Every release, from the first build to today.",

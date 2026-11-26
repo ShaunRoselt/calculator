@@ -1,6 +1,28 @@
 import { initPublicPage } from './publicPage.js';
 
+const latestRelease = document.querySelector('[data-release-1221]');
+const releaseCopy = Array.from(latestRelease?.querySelectorAll('[data-release-key]') ?? [], (element) => ({
+  element,
+  key: `updatesPage.release1221.${element.dataset.releaseKey}`,
+  fallback: element.textContent.trim()
+}));
+
 function applyUpdatesPageState(context) {
+  latestRelease?.removeAttribute('lang');
+  for (const { element, key, fallback } of releaseCopy) {
+    const translation = context.translateWithFallback(key, fallback);
+    element.textContent = translation;
+    if (translation === fallback) element.lang = 'en';
+    else element.removeAttribute('lang');
+  }
+  const releaseDate = latestRelease?.querySelector('time');
+  if (releaseDate) {
+    const date = new Date(releaseDate.dateTime);
+    releaseDate.textContent = new Intl.DateTimeFormat(context.currentLocale, {
+      dateStyle: 'long',
+      timeZone: 'UTC'
+    }).format(date);
+  }
   const eyebrow = document.querySelector('[data-updates-eyebrow]');
   const title = document.querySelector('[data-updates-title]');
   const intro = document.querySelector('[data-updates-intro]');

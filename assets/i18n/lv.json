@@ -40,6 +40,15 @@
       "title": "Katrs laidiens, no pirmās versijas līdz šodienai.",
       "intro": "Roselt Calculator kļuva no atsevišķa tīmekļa kalkulatora pamata par pilnībā iesaiņotu, vairāku platformu un vairāku valodu lietotni vairākos mērķtiecīgos laidienos. Šajā lapā tiek izsekotas izmaiņas katrā versijā no 1.0.0 līdz 12.2.1.",
       "versionHistory": "Versiju vēsture"
+    },
+    "release1221": {
+      "title": "Aprēķinu labojumi, izmantošana bezsaistē un skaidrāki izkārtojumi",
+      "item1": "Fiksēta aprēķinu ķēde, atkārtojums vienāds un atmiņas atsaukšana standarta un zinātniskajā režīmos.",
+      "item2": "Fiksētu zīmju vērtību atsaukšana starp bāzēm un vārdu izmēriem programmētāja režīmā un koriģēti datuma aprēķini saistībā ar vasaras laika izmaiņām un mēneša robežām.",
+      "item3": "Izlaboti vienību konvertēšanas piemēri un atjaunināti valūtas noklusējuma iestatījumi Kirasao un Sintmartenai uz Karību jūras guldeni.",
+      "item4": "Uzlabota diagrammu analīze un padarīts tīmekļa kalkulators pieejams bezsaistē pēc pirmās veiksmīgās ielādes un kešatmiņas iestatīšanas.",
+      "item5": "Izveidotie darbvirsmas iestatījumi saglabā uzticamāku darbību un izlabo Flatpak palaišanas programmu.",
+      "item6": "Uzlabota piekļuve tastatūrai, kontrasts starp motīviem un izkārtojumi šauros ekrānos."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Izvēlieties motīvu, valodu un galveno lietotnes darbību",
       "group": "Preferences"
+    },
+    "zoom": {
+      "title": "Tālim",
+      "description": "Mainiet teksta lielumu un vadīklas visā lietotnē."
     }
   },
   "modes": {

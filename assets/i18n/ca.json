@@ -40,6 +40,15 @@
       "title": "Cada llançament, des de la primera versió fins avui.",
       "intro": "Roselt Calculator va passar d'una base de calculadora web autònoma a una aplicació totalment empaquetada, multiplataforma i en diversos idiomes en una sèrie de llançaments centrats. Aquesta pàgina fa un seguiment del que ha canviat en cada versió de l'1.0.0 a la 12.2.1.",
       "versionHistory": "Historial de versions"
+    },
+    "release1221": {
+      "title": "Correccions de càlcul, ús fora de línia i dissenys més clars",
+      "item1": "S'han corregit l'encadenament de càlculs, les iguals repetides i la recuperació de memòria en els modes estàndard i científic.",
+      "item2": "S'ha corregit el record del valor signat a través de bases i mides de paraula en el mode de programador i s'han corregit els càlculs de dates al voltant dels canvis de l'horari d'estiu i els límits del mes.",
+      "item3": "S'han corregit exemples de conversió d'unitats i s'han actualitzat els valors predeterminats de la moneda per a Curaçao i Sint Maarten al florín del Carib.",
+      "item4": "S'ha millorat l'anàlisi de gràfics i es va fer que la calculadora web estigui disponible fora de línia després de la primera càrrega correcta i la configuració de la memòria cau.",
+      "item5": "La configuració de l'escriptori feta desa més fiable i s'ha corregit el llançador de Flatpak.",
+      "item6": "Accés al teclat, contrast entre temes i dissenys millorats en pantalles estretes."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Trieu el tema, l'idioma i el comportament clau de l'aplicació",
       "group": "Preferències"
+    },
+    "zoom": {
+      "title": "Amplia",
+      "description": "Canvia la mida del text i dels controls a tota l'aplicació."
     }
   },
   "modes": {

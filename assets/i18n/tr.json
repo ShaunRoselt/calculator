@@ -40,6 +40,15 @@
       "title": "İlk derlemeden bugüne kadar her sürüm.",
       "intro": "Roselt Calculator, bağımsız bir web hesap makinesi temelinden, bir dizi odaklanmış sürümle tamamen paketlenmiş, çok platformlu, çok dilli bir uygulamaya dönüştü. Bu sayfa, 1.0.0'dan 12.2.1'a kadar her sürümde nelerin değiştiğini izler.",
       "versionHistory": "Sürüm geçmişi"
+    },
+    "release1221": {
+      "title": "Hesaplama düzeltmeleri, çevrimdışı kullanım ve daha net düzenler",
+      "item1": "Standart ve Bilimsel modlarda sabit hesaplama zincirleme, tekrarlanan eşitlemeler ve hafıza geri çağırma.",
+      "item2": "Programcı modunda tabanlar ve kelime boyutları genelinde işaretli değer geri çağırma düzeltildi ve gün ışığından yararlanma değişiklikleri ve ay sınırlarına ilişkin tarih hesaplamaları düzeltildi.",
+      "item3": "Curaçao ve Sint Maarten için birim dönüştürme örnekleri düzeltildi ve para birimi varsayılanları Karayip guilderine güncellendi.",
+      "item4": "Grafik analizi iyileştirildi ve ilk başarılı yükleme ve önbellek kurulumundan sonra web hesap makinesi çevrimdışı kullanılabilir hale getirildi.",
+      "item5": "Masaüstü ayarları, kaydetme işlemlerini daha güvenilir hale getirdi ve Flatpak başlatıcısını düzeltti.",
+      "item6": "Klavye erişimi, temalar arası kontrast ve dar ekranlardaki düzenler iyileştirildi."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Temayı, dili ve temel uygulama davranışını seçin",
       "group": "Tercihler"
+    },
+    "zoom": {
+      "title": "Yakınlaştır",
+      "description": "Uygulama genelinde metin boyutunu ve kontrolleri değiştirin."
     }
   },
   "modes": {

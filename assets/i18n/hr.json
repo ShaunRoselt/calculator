@@ -40,6 +40,15 @@
       "title": "Svako izdanje, od prve verzije do danas.",
       "intro": "Roselt Calculator prešao je put od temelja samostalnog web-kalkulatora do potpuno zapakirane aplikacije s više platformi i više jezika u nizu fokusiranih izdanja. Ova stranica prati što se promijenilo u svakoj verziji od 1.0.0 do 12.2.1.",
       "versionHistory": "Povijest verzija"
+    },
+    "release1221": {
+      "title": "Popravci izračuna, izvanmrežna upotreba i jasniji izgledi",
+      "item1": "Popravljeno ulančavanje izračuna, ponavljanje jednakosti i pozivanje memorije u standardnim i znanstvenim načinima rada.",
+      "item2": "Popravljeno opoziv vrijednosti s predznakom preko baza i veličina riječi u programerskom načinu rada i ispravljeni izračuni datuma oko promjena ljetnog računanja vremena i granica mjeseca.",
+      "item3": "Ispravljeni primjeri pretvorbe jedinica i ažurirane zadane valute za Curaçao i Sint Maarten u karipski gulden.",
+      "item4": "Poboljšana je analiza grafikona i web-kalkulator je postao izvanmrežno dostupan nakon prvog uspješnog učitavanja i postavljanja predmemorije.",
+      "item5": "Izvršene postavke radne površine spremaju pouzdanije i popravljaju Flatpak pokretač.",
+      "item6": "Poboljšan pristup tipkovnici, kontrast između tema i rasporedi na uskim zaslonima."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Odaberite temu, jezik i ključno ponašanje aplikacije",
       "group": "Postavke"
+    },
+    "zoom": {
+      "title": "Zumiranje",
+      "description": "Promijenite veličinu teksta i kontrola u cijeloj aplikaciji."
     }
   },
   "modes": {

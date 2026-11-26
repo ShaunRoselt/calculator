@@ -40,6 +40,15 @@
       "title": "Elke release, vanaf de eerste build tot vandaag.",
       "intro": "Roselt Calculator ging van een zelfstandige webcalculator naar een volledig verpakte, multi-platform, meertalige app in een reeks gerichte releases. Op deze pagina wordt bijgehouden wat er in elke versie is veranderd van 1.0.0 tot en met 12.2.1.",
       "versionHistory": "Versiegeschiedenis"
+    },
+    "release1221": {
+      "title": "Berekeningsverbeteringen, offline gebruik en duidelijkere lay-outs",
+      "item1": "Vaste berekeningsketen, herhaalde gelijkheid en geheugenoproep in de standaard- en wetenschappelijke modi.",
+      "item2": "Opgelost: het ophalen van ondertekende waarden voor bases en woordgroottes in de programmeermodus en gecorrigeerde datumberekeningen rond zomertijdwijzigingen en maandgrenzen.",
+      "item3": "Gecorrigeerde voorbeelden van eenheidconversies en bijgewerkte valutastandaarden voor Curaçao en Sint Maarten naar de Caribische gulden.",
+      "item4": "Verbeterde grafiekanalyse en maakte de webcalculator offline beschikbaar na de eerste succesvolle laad- en cache-installatie.",
+      "item5": "De gemaakte bureaubladinstellingen zorgen voor een betrouwbaardere opslag en hebben het Flatpak-opstartprogramma gerepareerd.",
+      "item6": "Verbeterde toetsenbordtoegang, contrast tussen thema's en lay-outs op smalle schermen."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Kies het thema, de taal en het belangrijkste app-gedrag",
       "group": "Voorkeuren"
+    },
+    "zoom": {
+      "title": "Zoom",
+      "description": "Wijzig de grootte van tekst en bedieningselementen in de hele app."
     }
   },
   "modes": {

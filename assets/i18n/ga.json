@@ -40,6 +40,15 @@
       "title": "Gach eisiúint, ón gcéad tógáil go dtí an lá inniu.",
       "intro": "Chuaigh Áireamhán Roselt ó bhunús áireamhán gréasáin neamhspleách go haip lánphacáistithe, il-ardán, iltheanga i sraith eisiúintí dírithe. Rianaíonn an leathanach seo an méid a d’athraigh i ngach leagan ó 1.0.0 go 12.2.1.",
       "versionHistory": "Stair na leaganacha"
+    },
+    "release1221": {
+      "title": "Coigeartuithe ríomha, úsáid as líne, agus leagan amach níos soiléire",
+      "item1": "Slabhraithe ríofa seasta, athrá cothrom, agus cuimhne cuimhne i modhanna Caighdeánacha agus Eolaíochta.",
+      "item2": "Athghairm luach sínithe seasta thar boinn agus méideanna focal i mód Ríomhchláraitheoir agus ríomhanna ceartaithe dáta thart ar athruithe coigilte solas an lae agus teorainneacha míonna.",
+      "item3": "Samplaí tiontaithe aonad ceartaithe agus mainneachtainí airgeadra nuashonraithe do Curaçao agus Sint Maarten go dtí an guilder sa Mhuir Chairib.",
+      "item4": "Feabhsaíodh anailís ghraif agus cuireadh an t-áireamhán gréasáin ar fáil as líne tar éis an chéad ualaigh rathúil agus an taisce a shocrú.",
+      "item5": "Sábhálann socruithe deisce a rinneadh níos iontaofa agus socraítear an tosaitheoir Flatpak.",
+      "item6": "Feabhsaíodh rochtain mhéarchláir, codarsnacht trasna téamaí, agus leagan amach ar scáileáin chúnga."
     }
   },
   "landingPage": {
@@ -577,6 +586,10 @@
     "preferences": {
       "description": "Roghnaigh an téama, an teanga, agus iompraíocht na haipe eochair",
       "group": "Roghanna"
+    },
+    "zoom": {
+      "title": "Súmáil",
+      "description": "Athraigh méid an téacs agus na rialuithe ar fud na haipe."
     }
   },
   "units": {

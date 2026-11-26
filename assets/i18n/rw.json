@@ -40,6 +40,15 @@
       "title": "Every release, from the first build to today.",
       "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.1.",
       "versionHistory": "Version history"
+    },
+    "release1221": {
+      "title": "Kubara gukosora, gukoresha kumurongo, hamwe nuburyo busobanutse",
+      "item1": "Imibare ihamye yo kubara, gusubiramo bingana, no kwibuka kwibuka muburyo busanzwe na siyansi.",
+      "item2": "Byashyizweho umukono-agaciro byibutswe kubishingwe nubunini bwijambo muburyo bwa Programmer hamwe no gukosora itariki yo kubara hafi yumunsi wo kuzigama impinduka nimbibi zukwezi.",
+      "item3": "Gukosora ingero zo guhindura ingero hamwe no kuvugurura amafaranga asanzwe kuri Curaçao na Sint Maarten kuri guilder ya Karayibe.",
+      "item4": "Kunonosora ibishushanyo mbonera no gutuma calculatrice y'urubuga iboneka kumurongo nyuma yumutwaro wambere watsinze hamwe na cache gushiraho.",
+      "item5": "Igenamiterere rya desktop rizigama cyane kandi ryizewe rya Flatpak.",
+      "item6": "Kunoza uburyo bwa enterineti, itandukaniro kumutwe, hamwe nimiterere kuri ecran nto."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Hitamo insanganyamatsiko, ururimi, nimyitwarire yingenzi ya porogaramu",
       "group": "Ibyifuzo"
+    },
+    "zoom": {
+      "title": "Kwegera",
+      "description": "Hindura ingano yinyandiko nubugenzuzi muri porogaramu."
     }
   },
   "modes": {

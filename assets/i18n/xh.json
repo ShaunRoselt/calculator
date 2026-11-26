@@ -40,6 +40,15 @@
       "title": "Every release, from the first build to today.",
       "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.1.",
       "versionHistory": "Version history"
+    },
+    "release1221": {
+      "title": "Ukulungiswa kokubala, ukusetyenziswa ngaphandle kweintanethi, kunye noyilo olucacileyo",
+      "item1": "Ikhonkco lokubala elizinzileyo, ukuphinda okulinganayo, kunye nokukhumbula inkumbulo kwiimowudi eziMgangatho nezeNzululwazi.",
+      "item2": "Ukukhumbula ixabiso elisayiniweyo elilungisiweyo kuzo zonke iziseko kunye nobukhulu bamagama kwimowudi yeProgram kunye nezibalo ezichanekileyo zomhla malunga notshintsho olugcina imini kunye nemida yenyanga.",
+      "item3": "Imizekelo yokuguqulwa kweyunithi elungisiweyo kunye nohlaziyo lwemali olungagqibekanga lweCuraçao kunye neSint Maarten kwiguilder yeCaribbean.",
+      "item4": "Uhlalutyo lwegrafu oluphuculweyo kunye nokwenza ukuba isibali sewebhu sifumaneke ngaphandle kweintanethi emva komthwalo wokuqala oyimpumelelo kunye nokusekwa kwe-cache.",
+      "item5": "Iisetingi zedesktop zenziwe zigcine ukuthembeka kwaye zilungise isindululi seFlatpak.",
+      "item6": "Ufikelelo oluphuculweyo lwebhodi yezitshixo, umahluko kwimixholo yonke, kunye noyilo kwizikrini ezimxinwa."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Khetha umxholo, ulwimi, kunye nokuziphatha kosetyenziso oluphambili",
       "group": "Ezikhethwayo"
+    },
+    "zoom": {
+      "title": "Sondeza",
+      "description": "Guqula ubungakanani bombhalo kunye nolawulo kuyo yonke i-app."
     }
   },
   "modes": {

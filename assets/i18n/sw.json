@@ -40,6 +40,15 @@
       "title": "Kila toleo, kutoka toleo la kwanza hadi leo.",
       "intro": "Kikokotoo cha Roselt kilitoka kwa msingi unaojitegemea wa kikokotoo cha wavuti hadi programu iliyofungashwa kikamilifu, ya majukwaa mengi, ya lugha nyingi katika mfululizo wa matoleo yaliyolengwa. Ukurasa huu unafuatilia kilichobadilika katika kila toleo kutoka 1.0.0 hadi 12.2.1.",
       "versionHistory": "Historia ya toleo"
+    },
+    "release1221": {
+      "title": "Marekebisho ya hesabu, matumizi ya nje ya mtandao na mipangilio iliyo wazi zaidi",
+      "item1": "Msururu usiobadilika wa hesabu, kurudia sawa, na kukumbuka kumbukumbu katika modi za Kawaida na za Kisayansi.",
+      "item2": "Ukumbusho wa thamani isiyobadilika katika misingi na ukubwa wa maneno katika Modi ya Kipangaji programu na mahesabu ya tarehe yaliyosahihishwa karibu na mabadiliko ya kuokoa mchana na mipaka ya mwezi.",
+      "item3": "Mifano iliyosahihishwa ya ubadilishaji wa vizio na chaguomsingi zilizosasishwa za sarafu za Curaçao na Sint Maarten hadi kwa guilder ya Karibiani.",
+      "item4": "Uchanganuzi wa grafu ulioboreshwa na kufanya kikokotoo cha wavuti kupatikana nje ya mtandao baada ya upakiaji wa kwanza uliofaulu na usanidi wa akiba.",
+      "item5": "Mipangilio ya eneo-kazi iliyotengenezwa huhifadhi kizindua cha Flatpak kinachotegemewa zaidi.",
+      "item6": "Ufikiaji ulioboreshwa wa kibodi, utofautishaji katika mandhari na mipangilio kwenye skrini nyembamba."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Chagua mandhari, lugha na tabia kuu ya programu",
       "group": "Mapendeleo"
+    },
+    "zoom": {
+      "title": "Kuza",
+      "description": "Badilisha ukubwa wa maandishi na vidhibiti katika programu yote."
     }
   },
   "modes": {

@@ -40,6 +40,15 @@
       "title": "Iga väljalase, esimesest järgust tänaseni.",
       "intro": "Roselt Calculator muutus eraldiseisvast veebikalkulaatori vundamendist täielikult pakitud, mitme platvormi ja mitmekeelse rakenduseni, mis on suunatud väljaannete seeriale. Sellel lehel jälgitakse, mis muutus igas versioonis 1.0.0 kuni 12.2.1.",
       "versionHistory": "Versiooniajalugu"
+    },
+    "release1221": {
+      "title": "Arvutusparandused, võrguühenduseta kasutamine ja selgemad paigutused",
+      "item1": "Parandatud arvutuste aheldamine, võrduskordade kordus ja mälu meeldejätmine standard- ja teadusrežiimis.",
+      "item2": "Fikseeritud märgiga väärtuste tagasikutsumine aluste ja sõnade suuruste lõikes programmeerija režiimis ning korrigeeritud kuupäevaarvutused suveaja muutuste ja kuupiiride ümber.",
+      "item3": "Parandatud ühikute teisendamise näited ja Curaçao ja Sint Maarteni valuuta vaikeväärtused Kariibi mere guldeniks.",
+      "item4": "Täiustatud graafikute analüüsi ja muutis veebikalkulaatori võrguühenduseta kättesaadavaks pärast esimest edukat laadimist ja vahemälu seadistamist.",
+      "item5": "Tehtud töölauaseaded salvestavad töökindlamaks ja parandavad Flatpaki käivitusprogrammi.",
+      "item6": "Parem juurdepääs klaviatuurile, erinevate teemade kontrastsus ja paigutus kitsastel ekraanidel."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Valige teema, keel ja rakenduse põhikäitumine",
       "group": "Eelistused"
+    },
+    "zoom": {
+      "title": "Suumi",
+      "description": "Muutke kogu rakenduses teksti suurust ja juhtelemente."
     }
   },
   "modes": {

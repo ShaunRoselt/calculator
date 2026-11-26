@@ -40,6 +40,15 @@
       "title": "Bawat release, mula sa unang build hanggang ngayon.",
       "intro": "Napunta ang Roselt Calculator mula sa isang standalone na web calculator foundation patungo sa isang ganap na naka-package, multi-platform, multi-language na app sa isang serye ng mga nakatutok na release. Sinusubaybayan ng pahinang ito kung ano ang nagbago sa bawat bersyon mula 1.0.0 hanggang 12.2.1.",
       "versionHistory": "History ng bersyon"
+    },
+    "release1221": {
+      "title": "Mga pag-aayos sa kalkulasyon, offline na paggamit, at mas malinaw na mga layout",
+      "item1": "Naayos ang pag-chain ng kalkulasyon, mga katumbas ng paulit-ulit, at pag-recall ng memory sa mga Standard at Scientific mode.",
+      "item2": "Naayos ang signed-value recall sa mga base at laki ng salita sa Programmer mode at itinama ang mga kalkulasyon ng petsa sa paligid ng mga pagbabago sa daylight saving at mga hangganan ng buwan.",
+      "item3": "Nawastong mga halimbawa ng conversion ng unit at na-update na mga default ng currency para sa Curaçao at Sint Maarten sa Caribbean guilder.",
+      "item4": "Pinahusay na pagsusuri ng graph at ginawang available offline ang web calculator pagkatapos ng unang matagumpay na pag-load at pag-setup ng cache.",
+      "item5": "Ang ginawang mga setting ng desktop ay mas maaasahan at naayos ang Flatpak launcher.",
+      "item6": "Pinahusay na access sa keyboard, contrast sa mga tema, at mga layout sa makitid na screen."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Piliin ang tema, wika, at pangunahing gawi ng app",
       "group": "Mga Kagustuhan"
+    },
+    "zoom": {
+      "title": "Mag-zoom",
+      "description": "Baguhin ang laki ng text at mga kontrol sa buong app."
     }
   },
   "modes": {

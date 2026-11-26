@@ -40,6 +40,15 @@
       "title": "Every release, from th first build t today.",
       "intro": "Roselt Calculator sailed from a standalone web calculator foundation t a fully packaged, multi-platform, multi-language app in a series o' focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.1.",
       "versionHistory": "Version history"
+    },
+    "release1221": {
+      "title": "Mended sums, offline sailin’, and shipshape layouts",
+      "item1": "Mended chains o’ calculations, repeat equals, and recallin’ stored numbers in Standard and Scientific modes.",
+      "item2": "Mended recall for signed numbers across bases and word sizes in Programmer mode, and date sums when the clocks shift or a new month rolls in.",
+      "item3": "Mended unit conversion examples and set the Caribbean guilder as the default for Curaçao and Sint Maarten.",
+      "item4": "Improved graph analysis, and the web calculator now sails offline once it has loaded and stowed its files.",
+      "item5": "Made desktop settings stay stowed more reliably and mended the Flatpak launcher.",
+      "item6": "Improved keyboard access, theme contrast, and layouts on narrow screens."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Choose the theme, language, and key app behavior",
       "group": "Preferences"
+    },
+    "zoom": {
+      "title": "Zoom",
+      "description": "Make the text and controls bigger or smaller across yer app."
     }
   },
   "modes": {

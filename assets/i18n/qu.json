@@ -40,6 +40,15 @@
       "title": "Sapa lluqsichiy, ñawpaq ruwaymanta kunankama.",
       "intro": "Roselt Yupay huk sapalla web yupaypa cimientonmanta huk hunt'asqa paquetechasqa, achka plataformayuq, achka simiyuq ruwanaman huk serie enfocadu lluqsichiykunapi rirqa. Kay p'anqaqa sapa layapi 1.0.0 kaqmanta 12.2.1 kaqkama ima tikrasqa kaqta qatin.",
       "versionHistory": "Versión nisqamanta willakuy"
+    },
+    "release1221": {
+      "title": "Yupay allichay, mana tinkisqa llamk'achiyta, aswan sut'i churanakunatapas",
+      "item1": "Allinchasqa yupay cadenachay, kutichiy kaqllakuna, chaymanta yuyarina yuyariy modo Estándar chaymanta Científico kaqpi.",
+      "item2": "Allichasqa firmasqa-chani yuyariy tukuy basekuna chaymanta simi sayaykuna Programador modo kaqpi chaymanta allichasqa p'unchaw yupaykuna p'unchaw k'anchay tikray tikraykuna chaymanta killa linderos muyuriqpi.",
+      "item3": "Allichasqa unidad tikray ejemplokuna chaymanta musuqchasqa qullqi ñawpaqmanta Curaçao kaqpaq chaymanta Sint Maarten kaqpaq Caribe guilder kaqman.",
+      "item4": "Allichasqa grafico t'aqwiy chaymanta web yupayta mana tinkisqa kananpaq ruwasqa ñawpaq allin carga chaymanta caché churaymanta.",
+      "item5": "Escritorio churanakuna aswan atiyniyuq waqaychasqa chaymanta Flatpak qallarichiq allichasqa.",
+      "item6": "Teclado yaykuy allinchasqa, temakunapura chiqanchay, chaymanta k'iti pantallakunapi churanakuna."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Akllay tema, simi chaymanta llave app ruwayninta",
       "group": "Munasqakuna"
+    },
+    "zoom": {
+      "title": "Aswan hatunyachiy",
+      "description": "Qillqapa sayayninta chaymanta kamachiykunata tukuy app kaqpi tikray."
     }
   },
   "modes": {

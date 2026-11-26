@@ -40,6 +40,15 @@
       "title": "Kgololo nngwe le nngwe, go tswa mo kagong ya ntlha go fitlha gompieno.",
       "intro": "Roselt Calculator e ne ya tswa mo motheong wa khalekhuleita ya webo e e ikemetseng ka nosi go ya go tiriswa e e phuthetsweng ka botlalo, ya dipolatefomo tse dintsi, ya dipuo tse dintsi mo motseletseleng wa ditokololo tse di tsepameng. Tsebe eno e latedisa se se fetogileng mo mofuteng mongwe le mongwe go tswa go 1.0.0 go ya go 12.2.1.",
       "versionHistory": "Hisitori ya mofuta"
+    },
+    "release1221": {
+      "title": "Ditokafatso tsa dipalo, tiriso ya kwa ntle ga inthanete, le dithulaganyo tse di tlhapileng",
+      "item1": "Go tsenngwa ga diketane tsa dipalelo tse di tlhomameng, go lekana ga go boeletsa, le go gakologelwa ga mogopolo mo mekgweng e e Tlwaelegileng le ya Saense.",
+      "item2": "Go gakologelwa ga boleng jo bo saennweng jo bo tlhomameng go ralala ditheo le bogolo jwa mafoko mo mokgweng wa Moporokeramo le dipalelo tsa letlha tse di baakantsweng go dikologa diphetogo tsa go boloka letsatsi le melelwane ya kgwedi.",
+      "item3": "Dikao tsa phetolo ya yuniti tse di baakantsweng le ditlhomamiso tsa madi tse di tlhabolotsweng tsa Curaçao le Sint Maarten go ya go di-guilder tsa Caribbean.",
+      "item4": "Tshekatsheko ya kerafo e e tokafaditsweng le go dira gore khalekhuleita ya webo e nne teng kwa ntle ga inthanete morago ga go laisa le go rulaganya polokelotshedimosetso la ntlha ka katlego.",
+      "item5": "E dirile gore dipeakanyo tsa desekethopo di boloke tse di ikanyegang le go baakanya setlhomo sa Flatpak.",
+      "item6": "Phitlhelelo e e tokafaditsweng ya khiiboto, pharologano mo dithitokgannyeng tsotlhe, le dithulaganyo mo diskrining tse di tshesane."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Tlhopha setlhogo, puo, le boitshwaro jwa tiriswa e e botlhokwa",
       "group": "Ditlhopho"
+    },
+    "zoom": {
+      "title": "Zoom",
+      "description": "Fetola bogolo jwa mafoko le ditaolo mo tirisong yotlhe."
     }
   },
   "modes": {

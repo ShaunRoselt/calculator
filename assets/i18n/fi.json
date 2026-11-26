@@ -40,6 +40,15 @@
       "title": "Jokainen julkaisu ensimmäisestä koontiversiosta tähän päivään.",
       "intro": "Roselt Calculator muuttui erillisestä verkkolaskimen perustasta täysin pakatuksi, usean alustan ja monikielisen sovelluksen sarjassa kohdistettuja julkaisuja. Tämä sivu seuraa, mitä muuttui kussakin versiossa 1.0.0 - 12.2.1.",
       "versionHistory": "Versiohistoria"
+    },
+    "release1221": {
+      "title": "Laskentakorjauksia, offline-käyttöä ja selkeämmät asettelut",
+      "item1": "Kiinteä laskutoimitusten ketjutus, toista yhtäläisyys ja muistin palauttaminen Standard- ja Scientific-tiloissa.",
+      "item2": "Kiinteän etumerkityn arvon palautus kantojen ja sanakokojen välillä ohjelmoijatilassa ja korjattu päivämäärälasku kesäaikamuutosten ja kuukausirajojen ympärillä.",
+      "item3": "Korjatut yksikkömuunnosesimerkit ja päivitetyt valuutan oletusarvot Curaçaossa ja Sint Maartenissa Karibian guldeniksi.",
+      "item4": "Parannettu kaavioanalyysi ja verkkolaskimen käyttö offline-tilassa ensimmäisen onnistuneen latauksen ja välimuistin asennuksen jälkeen.",
+      "item5": "Työpöytäasetukset säästävät luotettavammin ja korjasivat Flatpak-käynnistimen.",
+      "item6": "Parannettu näppäimistön käyttö, teemojen kontrasti ja asettelut kapeilla näytöillä."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Valitse teema, kieli ja tärkeimmät sovelluksen toimintatavat",
       "group": "Asetukset"
+    },
+    "zoom": {
+      "title": "Zoomaa",
+      "description": "Muuta tekstin kokoa ja säätimiä koko sovelluksessa."
     }
   },
   "modes": {

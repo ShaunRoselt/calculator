@@ -40,6 +40,15 @@
       "title": "Minden kiadás, az első buildtől a mai napig.",
       "intro": "A Roselt Calculator egy önálló webes számológép alapjától egy teljesen csomagolt, többplatformos, többnyelvű alkalmazássá vált, több, fókuszált kiadás sorozatában. Ez az oldal nyomon követi, mi változott minden verzióban az 1.0.0-tól a 12.2.1-ig.",
       "versionHistory": "Verzióelőzmények"
+    },
+    "release1221": {
+      "title": "Számítási javítások, offline használat és áttekinthetőbb elrendezések",
+      "item1": "Rögzített számítási láncolás, ismétlési egyenlők és memória-visszahívás normál és tudományos módban.",
+      "item2": "Rögzített előjeles értékű előhívás bázisok és szóméretek között Programozó módban, valamint korrigált dátumszámítások a nyári időszámítás változásai és a hónaphatárok körül.",
+      "item3": "Javított mértékegység-átváltási példák és frissített pénznemek alapértelmezései Curaçao és Sint Maarten esetében a karibi guldenre.",
+      "item4": "Továbbfejlesztett grafikonelemzés, és offline elérhetővé tette a webes számológépet az első sikeres betöltés és a gyorsítótár beállítása után.",
+      "item5": "Az asztali beállítások megbízhatóbbá teszik a mentést, és javítják a Flatpak indítót.",
+      "item6": "Továbbfejlesztett billentyűzet-hozzáférés, kontraszt a témák között és elrendezés keskeny képernyőkön."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Válassza ki a témát, a nyelvet és az alkalmazás kulcsfontosságú viselkedését",
       "group": "Preferences"
+    },
+    "zoom": {
+      "title": "Nagyítás",
+      "description": "Módosítsa a szöveg méretét és a vezérlőket az alkalmazásban."
     }
   },
   "modes": {

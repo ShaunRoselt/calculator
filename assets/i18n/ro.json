@@ -40,6 +40,15 @@
       "title": "Fiecare lansare, de la prima versiune până astăzi.",
       "intro": "Roselt Calculator a trecut de la o bază de calcul web autonomă la o aplicație completă, multi-platformă, în mai multe limbi într-o serie de versiuni focalizate. Această pagină urmărește ceea ce s-a schimbat în fiecare versiune de la 1.0.0 la 12.2.1.",
       "versionHistory": "Istoricul versiunilor"
+    },
+    "release1221": {
+      "title": "Remedieri de calcul, utilizare offline și aspecte mai clare",
+      "item1": "S-au rezolvat înlănțuirea calculelor, repetările egale și retragerea memoriei în modurile Standard și Științific.",
+      "item2": "S-a corectat rechemarea valorii semnate pe baze și dimensiunile cuvintelor în modul Programator și s-au corectat calculele date în jurul modificărilor de ora de vară și a limitelor lunii.",
+      "item3": "Exemple de conversie de unități corectate și valorile valutare prestabilite actualizate pentru Curaçao și Sint Maarten către guldenul Caraibelor.",
+      "item4": "S-a îmbunătățit analiza graficului și a făcut ca calculatorul web să fie disponibil offline după prima încărcare și configurare cu succes a memoriei cache.",
+      "item5": "Setările desktop efectuate salvează mai fiabile și am remediat lansatorul Flatpak.",
+      "item6": "Acces îmbunătățit la tastatură, contrast între teme și aspecte pe ecrane înguste."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Alegeți tema, limba și comportamentul cheie al aplicației",
       "group": "Preferințe"
+    },
+    "zoom": {
+      "title": "Măriți",
+      "description": "Schimbați dimensiunea textului și a comenzilor în aplicație."
     }
   },
   "modes": {

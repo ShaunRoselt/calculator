@@ -40,6 +40,15 @@
       "title": "Kowace saki, daga ginin farko zuwa yau.",
       "intro": "Roselt Calculator ya tafi daga tushe mai ƙididdigewa na gidan yanar gizo zuwa cikakken kunshin, dandamali da yawa, ƙa'idar harshe da yawa a cikin jerin fitattun fitattun abubuwan da aka mayar da hankali. Wannan shafin yana bin abin da ya canza a kowace sigar daga 1.0.0 zuwa 12.2.1.",
       "versionHistory": "Tarihin sigar"
+    },
+    "release1221": {
+      "title": "gyare-gyaren lissafin, amfani da layi, da kuma shimfidar wurare",
+      "item1": "Kafaffen sarkar lissafi, maimaita daidai, da tunowar ƙwaƙwalwar ajiya a cikin Ma'auni da hanyoyin Kimiyya.",
+      "item2": "Kafaffen kira mai ƙima da aka sanya hannu a cikin sansanoni da girman kalmomi a cikin yanayin Programmer da daidaita lissafin kwanan wata a kusa da canje-canjen ceton hasken rana da iyakokin wata.",
+      "item3": "Gyaran misalan jujjuyawar raka'a da sabunta ma'aunin kuɗaɗe don Curaçao da Sint Maarten zuwa guilder Caribbean.",
+      "item4": "Ingantacciyar nazarin jadawali kuma an samar da kalkuletawar gidan yanar gizo a layi ba tare da layi ba bayan nasarar farko da saitin cache.",
+      "item5": "Saitunan tebur da aka ƙera yana adana ƙarin abin dogaro da gyarawa mai ƙaddamar da Flatpak.",
+      "item6": "Ingantacciyar hanyar shiga madannai, bambanci tsakanin jigogi, da shimfidu akan kunkuntar fuska."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Zaɓi jigon, harshe, da maɓalli na ƙa'idar",
       "group": "Abubuwan da ake so"
+    },
+    "zoom": {
+      "title": "Zuƙowa",
+      "description": "Canja girman rubutu da sarrafawa cikin app ɗin."
     }
   },
   "modes": {

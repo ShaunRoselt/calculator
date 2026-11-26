@@ -40,6 +40,15 @@
       "title": "Birinchi tuzilishdan to bugungi kungacha bo‘lgan har bir nashr.",
       "intro": "Roselt Calculator mustaqil veb-kalkulyatordan toʻliq paketlangan, koʻp platformali, koʻp tilli ilovaga aylandi. Bu sahifa 1.0.0 dan 12.2.1 gacha bo'lgan har bir versiyada nima o'zgarganini kuzatib boradi.",
       "versionHistory": "Versiya tarixi"
+    },
+    "release1221": {
+      "title": "Hisoblashda tuzatishlar, oflayn foydalanish va aniqroq tartiblar",
+      "item1": "Standart va ilmiy rejimlarda hisob zanjiri, takroriy tenglamalar va xotirani eslab qolish o‘rnatilgan.",
+      "item2": "Dasturchi rejimida bazalar va soʻz oʻlchamlari boʻyicha belgilangan imzo qiymatini eslab qolish va yozgi vaqt rejimidagi oʻzgarishlar va oy chegaralari boʻyicha tuzatilgan sana hisoblari.",
+      "item3": "Kyurasao va Sint-Marten uchun birlik konvertatsiyasiga misollar tuzatildi va valyuta defoltlari Karib dengizi gulderiga yangilandi.",
+      "item4": "Grafik tahlili yaxshilandi va veb-kalkulyator birinchi muvaffaqiyatli yuklash va kesh sozlamalaridan keyin oflayn rejimda foydalanish mumkin bo‘ldi.",
+      "item5": "Ish stoli sozlamalari yanada ishonchli saqlaydi va Flatpak ishga tushirgichi tuzatildi.",
+      "item6": "Klaviaturadan foydalanish yaxshilandi, mavzular boʻyicha kontrast va tor ekranlardagi tartiblar."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Mavzu, til va asosiy ilova xatti-harakatlarini tanlang",
       "group": "Afzalliklar"
+    },
+    "zoom": {
+      "title": "Yoshlash",
+      "description": "Ilovadagi matn va boshqaruv elementlari hajmini oʻzgartiring."
     }
   },
   "modes": {

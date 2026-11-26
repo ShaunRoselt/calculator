@@ -40,6 +40,15 @@
       "title": "Ogni versione, dalla prima build a oggi.",
       "intro": "Roselt Calculator è passato da una base di calcolo web autonoma a un'app multipiattaforma e multilingue completamente integrata in una serie di versioni mirate. Questa pagina tiene traccia di ciò che è cambiato in ciascuna versione dalla 1.0.0 alla 12.2.1.",
       "versionHistory": "Cronologia delle versioni"
+    },
+    "release1221": {
+      "title": "Correzioni di calcolo, utilizzo offline e layout più chiari",
+      "item1": "Risolto il problema con il concatenamento dei calcoli, la ripetizione di uguali e il richiamo della memoria nelle modalità Standard e Scientifica.",
+      "item2": "Risolto il problema con il richiamo del valore con segno tra basi e dimensioni delle parole in modalità Programmatore e corretti i calcoli della data in base ai cambiamenti dell'ora legale e ai limiti dei mesi.",
+      "item3": "Esempi di conversione di unità corretti e impostazioni di valuta predefinite aggiornate per Curaçao e Sint Maarten al fiorino dei Caraibi.",
+      "item4": "Analisi dei grafici migliorata e reso disponibile offline il calcolatore web dopo il primo caricamento riuscito e la configurazione della cache.",
+      "item5": "Le impostazioni del desktop hanno reso i salvataggi più affidabili e hanno corretto il launcher Flatpak.",
+      "item6": "Accesso alla tastiera, contrasto tra temi e layout su schermi stretti migliorati."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Scegli il tema, la lingua e il comportamento chiave dell'app",
       "group": "Preferenze"
+    },
+    "zoom": {
+      "title": "Zoom",
+      "description": "Modifica la dimensione del testo e i controlli in tutta l'app."
     }
   },
   "modes": {

@@ -40,6 +40,15 @@
       "title": "Kiekvienas leidimas, nuo pirmosios versijos iki šiandien.",
       "intro": "„Roselt Calculator“ iš atskiro žiniatinklio skaičiuotuvo pagrindo tapo visiškai supakuota, kelių platformų, kelių kalbų programa. Šiame puslapyje stebima, kas pasikeitė kiekvienoje versijoje nuo 1.0.0 iki 12.2.1.",
       "versionHistory": "Versijų istorija"
+    },
+    "release1221": {
+      "title": "Skaičiavimo pataisymai, naudojimas neprisijungus ir aiškesni išdėstymai",
+      "item1": "Fiksuotas skaičiavimo grandinės, kartojimo lygybės ir atminties atšaukimas standartiniu ir moksliniu režimais.",
+      "item2": "Pataisytas fiksuoto ženklo atšaukimas tarp bazių ir žodžių dydžių programuotojo režimu ir pakoreguoti datos skaičiavimai atsižvelgiant į vasaros laiko pokyčius ir mėnesio ribas.",
+      "item3": "Pataisyti vienetų konvertavimo pavyzdžiai ir atnaujinti numatytieji Kiurasao ir Sint Marteno valiutos nustatymai į Karibų guldeną.",
+      "item4": "Patobulinta diagramų analizė ir žiniatinklio skaičiuotuvas pasiekiamas neprisijungus po pirmo sėkmingo įkėlimo ir talpyklos sąrankos.",
+      "item5": "Padarę darbalaukio nustatymus patikimiau išsaugoma ir pataisoma „Flatpak“ paleidimo priemonė.",
+      "item6": "Patobulinta prieiga prie klaviatūros, skirtingų temų kontrastas ir išdėstymas siauruose ekranuose."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Pasirinkite temą, kalbą ir pagrindinę programos elgseną",
       "group": "Parinktys"
+    },
+    "zoom": {
+      "title": "Mastelio keitimas",
+      "description": "Pakeiskite teksto dydį ir valdiklius visoje programoje."
     }
   },
   "modes": {

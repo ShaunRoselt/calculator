@@ -40,6 +40,15 @@
       "title": "Mọi bản phát hành, từ bản dựng đầu tiên cho đến hôm nay.",
       "intro": "Máy tính Roselt đã phát triển từ nền tảng máy tính web độc lập thành một ứng dụng đa ngôn ngữ, đa nền tảng, được đóng gói đầy đủ trong một loạt các bản phát hành tập trung. Trang này theo dõi những gì đã thay đổi trong mỗi phiên bản từ 1.0.0 đến 12.2.1.",
       "versionHistory": "Lịch sử phiên bản"
+    },
+    "release1221": {
+      "title": "Sửa lỗi tính toán, sử dụng ngoại tuyến và bố cục rõ ràng hơn",
+      "item1": "Đã sửa lỗi chuỗi tính toán, lặp lại bằng và thu hồi bộ nhớ ở chế độ Tiêu chuẩn và Khoa học.",
+      "item2": "Đã sửa lỗi thu hồi giá trị đã ký trên các cơ sở và kích thước từ trong chế độ Lập trình viên, đồng thời sửa các phép tính ngày xung quanh các thay đổi theo tiết kiệm ánh sáng ban ngày và ranh giới tháng.",
+      "item3": "Đã sửa các ví dụ về chuyển đổi đơn vị và cập nhật giá trị mặc định của đơn vị tiền tệ cho Curaçao và Sint Maarten sang guilder Caribe.",
+      "item4": "Cải thiện phân tích biểu đồ và làm cho máy tính web khả dụng ngoại tuyến sau lần thiết lập bộ đệm và tải thành công đầu tiên.",
+      "item5": "Thực hiện cài đặt máy tính để bàn giúp lưu đáng tin cậy hơn và sửa lỗi trình khởi chạy Flatpak.",
+      "item6": "Cải thiện khả năng truy cập bàn phím, độ tương phản giữa các chủ đề và bố cục trên màn hình hẹp."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Chọn chủ đề, ngôn ngữ và hành vi chính của ứng dụng",
       "group": "Tùy chọn"
+    },
+    "zoom": {
+      "title": "Thu phóng",
+      "description": "Thay đổi kích thước văn bản và điều khiển trong toàn bộ ứng dụng."
     }
   },
   "modes": {

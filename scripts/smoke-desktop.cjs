@@ -107,10 +107,11 @@ async function smokeTest() {
         };
         window.dispatchEvent(new Event('gamepadconnected'));
         document.querySelector('[data-action="clear-all"]').click();
-        document.querySelector('[data-action="digit"][data-value="2"]').focus();
       })()`);
       const press = (index) => evaluate(`pressTestGamepad(${index})`);
       const focused = () => evaluate("document.activeElement?.textContent.trim()");
+      await press(13);
+      await evaluate("document.querySelector('[data-action=digit][data-value=\"2\"]').focus()");
       await press(0);
       assert.equal(await focused(), '2', 'Keep focus on the same calculator key after activating it.');
       await press(15);

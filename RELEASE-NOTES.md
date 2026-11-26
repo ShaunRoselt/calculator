@@ -27,6 +27,7 @@ Roselt Calculator is built to cover quick everyday calculations, deeper technica
 - Pan graphs with the right stick.
 - Open Steam’s on-screen keyboard by selecting a text field with a controller where Steam supports the keyboard.
 - Fit the desktop window to smaller displays on first launch.
+- Fixed macOS packaging so Electron’s framework links still work after the app is moved or installed.
 
 ## Version 12.2.1 (26/11/2026)
 

@@ -30,7 +30,7 @@ function copyToFinal(source, finalName) {
   ensureFinalDir();
   const destination = path.join(finalDir, finalName);
   rmrf(destination);
-  fs.cpSync(source, destination, { recursive: true });
+  fs.cpSync(source, destination, { recursive: true, verbatimSymlinks: true });
   return true;
 }
 

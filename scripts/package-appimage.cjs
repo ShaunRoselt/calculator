@@ -19,6 +19,7 @@ const path = require('node:path');
 const os = require('node:os');
 const { copyToFinal } = require('./final-dist.cjs');
 const { runElectronBuilder } = require('./run-electron-builder.cjs');
+const bundleRuntimeLibraries = require('./appimage-runtime-libs.cjs');
 
 const root = path.join(__dirname, '..');
 const distDir = path.join(root, 'dist');
@@ -40,14 +41,12 @@ function makeUncompressed(appImagePath) {
   const mksquashfs = which('mksquashfs');
   const unsquashfs = which('unsquashfs');
   if (!mksquashfs || !unsquashfs) {
-    console.warn('  (squashfs-tools not found; leaving default gzip compression)');
-    return;
+    throw new Error('squashfs-tools is required to bundle the Linux runtime libraries.');
   }
 
   const offset = parseInt(execFileSync(appImagePath, ['--appimage-offset']).toString().trim(), 10);
   if (!Number.isFinite(offset) || offset <= 0) {
-    console.warn('  (could not read AppImage offset; leaving default compression)');
-    return;
+    throw new Error('Could not read the AppImage payload offset.');
   }
 
   const work = fs.mkdtempSync(path.join(os.tmpdir(), 'appimage-repack-'));
@@ -64,6 +63,7 @@ function makeUncompressed(appImagePath) {
 
     // Decompress the payload, then repack uncompressed.
     execFileSync(unsquashfs, ['-d', extractDir, '-no-progress', payloadPath], { stdio: 'ignore' });
+    bundleRuntimeLibraries(extractDir, work);
     execFileSync(mksquashfs, [
       extractDir, newSquash,
       '-noI', '-noD', '-noF', '-noX', // no compression of inodes/data/fragments/xattrs

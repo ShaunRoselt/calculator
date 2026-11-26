@@ -40,6 +40,15 @@
       "title": "Every release, from the first build to today.",
       "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.1.",
       "versionHistory": "Version history"
+    },
+    "release1221": {
+      "title": "SImwI' tI'lu'; rarHa'lu'DI' Qap; leghlu'meH ngeDqu'",
+      "item1": "motlhbogh mIw tej mIw je lo'lu'DI', SImqa'lu'meH, SImtaHlu'meH, qawHaq mI' Suqlu'meH je Qaghmey tI'lu'.",
+      "item2": "ghunmeH mIwDaq mI'mey + − je qawHaqvo' SuqlaHlu'; mI'mey DelmeH mIwmey pIm De' tIq pIm je lo'laHlu'. jaj SImtaHvIS rep tamlu'DI' jar DorDI' je Qaghmey tI'lu'.",
+      "item3": "juvmeH patmey tammeH chovnatlhmey tI'lu'. Curaçao Sint Maarten jeDaq Caribbean guilder 'oH Huch motlh'e'.",
+      "item4": "mI' cha'meH patmey pojmeH mIw Dubta'lu'. wejHa' De' Suqta'DI' 'ej polta'DI', rarHa'lu'bejchugh je Qap web SImwI'.",
+      "item5": "De'wI' pat SeHmeH De' polmeH mIw Dubta'lu'; Flatpak taghmoHwI' tI'lu'.",
+      "item6": "leQmey lo'meH mIw, Doq pIm leghmeH mIw, 'ej jIH langDaq De' cha'meH mIw Dubta'lu'."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Choose the theme, language, and key app behavior",
       "group": "Preferences"
+    },
+    "zoom": {
+      "title": "tInmoH",
+      "description": "De'wI' pat naQDaq mu'mey leQmey je tInmoH pagh machmoH."
     }
   },
   "modes": {

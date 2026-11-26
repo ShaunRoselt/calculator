@@ -40,6 +40,15 @@
       "title": "Every release, from the first build to today.",
       "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.1.",
       "versionHistory": "Version history"
+    },
+    "release1221": {
+      "title": "Utzib'al ri ajilanik, chak man k'o ta conexión, xuquje' utz uwach ri aplicación",
+      "item1": "Xutzirisax ri tz'aqat ajilanik, ri ka'i' mul (=) xuquje' ri uk'utik ri ajilab'al e yakom pa Estandard xuquje' Tzijonel.",
+      "item2": "Xutzirisax ri uk'utik ajilab'al ruk' retal (+ / −) pa taq bases xuquje' unimal palabra pa Ajtz'ib'anel. Xutzirisax xuquje' ri Ajilab'äl q'ij are chi kajalataj ri hora xuquje' pa uk'isb'al ri ik'.",
+      "item3": "Xutzirisax ri taq k'utb'al rech uk'exik unidades. Ri Caribbean guilder are ri pwaq rumal Curaçao xuquje' Sint Maarten.",
+      "item4": "Xutzirisax ri unik'oxik ri Wachib'äl. Ri ajilab'al pa web kakowin kachakunik man k'o ta conexión, are chi xchakun nab'e mul xuquje' xeyak ri archivos.",
+      "item5": "Ri taq ustaw rech escritorio utz kakiyak, xuquje' xutzirisax ri ukemik Flatpak.",
+      "item6": "Xutzirisax ri chak ruk' teclado, ri jalajoj uwach taq temas xuquje' ri ruwach ri aplicación pa taq pantalla e ko'lik."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Choose the theme, language, and key app behavior",
       "group": "Preferences"
+    },
+    "zoom": {
+      "title": "Nimarisaxik",
+      "description": "Tajala' ri unimal ri tz'ib' xuquje' ri taq pitz'b'al pa ronojel ri aplicación."
     }
   },
   "modes": {

@@ -40,6 +40,15 @@
       "title": "Every release, from the first build to today.",
       "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.1.",
       "versionHistory": "Version history"
+    },
+    "release1221": {
+      "title": "ᎤᎵᏍᎩᎠ ᎤᏃᏢᏔᏅᎢ, ᎪᏪᎵ ᎨᏒᎢ ᎠᎴ ᎣᏍᏓ ᎠᎪᏩᏛᏗ",
+      "item1": "ᎣᏏ ᎢᏳᏩᎪᏗ Ꮎ ᏗᎵᏍᎩᎠ ᎤᎾᏓᎵᏍᏛ, = ᏔᎵᏁ ᎠᎴ ᎠᏓᏅᏖᏗ ᏗᎪᏪᎵ ᎤᎵᏍᎩᎠ ᎠᎴ ᎠᏓᏅᏙᎸᎢ ᎤᎵᏍᎩᎠ.",
+      "item2": "ᎣᏏ ᎢᏳᏩᎪᏗ Ꮎ + ᎠᎴ − ᏗᎪᏪᎵ ᏧᏓᎴᏅᏛ ᏗᏎᏍᏗ ᎠᎴ ᎤᏔᎾ ᎠᎴ ᎤᏍᏗ Ꮎ Programmer; ᎠᎴ Ꮎ ᏧᏒᎯᏓ ᎢᎦ ᎤᏁᏟᏴᏍᏔᏅ ᎠᎴ ᎧᎸᎢ ᎤᏍᏆᏂᎪᏗ.",
+      "item3": "ᎣᏏ ᎢᏳᏩᎪᏗ Ꮎ ᎠᏓᎪᎵᏰᏍᏗ ᏧᏓᎴᏅᏛ ᏗᏎᏍᏗ. Curaçao ᎠᎴ Sint Maarten Ꮎ Caribbean guilder ᎠᏕᎳ ᎠᏂᎬᏂᎯ.",
+      "item4": "ᎣᏍᏓ ᎠᎪᏩᏛᏗ Ꮎ ᏗᎪᏪᎵ. Ꮎ ᎤᎵᏍᎩᎠ ᎠᎦᏎᏍᏗ ᎤᎬᏫᏳᎯ ᎨᏒᎢ ᏚᏓᏂᎸᏨᎢ ᏗᎪᏪᎵ; ᎿᏉ ᎤᏍᏆᎸᎲ ᎬᏂᏛᏗ ᎠᎴ ᎠᏎᎸᎲᎢ ᏗᎪᏪᎵ.",
+      "item5": "ᎣᏍᏓ ᏗᎪᏪᎵ ᎠᏎᎸᎲᎢ ᎠᎴ ᎣᏏ ᎢᏳᏩᎪᏗ Ꮎ Flatpak ᎠᎴᏅᏗ.",
+      "item6": "ᎣᏍᏓ ᏗᏓᏂᎸᏗ, ᎣᏍᏓ ᎤᏓᎷᎸᎢ ᏧᏓᎴᏅᏛ ᎠᎴ ᎣᏍᏓ ᎠᎪᏩᏛᏗ ᎤᏍᏗ ᎤᎪᏩᏛᏗ."
     }
   },
   "landingPage": {
@@ -398,6 +407,10 @@
     "preferences": {
       "description": "Choose the theme, language, and key app behavior",
       "group": "Preferences"
+    },
+    "zoom": {
+      "title": "ᎠᎵᎠᏰᎸ",
+      "description": "ᎯᏁᏟᏴᏍᏓ ᎤᏔᎾ ᎠᎴ ᎤᏍᏗ ᎤᏓᎷᎸ ᎧᏃᎮᏍᎩ ᎠᎴ ᏗᎵᏍᏆᏗᏍᏗ."
     }
   },
   "modes": {

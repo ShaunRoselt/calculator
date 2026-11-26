@@ -49,6 +49,15 @@
       "item4": "Dañu gëna yombal jàngat graphe bi, ba noppi def kalkulatëru web bi nekk ci offline ginaaw biñu njëkkee sarse ak tabb cache.",
       "item5": "Defar nañu jekkal biro bi gëna wóor, ba noppi defar lanceur Flatpak bi.",
       "item6": "Njëfandikoo klaweer bi gëna baax, wuute ci theme yi, ak jëmmal ci ekraŋ yu sew yi."
+    },
+    "release1222": {
+      "title": "Kontrolu Gamepad ak palanteer yu ndaw",
+      "item1": "Demal ci anam yi, mënu yi ak jekkal yi ci kalkulatër bi ak gamepad bi. Jëfandikool D-pad wala batoŋu cammoy bi ngir toxal, A ngir tànn, ak B ngir dellu ginaaw.",
+      "item2": "Deel bàyyi sa xel ci benn butoŋu kalkulatër bi su afichage bi di yeesal, nga dellusi ci doxalal bi njëkk su menu bi tëjoo.",
+      "item3": "Gaafi panorama ak batoŋu ndeyjoor.",
+      "item4": "Ubbi klaweer Steam ci ekraŋ bi nga tànnee benn barabu bind ak benn njiit fu Steam jàppale klaweer bi.",
+      "item5": "Defar palanteeru biro bi ci monitër yu gëna ndaw ci ubbite bu njëkk bi.",
+      "item6": "Dañu defar emballage macOS suko defee lëkkalekaayu kaadar Electron di dox ba leegi ginaaw bi ñu toxalee wala samp app bi."
     }
   },
   "landingPage": {

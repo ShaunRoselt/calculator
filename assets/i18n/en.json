@@ -65,6 +65,15 @@
     }
   },
   "updatesPage": {
+    "release1222": {
+      "title": "Gamepad controls and smaller desktop windows",
+      "item1": "Navigate calculator modes, menus, and settings with a gamepad. Use the D-pad or left stick to move, A to select, and B to go back.",
+      "item2": "Keep focus on the same calculator key when the display updates, and return to the previous control when a menu closes.",
+      "item3": "Pan graphs with the right stick.",
+      "item4": "Open Steam’s on-screen keyboard by selecting a text field with a controller where Steam supports the keyboard.",
+      "item5": "Fit the desktop window to smaller displays on first launch.",
+      "item6": "Fixed macOS packaging so Electron’s framework links still work after the app is moved or installed."
+    },
     "release1221": {
       "title": "Calculation fixes, offline use, and clearer layouts",
       "item1": "Fixed calculation chaining, repeat equals, and memory recall in Standard and Scientific modes.",

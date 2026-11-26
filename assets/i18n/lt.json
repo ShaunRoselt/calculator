@@ -49,6 +49,15 @@
       "item4": "Patobulinta diagramų analizė ir žiniatinklio skaičiuotuvas pasiekiamas neprisijungus po pirmo sėkmingo įkėlimo ir talpyklos sąrankos.",
       "item5": "Padarę darbalaukio nustatymus patikimiau išsaugoma ir pataisoma „Flatpak“ paleidimo priemonė.",
       "item6": "Patobulinta prieiga prie klaviatūros, skirtingų temų kontrastas ir išdėstymas siauruose ekranuose."
+    },
+    "release1222": {
+      "title": "Žaidimų pultelio valdikliai ir mažesni darbalaukio langai",
+      "item1": "Naršykite skaičiuotuvo režimus, meniu ir nustatymus naudodami žaidimų pultą. Norėdami judėti, naudokite D klaviatūrą arba kairę svirtį, A norėdami pasirinkti ir B grįžti atgal.",
+      "item2": "Kai ekranas atnaujinamas, sutelkite dėmesį į tą patį skaičiuotuvo klavišą ir grįžkite į ankstesnį valdiklį, kai meniu uždaromas.",
+      "item3": "Patraukite diagramas dešine svirtimi.",
+      "item4": "Atidarykite Steam ekrano klaviatūrą pasirinkę teksto lauką su valdikliu, kuriame Steam palaiko klaviatūrą.",
+      "item5": "Pirmą kartą paleidus, darbalaukio langą pritaikykite prie mažesnių ekranų.",
+      "item6": "Ištaisėme macOS paketą. Electron sistemos nuorodos dabar veikia, kai perkeliate arba įdiegiate programą."
     }
   },
   "landingPage": {

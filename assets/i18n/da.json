@@ -49,6 +49,15 @@
       "item4": "Forbedret grafanalyse og gjort webberegneren tilgængelig offline efter den første vellykkede indlæsning og cache-opsætning.",
       "item5": "Lavede skrivebordsindstillinger sparer mere pålidelige og fiksede Flatpak-starteren.",
       "item6": "Forbedret tastaturadgang, kontrast på tværs af temaer og layout på smalle skærme."
+    },
+    "release1222": {
+      "title": "Gamepad-kontroller og mindre skrivebordsvinduer",
+      "item1": "Naviger i lommeregnertilstande, menuer og indstillinger med en gamepad. Brug D-pad eller venstre pind til at flytte, A for at vælge og B for at gå tilbage.",
+      "item2": "Hold fokus på den samme lommeregnertast, når skærmen opdateres, og vend tilbage til den forrige kontrol, når en menu lukkes.",
+      "item3": "Panorer grafer med højre pind.",
+      "item4": "Åbn Steams skærmtastatur ved at vælge et tekstfelt med en controller, hvor Steam understøtter tastaturet.",
+      "item5": "Tilpas skrivebordsvinduet til mindre skærme ved første lancering.",
+      "item6": "Repareret macOS-emballage, så Electrons framework-links stadig fungerer, efter at appen er flyttet eller installeret."
     }
   },
   "landingPage": {

@@ -49,6 +49,15 @@
       "item4": "Tlhahlobo e ntlafalitsoeng ea kerafo 'me ea etsa hore sebali sa tepo se fumanehe kantle ho Marang-rang ka mor'a ho kenya tšebetsong le ho seta cache.",
       "item5": "Litlhophiso tse entsoeng ka komporo li boloka tse tšepahalang le ho lokisa sebui sa Flatpak.",
       "item6": "Kakaretso ea ho kena ho keyboard, phapang pakeng tsa theme, le meralo ho likirini tse tšesaane."
+    },
+    "release1222": {
+      "title": "Litaolo tsa gamepad le lifensetere tse nyane tsa komporo",
+      "item1": "Fumana mekhoa ea ho bala, manane, le litlhophiso ka papali ea papali. Sebelisa D-pad kapa thupa e letšehali ho tsamaea, A ho khetha, le B ho khutlela morao.",
+      "item2": "Lula u tsepamisitse maikutlo ho senotlolo sa sebali se ts'oanang ha ponts'o e nchafatsoa, ​​'me u khutlele taolong e fetileng ha lethathamo le koaloa.",
+      "item3": "Batla kerafo ka thupa e nepahetseng.",
+      "item4": "Bula keyboard ea Steam e skrineng ka ho khetha karolo ea mongolo e nang le molaoli moo Steam e tšehetsang keyboard.",
+      "item5": "Lokisa fensetere ea komporo ho libono tse nyane ha e qala.",
+      "item6": "Sephutheloana se tsitsitseng sa macOS hore lihokelo tsa moralo oa Electron li ntse li sebetsa ka mor'a hore sesebelisoa se tlosoe kapa ho kenngoe."
     }
   },
   "landingPage": {

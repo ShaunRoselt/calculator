@@ -49,6 +49,15 @@
       "item4": "S'ha millorat l'anàlisi de gràfics i es va fer que la calculadora web estigui disponible fora de línia després de la primera càrrega correcta i la configuració de la memòria cau.",
       "item5": "La configuració de l'escriptori feta desa més fiable i s'ha corregit el llançador de Flatpak.",
       "item6": "Accés al teclat, contrast entre temes i dissenys millorats en pantalles estretes."
+    },
+    "release1222": {
+      "title": "Controls del gamepad i finestres d'escriptori més petites",
+      "item1": "Navega pels modes, els menús i la configuració de la calculadora amb un gamepad. Utilitzeu el teclat D o el stick esquerre per moure's, A per seleccionar i B per tornar enrere.",
+      "item2": "Mantingueu el focus en la mateixa tecla de la calculadora quan la pantalla s'actualitzi i torneu al control anterior quan es tanqui un menú.",
+      "item3": "Desplaça els gràfics amb el stick dret.",
+      "item4": "Obre el teclat en pantalla de Steam seleccionant un camp de text amb un controlador on Steam admet el teclat.",
+      "item5": "Ajusta la finestra de l'escriptori a pantalles més petites el primer llançament.",
+      "item6": "S'ha corregit l'embalatge de macOS perquè els enllaços del marc d'Electron encara funcionin després de moure o instal·lar l'aplicació."
     }
   },
   "landingPage": {

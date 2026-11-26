@@ -49,6 +49,15 @@
       "item4": "Täiustatud graafikute analüüsi ja muutis veebikalkulaatori võrguühenduseta kättesaadavaks pärast esimest edukat laadimist ja vahemälu seadistamist.",
       "item5": "Tehtud töölauaseaded salvestavad töökindlamaks ja parandavad Flatpaki käivitusprogrammi.",
       "item6": "Parem juurdepääs klaviatuurile, erinevate teemade kontrastsus ja paigutus kitsastel ekraanidel."
+    },
+    "release1222": {
+      "title": "Mängupuldi juhtnupud ja väiksemad töölauaaknad",
+      "item1": "Navigeerige mängupuldi abil kalkulaatori režiimides, menüüdes ja seadetes. Kasutage liigutamiseks D-padi või vasakut nuppu, valimiseks A ja tagasi liikumiseks B.",
+      "item2": "Ekraani värskendamisel keskenduge samale kalkulaatori klahvile ja naaske menüü sulgemisel eelmisele juhtelemendile.",
+      "item3": "Paneerige graafikuid parema pulgaga.",
+      "item4": "Avage Steami ekraaniklaviatuur, valides kontrolleriga tekstivälja, kus Steam klaviatuuri toetab.",
+      "item5": "Esimesel käivitamisel sobitage töölauaaken väiksemate kuvadega.",
+      "item6": "Parandasime paketi macOS. Raamistiku lingid Electron töötavad nüüd pärast rakenduse teisaldamist või installimist."
     }
   },
   "landingPage": {

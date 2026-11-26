@@ -41,6 +41,15 @@
       "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.2.",
       "versionHistory": "Version history"
     },
+    "release1222": {
+      "title": "Gamepad controls an smaaer desktap windaes",
+      "item1": "Fynd yer wey throu the calculator modes, menus an settins wi a gamepad. Uise the D-pad or left stick tae muive, A tae pick, an B tae gang back.",
+      "item2": "Haud focus on the same calculator key whan the display chynges, an gang back tae the last control whan a menu steeks.",
+      "item3": "Pan graphs wi the richt stick.",
+      "item4": "Pick a text field wi yer controller tae open Steam’s on-screen keyboard whaur Steam supports it.",
+      "item5": "Fit the desktap windae tae smaaer screens the first time ye stert the app.",
+      "item6": "Fixed macOS packagin sae Electron’s framewark links aye wirk efter ye muive or install the app."
+    },
     "release1221": {
       "title": "Calculation fixes, offline uise, an clearer layouts",
       "item1": "Fixed chainin calculations, repeatin equals, an mindin stored values in Standard an Scientific modes.",

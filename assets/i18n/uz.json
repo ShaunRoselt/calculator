@@ -49,6 +49,15 @@
       "item4": "Grafik tahlili yaxshilandi va veb-kalkulyator birinchi muvaffaqiyatli yuklash va kesh sozlamalaridan keyin oflayn rejimda foydalanish mumkin bo‘ldi.",
       "item5": "Ish stoli sozlamalari yanada ishonchli saqlaydi va Flatpak ishga tushirgichi tuzatildi.",
       "item6": "Klaviaturadan foydalanish yaxshilandi, mavzular boʻyicha kontrast va tor ekranlardagi tartiblar."
+    },
+    "release1222": {
+      "title": "Gamepad boshqaruvlari va kichikroq ish stoli oynalari",
+      "item1": "Gympad yordamida kalkulyator rejimlari, menyulari va sozlamalari bo‘yicha harakatlaning. Harakat qilish uchun D-pad yoki chap tayoqdan, tanlash uchun A va orqaga qaytish uchun B dan foydalaning.",
+      "item2": "Displey yangilanganda bir xil kalkulyator tugmachasiga e'tibor qarating va menyu yopilganda avvalgi boshqaruvga qayting.",
+      "item3": "Grafiklarni oʻng tayoq bilan siljiting.",
+      "item4": "Steam klaviaturani qoʻllab-quvvatlaydigan kontrollerli matn maydonini tanlash orqali Steam ekrandagi klaviaturasini oching.",
+      "item5": "Birinchi ishga tushirishda ish stoli oynasini kichikroq displeylarga moslang.",
+      "item6": "macOS paketini tuzatdik. Electron ramka havolalari endi ilovani koʻchirganingiz yoki oʻrnatganingizdan keyin ishlaydi."
     }
   },
   "landingPage": {

@@ -49,6 +49,15 @@
       "item4": "Verbeterde grafiekanalyse en maakte de webcalculator offline beschikbaar na de eerste succesvolle laad- en cache-installatie.",
       "item5": "De gemaakte bureaubladinstellingen zorgen voor een betrouwbaardere opslag en hebben het Flatpak-opstartprogramma gerepareerd.",
       "item6": "Verbeterde toetsenbordtoegang, contrast tussen thema's en lay-outs op smalle schermen."
+    },
+    "release1222": {
+      "title": "Gamepadbediening en kleinere bureaubladvensters",
+      "item1": "Navigeer door rekenmachinemodi, menu's en instellingen met een gamepad. Gebruik het navigatiepad of de linker joystick om te bewegen, A om te selecteren en B om terug te gaan.",
+      "item2": "Houd de focus op dezelfde rekenmachinetoets wanneer het scherm wordt bijgewerkt en keer terug naar het vorige besturingselement wanneer een menu wordt gesloten.",
+      "item3": "Pan grafieken met de rechter joystick.",
+      "item4": "Open het schermtoetsenbord van Steam door een tekstveld te selecteren met een controller waarbij Steam het toetsenbord ondersteunt.",
+      "item5": "Pas het bureaubladvenster bij de eerste keer opstarten aan op kleinere schermen.",
+      "item6": "We hebben het macOS-pakket gerepareerd. De Electron-frameworklinks werken nu nadat u de app hebt verplaatst of geïnstalleerd."
     }
   },
   "landingPage": {

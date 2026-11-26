@@ -49,6 +49,15 @@
       "item4": "Grafikoen analisia hobetu da eta web-kalkulagailua lineaz kanpo erabilgarri jarri da lehen karga eta cache konfiguratu ondoren.",
       "item5": "Mahaigaineko ezarpenek fidagarriagoak gordetzen dituzte eta Flatpak abiarazlea konpondu dute.",
       "item6": "Teklatuaren sarbidea, gaien arteko kontrastea eta diseinuak pantaila estuetan hobetu dira."
+    },
+    "release1222": {
+      "title": "Gamepad kontrolak eta mahaigaineko leiho txikiagoak",
+      "item1": "Nabigatu kalkulagailuaren moduetan, menuetan eta ezarpenetan joko-teklatu batekin. Erabili D tekla edo ezkerreko tekla mugitzeko, A hautatzeko eta B atzera egiteko.",
+      "item2": "Mantendu fokua kalkulagailuaren tekla berean pantaila eguneratzen denean, eta itzuli aurreko kontrolera menu bat ixten denean.",
+      "item3": "Eskuineko makila erabiliz grafikoak mugitu.",
+      "item4": "Ireki Steam-en pantailako teklatua Steam-ek teklatua onartzen duen kontrolagailu batekin testu-eremu bat hautatuta.",
+      "item5": "Egokitu mahaigaineko leihoa pantaila txikiagoetara abiaraztean.",
+      "item6": "macOS paketea konpondu dugu. Electron marko-estekek aplikazioa mugitu edo instalatu ondoren funtzionatzen dute orain."
     }
   },
   "landingPage": {

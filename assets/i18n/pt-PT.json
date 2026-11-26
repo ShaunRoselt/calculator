@@ -49,6 +49,15 @@
       "item4": "Análise gráfica aprimorada e disponibilização off-line da calculadora da Web após o primeiro carregamento bem-sucedido e configuração de cache.",
       "item5": "As configurações da área de trabalho ficam mais confiáveis ​​e o inicializador Flatpak foi corrigido.",
       "item6": "Melhor acesso ao teclado, contraste entre temas e layouts em telas estreitas."
+    },
+    "release1222": {
+      "title": "Controles do gamepad e janelas menores na área de trabalho",
+      "item1": "Navegue pelos modos, menus e configurações da calculadora com um gamepad. Use o direcional ou o controle esquerdo para mover, A para selecionar e B para voltar.",
+      "item2": "Mantenha o foco na mesma tecla da calculadora quando o display for atualizado e retorne ao controle anterior quando um menu fechar.",
+      "item3": "Gráficos panorâmicos com o controle direito.",
+      "item4": "Abra o teclado na tela do Steam selecionando um campo de texto com um controlador onde o Steam suporta o teclado.",
+      "item5": "Ajuste a janela da área de trabalho a telas menores na primeira inicialização.",
+      "item6": "Corrigido o empacotamento do macOS para que os links da estrutura do Electron ainda funcionem após o aplicativo ser movido ou instalado."
     }
   },
   "landingPage": {

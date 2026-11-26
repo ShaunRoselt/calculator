@@ -49,6 +49,15 @@
       "item4": "Ulepszona analiza wykresów i udostępnienie kalkulatora internetowego w trybie offline po pierwszym pomyślnym załadowaniu i skonfigurowaniu pamięci podręcznej.",
       "item5": "Wprowadzono bardziej niezawodne ustawienia pulpitu i naprawiono program uruchamiający Flatpak.",
       "item6": "Poprawiony dostęp za pomocą klawiatury, kontrast między motywami i układy na wąskich ekranach."
+    },
+    "release1222": {
+      "title": "Sterowanie gamepadem i mniejsze okna pulpitu",
+      "item1": "Nawiguj po trybach kalkulatora, menu i ustawieniach za pomocą gamepada. Użyj pada kierunkowego lub lewego drążka, aby się poruszać, A, aby wybrać i B, aby wrócić.",
+      "item2": "Zatrzymaj ten sam klawisz kalkulatora podczas aktualizacji wyświetlacza i wróć do poprzedniego elementu sterującego po zamknięciu menu.",
+      "item3": "Przesuwaj wykresy prawym drążkiem.",
+      "item4": "Otwórz klawiaturę ekranową Steam, wybierając pole tekstowe za pomocą kontrolera, na którym Steam obsługuje klawiaturę.",
+      "item5": "Przy pierwszym uruchomieniu dopasuj okno pulpitu do mniejszych wyświetlaczy.",
+      "item6": "Naprawiono opakowanie macOS, dzięki czemu łącza do platformy Electron nadal działają po przeniesieniu lub zainstalowaniu aplikacji."
     }
   },
   "landingPage": {

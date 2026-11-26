@@ -49,6 +49,15 @@
       "item4": "Tshekatsheko ya kerafo e e tokafaditsweng le go dira gore khalekhuleita ya webo e nne teng kwa ntle ga inthanete morago ga go laisa le go rulaganya polokelotshedimosetso la ntlha ka katlego.",
       "item5": "E dirile gore dipeakanyo tsa desekethopo di boloke tse di ikanyegang le go baakanya setlhomo sa Flatpak.",
       "item6": "Phitlhelelo e e tokafaditsweng ya khiiboto, pharologano mo dithitokgannyeng tsotlhe, le dithulaganyo mo diskrining tse di tshesane."
+    },
+    "release1222": {
+      "title": "Ditaolo tsa gamepad le difensetere tse dinnye tsa desktop",
+      "item1": "Dirisa gamepad go tsamaya mo mekgweng ya sebadi, mo dimenung le mo ditlhophisong. Dirisa D-pad kgotsa thobane ya molema go tsamaya, A go tlhopha le B go boela morago.",
+      "item2": "Boloka konopo e e tlhophilweng ya sebadi fa se se bontshiwang se fetoga. Boela kwa taolong ya pele fa menu e tswalwa.",
+      "item3": "Sutisa digerafe ka thobane ya moja.",
+      "item4": "Tlhopha lefelo la go kwala ka selaodi go bula khiiboto ya Steam mo sekirining fa Steam e e tshegetsa.",
+      "item5": "Lekanya fensetere ya desktop le dikirini tse dinnye fa o bula app la ntlha.",
+      "item6": "Sephuthelo sa macOS se baakantswe gore dikgokagano tsa Electron di nne di dira fa app e fudusitswe kgotsa e tsentswe."
     }
   },
   "landingPage": {

@@ -49,6 +49,15 @@
       "item4": "Analisi dei grafici migliorata e reso disponibile offline il calcolatore web dopo il primo caricamento riuscito e la configurazione della cache.",
       "item5": "Le impostazioni del desktop hanno reso i salvataggi più affidabili e hanno corretto il launcher Flatpak.",
       "item6": "Accesso alla tastiera, contrasto tra temi e layout su schermi stretti migliorati."
+    },
+    "release1222": {
+      "title": "Controlli del gamepad e finestre del desktop più piccole",
+      "item1": "Naviga tra le modalità, i menu e le impostazioni della calcolatrice con un gamepad. Usa il tasto direzionale o la levetta sinistra per muoverti, A per selezionare e B per tornare indietro.",
+      "item2": "Mantieni il focus sullo stesso tasto della calcolatrice quando il display si aggiorna e torna al controllo precedente quando un menu si chiude.",
+      "item3": "Esegui la panoramica dei grafici con la levetta destra.",
+      "item4": "Apri la tastiera su schermo di Steam selezionando un campo di testo con un controller in cui Steam supporta la tastiera.",
+      "item5": "Adatta la finestra del desktop a display più piccoli al primo avvio.",
+      "item6": "Risolto il problema con il packaging di macOS in modo che i collegamenti al framework di Electron continuino a funzionare dopo che l'app è stata spostata o installata."
     }
   },
   "landingPage": {

@@ -49,6 +49,15 @@
       "item4": "Kunonosora ibishushanyo mbonera no gutuma calculatrice y'urubuga iboneka kumurongo nyuma yumutwaro wambere watsinze hamwe na cache gushiraho.",
       "item5": "Igenamiterere rya desktop rizigama cyane kandi ryizewe rya Flatpak.",
       "item6": "Kunoza uburyo bwa enterineti, itandukaniro kumutwe, hamwe nimiterere kuri ecran nto."
+    },
+    "release1222": {
+      "title": "Igenzura rya Gamepad na Windows ntoya ya desktop",
+      "item1": "Kugenda muburyo bwa calculatrice, menus, hamwe nigenamiterere hamwe na gamepad. Koresha D-pad cyangwa ibumoso kugirango wimuke, A guhitamo, na B kugirango usubire inyuma.",
+      "item2": "Komeza kwibanda kumfunguzo imwe ya calculatrice mugihe iyerekanwa rigezweho, hanyuma usubire kugenzura mbere iyo menu ifunze.",
+      "item3": "Igishushanyo cyerekana inkoni iburyo.",
+      "item4": "Fungura Steam kuri clavier ya ecran muguhitamo umurima wanditse hamwe na mugenzuzi aho Steam ishyigikira clavier.",
+      "item5": "Huza idirishya rya desktop kuri disikuru ntoya kuri launch ya mbere.",
+      "item6": "Gupakira neza macOS kugirango amahuriro ya Electron aracyakora nyuma yuko porogaramu yimuwe cyangwa yashizwemo."
     }
   },
   "landingPage": {

@@ -49,6 +49,15 @@
       "item4": "Izboljšana analiza grafov in spletni kalkulator je na voljo brez povezave po prvem uspešnem nalaganju in nastavitvi predpomnilnika.",
       "item5": "Izdelane nastavitve namizja prihranijo zanesljivejše in popravijo zaganjalnik Flatpak.",
       "item6": "Izboljšan dostop do tipkovnice, kontrast med temami in postavitve na ozkih zaslonih."
+    },
+    "release1222": {
+      "title": "Kontrole igralne ploščice in manjša okna namizja",
+      "item1": "Z igralno ploščico krmarite po načinih, menijih in nastavitvah kalkulatorja. Uporabite D-pad ali levo palico za premikanje, A za izbiro in B za vrnitev nazaj.",
+      "item2": "Ohranite fokus na isti tipki kalkulatorja, ko se zaslon posodobi, in se vrnite na prejšnji kontrolnik, ko se zapre meni.",
+      "item3": "Pomikanje grafov z desno palico.",
+      "item4": "Odprite Steamovo zaslonsko tipkovnico tako, da izberete besedilno polje s krmilnikom, kjer Steam podpira tipkovnico.",
+      "item5": "Prilagodi okno namizja manjšim zaslonom ob prvem zagonu.",
+      "item6": "Popravljena embalaža macOS, tako da Electronove okvirne povezave še vedno delujejo, ko je aplikacija premaknjena ali nameščena."
     }
   },
   "landingPage": {

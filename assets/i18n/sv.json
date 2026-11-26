@@ -49,6 +49,15 @@
       "item4": "Förbättrad grafanalys och gjorde webbräknaren tillgänglig offline efter den första lyckade laddningen och cachekonfigurationen.",
       "item5": "Gjorda skrivbordsinställningar sparar mer pålitlig och fixade Flatpak-startprogrammet.",
       "item6": "Förbättrad tangentbordsåtkomst, kontrast mellan teman och layouter på smala skärmar."
+    },
+    "release1222": {
+      "title": "Gamepad-kontroller och mindre skrivbordsfönster",
+      "item1": "Navigera i kalkylatorlägen, menyer och inställningar med en gamepad. Använd D-pad eller vänster spak för att flytta, A för att välja och B för att gå tillbaka.",
+      "item2": "Behåll fokus på samma kalkylatorknapp när skärmen uppdateras och återgå till föregående kontroll när en meny stängs.",
+      "item3": "Panorera grafer med höger spak.",
+      "item4": "Öppna Steams tangentbord på skärmen genom att välja ett textfält med en kontroller där Steam stöder tangentbordet.",
+      "item5": "Anpassa skrivbordsfönstret till mindre skärmar vid första start.",
+      "item6": "Fixat macOS-paketering så att Electrons ramverkslänkar fortfarande fungerar efter att appen har flyttats eller installerats."
     }
   },
   "landingPage": {

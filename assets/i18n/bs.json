@@ -49,6 +49,15 @@
       "item4": "Poboljšana analiza grafikona i web kalkulator je dostupan van mreže nakon prvog uspješnog učitavanja i podešavanja keša.",
       "item5": "Urađene postavke radne površine čuvaju pouzdanije i popravljen Flatpak pokretač.",
       "item6": "Poboljšan pristup tastaturi, kontrast između tema i rasporedi na uskim ekranima."
+    },
+    "release1222": {
+      "title": "Kontrole za gamepad i manji prozori na radnoj površini",
+      "item1": "Navigirajte režimima kalkulatora, menijima i postavkama pomoću gamepada. Koristite D-pad ili lijevi štap za kretanje, A za odabir i B za povratak.",
+      "item2": "Zadržite fokus na istom tasteru kalkulatora kada se ekran ažurira i vratite se na prethodnu kontrolu kada se meni zatvori.",
+      "item3": "Pomerajte grafikone desnim štapićem.",
+      "item4": "Otvorite Steam-ovu tastaturu na ekranu odabirom tekstualnog polja s kontrolerom gdje Steam podržava tastaturu.",
+      "item5": "Postavite prozor radne površine na manje ekrane pri prvom pokretanju.",
+      "item6": "Popravljeno macOS pakovanje tako da Electron-ove veze okvira i dalje rade nakon premještanja ili instaliranja aplikacije."
     }
   },
   "landingPage": {

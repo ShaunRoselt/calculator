@@ -49,6 +49,15 @@
       "item4": "Analisis graf yang dipertingkatkan dan menjadikan kalkulator web tersedia di luar talian selepas pemuatan pertama yang berjaya dan persediaan cache.",
       "item5": "Tetapan desktop yang dibuat menjimatkan lebih dipercayai dan membetulkan pelancar Flatpak.",
       "item6": "Akses papan kekunci dipertingkat, kontras merentas tema dan reka letak pada skrin sempit."
+    },
+    "release1222": {
+      "title": "Kawalan pad permainan dan tetingkap desktop yang lebih kecil",
+      "item1": "Navigasi mod kalkulator, menu dan tetapan dengan pad permainan. Gunakan pad D atau kayu kiri untuk bergerak, A untuk memilih dan B untuk kembali.",
+      "item2": "Teruskan fokus pada kekunci kalkulator yang sama apabila paparan dikemas kini dan kembali ke kawalan sebelumnya apabila menu ditutup.",
+      "item3": "Sorot graf dengan kayu yang betul.",
+      "item4": "Buka papan kekunci pada skrin Steam dengan memilih medan teks dengan pengawal yang Steam menyokong papan kekunci.",
+      "item5": "Pasang tetingkap desktop pada paparan yang lebih kecil pada pelancaran pertama.",
+      "item6": "Pembungkusan macOS telah diperbaiki supaya pautan rangka kerja Electron masih berfungsi selepas apl dialihkan atau dipasang."
     }
   },
   "landingPage": {

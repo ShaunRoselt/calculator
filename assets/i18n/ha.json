@@ -49,6 +49,15 @@
       "item4": "Ingantacciyar nazarin jadawali kuma an samar da kalkuletawar gidan yanar gizo a layi ba tare da layi ba bayan nasarar farko da saitin cache.",
       "item5": "Saitunan tebur da aka ƙera yana adana ƙarin abin dogaro da gyarawa mai ƙaddamar da Flatpak.",
       "item6": "Ingantacciyar hanyar shiga madannai, bambanci tsakanin jigogi, da shimfidu akan kunkuntar fuska."
+    },
+    "release1222": {
+      "title": "Abubuwan sarrafa faifan wasan da ƙananan windows tebur",
+      "item1": "Kewaya hanyoyin lissafi, menus, da saituna tare da faifan wasan. Yi amfani da D-pad ko sandar hagu don motsawa, A don zaɓar, da B don komawa baya.",
+      "item2": "Ci gaba da mai da hankali kan maɓallin ƙididdiga iri ɗaya lokacin da nunin ya sabunta, kuma komawa ga ikon da ya gabata lokacin da menu ya rufe.",
+      "item3": "Kunna jadawali tare da sandar dama.",
+      "item4": "Buɗe madannin allo na Steam ta zaɓi filin rubutu tare da mai sarrafawa inda Steam ke goyan bayan madannai.",
+      "item5": "Daidaita taga tebur zuwa ƙaramin nuni a farkon ƙaddamarwa.",
+      "item6": "Kafaffen fakitin macOS don haka hanyoyin haɗin gwiwar Electron suna aiki bayan an motsa ko shigar da app."
     }
   },
   "landingPage": {

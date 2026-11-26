@@ -49,6 +49,15 @@
       "item4": "Parannettu kaavioanalyysi ja verkkolaskimen käyttö offline-tilassa ensimmäisen onnistuneen latauksen ja välimuistin asennuksen jälkeen.",
       "item5": "Työpöytäasetukset säästävät luotettavammin ja korjasivat Flatpak-käynnistimen.",
       "item6": "Parannettu näppäimistön käyttö, teemojen kontrasti ja asettelut kapeilla näytöillä."
+    },
+    "release1222": {
+      "title": "Peliohjaimen ohjaimet ja pienemmät työpöytäikkunat",
+      "item1": "Siirry laskimen tiloissa, valikoissa ja asetuksissa peliohjaimella. Käytä D-padia tai vasenta sauvaa liikkuaksesi, A valitaksesi ja B palataksesi takaisin.",
+      "item2": "Keskity samaan laskimen näppäimeen, kun näyttö päivittyy, ja palaa edelliseen säätimeen, kun valikko sulkeutuu.",
+      "item3": "Panoroi kaavioita oikealla kepillä.",
+      "item4": "Avaa Steamin näyttönäppäimistö valitsemalla ohjaimella tekstikenttä, jossa Steam tukee näppäimistöä.",
+      "item5": "Sovita työpöytäikkuna pienempiin näyttöihin ensimmäisen käynnistyksen yhteydessä.",
+      "item6": "Korjasimme paketin macOS. Electron-kehyslinkit toimivat nyt, kun olet siirtänyt tai asentanut sovelluksen."
     }
   },
   "landingPage": {

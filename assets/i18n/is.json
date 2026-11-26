@@ -49,6 +49,15 @@
       "item4": "Bætti línuritsgreiningu og gerði vefreiknivélina aðgengilega án nettengingar eftir fyrstu heppnuðu hleðsluna og skyndiminni.",
       "item5": "Skoðaðar skjáborðsstillingar spara áreiðanlegri og lagfærðu Flatpak ræsiforritið.",
       "item6": "Bættur lyklaborðsaðgangur, andstæða þemu og útlit á þröngum skjám."
+    },
+    "release1222": {
+      "title": "Stýringar leikjatölvunnar og minni skjáborðsgluggar",
+      "item1": "Villtu um stillingar, valmyndir og stillingar reiknivélar með spilaborði. Notaðu D-púðann eða vinstri stöngina til að færa, A til að velja og B til að fara til baka.",
+      "item2": "Haltu fókusnum á sama reiknivélartakkann þegar skjárinn uppfærist og farðu aftur í fyrri stjórn þegar valmynd lokar.",
+      "item3": "Snúðu línurit með hægri stönginni.",
+      "item4": "Opnaðu Steam skjályklaborðið með því að velja textareit með stýringu þar sem Steam styður lyklaborðið.",
+      "item5": "Settu skjáborðsgluggann á smærri skjái við fyrstu ræsingu.",
+      "item6": "Við laguðum macOS pakkann. Electron rammatenglar virka núna eftir að þú færð eða setur upp forritið."
     }
   },
   "landingPage": {

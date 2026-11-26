@@ -49,6 +49,15 @@
       "item4": "Grafik analizi iyileştirildi ve ilk başarılı yükleme ve önbellek kurulumundan sonra web hesap makinesi çevrimdışı kullanılabilir hale getirildi.",
       "item5": "Masaüstü ayarları, kaydetme işlemlerini daha güvenilir hale getirdi ve Flatpak başlatıcısını düzeltti.",
       "item6": "Klavye erişimi, temalar arası kontrast ve dar ekranlardaki düzenler iyileştirildi."
+    },
+    "release1222": {
+      "title": "Oyun kumandası kontrolleri ve daha küçük masaüstü pencereleri",
+      "item1": "Bir oyun kumandasıyla hesap makinesi modlarında, menülerinde ve ayarlarında gezinin. Hareket etmek için D-pad'i veya sol çubuğu, seçmek için A'yı ve geri dönmek için B'yi kullanın.",
+      "item2": "Ekran güncellendiğinde aynı hesap makinesi tuşuna odaklanın ve bir menü kapatıldığında önceki kontrole dönün.",
+      "item3": "Sağ çubukla grafikleri kaydırın.",
+      "item4": "Steam'in klavyeyi desteklediği kontrol cihazının bulunduğu bir metin alanı seçerek Steam'in ekran klavyesini açın.",
+      "item5": "İlk başlatmada masaüstü penceresini daha küçük ekranlara sığdırın.",
+      "item6": "macOS paketini düzelttik. Electron çerçeve bağlantıları artık uygulamayı taşıdıktan veya yükledikten sonra çalışıyor."
     }
   },
   "landingPage": {

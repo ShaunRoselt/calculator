@@ -49,6 +49,15 @@
       "item4": "Ukuhlaziywa kwegrafu okuthuthukisiwe futhi kwenza isibali sewebhu satholakala ungaxhunyiwe ku-inthanethi ngemva kokulayisha okuyimpumelelo kokuqala nokusetha inqolobane.",
       "item5": "Izilungiselelo ezenziwe zedeskithophu zilondoloza okuthembeke kakhulu futhi zalungisa isiqalisi se-Flatpak.",
       "item6": "Ukufinyelela kwekhibhodi okuthuthukisiwe, ukugqama kuzo zonke izingqikithi, nezakhiwo ezikrinini eziwumngcingo."
+    },
+    "release1222": {
+      "title": "Izilawuli ze-Gamepad namawindi edeskithophu amancane",
+      "item1": "Zulazula kumamodi wokubala, amamenyu, nezilungiselelo ngephedi yegeyimu. Sebenzisa i-D-pad noma induku yesokunxele ukuze uhambise, A ukuze ukhethe, no-B ukuze ubuyele emuva.",
+      "item2": "Gcina ugxile kukhiye wokubala ofanayo lapho isibonisi sibuyekeza, futhi ubuyele kusilawuli sangaphambilini lapho imenyu ivala.",
+      "item3": "Phena amagrafu ngentonga elungile.",
+      "item4": "Vula ikhibhodi esesikrinini ye-Steam ngokukhetha inkambu yombhalo enesilawuli lapho i-Steam isekela khona ikhibhodi.",
+      "item5": "Faka iwindi ledeskithophu kuzibonisi ezincane ekuqalisweni kokuqala.",
+      "item6": "Ukupakishwa kwe-macOS elungisiwe ukuze izixhumanisi zohlaka lwe-Electron zisasebenza ngemuva kokuthi uhlelo lokusebenza lususiwe noma lufakiwe."
     }
   },
   "landingPage": {

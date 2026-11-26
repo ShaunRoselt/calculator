@@ -49,6 +49,15 @@
       "item4": "Grafikanalyse verbessert an de Webrechner offline verfügbar gemaach no der éischter erfollegräicher Luede a Cache-Setup.",
       "item5": "Made Desktop Astellunge spueren méi zouverlässeg a fixéiert de Flatpak Launcher.",
       "item6": "Besser Tastatur Zougang, Kontrast iwwer Themen, a Layouten op schmuele Schiirme."
+    },
+    "release1222": {
+      "title": "Gamepad Kontrollen a méi kleng Desktopfenster",
+      "item1": "Navigéiert Rechnermodi, Menüen an Astellunge mat engem Gamepad. Benotzt den D-Pad oder de lénksen Stick fir ze beweegen, A fir ze wielen, a B fir zréck ze goen.",
+      "item2": "Bleift op dee selwechte Rechnerschlëssel fokusséieren wann den Ecran aktualiséiert gëtt, a gitt zréck op déi viregt Kontroll wann e Menü zou ass.",
+      "item3": "Pan Grafike mam richtege Stick.",
+      "item4": "Open Steam's On-Screen Keyboard andeems Dir en Textfeld mat engem Controller wielt wou Steam d'Tastatur ënnerstëtzt.",
+      "item5": "Pass d'Desktopfenster op méi kleng Affichage beim éischte Start.",
+      "item6": "Fix macOS Verpakung sou datt d'Electron Kader Links nach funktionnéieren nodeems d'App geplënnert oder installéiert ass."
     }
   },
   "landingPage": {

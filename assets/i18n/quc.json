@@ -41,6 +41,15 @@
       "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.2.",
       "versionHistory": "Version history"
     },
+    "release1222": {
+      "title": "Taq k'utb'al rech gamepad xuquje' utz'aqat uwach pa ko'lik pantalla",
+      "item1": "Chawoqaj ri taq uchak ri ajilab'äl, ri taq menú xuquje' ri taq retal ruk' jun gamepad. Chawokisaj ri D-pad o ri barra pa mox rech kab'inik, A rech kacha'ik, xuquje' B rech katzalijik.",
+      "item2": "K'olo ri focus pa ri jun tecla rech ri ajilab'äl are chi kajalataj ri uk'utb'al. Katzalij pa ri nab'e k'utb'al are chi katz'apix ri menú.",
+      "item3": "Chasiloj ri taq wachib'äl ruk' ri barra pa wikiq'ab'.",
+      "item4": "Chajaqa ri teclado rech Steam pa pantalla: chacha' jun k'olib'al tzij ruk' ri gamepad we kuya' Steam.",
+      "item5": "Chako'j chisuk' ri ventana rech escritorio pa taq ko'lik pantalla are chi katzij ri aplicación nab'e mul.",
+      "item6": "Xutzirisax ri paquete rech macOS rech taq ri enlaces rech Electron kkowinik kachakun are chi kasiloxik o kajikib'ax ri aplicación."
+    },
     "release1221": {
       "title": "Utzib'al ri ajilanik, chak man k'o ta conexión, xuquje' utz uwach ri aplicación",
       "item1": "Xutzirisax ri tz'aqat ajilanik, ri ka'i' mul (=) xuquje' ri uk'utik ri ajilab'al e yakom pa Estandard xuquje' Tzijonel.",

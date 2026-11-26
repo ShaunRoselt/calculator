@@ -49,6 +49,15 @@
       "item4": "Uhlalutyo lwegrafu oluphuculweyo kunye nokwenza ukuba isibali sewebhu sifumaneke ngaphandle kweintanethi emva komthwalo wokuqala oyimpumelelo kunye nokusekwa kwe-cache.",
       "item5": "Iisetingi zedesktop zenziwe zigcine ukuthembeka kwaye zilungise isindululi seFlatpak.",
       "item6": "Ufikelelo oluphuculweyo lwebhodi yezitshixo, umahluko kwimixholo yonke, kunye noyilo kwizikrini ezimxinwa."
+    },
+    "release1222": {
+      "title": "Ulawulo lwephedi yemidlalo kunye neefestile ezincinci zedesktop",
+      "item1": "Khangela iindlela zokubala, iimenyu, kunye noseto ngephedi yokudlala. Sebenzisa i-D-pad okanye intonga yasekhohlo ukuhamba, A ukukhetha, kunye no-B ukubuyela umva.",
+      "item2": "Gcina ugxininise kwiqhosha lesibali elifanayo xa isibonisi sihlaziywa, kwaye ubuyele kulawulo lwangaphambili xa imenyu ivaliwe.",
+      "item3": "Iigrafu zePan ngentonga elungileyo.",
+      "item4": "Vula ikhibhodi yeSteam ekwisikrini ngokukhetha indawo yokubhaliweyo enomlawuli apho iSteam ixhasa ikhibhodi.",
+      "item5": "Linga ifestile yedesktop kwiziboniso ezincinci kuphehlelelo lokuqala.",
+      "item6": "Ukupakishwa kwe-macOS elungisiweyo ukuze amakhonkco esikhokelo se-Electron asasebenza emva kokuba usetyenziso lususiwe okanye lufakwe."
     }
   },
   "landingPage": {

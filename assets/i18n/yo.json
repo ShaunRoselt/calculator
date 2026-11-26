@@ -49,6 +49,15 @@
       "item4": "Ilọsiwaju itupalẹ awọnyaya ati jẹ ki ẹrọ iṣiro wẹẹbu wa ni aisinipo lẹhin iṣaṣeyọri iṣaṣeyọri akọkọ ati iṣeto cache.",
       "item5": "Awọn eto tabili ti a ṣe n fipamọ ni igbẹkẹle diẹ sii ati ṣeto ifilọlẹ Flatpak.",
       "item6": "Ilọsiwaju iwọle si kiiboodu, iyatọ kọja awọn akori, ati awọn ipalemo lori awọn iboju ti o dín."
+    },
+    "release1222": {
+      "title": "Awọn idari ere paadi ati awọn ferese tabili kekere",
+      "item1": "Lilọ kiri awọn ipo iṣiro, awọn akojọ aṣayan, ati awọn eto pẹlu paadi ere kan. Lo D-pad tabi ọpá osi lati gbe, A lati yan, ati B lati pada sẹhin.",
+      "item2": "Jeki idojukọ lori bọtini iṣiro kanna nigbati ifihan ba ṣe imudojuiwọn, ki o pada si iṣakoso iṣaaju nigbati akojọ aṣayan ba tilekun.",
+      "item3": "Pin awọn aworan pẹlu ọpá ọtun.",
+      "item4": "Ṣii bọtini itẹwe loju iboju Steam nipa yiyan aaye ọrọ kan pẹlu oluṣakoso nibiti Steam ṣe atilẹyin fun keyboard.",
+      "item5": "Pẹlu ferese tabili tabili si awọn ifihan ti o kere si ni ifilọlẹ akọkọ.",
+      "item6": "Iṣakojọpọ macOS ti o wa titi nitoribẹẹ awọn ọna asopọ ilana Electron tun ṣiṣẹ lẹhin gbigbe ohun elo naa tabi ti fi sii."
     }
   },
   "landingPage": {

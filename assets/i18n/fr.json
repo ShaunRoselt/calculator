@@ -49,6 +49,15 @@
       "item4": "Amélioration de l'analyse graphique et mise à disposition de la calculatrice Web hors ligne après un premier chargement réussi et la mise en cache des fichiers.",
       "item5": "Les paramètres du bureau ont été améliorés et le lanceur Flatpak a été corrigé.",
       "item6": "Accès au clavier amélioré, contraste entre les thèmes et dispositions sur les écrans étroits."
+    },
+    "release1222": {
+      "title": "Commandes de la manette de jeu et fenêtres de bureau plus petites",
+      "item1": "Naviguez dans les modes, les menus et les paramètres de la calculatrice avec une manette de jeu. Utilisez le D-pad ou le stick analogique gauche pour vous déplacer, A pour sélectionner et B pour revenir en arrière.",
+      "item2": "Gardez le focus sur la même touche de la calculatrice lorsque l'affichage est mis à jour et revenez au contrôle précédent lorsqu'un menu se ferme.",
+      "item3": "Déplacez les graphiques avec le joystick droit.",
+      "item4": "Ouvrez le clavier à l'écran de Steam en sélectionnant un champ de texte avec un contrôleur où Steam prend en charge le clavier.",
+      "item5": "Ajustez la fenêtre du bureau à des écrans plus petits lors du premier lancement.",
+      "item6": "Correction du packaging macOS afin que les liens du framework Electron fonctionnent toujours après le déplacement ou l'installation de l'application."
     }
   },
   "landingPage": {

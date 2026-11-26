@@ -49,6 +49,15 @@
       "item4": "Verbesserte Diagrammanalyse und machte den Webrechner nach der ersten erfolgreichen Lade- und Cache-Einrichtung offline verfügbar.",
       "item5": "Desktop-Einstellungen wurden zuverlässiger gespeichert und der Flatpak-Launcher wurde repariert.",
       "item6": "Verbesserter Tastaturzugriff, Kontrast zwischen Themen und Layouts auf schmalen Bildschirmen."
+    },
+    "release1222": {
+      "title": "Gamepad-Steuerung und kleinere Desktop-Fenster",
+      "item1": "Navigieren Sie mit einem Gamepad durch Rechnermodi, Menüs und Einstellungen. Verwenden Sie das Steuerkreuz oder den linken Stick zum Bewegen, A zum Auswählen und B zum Zurückgehen.",
+      "item2": "Behalten Sie den Fokus auf derselben Taschenrechnertaste, wenn die Anzeige aktualisiert wird, und kehren Sie zum vorherigen Steuerelement zurück, wenn ein Menü geschlossen wird.",
+      "item3": "Schwenken Sie Diagramme mit dem rechten Stick.",
+      "item4": "Öffnen Sie die Bildschirmtastatur von Steam, indem Sie ein Textfeld mit einem Controller auswählen, auf dem Steam die Tastatur unterstützt.",
+      "item5": "Passen Sie das Desktop-Fenster beim ersten Start an kleinere Displays an.",
+      "item6": "Das macOS-Paket wurde korrigiert, sodass die Framework-Links von Electron weiterhin funktionieren, nachdem die App verschoben oder installiert wurde."
     }
   },
   "landingPage": {

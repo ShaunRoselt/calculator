@@ -49,6 +49,15 @@
       "item4": "Feabhsaíodh anailís ghraif agus cuireadh an t-áireamhán gréasáin ar fáil as líne tar éis an chéad ualaigh rathúil agus an taisce a shocrú.",
       "item5": "Sábhálann socruithe deisce a rinneadh níos iontaofa agus socraítear an tosaitheoir Flatpak.",
       "item6": "Feabhsaíodh rochtain mhéarchláir, codarsnacht trasna téamaí, agus leagan amach ar scáileáin chúnga."
+    },
+    "release1222": {
+      "title": "Rialuithe gamepad agus fuinneoga deisce níos lú",
+      "item1": "Déan modhanna áireamháin, biachláir agus socruithe a nascleanúint le gamepad. Bain úsáid as an D-pad nó an bata ar chlé chun bogadh, A a roghnú, agus B chun dul ar ais.",
+      "item2": "Lean ar an bhfócas ar an eochair áireamháin chéanna nuair a nuashonraíonn an taispeáint, agus ar ais chuig an rialtán roimhe seo nuair a dhúnann an roghchlár.",
+      "item3": "Pan graif leis an maide ar dheis.",
+      "item4": "Oscail méarchlár ar an scáileán Steam trí réimse téacs a roghnú le rialtóir a thacaíonn Steam leis an méarchlár.",
+      "item5": "Féadaigh an fhuinneog deisce chuig taispeántais níos lú ar an gcéad seoladh.",
+      "item6": "Pacáistiú macOS seasta ionas go n-oibríonn naisc chreata Electron fós tar éis an aip a bhogadh nó a shuiteáil."
     }
   },
   "landingPage": {

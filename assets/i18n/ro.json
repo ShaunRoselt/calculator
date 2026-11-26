@@ -49,6 +49,15 @@
       "item4": "S-a îmbunătățit analiza graficului și a făcut ca calculatorul web să fie disponibil offline după prima încărcare și configurare cu succes a memoriei cache.",
       "item5": "Setările desktop efectuate salvează mai fiabile și am remediat lansatorul Flatpak.",
       "item6": "Acces îmbunătățit la tastatură, contrast între teme și aspecte pe ecrane înguste."
+    },
+    "release1222": {
+      "title": "Comenzi pentru gamepad și ferestre mai mici de pe desktop",
+      "item1": "Navigați în moduri, meniuri și setări ale calculatorului cu un gamepad. Folosiți D-pad sau stick-ul din stânga pentru a vă deplasa, A pentru a selecta și B pentru a reveni.",
+      "item2": "Păstrați concentrarea pe aceeași tastă a calculatorului atunci când afișajul se actualizează și reveniți la controlul anterior când se închide un meniu.",
+      "item3": "Deplasați graficele cu stick-ul din dreapta.",
+      "item4": "Deschide tastatura de pe ecran a Steam selectând un câmp de text cu un controler în care Steam acceptă tastatura.",
+      "item5": "Ajustați fereastra desktopului la afișaje mai mici la prima lansare.",
+      "item6": "S-a remediat ambalajul macOS, astfel încât legăturile de cadru Electron să funcționeze în continuare după ce aplicația este mutată sau instalată."
     }
   },
   "landingPage": {

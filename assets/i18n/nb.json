@@ -49,6 +49,15 @@
       "item4": "Forbedret grafanalyse og gjort nettkalkulatoren tilgjengelig offline etter den første vellykkede innlastingen og hurtigbufferoppsettet.",
       "item5": "Laget skrivebordsinnstillinger sparer mer pålitelig og fikset Flatpak-starteren.",
       "item6": "Forbedret tastaturtilgang, kontrast på tvers av temaer og oppsett på smale skjermer."
+    },
+    "release1222": {
+      "title": "Gamepad-kontroller og mindre skrivebordsvinduer",
+      "item1": "Naviger i kalkulatormoduser, menyer og innstillinger med en håndkontroll. Bruk D-pad eller venstre spak for å flytte, A for å velge og B for å gå tilbake.",
+      "item2": "Hold fokus på den samme kalkulatortasten når skjermen oppdateres, og gå tilbake til forrige kontroll når en meny lukkes.",
+      "item3": "Panorer grafer med høyre spak.",
+      "item4": "Åpne Steams skjermtastatur ved å velge et tekstfelt med en kontroller der Steam støtter tastaturet.",
+      "item5": "Tilpass skrivebordsvinduet til mindre skjermer ved første oppstart.",
+      "item6": "Fixet macOS-pakning slik at Electrons rammeverkskoblinger fortsatt fungerer etter at appen er flyttet eller installert."
     }
   },
   "landingPage": {

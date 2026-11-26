@@ -49,6 +49,15 @@
       "item4": "I pai ake te tātari kauwhata me te waatea i te tatauranga ipurangi i muri i te tatūnga tuatahi o te uta me te keteroki.",
       "item5": "Ko nga tautuhinga papamahi ka tiakina kia pono, ka whakatika i te kaiwhakarewa Flatpak.",
       "item6": "Kua pai ake te uru papapātuhi, te rereke puta noa i nga kaupapa, me nga whakatakotoranga ki nga mata whaiti."
+    },
+    "release1222": {
+      "title": "Nga mana gamepad me nga matapihi papamahi iti ake",
+      "item1": "Whakaterehia nga aratau, tahua, me nga tautuhinga ma te papa takaro. Whakamahia te D-papa, te rakau maui ranei hei neke, A hei kowhiri, me B hei hoki whakamuri.",
+      "item2": "Me aro tonu ki te taviri tatau kotahi ina whakahōu te whakaaturanga, ka hoki ki te mana o mua ina kati te tahua.",
+      "item3": "Panui kauwhata ki te rakau matau.",
+      "item4": "Whakatuwherahia te papapātuhi mata-mata a Steam ma te kowhiri i tetahi mara kuputuhi me te kaiwhakahaere e tautoko ana a Steam i te papapātuhi.",
+      "item5": "Whakauruhia te matapihi papamahi ki nga whakaaturanga iti i te whakarewanga tuatahi.",
+      "item6": "Whakatikahia te kete macOS kia mahi tonu nga hononga angamahi a Electron i muri i te nekehia, te whakauru ranei o te taupānga."
     }
   },
   "landingPage": {

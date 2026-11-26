@@ -49,6 +49,15 @@
       "item4": "Analisis grafik yang ditingkatkan dan menjadikan kalkulator web tersedia offline setelah pemuatan pertama dan penyiapan cache berhasil.",
       "item5": "Membuat pengaturan desktop lebih andal dan memperbaiki peluncur Flatpak.",
       "item6": "Peningkatan akses keyboard, kontras antar tema, dan tata letak pada layar sempit."
+    },
+    "release1222": {
+      "title": "Kontrol gamepad dan jendela desktop yang lebih kecil",
+      "item1": "Navigasi mode kalkulator, menu, dan pengaturan dengan gamepad. Gunakan D-pad atau stik kiri untuk bergerak, A untuk memilih, dan B untuk kembali.",
+      "item2": "Tetap fokus pada tombol kalkulator yang sama saat tampilan diperbarui, dan kembali ke kontrol sebelumnya saat menu ditutup.",
+      "item3": "Geser grafik dengan tongkat kanan.",
+      "item4": "Buka keyboard di layar Steam dengan memilih bidang teks dengan pengontrol yang mana Steam mendukung keyboard tersebut.",
+      "item5": "Sesuaikan jendela desktop dengan tampilan yang lebih kecil pada peluncuran pertama.",
+      "item6": "Memperbaiki kemasan macOS sehingga tautan kerangka kerja Electron tetap berfungsi setelah aplikasi dipindahkan atau dipasang."
     }
   },
   "landingPage": {

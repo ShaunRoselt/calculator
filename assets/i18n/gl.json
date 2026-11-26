@@ -49,6 +49,15 @@
       "item4": "Mellorou a análise de gráficos e fixo que a calculadora web estea dispoñible sen conexión despois da primeira carga e configuración da caché.",
       "item5": "A configuración do escritorio feita para gardar máis fiable e corrixir o lanzador de Flatpak.",
       "item6": "Acceso ao teclado, contraste entre temas e deseños mellorados en pantallas estreitas."
+    },
+    "release1222": {
+      "title": "Controis do Gamepad e ventás de escritorio máis pequenas",
+      "item1": "Navega polos modos, menús e configuracións da calculadora cun mando. Use o D-pad ou o stick esquerdo para mover, A para seleccionar e B para volver.",
+      "item2": "Mantén o foco na mesma tecla da calculadora cando se actualice a pantalla e volve ao control anterior cando se peche un menú.",
+      "item3": "Despraza os gráficos co stick dereito.",
+      "item4": "Abre o teclado en pantalla de Steam seleccionando un campo de texto cun controlador no que Steam admita o teclado.",
+      "item5": "Axusta a xanela do escritorio a pantallas máis pequenas no primeiro lanzamento.",
+      "item6": "Corrixiuse o empaquetado de macOS para que as ligazóns do cadro de Electron aínda funcionen despois de mover ou instalar a aplicación."
     }
   },
   "landingPage": {

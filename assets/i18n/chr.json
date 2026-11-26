@@ -41,6 +41,15 @@
       "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.2.",
       "versionHistory": "Version history"
     },
+    "release1222": {
+      "title": "Gamepad ᎠᏓᏂᎸᏗ ᎠᎴ ᎤᏍᏗ ᎠᎪᏩᏛᏗ",
+      "item1": "Gamepad ᏨᏔᏅ ᎤᎵᏍᎩᎠ ᏧᏓᎴᏅᏛ ᎤᏃᏢᏔᏅᎢ, ᏗᏑᏰᏍᏗ ᎠᎴ ᏗᏁᏟᏴᏍᏗ ᎯᏑᏰᎦ. D-pad ᎠᎴ ᎠᎦᏍᎦᏂ ᎠᏓᏂᎸᏗ ᏨᏔᏅ ᎯᎦᏛᎦ; A ᏗᏑᏰᏍᏗ, B ᎢᏔᎵ ᏗᎦᏛᎦ.",
+      "item2": "ᎠᎪᏩᏛᏗ ᎤᏁᏟᏴᏍᏗ ᎢᏳᏩᎪᏗ, ᎾᏍᎩ ᎤᎵᏍᎩᎠ ᎠᏓᏂᎸᏗ ᎧᎵᏍᏗ. ᏗᏑᏰᏍᏗ ᎤᏍᏚᏗ ᎢᏳᏩᎪᏗ, ᎢᏔᎵ Ꮎ ᎠᏓᏂᎸᏗ ᎯᎦᏛᎦ.",
+      "item3": "ᎠᎦᏘᏏ ᎠᏓᏂᎸᏗ ᏨᏔᏅ ᏗᎪᏪᎵ ᎯᎦᏛᎦ.",
+      "item4": "Steam ᎠᎪᏩᏛᏗ ᏗᏓᏂᎸᏗ ᎯᏍᏚᎢ. Gamepad ᏨᏔᏅ ᎪᏪᎵ ᎠᏎᎸᎲᎢ ᎯᏑᏰᎦ, Steam ᏰᎵ ᎢᏳᏩᎪᏗ.",
+      "item5": "ᎢᎬᏱ ᎠᎴᏅᏗ ᎢᏳᏩᎪᏗ, ᎠᎪᏩᏛᏗ ᎤᏍᏗ ᎤᎪᏩᏛᏗ ᎤᏍᏆᏂᎪᏗ.",
+      "item6": "macOS ᎤᏃᏢᏔᏅᎢ ᎣᏏ ᎢᏳᏩᎪᏗ. Electron ᏗᏕᎫᏗ ᏚᎸᏫᏍᏓᏁᎭ ᎤᏃᏢᏔᏅᎢ ᎤᎾᎢᏍᏗ ᎠᎴ ᎠᏎᎸᎲᎢ ᎢᏳᏩᎪᏗ."
+    },
     "release1221": {
       "title": "ᎤᎵᏍᎩᎠ ᎤᏃᏢᏔᏅᎢ, ᎪᏪᎵ ᎨᏒᎢ ᎠᎴ ᎣᏍᏓ ᎠᎪᏩᏛᏗ",
       "item1": "ᎣᏏ ᎢᏳᏩᎪᏗ Ꮎ ᏗᎵᏍᎩᎠ ᎤᎾᏓᎵᏍᏛ, = ᏔᎵᏁ ᎠᎴ ᎠᏓᏅᏖᏗ ᏗᎪᏪᎵ ᎤᎵᏍᎩᎠ ᎠᎴ ᎠᏓᏅᏙᎸᎢ ᎤᎵᏍᎩᎠ.",

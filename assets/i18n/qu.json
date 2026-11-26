@@ -49,6 +49,15 @@
       "item4": "Allichasqa grafico t'aqwiy chaymanta web yupayta mana tinkisqa kananpaq ruwasqa ñawpaq allin carga chaymanta caché churaymanta.",
       "item5": "Escritorio churanakuna aswan atiyniyuq waqaychasqa chaymanta Flatpak qallarichiq allichasqa.",
       "item6": "Teclado yaykuy allinchasqa, temakunapura chiqanchay, chaymanta k'iti pantallakunapi churanakuna."
+    },
+    "release1222": {
+      "title": "Pukllana p'anqa kamachiqkuna chaymanta aswan huch'uy mesa ventanakuna",
+      "item1": "Yupay yupaypa ñanninkunata, menúkunata, churanakunatapas pukllaypa llikanwan puriy. D-pad nisqawan utaq lloq’e k’aspiwan kuyunaykipaq, A nisqawan akllanaykipaq, B nisqawantaq kutinaykipaq.",
+      "item2": "Qhawachiy musuqyachiptin kikin yupay llave kaqpi qhawayta waqaychay, chaymanta ñawpaq kamachiyman kutiy mayk'aq huk menú wichq'akun.",
+      "item3": "Paña k’aspiwan grafikukunata pankachiy.",
+      "item4": "Steam pantallapi teclado kichay huk qillqa pampata akllaspa huk kamachiqwan maypi Steam teclado yanapan.",
+      "item5": "Escritorio ventanata aswan huch'uy qhawaykunaman tupachiy ñawpaq qallariypi.",
+      "item6": "macOS paqueteta allicharqayku. Electron marco t'inkikuna kunan llamk'anku chaymanta app kuyuchisqaykimanta utaq churasqaykimanta."
     }
   },
   "landingPage": {

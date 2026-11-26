@@ -49,6 +49,15 @@
       "item4": "Cải thiện phân tích biểu đồ và làm cho máy tính web khả dụng ngoại tuyến sau lần thiết lập bộ đệm và tải thành công đầu tiên.",
       "item5": "Thực hiện cài đặt máy tính để bàn giúp lưu đáng tin cậy hơn và sửa lỗi trình khởi chạy Flatpak.",
       "item6": "Cải thiện khả năng truy cập bàn phím, độ tương phản giữa các chủ đề và bố cục trên màn hình hẹp."
+    },
+    "release1222": {
+      "title": "Điều khiển bằng gamepad và cửa sổ màn hình nhỏ hơn",
+      "item1": "Điều hướng các chế độ, menu và cài đặt của máy tính bằng gamepad. Sử dụng D-pad hoặc cần trái để di chuyển, A để chọn và B để quay lại.",
+      "item2": "Giữ tiêu điểm trên cùng một phím máy tính khi màn hình cập nhật và quay lại điều khiển trước đó khi menu đóng.",
+      "item3": "Xoay biểu đồ bằng thanh bên phải.",
+      "item4": "Mở bàn phím ảo của Steam bằng cách chọn trường văn bản có bộ điều khiển nơi Steam hỗ trợ bàn phím.",
+      "item5": "Vừa cửa sổ màn hình nền với màn hình nhỏ hơn trong lần khởi chạy đầu tiên.",
+      "item6": "Đã sửa lỗi đóng gói macOS để các liên kết khung của Electron vẫn hoạt động sau khi di chuyển hoặc cài đặt ứng dụng."
     }
   },
   "landingPage": {

@@ -49,6 +49,15 @@
       "item4": "Grafiekanalise is verbeter en die websakrekenaar vanlyn beskikbaar gestel na die eerste suksesvolle laai- en kasopstelling.",
       "item5": "Gemaakte lessenaarinstellings spaar meer betroubaar en het die Flatpak-lanseerder reggestel.",
       "item6": "Verbeterde sleutelbordtoegang, kontras oor temas en uitlegte op smal skerms."
+    },
+    "release1222": {
+      "title": "Gamepad-kontroles en kleiner rekenaarvensters",
+      "item1": "Navigeer sakrekenaarmodusse, spyskaarte en instellings met 'n gamepad. Gebruik die D-pad of linkerstok om te beweeg, A om te kies en B om terug te gaan.",
+      "item2": "Bly fokus op dieselfde sakrekenaarsleutel wanneer die skerm opdateer, en keer terug na die vorige kontrole wanneer 'n kieslys toemaak.",
+      "item3": "Span grafieke met die regterstok.",
+      "item4": "Maak Steam se sleutelbord op die skerm oop deur 'n teksveld met 'n kontroleerder te kies waar Steam die sleutelbord ondersteun.",
+      "item5": "Pas die werkskermvenster by kleiner skerms met die eerste bekendstelling.",
+      "item6": "Vaste macOS-verpakking sodat Electron se raamwerkskakels steeds werk nadat die toepassing geskuif of geïnstalleer is."
     }
   },
   "landingPage": {

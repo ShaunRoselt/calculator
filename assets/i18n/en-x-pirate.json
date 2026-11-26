@@ -41,6 +41,15 @@
       "intro": "Roselt Calculator sailed from a standalone web calculator foundation t a fully packaged, multi-platform, multi-language app in a series o' focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.2.",
       "versionHistory": "Version history"
     },
+    "release1222": {
+      "title": "Gamepad helm an’ smaller desktop windows",
+      "item1": "Steer through calculator modes, menus an’ settings with yer gamepad. Use the D-pad or left stick to move, A to choose, an’ B to head back.",
+      "item2": "Keep yer sights on the same calculator key when the display changes, an’ return to the last control when a menu shuts.",
+      "item3": "Pan yer graphs with the right stick.",
+      "item4": "Pick a text field with yer controller to open Steam’s on-screen keyboard wherever Steam supports it.",
+      "item5": "Fit the desktop window to smaller screens on yer first launch.",
+      "item6": "Mended the macOS package so Electron’s framework links still work after ye move or install the app."
+    },
     "release1221": {
       "title": "Mended sums, offline sailin’, and shipshape layouts",
       "item1": "Mended chains o’ calculations, repeat equals, and recallin’ stored numbers in Standard and Scientific modes.",

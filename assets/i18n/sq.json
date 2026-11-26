@@ -49,6 +49,15 @@
       "item4": "Përmirësoi analizën e grafikut dhe e bëri kalkulatorin e uebit të disponueshëm jashtë linje pas ngarkimit të parë të suksesshëm dhe konfigurimit të memories.",
       "item5": "Cilësimet e bëra të desktopit kursejnë më të besueshme dhe rregullojnë lëshuesin Flatpak.",
       "item6": "Përmirësimi i qasjes në tastierë, kontrasti midis temave dhe paraqitjeve në ekrane të ngushta."
+    },
+    "release1222": {
+      "title": "Kontrollet e tastierës së lojës dhe dritaret më të vogla të desktopit",
+      "item1": "Nivizoni modalitetet, menutë dhe cilësimet e kalkulatorit me një tastierë lojërash. Përdorni butonin D ose shkopin e majtë për të lëvizur, A për të zgjedhur dhe B për t'u kthyer prapa.",
+      "item2": "Mbaje fokusin në të njëjtin çelës llogaritës kur ekrani përditësohet dhe kthehu te kontrolli i mëparshëm kur mbyllet një meny.",
+      "item3": "Shtroni grafikët me shkopin e djathtë.",
+      "item4": "Hap tastierën në ekran të Steam duke zgjedhur një fushë teksti me një kontrollues ku Steam mbështet tastierën.",
+      "item5": "Përshtatni dritaren e desktopit në ekrane më të vogla në nisjen e parë.",
+      "item6": "Fiksoi paketimin e macOS në mënyrë që lidhjet e kornizës së Electron të vazhdojnë të funksionojnë pasi aplikacioni të zhvendoset ose instalohet."
     }
   },
   "landingPage": {

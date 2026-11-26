@@ -49,6 +49,15 @@
       "item4": "Továbbfejlesztett grafikonelemzés, és offline elérhetővé tette a webes számológépet az első sikeres betöltés és a gyorsítótár beállítása után.",
       "item5": "Az asztali beállítások megbízhatóbbá teszik a mentést, és javítják a Flatpak indítót.",
       "item6": "Továbbfejlesztett billentyűzet-hozzáférés, kontraszt a témák között és elrendezés keskeny képernyőkön."
+    },
+    "release1222": {
+      "title": "Játékvezérlők és kisebb asztali ablakok",
+      "item1": "A játékvezérlővel navigálhat a számológép üzemmódjaiban, menüiben és beállításaiban. Használja a D-padot vagy a bal oldali botot a mozgáshoz, az A-t a kiválasztáshoz és a B-t a visszalépéshez.",
+      "item2": "A képernyő frissítésekor tartsa a fókuszt ugyanarra a számológép gombjára, és térjen vissza az előző vezérlőelemhez, amikor egy menü bezárul.",
+      "item3": "Pásztassa el a grafikonokat a jobb gombbal.",
+      "item4": "Nyissa meg a Steam képernyő-billentyűzetét egy olyan vezérlővel ellátott szövegmező kiválasztásával, amelyben a Steam támogatja a billentyűzetet.",
+      "item5": "Az első indításkor illessze az asztali ablakot kisebb kijelzőkre.",
+      "item6": "Javítva a macOS-csomagolás, így az Electron keretrendszer-hivatkozásai az alkalmazás áthelyezése vagy telepítése után is működnek."
     }
   },
   "landingPage": {

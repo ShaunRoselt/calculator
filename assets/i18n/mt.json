@@ -49,6 +49,15 @@
       "item4": "Analiżi tal-grafika mtejba u għamel il-kalkulatur tal-web disponibbli offline wara l-ewwel setup ta' tagħbija u cache b'suċċess.",
       "item5": "Settings tad-desktop li saru jiffrankaw aktar affidabbli u ffissaw il-lanċjar tal-Flatpak.",
       "item6": "Aċċess imtejjeb għat-tastiera, kuntrast bejn temi, u layouts fuq skrins dojoq."
+    },
+    "release1222": {
+      "title": "Kontrolli tal-Gamepad u twieqi iżgħar tad-desktop",
+      "item1": "Naviga l-modi, il-menus, u s-settings tal-kalkolatur b'gamepad. Uża d-D-pad jew stick tax-xellug biex timxi, A biex tagħżel, u B biex tmur lura.",
+      "item2": "Żomm tiffoka fuq l-istess ċavetta tal-kalkulatur meta l-wiri jaġġorna, u erġa lura għall-kontroll preċedenti meta jingħalaq menu.",
+      "item3": "Pan graphs bil-stick tal-lemin.",
+      "item4": "Iftaħ it-tastiera fuq l-iskrin ta' Steam billi tagħżel qasam ta' test b'kontrollur fejn Steam jappoġġja t-tastiera.",
+      "item5": "Waħħal it-tieqa tad-desktop għal displays iżgħar fl-ewwel tnedija.",
+      "item6": "Imballaġġ macOS iffissat sabiex il-links tal-qafas ta' Electron għadhom jaħdmu wara li l-app tiġi mċaqalqa jew installata."
     }
   },
   "landingPage": {

@@ -49,6 +49,15 @@
       "item4": "Gwella dadansoddiad graff a gwneud y cyfrifiannell gwe ar gael all-lein ar ôl y llwyth llwyddiannus cyntaf a gosod storfa.",
       "item5": "Mae gosodiadau bwrdd gwaith a wnaed yn arbed lansiwr Flatpak yn fwy dibynadwy ac yn sefydlogi.",
       "item6": "Gwell mynediad bysellfwrdd, cyferbyniad ar draws themâu, a chynlluniau ar sgriniau cul."
+    },
+    "release1222": {
+      "title": "Rheolyddion gamepad a ffenestri bwrdd gwaith llai",
+      "item1": "llywio moddau cyfrifiannell, dewislenni a gosodiadau gyda gamepad. Defnyddiwch y pad D neu'r ffon chwith i symud, A i ddewis, a B i fynd yn ôl.",
+      "item2": "Cadwch ffocws ar yr un allwedd cyfrifiannell pan fydd y dangosydd yn diweddaru, a dychwelyd i'r rheolydd blaenorol pan fydd dewislen yn cau.",
+      "item3": "Tremio graffiau gyda'r ffon dde.",
+      "item4": "Agorwch fysellfwrdd ar y sgrin Steam trwy ddewis maes testun gyda rheolydd lle mae Steam yn cefnogi'r bysellfwrdd.",
+      "item5": "Gosodwch ffenestr y bwrdd gwaith i arddangosiadau llai ar y lansiad cyntaf.",
+      "item6": "Pecynnu macOS sefydlog felly mae dolenni fframwaith Electron yn dal i weithio ar ôl i'r ap gael ei symud neu ei osod."
     }
   },
   "landingPage": {

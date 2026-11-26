@@ -49,6 +49,15 @@
       "item4": "Uzlabota diagrammu analīze un padarīts tīmekļa kalkulators pieejams bezsaistē pēc pirmās veiksmīgās ielādes un kešatmiņas iestatīšanas.",
       "item5": "Izveidotie darbvirsmas iestatījumi saglabā uzticamāku darbību un izlabo Flatpak palaišanas programmu.",
       "item6": "Uzlabota piekļuve tastatūrai, kontrasts starp motīviem un izkārtojumi šauros ekrānos."
+    },
+    "release1222": {
+      "title": "Spēļu paneļa vadīklas un mazāki darbvirsmas logi",
+      "item1": "Pārvietojieties kalkulatora režīmos, izvēlnēs un iestatījumos, izmantojot spēļu paneli. Izmantojiet D pad vai kreiso sviru, lai pārvietotos, A, lai atlasītu, un B, lai atgrieztos.",
+      "item2": "Kad displejs tiek atjaunināts, koncentrējieties uz to pašu kalkulatora taustiņu un atgriezieties pie iepriekšējās vadīklas, kad izvēlne tiek aizvērta.",
+      "item3": "Pārvietojiet diagrammas ar labo sviru.",
+      "item4": "Atveriet Steam ekrāna tastatūru, atlasot teksta lauku ar kontrolleri, kurā Steam atbalsta tastatūru.",
+      "item5": "Pielāgojiet darbvirsmas logu mazākiem displejiem pirmajā palaišanas reizē.",
+      "item6": "Labots macOS iepakojums, lai Electron ietvara saites joprojām darbotos arī pēc lietotnes pārvietošanas vai instalēšanas."
     }
   },
   "landingPage": {

@@ -41,6 +41,15 @@
       "intro": "Roselt Calculator went from a standalone web calculator foundation to a fully packaged, multi-platform, multi-language app in a series of focused releases. This page tracks what changed in each version from 1.0.0 through 12.2.2.",
       "versionHistory": "Version history"
     },
+    "release1222": {
+      "title": "Quj SeHwI' mIw; machbogh De'wI' Qorwaghmey",
+      "item1": "SImwI' mIwmey, tetlhmey, patmey je SeHmeH Quj SeHwI' yIlo'. D-pad pagh poS LeHmeH naQ yIlo'. DawIvmeH A yI'uy', bIcheghmeH B yI'uy'.",
+      "item2": "cha'wI' choHlu'DI', SImwI' leQ wIvlu'bogh yItamQo'. tetlh SoQmoHlu'DI', leQ wIvlu'pu'bogh yIwIvqa'.",
+      "item3": "mI' cha'bogh nagh beQ vIHmoHmeH nIH LeHmeH naQ yIlo'.",
+      "item4": "Steam jIHDaq leQmey lo'laHlu'chugh, Quj SeHwI' lo'taHvIS ghItlh Daq yIwIv; Steam jIH leQmey poSmoHlu'.",
+      "item5": "De'wI' pat taghlu'DI' wa'DIch, machbogh jIHmo' Qorwagh machmoHlu'.",
+      "item6": "macOS ngevmeH pat tI'lu'. pat vIHmoHlu'DI' pagh jomlu'DI', QaptaH Electron rarwI'mey."
+    },
     "release1221": {
       "title": "SImwI' tI'lu'; rarHa'lu'DI' Qap; leghlu'meH ngeDqu'",
       "item1": "motlhbogh mIw tej mIw je lo'lu'DI', SImqa'lu'meH, SImtaHlu'meH, qawHaq mI' Suqlu'meH je Qaghmey tI'lu'.",

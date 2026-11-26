@@ -49,6 +49,15 @@
       "item4": "Grafiki derňewi gowulandyrdy we ilkinji üstünlikli ýük we keş keşi gurlandan soň web kalkulýatoryny awtonom görnüşde elýeterli etdi.",
       "item5": "adeasama iş stoly sazlamalary has ygtybarly tygşytlaýar we Flatpak işledijisini düzedýär.",
       "item6": "Klawiatura girişi, mowzuklaryň arasyndaky tapawut we dar ekranlarda ýerleşiş."
+    },
+    "release1222": {
+      "title": "Gamepad dolandyryşlary we kiçi iş stoly penjireleri",
+      "item1": "Kalkulýator rejelerini, menýulary we sazlamalary oýun paneli bilen dolandyryň. Hereket etmek üçin D-pad ýa-da çep taýak, A saýlamak üçin B we yza gaýdyp barmak üçin ulanyň.",
+      "item2": "Ekranyň täzelenişi bilen şol bir kalkulýator açaryna üns beriň we menýu ýapylanda öňki dolandyryşa gaýdyň.",
+      "item3": "Sag taýak bilen pan grafikleri.",
+      "item4": "Steam ekrandaky klawiaturany goldaýan bolsa, ony açmak üçin oýun paneli bilen tekst meýdançasyny saýlaň.",
+      "item5": "Iş stolunyň penjiresini ilkinji işe goýberilende kiçi displeýlere gabat getiriň.",
+      "item6": "macOS bukjasyny düzedik. Electron çarçuwaly baglanyşyklar, programmany göçüreniňizden ýa-da guranyňyzdan soň işleýär."
     }
   },
   "landingPage": {

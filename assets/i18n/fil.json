@@ -49,6 +49,15 @@
       "item4": "Pinahusay na pagsusuri ng graph at ginawang available offline ang web calculator pagkatapos ng unang matagumpay na pag-load at pag-setup ng cache.",
       "item5": "Ang ginawang mga setting ng desktop ay mas maaasahan at naayos ang Flatpak launcher.",
       "item6": "Pinahusay na access sa keyboard, contrast sa mga tema, at mga layout sa makitid na screen."
+    },
+    "release1222": {
+      "title": "Mga kontrol sa gamepad at mas maliliit na desktop window",
+      "item1": "Mag-navigate sa mga calculator mode, menu, at setting gamit ang isang gamepad. Gamitin ang D-pad o kaliwang stick para gumalaw, A para pumili, at B para bumalik.",
+      "item2": "Panatilihing tumuon sa parehong calculator key kapag nag-update ang display, at bumalik sa dating control kapag nagsara ang isang menu.",
+      "item3": "I-pan ang mga graph gamit ang tamang stick.",
+      "item4": "Buksan ang on-screen na keyboard ng Steam sa pamamagitan ng pagpili ng text field na may controller kung saan sinusuportahan ng Steam ang keyboard.",
+      "item5": "Ilapat ang desktop window sa mas maliliit na display sa unang paglulunsad.",
+      "item6": "Inayos ang macOS packaging kaya gumagana pa rin ang mga link ng framework ng Electron pagkatapos ilipat o mai-install ang app."
     }
   },
   "landingPage": {

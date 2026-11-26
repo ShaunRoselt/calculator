@@ -49,6 +49,15 @@
       "item4": "Təkmilləşdirilmiş qrafik təhlili və ilk uğurlu yükləmə və keş quraşdırmadan sonra veb kalkulyatoru oflayn olaraq əlçatan etdi.",
       "item5": "Made üstü parametrləri daha etibarlı qənaət edir və Flatpak başlatma qurğusunu düzəldir.",
       "item6": "Təkmilləşdirilmiş klaviatura girişi, mövzular üzrə kontrast və dar ekranlarda tərtibatlar."
+    },
+    "release1222": {
+      "title": "Gamepad nəzarətləri və daha kiçik masaüstü pəncərələr",
+      "item1": "Gempad ilə kalkulyator rejimləri, menyular və parametrlər arasında naviqasiya edin. Hərəkət etmək üçün D-pad və ya sol çubuqdan, seçmək üçün A və geri qayıtmaq üçün B istifadə edin.",
+      "item2": "Ekran yeniləndikdə diqqəti eyni kalkulyator düyməsinə cəmləyin və menyu bağlandıqda əvvəlki idarəetməyə qayıdın.",
+      "item3": "Sağ çubuqla qrafikləri sürüşdürün.",
+      "item4": "Steam-in klaviaturanı dəstəklədiyi nəzarətçi ilə mətn sahəsini seçməklə Steam-in ekran klaviaturasını açın.",
+      "item5": "İlk işə salındıqda masaüstü pəncərəsini daha kiçik displeylərə uyğunlaşdırın.",
+      "item6": "Sabit macOS qablaşdırması ona görə də Electron çərçivə linkləri tətbiq köçürüldükdən və ya quraşdırıldıqdan sonra da işləyir."
     }
   },
   "landingPage": {

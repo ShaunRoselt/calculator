@@ -49,6 +49,15 @@
       "item4": "Vylepšená analýza grafov a sprístupnenie webovej kalkulačky offline po prvom úspešnom načítaní a nastavení vyrovnávacej pamäte.",
       "item5": "Vykonané nastavenia pracovnej plochy zvyšujú spoľahlivosť ukladania a opravili spúšťač Flatpak.",
       "item6": "Vylepšený prístup ku klávesnici, kontrast medzi motívmi a rozloženia na úzkych obrazovkách."
+    },
+    "release1222": {
+      "title": "Ovládacie prvky gamepadu a menšie okná pracovnej plochy",
+      "item1": "Navigácia v režimoch, ponukách a nastaveniach kalkulačky pomocou gamepadu. Použite D-pad alebo ľavú páčku na pohyb, A na výber a B na návrat späť.",
+      "item2": "Pri aktualizácii displeja sa sústreďte na rovnaké tlačidlo kalkulačky a po zatvorení ponuky sa vráťte na predchádzajúci ovládací prvok.",
+      "item3": "Posúvajte grafy pravou páčkou.",
+      "item4": "Otvorte klávesnicu na obrazovke Steamu výberom textového poľa s ovládačom, kde Steam podporuje klávesnicu.",
+      "item5": "Pri prvom spustení prispôsobte okno pracovnej plochy menším displejom.",
+      "item6": "Opravený balík pre macOS, takže prepojenia rámca Electron fungujú aj po premiestnení alebo inštalácii aplikácie."
     }
   },
   "landingPage": {

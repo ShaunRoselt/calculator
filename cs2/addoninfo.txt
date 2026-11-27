@@ -1,0 +1,6 @@
+"AddonInfo"
+{
+    "addon_name" "Roselt Calculator"
+    "addon_description" "Roselt Calculator in Counter-Strike 2."
+    "maps" "calculator"
+}

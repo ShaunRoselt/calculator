@@ -270,19 +270,21 @@ function renderShortcutRow(definition) {
   `;
 }
 
-export function renderSettingsView() {
-  const languages = getSupportedLanguages();
-  const themes = getThemeOptions();
-  const currentLanguage = getCurrentLanguage();
-  const currentLocale = getCurrentLocale();
-  const languageSorter = new Intl.Collator(currentLocale, { sensitivity: 'base', numeric: true });
-  const languageOptions = languages
+export function getSettingsLanguageOptions(locale = getCurrentLocale()) {
+  const languageSorter = new Intl.Collator(locale, { sensitivity: 'base', numeric: true });
+  return getSupportedLanguages()
     .map((language) => ({
       value: language.value,
-      label: getVisibleLanguageLabel(language, currentLocale),
-      searchText: getLanguageSearchText(language, currentLocale)
+      label: getVisibleLanguageLabel(language, locale),
+      searchText: getLanguageSearchText(language, locale)
     }))
     .sort((left, right) => languageSorter.compare(left.label, right.label));
+}
+
+export function renderSettingsView() {
+  const themes = getThemeOptions();
+  const currentLanguage = getCurrentLanguage();
+  const languageOptions = getSettingsLanguageOptions();
   const currentLanguageOption = languageOptions.find((language) => language.value === currentLanguage) ?? languageOptions[0];
   const systemThemeId = getResolvedAppThemeId('system', getSystemTheme());
   const systemThemeLabel = themes.find((theme) => theme.value === systemThemeId)?.label ?? systemThemeId;

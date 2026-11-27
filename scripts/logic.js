@@ -1193,6 +1193,77 @@ export function isCalculatorMode(mode) {
   return ['standard', 'scientific', 'programmer'].includes(mode);
 }
 
+function normalizePastedDecimal(text) {
+  const trimmed = String(text || '').trim().replace(/\s+/g, '');
+  if (!trimmed || !/^[+-]?(?:\d+(?:[.,]\d*)?|[.,]\d+)(?:e[+-]?\d+)?$/i.test(trimmed)) {
+    return null;
+  }
+
+  const normalized = trimmed.replace(',', '.');
+  const numeric = Number(normalized);
+  if (!Number.isFinite(numeric)) {
+    return null;
+  }
+
+  return normalized;
+}
+
+function normalizePastedProgrammerValue(text) {
+  const trimmed = String(text || '').trim().replace(/\s+/g, '').toUpperCase();
+  if (!trimmed) {
+    return null;
+  }
+
+  const sign = trimmed.startsWith('-') ? '-' : '';
+  const digits = sign ? trimmed.slice(1) : trimmed;
+  if (!digits) {
+    return null;
+  }
+
+  const patterns = {
+    BIN: /^[01]+$/,
+    OCT: /^[0-7]+$/,
+    DEC: /^\d+$/,
+    HEX: /^[0-9A-F]+$/
+  };
+  const validator = patterns[state.programmer.base] ?? patterns.DEC;
+  return validator.test(digits) ? `${sign}${digits}` : null;
+}
+
+export function applyCalculatorValue(text) {
+  if (!isCalculatorMode(state.mode)) {
+    return false;
+  }
+
+  if (state.mode === 'programmer') {
+    const normalized = normalizePastedProgrammerValue(text);
+    if (!normalized) {
+      return false;
+    }
+    state.programmer = createProgrammerState(state.programmer);
+    state.programmer.display = normalized;
+    state.programmer.display = formatBigInt(getProgrammerCurrentValue(), state.programmer.base);
+    return true;
+  }
+
+  const normalized = normalizePastedDecimal(text);
+  if (!normalized) {
+    return false;
+  }
+
+  if (state.mode === 'scientific') {
+    state.scientific = createScientificState(state.scientific);
+    state.scientific.display = normalized;
+    state.scientific.expression = normalized;
+    state.scientific.justEvaluated = true;
+    return true;
+  }
+
+  state.standard = createStandardState();
+  state.standard.display = normalized;
+  return true;
+}
+
 export function supportsHistoryPanelMode(mode) {
   return ['standard', 'scientific', 'programmer', 'date'].includes(mode) || isConverterMode(mode);
 }
@@ -2904,6 +2975,15 @@ function getGraphLineDash(lineStyle) {
 
 function normalizeGraphExpression(expression) {
   return String(expression || '').replace(/,/g, '.').trim() || '0';
+}
+
+export function createGraphEvaluator(expression, angle) {
+  const normalized = normalizeGraphExpression(expression);
+  return (x) => evaluateGraphAnalysisValue(normalized, x, angle);
+}
+
+export function analyzeGraphExpression(expression, angle) {
+  return buildGraphAnalysisPayload(expression, angle);
 }
 
 const GRAPH_ANALYSIS_STRINGS = {

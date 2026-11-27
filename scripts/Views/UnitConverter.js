@@ -4,7 +4,7 @@ import { state } from '../state.js';
 import { escapeHtml, formatNumber } from '../utils.js';
 import { getConverterDisplayValue, getUnitsForCategory } from '../logic.js';
 
-const CURRENCY_KEYPAD = [
+export const CURRENCY_KEYPAD = [
   [null, { label: 'CE', action: 'clear' }, { icon: 'backspace', action: 'backspace' }],
   [{ label: '7', action: 'digit', value: '7' }, { label: '8', action: 'digit', value: '8' }, { label: '9', action: 'digit', value: '9' }],
   [{ label: '4', action: 'digit', value: '4' }, { label: '5', action: 'digit', value: '5' }, { label: '6', action: 'digit', value: '6' }],
@@ -12,7 +12,7 @@ const CURRENCY_KEYPAD = [
   [null, { label: '0', action: 'digit', value: '0' }, { label: ',', action: 'decimal' }]
 ];
 
-const GENERIC_CONVERTER_KEYPAD = [
+export const GENERIC_CONVERTER_KEYPAD = [
   [null, { label: 'CE', action: 'clear' }, { icon: 'backspace', action: 'backspace' }],
   [{ label: '7', action: 'digit', value: '7' }, { label: '8', action: 'digit', value: '8' }, { label: '9', action: 'digit', value: '9' }],
   [{ label: '4', action: 'digit', value: '4' }, { label: '5', action: 'digit', value: '5' }, { label: '6', action: 'digit', value: '6' }],
@@ -159,12 +159,12 @@ function renderConverterField(field, unit, value) {
   `;
 }
 
-function renderConverterReferenceLine(units) {
+export function getConverterReferenceEntries(units) {
   const from = units.find((item) => item.name === state.converter.fromUnit) || units[0];
   const to = units.find((item) => item.name === state.converter.toUnit) || units[1] || units[0];
   const numeric = Number(String(state.converter.fromValue || '0').replace(/,/g, '.'));
   if (!Number.isFinite(numeric)) {
-    return '';
+    return [];
   }
 
   // For Time category, show a small set of helpful larger units (years, weeks, days).
@@ -181,22 +181,32 @@ function renderConverterReferenceLine(units) {
       }
       const converted = unit.fromBase(from.toBase(numeric));
       const formatted = getFormattedConverterMetaValue(converted);
-      items.push(`<span class="converter-native-meta-item"><span class="converter-native-meta-number">${escapeHtml(formatted)}</span><span class="converter-native-meta-unit">${escapeHtml(unit.symbol)}</span></span>`);
+      items.push({ value: formatted, symbol: unit.symbol });
       if (items.length >= 3) {
         break;
       }
     }
 
-    return items.join(' ');
+    return items;
   }
 
   const alternate = units.find((item) => item.name !== from.name && item.name !== to.name);
   if (!alternate) {
-    return '';
+    return [];
   }
   const converted = alternate.fromBase(from.toBase(numeric));
   const formatted = getFormattedConverterMetaValue(converted);
-  return `${escapeHtml(formatted)} ${escapeHtml(alternate.symbol)}`.trim();
+  return [{ value: formatted, symbol: alternate.symbol }];
+}
+
+function renderConverterReferenceLine(units) {
+  const entries = getConverterReferenceEntries(units);
+  if (state.converter.category !== 'Time') {
+    const item = entries[0];
+    return item ? `${escapeHtml(item.value)} ${escapeHtml(item.symbol)}`.trim() : '';
+  }
+  return entries.map(({ value, symbol }) =>
+    `<span class="converter-native-meta-item"><span class="converter-native-meta-number">${escapeHtml(value)}</span><span class="converter-native-meta-unit">${escapeHtml(symbol)}</span></span>`).join(' ');
 }
 
 function getFormattedConverterMetaValue(value) {

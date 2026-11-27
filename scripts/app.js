@@ -18,9 +18,6 @@ import {
 import { appRoot } from './dom.js';
 import { installGamepadControls } from './gamepad.js';
 import {
-  createProgrammerState,
-  createScientificState,
-  createStandardState,
   getMemoryCollection,
   hydrateState,
   persistCollections,
@@ -41,6 +38,7 @@ import { getLayoutMode, render as renderPage } from './Views/MainPage.js';
 import { ensureNerdamerLoaded } from './nerdamer.js';
 import { ensureModeStyles } from './stylesheets.js';
 import {
+  applyCalculatorValue,
   backspaceGraphExpression,
   commitConverterHistory,
   commitDateHistory,
@@ -50,8 +48,6 @@ import {
   commitGraphExpression,
   computeDateResults,
   drawGraph,
-  formatBigInt,
-  getProgrammerCurrentValue,
   handleAction,
   handleConverterKeypad,
   handleCurrencyKeypad,
@@ -903,77 +899,13 @@ function restoreNextCalculatorSnapshot() {
   return true;
 }
 
-function normalizePastedDecimal(text) {
-  const trimmed = String(text || '').trim().replace(/\s+/g, '');
-  if (!trimmed || !/^[+-]?(?:\d+(?:[.,]\d*)?|[.,]\d+)(?:e[+-]?\d+)?$/i.test(trimmed)) {
-    return null;
-  }
-
-  const normalized = trimmed.replace(',', '.');
-  const numeric = Number(normalized);
-  if (!Number.isFinite(numeric)) {
-    return null;
-  }
-
-  return normalized;
-}
-
-function normalizePastedProgrammerValue(text) {
-  const trimmed = String(text || '').trim().replace(/\s+/g, '').toUpperCase();
-  if (!trimmed) {
-    return null;
-  }
-
-  const sign = trimmed.startsWith('-') ? '-' : '';
-  const digits = sign ? trimmed.slice(1) : trimmed;
-  if (!digits) {
-    return null;
-  }
-
-  const patterns = {
-    BIN: /^[01]+$/,
-    OCT: /^[0-7]+$/,
-    DEC: /^\d+$/,
-    HEX: /^[0-9A-F]+$/
-  };
-  const validator = patterns[state.programmer.base] ?? patterns.DEC;
-  return validator.test(digits) ? `${sign}${digits}` : null;
-}
-
 function applyPastedCalculatorText(text) {
   if (!isCalculatorMode(state.mode)) {
     return false;
   }
 
   const snapshot = createCalculatorSnapshot();
-
-  if (state.mode === 'programmer') {
-    const normalized = normalizePastedProgrammerValue(text);
-    if (!normalized) {
-      return false;
-    }
-    state.programmer = createProgrammerState(state.programmer);
-    state.programmer.display = normalized;
-    state.programmer.display = formatBigInt(getProgrammerCurrentValue(), state.programmer.base);
-    return commitCalculatorSnapshot(snapshot);
-  }
-
-  const normalized = normalizePastedDecimal(text);
-  if (!normalized) {
-    return false;
-  }
-
-  if (state.mode === 'scientific') {
-    state.scientific = createScientificState(state.scientific);
-    state.scientific.display = normalized;
-    state.scientific.expression = normalized;
-    state.scientific.justEvaluated = true;
-    return commitCalculatorSnapshot(snapshot);
-  }
-
-  state.standard = createStandardState();
-  state.standard.display = normalized;
-  return commitCalculatorSnapshot(snapshot);
+  return applyCalculatorValue(text) && commitCalculatorSnapshot(snapshot);
 }
 
 function getCopyableCalculatorValue() {

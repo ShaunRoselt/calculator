@@ -333,6 +333,12 @@ export async function setLanguage(language) {
   await initI18n(language);
 }
 
+export function useLoadedTranslations(language, translations, fallback) {
+  activeLanguage = language;
+  fallbackTranslations = fallback;
+  activeTranslations = translations;
+}
+
 export function t(key, replacements) {
   const resolved = getValueByPath(activeTranslations, key) ?? getValueByPath(fallbackTranslations, key);
   return typeof resolved === 'string'

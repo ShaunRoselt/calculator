@@ -76,7 +76,7 @@ const GRAPH_COMPACT_EDITOR_BASE_OVERHEAD = 86;
 const GRAPH_EXPRESSION_ROW_ESTIMATE = 44;
 const GRAPH_EXPRESSION_STYLE_PANEL_ESTIMATE = 220;
 
-const GRAPHING_KEYPAD_ROWS = [
+export const GRAPHING_KEYPAD_ROWS = [
   [
     { label: '2ⁿᵈ', tone: 'function' },
     { label: 'π', insert: 'pi', tone: 'function' },

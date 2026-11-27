@@ -113,7 +113,7 @@ function renderOffsetField(label, key, selectedValue) {
   `;
 }
 
-function formatShortDate(value) {
+export function formatShortDate(value) {
   return new Intl.DateTimeFormat(getCurrentLocale(), {
     day: '2-digit',
     month: 'long',
@@ -169,7 +169,7 @@ function formatCalendarMonth(value) {
   }).format(value);
 }
 
-function getDatePickerCells(visibleMonth, selectedValue) {
+export function getDatePickerCells(visibleMonth, selectedValue) {
   const monthStartDay = visibleMonth.getUTCDay();
   const gridStart = new Date(visibleMonth);
   gridStart.setUTCDate(1 - monthStartDay);

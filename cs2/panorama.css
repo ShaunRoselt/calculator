@@ -1,0 +1,593 @@
+.Surface { width: 100%; height: 100%; }
+.CalculatorRoot {
+    width: 100%;
+    height: 100%;
+    background-color: #202126;
+    flow-children: down;
+    font-family: "Selawik", "Segoe UI", "Noto Sans", Arial, sans-serif;
+    color: #f4f4f5;
+}
+.CalculatorRoot.Light { background-color: #f7f7f7; color: #1e1e1e; }
+.Hidden { visibility: collapse; }
+.CompactOnly { visibility: collapse; }
+.HUD_CHAT_VISIBLE .CalculatorRoot { visibility: collapse; }
+Label { color: #f4f4f5; }
+.Light Label { color: #1e1e1e; }
+.Titlebar { width: 100%; height: 50px; padding: 10px 14px 4px; flow-children: right; }
+.Icon { width: 17px; height: 17px; horizontal-align: center; vertical-align: center; }
+.IconButton { width: 36px; height: 36px; border-radius: 8px; }
+.Flat { background-color: #00000000; }
+.Flat:hover { background-color: #2d2e34; border: 0px; brightness: 1; }
+.Light .Flat:hover { background-color: #ededed; brightness: 1; }
+.GlyphLabel { flow-children: right; }
+.GlyphLabel .Icon { margin-right: 10px; width: 16px; height: 16px; }
+.Title {
+    width: fill-parent-flow(1);
+    font-size: 19.8px;
+    font-weight: semibold;
+    margin-left: 10px;
+    vertical-align: center;
+    text-overflow: shrink;
+}
+.Workspace { width: 100%; height: fill-parent-flow(1); flow-children: right; }
+.Drawer { ignore-parent-flow: true; width: 100%; height: 100%; }
+.DrawerScrim { width: 100%; height: 100%; background-color: #000000a3; }
+.DrawerScrim:hover { border: 0px; brightness: 1; }
+.Navigation {
+    width: 256px;
+    height: 100%;
+    flow-children: down;
+    padding: 10px 6px 10px;
+    background-color: #202126;
+    border-right: 1px solid #ffffff0d;
+}
+.Navigation .IconButton { margin-left: 8px; }
+.NavigationScroll { width: 100%; height: fill-parent-flow(1); flow-children: down; overflow: squish scroll; padding-top: 10px; }
+.NavigationGroup { font-size: 12px; font-weight: semibold; color: #b0b3bb; padding: 0px 12px; margin: 0px 0px 4px; }
+.NavigationGroup:not(:first-child) { margin-top: 9px; }
+.Light .Navigation { background-color: #ececec; }
+.NavigationItem { width: 100%; height: 36px; margin-bottom: 2px; padding: 0px 9px; border-radius: 4px; }
+.NavigationItem .ButtonText { horizontal-align: left; font-size: 16px; color: #b0b3bb; }
+.CalculatorRoot .NavigationItem.Selected { border: 0px; background-color: #303137; }
+.NavigationItem.Selected .ButtonText { color: #f4f4f5; }
+.Calculator { width: fill-parent-flow(1); height: 100%; padding: 0px 4px 4px; }
+.View { width: 100%; height: 100%; flow-children: down; }
+.DisplayPanel { width: 100%; height: 236px; padding: 0px 14px; }
+.DisplayMascot { visibility: collapse; ignore-parent-flow: true; }
+.Theme_unicorn .DisplayMascot {
+    visibility: visible;
+    width: 106px;
+    height: 106px;
+    y: -14px;
+    horizontal-align: right;
+    margin-right: 8px;
+    background-image: url("file://{images}/custom_game/calculator/unicorn-mascot.png");
+    background-size: 100% 100%;
+}
+.Readout { width: 100%; vertical-align: bottom; flow-children: down; }
+.Expression, .Display {
+    width: 100%;
+    text-align: right;
+    text-overflow: shrink;
+}
+.Expression { height: 18px; font-size: 13px; color: #b0b3bb; }
+.Light .Expression { color: #535353; }
+.Display { height: 100px; margin-bottom: -9px; font-size: 91px; font-weight: light; }
+.Display.Long { font-size: 45px; }
+.Toolbar { width: 100%; height: 39px; flow-children: right; }
+.MemoryToolbar { height: 38px; padding: 2px 14px 8px; }
+.MemoryKey { height: 28px; padding: 0px 5px; margin-right: 28px; border-radius: 4px; }
+.MemoryKey .ButtonText { font-size: 13px; }
+.ScientificAngle { height: 34px; padding: 2px 14px 8px; }
+.AngleButton { height: 24px; padding: 0px 5px; margin-right: 14px; }
+.AngleButton .ButtonText { font-size: 13px; }
+.ScientificOperators { width: 100%; height: 55px; border-top: 1px solid #ffffff0d; z-index: 1; }
+.ScientificOperatorToolbar { height: 44px; padding: 0px 10px; }
+.ScientificOperatorToolbar .Flat { height: 36px; padding: 0px 7px; margin-right: 8px; vertical-align: center; }
+.ScientificOperatorToolbar .ButtonText { font-size: 15px; }
+.ScientificOptions { y: 49px; x: 10px; padding: 2px; flow-children: right; background-color: #1f2024; border: 1px solid #ffffff15; border-radius: 6px; }
+#science_options { width: 424px; flow-children: down; }
+#science_options.FunctionMenu { width: 316px; }
+.ScienceOptionRow { width: 100%; height: 62px; flow-children: right; }
+.ScientificOptions .Compact { height: 60px; margin: 1px; background-color: #353841; }
+.ScientificOptions .ButtonText { font-size: 15px; }
+.ProgrammerDisplay { width: 100%; flow-children: down; padding: 0px 4px; }
+.ProgrammerReadout { width: 100%; height: 236px; flow-children: right; }
+.ProgrammerBases { width: 290px; vertical-align: bottom; flow-children: down; padding-bottom: 4px; }
+.BaseButton { width: 100%; height: 29px; margin-bottom: 1px; flow-children: right; }
+.BaseButton Label { font-size: 13px; vertical-align: center; color: #b0b3bb; }
+.BaseName { width: 46px; }
+.CalculatorRoot .BaseButton.Selected { background-color: #53b5eb23; border: 0px; }
+.ProgrammerValue { width: fill-parent-flow(1); vertical-align: bottom; margin-left: 18px; }
+.ProgrammerToolbar { height: 30px; padding: 0px 6px; }
+.ProgrammerToolbar .IconButton { width: 26px; height: 28px; margin-right: 6px; }
+.ProgrammerToolbar .MemoryKey { margin-right: 0px; }
+.WordSize { width: fill-parent-flow(1); height: 28px; }
+.WordSize .ButtonText { font-size: 14px; }
+.ProgrammerOperators { height: 42px; border-top: 0px; border-bottom: 1px solid #ffffff0d; }
+.ProgrammerOperators .ScientificOperatorToolbar { height: 39px; padding-left: 4px; }
+.ProgrammerBits { width: 100%; height: fill-parent-flow(1); flow-children: down; overflow: squish scroll; }
+.BitGroup { width: 100%; height: 55px; flow-children: right; }
+.BitCell { width: fill-parent-flow(1); height: 100%; flow-children: down; }
+.BitPosition { font-size: 11px; color: #b0b3bb; horizontal-align: center; }
+.BitButton { width: 100%; height: 34px; }
+.BitButton .ButtonText { font-size: 14px; }
+.BitButton.On .ButtonText { color: #53b5eb; }
+.Compact {
+    height: 34px;
+    min-width: 55px;
+    margin: 2px;
+    padding: 0px 10px;
+    background-color: #262831;
+    border-radius: 4px;
+    vertical-align: center;
+}
+.Compact.Wide { width: fill-parent-flow(1); }
+.Keypad { width: 100%; height: fill-parent-flow(1); flow-children: down; padding: 1px 5px 5px; }
+.Programmer .Keypad { padding-left: 3px; padding-right: 3px; padding-bottom: 3px; }
+.KeyRow { width: 100%; height: fill-parent-flow(1); flow-children: right; }
+.Key {
+    width: fill-parent-flow(1);
+    height: 100%;
+    margin: 1px;
+    background-color: #353841;
+    border: 1px solid #ffffff06;
+    border-radius: 3px;
+}
+.Key.Digit, .Key.Default { background-color: #393c45; }
+.Key.Operator, .Standard .Key.Function { background-color: #31343c; }
+.Key.Equals { background-color: gradient(linear, 0% 0%, 0% 100%, from(#57b9ed), to(#4fb2e7)); }
+.Key.Equals .ButtonText { color: #0b1a2c; font-weight: medium; }
+.ButtonText {
+    horizontal-align: center;
+    vertical-align: center;
+    text-overflow: shrink;
+    font-size: 17px;
+}
+.Key .ButtonText { font-size: 15.36px; }
+.Light .Key, .Light .Compact { background-color: #ffffff; border-color: #00000012; }
+.Light .Key.Function, .Light .Key.Operator { background-color: #ececec; }
+.Light .Key.Equals { background-color: #0f6cbd; }
+.Light .Key.Equals .ButtonText { color: #ffffff; }
+Button:hover { brightness: 1.13; }
+.Light Button:hover { brightness: 0.94; }
+.CalculatorRoot Button.Selected { border: 1px solid #53b5eb; background-color: #345164; }
+.CalculatorRoot.Light Button.Selected { border: 1px solid #0f6cbd; background-color: #dcebf8; }
+.Inactive .ButtonText { opacity: 0.38; }
+.Light .Icon { wash-color: #1e1e1e; }
+.CollectionsDock { width: 288px; height: 100%; }
+.Collections {
+    width: 100%;
+    height: 100%;
+    flow-children: down;
+    border-left: 1px solid #ffffff06;
+}
+.Light .Collections { border-color: #00000012; }
+.Collections > .Toolbar { height: 48px; padding: 14px 16px 3px; }
+.CollectionTab { height: 31px; margin-right: 22px; }
+.CollectionTab .ButtonText { font-size: 16px; vertical-align: top; }
+.CalculatorRoot .CollectionTab.Selected, .CalculatorRoot.Light .CollectionTab.Selected {
+    background-color: #00000000;
+    border: 0px;
+    border-bottom: 3px solid #53b5eb;
+}
+.CalculatorRoot.Light .CollectionTab.Selected { border-bottom-color: #0f6cbd; }
+.CollectionBody { width: 100%; height: fill-parent-flow(1); flow-children: down; overflow: squish scroll; padding: 2px 15px 12px; }
+.CollectionEmpty { color: #b0b3bb; font-size: 16px; }
+.Light .CollectionEmpty { color: #535353; }
+.CollectionRow { width: 100%; flow-children: down; margin-bottom: 6px; }
+.CollectionRow > .Toolbar { height: 28px; opacity: 0; horizontal-align: right; width: fit-children; }
+.CollectionRow:hover > .Toolbar { opacity: 1; }
+.CollectionItem { width: 100%; flow-children: down; padding: 8px 0px; }
+.CollectionExpression, .CollectionText { width: 100%; text-align: right; text-overflow: shrink; font-size: 17px; font-weight: semibold; }
+.CollectionExpression { color: #b0b3bb; font-size: 14px; font-weight: normal; margin-bottom: 3px; }
+.CollectionClear { horizontal-align: right; margin: 6px 15px 12px; }
+.Note { margin: 6px 8px; vertical-align: center; text-overflow: shrink; font-size: 15px; color: #b0b3bb; }
+.Light .Note { color: #535353; }
+.ConverterView { flow-children: right; }
+.ConversionInfo { height: 100%; width: 100%; padding: 0px 10px 6px; }
+.ConversionFields { height: fit-children; width: 51%; flow-children: down; }
+.UnitConversion { vertical-align: center; }
+.ConversionKeys { ignore-parent-flow: true; horizontal-align: right; width: 47.3%; height: 100%; padding: 0px; }
+.KeySpacer { width: fill-parent-flow(1); margin: 1px; }
+.ConverterValue { width: 100%; height: 130px; flow-children: right; }
+.ConverterValue:hover { background-color: #00000000; }
+.ConversionAmount {
+    width: fill-parent-flow(1);
+    font-size: 104px;
+    font-weight: light;
+    vertical-align: bottom;
+    text-overflow: shrink;
+}
+.ConverterValue.ActiveAmount .ConversionAmount { font-weight: bold; }
+.ConversionSymbol { font-size: 18px; color: #b0b3bb; vertical-align: bottom; margin: 0px 12px 23px 0px; }
+.ConverterUnit { width: 320px; height: 34px; padding-right: 4px; }
+.ConversionUnitCopy { width: 100%; flow-children: down; vertical-align: center; }
+.ConversionUnitName { font-size: 16px; }
+.ConversionUnitMeta { font-size: 12px; color: #b0b3bb; }
+.ConversionCaret { horizontal-align: right; vertical-align: center; margin-right: 4px; font-size: 13px; }
+.ConversionReference { font-size: 16px; }
+.UnitConversion #value_to { margin-top: 84px; }
+.UnitConversion #converter_reference_label { margin-top: 9px; }
+.Currency #value_to { margin-top: 16px; }
+.Currency .ConverterUnit { height: 42px; }
+.Currency .ConversionReference { font-size: 12px; color: #b0b3bb; }
+.CryptoToggle { width: 260px; height: 21px; margin: 13px 0px 3px; }
+.CryptoToggle > Label { vertical-align: center; }
+.SwitchTrack { width: 34px; height: 19px; vertical-align: center; horizontal-align: right; background-color: #454750; border-radius: 10px; }
+.SwitchThumb { width: 15px; height: 15px; margin: 2px; background-color: #f4f4f5; border-radius: 8px; }
+.CryptoToggle.On .SwitchTrack { background-color: #4895ba; }
+.CryptoToggle.On .SwitchThumb { horizontal-align: right; }
+.DateView { padding: 2px 12px 12px 11px; }
+.DateSelect { width: 252px; height: 32px; padding: 0px 11px; border-radius: 4px; }
+.DateSelect .ButtonText, .DateTrigger .ButtonText { horizontal-align: left; font-size: 17px; }
+.DateFields { width: 430px; flow-children: down; }
+.DateFieldTitle { color: #b0b3bb; margin-top: 15px; font-size: 15px; }
+.DateFields > .DateFieldTitle:not(:first-child) { margin-top: 20px; }
+.DateTrigger { width: fit-children; height: 34px; margin-top: 7px; padding: 0px 11px; flow-children: right; }
+.DateTrigger .Icon { width: 15px; height: 15px; margin-left: 9px; }
+.DateResult, .DateDetail { font-size: 17px; margin-top: 3px; }
+.DateDetail { color: #b0b3bb; }
+.DateOperation { height: 38px; margin-top: 14px; }
+.DateRadio { height: 28px; padding: 0px 8px; flow-children: right; vertical-align: center; }
+.RadioMark { width: 16px; height: 16px; margin-right: 8px; vertical-align: center; border: 1px solid #b0b3bb; border-radius: 8px; }
+.DateRadio.Checked .RadioMark { background-color: #53b5eb; border: 3px solid #d2edfc; }
+.DateOffsets { height: 64px; }
+.DateOffset { width: 100px; flow-children: down; margin-right: 12px; }
+.DateOffset .DateSelect { width: 100%; }
+.DateModeMenu { ignore-parent-flow: true; x: 11px; y: 37px; padding: 4px; flow-children: down; background-color: #23242b; border-radius: 8px; border: 1px solid #ffffff0d; z-index: 2; }
+.Overlay {
+    ignore-parent-flow: true;
+    width: 100%;
+    height: 100%;
+    background-color: #080a0ebc;
+}
+.OverlayCard {
+    horizontal-align: center;
+    vertical-align: center;
+    width: 680px;
+    padding: 24px;
+    flow-children: down;
+    background-color: #23242b;
+    border: 1px solid #53b5eb;
+    border-radius: 8px;
+}
+.Light .OverlayCard { background-color: #f7f7f7; border-color: #0f6cbd; }
+.HelpTitle { font-size: 30px; margin-bottom: 14px; }
+.HelpLine { margin-bottom: 10px; font-size: 19px; }
+.PickerOption, .GraphEntry { width: 100%; }
+.PickerOptions { width: 100%; flow-children: down; }
+.ScrollOptions { max-height: 296px; padding: 8px 10px; overflow: squish scroll; }
+.ScrollOptions VerticalScrollBar {
+    width: 8px;
+    height: 100%;
+    margin: 8px 10px;
+    horizontal-align: right;
+    layout-position: fixed;
+    z-index: 2;
+}
+.ScrollOptions VerticalScrollBar .ScrollThumb {
+    width: 8px;
+    min-height: 24px;
+    border-radius: 4px;
+    background-color: #b0b3bb90;
+}
+.Light .ScrollOptions VerticalScrollBar .ScrollThumb { background-color: #53535390; }
+.PickerDismiss { width: 100%; height: 100%; }
+.UnitPickerOverlay { background-color: #00000000; }
+.UnitPickerOverlay .OverlayCard {
+    width: 360px;
+    x: 14px;
+    y: 46%;
+    padding: 0px;
+    horizontal-align: left;
+    vertical-align: top;
+    border: 1px solid #ffffff12;
+    border-radius: 12px;
+    background-color: #2c303a;
+}
+.UnitPickerOverlay.ToPicker .OverlayCard { y: 68%; }
+.UnitPickerOverlay.CurrencyPicker .OverlayCard { y: 21.4%; }
+.UnitPickerOverlay.CurrencyPicker.ToPicker .OverlayCard { y: 38.8%; }
+.UnitPickerOverlay .PickerOption { height: 30px; margin: 0px 0px 2px; background-color: #00000000; }
+.UnitPickerOverlay .PickerOption .ButtonText { font-size: 14px; }
+.CalculatorRoot .UnitPickerOverlay .PickerOption.Selected { border: 0px; border-left: 3px solid #53b5eb; background-color: #ffffff14; }
+.PickerOptionMeta { horizontal-align: right; vertical-align: center; font-size: 12px; color: #b0b3bb; }
+.UnitSearchInput { width: 100%; margin-bottom: 6px; border: 1px solid #53b5eb88; }
+.UnitSearchInput .ButtonText { horizontal-align: left; font-size: 14px; }
+.UnitPickerOverlay .UnitSearchInput { width: 94%; horizontal-align: center; margin-top: 8px; margin-bottom: 0px; }
+.UnitPickerOverlay .PickerSearch { padding: 0px 10px 8px; }
+#picker_empty { margin: 8px 10px; }
+.SettingsPicker { background-color: #00000000; }
+.SettingsPicker .OverlayCard {
+    width: 92%;
+    x: 103px;
+    y: 388px;
+    horizontal-align: left;
+    vertical-align: top;
+    padding: 8px;
+    border: 1px solid #ffffff15;
+    background-color: #2c303a;
+}
+.Light .SettingsPicker .OverlayCard { background-color: #f7f7f7; border-color: #00000020; }
+.SettingsPicker .UnitSearchInput { height: 38px; border-radius: 8px; border-color: #ffffff14; }
+.Light .SettingsPicker .UnitSearchInput { border-color: #00000018; }
+.SettingsPicker .ScrollOptions { max-height: 336px; padding: 0px; }
+.SettingsPicker .ScrollOptions VerticalScrollBar { margin: 0px 3px; }
+.SettingsPicker .PickerOption {
+    height: 40px;
+    margin: 1px 0px;
+    padding: 0px 15px;
+    border-radius: 6px;
+    background-color: #00000000;
+}
+.SettingsPicker .PickerOption .ButtonText { font-size: 16px; }
+.CalculatorRoot .SettingsPicker .PickerOption.Selected {
+    border: 0px;
+    border-left: 3px solid #53b5eb;
+    background-color: #ffffff14;
+}
+.CalculatorRoot.Light .SettingsPicker .PickerOption.Selected { border-left-color: #0f6cbd; background-color: #0f6cbd18; }
+.ThemePicker .OverlayCard { width: 980px; max-height: 820px; y: 259px; padding: 12px; }
+.ThemeGallery { width: 100%; height: 556px; flow-children: down; overflow: squish scroll; }
+.ThemePicker.SearchOpen .ThemeGallery { height: 440px; }
+.ThemeGalleryRow { width: 100%; height: fit-children; flow-children: right; }
+.ThemePair { width: 50%; height: fit-children; flow-children: right; }
+.ThemeOption {
+    width: 47.8%;
+    height: 452px;
+    margin: 0px 2.2% 12px 0px;
+    border: 1px solid #ffffff18;
+    border-radius: 14px;
+    background-color: gradient(linear, 0% 0%, 0% 100%, from(#303644), to(#22252c));
+}
+.CalculatorRoot .ThemeOption.Selected, .CalculatorRoot.Light .ThemeOption.Selected {
+    border: 2px solid #53b5eb;
+    background-color: #293a46;
+}
+.ThemeOptionHeader { x: 12px; y: 12px; max-width: 79%; flow-children: down; padding: 7px 12px; border-radius: 10px; background-color: #071016; }
+.ThemeOptionHeader Label { color: #ffffff; }
+.ThemeOptionTitle { font-size: 18px; font-weight: bold; text-overflow: shrink; }
+.ThemeOptionCaption { font-size: 13px; }
+.ThemeOptionCheck {
+    width: 28px;
+    height: 28px;
+    horizontal-align: right;
+    margin: 12px;
+    padding-top: 3px;
+    text-align: center;
+    border-radius: 14px;
+    font-size: 16px;
+    color: #0a1e2d;
+    background-color: #ffffffee;
+    visibility: collapse;
+}
+.ThemeOption.Selected .ThemeOptionCheck { visibility: visible; }
+.ThemePreview { width: 188px; max-width: 90%; height: 367px; y: 68px; horizontal-align: center; border: 4px solid #ffffff12; border-radius: 24px; background-size: 100% 100%; }
+.CalculatorRoot .OverlayCard .PickerOption.EmptyOption { background-color: #00000000; border: 0px; }
+.PickerOption .ButtonText, .SettingsItem .ButtonText, .GraphEntry .ButtonText { horizontal-align: left; }
+.PickerSearch { width: 100%; flow-children: down; }
+.SearchRow .Compact { min-width: 0px; padding: 0px; }
+.CalendarWeekday { width: fill-parent-flow(1); text-align: center; vertical-align: center; }
+.CalendarDay.Today { border: 1px solid #53b5eb; }
+.DateCalendarOverlay { ignore-parent-flow: true; width: 100%; height: 100%; }
+.DateCalendarScrim { width: 100%; height: 100%; }
+.DateCalendarScrim:hover { border: 0px; brightness: 1; }
+.DateCalendarCard { width: 310px; x: 15px; y: 163px; padding: 9px; flow-children: down; background-color: #23242b; border: 1px solid #ffffff0d; border-radius: 8px; }
+.DateCalendarOverlay.To .DateCalendarCard { y: 246px; }
+.DateCalendarCard .Toolbar { height: 32px; }
+.DateCalendarCard .Compact { min-width: 0px; padding: 0px 5px; height: 28px; }
+.DateCalendarCard .ButtonText, .DateCalendarCard .CalendarWeekday { font-size: 14px; }
+.CalendarHeader { height: 40px; }
+.CalendarMonth { width: fill-parent-flow(1); vertical-align: center; font-size: 17px; margin-left: 8px; }
+.NativeSettings { padding: 14px 20px 20px; overflow: squish scroll; }
+.SettingsCard { width: 100%; flow-children: down; margin-bottom: 8px; background-color: #23242b; border: 1px solid #2e2f35; border-radius: 14px; }
+.SettingsSummary { width: 100%; height: 70px; padding: 0px 18px; flow-children: right; border-radius: 14px; }
+.SettingsGlyph { width: 24px; font-size: 16px; text-align: center; vertical-align: center; color: #b0b3bb; }
+.SettingsLogo { width: 32px; height: 32px; vertical-align: center; }
+.SettingsSummaryCopy { width: fill-parent-flow(1); flow-children: down; margin-left: 14px; vertical-align: center; }
+.SettingsTitle { font-size: 15.4px; font-weight: semibold; }
+.SettingsDescription { font-size: 14px; margin-top: 4px; color: #b0b3bb; }
+.SettingsCaret { font-size: 22px; color: #b0b3bb; vertical-align: center; }
+.SettingsBody { width: 100%; padding: 2px 18px 12px; flow-children: down; }
+.PreferenceRow { width: 100%; flow-children: right; padding: 12px; border: 1px solid #2d2e34; border-radius: 12px; margin-top: 11px; background-color: #202126; }
+.PreferenceSymbol { width: 36px; height: 36px; padding-top: 7px; margin-right: 11px; text-align: center; border-radius: 10px; background-color: #303138; font-size: 18px; color: #b0b3bb; }
+.PreferenceCopy { width: fill-parent-flow(1); flow-children: down; }
+.PreferenceControl { width: 100%; height: 40px; margin-top: 10px; padding: 0px 12px; background-color: #23242b; border: 1px solid #2e2f35; border-radius: 6px; }
+.PreferenceControl .ButtonText { horizontal-align: left; font-size: 16px; }
+.PreferenceControl.Open { border-color: #53b5eb; }
+.RepeatPreference { height: 29px; margin-top: 10px; flow-children: right; }
+.RepeatPreference .SwitchTrack { width: 47px; height: 27px; horizontal-align: left; border-radius: 15px; }
+.RepeatPreference .SwitchThumb { width: 22px; height: 22px; border-radius: 12px; }
+.RepeatPreference.On .SwitchTrack { background-color: #4895ba; }
+.RepeatPreference.On .SwitchThumb { horizontal-align: right; }
+.TogglePill { vertical-align: center; margin-left: 12px; padding: 3px 9px; background-color: #303138; border-radius: 10px; font-size: 13px; }
+.AboutHeading { font-size: 15.2px; font-weight: semibold; margin-top: 20px; margin-bottom: 6px; }
+.SettingsLink { height: 29px; }
+.SettingsLink .ButtonText { font-size: 15px; color: #53b5eb; horizontal-align: left; }
+.SettingsFooterLink { margin-left: 4px; }
+.SettingsDocument { width: 800px; height: 70%; }
+.DocumentLines { width: 100%; height: fill-parent-flow(1); overflow: squish scroll; flow-children: down; }
+.DocumentLine { width: 100%; font-size: 16px; white-space: normal; }
+.Light .SettingsCard, .Light .PreferenceControl, .Light .DateModeMenu, .Light .DateCalendarCard { background-color: #ffffff; border-color: #00000012; }
+.Light .PreferenceRow { background-color: #f7f7f7; border-color: #00000012; }
+.Light .SettingsLink .ButtonText { color: #0f6cbd; }
+.Light .DateFieldTitle, .Light .DateDetail, .Light .SettingsDescription, .Light .SettingsGlyph, .Light .SettingsCaret,
+.Light .ConversionUnitMeta, .Light .Currency .ConversionReference, .Light .ConversionSymbol { color: #535353; }
+.GraphView { flow-children: right; }
+.GraphViewTabs { flow-children: right; }
+.GraphPlot { width: fill-parent-flow(1); height: 100%; }
+.GraphEditor { width: 392px; height: 100%; flow-children: down; border-left: 1px solid #ffffff0d; padding-left: 1px; }
+.GraphCanvas {
+    width: 100%;
+    height: 100%;
+    background-color: #1b1c20;
+    border: 1px solid #ffffff18;
+    overflow: clip;
+}
+.Light .GraphCanvas { background-color: #fff; border-color: #00000018; }
+.PlotGrid { width: 100%; height: 100%; }
+.PlotLine { background-color: #ffffff12; }
+.PlotLine.Major { background-color: #ffffff24; }
+.PlotLine.Axis { background-color: #c6cad2; }
+.PlotLineX { width: 1.25px; height: 100%; }
+.PlotLineY { width: 100%; height: 1.25px; }
+.PlotTick { font-size: 12px; width: 34px; height: 17px; }
+.PlotTickX { margin-left: -17px; margin-top: 4px; text-align: center; }
+.PlotTickY { margin-left: -43px; margin-top: -8px; text-align: right; }
+.CurveLayer { width: 100%; height: 100%; }
+.CurveSegment {
+    width: 1.025%;
+    min-height: 2px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.CurveSegment.Rise { background-image: url("file://{images}/custom_game/calculator/curve-rise.png"); }
+.CurveSegment.Fall { background-image: url("file://{images}/custom_game/calculator/curve-fall.png"); }
+.CurveSegment.Level { height: 2px; background-color: #ffffff; }
+.CurveSegment.Thick.Level { height: 3px; }
+.GraphLayer { width: 100%; flow-children: down; vertical-align: center; }
+.GraphPixels {
+    width: 100%;
+    height: 32px;
+    font-family: "DejaVu Sans Mono", monospace;
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: clip;
+}
+.GraphTraceZones { width: 100%; height: 100%; flow-children: right; }
+.TraceZone { width: fill-parent-flow(1); height: 100%; }
+.GraphSurfaceTools, .GraphZoom { flow-children: right; horizontal-align: right; margin: 12px; background-color: #303136; border-radius: 4px; }
+.GraphZoom { flow-children: down; vertical-align: bottom; }
+.GraphTool { width: 36px; height: 36px; border-radius: 4px; }
+.GraphTool .ButtonText { font-size: 20px; }
+.GraphTraceText { background-color: #303136; color: #f4f4f5; padding: 6px 8px; font-size: 15px; margin: 12px; vertical-align: bottom; }
+.GraphSettingsPopup { width: 410px; horizontal-align: right; margin: 56px 12px 0px; padding: 10px; flow-children: down; background-color: #303136; border-radius: 6px; }
+.GraphSettingsPopup .HelpTitle { font-size: 19px; }
+.GraphEditorBody, .GraphAnalysis {
+    width: 100%;
+    height: fill-parent-flow(1);
+    flow-children: down;
+}
+.GraphEntries { width: 100%; height: fill-parent-flow(1); overflow: squish scroll; flow-children: down; padding-top: 8px; }
+.GraphExpressionRow { width: 100%; height: 39px; flow-children: right; margin-bottom: 4px; border: 1px solid #ffffff16; border-radius: 3px; }
+.GraphExpressionRow.Active { border-color: #ffffff55; }
+.GraphExpressionRow.Invalid { border-color: #e81123; }
+.GraphBadge { width: 39px; height: 100%; }
+.GraphBadge .ButtonText { font-size: 19px; }
+.CalculatorRoot .GraphBadge.EmptyBadge { background-color: #ffffff25; }
+.GraphEntry { width: fill-parent-flow(1); height: 100%; padding: 0px 10px; }
+.GraphEntry .ButtonText { font-size: 16px; }
+.GraphEntry.Placeholder .ButtonText { color: #b0b3bb; }
+.GraphExpressionActions { height: 100%; flow-children: right; }
+.GraphExpressionActions .IconButton { width: 26px; height: 100%; }
+.GraphExpressionActions .Icon { width: 15px; height: 15px; }
+.GraphStyle { height: 38px; }
+.GraphKeys { width: 100%; height: 349px; }
+.GraphGroupToolbar { height: 41px; padding: 4px 4px 3px; border-top: 1px solid #ffffff0d; }
+.GraphGroupToolbar .GlyphLabel { height: 32px; margin-right: 9px; padding: 0px 4px; }
+.GraphGroupToolbar .ButtonText { font-size: 14px; }
+.GraphGroupToolbar .Icon { width: 13px; height: 13px; margin-right: 5px; }
+.GraphKeypad { height: 308px; vertical-align: bottom; padding: 0px; }
+.GraphFunctionPopup { y: -36px; background-color: #23242b; border: 1px solid #ffffff20; z-index: 2; }
+.GraphFunctionPopup .Compact { min-width: 0px; padding: 0px 4px; }
+.GraphAnalysis { padding: 10px 12px; }
+.GraphAnalysis > .GlyphLabel { height: 36px; }
+.GraphAnalysisResults { width: 100%; height: fill-parent-flow(1); flow-children: down; overflow: squish scroll; }
+.GraphAnalysisText { width: 100%; margin-bottom: 8px; font-size: 18px; }
+
+/* Keep fixed-width parts inside their owning panel as the viewport narrows. */
+.Navigation, .DateFields, .DateSelect, .ConverterUnit, .CryptoToggle, #science_options { max-width: 100%; }
+.OverlayCard { max-width: 94%; max-height: 90%; overflow: squish scroll; }
+.GraphSettingsPopup { max-width: 94%; }
+.GraphEditor { max-width: 48%; }
+.ProgrammerBases { max-width: 48%; }
+.BaseValue { width: fill-parent-flow(1); text-overflow: shrink; }
+.ConversionUnitCopy { padding-right: 20px; }
+.ConversionUnitName, .ConversionUnitMeta { width: 100%; text-overflow: shrink; }
+.DateView { overflow: squish scroll; }
+.DateOffset { max-width: 30%; }
+
+/* CS2 uses its 4:3 HUD class for narrow render surfaces, including portrait. */
+.AspectRatio4x3 .CompactOnly:not(.Hidden) { visibility: visible; }
+.AspectRatio4x3 .CollectionsDock {
+    ignore-parent-flow: true;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.AspectRatio4x3 .CollectionsDock:not(.DrawerOpen) { visibility: collapse; }
+.AspectRatio4x3 .Collections {
+    width: 640px;
+    max-width: 100%;
+    horizontal-align: right;
+    background-color: #202126;
+}
+.AspectRatio4x3 .Light .Collections { background-color: #f7f7f7; }
+.AspectRatio4x3 .Collections > .Toolbar { height: 56px; padding-top: 8px; }
+.AspectRatio4x3 .CollectionTab { height: 40px; margin-right: 12px; }
+.AspectRatio4x3 .CollectionTab .ButtonText { vertical-align: center; }
+.AspectRatio4x3 .CollectionClose { horizontal-align: right; height: 40px; }
+.AspectRatio4x3 .CollectionRow > .Toolbar { opacity: 1; }
+.AspectRatio4x3 .DisplayPanel { height: 22%; min-height: 120px; max-height: 236px; }
+.AspectRatio4x3 .Display { height: 78px; font-size: 68px; }
+.AspectRatio4x3 .Display.Long { font-size: 44px; }
+.AspectRatio4x3 .ProgrammerReadout { height: 166px; }
+.AspectRatio4x3 .ProgrammerValue { margin-left: 7px; }
+.AspectRatio4x3 .BaseName { width: 33px; }
+.AspectRatio4x3 .MemoryToolbar { padding-left: 6px; padding-right: 6px; }
+.AspectRatio4x3 .MemoryToolbar .MemoryKey { margin-right: 16px; }
+.AspectRatio4x3 .ScientificOperatorToolbar .GlyphLabel { width: fill-parent-flow(1); }
+.AspectRatio4x3 .ScientificOperatorToolbar .ButtonText { width: fill-parent-flow(1); }
+.AspectRatio4x3 .ScientificOptions { x: 0px; }
+.AspectRatio4x3 .Compact.Wide { min-width: 0px; padding-left: 4px; padding-right: 4px; }
+.AspectRatio4x3 .ConverterView { flow-children: down; }
+.AspectRatio4x3 .ConversionInfo { height: fit-children; padding: 0px 12px 8px; }
+.AspectRatio4x3 .ConversionFields { width: 100%; vertical-align: top; }
+.AspectRatio4x3 .ConverterValue { height: 75px; }
+.AspectRatio4x3 .ConversionAmount { font-size: 62px; }
+.AspectRatio4x3 .ConversionSymbol { margin-bottom: 14px; }
+.AspectRatio4x3 .ConverterUnit { height: 40px; }
+.AspectRatio4x3 .ConversionFields #value_to { margin-top: 10px; }
+.AspectRatio4x3 .ConversionKeys { ignore-parent-flow: false; width: 100%; height: fill-parent-flow(1); }
+.AspectRatio4x3 .CalculatorRoot .UnitPickerOverlay { background-color: #080a0ebc; }
+.AspectRatio4x3 .CalculatorRoot .UnitPickerOverlay .OverlayCard {
+    width: 560px;
+    horizontal-align: center;
+    vertical-align: center;
+    x: 0px;
+    y: 0px;
+}
+.AspectRatio4x3 .UnitPickerOverlay .PickerOption { height: 50px; flow-children: right; }
+.AspectRatio4x3 .UnitPickerOverlay .ScrollOptions { max-height: 456px; }
+.AspectRatio4x3 .UnitPickerOverlay .PickerOption .ButtonText { width: fill-parent-flow(1); }
+.AspectRatio4x3 .UnitPickerOverlay .PickerOptionMeta {
+    width: 35%;
+    margin-left: 6px;
+    text-align: right;
+    white-space: nowrap;
+    text-overflow: shrink;
+}
+.AspectRatio4x3 .GraphViewTabs .IconButton { margin-left: 3px; }
+.AspectRatio4x3 .GraphView.GraphEditorSelected .GraphPlot,
+.AspectRatio4x3 .GraphView:not(.GraphEditorSelected) .GraphEditor { visibility: collapse; }
+.AspectRatio4x3 .GraphEditor {
+    width: 100%;
+    max-width: 100%;
+    border-left: 0px;
+}
+.AspectRatio4x3 .GraphKeys { height: 54%; max-height: 385px; }
+.AspectRatio4x3 .GraphKeypad { height: 100%; padding-top: 41px; }
+.AspectRatio4x3 .GraphGroupToolbar .GlyphLabel { width: fill-parent-flow(1); margin-right: 0px; }
+.AspectRatio4x3 .GraphGroupToolbar .ButtonText { width: fill-parent-flow(1); }
+.AspectRatio4x3 .DateCalendarCard { horizontal-align: center; vertical-align: center; max-width: 94%; x: 0px; y: 0px; }
+.AspectRatio4x3 .DateCalendarOverlay.To .DateCalendarCard { y: 0px; }
+.AspectRatio4x3 .NativeSettings { padding: 10px; }
+.AspectRatio4x3 .SettingsSummary { padding: 0px 10px; }
+.AspectRatio4x3 .SettingsBody { padding: 2px 10px 10px; }
+.AspectRatio4x3 .SettingsPicker .OverlayCard { x: 0px; width: 92%; horizontal-align: center; }
+.AspectRatio4x3 .ThemeGalleryRow { flow-children: down; }
+.AspectRatio4x3 .ThemePair { width: 100%; }
+.AspectRatio4x3 .ThemeOption { height: 420px; }
+.AspectRatio4x3 .ThemePreview { width: 170px; height: 332px; }
